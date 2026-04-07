@@ -1,20 +1,27 @@
 ---
-title: Monorepo — Getting started
-sidebar_label: Monorepo getting started
-description: Target layout (FrikaModFramework, templates, tools) and how it maps to this repo today.
+title: Getting started
+sidebar_label: Getting started
+description: Aktueller Stand nach Repo-Split: Wrapper-Struktur, Core-Build und Mod-/Extension-Repos.
 ---
 
-# Monorepo — Getting started
+Die Struktur ist jetzt **Multi-Repo** mit `gregFramework/` als lokalem Wrapper-Ordner. Darin liegen die eigenständigen Repositories, z. B.:
 
-The **goal** is a clear split between the framework (`FrikaModFramework/` registry + planned bindings), the **live** MelonLoader code (`framework/`), gameplay mods (`mods/`), FFM plugins (`plugins/`), templates (`templates/` / `Templates/`), and tooling (`tools/`). Migration is incremental: production C# still lives under [`framework/`](https://github.com/mleem97/gregFramework/tree/master/framework).
+- `gregCore/` (Core SDK, inkl. `FrikaMF-StandaloneRepo/`)
+- `gregMods/` (einzelne Mod-Repos)
+- `gregExtensions/` (einzelne Extension-Repos)
+- `gregWiki/` (Dokumentation)
 
-## Clone and build the framework
+`DataCenter-RustBridge` wird in den Core integriert und liegt im Core-Baum unter:
+
+- `gregCore/FrikaMF-StandaloneRepo/bridges/gregSta.RustBridge/`
+
+## Core bauen
 
 ```text
-dotnet build framework/FrikaMF.csproj
+dotnet build gregCore/FrikaMF-StandaloneRepo/FrikaMF.sln -c Release
 ```
 
-Or open [`FrikaMF.sln`](https://github.com/mleem97/gregFramework/blob/master/FrikaMF.sln) in Visual Studio / Rider.
+Alternativ in IDE: `gregCore/FrikaMF-StandaloneRepo/FrikaMF.sln` öffnen.
 
 ## Hook naming
 
@@ -22,16 +29,16 @@ Or open [`FrikaMF.sln`](https://github.com/mleem97/gregFramework/blob/master/Fri
 - **Registry:** [`FrikaModFramework/fmf_hooks.json`](https://github.com/mleem97/gregFramework/blob/master/FrikaModFramework/fmf_hooks.json).
 - **Legacy runtime strings** may still use `FFM.*` in [`HookNames`](https://github.com/mleem97/gregFramework/blob/master/framework/FrikaMF/HookNames.cs) until migrated.
 
-## Create a mod from the template
+## Mod starten
 
-1. Copy [`templates/mod/`](https://github.com/mleem97/gregFramework/tree/master/templates/mod) to a new folder (or start from [`Templates/`](https://github.com/mleem97/gregFramework/tree/master/Templates) scaffolds).
-2. Edit `fmf/hooks.json` and add sources under `src/`.
-3. For a **pilot** layout (Workshop VDF + hooks metadata), see [`HexMod/`](https://github.com/mleem97/gregFramework/tree/master/HexMod); shipped mod examples live under [`mods/`](https://github.com/mleem97/gregFramework/tree/master/mods) (e.g. `mods/FMF.Mod.HexLabelMod/`).
+1. Neues Mod-Repo unter `gregMods/` nach Schema `gregMod.<Name>` anlegen.
+2. Templates aus `gregCore/FrikaMF-StandaloneRepo/Templates/` nutzen.
+3. Hook-Metadaten pflegen und Mod im eigenen Repo versionieren.
 
 ## Documentation site
 
-- **Content:** [`docs/`](https://github.com/mleem97/gregFramework/tree/master/docs)
-- **Docusaurus app:** [`wiki/`](https://github.com/mleem97/gregFramework/tree/master/wiki) — `npm install` and `npm run start` (dev) or `npm run build` (static output).
+- **Repo:** `gregWiki/`
+- **Inhalt:** Markdown/MDX in diesem Repo, angepasst an den Split-Stand.
 
 ### Docker
 
@@ -40,4 +47,4 @@ Or open [`FrikaMF.sln`](https://github.com/mleem97/gregFramework/blob/master/Fri
 
 ## Assistants / MCP
 
-The repo includes [`mcp-server/`](https://github.com/mleem97/gregFramework/tree/master/mcp-server) for Model Context Protocol (search docs, read `fmf_hooks.json`, CONTRIBUTING). Use **stdio** locally or the **HTTP** endpoint bundled with the `docs-mcp` Docker image — details in [`docs/reference/mcp-server.md`](https://github.com/mleem97/gregFramework/blob/master/docs/reference/mcp-server.md).
+Der MCP-Server für Framework-Scan/Tooling liegt im Core-Umfeld (`gregCore/FrikaMF-StandaloneRepo/mcp-server/`).
