@@ -56,5 +56,4 @@ Details: [`topics/wiki-import/overview`](../topics/wiki-import/overview.md).
 ## Locales
 
 - **Default:** `en` — files under `docs/`.
-- **Deutsch:** overrides under `i18n/de/docusaurus-plugin-content-docs/current/` mirroring `docs/` paths.
-- **fr, es, ru, ja:** fallback to English where no file exists.
+- **Deutsch (`de`):** overrides under `i18n/de/docusaurus-plugin-content-docs/current/` mirroring `docs/` paths where translated files exist; otherwise Docusaurus falls back to English.
