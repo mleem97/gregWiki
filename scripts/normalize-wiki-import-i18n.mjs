@@ -19,7 +19,7 @@ import {
   statSync,
   writeFileSync,
 } from 'node:fs';
-import { basename, dirname, join, relative, resolve } from 'node:path';
+import {basename, dirname, join, relative, resolve} from 'node:path';
 
 const repoRoot = resolve(import.meta.dirname, '..');
 const docsWikiImport = join(repoRoot, 'docs', 'wiki-import');
@@ -48,7 +48,7 @@ This page is available in **German** in the legacy wiki import. Use the language
 }
 
 function ensureDir(p) {
-  mkdirSync(p, { recursive: true });
+  mkdirSync(p, {recursive: true});
 }
 
 function walkMarkdownFiles(root, base = root) {

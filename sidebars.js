@@ -48,11 +48,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Guides',
-      items: [
-        'guides/enduser-workshop',
-        'guides/contributor-workshop',
-        'guides/release',
-      ],
+      items: ['guides/enduser-workshop', 'guides/contributor-workshop', 'guides/release'],
     },
     {
       type: 'category',
@@ -74,9 +70,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Tool releases',
-          items: [
-            'releases/tools/gregtools-modmanager-1.0-release',
-          ],
+          items: ['releases/tools/gregtools-modmanager-1.0-release'],
         },
         {
           type: 'category',
@@ -127,11 +121,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Roadmap & planning',
-          items: [
-            'topics/roadmap/overview',
-            'roadmap/unified-roadmap',
-            'roadmap/mod-store-stages',
-          ],
+          items: ['topics/roadmap/overview', 'roadmap/unified-roadmap', 'roadmap/mod-store-stages'],
         },
         {
           type: 'category',

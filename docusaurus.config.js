@@ -1,8 +1,9 @@
 // @ts-check
 
 const config = {
-  title: 'Frika Mod Framework',
-  tagline: 'Community-driven docs for FrikaMF, plugins, Rust FFI, and multiplayer stacks',
+  title: 'gregFramework',
+  tagline:
+    'Community docs for gregFramework — Data Center mods, FMF plugins, hooks, and split-repo layout',
   favicon: 'img/logo.svg',
   url: 'https://frikadellental.de',
   baseUrl: '/',
@@ -140,7 +141,7 @@ const config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'Frika Mod Framework',
+      title: 'gregFramework',
       hideOnScroll: false,
       style: 'dark',
       items: [
@@ -163,10 +164,34 @@ const config = {
           dropdownItemsBefore: [],
           dropdownItemsAfter: [],
         },
-        {to: '/mods', label: 'Mods', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-mods', 'aria-label': 'Mods'},
-        {href: 'https://discord.gg/greg', label: 'Discord', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-discord', 'aria-label': 'Discord'},
-        {href: 'https://github.com/mleem97/gregFramework/issues', label: 'Support', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-support', 'aria-label': 'Support'},
-        {href: 'https://github.com/mleem97/gregFramework', label: 'GitHub', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-github', 'aria-label': 'GitHub'},
+        {
+          to: '/mods',
+          label: 'Mods',
+          position: 'right',
+          className: 'nav-right-icon nav-icon-only nav-link-mods',
+          'aria-label': 'Mods',
+        },
+        {
+          href: 'https://discord.gg/greg',
+          label: 'Discord',
+          position: 'right',
+          className: 'nav-right-icon nav-icon-only nav-link-discord',
+          'aria-label': 'Discord',
+        },
+        {
+          href: 'https://github.com/mleem97/gregFramework/issues',
+          label: 'Support',
+          position: 'right',
+          className: 'nav-right-icon nav-icon-only nav-link-support',
+          'aria-label': 'Support',
+        },
+        {
+          href: 'https://github.com/mleem97/gregFramework',
+          label: 'GitHub',
+          position: 'right',
+          className: 'nav-right-icon nav-icon-only nav-link-github',
+          'aria-label': 'GitHub',
+        },
       ],
     },
     footer: {
@@ -199,4 +224,3 @@ const config = {
 };
 
 module.exports = config;
-

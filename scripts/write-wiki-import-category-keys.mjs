@@ -31,7 +31,7 @@ for (const base of bases) {
     const dir = path.join(base, rel);
     if (!fs.existsSync(dir)) continue;
     const target = path.join(dir, '_category_.json');
-    const body = JSON.stringify({ key }, null, 2) + '\n';
+    const body = JSON.stringify({key}, null, 2) + '\n';
     fs.writeFileSync(target, body);
     console.log('wrote', target);
   }

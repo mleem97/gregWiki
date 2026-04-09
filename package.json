@@ -1,17 +1,18 @@
 {
-  "name": "frikamf-docs-site",
+  "name": "gregwiki-docs-site",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "docusaurus clear && docusaurus build && docusaurus start --host 0.0.0.0 --port 3000",
     "start": "docusaurus start --host 0.0.0.0 --port 3000",
     "build": "docusaurus build",
-    
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
     "wiki:sync": "node ./scripts/sync-wiki-to-docs.mjs",
     "wiki:normalize-i18n": "node ./scripts/normalize-wiki-import-i18n.mjs",
-    "wiki:refresh": "node ./scripts/sync-wiki-to-docs.mjs && node ./scripts/normalize-wiki-import-i18n.mjs"
+    "wiki:refresh": "node ./scripts/sync-wiki-to-docs.mjs && node ./scripts/normalize-wiki-import-i18n.mjs",
+    "format": "prettier --write src scripts docusaurus.config.js sidebars.js README.md docs/README.md package.json .prettierrc.json",
+    "format:check": "prettier --check src scripts docusaurus.config.js sidebars.js README.md docs/README.md package.json .prettierrc.json"
   },
   "dependencies": {
     "@docusaurus/core": "3.9.2",
@@ -35,6 +36,7 @@
     "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
-    "@docusaurus/eslint-plugin": "^3.9.2"
+    "@docusaurus/eslint-plugin": "^3.9.2",
+    "prettier": "^3.5.3"
   }
 }

@@ -1,5 +1,5 @@
-import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { join, resolve } from 'node:path';
+import {existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync} from 'node:fs';
+import {join, resolve} from 'node:path';
 
 const projectRoot = resolve(process.cwd());
 const gregFrameworkRoot = resolve(projectRoot, '..');
@@ -14,10 +14,10 @@ if (!existsSync(wikiDir)) {
   process.exit(1);
 }
 
-mkdirSync(outDir, { recursive: true });
+mkdirSync(outDir, {recursive: true});
 
 function collectMarkdownFiles(rootDir, prefix = '') {
-  const entries = readdirSync(join(rootDir, prefix), { withFileTypes: true });
+  const entries = readdirSync(join(rootDir, prefix), {withFileTypes: true});
   const results = [];
 
   for (const entry of entries) {
@@ -42,7 +42,7 @@ for (const file of files) {
   const sanitizedRelative = file.replace(/\s+/g, '-');
   const target = join(outDir, sanitizedRelative);
   const targetDir = resolve(target, '..');
-  mkdirSync(targetDir, { recursive: true });
+  mkdirSync(targetDir, {recursive: true});
   const raw = readFileSync(source, 'utf8');
   writeFileSync(target, raw, 'utf8');
 }

@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 function walk(dir) {
-  for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
+  for (const ent of fs.readdirSync(dir, {withFileTypes: true})) {
     const p = path.join(dir, ent.name);
     if (ent.isDirectory()) walk(p);
     else if (ent.name.endsWith('.md')) {

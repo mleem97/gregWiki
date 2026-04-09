@@ -44,3 +44,9 @@ Details: [`topics/wiki-import/overview.md`](./topics/wiki-import/overview.md).
 | Sync `../.wiki` → `docs/wiki-import/` | `scripts/sync-wiki-to-docs.mjs` | Copies `*.md` from the sibling `.wiki/` clone under `gregFramework/`. |
 | Split DE/EN pairs | `scripts/normalize-wiki-import-i18n.mjs` | EN default locale, DE under `i18n/de/...`. |
 | Sidebar category keys | `scripts/write-wiki-import-category-keys.mjs` | Regenerates `_category_.json` keys under Guides/Reference/Troubleshooting (if present). |
+
+## Locales (EN / DE / others)
+
+- **Default locale:** `en` — curated pages live under `docs/` (e.g. `intro.md`, `getting-started.md`).
+- **German:** override files under `i18n/de/docusaurus-plugin-content-docs/current/` with the **same path** as in `docs/` (same doc `id` / filename). Example: `intro.md` and `getting-started.md` are fully maintained in DE.
+- **fr, es, ru, ja:** enabled in `docusaurus.config.js`; where no translated file exists, Docusaurus **falls back** to the English `docs/` markdown. Add more translated files under `i18n/<locale>/docusaurus-plugin-content-docs/current/` as needed.

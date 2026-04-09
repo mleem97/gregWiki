@@ -1,50 +1,49 @@
 ---
 title: Getting started
 sidebar_label: Getting started
-description: "Aktueller Stand nach Repo-Split: Wrapper-Struktur, Core-Build und Mod-/Extension-Repos."
+description: "Split-repo workspace: gregFramework layout, building the core, and where docs live."
 ---
 
-Die Struktur ist jetzt **Multi-Repo** mit `gregFramework/` als lokalem Wrapper-Ordner. Darin liegen die eigenständigen Repositories, z. B.:
+The workspace is **multi-repo** with a local `gregFramework/` folder containing standalone repositories, for example:
 
-- `gregCore/` (Core SDK, inkl. `FrikaMF-StandaloneRepo/`)
-- `gregMods/` (einzelne Mod-Repos)
-- `gregExtensions/` (einzelne Extension-Repos)
-- `gregWiki/` (Dokumentation)
+- `gregCore/` (core SDK, including `FrikaMF-StandaloneRepo/`)
+- `gregMods/` (per-mod repositories)
+- `gregExtensions/` (per-extension repositories)
+- `gregWiki/` (this documentation site)
 
-`DataCenter-RustBridge` wird in den Core integriert und liegt im Core-Baum unter:
+`DataCenter-RustBridge` is integrated into the core tree at:
 
 - `gregCore/FrikaMF-StandaloneRepo/bridges/gregSta.RustBridge/`
 
-## Core bauen
+## Build the core
 
 ```text
 dotnet build gregCore/FrikaMF-StandaloneRepo/FrikaMF.sln -c Release
 ```
 
-Alternativ in IDE: `gregCore/FrikaMF-StandaloneRepo/FrikaMF.sln` öffnen.
+Or open `gregCore/FrikaMF-StandaloneRepo/FrikaMF.sln` in your IDE.
 
 ## Hook naming
 
 - **Target convention:** `FMF.<DOMAIN>.<Event>` (see [`CONTRIBUTING.md`](https://github.com/mleem97/gregFramework/blob/master/CONTRIBUTING.md)).
-- **Registry:** [`FrikaModFramework/fmf_hooks.json`](https://github.com/mleem97/gregFramework/blob/master/FrikaModFramework/fmf_hooks.json).
+- **Registry:** [`FrikaModFramework/fmf_hooks.json`](https://github.com/mleem97/gregFramework/blob/master/FrikaModFramework/fmf_hooks.json) (path may vary by branch).
 - **Legacy runtime strings** may still use `FFM.*` in [`HookNames`](https://github.com/mleem97/gregFramework/blob/master/framework/FrikaMF/HookNames.cs) until migrated.
 
-## Mod starten
+## Start a mod
 
-1. Neues Mod-Repo unter `gregMods/` nach Schema `gregMod.<Name>` anlegen.
-2. Templates aus `gregCore/FrikaMF-StandaloneRepo/Templates/` nutzen.
-3. Hook-Metadaten pflegen und Mod im eigenen Repo versionieren.
+1. Create a new mod repo under `gregMods/` using the `gregMod.<Name>` pattern.
+2. Use templates from `gregCore/FrikaMF-StandaloneRepo/Templates/`.
+3. Maintain hook metadata and version the mod in its own repository.
 
 ## Documentation site
 
-- **Repo:** `gregWiki/`
-- **Inhalt:** Markdown/MDX in diesem Repo, angepasst an den Split-Stand.
+- **Repository:** `gregWiki/`
+- **Content:** Markdown/MDX in this repo, aligned with the split layout.
 
 ### Docker
 
-- **Dev server with hot reload:** from the `gregWiki` repo root, `docker build -t gregwiki-docs .` then `docker run --rm -p 3000:3000 gregwiki-docs` (or use your host compose file if you mount this repo).
-- **MCP:** see [`reference/mcp-server`](./reference/mcp-server.md) in the core repository (`gregCore/FrikaMF-StandaloneRepo/mcp-server/`).
+From the `gregWiki` root: `docker build -t gregwiki-docs .` then `docker run --rm -p 3000:3000 gregwiki-docs`.
 
-## Assistants / MCP
+### MCP
 
-Der MCP-Server für Framework-Scan/Tooling liegt im Core-Umfeld (`gregCore/FrikaMF-StandaloneRepo/mcp-server/`).
+See [`reference/mcp-server`](./reference/mcp-server.md) — the server lives next to the core sources (`gregCore/FrikaMF-StandaloneRepo/mcp-server/`).

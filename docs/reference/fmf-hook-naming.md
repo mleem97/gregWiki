@@ -15,7 +15,7 @@ All **new** public hook and event identifiers should follow:
 FMF.<Domain>.<EventOrHook>
 ```
 
-- **`FMF`** — Fixed prefix (Frika Mod Framework).
+- **`FMF`** — Fixed prefix (Greg Mod Framework / **gregFramework** hook namespace).
 - **`<Domain>`** — Uppercase domain from the [approved domain list](#approved-domain-segments). Describes *where* the signal belongs in the game (player, rack, server, economy, …).
 - **`<EventOrHook>`** — `PascalCase` segment(s), usually `OnSomething` for events or a verb phrase for commands.
 
