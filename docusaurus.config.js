@@ -93,8 +93,13 @@ const config = {
 
           if (existingPath.startsWith('/wiki/')) {
             const legacyPath = existingPath.replace('/wiki', '');
-            // Avoid shadowing the static /mods catalog page and its children
-            if (legacyPath === '/mods' || legacyPath.startsWith('/mods/')) {
+            // Avoid shadowing static pages and explicit redirects in `redirects` below
+            if (
+              legacyPath === '/mods' ||
+              legacyPath.startsWith('/mods/') ||
+              legacyPath === '/plugins' ||
+              legacyPath.startsWith('/plugins/')
+            ) {
               return undefined;
             }
             return [legacyPath];

@@ -15,9 +15,9 @@ These folders typically sit **next to each other** in a developer workspace (see
 
 | Area | Path (on disk) | Role |
 |------|----------------|------|
-| **Framework core** | `gregCore/FrikaMF-StandaloneRepo/` | Platform **framework core**: translations, hooks, Harmony/event runtime, MelonLoader hosting, bridges; plugins under `plugins/`; templates under `Templates/` |
-| **Mods** | `gregMods/gregMod.<Name>/` | Standalone gameplay mods (`FMF.*`) as individual repositories |
-| **Extensions** | `gregExtensions/gregExt.<Name>/` | Extension modules (e.g. player models) |
+| **Framework core** | `gregCore/` | Platform **framework core**: translations, hooks, Harmony/event runtime, MelonLoader hosting, bridges; plugins under `plugins/`; templates under `Templates/` |
+| **Mods** | `gregMod.<Name>/` (direkt unter `gregFramework/`) | Standalone gameplay mods (`FMF.*`) as individual repositories |
+| **Extensions** | `gregExt.<Name>/` (direkt unter `gregFramework/`) | Extension modules (e.g. player models) |
 | **Documentation** | `gregWiki/` ([`mleem97/gregWiki`](https://github.com/mleem97/gregWiki)) | **This site**: Docusaurus app at repo root, all authored pages under `docs/` |
 | **Legacy / staging exporter** | `gregDataCenterExporter/` | Historical monolith layout; some tools and HexMod assets may still live here during migration |
 | **Other tools** | `gregIPAM/` (DHCP + IPAM; assembly `DHCPSwitches`), `gregStore/` (**Gregweb**, private repo), `gregReferences/`, `gregInternalDocs/`, `gregMeta/` | Supporting repos and internal notes |
@@ -26,10 +26,10 @@ These folders typically sit **next to each other** in a developer workspace (see
 
 | Concern | Where to look |
 |---------|----------------|
-| Framework `.csproj` | `gregCore/FrikaMF-StandaloneRepo/framework/FrikaMF.csproj` |
-| Plugins (`FFM.Plugin.*`) | `gregCore/FrikaMF-StandaloneRepo/plugins/` |
-| Mod sources | `gregMods/` (per-mod folders) and templates under `gregCore/FrikaMF-StandaloneRepo/Templates/` |
-| MCP server | `gregCore/FrikaMF-StandaloneRepo/mcp-server/` (and parallel copies in other repos as wired locally) |
+| Framework `.csproj` | `gregCore/framework/FrikaMF.csproj` |
+| Plugins (`FFM.Plugin.*`) | `gregCore/plugins/` |
+| Mod sources | `gregMod.*/` and templates under `gregCore/Templates/` |
+| MCP server | `gregCore/mcp-server/` (and parallel copies in other repos as wired locally) |
 | Wiki content | `gregWiki/docs/` |
 
 ## Wiki import (legacy)
@@ -38,14 +38,14 @@ Long-form pages mirrored from the GitHub Wiki live under [`docs/legacy/wiki-impo
 
 ## .NET projects on disk (`*.csproj`)
 
-Paths below are relative to **`gregCore/FrikaMF-StandaloneRepo/`** (standalone framework repo). Individual mods may live under **`gregMods/gregMod.*/`** with their own `.csproj` names.
+Paths below are relative to **`gregCore/`** (framework repo root). Individual mods may live under **`gregMod.*/`** with their own `.csproj` names.
 
 | Project | Location | In `FrikaMF.sln`? |
 |---------|----------|-------------------|
 | FrikaMF | `framework/FrikaMF.csproj` | Yes |
 | WorkshopUploader | `tools/steam-workshop-upload/` or legacy `workshopuploader/` (varies by branch) | Usually separate solution |
 | FFM.Plugin.* | `plugins/FFM.Plugin.*/` | Yes when included in `FrikaMF.sln` |
-| FMF.* mods | `gregMods/gregMod.*/` (clone layout) | Per-repo / optional |
+| FMF.* mods | `gregMod.*/` (clone layout, under `gregFramework/`) | Per-repo / optional |
 | Templates | `Templates/FMF.*`, `Templates/StandaloneModTemplate/` | No |
 
 ## Build status (framework project)

@@ -60,6 +60,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Players',
+          key: 'guides-players',
           items: [
             'guides/players/overview',
             'guides/players/audiences-overview',
@@ -72,11 +73,13 @@ const sidebars = {
         {
           type: 'category',
           label: 'Mod developers',
+          key: 'guides-mod-developers',
           items: ['guides/mod-developers/overview'],
         },
         {
           type: 'category',
           label: 'Contributors',
+          key: 'guides-contributors',
           items: [
             'guides/contributors/topics-overview',
             'guides/contributors/contributor-workshop',
@@ -86,6 +89,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Sponsors',
+          key: 'guides-sponsors',
           items: ['guides/sponsors/overview'],
         },
       ],
@@ -132,7 +136,6 @@ const sidebars = {
         'reference/wiki-mapping',
         'reference/mod-store-vision',
         'reference/fmf-hook-naming',
-        'reference/modding-language-requirement',
         'reference/fmf-hooks-catalog',
         'reference/mcp-server',
         'reference/release-channels',

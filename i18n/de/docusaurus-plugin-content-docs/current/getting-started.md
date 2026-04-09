@@ -6,23 +6,23 @@ description: "Split-Repo-Workspace: gregFramework-Layout, Core bauen und wo die 
 
 Die Struktur ist **Multi-Repo** mit `gregFramework/` als lokalem Wrapper-Ordner. Darin liegen die eigenständigen Repositories, z. B.:
 
-- `gregCore/` — **Framework-Kern** (`FrikaMF-StandaloneRepo/`): Übersetzung, Hooks, Harmony-/Event-Laufzeit, Templates, Bridges und übrige Kernfunktionen
-- `gregMods/` (einzelne Mod-Repos)
-- `gregExtensions/` (einzelne Extension-Repos)
+- `gregCore/` — **Framework-Kern**: Übersetzung, Hooks, Harmony-/Event-Laufzeit, Templates, Bridges und übrige Kernfunktionen
+- `gregMod.<Name>/` (einzelne Mod-Repos, direkt unter `gregFramework/`)
+- `gregExt.<Name>/` (einzelne Extension-Repos, direkt unter `gregFramework/`)
 - `gregWiki/` (Dokumentation)
 - `gregStore/` (**Gregweb**, privates Repository — Modstore Web + Infra; Next.js unter `web/`)
 
 Das Upstream-Projekt **DataCenter-RustBridge** wird in den Core integriert und liegt unter:
 
-- `gregCore/FrikaMF-StandaloneRepo/bridges/gregSta.RustBridge/`
+- `gregCore/bridges/gregSta.RustBridge/`
 
 ## Core bauen
 
 ```text
-dotnet build gregCore/FrikaMF-StandaloneRepo/FrikaMF.sln -c Release
+dotnet build gregCore/FrikaMF.sln -c Release
 ```
 
-Alternativ in der IDE: `gregCore/FrikaMF-StandaloneRepo/FrikaMF.sln` öffnen.
+Alternativ in der IDE: `gregCore/FrikaMF.sln` öffnen.
 
 ## Sprache (Mods / Plugins / Extensions)
 
@@ -36,8 +36,8 @@ Alternativ in der IDE: `gregCore/FrikaMF-StandaloneRepo/FrikaMF.sln` öffnen.
 
 ## Mod starten
 
-1. Neues Mod-Repo unter `gregMods/` nach Schema `gregMod.<Name>` anlegen.
-2. Templates aus `gregCore/FrikaMF-StandaloneRepo/Templates/` nutzen.
+1. Neues Mod-Repo als Ordner `gregMod.<Name>/` unter `gregFramework/` anlegen.
+2. Templates aus `gregCore/Templates/` nutzen.
 3. Hook-Metadaten pflegen und Mod im eigenen Repo versionieren.
 
 ## Dokumentations-Site
@@ -51,4 +51,4 @@ Im `gregWiki`-Root: `docker build -t gregwiki-docs .` und `docker run --rm -p 30
 
 ### MCP
 
-Siehe [`reference/mcp-server`](/wiki/reference/mcp-server) im Core (`gregCore/FrikaMF-StandaloneRepo/mcp-server/`).
+Siehe [`reference/mcp-server`](/wiki/reference/mcp-server) im Core (`gregCore/mcp-server/`).

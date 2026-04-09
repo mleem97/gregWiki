@@ -6,23 +6,23 @@ description: "Split-repo workspace: gregFramework layout, building the core, and
 
 The workspace is **multi-repo** with a local `gregFramework/` folder containing standalone repositories, for example:
 
-- `gregCore/` — **framework core** (under `FrikaMF-StandaloneRepo/`): translations, hooks, Harmony/event runtime, templates, bridges, and related core features
-- `gregMods/` (per-mod repositories)
-- `gregExtensions/` (per-extension repositories)
+- `gregCore/` — **framework core**: translations, hooks, Harmony/event runtime, templates, bridges, and related core features
+- `gregMod.<Name>/` (per-mod repositories, directly under `gregFramework/`)
+- `gregExt.<Name>/` (per-extension repositories, directly under `gregFramework/`)
 - `gregWiki/` (this documentation site)
 - `gregStore/` (**Gregweb**, private repository — modstore web + infra; Next.js under `web/`)
 
 The upstream **DataCenter-RustBridge** project is integrated into the core tree at:
 
-- `gregCore/FrikaMF-StandaloneRepo/bridges/gregSta.RustBridge/`
+- `gregCore/bridges/gregSta.RustBridge/`
 
 ## Build the core
 
 ```text
-dotnet build gregCore/FrikaMF-StandaloneRepo/FrikaMF.sln -c Release
+dotnet build gregCore/FrikaMF.sln -c Release
 ```
 
-Or open `gregCore/FrikaMF-StandaloneRepo/FrikaMF.sln` in your IDE.
+Or open `gregCore/FrikaMF.sln` in your IDE.
 
 ## Language (mods / plugins / extensions)
 
@@ -36,8 +36,8 @@ Or open `gregCore/FrikaMF-StandaloneRepo/FrikaMF.sln` in your IDE.
 
 ## Start a mod
 
-1. Create a new mod repo under `gregMods/` using the `gregMod.<Name>` pattern.
-2. Use templates from `gregCore/FrikaMF-StandaloneRepo/Templates/`.
+1. Create a new mod repo folder `gregMod.<Name>/` under `gregFramework/` using the `gregMod.<Name>` pattern.
+2. Use templates from `gregCore/Templates/`.
 3. Maintain hook metadata and version the mod in its own repository.
 
 ## Documentation site
@@ -51,4 +51,4 @@ From the `gregWiki` root: `docker build -t gregwiki-docs .` then `docker run --r
 
 ### MCP
 
-See [`reference/mcp-server`](./reference/mcp-server.md) — the server lives next to the core sources (`gregCore/FrikaMF-StandaloneRepo/mcp-server/`).
+See [`reference/mcp-server`](./reference/mcp-server.md) — the server lives next to the core sources (`gregCore/mcp-server/`).

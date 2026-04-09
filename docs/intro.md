@@ -21,9 +21,9 @@ This documentation describes the **current split layout**: a local `gregFramewor
 ## Repository hub
 
 - [Workspace map](./workspace/index.mdx) — how folders map to repos
-- **Framework core:** `gregCore/` → `FrikaMF-StandaloneRepo/` (translations, hooks, runtime, templates, bridges)
-- Mods: `gregMods/` (repos `gregMod.<Name>`)
-- Extensions: `gregExtensions/` (repos `gregExt.<Name>`)
+- **Framework core:** `gregCore/` (translations, hooks, runtime, templates, bridges)
+- Mods: `gregMod.<Name>/` (directly under `gregFramework/`)
+- Extensions: `gregExt.<Name>/` (directly under `gregFramework/`)
 - Wiki: `gregWiki/` (this site)
 
 ## Hooks and releases
@@ -43,4 +43,4 @@ This documentation describes the **current split layout**: a local `gregFramewor
 
 - **Authoring:** Markdown/MDX lives in the **gregWiki** repository.
 - **Technical source of truth:** the **framework core** is **gregCore** — translations, hooks, and runtime/bridge implementation live there.
-- **Rust bridge:** integrated in the core tree under `FrikaMF-StandaloneRepo/bridges/gregSta.RustBridge/`.
+- **Rust bridge:** integrated in the core tree under `gregCore/bridges/gregSta.RustBridge/`.

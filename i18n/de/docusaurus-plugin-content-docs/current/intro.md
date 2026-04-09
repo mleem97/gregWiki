@@ -21,9 +21,9 @@ Diese Dokumentation beschreibt den **aktuellen Split-Stand**: `gregFramework/` a
 ## Repository-Hub
 
 - [Workspace-Karte](/wiki/workspace/) — Ordner → Repos
-- **Framework-Kern:** `gregCore/` → `FrikaMF-StandaloneRepo/` (Übersetzung, Hooks, Runtime, Templates, Bridges)
-- Mods: `gregMods/` (Repos `gregMod.<Name>`)
-- Extensions: `gregExtensions/` (Repos `gregExt.<Name>`)
+- **Framework-Kern:** `gregCore/` (Übersetzung, Hooks, Runtime, Templates, Bridges)
+- Mods: `gregMod.<Name>/` (direkt unter `gregFramework/`)
+- Extensions: `gregExt.<Name>/` (direkt unter `gregFramework/`)
 - Wiki: `gregWiki/`
 
 ## Hooks und Releases
@@ -43,4 +43,4 @@ Diese Dokumentation beschreibt den **aktuellen Split-Stand**: `gregFramework/` a
 
 - **Authoring:** Inhalte liegen im **gregWiki**-Repo.
 - **Technische Wahrheit:** Der **Framework-Kern** ist **gregCore** — Übersetzung, Hooks und Runtime/Bridge-Implementierung liegen dort.
-- **RustBridge:** im Core unter `FrikaMF-StandaloneRepo/bridges/gregSta.RustBridge/`.
+- **RustBridge:** im Core unter `gregCore/bridges/gregSta.RustBridge/`.

@@ -15,16 +15,16 @@
     "format:check": "prettier --check src scripts docusaurus.config.js sidebars.js README.md docs/getting-started/documentation-layout.md package.json .prettierrc.json docker-compose.yml"
   },
   "dependencies": {
-    "@docusaurus/core": "3.9.2",
-    "@docusaurus/plugin-client-redirects": "^3.9.2",
-    "@docusaurus/plugin-content-docs": "^3.9.2",
-    "@docusaurus/plugin-content-pages": "^3.9.2",
-    "@docusaurus/plugin-css-cascade-layers": "^3.9.2",
-    "@docusaurus/plugin-sitemap": "^3.9.2",
-    "@docusaurus/plugin-svgr": "^3.9.2",
-    "@docusaurus/preset-classic": "3.9.2",
-    "@docusaurus/theme-live-codeblock": "^3.9.2",
-    "@docusaurus/theme-search-algolia": "^3.9.2",
+    "@docusaurus/core": "^3.10.0",
+    "@docusaurus/plugin-client-redirects": "^3.10.0",
+    "@docusaurus/plugin-content-docs": "^3.10.0",
+    "@docusaurus/plugin-content-pages": "^3.10.0",
+    "@docusaurus/plugin-css-cascade-layers": "^3.10.0",
+    "@docusaurus/plugin-sitemap": "^3.10.0",
+    "@docusaurus/plugin-svgr": "^3.10.0",
+    "@docusaurus/preset-classic": "^3.10.0",
+    "@docusaurus/theme-live-codeblock": "^3.10.0",
+    "@docusaurus/theme-search-algolia": "^3.10.0",
     "@tailwindcss/postcss": "^4.2.2",
     "@tsparticles/engine": "^3.9.1",
     "@tsparticles/react": "^3.0.0",
@@ -36,7 +36,7 @@
     "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
-    "@docusaurus/eslint-plugin": "^3.9.2",
+    "@docusaurus/eslint-plugin": "^3.10.0",
     "prettier": "^3.5.3"
   }
 }

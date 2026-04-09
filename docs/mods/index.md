@@ -6,7 +6,7 @@ description: Standalone MelonLoader gameplay mods (FMF.*) — separate from FFM 
 
 # Gameplay mods
 
-These pages document **gameplay mods** (`FMF.*` assemblies), hosted under `gregMods/` in the workspace. They are **not** the same as [FFM plugins](../plugins/index), which extend the framework inside the game process.
+These pages document **gameplay mods** (`FMF.*` assemblies), each repo at `gregMod.<Name>/` directly under `gregFramework/`. They are **not** the same as [FFM plugins](../plugins/index), which extend the framework inside the game process.
 
 ## Mods
 
