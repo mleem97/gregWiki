@@ -1,14 +1,12 @@
 #!/bin/sh
 set -e
-# Prefer wiki subfolder when the repo root is mounted at /app (root also has package.json).
-# Otherwise use /app when only ./wiki is bound there (compose: ./wiki:/app).
-if [ -f /app/wiki/package.json ]; then
-  cd /app/wiki
-elif [ -f /app/package.json ]; then
-  cd /app
-else
-  echo "docker-entrypoint: no package.json under /app or /app/wiki." >&2
-  echo "Run docker compose from the repository root so ./wiki is mounted, then: docker compose build --no-cache docs" >&2
+if [ ! -f /app/package.json ]; then
+  echo "docker-entrypoint: ERROR: /app/package.json not found." >&2
+  echo "  Build context must be the gregWiki repo root (the folder that contains package.json)." >&2
+  echo "  Example:  cd path/to/gregWiki && docker build -t gregwiki ." >&2
+  echo "  Not:      docker build -f gregWiki/Dockerfile ..   (wrong context)" >&2
+  echo "  Compose:  run from gregWiki so build.context is '.' — see docker-compose.yml." >&2
+  echo "  If you use a volume on /app, it must map to that repo root, not an empty dir." >&2
   exit 1
 fi
 exec "$@"

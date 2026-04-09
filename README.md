@@ -24,9 +24,11 @@ Optional: refresh the legacy GitHub Wiki mirror from a sibling `../.wiki/` clone
 
 ## Docker
 
-Build context is this repository root:
+Build context **must** be this repository root (the folder that contains `package.json`):
 
 ```bash
+docker compose up --build
+# or
 docker build -t gregwiki-docs .
 docker run --rm -p 3000:3000 gregwiki-docs
 ```
