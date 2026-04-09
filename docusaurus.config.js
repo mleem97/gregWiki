@@ -24,7 +24,7 @@ const config = {
   ],
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'de', 'fr', 'es', 'ru', 'ja'],
+    locales: ['en', 'de'],
     localeConfigs: {
       en: {label: 'English', htmlLang: 'en-GB'},
       de: {label: 'Deutsch', htmlLang: 'de-DE'},

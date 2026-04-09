@@ -1,4 +1,4 @@
-export type LocaleKey = 'en' | 'de' | 'fr' | 'es' | 'ru' | 'ja';
+export type LocaleKey = 'en' | 'de';
 
 export type HomepageDocLink = {
   title: string;

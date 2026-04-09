@@ -34,49 +34,6 @@ const byLocale: Record<LocaleKey, ModsPageStrings> = {
     download: 'DLL laden',
     notReleased: 'Noch nicht veröffentlicht',
   },
-  fr: {
-    title: 'Catalogue mods & plugins',
-    description:
-      'Généré depuis le catalogue des modules. Chaque entrée renvoie vers le wiki, la page release et le téléchargement.',
-    pluginsHeading: 'Plugins',
-    modsHeading: 'Mods',
-    wiki: 'Wiki',
-    release: 'Release',
-    download: 'Télécharger DLL',
-    notReleased: 'Pas encore publié',
-  },
-  es: {
-    title: 'Catálogo de mods y plugins',
-    description:
-      'Generado desde el catálogo de módulos. Cada entrada enlaza al wiki, la página de release y la descarga.',
-    pluginsHeading: 'Plugins',
-    modsHeading: 'Mods',
-    wiki: 'Wiki',
-    release: 'Release',
-    download: 'Descargar DLL',
-    notReleased: 'Aún no publicado',
-  },
-  ru: {
-    title: 'Каталог модов и плагинов',
-    description:
-      'Собрано из каталога модулей. Каждая запись ведёт на wiki, страницу релиза и маршрут загрузки.',
-    pluginsHeading: 'Плагины',
-    modsHeading: 'Моды',
-    wiki: 'Wiki',
-    release: 'Релиз',
-    download: 'Скачать DLL',
-    notReleased: 'Ещё не выпущено',
-  },
-  ja: {
-    title: 'Mods & プラグインカタログ',
-    description: 'モジュールカタログから生成。各エントリは Wiki・リリースページ・ダウンロードへリンクします。',
-    pluginsHeading: 'プラグイン',
-    modsHeading: 'Mods',
-    wiki: 'Wiki',
-    release: 'リリース',
-    download: 'DLL を取得',
-    notReleased: '未リリース',
-  },
 };
 
 export function getModsPageStrings(locale: string): ModsPageStrings {
