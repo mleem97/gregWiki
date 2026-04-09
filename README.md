@@ -1,4 +1,4 @@
-# gregWiki — Frika Mod Framework documentation
+# gregWiki — gregFramework documentation
 
 This repository contains the **Docusaurus site** (`docusaurus.config.js`, `src/`, `sidebars.js`) and all **Markdown/MDX content** under [`docs/`](./docs/). Published docs use the route base path **`/wiki`**.
 
@@ -16,6 +16,11 @@ npm run build
 ```
 
 Optional: refresh the legacy GitHub Wiki mirror from a sibling `../.wiki/` clone under `gregFramework/` — see [`docs/README.md`](./docs/README.md) and `npm run wiki:sync` / `wiki:normalize-i18n`.
+
+## Deployment (Coolify / CI)
+
+- **Default branch:** `main` — use this for new work and PRs.
+- **`master`:** kept in sync with `main` for hosts that still clone `master` (e.g. older Coolify defaults). Prefer setting the deployment **branch to `main`** in Coolify → Application → **Git** → Branch.
 
 ## Docker
 
