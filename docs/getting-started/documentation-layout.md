@@ -17,8 +17,8 @@ This folder is the **single source of truth** for the public Docusaurus site. Th
 | **Getting started** | [`getting-started.md`](../getting-started.md) | Onboarding (`getting-started`) + this layout page. |
 | **Workspace** | [`workspace/`](../workspace/index.mdx) | Map of `gregFramework/` repos on disk. |
 | **Framework** | [`framework/`](../framework/architecture.md) | Architecture, hooks, Hexmod. |
-| **Plugins** | [`plugins/`](../plugins/index.md) | `FFM.Plugin.*` wiki pages. |
-| **Mods** | [`mods/`](../mods/index.md) | Gameplay mods (`FMF.*`) + framework overview. |
+| **Plugins** | [`plugins/`](../plugins/index.md) | `FFM.Plugin.*` assemblies; repos `gregExt.*` on disk. |
+| **Mods** | [`mods/`](../mods/index.md) | Gameplay mods (`FMF.*`); repos `gregMod.*` on disk. |
 | **Tools** | [`tools/`](../tools/workshop-uploader.md) | Workshop uploader and related. |
 | **Guides** | [`guides/`](../guides/players/overview.md) | Role-based paths (players, mod developers, contributors, sponsors). |
 | **Releases** | [`releases/`](../releases/index.mdx) | Per-artifact release notes. |

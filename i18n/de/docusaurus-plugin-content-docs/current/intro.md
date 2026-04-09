@@ -22,8 +22,8 @@ Diese Dokumentation beschreibt den **aktuellen Split-Stand**: `gregFramework/` a
 
 - [Workspace-Karte](/wiki/workspace/) — Ordner → Repos
 - Core: `gregCore/FrikaMF-StandaloneRepo/`
-- Mods: `gregMods/` (Repos `gregMod.<Name>`)
-- Extensions: `gregExtensions/` (Repos `gregExt.<Name>`)
+- Mods: `gregMod.<Name>/` (Split-Repos, direkt unter `gregFramework/`)
+- Extensions (FFM-Plugins): `gregExt.<Name>/` (Split-Repos, direkt unter `gregFramework/`)
 - Wiki: `gregWiki/`
 
 ## Hooks und Releases

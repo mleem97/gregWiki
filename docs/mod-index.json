@@ -12,8 +12,8 @@
       "workshopContentPath": "content/Mods/",
       "workshopUrl": "",
       "githubReleaseUrl": "",
-      "wikiPath": "/wiki/hexmod",
-      "sourcePath": "mods/FMF.Mod.HexLabelMod"
+      "wikiPath": "/wiki/mods/fmf-hex-label-mod",
+      "sourcePath": "gregMod.HexLabelMod"
     },
     {
       "id": "console-input-guard",
@@ -25,8 +25,8 @@
       "workshopContentPath": "content/Mods/",
       "workshopUrl": "",
       "githubReleaseUrl": "",
-      "wikiPath": "/wiki/mods/mods/fmf-console-input-guard",
-      "sourcePath": "mods/FMF.ConsoleInputGuard"
+      "wikiPath": "/wiki/mods/fmf-console-input-guard",
+      "sourcePath": "gregMod.ConsoleInputGuard"
     },
     {
       "id": "gregify-employees",
@@ -38,8 +38,8 @@
       "workshopContentPath": "content/Mods/",
       "workshopUrl": "",
       "githubReleaseUrl": "",
-      "wikiPath": "/wiki/mods/mods/fmf-gregify-employees",
-      "sourcePath": "mods/FMF.Mod.GregifyEmployees"
+      "wikiPath": "/wiki/mods/fmf-gregify-employees",
+      "sourcePath": "gregMod.GregifyEmployees"
     },
     {
       "id": "lang-compat-bridge",
@@ -51,8 +51,8 @@
       "workshopContentPath": "content/Mods/",
       "workshopUrl": "",
       "githubReleaseUrl": "",
-      "wikiPath": "/wiki/mods/extensions/fmf-lang-compat-bridge",
-      "sourcePath": "mods/FMF.Plugin.LangCompatBridge"
+      "wikiPath": "/wiki/mods/fmf-lang-compat-bridge",
+      "sourcePath": "gregMod.LangCompatBridge"
     }
   ]
 }

@@ -24,7 +24,7 @@ Provides language/localization compatibility bridging for mixed mod stacks.
 
 - Category: Mod
 - Primary Language: C#
-- Project Path: `mods/FMF.Plugin.LangCompatBridge`
+- Project Path: `gregMod.LangCompatBridge/` (assembly `FMF.JoniMLCompatMod.dll`)
 
 ## Installation
 

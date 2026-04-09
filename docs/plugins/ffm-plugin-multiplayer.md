@@ -3,7 +3,7 @@ title: FFM.Plugin.Multiplayer
 sidebar_label: FFM.Plugin.Multiplayer
 ---
 
-`StandaloneMods/FFM.Plugin.Multiplayer`
+`gregExt.Multiplayer/` (assembly `FFM.Plugin.Multiplayer.dll`)
 
 ## Purpose
 
@@ -11,5 +11,5 @@ Contains **multiplayer / networking** runtime (bridge, sync). **Not** the same a
 
 ## Sources
 
-- Module path: `StandaloneMods/FFM.Plugin.Multiplayer`
+- Module path: `gregExt.Multiplayer/`
 - Roadmap context: [`Steamworks P2P Multiplayer Roadmap`](/wiki/legacy/wiki-import/Steamworks-P2P-Multiplayer-Roadmap)

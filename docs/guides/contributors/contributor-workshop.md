@@ -22,36 +22,38 @@ This guide covers the development workflow for the WorkshopManager and how to pu
 
 ## Repository structure
 
+Paths are relative to the **`gregFramework/`** workspace root (split repos cloned side by side).
+
 | Path | Purpose |
 |------|---------|
-| `framework/FrikaMF.csproj` | Core MelonLoader framework DLL |
-| `plugins/FFM.Plugin.*/` | FMF extension plugins (5 projects) |
-| `mods/FMF.*/` | Standalone mods (4 projects) |
-| `WorkshopUploader/` | WorkshopManager MAUI app |
-| `scripts/Deploy-Release-ToWorkshop.ps1` | Package all builds into Workshop folders |
-| `scripts/Deploy-Release-ToDataCenter.ps1` | Deploy to game for local testing |
+| `gregCore/framework/FrikaMF.csproj` | Core MelonLoader framework DLL |
+| `gregExt.*/` | FFM framework plugins (`FFM.Plugin.*` assemblies — one repo per plugin) |
+| `gregMod.*/` | Standalone gameplay mods (`FMF.*` assemblies) |
+| `gregModmanager/WorkshopUploader.csproj` | WorkshopManager MAUI app |
+| `gregFramework/scripts/Deploy-Release-ToWorkshop.ps1` | Package all builds into Workshop folders (when present in your clone) |
+| `gregFramework/scripts/Deploy-Release-ToDataCenter.ps1` | Deploy to game for local testing |
 
 ## Building
 
 ### Build everything (solution)
 
 ```bash
-dotnet build FrikaMF.sln -c Release
+dotnet build gregCore/FrikaMF.sln -c Release
 ```
 
-### Build standalone mods (not in solution)
+### Build standalone mods (per split repo)
 
 ```bash
-dotnet build mods/FMF.ConsoleInputGuard/FMF.ConsoleInputGuard.csproj -c Release
-dotnet build mods/FMF.Mod.GregifyEmployees/FMF.GregifyEmployees.csproj -c Release
-dotnet build mods/FMF.Mod.HexLabelMod/FMF.HexLabelMod.csproj -c Release
-dotnet build mods/FMF.Plugin.LangCompatBridge/FMF.JoniMLCompatMod.csproj -c Release
+dotnet build gregMod.ConsoleInputGuard/FMF.ConsoleInputGuard.csproj -c Release
+dotnet build gregMod.GregifyEmployees/FMF.GregifyEmployees.csproj -c Release
+dotnet build gregMod.HexLabelMod/FMF.HexLabelMod.csproj -c Release
+dotnet build gregMod.LangCompatBridge/FMF.JoniMLCompatMod.csproj -c Release
 ```
 
 ### Build WorkshopManager only
 
 ```bash
-dotnet build WorkshopUploader/WorkshopUploader.csproj -c Release
+dotnet build gregModmanager/WorkshopUploader.csproj -c Release
 ```
 
 ## Workshop project structure
@@ -130,7 +132,7 @@ The `SteamWorkshopService` in `WorkshopUploader/Services/SteamWorkshopService.cs
 
 ## Adding a new mod to the release
 
-1. Create the mod project under `mods/`.
+1. Create the mod as a split repo folder `gregMod.<Name>/` under the gregFramework workspace (or clone an existing `gregMod.*` repo).
 2. Add it to the `$mods` array in `Deploy-Release-ToWorkshop.ps1`.
 3. Run the deploy script.
 4. Open the new workshop project in the WorkshopManager and publish.

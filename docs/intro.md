@@ -22,8 +22,8 @@ This documentation describes the **current split layout**: a local `gregFramewor
 
 - [Workspace map](./workspace/index.mdx) — how folders map to repos
 - Core: `gregCore/FrikaMF-StandaloneRepo/`
-- Mods: `gregMods/` (repos `gregMod.<Name>`)
-- Extensions: `gregExtensions/` (repos `gregExt.<Name>`)
+- Mods: `gregMod.<Name>/` (split repos, directly under `gregFramework/`)
+- Extensions (FFM plugins): `gregExt.<Name>/` (split repos, directly under `gregFramework/`)
 - Wiki: `gregWiki/` (this site)
 
 ## Hooks and releases

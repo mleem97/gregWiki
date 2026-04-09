@@ -3,7 +3,7 @@ title: FFM.Plugin.Sysadmin
 sidebar_label: FFM.Plugin.Sysadmin
 ---
 
-`StandaloneMods/FFM.Plugin.Sysadmin`
+`gregExt.Sysadmin/` (assembly `FFM.Plugin.Sysadmin.dll`)
 
 ## Purpose
 
@@ -11,5 +11,5 @@ Contains **sysadmin-oriented UI** features (Unity UI modernization, mod settings
 
 ## Sources
 
-- Module path: `StandaloneMods/FFM.Plugin.Sysadmin`
+- Module path: `gregExt.Sysadmin/`
 - Framework context: [`Framework Features & Use Cases`](/wiki/legacy/wiki-import/Framework-Features-Use-Cases)

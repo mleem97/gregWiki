@@ -11,6 +11,7 @@ description: Windows desktop app for managing Steam Workshop content, browsing m
 ## Features
 
 ### Author tools (Projects / Editor / My Uploads)
+
 - Create workshop projects from templates (vanilla assets, MelonLoader mods, FMF plugins).
 - Edit **title**, **description** (with BBCode toolbar), **visibility**, **tags**, and **preview image**; stored in `metadata.json`.
 - **BBCode formatting toolbar** — insert Steam-compatible formatting (bold, italic, headings, URL, image, list, code, quote, spoiler, horizontal rule, table) directly in the description editor.
@@ -25,6 +26,7 @@ description: Windows desktop app for managing Steam Workshop content, browsing m
 - **Per-item stats** — subscriptions, votes, score, size.
 
 ### Mod Store (integrated in Mod Manager)
+
 - **Browse** all Workshop items for Data Center with tag filtering and sort options (last updated, newest, top rated, trending, most subscribed, title A-Z).
 - **Search** mods by text.
 - **Subscribe / Unsubscribe** to mods directly from the store.
@@ -33,17 +35,20 @@ description: Windows desktop app for managing Steam Workshop content, browsing m
 - **Item detail view** — full statistics, description, tags, gallery images, action buttons, and links to changelog/comments.
 
 ### Mod Manager / Health
+
 - **Dependency health** checks: game installed, MelonLoader, Il2Cpp assemblies, FMF core, FMF plugins directory, ModCfg directory.
 - **MelonLoader** download page link and game folder access.
 - **FMF Plugin channels** — stable (local scan) and beta (server, TODO).
 
 ### Settings
+
 - **Workspace path** — change where projects are stored (defaults to `<GameRoot>/workshop`).
 - **Language** — switch between EN, DE, RU, ES, IT, JP, PL, CN (defaults to system language). Restart button applies the change instantly.
 - **Mod Store toggle** — enable/disable the Mod Store tab (disabled by default). Restart button included.
 - **Community links** — quick access to Discord, Modding Channel, and GregFramework.eu.
 
 ### FMF dependency notice
+
 - Projects can be marked as **"Needs FrikaModFramework"** in the editor. When uploading, a notice is automatically appended to the Steam description telling users to install FMF.
 
 ## Requirements
@@ -51,7 +56,7 @@ description: Windows desktop app for managing Steam Workshop content, browsing m
 - **Windows 10** (version 1809+).
 - **Steam** with a signed-in account that **owns Data Center** (App ID **4170200**).
 - **No additional dependencies** — the release is fully self-contained (includes .NET runtime and Windows App SDK).
-- `steam_appid.txt` must be next to the executable (included in the release build). The app loads **`steam_api64.dll`** from **`Data Center_Data/Plugins/x86_64/`** in the Data Center install when possible; otherwise it uses the copy shipped next to the uploader.
+- `steam_appid.txt` must be next to the executable (included in the release build). The app loads `**steam_api64.dll`** from `**Data Center_Data/Plugins/x86_64/**` in the Data Center install when possible; otherwise it uses the copy shipped next to the uploader.
 
 ## Paths and directories {#paths}
 
@@ -109,21 +114,22 @@ Data Center has a **built-in mod system** (`ModLoader`) that loads mods from `co
 
 The game's `ModLoader` (a Unity `MonoBehaviour`) runs the following on startup:
 
-1. **`SyncWorkshopThenLoadAll()`** — a coroutine that:
-   - Queries all subscribed Steam Workshop items (`PublishedFileId_t[]`)
-   - Waits for downloads to complete (with timeout)
-   - Copies each Workshop item folder into `StreamingAssets/Mods/workshop_<ID>` via `CopyDirectory()`
-2. **`LoadAllMods()`** — scans all subdirectories in the mods path:
-   - Calls `LoadModPack(folderPath)` for each mod folder
-   - Reads `config.json`, then for each entry calls:
-     - `LoadShopItem()` → `CreateShopTemplate()` + `CreateShopButton()` for purchasable items
-     - `LoadStaticItem()` → `CreateStaticInstance()` for fixed-position decorations
+1. `**SyncWorkshopThenLoadAll()`** — a coroutine that:
+  - Queries all subscribed Steam Workshop items (`PublishedFileId_t[]`)
+  - Waits for downloads to complete (with timeout)
+  - Copies each Workshop item folder into `StreamingAssets/Mods/workshop_<ID>` via `CopyDirectory()`
+2. `**LoadAllMods()**` — scans all subdirectories in the mods path:
+  - Calls `LoadModPack(folderPath)` for each mod folder
+  - Reads `config.json`, then for each entry calls:
+    - `LoadShopItem()` → `CreateShopTemplate()` + `CreateShopButton()` for purchasable items
+    - `LoadStaticItem()` → `CreateStaticInstance()` for fixed-position decorations
 
 :::warning DLL loading timing
 The `LoadDll()` method exists in the `ModLoader` but **object assets (shopItems, staticItems) are loaded at game startup**. DLL-based mods (`dlls[]` in config.json) are loaded later at **SaveLoad runtime**, not during the initial `LoadAllMods` pass. This means DLL plugins are not available until a save is loaded.
 :::
 
 Internal state tracked by `ModLoader`:
+
 - `modTemplates` — `Dictionary<int, GameObject>` of loaded shop item prefabs by mod ID
 - `modTemplatesByFolder` — `Dictionary<string, GameObject>` of prefabs by folder name
 - `staticInstances` — `List<GameObject>` of instantiated static decorations
@@ -196,53 +202,61 @@ The `workshop_` prefix distinguishes Workshop-downloaded mods from manually inst
 
 ### config.json fields
 
-| Field | Description |
-|-------|-------------|
-| `modName` | Display name of the mod |
-| `shopItems[]` | Purchasable objects that appear in the in-game shop |
-| `staticItems[]` | Decorations placed at fixed world positions |
-| `dlls[]` | Native plugin DLLs (see [DLL mods without MelonLoader](#native-dll-mods)) |
+
+| Field           | Description                                                               |
+| --------------- | ------------------------------------------------------------------------- |
+| `modName`       | Display name of the mod                                                   |
+| `shopItems[]`   | Purchasable objects that appear in the in-game shop                       |
+| `staticItems[]` | Decorations placed at fixed world positions                               |
+| `dlls[]`        | Native plugin DLLs (see [DLL mods without MelonLoader](#native-dll-mods)) |
+
 
 ### shopItems fields
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `itemName` | `string` | Display name in the shop |
-| `price` | `int` | Purchase price |
-| `xpToUnlock` | `int` | XP threshold to unlock (0 = immediately available) |
-| `sizeInU` | `int` | Rack unit size of the object |
-| `mass` | `float` | Object mass |
-| `modelScale` | `float` | Scale multiplier for the 3D model |
-| `colliderSize` | `[x, y, z]` | Physics collider dimensions |
-| `colliderCenter` | `[x, y, z]` | Physics collider offset |
-| `modelFile` | `string` | Path to `.obj` model file (loaded via `LoadMesh`) |
-| `textureFile` | `string` | Path to `.png` texture file (loaded via `CreateMaterial`) |
-| `iconFile` | `string` | Path to `.png` shop icon (loaded via `LoadIcon`) |
-| `objectType` | `int` | `0` = passive object |
+
+| Field            | Type        | Description                                               |
+| ---------------- | ----------- | --------------------------------------------------------- |
+| `itemName`       | `string`    | Display name in the shop                                  |
+| `price`          | `int`       | Purchase price                                            |
+| `xpToUnlock`     | `int`       | XP threshold to unlock (0 = immediately available)        |
+| `sizeInU`        | `int`       | Rack unit size of the object                              |
+| `mass`           | `float`     | Object mass                                               |
+| `modelScale`     | `float`     | Scale multiplier for the 3D model                         |
+| `colliderSize`   | `[x, y, z]` | Physics collider dimensions                               |
+| `colliderCenter` | `[x, y, z]` | Physics collider offset                                   |
+| `modelFile`      | `string`    | Path to `.obj` model file (loaded via `LoadMesh`)         |
+| `textureFile`    | `string`    | Path to `.png` texture file (loaded via `CreateMaterial`) |
+| `iconFile`       | `string`    | Path to `.png` shop icon (loaded via `LoadIcon`)          |
+| `objectType`     | `int`       | `0` = passive object                                      |
+
 
 The `ModShopItem` UI component displays each shop item with `itemIcon`, `txtName`, and `txtPrice`. Purchasing calls `ButtonBuyItem()`.
 
 ### staticItems fields
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `itemName` | `string` | Display name |
-| `modelFile` | `string` | Path to `.obj` model file |
-| `textureFile` | `string` | Path to `.png` texture file |
-| `modelScale` | `float` | Scale multiplier |
-| `colliderSize` | `[x, y, z]` | Physics collider dimensions |
-| `colliderCenter` | `[x, y, z]` | Physics collider offset |
-| `position` | `[x, y, z]` | World position |
-| `rotation` | `[x, y, z]` | Euler rotation in degrees |
+
+| Field            | Type        | Description                 |
+| ---------------- | ----------- | --------------------------- |
+| `itemName`       | `string`    | Display name                |
+| `modelFile`      | `string`    | Path to `.obj` model file   |
+| `textureFile`    | `string`    | Path to `.png` texture file |
+| `modelScale`     | `float`     | Scale multiplier            |
+| `colliderSize`   | `[x, y, z]` | Physics collider dimensions |
+| `colliderCenter` | `[x, y, z]` | Physics collider offset     |
+| `position`       | `[x, y, z]` | World position              |
+| `rotation`       | `[x, y, z]` | Euler rotation in degrees   |
+
 
 ### Asset loading pipeline
 
-| Method | Input | Output |
-|--------|-------|--------|
-| `LoadMesh(folderPath, modelFile)` | `.obj` file | Unity `Mesh` |
-| `CreateMaterial(folderPath, textureFile)` | `.png` file | Unity `Material` |
-| `LoadIcon(folderPath, iconFile)` | `.png` file | Unity `Sprite` |
-| `LoadTexture(path)` | `.png` file | Unity `Texture2D` |
+
+| Method                                    | Input       | Output            |
+| ----------------------------------------- | ----------- | ----------------- |
+| `LoadMesh(folderPath, modelFile)`         | `.obj` file | Unity `Mesh`      |
+| `CreateMaterial(folderPath, textureFile)` | `.png` file | Unity `Material`  |
+| `LoadIcon(folderPath, iconFile)`          | `.png` file | Unity `Sprite`    |
+| `LoadTexture(path)`                       | `.png` file | Unity `Texture2D` |
+
 
 - **3D models**: Wavefront OBJ format (`.obj`)
 - **Textures**: PNG format (`.png`)
@@ -268,8 +282,9 @@ The game's `ModLoader` has **built-in DLL loading** — no MelonLoader required.
 ```
 
 **How it works internally:**
+
 1. `ModLoader.LoadDll(folderPath, DllEntry)` loads the DLL from the mod folder
-2. The `entryClass` must reference a class that implements the **`IModPlugin`** interface
+2. The `entryClass` must reference a class that implements the `**IModPlugin`** interface
 3. Loaded plugins are stored in `ModLoader.loadedPlugins` (`List<IModPlugin>`)
 
 :::warning Loading timing
@@ -278,21 +293,25 @@ Unlike asset objects (`shopItems`, `staticItems`) which are loaded at game start
 
 **DLL entry requirements:**
 
-| Field | Description |
-|-------|-------------|
-| `fileName` | The `.dll` file in the mod folder |
+
+| Field        | Description                                                                           |
+| ------------ | ------------------------------------------------------------------------------------- |
+| `fileName`   | The `.dll` file in the mod folder                                                     |
 | `entryClass` | Fully qualified class name (e.g. `MyNamespace.MyPlugin`) that implements `IModPlugin` |
+
 
 :::caution Experimental feature
 The developer has marked DLL loading as **untested**. The `LoadDll` method and `IModPlugin` interface exist in the game code, but stability is not guaranteed. A mod that uses only `shopItems` and `staticItems` (asset-only) is the safest approach.
 :::
 
 **Advantages over MelonLoader:**
+
 - No external framework needed — works with the vanilla game
 - Distributed via Workshop like any other mod (just include the DLL in the mod folder)
 - The game manages loading/unloading through its own lifecycle
 
 **Limitations:**
+
 - The `IModPlugin` interface contract is not publicly documented — you need to reference the game's IL2CPP assemblies to implement it
 - Less flexibility than MelonLoader's Harmony patching
 - Only the entry class specified in `entryClass` is instantiated
@@ -308,13 +327,15 @@ For now, only **passive objects** are supported for shop items (`objectType: 0`)
 
 The game loads native mods from `Data Center_Data\StreamingAssets\Mods\`. Workshop items are copied into subfolders named `workshop_<PublishedFileId>` under that path (see [Steam install path](#steam-install-path)).
 
-**ModPathRedirector** is a **MelonLoader plugin** (not a MelonMod): install the DLL under **`{GameRoot}/Plugins/`**. It does **not** change native mod paths. It calls **`steam_api64.dll`** directly (Steam flat API: `SteamAPI_ISteamUGC_*`). The game ships this DLL under **`Data Center_Data/Plugins/x86_64/`**; the plugin loads it from there first, then falls back next to the executable. After the Il2Cpp assembly step (see MelonLoader log: `Il2CppAssemblyGenerator`), **`OnPreModsLoaded`** blocks loading MelonMods until each subscribed Workshop item reports installed in Steam and a matching **`Data Center_Data/StreamingAssets/Mods/workshop_<ID>/`** folder exists (per-item **`DownloadItem`**, **`SteamAPI_RunCallbacks`**, timeouts). If the game has not copied Workshop content into `StreamingAssets/Mods` yet, the plugin continues after a short grace period and logs a warning — restart once if mods are missing.
+**ModPathRedirector** is a **MelonLoader plugin** (not a MelonMod): install the DLL under `**{GameRoot}/Plugins/`**. It does **not** change native mod paths. It calls `**steam_api64.dll`** directly (Steam flat API: `SteamAPI_ISteamUGC_*`). The game ships this DLL under `**Data Center_Data/Plugins/x86_64/**`; the plugin loads it from there first, then falls back next to the executable. After the Il2Cpp assembly step (see MelonLoader log: `Il2CppAssemblyGenerator`), `**OnPreModsLoaded**` blocks loading MelonMods until each subscribed Workshop item reports installed in Steam and a matching `**Data Center_Data/StreamingAssets/Mods/workshop_<ID>/**` folder exists (per-item `**DownloadItem**`, `**SteamAPI_RunCallbacks**`, timeouts). If the game has not copied Workshop content into `StreamingAssets/Mods` yet, the plugin continues after a short grace period and logs a warning — restart once if mods are missing.
 
 **What it does:**
-- On each frame (from `OnApplicationStarted`), waits for `SteamAPI_IsSteamRunning` and resolves `SteamAPI_SteamUGC_v0xx` → `ISteamUGC*`, then calls the native UGC APIs (no Il2Cpp Steamworks wrapper)
+
+- On each frame (from `OnApplicationStarted`), waits for `SteamAPI_IsSteamRunning` and resolves `SteamAPI_SteamUGC_v0xx` → `ISteamUGC`*, then calls the native UGC APIs (no Il2Cpp Steamworks wrapper)
 - Leaves `ModLoader.LoadAllMods` / `CopyDirectory` unchanged — Workshop sync still uses `Data Center_Data/StreamingAssets/Mods/workshop_<ID>/`
 
 **Installation:**
+
 1. Copy `FMF.ModPathRedirector.dll` into `<GameRoot>/Plugins/` (MelonLoader **Plugins** folder next to the executable)
 2. Start the game — subscribed Workshop content is requested early; manual native mods still go under `Data Center_Data/StreamingAssets/Mods/<folder>/` (each folder with a `config.json`)
 
@@ -343,9 +364,9 @@ For each Workshop project:
 
 1. Create a **folder** under the workspace (the folder name appears in the list).
 2. Add a `content/` subfolder with files to ship:
-   - For **vanilla mods**: `config.json` + `.obj` models + `.png` textures directly in `content/`
-   - For **MelonLoader mods**: `content/Mods/` with `.dll` files
-   - For **FMF plugins**: `content/FMF/Plugins/` with `.dll` files
+  - For **vanilla mods**: `config.json` + `.obj` models + `.png` textures directly in `content/`
+  - For **MelonLoader mods**: `content/Mods/` with `.dll` files
+  - For **FMF plugins**: `content/FMF/Plugins/` with `.dll` files
 3. Optionally create `metadata.json` yourself or fill it in the app.
 4. Optionally add `preview.png` (or `.jpg`, `.jpeg`, `.gif`, `.webp`) at the project root.
 5. Optionally add gallery screenshots under `screenshots/` — these are uploaded as additional preview images.
@@ -391,27 +412,31 @@ workshop/
 
 ### metadata.json schema
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `publishedFileId` | `number` | Steam file ID (0 if unpublished) |
-| `title` | `string` | Workshop item title (max 128 chars) |
-| `description` | `string` | Description, supports [Steam BBCode](#bbcode) (max 8000 chars) |
-| `visibility` | `string` | `"Public"`, `"FriendsOnly"`, or `"Private"` |
-| `previewImageRelativePath` | `string` | Relative path to preview image (default `"preview.png"`) |
-| `tags` | `string[]` | Up to 20 tags for discoverability |
-| `needsFmf` | `boolean` | Appends FMF dependency notice on upload |
-| `additionalPreviews` | `string[]` | Relative paths to gallery screenshot images |
+
+| Field                      | Type       | Description                                                    |
+| -------------------------- | ---------- | -------------------------------------------------------------- |
+| `publishedFileId`          | `number`   | Steam file ID (0 if unpublished)                               |
+| `title`                    | `string`   | Workshop item title (max 128 chars)                            |
+| `description`              | `string`   | Description, supports [Steam BBCode](#bbcode) (max 8000 chars) |
+| `visibility`               | `string`   | `"Public"`, `"FriendsOnly"`, or `"Private"`                    |
+| `previewImageRelativePath` | `string`   | Relative path to preview image (default `"preview.png"`)       |
+| `tags`                     | `string[]` | Up to 20 tags for discoverability                              |
+| `needsFmf`                 | `boolean`  | Appends FMF dependency notice on upload                        |
+| `additionalPreviews`       | `string[]` | Relative paths to gallery screenshot images                    |
+
 
 ## Using the app
 
 ### Tabs
 
-| Tab | Purpose |
-|-----|---------|
-| **Projects** | Local workshop projects; search, open editor |
-| **New** | Create from template (vanilla, MelonLoader, FMF) |
+
+| Tab            | Purpose                                           |
+| -------------- | ------------------------------------------------- |
+| **Projects**   | Local workshop projects; search, open editor      |
+| **New**        | Create from template (vanilla, MelonLoader, FMF)  |
 | **My Uploads** | Paginated list of your published items with stats |
-| **Mod Store** | Browse, search, subscribe, vote, and manage mods |
+| **Mod Store**  | Browse, search, subscribe, vote, and manage mods  |
+
 
 ### Publish workflow
 
@@ -421,11 +446,11 @@ workshop/
 4. Write a **version changelog** (required for first publish).
 5. Click **Save and upload to Steam**.
 6. The app:
-   - Validates all required fields (upload readiness check).
-   - Saves `metadata.json`.
-   - Uploads `content/` and preview to Steam.
-   - Uploads additional gallery screenshots (if any).
-   - **Syncs back** — re-downloads Steam's version of content, preview image, and gallery screenshots into your local project folder.
+  - Validates all required fields (upload readiness check).
+  - Saves `metadata.json`.
+  - Uploads `content/` and preview to Steam.
+  - Uploads additional gallery screenshots (if any).
+  - **Syncs back** — re-downloads Steam's version of content, preview image, and gallery screenshots into your local project folder.
 
 ### Import from Steam
 
@@ -441,6 +466,7 @@ WorkshopUploader.exe --mode publish --path <project-folder>
 ```
 
 Optional flags:
+
 - `--autocommit` — writes a status JSON for external tools.
 
 ## Steam BBCode reference {#bbcode}
@@ -551,28 +577,32 @@ Subscribe to this Workshop item — the game loads it automatically.
 
 Before uploading, the editor runs automated checks:
 
-| Check | Error condition | Warning condition |
-|-------|----------------|-------------------|
-| **Content folder** | `content/` missing or empty | — |
-| **Title** | Empty or > 128 characters | — |
-| **Description** | > 8000 characters | Empty (recommended) |
-| **Visibility** | — | Unknown value |
-| **Preview image** | — | Missing or > 1 MB |
-| **Tags** | — | No tags set |
-| **Content size** | — | > 100 MB |
-| **Changelog** | Empty on first publish | Empty on update |
+
+| Check              | Error condition             | Warning condition   |
+| ------------------ | --------------------------- | ------------------- |
+| **Content folder** | `content/` missing or empty | —                   |
+| **Title**          | Empty or > 128 characters   | —                   |
+| **Description**    | > 8000 characters           | Empty (recommended) |
+| **Visibility**     | —                           | Unknown value       |
+| **Preview image**  | —                           | Missing or > 1 MB   |
+| **Tags**           | —                           | No tags set         |
+| **Content size**   | —                           | > 100 MB            |
+| **Changelog**      | Empty on first publish      | Empty on update     |
+
 
 Items with **errors** cannot be uploaded. **Warnings** are informational — upload is still possible.
 
 ## Preview images {#preview-images}
 
 ### Main preview image
+
 - Supports **PNG**, **JPG**, **JPEG**, **GIF**, and **WebP**.
 - Auto-detected by filename: `preview.png`, `preview.jpg`, etc.
 - Recommended size: under **1 MB**.
 - The app auto-detects the format from the file's magic bytes when syncing from Steam.
 
 ### Gallery screenshots
+
 - Up to **9** additional images per item.
 - Stored in `screenshots/` under the project root.
 - Uploaded in a separate pass after the main content publish.
@@ -635,6 +665,7 @@ Yes. Use **My Uploads** → select the item → **Import**. The app downloads ev
 
 **Q: Why can't I upload? The button is greyed out / shows errors.**
 The upload readiness checker found issues. Common blockers:
+
 - `content/` folder is missing or empty.
 - Title is empty.
 - No changelog provided on first publish.
@@ -644,6 +675,7 @@ Check the readiness panel at the bottom of the editor for details.
 Yes for the **first publish** (error if empty). For updates it's recommended but not enforced (warning only).
 
 **Q: What happens after I click "Save and upload to Steam"?**
+
 1. Metadata is saved locally.
 2. Content and preview are uploaded to Steam.
 3. Gallery screenshots are uploaded (if any).
@@ -690,17 +722,20 @@ Yes. After publishing and during import, gallery screenshots are downloaded from
 
 **Q: How does the game load Workshop mods?**
 At startup, the game's `ModLoader.SyncWorkshopThenLoadAll()` queries all subscribed items from Steam, waits for downloads to complete, and copies each into `Data Center_Data/StreamingAssets/Mods/workshop_<ID>/`. Then `LoadAllMods()` scans that folder. Asset objects (shopItems, staticItems) load immediately; DLL mods load later at SaveLoad time. The content structure determines what kind of mod it is:
+
 - **Native mods** (vanilla): `config.json` + OBJ/PNG assets directly in `content/` — no extra tools needed.
 - **MelonLoader mods**: `content/Mods/` with `.dll` files — requires MelonLoader.
 - **FMF plugins**: `content/FMF/Plugins/` with `.dll` files — requires MelonLoader + FMF.
 
 **Q: What are the three mod types?**
 
-| Type | Requirements | Content structure | Use case |
-|------|-------------|-------------------|----------|
-| **Vanilla (native)** | None | `config.json` + `.obj` + `.png` | Custom objects, decorations, shop items |
-| **MelonLoader** | MelonLoader | `Mods/*.dll` | Code mods (IL2CPP) |
-| **FMF plugin** | MelonLoader + FMF | `FMF/Plugins/*.dll` | FrikaModFramework plugins |
+
+| Type                 | Requirements      | Content structure               | Use case                                |
+| -------------------- | ----------------- | ------------------------------- | --------------------------------------- |
+| **Vanilla (native)** | None              | `config.json` + `.obj` + `.png` | Custom objects, decorations, shop items |
+| **MelonLoader**      | MelonLoader       | `Mods/*.dll`                    | Code mods (IL2CPP)                      |
+| **FMF plugin**       | MelonLoader + FMF | `FMF/Plugins/*.dll`             | FrikaModFramework plugins               |
+
 
 **Q: What model format does the native mod system use?**
 Wavefront OBJ (`.obj`) for 3D models and PNG (`.png`) for textures and icons.
@@ -728,28 +763,33 @@ Yes. Browse or search for mods, then click **Subscribe**. Steam will download th
 ### Troubleshooting
 
 **Q: The app won't start / crashes on launch.**
+
 - Ensure `steam_appid.txt` is next to the executable; `steam_api64.dll` should resolve from the Data Center install (`Data Center_Data/Plugins/x86_64/`) or from the uploader folder.
 - Steam must be running and logged in.
 - Check the Windows Event Viewer (Application log) for .NET crash details.
 - On Windows 10 < 1809, the app may not work due to WinUI requirements.
 
 **Q: "Steam init failed" error in the app.**
+
 - Make sure Steam is running and you are logged in.
 - Verify you own Data Center (App ID 4170200).
 - Check that `steam_appid.txt` contains `4170200`.
 
 **Q: My content doesn't show up after subscribing.**
+
 - Restart the game — Workshop content is loaded at startup.
 - Check `steamapps/workshop/content/4170200/` to verify the download exists.
 - If the folder is empty, try unsubscribing and re-subscribing.
 
 **Q: The preview image doesn't load in the Mod Store.**
+
 - The image is loaded from Steam's CDN. Check your internet connection.
 - Very large images may take a moment to appear.
 
 ## See also
 
-- Repository README: [`WorkshopUploader/README.md`](https://github.com/mleem97/gregFramework/blob/master/WorkshopUploader/README.md)
+- Repository README: `[WorkshopUploader/README.md](https://github.com/mleem97/gregFramework/blob/master/WorkshopUploader/README.md)`
 - [End-User Guide](/wiki/guides/players/enduser-workshop)
 - [Contributor Guide](/wiki/guides/contributors/contributor-workshop)
 - [Release](/wiki/guides/contributors/release)
+

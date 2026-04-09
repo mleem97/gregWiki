@@ -9,6 +9,8 @@ export type ModsPageStrings = {
   release: string;
   download: string;
   notReleased: string;
+  repoFolder: string;
+  legacyNoSplitRepo: string;
 };
 
 const byLocale: Record<LocaleKey, ModsPageStrings> = {
@@ -22,6 +24,8 @@ const byLocale: Record<LocaleKey, ModsPageStrings> = {
     release: 'Release',
     download: 'Download DLL',
     notReleased: 'Not released yet',
+    repoFolder: 'gregFramework folder',
+    legacyNoSplitRepo: 'Legacy — no split repo in workspace',
   },
   de: {
     title: 'Mods- & Plugin-Katalog',
@@ -33,6 +37,8 @@ const byLocale: Record<LocaleKey, ModsPageStrings> = {
     release: 'Release',
     download: 'DLL laden',
     notReleased: 'Noch nicht veröffentlicht',
+    repoFolder: 'Ordner unter gregFramework',
+    legacyNoSplitRepo: 'Legacy — kein Split-Repo im Workspace',
   },
 };
 

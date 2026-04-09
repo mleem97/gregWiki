@@ -52,6 +52,12 @@ export default function ModsCatalogPage(): JSX.Element {
                   </h3>
                   <p className="mb-4 text-sm text-on-surface-variant">{entry.description}</p>
                   <p className="mb-1 text-xs text-on-surface-variant">Version: {entry.version}</p>
+                  <p className="mb-1 text-xs text-on-surface-variant">
+                    {m.repoFolder}:{' '}
+                    <span className="font-mono text-on-surface">
+                      {entry.repoFolder ?? m.legacyNoSplitRepo}
+                    </span>
+                  </p>
                   <p className="mb-4 text-xs text-on-surface-variant">
                     Languages: {entry.languages.join(', ')}
                   </p>
@@ -98,6 +104,12 @@ export default function ModsCatalogPage(): JSX.Element {
                   </h3>
                   <p className="mb-4 text-sm text-on-surface-variant">{entry.description}</p>
                   <p className="mb-1 text-xs text-on-surface-variant">Version: {entry.version}</p>
+                  <p className="mb-1 text-xs text-on-surface-variant">
+                    {m.repoFolder}:{' '}
+                    <span className="font-mono text-on-surface">
+                      {entry.repoFolder ?? m.legacyNoSplitRepo}
+                    </span>
+                  </p>
                   <p className="mb-4 text-xs text-on-surface-variant">
                     Dependencies: {entry.dependencies.join(', ')}
                   </p>

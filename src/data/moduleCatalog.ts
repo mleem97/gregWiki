@@ -3,6 +3,8 @@ export type ModuleType = 'plugin' | 'mod';
 export type ModuleEntry = {
   id: string;
   name: string;
+  /** Folder under gregFramework/ (split repo), e.g. gregExt.AssetExporter */
+  repoFolder: string | null;
   type: ModuleType;
   description: string;
   version: string;
@@ -19,6 +21,7 @@ export const moduleCatalog: ModuleEntry[] = [
   {
     id: 'ffm-plugin-asset-exporter',
     name: 'FFM.Plugin.AssetExporter',
+    repoFolder: 'gregExt.AssetExporter',
     type: 'plugin',
     description: 'Export-focused asset tooling for Data Center workflows.',
     version: 'NotReleasedYet',
@@ -33,6 +36,7 @@ export const moduleCatalog: ModuleEntry[] = [
   {
     id: 'ffm-plugin-multiplayer',
     name: 'FFM.Plugin.Multiplayer',
+    repoFolder: 'gregExt.Multiplayer',
     type: 'plugin',
     description: 'Multiplayer-oriented plugin surface for gregFramework ecosystems.',
     version: 'NotReleasedYet',
@@ -47,6 +51,7 @@ export const moduleCatalog: ModuleEntry[] = [
   {
     id: 'ffm-plugin-player-models',
     name: 'FFM.Plugin.PlayerModels',
+    repoFolder: 'gregExt.PlayerModels',
     type: 'plugin',
     description: 'Player model extension plugin for runtime and presentation logic.',
     version: 'NotReleasedYet',
@@ -75,6 +80,7 @@ export const moduleCatalog: ModuleEntry[] = [
   {
     id: 'ffm-plugin-web-ui-bridge',
     name: 'FFM.Plugin.WebUIBridge',
+    repoFolder: 'gregExt.WebUIBridge',
     type: 'plugin',
     description: 'Bridge plugin between game runtime data and web UI overlays.',
     version: 'NotReleasedYet',
@@ -89,6 +95,7 @@ export const moduleCatalog: ModuleEntry[] = [
   {
     id: 'fmf-modpathredirector',
     name: 'FMF.ModPathRedirector',
+    repoFolder: 'gregMod.PathRedirector',
     type: 'plugin',
     description: 'MelonLoader plugin: waits for each subscribed Workshop item (Steam + StreamingAssets/Mods/workshop_*) before MelonMods load.',
     version: '1.5.0',
@@ -103,6 +110,7 @@ export const moduleCatalog: ModuleEntry[] = [
   {
     id: 'fmf-console-input-guard',
     name: 'FMF.ConsoleInputGuard',
+    repoFolder: 'gregMod.ConsoleInputGuard',
     type: 'mod',
     description: 'Console interaction guardrails for safer gameplay input handling.',
     version: 'NotReleasedYet',
@@ -117,6 +125,7 @@ export const moduleCatalog: ModuleEntry[] = [
   {
     id: 'fmf-gregify-employees',
     name: 'FMF.GregifyEmployees',
+    repoFolder: 'gregMod.GregifyEmployees',
     type: 'mod',
     description: 'Gameplay mod for employee theming and behavior customization.',
     version: 'NotReleasedYet',
@@ -131,6 +140,7 @@ export const moduleCatalog: ModuleEntry[] = [
   {
     id: 'fmf-hex-label-mod',
     name: 'FMF.HexLabelMod',
+    repoFolder: 'gregMod.HexLabelMod',
     type: 'mod',
     description: 'In-world hex color labels for cable spinners and racks.',
     version: 'NotReleasedYet',
@@ -145,6 +155,7 @@ export const moduleCatalog: ModuleEntry[] = [
   {
     id: 'fmf-lang-compat-bridge',
     name: 'FMF.LangCompatBridge',
+    repoFolder: 'gregMod.LangCompatBridge',
     type: 'mod',
     description: 'Localization compatibility bridge for mixed mod stacks.',
     version: 'NotReleasedYet',
@@ -159,6 +170,7 @@ export const moduleCatalog: ModuleEntry[] = [
   {
     id: 'fmf-ui-replacement-mod',
     name: 'FMF.UIReplacementMod',
+    repoFolder: null,
     type: 'mod',
     description: 'Replaces and modernizes selected in-game UI layers.',
     version: 'NotReleasedYet',

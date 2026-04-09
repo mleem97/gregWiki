@@ -24,7 +24,7 @@ Applies themed employee customization to hiring-related gameplay flows.
 
 - Category: Mod
 - Primary Language: C#
-- Project Path: `mods/FMF.Mod.GregifyEmployees`
+- Project Path: `gregMod.GregifyEmployees/`
 
 ## Installation
 
