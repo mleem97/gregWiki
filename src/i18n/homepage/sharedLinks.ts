@@ -9,11 +9,11 @@ export const sharedKnowledgeLinksEn: HomepageDocLink[] = [
     link: '/wiki/mods/framework',
   },
   {
-    title: 'Plugin Wiki',
-    description: 'Plugin-specific docs and release pages.',
-    link: '/wiki/mods/extensions/',
+    title: 'Plugins (FFM)',
+    description: 'FFM.Plugin.* docs and release pages.',
+    link: '/wiki/plugins/',
   },
-  { title: 'Mod Wiki', description: 'Gameplay mods, releases, and module docs.', link: '/wiki/mods/mods' },
+  { title: 'Mods (FMF)', description: 'Gameplay mods, releases, and module docs.', link: '/wiki/mods/' },
   {
     title: 'FMF Hooks Catalog',
     description: 'Hook strings and event IDs generated from core sources.',
@@ -36,12 +36,12 @@ export const sharedWorkflowLinksEn: HomepageDocLink[] = [
   {
     title: 'End-user docs',
     description: 'Install, update, and troubleshooting paths.',
-    link: '/wiki/wiki-import/EndUser/End-User-Release',
+    link: '/wiki/legacy/wiki-import/EndUser/End-User-Release',
   },
   {
     title: 'Mod developer docs',
     description: 'Setup, debugging, and hook integration.',
-    link: '/wiki/wiki-import/ModDevs/Mod-Developer-Debug',
+    link: '/wiki/legacy/wiki-import/ModDevs/Mod-Developer-Debug',
   },
   {
     title: 'Repo inventory',
@@ -68,11 +68,11 @@ export const sharedKnowledgeLinksDe: HomepageDocLink[] = [
     link: '/wiki/mods/framework',
   },
   {
-    title: 'Plugin-Wiki',
-    description: 'Plugin-Doku und Release-Seiten.',
-    link: '/wiki/mods/extensions/',
+    title: 'Plugins (FFM)',
+    description: 'FFM.Plugin.*-Doku und Release-Seiten.',
+    link: '/wiki/plugins/',
   },
-  { title: 'Mod-Wiki', description: 'Gameplay-Mods, Releases und Modul-Doku.', link: '/wiki/mods/mods' },
+  { title: 'Mods (FMF)', description: 'Gameplay-Mods, Releases und Modul-Doku.', link: '/wiki/mods/' },
   {
     title: 'FMF-Hooks-Katalog',
     description: 'Hook-Strings und Event-IDs aus den Core-Quellen.',
@@ -95,12 +95,12 @@ export const sharedWorkflowLinksDe: HomepageDocLink[] = [
   {
     title: 'Endnutzer-Doku',
     description: 'Installation, Updates und Fehlerbehebung.',
-    link: '/wiki/wiki-import/EndUser/End-User-Release',
+    link: '/wiki/legacy/wiki-import/EndUser/End-User-Release',
   },
   {
     title: 'Mod-Entwickler-Doku',
     description: 'Setup, Debugging und Hook-Integration.',
-    link: '/wiki/wiki-import/ModDevs/Mod-Developer-Debug',
+    link: '/wiki/legacy/wiki-import/ModDevs/Mod-Developer-Debug',
   },
   {
     title: 'Repo-Inventar',

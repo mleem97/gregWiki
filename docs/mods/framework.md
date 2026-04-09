@@ -3,6 +3,8 @@ title: Framework
 sidebar_label: Framework
 ---
 
+**Language:** mod, plugin, and extension **logic must be written in C#** — see [Modding language (C# only)](/wiki/reference/modding-language-requirement).
+
 The core `FrikaMF` runtime provides:
 
 - Harmony patch integration for gameplay hooks

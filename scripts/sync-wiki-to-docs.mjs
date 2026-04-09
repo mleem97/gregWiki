@@ -4,12 +4,12 @@ import {join, resolve} from 'node:path';
 const projectRoot = resolve(process.cwd());
 const gregFrameworkRoot = resolve(projectRoot, '..');
 const wikiDir = join(gregFrameworkRoot, '.wiki');
-const outDir = join(projectRoot, 'docs', 'wiki-import');
+const outDir = join(projectRoot, 'docs', 'legacy', 'wiki-import');
 
 if (!existsSync(wikiDir)) {
   console.error(
     `Missing ${wikiDir}. Clone or restore the GitHub Wiki working tree there, then re-run this script.\n` +
-      'Existing files under docs/wiki-import/ are left unchanged.',
+      'Existing files under docs/legacy/wiki-import/ are left unchanged.',
   );
   process.exit(1);
 }

@@ -6,12 +6,13 @@ description: "Split-Repo-Workspace: gregFramework-Layout, Core bauen und wo die 
 
 Die Struktur ist **Multi-Repo** mit `gregFramework/` als lokalem Wrapper-Ordner. Darin liegen die eigenständigen Repositories, z. B.:
 
-- `gregCore/` (Core SDK, inkl. `FrikaMF-StandaloneRepo/`)
+- `gregCore/` — **Framework-Kern** (`FrikaMF-StandaloneRepo/`): Übersetzung, Hooks, Harmony-/Event-Laufzeit, Templates, Bridges und übrige Kernfunktionen
 - `gregMods/` (einzelne Mod-Repos)
 - `gregExtensions/` (einzelne Extension-Repos)
 - `gregWiki/` (Dokumentation)
+- `gregStore/` (**Gregweb**, privates Repository — Modstore Web + Infra; Next.js unter `web/`)
 
-`DataCenter-RustBridge` wird in den Core integriert und liegt unter:
+Das Upstream-Projekt **DataCenter-RustBridge** wird in den Core integriert und liegt unter:
 
 - `gregCore/FrikaMF-StandaloneRepo/bridges/gregSta.RustBridge/`
 
@@ -22,6 +23,10 @@ dotnet build gregCore/FrikaMF-StandaloneRepo/FrikaMF.sln -c Release
 ```
 
 Alternativ in der IDE: `gregCore/FrikaMF-StandaloneRepo/FrikaMF.sln` öffnen.
+
+## Sprache (Mods / Plugins / Extensions)
+
+**Pflicht:** Gameplay- und Integrationslogik für Mods, MelonLoader-Plugins und Extensions ausschließlich in **C#**. Siehe [Modding-Sprache (nur C#)](/wiki/reference/modding-language-requirement).
 
 ## Hook-Naming
 

@@ -11,22 +11,24 @@ This documentation describes the **current split layout**: a local `gregFramewor
 
 | Audience | Start here |
 |----------|------------|
-| **Players** — install, play, troubleshoot | [End users (hub)](./topics/end-user/overview.md) · [End user wiki (import)](./wiki-import/EndUser/) |
-| **Mod developers** — build mods, hooks, debugging | [Mod developers (hub)](./topics/mod-developers/overview.md) · [ModDevs wiki (import)](./wiki-import/ModDevs/) · [Framework](./mods/framework.md) |
-| **Contributors** — PRs, docs, plugins, CI | [Contributors (workflow)](./topics/contributors/overview.md) · [Contributors wiki (import)](./wiki-import/Contributors/) |
-| **Sponsors** — support & transparency | [Sponsors (hub)](./topics/sponsors/overview.md) · [Sponsors (EN)](./wiki-import/Sponsors) · [Sponsoren (DE)](./wiki-import/Sponsoren) |
+| **Players** — install, play, troubleshoot | [End users (hub)](./guides/players/overview.md) · [End user wiki (import)](./legacy/wiki-import/EndUser/) |
+| **Mod developers** — build mods, hooks, debugging | [Mod developers (hub)](./guides/mod-developers/overview.md) · [ModDevs wiki (import)](./legacy/wiki-import/ModDevs/) · [Framework](./mods/framework.md) |
+| **Contributors** — PRs, docs, plugins, CI | [Contributors (workflow)](./guides/contributors/topics-overview.md) · [Contributors wiki (import)](./legacy/wiki-import/Contributors/) |
+| **Sponsors** — support & transparency | [Sponsors (hub)](./guides/sponsors/overview.md) · [Sponsors (EN)](./legacy/wiki-import/Sponsors) · [Sponsoren (DE)](./legacy/wiki-import/Sponsoren) |
 
-**Experience tracks** (newbies → pros): [By audience](./topics/audiences/overview.md) → [Newbies](./audiences/newbies.md), [Intermediates](./audiences/intermediates.md), [Professionals](./audiences/professionals.md).
+**Experience tracks** (newbies → pros): [By audience](./guides/players/audiences-overview.md) → [Newbies](./guides/players/newbies.md), [Intermediates](./guides/players/intermediates.md), [Professionals](./guides/players/professionals.md).
 
 ## Repository hub
 
-- Core: `gregCore/FrikaMF-StandaloneRepo/`
+- [Workspace map](./workspace/index.mdx) — how folders map to repos
+- **Framework core:** `gregCore/` → `FrikaMF-StandaloneRepo/` (translations, hooks, runtime, templates, bridges)
 - Mods: `gregMods/` (repos `gregMod.<Name>`)
 - Extensions: `gregExtensions/` (repos `gregExt.<Name>`)
 - Wiki: `gregWiki/` (this site)
 
 ## Hooks and releases
 
+- [Modding language (C# only)](./reference/modding-language-requirement.md) — **all** mod, plugin, and extension logic must be **C#**
 - [FMF hook naming](./reference/fmf-hook-naming.md) — `FMF.<Domain>.…` and legacy `FFM.*`
 - [FMF hooks catalog](./reference/fmf-hooks-catalog.md) — generated from core `HookNames.cs`
 - [Release channels](./reference/release-channels.md) — Steam Workshop vs GitHub (beta)
@@ -40,5 +42,5 @@ This documentation describes the **current split layout**: a local `gregFramewor
 ## Source model
 
 - **Authoring:** Markdown/MDX lives in the **gregWiki** repository.
-- **Technical source of truth:** runtime and bridge details come from **gregCore**.
+- **Technical source of truth:** the **framework core** is **gregCore** — translations, hooks, and runtime/bridge implementation live there.
 - **Rust bridge:** integrated in the core tree under `FrikaMF-StandaloneRepo/bridges/gregSta.RustBridge/`.

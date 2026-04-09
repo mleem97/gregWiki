@@ -2,8 +2,7 @@
 
 const config = {
   title: 'gregFramework',
-  tagline:
-    'Community docs for gregFramework — Data Center mods, FMF plugins, hooks, and split-repo layout',
+  tagline: 'Community docs for gregFramework — Data Center mods, FMF plugins, hooks, and split-repo layout',
   favicon: 'img/logo.svg',
   url: 'https://frikadellental.de',
   baseUrl: '/',
@@ -59,8 +58,45 @@ const config = {
             return ['/docs'];
           }
 
+          // GitHub wiki mirror moved under /wiki/legacy/wiki-import/
+          if (existingPath.startsWith('/wiki/legacy/wiki-import')) {
+            return [existingPath.replace('/wiki/legacy/wiki-import', '/wiki/wiki-import')];
+          }
+
+          const redirectsToHere = {
+            '/wiki/framework/architecture': ['/wiki/architecture'],
+            '/wiki/framework/fmf-hooks': ['/wiki/fmf-hooks'],
+            '/wiki/framework/hexmod': ['/wiki/hexmod'],
+            '/wiki/tools/workshop-uploader': ['/wiki/workshop-uploader'],
+            '/wiki/getting-started/documentation-layout': ['/wiki/README'],
+            '/wiki/guides/players/newbies': ['/wiki/audiences/newbies'],
+            '/wiki/guides/players/intermediates': ['/wiki/audiences/intermediates'],
+            '/wiki/guides/players/professionals': ['/wiki/audiences/professionals'],
+            '/wiki/guides/players/audiences-overview': ['/wiki/topics/audiences/overview'],
+            '/wiki/guides/players/overview': ['/wiki/topics/end-user/overview'],
+            '/wiki/guides/mod-developers/overview': ['/wiki/topics/mod-developers/overview'],
+            '/wiki/guides/sponsors/overview': ['/wiki/topics/sponsors/overview'],
+            '/wiki/guides/players/enduser-workshop': ['/wiki/guides/enduser-workshop'],
+            '/wiki/guides/contributors/contributor-workshop': ['/wiki/guides/contributor-workshop'],
+            '/wiki/guides/contributors/release': ['/wiki/guides/release'],
+            '/wiki/guides/contributors/topics-overview': ['/wiki/topics/contributors/overview'],
+            '/wiki/mods/index': ['/wiki/mods/mods', '/wiki/mods/mods/index'],
+          };
+          if (redirectsToHere[existingPath]) {
+            return redirectsToHere[existingPath];
+          }
+
+          if (existingPath.startsWith('/wiki/mods/') && existingPath.match(/fmf-(console-input-guard|gregify-employees|hex-label-mod|lang-compat-bridge|ui-replacement-mod)\/?$/)) {
+            const slug = existingPath.replace('/wiki/mods/', '').replace(/\/$/, '');
+            return [`/wiki/mods/extensions/${slug}`, `/wiki/mods/mods/${slug}`];
+          }
+
           if (existingPath.startsWith('/wiki/')) {
             const legacyPath = existingPath.replace('/wiki', '');
+            // Avoid shadowing the static /mods catalog page and its children
+            if (legacyPath === '/mods' || legacyPath.startsWith('/mods/')) {
+              return undefined;
+            }
             return [legacyPath];
           }
 
@@ -72,8 +108,8 @@ const config = {
             from: ['/framework'],
           },
           {
-            to: '/wiki/mods/extensions/',
-            from: ['/plugins', '/standalone-mods', '/wiki/mods/plugins'],
+            to: '/wiki/plugins/',
+            from: ['/plugins', '/standalone-mods', '/wiki/mods/plugins', '/wiki/mods/extensions'],
           },
           {
             to: 'https://github.com/mleem97/gregFramework/releases/latest/download/FFM.Plugin.AssetExporter.dll',
@@ -152,8 +188,8 @@ const config = {
           items: [
             {to: '/wiki', label: 'Overview'},
             {to: '/wiki/mods/framework', label: 'Framework'},
-            {to: '/wiki/mods/extensions/', label: 'Plugin Wiki'},
-            {to: '/wiki/mods/mods', label: 'Mod Wiki'},
+            {to: '/wiki/plugins/', label: 'Plugins'},
+            {to: '/wiki/mods/', label: 'Mods'},
             {to: '/wiki/roadmap/unified-roadmap', label: 'Roadmap'},
           ],
         },
@@ -164,34 +200,10 @@ const config = {
           dropdownItemsBefore: [],
           dropdownItemsAfter: [],
         },
-        {
-          to: '/mods',
-          label: 'Mods',
-          position: 'right',
-          className: 'nav-right-icon nav-icon-only nav-link-mods',
-          'aria-label': 'Mods',
-        },
-        {
-          href: 'https://discord.gg/greg',
-          label: 'Discord',
-          position: 'right',
-          className: 'nav-right-icon nav-icon-only nav-link-discord',
-          'aria-label': 'Discord',
-        },
-        {
-          href: 'https://github.com/mleem97/gregFramework/issues',
-          label: 'Support',
-          position: 'right',
-          className: 'nav-right-icon nav-icon-only nav-link-support',
-          'aria-label': 'Support',
-        },
-        {
-          href: 'https://github.com/mleem97/gregFramework',
-          label: 'GitHub',
-          position: 'right',
-          className: 'nav-right-icon nav-icon-only nav-link-github',
-          'aria-label': 'GitHub',
-        },
+        {to: '/mods', label: 'Mods', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-mods', 'aria-label': 'Mods'},
+        {href: 'https://discord.gg/greg', label: 'Discord', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-discord', 'aria-label': 'Discord'},
+        {href: 'https://github.com/mleem97/gregFramework/issues', label: 'Support', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-support', 'aria-label': 'Support'},
+        {href: 'https://github.com/mleem97/gregFramework', label: 'GitHub', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-github', 'aria-label': 'GitHub'},
       ],
     },
     footer: {
@@ -224,3 +236,4 @@ const config = {
 };
 
 module.exports = config;
+

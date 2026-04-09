@@ -15,7 +15,7 @@ Production build:
 npm run build
 ```
 
-Optional: refresh the legacy GitHub Wiki mirror from a sibling `../.wiki/` clone under `gregFramework/` — see [`docs/README.md`](./docs/README.md) and `npm run wiki:sync` / `wiki:normalize-i18n`.
+Optional: refresh the legacy GitHub Wiki mirror from a sibling `../.wiki/` clone under `gregFramework/` — see [`docs/getting-started/documentation-layout.md`](./docs/getting-started/documentation-layout.md) and `npm run wiki:sync` / `wiki:normalize-i18n`.
 
 ## Deployment (Coolify / CI)
 

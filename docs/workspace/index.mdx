@@ -1,0 +1,22 @@
+---
+title: Workspace map
+sidebar_label: Workspace map
+description: How gregFramework repositories on disk map to code and documentation.
+---
+
+# Workspace map
+
+The **gregFramework** folder groups several repositories (split layout). Use this hub before diving into a specific repo.
+
+| Area | Folder | Role |
+|------|--------|------|
+| Framework core | `gregCore/FrikaMF-StandaloneRepo/` | **Framework core**: translations, hooks, runtime (Harmony/events), MelonLoader host, plugins (`FFM.Plugin.*`), templates, bridges |
+| Mods | `gregMods/gregMod.<Name>/` | Standalone gameplay mods (`FMF.*`) |
+| Extensions | `gregExtensions/gregExt.<Name>/` | Extension modules (e.g. player models) |
+| Documentation | `gregWiki/` | This Docusaurus site (`docs/`) |
+| Legacy / tools | `gregDataCenterExporter/` | Historical monolith; migration staging |
+| Modstore / infra | `gregStore/` | **Gregweb** (private repo): Next.js app (`web/`), Docker stack (`infra/`, compose at repo root) |
+| IPAM / DHCP | `gregIPAM/` | **DHCP** and **IPAM** gameplay mod (MelonLoader; in-repo project still `DHCPSwitches` / `DHCPSwitches.csproj`) |
+| Misc | `gregReferences/`, `gregMeta/`, `gregInternalDocs/` | Supporting repos and notes |
+
+**Detailed inventory** (paths, `.csproj`, hooks): [Repository inventory](../contributors/repo-inventory).

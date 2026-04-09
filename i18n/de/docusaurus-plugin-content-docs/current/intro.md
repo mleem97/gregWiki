@@ -11,22 +11,24 @@ Diese Dokumentation beschreibt den **aktuellen Split-Stand**: `gregFramework/` a
 
 | Zielgruppe | Einstieg |
 |------------|----------|
-| **Spieler** — installieren, spielen, Troubleshooting | [Endnutzer (Hub)](/wiki/topics/end-user/overview) · [Endnutzer-Wiki (Import)](/wiki/wiki-import/EndUser/) |
-| **Moddevs** — Mods bauen, Hooks, Debugging | [Mod-Entwickler (Hub)](/wiki/topics/mod-developers/overview) · [ModDevs-Wiki (Import)](/wiki/wiki-import/ModDevs/) · [Framework](/wiki/mods/framework) |
-| **Contributor** — PRs, Doku, Plugins, CI | [Contributors (Workflow)](/wiki/topics/contributors/overview) · [Contributors-Wiki (Import)](/wiki/wiki-import/Contributors/) |
-| **Sponsorinnen & Sponsoren** | [Sponsors (Hub)](/wiki/topics/sponsors/overview) · [Sponsors (EN)](/wiki/wiki-import/Sponsors) · [Sponsoren (DE)](/wiki/wiki-import/Sponsoren) |
+| **Spieler** — installieren, spielen, Troubleshooting | [Endnutzer (Hub)](/wiki/guides/players/overview) · [Endnutzer-Wiki (Import)](/wiki/legacy/wiki-import/EndUser/) |
+| **Moddevs** — Mods bauen, Hooks, Debugging | [Mod-Entwickler (Hub)](/wiki/guides/mod-developers/overview) · [ModDevs-Wiki (Import)](/wiki/legacy/wiki-import/ModDevs/) · [Framework](/wiki/mods/framework) |
+| **Contributor** — PRs, Doku, Plugins, CI | [Contributors (Workflow)](/wiki/guides/contributors/topics-overview) · [Contributors-Wiki (Import)](/wiki/legacy/wiki-import/Contributors/) |
+| **Sponsorinnen & Sponsoren** | [Sponsors (Hub)](/wiki/guides/sponsors/overview) · [Sponsors (EN)](/wiki/legacy/wiki-import/Sponsors) · [Sponsoren (DE)](/wiki/legacy/wiki-import/Sponsoren) |
 
-**Erfahrungspfade** (Einsteiger → Profis): [Nach Zielgruppe](/wiki/topics/audiences/overview) → [Newbies](/wiki/audiences/newbies), [Intermediates](/wiki/audiences/intermediates), [Professionals](/wiki/audiences/professionals).
+**Erfahrungspfade** (Einsteiger → Profis): [Nach Zielgruppe](/wiki/guides/players/audiences-overview) → [Newbies](/wiki/guides/players/newbies), [Intermediates](/wiki/guides/players/intermediates), [Professionals](/wiki/guides/players/professionals).
 
 ## Repository-Hub
 
-- Core: `gregCore/FrikaMF-StandaloneRepo/`
+- [Workspace-Karte](/wiki/workspace/) — Ordner → Repos
+- **Framework-Kern:** `gregCore/` → `FrikaMF-StandaloneRepo/` (Übersetzung, Hooks, Runtime, Templates, Bridges)
 - Mods: `gregMods/` (Repos `gregMod.<Name>`)
 - Extensions: `gregExtensions/` (Repos `gregExt.<Name>`)
 - Wiki: `gregWiki/`
 
 ## Hooks und Releases
 
+- [Modding-Sprache (nur C#)](/wiki/reference/modding-language-requirement) — **gesamte** Logik von Mods, Plugins und Extensions in **C#**
 - [FMF Hook-Naming](/wiki/reference/fmf-hook-naming) — `FMF.<Domain>.…` und Legacy `FFM.*`
 - [FMF-Hooks-Katalog](/wiki/reference/fmf-hooks-catalog) — generiert aus Core-`HookNames.cs`
 - [Release-Kanäle](/wiki/reference/release-channels) — Steam Workshop vs GitHub (Beta)
@@ -40,5 +42,5 @@ Diese Dokumentation beschreibt den **aktuellen Split-Stand**: `gregFramework/` a
 ## Quellenmodell
 
 - **Authoring:** Inhalte liegen im **gregWiki**-Repo.
-- **Technische Wahrheit:** Runtime/Bridge-Details kommen aus **gregCore**.
+- **Technische Wahrheit:** Der **Framework-Kern** ist **gregCore** — Übersetzung, Hooks und Runtime/Bridge-Implementierung liegen dort.
 - **RustBridge:** im Core unter `FrikaMF-StandaloneRepo/bridges/gregSta.RustBridge/`.

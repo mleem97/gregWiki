@@ -10,6 +10,7 @@ Authoritative reference material for the framework and documentation site.
 
 - [Wiki mapping](/wiki/reference/wiki-mapping) — how paths line up across systems.
 - [Mod store vision](/wiki/reference/mod-store-vision) — product direction notes.
+- [Modding language (C# only)](/wiki/reference/modding-language-requirement) — mods, plugins, extensions: **C#** only.
 - [FMF hook naming](/wiki/reference/fmf-hook-naming) — conventions for hook identifiers.
 - [FMF hooks catalog](/wiki/reference/fmf-hooks-catalog) — generated listing from framework sources.
 - [Release channels](/wiki/reference/release-channels) — how builds are staged.

@@ -15,12 +15,12 @@ These folders typically sit **next to each other** in a developer workspace (see
 
 | Area | Path (on disk) | Role |
 |------|----------------|------|
-| **Framework core** | `gregCore/FrikaMF-StandaloneRepo/` | MelonLoader mod hosting runtime hooks, Harmony, bridge, events; plugins under `plugins/`; templates under `Templates/` |
+| **Framework core** | `gregCore/FrikaMF-StandaloneRepo/` | Platform **framework core**: translations, hooks, Harmony/event runtime, MelonLoader hosting, bridges; plugins under `plugins/`; templates under `Templates/` |
 | **Mods** | `gregMods/gregMod.<Name>/` | Standalone gameplay mods (`FMF.*`) as individual repositories |
 | **Extensions** | `gregExtensions/gregExt.<Name>/` | Extension modules (e.g. player models) |
 | **Documentation** | `gregWiki/` ([`mleem97/gregWiki`](https://github.com/mleem97/gregWiki)) | **This site**: Docusaurus app at repo root, all authored pages under `docs/` |
-| **Legacy / staging exporter** | `gregSta.DataCenterExporter/` | Historical monolith layout; some tools and HexMod assets may still live here during migration |
-| **Other tools** | `DHCPSwitches/`, `modstore-platform/`, `References/`, `InternalDocs/`, `meta/` | Supporting repos and internal notes |
+| **Legacy / staging exporter** | `gregDataCenterExporter/` | Historical monolith layout; some tools and HexMod assets may still live here during migration |
+| **Other tools** | `gregIPAM/` (DHCP + IPAM; assembly `DHCPSwitches`), `gregStore/` (**Gregweb**, private repo), `gregReferences/`, `gregInternalDocs/`, `gregMeta/` | Supporting repos and internal notes |
 
 ## Canonical code locations (split repos)
 
@@ -34,7 +34,7 @@ These folders typically sit **next to each other** in a developer workspace (see
 
 ## Wiki import (legacy)
 
-Long-form pages mirrored from the GitHub Wiki live under [`docs/wiki-import/`](../wiki-import/Home) and remain linked from many topics.
+Long-form pages mirrored from the GitHub Wiki live under [`docs/legacy/wiki-import/`](../legacy/wiki-import/Home) and remain linked from many topics.
 
 ## .NET projects on disk (`*.csproj`)
 
@@ -82,5 +82,6 @@ Paths below are relative to **`gregCore/FrikaMF-StandaloneRepo/`** (standalone f
 ## Related
 
 - [Monorepo target layout](/wiki/contributors/monorepo-target-layout) — phased folder goals
+- [Modding language (C# only)](/wiki/reference/modding-language-requirement) — mandatory C# for mod/plugin/extension logic
 - [FMF hook naming](/wiki/reference/fmf-hook-naming) — naming convention
 - [Release channels](/wiki/reference/release-channels) — Steam vs GitHub beta

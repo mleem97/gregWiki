@@ -11,8 +11,8 @@
     "wiki:sync": "node ./scripts/sync-wiki-to-docs.mjs",
     "wiki:normalize-i18n": "node ./scripts/normalize-wiki-import-i18n.mjs",
     "wiki:refresh": "node ./scripts/sync-wiki-to-docs.mjs && node ./scripts/normalize-wiki-import-i18n.mjs",
-    "format": "prettier --write src scripts docusaurus.config.js sidebars.js README.md docs/README.md package.json .prettierrc.json docker-compose.yml",
-    "format:check": "prettier --check src scripts docusaurus.config.js sidebars.js README.md docs/README.md package.json .prettierrc.json docker-compose.yml"
+    "format": "prettier --write src scripts docusaurus.config.js sidebars.js README.md docs/getting-started/documentation-layout.md package.json .prettierrc.json docker-compose.yml",
+    "format:check": "prettier --check src scripts docusaurus.config.js sidebars.js README.md docs/getting-started/documentation-layout.md package.json .prettierrc.json docker-compose.yml"
   },
   "dependencies": {
     "@docusaurus/core": "3.9.2",

@@ -26,11 +26,15 @@ function toTitleCase(value: ReleaseKind): string {
 
 function normalizeReleaseNotesPath(releaseNotesPath?: string): string | undefined {
   if (!releaseNotesPath) return undefined;
-  if (releaseNotesPath.startsWith('/mods/')) {
-    return `/wiki${releaseNotesPath}`;
-  }
   if (releaseNotesPath.startsWith('/wiki/')) {
     return releaseNotesPath;
+  }
+  if (
+    releaseNotesPath.startsWith('/mods/') ||
+    releaseNotesPath.startsWith('/plugins/') ||
+    releaseNotesPath.startsWith('/tools/')
+  ) {
+    return `/wiki${releaseNotesPath}`;
   }
   return releaseNotesPath;
 }

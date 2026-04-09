@@ -1,9 +1,9 @@
 /**
  * Split legacy wiki-import pairs (Base.md = DE, Base-en.md = EN) into:
- * - docs/wiki-import/**           → default locale (en), Docusaurus
- * - wiki/i18n/de/docusaurus-plugin-content-docs/current/wiki-import/** → Deutsch
+ * - docs/legacy/wiki-import/**           → default locale (en), Docusaurus
+ * - i18n/de/.../current/legacy/wiki-import/** → Deutsch
  *
- * German-only pages (no Base-en.md) → DE in i18n/de, EN stub in docs/wiki-import.
+ * German-only pages (no Base-en.md) → DE in i18n/de, EN stub in docs/legacy/wiki-import.
  *
  * Usage (from gregWiki repo root):
  *   node scripts/normalize-wiki-import-i18n.mjs
@@ -22,13 +22,14 @@ import {
 import {basename, dirname, join, relative, resolve} from 'node:path';
 
 const repoRoot = resolve(import.meta.dirname, '..');
-const docsWikiImport = join(repoRoot, 'docs', 'wiki-import');
+const docsWikiImport = join(repoRoot, 'docs', 'legacy', 'wiki-import');
 const deWikiImport = join(
   repoRoot,
   'i18n',
   'de',
   'docusaurus-plugin-content-docs',
   'current',
+  'legacy',
   'wiki-import',
 );
 
@@ -41,7 +42,7 @@ description: English translation pending; use the Deutsch locale for the full le
 ---
 
 :::note
-This page is available in **German** in the legacy wiki import. Use the language menu (**Deutsch**) for the full text, or contribute an English translation under \`docs/wiki-import\`.
+This page is available in **German** in the legacy wiki import. Use the language menu (**Deutsch**) for the full text, or contribute an English translation under \`docs/legacy/wiki-import\`.
 :::
 
 `;

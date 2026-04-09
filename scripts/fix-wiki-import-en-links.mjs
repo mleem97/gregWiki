@@ -25,10 +25,10 @@ function walk(dir) {
 }
 
 const roots = [
-  path.resolve(import.meta.dirname, '../docs/wiki-import'),
+  path.resolve(import.meta.dirname, '../docs/legacy/wiki-import'),
   path.resolve(
     import.meta.dirname,
-    '../i18n/de/docusaurus-plugin-content-docs/current/wiki-import',
+    '../i18n/de/docusaurus-plugin-content-docs/current/legacy/wiki-import',
   ),
 ];
 for (const r of roots) {
