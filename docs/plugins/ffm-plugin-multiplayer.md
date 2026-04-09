@@ -12,4 +12,4 @@ Contains **multiplayer / networking** runtime (bridge, sync). **Not** the same a
 ## Sources
 
 - Module path: `StandaloneMods/FFM.Plugin.Multiplayer`
-- Roadmap context: [`Steamworks P2P Multiplayer Roadmap`](/wiki/wiki-import/Steamworks-P2P-Multiplayer-Roadmap)
+- Roadmap context: [`Steamworks P2P Multiplayer Roadmap`](/wiki/legacy/wiki-import/Steamworks-P2P-Multiplayer-Roadmap)
