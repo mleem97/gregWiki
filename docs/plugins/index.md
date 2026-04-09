@@ -10,6 +10,8 @@ These **plugins** ship as `FFM.Plugin.*` assemblies and extend the **framework r
 
 Gameplay mods (`FMF.*`) are documented under **[Mods](../mods/index)** — not here.
 
+**Separation of concerns:** `FFM.Plugin.Multiplayer` (networking / sync / P2P stack) and `FFM.Plugin.Sysadmin` (in-game UI modernization, mod settings menu bridge) are **different products** — do not treat them as one “admin + multiplayer” feature. `FFM.Plugin.WebUIBridge` is likewise **UI shell** (DC2 web UI), not multiplayer.
+
 ## Plugins
 
 - [FFM.Plugin.AssetExporter](./ffm-plugin-asset-exporter)

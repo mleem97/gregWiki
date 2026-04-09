@@ -7,7 +7,7 @@ sidebar_label: FFM.Plugin.Sysadmin
 
 ## Purpose
 
-Contains system-administration oriented standalone plugin features.
+Contains **sysadmin-oriented UI** features (Unity UI modernization, mod settings menu bridge). **Not** related to [FFM.Plugin.Multiplayer](./ffm-plugin-multiplayer) — multiplayer networking is a separate plugin and concern.
 
 ## Sources
 

@@ -7,7 +7,7 @@ sidebar_label: FFM.Plugin.Multiplayer
 
 ## Purpose
 
-Contains standalone multiplayer-oriented plugin functionality.
+Contains **multiplayer / networking** runtime (bridge, sync). **Not** the same as [FFM.Plugin.Sysadmin](./ffm-plugin-sysadmin) (UI modernization and settings) — keep those mental models separate.
 
 ## Sources
 
