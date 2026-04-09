@@ -2,3 +2,9 @@ bin/
 obj/
 node_modules/
 .DS_Store
+.docusaurus/
+build/
+.cache/
+*.log
+npm-debug.log*
+pnpm-debug.log*
