@@ -15,19 +15,19 @@ This folder is the **single source of truth** for the public Docusaurus site. Th
 |------|------|--------|
 | **Landing** | [`intro` → `/wiki/docs`](/wiki/docs) | Site home. |
 | **Getting started** | [`getting-started.md`](../getting-started.md) | Onboarding (`getting-started`) + this layout page. |
-| **Workspace** | [`workspace/`](../workspace/) | Map of `gregFramework/` repos on disk. |
-| **Framework** | [`framework/`](../framework/) | Architecture, hooks, Hexmod. |
-| **Plugins** | [`plugins/`](../plugins/) | `FFM.Plugin.*` wiki pages. |
-| **Mods** | [`mods/`](../mods/) | Gameplay mods (`FMF.*`) + framework overview. |
-| **Tools** | [`tools/`](../tools/) | Workshop uploader and related. |
-| **Guides** | [`guides/`](../guides/) | Role-based paths (players, mod developers, contributors, sponsors). |
-| **Releases** | [`releases/`](../releases/) | Per-artifact release notes. |
-| **Reference** | [`reference/`](../reference/) | Naming, catalogs, MCP, release channels. |
-| **Contributors** | [`contributors/`](../contributors/) | Repo inventory, Docusaurus workflow, design system. |
-| **Roadmap** | [`roadmap/`](../roadmap/) | Planning docs. |
-| **Topics hub** | [`topics/`](../topics/) | Cross-cutting overviews (assets, multiplayer, security, …). |
-| **Meta** | [`meta/`](../meta/) | Workshop tooling notes, devserver API, backlog. |
-| **Legacy** | [`legacy/`](../legacy/) | GitHub Wiki mirror under `legacy/wiki-import/`. |
+| **Workspace** | [`workspace/`](../workspace/index.mdx) | Map of `gregFramework/` repos on disk. |
+| **Framework** | [`framework/`](../framework/architecture.md) | Architecture, hooks, Hexmod. |
+| **Plugins** | [`plugins/`](../plugins/index.md) | `FFM.Plugin.*` wiki pages. |
+| **Mods** | [`mods/`](../mods/index.md) | Gameplay mods (`FMF.*`) + framework overview. |
+| **Tools** | [`tools/`](../tools/workshop-uploader.md) | Workshop uploader and related. |
+| **Guides** | [`guides/`](../guides/players/overview.md) | Role-based paths (players, mod developers, contributors, sponsors). |
+| **Releases** | [`releases/`](../releases/index.mdx) | Per-artifact release notes. |
+| **Reference** | [`reference/`](../reference/wiki-mapping.md) | Naming, catalogs, MCP, release channels. |
+| **Contributors** | [`contributors/`](../contributors/repo-inventory.md) | Repo inventory, Docusaurus workflow, design system. |
+| **Roadmap** | [`roadmap/`](../roadmap/unified-roadmap.md) | Planning docs. |
+| **Topics hub** | [`topics/`](../topics/index.md) | Cross-cutting overviews (assets, multiplayer, security, …). |
+| **Meta** | [`meta/`](../meta/Steam-Workshop-and-Tooling.md) | Workshop tooling notes, devserver API, backlog. |
+| **Legacy** | [`legacy/`](../legacy/index.md) | GitHub Wiki mirror under `legacy/wiki-import/`. |
 
 ## Legacy GitHub Wiki (`docs/legacy/wiki-import/`)
 

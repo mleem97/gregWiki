@@ -8,9 +8,7 @@ description: FFM.Plugin.* modules that extend the framework runtime — distinct
 
 These **plugins** ship as `FFM.Plugin.*` assemblies and extend the **framework runtime**. They are deployed under the game’s FMF plugin path (see [Game folder layout](/wiki/topics/meta/game-folder-layout)).
 
-Gameplay mods (`FMF.*`) are documented under **[Mods](../mods/index)** — not here.
-
-**Separation of concerns:** `FFM.Plugin.Multiplayer` (networking / sync / P2P stack) and `FFM.Plugin.Sysadmin` (in-game UI modernization, mod settings menu bridge) are **different products** — do not treat them as one “admin + multiplayer” feature. `FFM.Plugin.WebUIBridge` is likewise **UI shell** (DC2 web UI), not multiplayer.
+Gameplay mods (`FMF.*`) are documented under **[Mods](../mods/index.md)** — not here.
 
 ## Plugins
 
