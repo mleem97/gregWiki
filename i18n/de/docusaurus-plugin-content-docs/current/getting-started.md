@@ -46,4 +46,4 @@ Im `gregWiki`-Root: `docker build -t gregwiki-docs .` und `docker run --rm -p 30
 
 ### MCP
 
-Siehe [`reference/mcp-server`](./reference/mcp-server.md) im Core (`gregCore/FrikaMF-StandaloneRepo/mcp-server/`).
+Siehe [`reference/mcp-server`](/wiki/reference/mcp-server) im Core (`gregCore/FrikaMF-StandaloneRepo/mcp-server/`).

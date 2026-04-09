@@ -423,7 +423,11 @@ body {
 
 /* Doc canvas — editorial bleed (wiki layout alignment); no hard section borders */
 .theme-doc-wrapper {
-  background: linear-gradient(180deg, var(--color-surface-container-low) 0%, var(--color-background) 42%);
+  background: linear-gradient(
+    180deg,
+    var(--color-surface-container-low) 0%,
+    var(--color-background) 42%
+  );
 }
 
 .theme-doc-root .theme-doc-sidebar-container {

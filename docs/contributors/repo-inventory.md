@@ -11,7 +11,7 @@ This page is the **source of truth snapshot** for how the **gregFramework worksp
 
 ## Top-level workspace (`gregFramework/`)
 
-These folders typically sit **next to each other** in a developer workspace (see also [intro](../intro.md)):
+These folders typically sit **next to each other** in a developer workspace (see also [intro](/wiki/docs)):
 
 | Area | Path (on disk) | Role |
 |------|----------------|------|
@@ -61,7 +61,7 @@ Paths below are relative to **`gregCore/FrikaMF-StandaloneRepo/`** (standalone f
 
 ## Documentation (Docusaurus)
 
-- **Entry**: `/wiki` → [`intro`](../intro.md)
+- **Entry**: `/wiki` → [`intro`](/wiki/docs)
 - **Sidebar**: [`sidebars.js`](https://github.com/mleem97/gregWiki/blob/main/sidebars.js)
 - **Module catalog** (downloads table): [`src/data/moduleCatalog.ts`](https://github.com/mleem97/gregWiki/blob/main/src/data/moduleCatalog.ts)
 - **Landing**: `/` → [`src/pages/index.tsx`](https://github.com/mleem97/gregWiki/blob/main/src/pages/index.tsx)
@@ -81,6 +81,6 @@ Paths below are relative to **`gregCore/FrikaMF-StandaloneRepo/`** (standalone f
 
 ## Related
 
-- [Monorepo target layout](./monorepo-target-layout.md) — phased folder goals
-- [FMF hook naming](../reference/fmf-hook-naming.md) — naming convention
-- [Release channels](../reference/release-channels.md) — Steam vs GitHub beta
+- [Monorepo target layout](/wiki/contributors/monorepo-target-layout) — phased folder goals
+- [FMF hook naming](/wiki/reference/fmf-hook-naming) — naming convention
+- [Release channels](/wiki/reference/release-channels) — Steam vs GitHub beta

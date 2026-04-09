@@ -11,12 +11,12 @@ Diese Dokumentation beschreibt den **aktuellen Split-Stand**: `gregFramework/` a
 
 | Zielgruppe | Einstieg |
 |------------|----------|
-| **Spieler** — installieren, spielen, Troubleshooting | [Endnutzer (Hub)](./topics/end-user/overview.md) · [Endnutzer-Wiki (Import)](./wiki-import/EndUser/) |
-| **Moddevs** — Mods bauen, Hooks, Debugging | [Mod-Entwickler (Hub)](./topics/mod-developers/overview.md) · [ModDevs-Wiki (Import)](./wiki-import/ModDevs/) · [Framework](./mods/framework.md) |
-| **Contributor** — PRs, Doku, Plugins, CI | [Contributors (Workflow)](./topics/contributors/overview.md) · [Contributors-Wiki (Import)](./wiki-import/Contributors/) |
-| **Sponsorinnen & Sponsoren** | [Sponsors (Hub)](./topics/sponsors/overview.md) · [Sponsors (EN)](./wiki-import/Sponsors) · [Sponsoren (DE)](./wiki-import/Sponsoren) |
+| **Spieler** — installieren, spielen, Troubleshooting | [Endnutzer (Hub)](/wiki/topics/end-user/overview) · [Endnutzer-Wiki (Import)](/wiki/wiki-import/EndUser/) |
+| **Moddevs** — Mods bauen, Hooks, Debugging | [Mod-Entwickler (Hub)](/wiki/topics/mod-developers/overview) · [ModDevs-Wiki (Import)](/wiki/wiki-import/ModDevs/) · [Framework](/wiki/mods/framework) |
+| **Contributor** — PRs, Doku, Plugins, CI | [Contributors (Workflow)](/wiki/topics/contributors/overview) · [Contributors-Wiki (Import)](/wiki/wiki-import/Contributors/) |
+| **Sponsorinnen & Sponsoren** | [Sponsors (Hub)](/wiki/topics/sponsors/overview) · [Sponsors (EN)](/wiki/wiki-import/Sponsors) · [Sponsoren (DE)](/wiki/wiki-import/Sponsoren) |
 
-**Erfahrungspfade** (Einsteiger → Profis): [Nach Zielgruppe](./topics/audiences/overview.md) → [Newbies](./audiences/newbies.md), [Intermediates](./audiences/intermediates.md), [Professionals](./audiences/professionals.md).
+**Erfahrungspfade** (Einsteiger → Profis): [Nach Zielgruppe](/wiki/topics/audiences/overview) → [Newbies](/wiki/audiences/newbies), [Intermediates](/wiki/audiences/intermediates), [Professionals](/wiki/audiences/professionals).
 
 ## Repository-Hub
 
@@ -27,14 +27,14 @@ Diese Dokumentation beschreibt den **aktuellen Split-Stand**: `gregFramework/` a
 
 ## Hooks und Releases
 
-- [FMF Hook-Naming](./reference/fmf-hook-naming.md) — `FMF.<Domain>.…` und Legacy `FFM.*`
-- [FMF-Hooks-Katalog](./reference/fmf-hooks-catalog.md) — generiert aus Core-`HookNames.cs`
-- [Release-Kanäle](./reference/release-channels.md) — Steam Workshop vs GitHub (Beta)
-- [MCP-Server](./reference/mcp-server.md) — optionale LLM/IDE-Tools über Doku + `fmf_hooks.json`
+- [FMF Hook-Naming](/wiki/reference/fmf-hook-naming) — `FMF.<Domain>.…` und Legacy `FFM.*`
+- [FMF-Hooks-Katalog](/wiki/reference/fmf-hooks-catalog) — generiert aus Core-`HookNames.cs`
+- [Release-Kanäle](/wiki/reference/release-channels) — Steam Workshop vs GitHub (Beta)
+- [MCP-Server](/wiki/reference/mcp-server) — optionale LLM/IDE-Tools über Doku + `fmf_hooks.json`
 
 ## Layout (Contributors)
 
-- [Repo-Inventar](./contributors/repo-inventory.md) — Projekt- und Repo-Übersicht
+- [Repo-Inventar](/wiki/contributors/repo-inventory) — Projekt- und Repo-Übersicht
 - Split-Konvention: `gregMod.<Name>`, `gregExt.<Name>`, `gregSta.<Name>`
 
 ## Quellenmodell

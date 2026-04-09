@@ -4,19 +4,19 @@ This folder is the **single source of truth** for the public Docusaurus site. Th
 
 ## How content is organized
 
-| Area | Path | Purpose |
-|------|------|--------|
-| **Landing** | [`intro.md`](./intro.md) | Site home (`/wiki/docs`). |
-| **Curated topics** | [`topics/`](./topics/) | Hubs: **Rollen** (Spieler, Moddevs, Contributor, Sponsoren → [`audiences/overview`](./topics/audiences/overview.md)), Roadmap, Security, Wiki-Import. |
-| **Mods & plugins** | [`mods/`](./mods/) | Framework, plugin wiki, mod wiki, standalone index. |
-| **Releases** | [`releases/`](./releases/) | Per-artifact release notes. |
-| **Reference** | [`reference/`](./reference/) | Hooks, naming, MCP, generated catalogs. |
-| **Contributors** | [`contributors/`](./contributors/) | Repo layout, Docusaurus workflow, design system. |
-| **Audiences** | [`audiences/`](./audiences/) | Newbies / intermediates / professionals. |
-| **Roadmap** | [`roadmap/`](./roadmap/) | Planning docs. |
-| **Meta** | [`meta/`](./meta/) | Workshop, devserver, backlog. |
-| **Monorepo wiki stubs** | [`wiki/`](./wiki/) | Short pages tied to the target repo layout (e.g. Hexmod). **Not** the GitHub Wiki import. |
-| **Legacy GitHub Wiki import** | [`wiki-import/`](./wiki-import/) | Bulk import from `.wiki/` (see below). |
+| Area                          | Path                                 | Purpose                                                                                                                                               |
+| ----------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Landing**                   | [`intro` → `/wiki/docs`](/wiki/docs) | Site home (`/wiki/docs`).                                                                                                                             |
+| **Curated topics**            | [`topics/`](./topics/)               | Hubs: **Rollen** (Spieler, Moddevs, Contributor, Sponsoren → [`audiences/overview`](./topics/audiences/overview.md)), Roadmap, Security, Wiki-Import. |
+| **Mods & plugins**            | [`mods/`](./mods/)                   | Framework, plugin wiki, mod wiki, standalone index.                                                                                                   |
+| **Releases**                  | [`releases/`](./releases/)           | Per-artifact release notes.                                                                                                                           |
+| **Reference**                 | [`reference/`](./reference/)         | Hooks, naming, MCP, generated catalogs.                                                                                                               |
+| **Contributors**              | [`contributors/`](./contributors/)   | Repo layout, Docusaurus workflow, design system.                                                                                                      |
+| **Audiences**                 | [`audiences/`](./audiences/)         | Newbies / intermediates / professionals.                                                                                                              |
+| **Roadmap**                   | [`roadmap/`](./roadmap/)             | Planning docs.                                                                                                                                        |
+| **Meta**                      | [`meta/`](./meta/)                   | Workshop, devserver, backlog.                                                                                                                         |
+| **Monorepo wiki stubs**       | [`wiki/`](./wiki/)                   | Short pages tied to the target repo layout (e.g. Hexmod). **Not** the GitHub Wiki import.                                                             |
+| **Legacy GitHub Wiki import** | [`wiki-import/`](./wiki-import/)     | Bulk import from `.wiki/` (see below).                                                                                                                |
 
 ## Legacy GitHub Wiki (`docs/wiki-import/`)
 
@@ -24,7 +24,7 @@ Long-form pages that originally lived in the **GitHub Wiki** are mirrored here s
 
 1. **Clone or update** the wiki working tree next to this repo as **`../.wiki/`** under the parent `gregFramework/` folder (separate clone: `https://github.com/<org>/<repo>.wiki.git`), or set up the same path the sync script expects.
 2. From the **gregWiki repository root**, refresh the mirror and split locales:
-   - `npm run wiki:refresh`  
+   - `npm run wiki:refresh`
    - Or stepwise: `npm run wiki:sync` → `npm run wiki:normalize-i18n` (optional `--dry-run` first).
 3. **German** translations for paired pages live under `i18n/de/docusaurus-plugin-content-docs/current/wiki-import/` after normalization.
 4. **New curated docs** should usually be added as normal Markdown under `docs/` (topics, reference, mods), not only under `wiki-import/`, so they stay easy to find. Use `wiki-import/` for bulk legacy material and incremental fixes; migrate important pages into `docs/topics/` or `docs/reference/` when you rewrite them.
@@ -39,11 +39,11 @@ Details: [`topics/wiki-import/overview.md`](./topics/wiki-import/overview.md).
 
 ## Scripts (repository root)
 
-| Script | Location | Role |
-|--------|------------|------|
-| Sync `../.wiki` → `docs/wiki-import/` | `scripts/sync-wiki-to-docs.mjs` | Copies `*.md` from the sibling `.wiki/` clone under `gregFramework/`. |
-| Split DE/EN pairs | `scripts/normalize-wiki-import-i18n.mjs` | EN default locale, DE under `i18n/de/...`. |
-| Sidebar category keys | `scripts/write-wiki-import-category-keys.mjs` | Regenerates `_category_.json` keys under Guides/Reference/Troubleshooting (if present). |
+| Script                                | Location                                      | Role                                                                                    |
+| ------------------------------------- | --------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Sync `../.wiki` → `docs/wiki-import/` | `scripts/sync-wiki-to-docs.mjs`               | Copies `*.md` from the sibling `.wiki/` clone under `gregFramework/`.                   |
+| Split DE/EN pairs                     | `scripts/normalize-wiki-import-i18n.mjs`      | EN default locale, DE under `i18n/de/...`.                                              |
+| Sidebar category keys                 | `scripts/write-wiki-import-category-keys.mjs` | Regenerates `_category_.json` keys under Guides/Reference/Troubleshooting (if present). |
 
 ## Locales (EN / DE / others)
 
