@@ -59,4 +59,4 @@ Ohne Junction müssen MelonMods weiter physisch unter **`Mods/`** liegen oder ü
 ## Siehe auch
 
 - [Meta & operations](/wiki/topics/meta/overview)
-- [Legacy: Mod Config System](/wiki/wiki-import/Mod-Config-System) (API-Contract; Pfade auf **ModCfg** beziehen)
+- [Legacy: Mod Config System](/wiki/legacy/wiki-import/Mod-Config-System) (API-Contract; Pfade auf **ModCfg** beziehen)

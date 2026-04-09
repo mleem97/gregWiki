@@ -13,7 +13,7 @@ Documentation combines **curated pages** (guides, framework, reference), **gener
 | Area | Start here |
 |------|------------|
 | **Roles** | [By audience](/wiki/guides/players/audiences-overview) — [End users](/wiki/guides/players/overview), [Mod developers](/wiki/guides/mod-developers/overview), [Contributors (workflow)](/wiki/guides/contributors/topics-overview), [Sponsors](/wiki/guides/sponsors/overview) |
-| **Experience paths** | [Newbies](/wiki/guides/players/newbies) · [Intermediates](/wiki/guides/players/intermediates) · [Professionals](/wiki/guides/players/professionals) |
+| **Experience paths** | [Newbies](/wiki/audiences/newbies) · [Intermediates](/wiki/audiences/intermediates) · [Professionals](/wiki/audiences/professionals) |
 | **Technical reference** | [Reference & technical](/wiki/topics/reference/overview) |
 | **Ship planning** | [Roadmap & planning](/wiki/topics/roadmap/overview) |
 | **Repository inventory** | [Repo inventory](/wiki/contributors/repo-inventory) |
@@ -31,5 +31,5 @@ Documentation combines **curated pages** (guides, framework, reference), **gener
 
 ## Releases vs. articles
 
-- **Release pages:** [Releases](/wiki/releases/)
-- **Narrative articles:** [Plugins](/wiki/plugins/) and [Mods](/wiki/mods/)
+- **Release pages:** [Releases](/wiki/releases)
+- **Narrative articles:** [Plugins](/wiki/plugins) and [Mods](/wiki/mods)

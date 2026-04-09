@@ -20,9 +20,9 @@ Die Dokumentation richtet sich an **vier Hauptrollen** (und an Erfahrungsstufen 
 
 ## Erfahrungsstufen (alle Rollen)
 
-- [Newbies](./newbies) — erste Schritte, Begriffe, sichere Defaults.
-- [Intermediates](./intermediates) — Workflows, Tooling, typische Stolpersteine.
-- [Professionals](./professionals) — Architektur, FFI, Performance, Release-Kanäle.
+- [Newbies](/wiki/audiences/newbies) — erste Schritte, Begriffe, sichere Defaults.
+- [Intermediates](/wiki/audiences/intermediates) — Workflows, Tooling, typische Stolpersteine.
+- [Professionals](/wiki/audiences/professionals) — Architektur, FFI, Performance, Release-Kanäle.
 
 ## Thematische Übersicht
 

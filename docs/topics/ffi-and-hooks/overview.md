@@ -8,6 +8,6 @@ description: FFI, hook lists, naming — bridge between framework and legacy wik
 
 - [FMF hooks catalog](/wiki/reference/fmf-hooks-catalog) (generated)
 - [FMF hook naming](/wiki/reference/fmf-hook-naming)
-- Imported: [HOOKS](/wiki/wiki-import/HOOKS), [Hook naming convention](/wiki/wiki-import/HOOK-NAMING-CONVENTION)
-- Imported: [FFI bridge reference](/wiki/wiki-import/FFI-Bridge-Reference), [Lua FFI start](/wiki/wiki-import/Lua-FFI-Start-Developing)
-- Imported: [Mod developer debug](/wiki/wiki-import/Mod-Developer-Debug)
+- Imported: [HOOKS](/wiki/legacy/wiki-import/HOOKS), [Hook naming convention](/wiki/legacy/wiki-import/HOOK-NAMING-CONVENTION)
+- Imported: [FFI bridge reference](/wiki/legacy/wiki-import/FFI-Bridge-Reference), [Lua FFI start](/wiki/legacy/wiki-import/Lua-FFI-Start-Developing)
+- Imported: [Mod developer debug](/wiki/legacy/wiki-import/Mod-Developer-Debug)

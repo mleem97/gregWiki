@@ -16,19 +16,18 @@ This documentation describes the **current split layout**: a local `gregFramewor
 | **Contributors** — PRs, docs, plugins, CI | [Contributors (workflow)](./guides/contributors/topics-overview.md) · [Contributors wiki (import)](./legacy/wiki-import/Contributors/) |
 | **Sponsors** — support & transparency | [Sponsors (hub)](./guides/sponsors/overview.md) · [Sponsors (EN)](./legacy/wiki-import/Sponsors) · [Sponsoren (DE)](./legacy/wiki-import/Sponsoren) |
 
-**Experience tracks** (newbies → pros): [By audience](./guides/players/audiences-overview.md) → [Newbies](./guides/players/newbies.md), [Intermediates](./guides/players/intermediates.md), [Professionals](./guides/players/professionals.md).
+**Experience tracks** (newbies → pros): [By audience](./guides/players/audiences-overview.md) → [Newbies](/wiki/audiences/newbies), [Intermediates](/wiki/audiences/intermediates), [Professionals](/wiki/audiences/professionals).
 
 ## Repository hub
 
 - [Workspace map](./workspace/index.mdx) — how folders map to repos
-- **Framework core:** `gregCore/` (translations, hooks, runtime, templates, bridges)
-- Mods: `gregMod.<Name>/` (directly under `gregFramework/`)
-- Extensions: `gregExt.<Name>/` (directly under `gregFramework/`)
+- Core: `gregCore/FrikaMF-StandaloneRepo/`
+- Mods: `gregMods/` (repos `gregMod.<Name>`)
+- Extensions: `gregExtensions/` (repos `gregExt.<Name>`)
 - Wiki: `gregWiki/` (this site)
 
 ## Hooks and releases
 
-- [Modding language (C# only)](./reference/modding-language-requirement.md) — **all** mod, plugin, and extension logic must be **C#**
 - [FMF hook naming](./reference/fmf-hook-naming.md) — `FMF.<Domain>.…` and legacy `FFM.*`
 - [FMF hooks catalog](./reference/fmf-hooks-catalog.md) — generated from core `HookNames.cs`
 - [Release channels](./reference/release-channels.md) — Steam Workshop vs GitHub (beta)
@@ -42,5 +41,5 @@ This documentation describes the **current split layout**: a local `gregFramewor
 ## Source model
 
 - **Authoring:** Markdown/MDX lives in the **gregWiki** repository.
-- **Technical source of truth:** the **framework core** is **gregCore** — translations, hooks, and runtime/bridge implementation live there.
-- **Rust bridge:** integrated in the core tree under `gregCore/bridges/gregSta.RustBridge/`.
+- **Technical source of truth:** runtime and bridge details come from **gregCore**.
+- **Rust bridge:** integrated in the core tree under `FrikaMF-StandaloneRepo/bridges/gregSta.RustBridge/`.

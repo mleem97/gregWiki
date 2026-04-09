@@ -122,6 +122,6 @@ pwsh -File scripts/Deploy-Release-ToDataCenter.ps1 -IncludeWorkshopUploader
 ## See also
 
 - Repository README: [`WorkshopUploader/README.md`](https://github.com/mleem97/gregFramework/blob/master/WorkshopUploader/README.md)
-- [End-User Guide](/wiki/guides/enduser-workshop)
-- [Contributor Guide](/wiki/guides/contributor-workshop)
-- [Release](/wiki/guides/release)
+- [End-User Guide](/wiki/guides/players/enduser-workshop)
+- [Contributor Guide](/wiki/guides/contributors/contributor-workshop)
+- [Release](/wiki/guides/contributors/release)
