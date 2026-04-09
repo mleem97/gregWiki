@@ -1,12 +1,30 @@
 export type LocaleKey = 'en' | 'de' | 'fr' | 'es' | 'ru' | 'ja';
 
+export type HomepageDocLink = {
+  title: string;
+  description: string;
+  link: string;
+};
+
 export type HomepageContent = {
+  heroBadge: string;
+  heroBrandLine1: string;
+  heroBrandLine2Gradient: string;
   heroLine1: string;
   heroLine2: string;
   heroSub1: string;
   heroSub2: string;
   ctaStart: string;
   ctaMods: string;
+  knowledgeSectionTitle: string;
+  workflowSectionTitle: string;
+  codeSectionTitle: string;
+  codeSectionLead: string;
+  ctaDiscordTitle: string;
+  ctaDiscordLead: string;
+  ctaDiscordButton: string;
+  knowledgeLinks: HomepageDocLink[];
+  workflowLinks: HomepageDocLink[];
   docsPaths: string;
   featureTitles: [string, string, string, string];
   featureDescriptions: [string, string, string, string];

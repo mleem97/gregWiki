@@ -1,10 +1,12 @@
 import type { HomepageContent } from './types';
+import { homepageShellEn } from './sharedLinks';
 
 export const ru: HomepageContent = {
+  ...homepageShellEn,
   heroLine1: 'ХАБ МОДДИНГА DATACENTER.',
   heroLine2: 'БУДЬ УМНЫМ. БУДЬ КАК ГРЕГ.',
   heroSub1: 'Просто. Гибко. Силой сообщества.',
-  heroSub2: 'FrikaMF, Rust-стек, мультиплеер и плагины.',
+  heroSub2: 'gregFramework, Rust-стек, мультиплеер и плагины.',
   ctaStart: 'НАЧАТЬ МОДДИНГ',
   ctaMods: 'ДОСТУПНЫЕ STANDALONE МОДЫ И ПЛАГИНЫ',
   docsPaths: 'Разделы документации',
@@ -18,7 +20,7 @@ export const ru: HomepageContent = {
   comingSoon: 'Скоро',
   comingSoonText: '`datacentermods.com` пока готовится. До запуска используйте `Docs Hub → Standalone Mods`.',
   communityTitle: 'Сообщество и мейнтейнеры',
-  communityText: 'Портал объединяет документацию фреймворка и community-плагинов экосистемы Data Center.',
+  communityText: 'Портал объединяет документацию gregFramework и community-плагинов экосистемы Data Center.',
   docsEndUserTitle: 'End-User',
   docsEndUserDescription: 'Install, update, FAQ, troubleshooting.',
   docsModDevsTitle: 'Mod-Devs',
@@ -28,7 +30,7 @@ export const ru: HomepageContent = {
   docsCapabilityTitle: 'Capability Matrix',
   docsCapabilityDescription: 'Complete feature map and implementation use cases.',
   ecosystemTitle: 'Ecosystem Coverage',
-  ecosystemCoreTitle: 'FrikaMF Core',
+  ecosystemCoreTitle: 'gregFramework core',
   ecosystemCoreDescription: 'Hook system, FFI bridge, event contracts and runtime architecture.',
   ecosystemCoreCta: 'Open core docs →',
   ecosystemRustTitle: 'Standalone Rust',
