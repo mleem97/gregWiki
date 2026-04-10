@@ -1,74 +1,63 @@
 # gregWiki
 
-Docusaurus site for **gregFramework** / Data Center modding: configuration (`docusaurus.config.js`, `sidebars.js`), React under `src/`, content under [`docs/`](./docs/). Published route base path: **`/wiki`**.
+Docusaurus-Site für **gregFramework** / Data-Center-Modding: `docusaurus.config.js`, `sidebars.js`, React unter `src/`, Inhalte unter [`docs/`](./docs/). Öffentliche Route-Basis: **`/wiki`**.
 
----
+| | |
+|:---|:---|
+| **Im Workspace** | Pfad `gregFramework/gregWiki/`. Überblick: [gregFramework README](../README.md). |
+| **Remote** | [`mleem97/gregWiki`](https://github.com/mleem97/gregWiki) |
 
-## Part of gregFramework
-
-This directory is part of the **[gregFramework](https://github.com/mleem97/gregFramework)** workspace. Clone sibling repositories side by side so each project lives at `gregFramework/<RepoName>/`. See the workspace [README](https://github.com/mleem97/gregFramework/blob/master/README.md) for the full layout and migration notes.
-
-**Remote:** [`mleem97/gregWiki`](https://github.com/mleem97/gregWiki) — on-disk path: `gregFramework/gregWiki/`.
-
----
-
-## Local development
+## Lokale Entwicklung
 
 ```bash
 npm install
 npm run start
 ```
 
-Production build:
+Produktions-Build:
 
 ```bash
 npm run build
 ```
 
-Optional: mirror the legacy GitHub Wiki — see [`docs/getting-started/documentation-layout.md`](./docs/getting-started/documentation-layout.md) and scripts `wiki:sync` / `wiki:normalize-i18n`.
-
----
+Optional: Legacy-GitHub-Wiki spiegeln — siehe [`docs/getting-started/documentation-layout.md`](./docs/getting-started/documentation-layout.md) und Skripte `wiki:sync` / `wiki:normalize-i18n`.
 
 ## Deployment (Coolify / CI)
 
-- **Default branch:** `main` — use this for new work and PRs.
-- **`master`:** may still exist for older deployments; in Coolify, set the branch to **`main`** when possible.
+- **Standard-Branch:** `main` — für neue Arbeit und PRs.
+- **`master`:** kann für ältere Deployments parallel existieren; in Coolify den Branch auf **`main`** stellen, wenn möglich.
 
-### Coolify (Dockerfile) — missing `/app/package.json`
+### Coolify (Dockerfile) — `/app/package.json` fehlt
 
-The image expects **`package.json` at the image root `/app`**. That only works if the **Docker build context** is this repository (gregWiki), not a parent monorepo folder without adjustments.
+Das Image erwartet **`package.json` im Image-Root `/app`**. Das passt nur, wenn der **Docker-Build-Kontext** dieses Repo (gregWiki) ist — nicht ein übergeordneter Monorepo-Ordner ohne Anpassung.
 
-| Setting | Value |
-|---------|--------|
-| **Dockerfile** | `Dockerfile` at the gregWiki root |
-| **Base directory** | **`.`** when only `gregWiki` is cloned. If gregWiki sits **next to** gregCore in the same clone, often set **`gregWiki`** as the subdirectory. |
-| **Volumes** | Do not use an empty host mount over `/app` that hides `package.json`. |
+| Einstellung | Wert |
+|-------------|------|
+| **Dockerfile** | `Dockerfile` im gregWiki-Root |
+| **Base directory** | **`.`**, wenn nur `gregWiki` geklont wird. Liegt gregWiki **neben** gregCore im gleichen Clone, oft **`gregWiki`** als Unterverzeichnis setzen. |
+| **Volumina** | Kein leerer Host-Mount über `/app`, der `package.json` verdeckt. |
 
-Symptom: `docker-entrypoint: ERROR: /app/package.json not found` → wrong context or volume.
+Symptom: `docker-entrypoint: ERROR: /app/package.json not found` → falscher Kontext oder Volume.
 
----
+## Docker (lokal)
 
-## Docker (local)
-
-Build context = **this** repository (folder that contains `package.json`):
+Build-Kontext = **dieses** Repository (Ordner mit `package.json`):
 
 ```bash
 cd path/to/gregWiki
 docker compose up --build
 ```
 
-If gregWiki lives inside **gregFramework**, from the workspace root:
+Liegt gregWiki in **gregFramework**, alternativ vom Workspace aus:
 
 ```bash
 cd path/to/gregFramework
 docker compose -f docker-compose.gregwiki.yml up --build
 ```
 
-(`docker-compose.gregwiki.yml` sets `build.context: ./gregWiki`.)
+(`docker-compose.gregwiki.yml` setzt `build.context: ./gregWiki`.)
 
----
+## Siehe auch
 
-## See also
-
-- [gregFramework README](../README.md) — flat layout `gregFramework/{RepoName}/`
-- Source code and builds: **gregCore**, **gregMod.*** , **gregExt.*** as separate repositories (not only this documentation)
+- [gregFramework README](../README.md) — flaches Layout `gregFramework/{RepoName}/`
+- Quellcode und Builds: **gregCore**, `gregMod.*`, `gregExt.*` als eigene Repos (nicht nur diese Doku)
