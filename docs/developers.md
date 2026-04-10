@@ -10,7 +10,7 @@ description: Technical documentation for mod authors, plugin authors, and repo c
 
 Use this hub if you **build mods or plugins**, work on **framework** code, or contribute to **repositories and docs**.  
 
-**Players** should start with **[Play & mods](/wiki/guides/players/overview)** (sidebar above) — install, Workshop, troubleshooting.
+**Players** should use the **short list at the top of the sidebar** (starting with [End users](/wiki/guides/players/overview)) — install, Workshop, troubleshooting.
 
 **Architecture:** read **[System architecture & documentation principles](/wiki/meta/system-architecture-principles)** first — canonical **ModManager → Framework → Plugins → Mods** model, priorities (stability, maintainability, DX), and wiki writing rules.
 
@@ -23,6 +23,7 @@ Use this hub if you **build mods or plugins**, work on **framework** code, or co
 ## Framework
 
 - [Architecture](/wiki/framework/architecture)
+- [Greg hooks & event runtime](/wiki/framework/greg-hooks-and-events)
 - [FMF hooks](/wiki/framework/fmf-hooks)
 - [Hexmod](/wiki/framework/hexmod)
 
@@ -57,7 +58,7 @@ Use this hub if you **build mods or plugins**, work on **framework** code, or co
 - [FMF hook naming](/wiki/reference/fmf-hook-naming)
 - [FMF hooks catalog](/wiki/reference/fmf-hooks-catalog)
 - [MCP server](/wiki/reference/mcp-server)
-- [Release channels](/wiki/reference/release-channels) — also linked under **Play & mods**
+- [Release channels](/wiki/reference/release-channels) — same page is linked next to the other player-facing entries
 - [Reference data files](/wiki/reference/reference-data-files)
 - [Modding language requirement](/wiki/reference/modding-language-requirement)
 

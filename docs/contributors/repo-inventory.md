@@ -15,7 +15,7 @@ These folders typically sit **next to each other** in a developer workspace (see
 
 | Area | Path (on disk) | Role |
 |------|----------------|------|
-| **Framework core** | `gregCore/` | Runtime, hooks, Harmony, bridge — main project `gregCore/framework/FrikaMF.csproj`; templates under `gregCore/Templates/` |
+| **Framework core** | `gregCore/` | Runtime, hooks, Harmony, bridge — build **`gregCore/FrikaMF.sln`**; main project **`gregCore/framework/FrikaMF.csproj`**; templates under `gregCore/Templates/` |
 | **Mods (split repos)** | `gregMod.<Name>/` (directly under `gregFramework/`) | Standalone gameplay mods (`FMF.*` assemblies); **not** nested under a `gregMods/` umbrella |
 | **Extensions / framework plugins (split repos)** | `gregExt.<Name>/` (directly under `gregFramework/`) | FFM framework plugins (`FFM.Plugin.*`); **not** under legacy `StandaloneMods/` paths |
 | **Documentation** | `gregWiki/` ([`mleem97/gregWiki`](https://github.com/mleem97/gregWiki)) | **This site**: Docusaurus app at repo root, all authored pages under `docs/` |
@@ -32,7 +32,7 @@ These folders typically sit **next to each other** in a developer workspace (see
 
 | Concern | Where to look |
 |---------|----------------|
-| Framework `.csproj` | `gregCore/framework/FrikaMF.csproj` |
+| Framework `.csproj` | `gregCore/framework/FrikaMF.csproj` (see `gregCore/FrikaMF.sln`; a root `gregCore/FrikaMF.csproj` may exist for alternate layouts) |
 | Plugins (`FFM.Plugin.*`) — authoring | `gregExt.<Name>/` (e.g. `gregExt.AssetExporter/`) |
 | Plugins — optional mirrors | `gregCore/plugins/FFM.Plugin.*` |
 | Mod sources (`FMF.*`) | `gregMod.<Name>/` |
@@ -45,21 +45,21 @@ Documentation is maintained in this repository under `docs/`; historical GitHub 
 
 ## .NET projects on disk (`*.csproj`)
 
-- **Framework:** `gregCore/framework/FrikaMF.csproj` (solution `gregCore/FrikaMF.sln` when present).
+- **Framework:** `gregCore/framework/FrikaMF.csproj` via **`gregCore/FrikaMF.sln`**.
 - **Plugins:** primary checkouts **`gregExt.<Name>/`** (assembly `FFM.Plugin.*.dll`); duplicates under `gregCore/plugins/` for all-in-one builds.
 - **Mods:** **`gregMod.<Name>/`** at workspace root (`FMF.*.csproj` names vary).
-- **WorkshopManager:** `gregModmanager/WorkshopUploader.csproj` (separate from the MelonLoader framework solution).
+- **GregModManager:** `gregModmanager/WorkshopUploader.csproj` (separate from the MelonLoader framework solution).
 
 ## Build status (framework project)
 
-- `gregCore/framework/FrikaMF.csproj` does not compile the WorkshopManager app; that builds from `gregModmanager/WorkshopUploader.csproj`.
+- `gregCore/framework/FrikaMF.csproj` does not compile GregModManager; that builds from `gregModmanager/WorkshopUploader.csproj`.
 - `dotnet build` on the framework solution (when present under `gregCore/`) builds core + optional `gregCore/plugins/*` — **not** split-repo `gregExt.*` / `gregMod.*` folders unless you add them to the solution.
 
 ## `FrikaMF.sln` drift (action items)
 
 1. **Mods outside solution**: Standalone mod projects under `gregMod.*` are usually **not** in `FrikaMF.sln`; build them per repo or add them if you want one `dotnet build` for everything.
 
-2. **Templates in `framework/FrikaMF.csproj`**: Template sources under `Templates/` may fail `dotnet build framework/FrikaMF.csproj` with `CS0122` if `Core` visibility does not match template expectations — treat templates as **samples** until the project graph is cleaned up.
+2. **Templates vs framework visibility**: Template projects under `gregCore/Templates/` may fail `dotnet build` with `CS0122` if internal API visibility does not match template expectations — treat templates as **samples** until the project graph is aligned.
 
 ## Documentation (Docusaurus)
 
@@ -71,9 +71,9 @@ Documentation is maintained in this repository under `docs/`; historical GitHub 
 
 ## Hook / event sources of truth (code)
 
-- String constants: [`gregCore/framework/FrikaMF/HookNames.cs`](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/FrikaMF/HookNames.cs) (`FFM.*` hook IDs today).
-- Numeric IDs: [`gregCore/framework/FrikaMF/EventIds.cs`](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/FrikaMF/EventIds.cs).
-- Generated wiki mirror: run [`tools/Generate-FmfHookCatalog.ps1`](https://github.com/mleem97/gregFramework/blob/main/tools/Generate-FmfHookCatalog.ps1) → [`fmf-hooks-catalog`](../reference/fmf-hooks-catalog.md).
+- **Runtime strings + id map:** [`gregCore/framework/FrikaMF/HookNames.cs`](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/FrikaMF/HookNames.cs) and [`EventIds.cs`](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/FrikaMF/EventIds.cs) — see [FMF hooks catalog](../reference/fmf-hooks-catalog.md).
+- **Canonical `greg.*` registry (JSON):** `gregCore/gregFramework/greg_hooks.json` — regenerate with [`scripts/Generate-GregHooksFromIl2CppDump.ps1`](https://github.com/mleem97/gregFramework/blob/main/gregCore/scripts/Generate-GregHooksFromIl2CppDump.ps1); overview [Greg hooks & event runtime](../framework/greg-hooks-and-events.md).
+- **Wiki catalog generator:** [`gregCore/tools/Generate-FmfHookCatalog.ps1`](https://github.com/mleem97/gregFramework/blob/main/gregCore/tools/Generate-FmfHookCatalog.ps1) → updates [`fmf-hooks-catalog`](../reference/fmf-hooks-catalog.md) when run from a workspace that includes **gregWiki** next to **gregCore**.
 
 ## Debugging (MelonLoader, IL2CPP, Unity)
 

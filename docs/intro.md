@@ -12,9 +12,9 @@ description: Help for Data Center players using mods — install, Workshop, trou
 ## Players — start here
 
 1. **[End users](/wiki/guides/players/overview)** — install, update, troubleshooting  
-2. **[WorkshopManager guide](/wiki/guides/players/enduser-workshop)** — browse and install mods  
+2. **[GregModManager (players)](/wiki/guides/players/enduser-workshop)** — browse and install mods  
 3. **[Release channels](/wiki/reference/release-channels)** — Steam Workshop vs GitHub  
-4. **[WorkshopManager (tool)](/wiki/tools/workshop-uploader)** — desktop app for Workshop content  
+4. **[GregModManager (full tool reference)](/wiki/tools/workshop-uploader)** — MAUI app: Mod Store, uploads, metadata  
 
 [**Mod catalog**](/mods) lists modules with links to docs and downloads.
 
@@ -26,4 +26,4 @@ Everything for **building mods**, **FFM plugins**, hooks, CI, and **contributing
 
 Technical docs follow one stack model: **ModManager (MAUI) → framework / SDK → plugins → mods** — explained in **[System architecture & documentation principles](/wiki/meta/system-architecture-principles)**.
 
-Do not use the sidebar’s technical sections unless you are developing — the default view stays short on purpose.
+Do not open **Developers & contributors** unless you are building or maintaining code — the first entries in the sidebar stay short on purpose.

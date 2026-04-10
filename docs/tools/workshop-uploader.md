@@ -1,12 +1,12 @@
 ---
-title: WorkshopManager
-sidebar_label: WorkshopManager
-description: Windows desktop app for managing Steam Workshop content, browsing mods, and publishing for Data Center (FrikaMF).
+title: GregModManager
+sidebar_label: GregModManager
+description: Windows desktop app (Gregtools Modmanager) for Steam Workshop content, browsing mods, and publishing for Data Center.
 ---
 
-# WorkshopManager
+# GregModManager
 
-**WorkshopManager** is a **.NET MAUI** desktop app for **Windows** that serves as a full-featured Steam Workshop client for *Data Center*. It combines content authoring (publish/update), a **Mod Store** for browsing and installing community mods, and a **Mod Manager** for dependency health checks.
+**GregModManager** (Gregtools Modmanager; project `WorkshopUploader.csproj`, executable **`WorkshopUploader.exe`**) is a **.NET MAUI** desktop app for **Windows** that serves as a full-featured Steam Workshop client for *Data Center*. It combines content authoring (publish/update), a **Mod Store** for browsing and installing community mods, and a **Mod Manager** for dependency health checks.
 
 ## Features
 

@@ -20,8 +20,8 @@ export const en: HomepageContent = {
   featureTitles: ['Play with mods', 'Workshop & updates', 'Clear docs', 'Community'],
   featureDescriptions: [
     'Step-by-step paths for installing and troubleshooting — no repo jargon on day one.',
-    'WorkshopManager and release channels explain where builds come from.',
-    'Player pages are short; author pages stay under one Developers section.',
+    'GregModManager and release channels explain where builds come from.',
+    'A few flat player pages up top; author pages stay under Developers.',
     'Discord and GitHub for help — framework internals only when you need them.',
   ],
   comingSoon: 'Coming soon',

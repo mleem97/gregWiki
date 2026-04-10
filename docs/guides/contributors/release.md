@@ -39,7 +39,7 @@ The following components are built and packaged for Steam Workshop distribution:
 | FMF.HexLabelMod | `FMF.HexLabelMod.dll` | `content/Mods/` | modded, melonloader, mod |
 | FMF.JoniMLCompatMod | `FMF.JoniMLCompatMod.dll` | `content/Mods/` | modded, melonloader, mod |
 
-### Gregtools Modmanager (WorkshopManager)
+### Gregtools Modmanager (GregModManager)
 
 | Version | Component | Target | Description |
 |---------|-----------|--------|-------------|
@@ -51,7 +51,7 @@ The following components are built and packaged for Steam Workshop distribution:
 
 1. Install **MelonLoader** (IL2CPP) for Data Center.
 2. Start the game once, then close it.
-3. Subscribe to mods via the **WorkshopManager** Mod Store or the [Steam Workshop](https://steamcommunity.com/app/4170200/workshop/).
+3. Subscribe to mods via the **GregModManager** Mod Store or the [Steam Workshop](https://steamcommunity.com/app/4170200/workshop/).
 4. Start the game.
 
 ### Manual installation

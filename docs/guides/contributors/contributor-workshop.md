@@ -1,22 +1,22 @@
 ---
 id: contributor-workshop
-title: Contributor Guide — WorkshopManager
+title: Contributor Guide — GregModManager
 sidebar_label: Contributor Guide
-description: Development setup, building, publishing workflow, and release process for the WorkshopManager.
+description: Development setup, building, publishing workflow, and release process for GregModManager.
 sidebar_position: 20
 tags:
   - audience:contributor
   - workshop
 ---
 
-# Contributor Guide — WorkshopManager
+# Contributor Guide — GregModManager
 
-This guide covers the development workflow for the WorkshopManager and how to publish mods to the Steam Workshop.
+This guide covers the development workflow for **GregModManager** and how to publish mods to the Steam Workshop.
 
 ## Prerequisites
 
 - **Visual Studio 2022** with **.NET Multi-platform App UI** and **Windows App SDK** workloads.
-- **.NET 9 SDK** (for the WorkshopManager MAUI app).
+- **.NET 9 SDK** (for the GregModManager MAUI app).
 - **.NET 6 SDK** (for framework, plugins, and mods targeting MelonLoader).
 - **Steam** with Data Center installed (App ID 4170200).
 
@@ -26,10 +26,10 @@ Paths are relative to the **`gregFramework/`** workspace root (split repos clone
 
 | Path | Purpose |
 |------|---------|
-| `gregCore/framework/FrikaMF.csproj` | Core MelonLoader framework DLL |
+| `gregCore/framework/FrikaMF.csproj` (via `gregCore/FrikaMF.sln`) | Core MelonLoader framework DLL |
 | `gregExt.*/` | FFM framework plugins (`FFM.Plugin.*` assemblies — one repo per plugin) |
 | `gregMod.*/` | Standalone gameplay mods (`FMF.*` assemblies) |
-| `gregModmanager/WorkshopUploader.csproj` | WorkshopManager MAUI app |
+| `gregModmanager/WorkshopUploader.csproj` | GregModManager MAUI app |
 | `gregFramework/scripts/Deploy-Release-ToWorkshop.ps1` | Package all builds into Workshop folders (when present in your clone) |
 | `gregFramework/scripts/Deploy-Release-ToDataCenter.ps1` | Deploy to game for local testing |
 
@@ -50,7 +50,7 @@ dotnet build gregMod.HexLabelMod/FMF.HexLabelMod.csproj -c Release
 dotnet build gregMod.LangCompatBridge/FMF.JoniMLCompatMod.csproj -c Release
 ```
 
-### Build WorkshopManager only
+### Build GregModManager only
 
 ```bash
 dotnet build gregModmanager/WorkshopUploader.csproj -c Release
@@ -96,7 +96,7 @@ This script:
 
 ### GUI (recommended)
 
-1. Run the WorkshopManager app.
+1. Run the GregModManager app.
 2. Open a project from the **Projects** tab.
 3. Edit title, description, tags, visibility, and preview image.
 4. Write **change notes** describing what changed.
@@ -135,4 +135,4 @@ The `SteamWorkshopService` in `gregModmanager/Services/SteamWorkshopService.cs` 
 1. Create the mod as a split repo folder `gregMod.<Name>/` under the gregFramework workspace (or clone an existing `gregMod.*` repo).
 2. Add it to the `$mods` array in `Deploy-Release-ToWorkshop.ps1`.
 3. Run the deploy script.
-4. Open the new workshop project in the WorkshopManager and publish.
+4. Open the new workshop project in the GregModManager and publish.

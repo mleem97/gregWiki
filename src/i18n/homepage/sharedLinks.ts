@@ -9,8 +9,8 @@ export const sharedKnowledgeLinksEn: HomepageDocLink[] = [
     link: '/wiki/guides/players/overview',
   },
   {
-    title: 'WorkshopManager',
-    description: 'Browse and install Workshop mods.',
+    title: 'GregModManager',
+    description: 'Browse, install, and manage Workshop mods (Gregtools desktop app).',
     link: '/wiki/guides/players/enduser-workshop',
   },
   {
@@ -62,7 +62,8 @@ export const homepageShellEn: Pick<
   workflowSectionTitle: 'Authors & contributors',
   codeSectionTitle: 'Building on gregFramework',
   codeSectionLead:
-    'C# mods on MelonLoader, FFM plugins, and optional Rust bridges — details for authors are under Developers.',
+    'C# mods on MelonLoader, Harmony hooks in gregCore, and optional Rust bridges — author details are under Developers.',
+  codeSnippetCaption: 'Random sample from gregCore',
   ctaDiscordTitle: 'Community',
   ctaDiscordLead: 'Questions about playing or building — ask in Discord.',
   ctaDiscordButton: 'Join Discord',

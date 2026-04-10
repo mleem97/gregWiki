@@ -10,10 +10,10 @@ The **gregFramework** folder groups several repositories (split layout). Use thi
 
 | Area | Folder | Role |
 |------|--------|------|
-| **Framework core** | `gregCore/` | MelonLoader host (`gregCore/framework/FrikaMF.csproj`), templates, **`gregCore/mcp-server/`**, optional `gregCore/plugins/` mirrors |
+| **Framework core** | `gregCore/` | MelonLoader host: **`gregCore/FrikaMF.sln`** / **`gregCore/framework/FrikaMF.csproj`**, templates, **`gregCore/mcp-server/`**, optional `gregCore/plugins/` mirrors |
 | **Gameplay mods** | `gregMod.<Name>/` | Standalone mods (`FMF.*`) — **directly under `gregFramework/`** (the `gregMods/` umbrella is deprecated) |
 | **Framework plugins** | `gregExt.<Name>/` | FFM plugins (`FFM.Plugin.*`) — **directly under `gregFramework/`** (the `gregExtensions/` umbrella is deprecated) |
-| **ModManager (MAUI)** | `gregModmanager/` | **Gregtools Modmanager** — UI for managing mods/plugins; `WorkshopUploader.csproj`, **`WorkshopUploader.exe`**. See [Architecture principles](/wiki/meta/system-architecture-principles). |
+| **GregModManager (MAUI)** | `gregModmanager/` | **Gregtools Modmanager** — UI for managing mods/plugins; `WorkshopUploader.csproj`, **`WorkshopUploader.exe`**. See [Architecture principles](/wiki/meta/system-architecture-principles). |
 | **Data Center exporter / assets** | `gregDataCenterExporter/` | Templates, exporter tooling, `FrikaModFramework/fmf_hooks.json` (among copies) |
 | **Documentation** | `gregWiki/` | This Docusaurus site (`docs/`) |
 | **Mod store / web (if cloned)** | `gregStore/` | Private Next.js modstore stack (`web/`, …) — optional sibling repo |

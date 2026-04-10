@@ -2,16 +2,13 @@
 const sidebars = {
   docs: [
     'intro',
-    {
-      type: 'category',
-      label: 'Play & mods',
-      collapsed: false,
-      items: [
-        'guides/players/overview',
-        'guides/players/enduser-workshop',
-        'reference/release-channels',
-      ],
-    },
+    'guides/players/overview',
+    'guides/players/enduser-workshop',
+    'guides/players/audiences-overview',
+    'guides/players/newbies',
+    'guides/players/intermediates',
+    'guides/players/professionals',
+    'reference/release-channels',
     'tools/workshop-uploader',
     {
       type: 'category',
@@ -63,11 +60,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Tools & operations',
-          items: [
-            'meta/Steam-Workshop-and-Tooling',
-            'meta/devserver-betas',
-            'meta/IDEA_BACKLOG',
-          ],
+          items: ['meta/Steam-Workshop-and-Tooling', 'meta/devserver-betas', 'meta/IDEA_BACKLOG'],
         },
         {
           type: 'category',
@@ -75,18 +68,11 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Players (extra)',
-              items: [
-                'guides/players/audiences-overview',
-                'guides/players/newbies',
-                'guides/players/intermediates',
-                'guides/players/professionals',
-              ],
-            },
-            {
-              type: 'category',
               label: 'Mod developers',
-              items: ['guides/mod-developers/overview', 'guides/mod-developers/greg-hooks-showcase'],
+              items: [
+                'guides/mod-developers/overview',
+                'guides/mod-developers/greg-hooks-showcase',
+              ],
             },
             {
               type: 'category',
@@ -146,7 +132,6 @@ const sidebars = {
             'reference/wiki-mapping',
             'reference/mod-store-vision',
             'reference/fmf-hook-naming',
-            'reference/greg-hooks-registry',
             'reference/fmf-hooks-catalog',
             'reference/mcp-server',
             'reference/reference-data-files',

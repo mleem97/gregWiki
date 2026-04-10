@@ -1,27 +1,27 @@
 ---
 id: enduser-workshop
-title: End-User Guide — WorkshopManager
+title: End-User Guide — GregModManager
 sidebar_label: End-User Guide
-description: How to browse, install, and manage Data Center mods using the WorkshopManager.
+description: How to browse, install, and manage Data Center mods using GregModManager (Gregtools Modmanager).
 sidebar_position: 10
 tags:
   - audience:enduser
   - workshop
 ---
 
-# End-User Guide — WorkshopManager
+# End-User Guide — GregModManager
 
-This guide is for players who want to **install and manage mods** for Data Center using the WorkshopManager desktop app.
+This guide is for players who want to **install and manage mods** for Data Center using **GregModManager** — the Gregtools desktop app (executable on disk is still `WorkshopUploader.exe`; sources live under **`gregModmanager/`**).
 
 ## What you need
 
 - **Data Center** installed via Steam.
 - **Steam** running and logged in.
-- **WorkshopManager** (`WorkshopUploader.exe`) — either built from source or provided as a release.
+- **GregModManager** (`WorkshopUploader.exe` in release builds) — either built from source or installed from a release.
 
 ## Installation
 
-You can run WorkshopManager from **any folder you prefer** (for example `Program Files`, Desktop, Downloads, or a folder next to the game). **Source code** for the app lives in the repo folder **`gregModmanager/`** (release ZIPs ship `WorkshopUploader.exe` / **Gregtools Modmanager**).
+You can run GregModManager from **any folder you prefer** (for example `Program Files`, Desktop, Downloads, or a folder next to the game). **Source code** for the app lives in the repo folder **`gregModmanager/`** (release ZIPs ship `WorkshopUploader.exe` / **Gregtools Modmanager**).
 
 ### Option A — Installer setup (recommended)
 
@@ -31,7 +31,7 @@ You can run WorkshopManager from **any folder you prefer** (for example `Program
 
 ### Option B — Portable / ZIP build
 
-1. Download or build the WorkshopManager files.
+1. Download or build the GregModManager files.
 2. Extract/copy the folder to any location you want.
 3. Launch `WorkshopUploader.exe` directly from that folder.
 
