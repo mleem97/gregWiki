@@ -7,16 +7,16 @@ description: Vier Rollen — Spieler, Moddevs, Contributor, Sponsoren — plus E
 
 # By audience
 
-Die Dokumentation richtet sich an **vier Hauptrollen** (und an Erfahrungsstufen darunter). Wähle, was zu dir passt — die Sprache der meisten Seiten ist **Englisch**, mit deutschsprachigen Importen unter `legacy/wiki-import/` wo vorhanden.
+Die Dokumentation richtet sich an **vier Hauptrollen** (und an Erfahrungsstufen darunter). Die meisten Seiten sind **Englisch**; ausgewählte Einstiege gibt es auch auf **Deutsch** (z. B. in dieser Übersicht und in `i18n/de`).
 
 ## Die vier Rollen
 
 | Rolle | Für wen? | Einstieg |
 |--------|----------|----------|
-| **Spieler** (End users) | Installation, Mods nutzen, Troubleshooting, FAQ | [End users (hub)](./overview) → [End user wiki](/wiki/legacy/wiki-import/EndUser/), [Data center FAQ](/wiki/legacy/wiki-import/DataCenterFAQ/) |
-| **Mod-Entwickler** (Mod developers) | Mods bauen, Hooks, Konfiguration, Debug | [Mod developers (hub)](../mod-developers/overview) → [ModDevs wiki](/wiki/legacy/wiki-import/ModDevs/), [Framework](/wiki/mods/framework) |
-| **Contributor** (Repo & Framework) | PRs, Doku, Plugins, CI, Design | [Contributors (workflow)](../contributors/topics-overview) → [Contributors wiki](/wiki/legacy/wiki-import/Contributors/), [Repo inventory](/wiki/contributors/repo-inventory) |
-| **Sponsorinnen & Sponsoren** | Unterstützung, Transparenz, rechtlicher Kontext | [Sponsors (hub)](../sponsors/overview) → [Sponsors (EN)](/wiki/legacy/wiki-import/Sponsors), [Sponsoren (DE)](/wiki/legacy/wiki-import/Sponsoren) |
+| **Spieler** (End users) | Installation, Mods nutzen, Troubleshooting | [End users (hub)](./overview) · [End-user workshop](./enduser-workshop) |
+| **Mod-Entwickler** (Mod developers) | Mods bauen, Hooks, Konfiguration, Debug | [Mod developers (hub)](../mod-developers/overview) · [Framework](/wiki/mods/framework) |
+| **Contributor** (Repo & Framework) | PRs, Doku, Plugins, CI | [Contributors (workflow)](../contributors/topics-overview) · [Repo inventory](/wiki/contributors/repo-inventory) |
+| **Sponsorinnen & Sponsoren** | Unterstützung, Transparenz | [Sponsors (hub)](../sponsors/overview) |
 
 ## Erfahrungsstufen (alle Rollen)
 
@@ -27,4 +27,3 @@ Die Dokumentation richtet sich an **vier Hauptrollen** (und an Erfahrungsstufen 
 ## Thematische Übersicht
 
 - [Topics hub](/wiki/topics/) — Security, Multiplayer, Assets, FFI, Roadmap, Meta.
-- Importierte Legacy-Guides: [Legacy wiki import](/wiki/topics/wiki-import/overview).

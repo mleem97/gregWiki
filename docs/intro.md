@@ -11,10 +11,10 @@ This documentation describes the **current split layout**: a local `gregFramewor
 
 | Audience | Start here |
 |----------|------------|
-| **Players** — install, play, troubleshoot | [End users (hub)](./guides/players/overview.md) · [End user wiki (import)](./legacy/wiki-import/EndUser/) |
-| **Mod developers** — build mods, hooks, debugging | [Mod developers (hub)](./guides/mod-developers/overview.md) · [ModDevs wiki (import)](./legacy/wiki-import/ModDevs/) · [Framework](./mods/framework.md) |
-| **Contributors** — PRs, docs, plugins, CI | [Contributors (workflow)](./guides/contributors/topics-overview.md) · [Contributors wiki (import)](./legacy/wiki-import/Contributors/) |
-| **Sponsors** — support & transparency | [Sponsors (hub)](./guides/sponsors/overview.md) · [Sponsors (EN)](./legacy/wiki-import/Sponsors) · [Sponsoren (DE)](./legacy/wiki-import/Sponsoren) |
+| **Players** — install, play, troubleshoot | [End users (hub)](./guides/players/overview.md) · [End-user workshop](./guides/players/enduser-workshop.md) |
+| **Mod developers** — build mods, hooks, debugging | [Mod developers (hub)](./guides/mod-developers/overview.md) · [Framework](./mods/framework.md) · [FMF hooks](/wiki/framework/fmf-hooks) |
+| **Contributors** — PRs, docs, plugins, CI | [Contributors (workflow)](./guides/contributors/topics-overview.md) · [Contributor workshop](./guides/contributors/contributor-workshop.md) |
+| **Sponsors** — support & transparency | [Sponsors (hub)](./guides/sponsors/overview.md) · [GitHub Sponsors](https://github.com/sponsors) (project policies in repo `LICENSE` / `CONTRIBUTING`) |
 
 **Experience tracks** (newbies → pros): [By audience](./guides/players/audiences-overview.md) → [Newbies](/wiki/audiences/newbies), [Intermediates](/wiki/audiences/intermediates), [Professionals](/wiki/audiences/professionals).
 

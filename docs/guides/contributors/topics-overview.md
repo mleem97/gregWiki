@@ -16,4 +16,4 @@ Operational docs for people changing the framework, site, or release pipeline.
 - [Docusaurus workflow](/wiki/contributors/docusaurus-workflow) — edit/build the wiki site.
 - [Plugin submission audit](/wiki/contributors/plugin-submission-audit) — checklist for new plugins.
 
-Imported guides: [Contribution workflow](/wiki/legacy/wiki-import/Contributors/Guides/Contribution-Workflow).
+- [Contributor workshop](./contributor-workshop) — branching, reviews, and release expectations.

@@ -20,4 +20,4 @@ Gameplay mods (`FMF.*`) are documented under **[Mods](../mods/index.md)** — no
 
 ## Additional context
 
-- [Standalone mods (legacy wiki)](/wiki/legacy/wiki-import/StandaloneMods)
+- [Mods overview](/wiki/mods/) — gameplay mods (`FMF.*`) and how they differ from plugins

@@ -1,13 +1,13 @@
 ---
 title: FFI, hooks & Lua
 sidebar_label: FFI, hooks & Lua (hub)
-description: FFI, hook lists, naming — bridge between framework and legacy wiki.
+description: FFI, hook lists, naming — curated reference for mod and plugin authors.
 ---
 
 # FFI, hooks & Lua
 
-- [FMF hooks catalog](/wiki/reference/fmf-hooks-catalog) (generated)
-- [FMF hook naming](/wiki/reference/fmf-hook-naming)
-- Imported: [HOOKS](/wiki/legacy/wiki-import/HOOKS), [Hook naming convention](/wiki/legacy/wiki-import/HOOK-NAMING-CONVENTION)
-- Imported: [FFI bridge reference](/wiki/legacy/wiki-import/FFI-Bridge-Reference), [Lua FFI start](/wiki/legacy/wiki-import/Lua-FFI-Start-Developing)
-- Imported: [Mod developer debug](/wiki/legacy/wiki-import/Mod-Developer-Debug)
+- [FMF hooks](/wiki/framework/fmf-hooks) — generated hook surface
+- [FMF hooks catalog](/wiki/reference/fmf-hooks-catalog) — strings from core sources
+- [FMF hook naming](/wiki/reference/fmf-hook-naming) — `FMF.*` vs legacy `FFM.*`
+- [Framework architecture](/wiki/framework/architecture) — bridges (including Rust) and runtime layout
+- [Modding language requirement](/wiki/reference/modding-language-requirement) — C# policy for mods/plugins

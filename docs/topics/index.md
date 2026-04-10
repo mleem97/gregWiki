@@ -6,7 +6,7 @@ description: Thematic index — cross-cutting overviews (assets, multiplayer, se
 
 # Topics hub
 
-Documentation combines **curated pages** (guides, framework, reference), **generated reference** (hook catalogs), and **legacy imports** from the GitHub wiki (`.wiki` → `docs/legacy/wiki-import/`).
+Documentation is **curated** in this repository: guides, framework articles, reference data (hook catalogs), and contributor workflow — versioned with **gregFramework** and **gregWiki**.
 
 ## Quick map
 
@@ -17,7 +17,6 @@ Documentation combines **curated pages** (guides, framework, reference), **gener
 | **Technical reference** | [Reference & technical](/wiki/topics/reference/overview) |
 | **Ship planning** | [Roadmap & planning](/wiki/topics/roadmap/overview) |
 | **Repository inventory** | [Repo inventory](/wiki/contributors/repo-inventory) |
-| **Imported legacy wiki** | [Legacy wiki import](/wiki/topics/wiki-import/overview) |
 | **Steam, betas, backlog, game paths** | [Meta & operations](/wiki/topics/meta/overview) — [Game folder layout](/wiki/topics/meta/game-folder-layout) |
 
 ## Thematic folders (deep links)

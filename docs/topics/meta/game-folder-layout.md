@@ -59,4 +59,4 @@ Ohne Junction müssen MelonMods weiter physisch unter **`Mods/`** liegen oder ü
 ## Siehe auch
 
 - [Meta & operations](/wiki/topics/meta/overview)
-- [Legacy: Mod Config System](/wiki/legacy/wiki-import/Mod-Config-System) (API-Contract; Pfade auf **ModCfg** beziehen)
+- Mod configuration contracts are described alongside runtime docs in [Framework](/wiki/mods/framework) and core `README` in **gregFramework** (paths under **`UserData/ModCfg/`** follow the game + framework conventions above).

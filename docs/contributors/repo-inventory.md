@@ -41,7 +41,7 @@ These folders typically sit **next to each other** in a developer workspace (see
 
 ## Wiki import (legacy)
 
-Long-form pages mirrored from the GitHub Wiki live under [`docs/legacy/wiki-import/`](../legacy/wiki-import/Home) and remain linked from many topics.
+Documentation is maintained in this repository under `docs/`; historical GitHub Wiki content has been retired in favor of curated guides and reference pages.
 
 ## .NET projects on disk (`*.csproj`)
 

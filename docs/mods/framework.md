@@ -14,7 +14,7 @@ The core `FrikaMF` runtime provides:
 
 ## Core references
 
-- [`Framework Features & Use Cases`](/wiki/legacy/wiki-import/Framework-Features-Use-Cases)
-- [`HOOKS`](/wiki/legacy/wiki-import/HOOKS)
-- [`FFI Bridge Reference`](/wiki/legacy/wiki-import/FFI-Bridge-Reference)
-- [`Mod Developer Debug`](/wiki/legacy/wiki-import/Mod-Developer-Debug)
+- [FMF hooks (generated)](/wiki/framework/fmf-hooks) — hook surface and categories
+- [FMF hook naming](/wiki/reference/fmf-hook-naming) — `FMF.*` vs legacy `FFM.*`
+- [FMF hooks catalog](/wiki/reference/fmf-hooks-catalog) — strings from core `HookNames.cs`
+- [Framework architecture](/wiki/framework/architecture) — runtime layout and bridges

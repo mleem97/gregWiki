@@ -1,7 +1,7 @@
 ---
 title: Mod developers
 sidebar_label: Mod developers (hub)
-description: Getting started, mod config, debugging — links into legacy wiki-import ModDevs tree.
+description: Getting started, mod config, debugging — curated docs for FMF mod authors.
 ---
 
 # Mod developers
@@ -9,6 +9,8 @@ description: Getting started, mod config, debugging — links into legacy wiki-i
 **Mod-Autorinnen und -Autoren** — eigene Mods bauen (Hooks, Konfiguration, Debug). Überblick über alle Rollen: [By audience](/wiki/guides/players/audiences-overview).
 
 - [By audience — intermediates](/wiki/audiences/intermediates) and [professionals](/wiki/audiences/professionals)
-- Wiki: [Framework overview](/wiki/mods/framework)
-- Imported: [ModDevs](/wiki/legacy/wiki-import/ModDevs/), [Modding guide](/wiki/legacy/wiki-import/Modding-Guide), [Mod config system](/wiki/legacy/wiki-import/Mod-Config-System)
-- Imported: [Standalone mods](/wiki/legacy/wiki-import/StandaloneMods)
+- [Framework overview](/wiki/mods/framework) — runtime capabilities and repo layout
+- [FMF hooks](/wiki/framework/fmf-hooks) — hook surface (generated article)
+- [FMF hook naming](/wiki/reference/fmf-hook-naming) and [hooks catalog](/wiki/reference/fmf-hooks-catalog)
+- [Contributor workshop](/wiki/guides/contributors/contributor-workshop) — builds, CI, and PRs
+- [Mods](/wiki/mods/) — gameplay mods (`FMF.*`) and release pages

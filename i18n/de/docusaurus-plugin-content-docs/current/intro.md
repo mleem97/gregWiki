@@ -11,10 +11,10 @@ Diese Dokumentation beschreibt den **aktuellen Split-Stand**: `gregFramework/` a
 
 | Zielgruppe | Einstieg |
 |------------|----------|
-| **Spieler** — installieren, spielen, Troubleshooting | [Endnutzer (Hub)](/wiki/guides/players/overview) · [Endnutzer-Wiki (Import)](/wiki/legacy/wiki-import/EndUser/) |
-| **Moddevs** — Mods bauen, Hooks, Debugging | [Mod-Entwickler (Hub)](/wiki/guides/mod-developers/overview) · [ModDevs-Wiki (Import)](/wiki/legacy/wiki-import/ModDevs/) · [Framework](/wiki/mods/framework) |
-| **Contributor** — PRs, Doku, Plugins, CI | [Contributors (Workflow)](/wiki/guides/contributors/topics-overview) · [Contributors-Wiki (Import)](/wiki/legacy/wiki-import/Contributors/) |
-| **Sponsorinnen & Sponsoren** | [Sponsors (Hub)](/wiki/guides/sponsors/overview) · [Sponsors (EN)](/wiki/legacy/wiki-import/Sponsors) · [Sponsoren (DE)](/wiki/legacy/wiki-import/Sponsoren) |
+| **Spieler** — installieren, spielen, Troubleshooting | [Endnutzer (Hub)](/wiki/guides/players/overview) · [Endnutzer-Workshop](/wiki/guides/players/enduser-workshop) |
+| **Moddevs** — Mods bauen, Hooks, Debugging | [Mod-Entwickler (Hub)](/wiki/guides/mod-developers/overview) · [Framework](/wiki/mods/framework) · [FMF-Hooks](/wiki/framework/fmf-hooks) |
+| **Contributor** — PRs, Doku, Plugins, CI | [Contributors (Workflow)](/wiki/guides/contributors/topics-overview) · [Contributor-Workshop](/wiki/guides/contributors/contributor-workshop) |
+| **Sponsorinnen & Sponsoren** | [Sponsors (Hub)](/wiki/guides/sponsors/overview) · Lizenz & Richtlinien im GitHub-Repo (`LICENSE` / `CONTRIBUTING`) |
 
 **Erfahrungspfade** (Einsteiger → Profis): [Nach Zielgruppe](/wiki/guides/players/audiences-overview) → [Newbies](/wiki/audiences/newbies), [Intermediates](/wiki/audiences/intermediates), [Professionals](/wiki/audiences/professionals).
 

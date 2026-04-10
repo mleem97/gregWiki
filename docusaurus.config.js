@@ -58,11 +58,6 @@ const config = {
             return ['/docs'];
           }
 
-          // GitHub wiki mirror moved under /wiki/legacy/wiki-import/
-          if (existingPath.startsWith('/wiki/legacy/wiki-import')) {
-            return [existingPath.replace('/wiki/legacy/wiki-import', '/wiki/wiki-import')];
-          }
-
           const redirectsToHere = {
             '/wiki/framework/architecture': ['/wiki/architecture'],
             '/wiki/framework/fmf-hooks': ['/wiki/fmf-hooks'],
@@ -108,6 +103,27 @@ const config = {
           return undefined;
         },
         redirects: [
+          {
+            to: '/wiki/docs',
+            from: [
+              '/wiki/legacy/wiki-import/Home',
+              '/wiki/wiki-import/Home',
+              '/wiki/legacy/wiki-import',
+              '/wiki/wiki-import',
+            ],
+          },
+          {
+            to: '/wiki/guides/players/overview',
+            from: ['/wiki/legacy/wiki-import/EndUser/', '/wiki/wiki-import/EndUser/'],
+          },
+          {
+            to: '/wiki/guides/mod-developers/overview',
+            from: ['/wiki/legacy/wiki-import/ModDevs/', '/wiki/wiki-import/ModDevs/'],
+          },
+          {
+            to: '/wiki/guides/contributors/topics-overview',
+            from: ['/wiki/legacy/wiki-import/Contributors/', '/wiki/wiki-import/Contributors/'],
+          },
           {
             to: '/wiki/mods/framework',
             from: ['/framework'],

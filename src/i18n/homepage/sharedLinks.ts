@@ -36,12 +36,12 @@ export const sharedWorkflowLinksEn: HomepageDocLink[] = [
   {
     title: 'End-user docs',
     description: 'Install, update, and troubleshooting paths.',
-    link: '/wiki/legacy/wiki-import/EndUser/End-User-Release',
+    link: '/wiki/guides/players/overview',
   },
   {
     title: 'Mod developer docs',
     description: 'Setup, debugging, and hook integration.',
-    link: '/wiki/legacy/wiki-import/ModDevs/Mod-Developer-Debug',
+    link: '/wiki/guides/mod-developers/overview',
   },
   {
     title: 'Repo inventory',
@@ -95,12 +95,12 @@ export const sharedWorkflowLinksDe: HomepageDocLink[] = [
   {
     title: 'Endnutzer-Doku',
     description: 'Installation, Updates und Fehlerbehebung.',
-    link: '/wiki/legacy/wiki-import/EndUser/End-User-Release',
+    link: '/wiki/guides/players/overview',
   },
   {
     title: 'Mod-Entwickler-Doku',
     description: 'Setup, Debugging und Hook-Integration.',
-    link: '/wiki/legacy/wiki-import/ModDevs/Mod-Developer-Debug',
+    link: '/wiki/guides/mod-developers/overview',
   },
   {
     title: 'Repo-Inventar',

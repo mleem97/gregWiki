@@ -147,7 +147,14 @@ body {
   color: var(--color-on-surface);
 }
 
-.navbar__item .navbar__link {
+.navbar__items--right {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.navbar__item .navbar__link,
+.navbar__item.navbar__link {
   font-family: var(--font-headline);
   font-weight: 500;
   letter-spacing: 0.06em;
@@ -157,11 +164,13 @@ body {
   transition: color 0.25s ease;
 }
 
-.navbar__item .navbar__link:hover {
+.navbar__item .navbar__link:hover,
+.navbar__item.navbar__link:hover {
   color: var(--color-on-surface);
 }
 
-.navbar__item .navbar__link--active {
+.navbar__item .navbar__link--active,
+.navbar__item.navbar__link--active {
   color: var(--color-primary);
   box-shadow: inset 0 -2px 0 0 var(--color-primary);
 }
@@ -175,41 +184,40 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
+  min-width: 2.25rem;
+  min-height: 2.25rem;
+  padding: 0;
   border-radius: 999px;
   backdrop-filter: blur(12px);
   background: rgba(0, 30, 28, 0.65);
   box-shadow: inset 0 0 0 1px rgba(15, 81, 76, 0.15);
 }
 
-.nav-icon-only {
-  color: transparent;
-}
-
-.nav-icon-only::before {
-  font-size: 0.95rem;
+.nav-right-icon.nav-icon-only {
   color: var(--color-on-surface-variant);
 }
 
-.nav-link-mods::before {
-  content: '🧩';
+.nav-right-icon.nav-icon-only:hover,
+.nav-right-icon.nav-icon-only:focus-visible {
+  color: var(--color-on-surface);
 }
 
-.nav-link-discord::before {
-  content: '💬';
+.nav-icon-svg {
+  flex-shrink: 0;
+  display: block;
+  color: currentColor;
 }
 
-.nav-link-support::before {
-  content: '🛟';
-}
-
-.nav-link-github::before {
-  content: '⌁';
-}
-
-.nav-locale::before {
-  content: '🌐';
+.nav-icon-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Editorial bleed + hero (homepage) */
@@ -423,11 +431,7 @@ body {
 
 /* Doc canvas — editorial bleed (wiki layout alignment); no hard section borders */
 .theme-doc-wrapper {
-  background: linear-gradient(
-    180deg,
-    var(--color-surface-container-low) 0%,
-    var(--color-background) 42%
-  );
+  background: linear-gradient(180deg, var(--color-surface-container-low) 0%, var(--color-background) 42%);
 }
 
 .theme-doc-root .theme-doc-sidebar-container {
@@ -562,27 +566,22 @@ body {
   color: var(--color-primary);
 }
 
-.footer-link-icon {
-  position: relative;
-  padding-left: 1.4rem;
+.footer-link-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
-.footer-link-icon::before {
-  position: absolute;
-  left: 0;
-  opacity: 0.9;
+.footer-icon-svg {
+  flex-shrink: 0;
+  opacity: 0.85;
+  color: rgba(192, 252, 246, 0.45);
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
-.footer-link-github::before {
-  content: '⌁';
-}
-
-.footer-link-discord::before {
-  content: '💬';
-}
-
-.footer-link-support::before {
-  content: '🛟';
+.footer__link-item:hover .footer-icon-svg {
+  opacity: 1;
+  color: var(--color-primary);
 }
 
 .button.button--primary {

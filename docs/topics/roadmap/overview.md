@@ -6,7 +6,7 @@ description: Unified roadmap and mod-store staging notes.
 
 # Roadmap & planning
 
-- [Unified roadmap](/wiki/roadmap/unified-roadmap) — cross-cutting priorities.
+- [Unified roadmap](/wiki/roadmap/unified-roadmap) — cross-cutting priorities for gregFramework.
 - [Mod store stages](/wiki/roadmap/mod-store-stages) — staged rollout concepts.
 
-Imported context: [ROADMAP](/wiki/legacy/wiki-import/ROADMAP), [TASKLIST](/wiki/legacy/wiki-import/TASKLIST), [Repository status](/wiki/legacy/wiki-import/Repository-Status-2026-04-04).
+Historical task lists and status snapshots are folded into the unified roadmap; follow GitHub issues and releases for day-to-day execution.

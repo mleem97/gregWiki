@@ -67,4 +67,4 @@ Bindings are **not** auto-generated for all languages; stubs are for contributor
 ## Related
 
 - [FMF hooks catalog](./fmf-hooks-catalog.md) (generated)
-- [Legacy wiki: HOOK-NAMING-CONVENTION](../legacy/wiki-import/HOOK-NAMING-CONVENTION) (extended examples)
+- [FMF hooks](/wiki/framework/fmf-hooks) — generated hook surface and categories
