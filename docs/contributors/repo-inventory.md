@@ -32,7 +32,7 @@ These folders typically sit **next to each other** in a developer workspace (see
 
 | Concern | Where to look |
 |---------|----------------|
-| Framework `.csproj` | `gregCore/framework/FrikaMF.csproj` (see `gregCore/FrikaMF.sln`; a root `gregCore/FrikaMF.csproj` may exist for alternate layouts) |
+| Framework `.csproj` | `gregCore/framework/FrikaMF.csproj` (solution: `gregCore/FrikaMF.sln`) |
 | Plugins (`FFM.Plugin.*`) — authoring | `gregExt.<Name>/` (e.g. `gregExt.AssetExporter/`) |
 | Plugins — optional mirrors | `gregCore/plugins/greg.Plugin.*` (und ältere `FFM.Plugin.*`-Spiegel je nach Branch) |
 | Mod sources (`FMF.*`) | `gregMod.<Name>/` |
