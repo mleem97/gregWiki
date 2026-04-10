@@ -1,50 +1,53 @@
 ---
 title: Getting started
 sidebar_label: Getting started
-description: "Split-repo workspace: gregFramework layout, building the core, and where docs live."
+description: Workspace-Layout (gregFramework), gregCore bauen, Hooks & erste Mod-Schritte.
 ---
 
-The workspace is **multi-repo** with a local `gregFramework/` folder containing standalone repositories. **Logical stack:** **ModManager → framework / SDK → plugins → mods** — see [System architecture & documentation principles](/wiki/meta/system-architecture-principles).
+Der Workspace ist **multi-repo**: unter einem gemeinsamen Ordner `gregFramework/` liegen mehrere Git-Repos **flach** nebeneinander. **Logik:** **ModManager → Framework / SDK → Plugins → Mods** — siehe [System architecture & documentation principles](/wiki/meta/system-architecture-principles).
 
-- `gregCore/` — core SDK: build **`gregCore/FrikaMF.sln`** (main project **`gregCore/framework/FrikaMF.csproj`**); MCP server under `gregCore/mcp-server/`
-- `gregMod.<Name>/` — gameplay mods (`FMF.*`), **flat** next to `gregCore/` (legacy umbrella `gregMods/` is deprecated)
-- `gregExt.<Name>/` — framework plugins (`FFM.Plugin.*`), same flat layout (legacy `gregExtensions/` deprecated)
-- `gregModmanager/` — **GregModManager** / **Gregtools Modmanager** (`WorkshopUploader.csproj`)
-- `gregDataCenterExporter/` — exporter, templates, hook JSON mirrors
-- `gregWiki/` — this documentation site
+| Ordner | Inhalt |
+|--------|--------|
+| **`gregCore/`** | Framework: **`gregCore/FrikaMF.sln`**, Hauptprojekt **`gregCore/framework/FrikaMF.csproj`**; SDK unter `framework/src/Sdk/`; MCP unter `gregCore/mcp-server/` |
+| **`gregMod.<Name>/`** | Gameplay-Mods (`FMF.*`-Assemblies üblich), **flach** neben `gregCore/` (Umbrella **`gregMods/`** ist veraltet) |
+| **`gregExt.<Name>/`** | Framework-Plugins (`FFM.Plugin.*` / `greg.Plugin.*`), ebenfalls flach (**`gregExtensions/`** veraltet) |
+| **`gregModmanager/`** | GregModManager / Workshop-UI (`WorkshopUploader.csproj`) |
+| **`gregDataCenterExporter/`** | Exporter, Templates, Spiegel |
+| **`gregWiki/`** | Diese Doku (Docusaurus) |
 
-**Rust / native mods** are loaded by the **core** via **`FFIBridge`** (`gregCore/framework/src/ModLoader/FfiBridge.cs`); there is no separate `bridges/gregSta.RustBridge` tree in the workspace anymore.
+Rust-/Native-Mods werden vom Core über die FFI-Schicht geladen; Bridge-Code lebt im **`framework/src/ModLoader/`**-Baum von **gregCore**.
 
-## Build the core
+## Framework bauen
 
-```text
+```bash
 dotnet build gregCore/FrikaMF.sln -c Release
 ```
 
-Or open `gregCore/FrikaMF.sln` in your IDE.
+Oder `gregCore/FrikaMF.sln` in der IDE öffnen. Für CI ohne lokale Spiel-Installation oft: **`-p:CI=true`** (siehe jeweilige `.csproj`-Targets).
 
-## Hooks and registries
+**Voraussetzungen:** MelonLoader **net6**-Assemblies und Il2Cpp-Interop des Spiels — entweder aus `{Game}/MelonLoader/` oder aus **`gregCore/lib/references/MelonLoader`** (z. B. via `python gregCore/tools/refresh_refs.py`). Umgebungsvariable **`DATA_CENTER_GAME_DIR`** hilft beim Auflösen des Spielpfads.
 
-- **Docs / policy:** target public identifiers **`FMF.<DOMAIN>.<Event>`** — [FMF hook naming](/wiki/reference/fmf-hook-naming) and [`CONTRIBUTING.md`](https://github.com/mleem97/gregFramework/blob/main/CONTRIBUTING.md).
-- **Runtime string table + numeric `EventIds`:** [`gregCore/framework/FrikaMF/HookNames.cs`](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/FrikaMF/HookNames.cs) and [`EventIds.cs`](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/FrikaMF/EventIds.cs) — today these resolve the Rust/game pipeline to **`FFM.*`** literals; see [FMF hooks catalog](/wiki/reference/fmf-hooks-catalog).
-- **Canonical `greg.*` registry (JSON v2):** `gregCore/gregFramework/greg_hooks.json` — Il2Cpp-driven list for codegen and MCP; regenerate with **`gregCore/scripts/Generate-GregHooksFromIl2CppDump.ps1`**. Overview: [Greg hooks & event runtime](/wiki/framework/greg-hooks-and-events).
-- **Optional legacy declarative file:** `fmf_hooks.json` (e.g. under `gregDataCenterExporter/FrikaModFramework/`) for older tooling — see [MCP server](/wiki/reference/mcp-server).
+## Hooks & Registries
 
-## Start a mod
+| Thema | Wo |
+|--------|-----|
+| **Kanonische `greg.*` (JSON, Il2Cpp)** | Repo-Root **`greg_hooks.json`**; Regeneration: **`gregCore/scripts/Generate-GregHooksFromIl2CppDump.ps1`** |
+| **EventId → `greg.*` (FFI / natives Pipeline)** | **`GregNativeEventHooks`** — [greg hooks catalog](/wiki/reference/greg-hooks-catalog), Quellcode `gregCore/framework/src/Sdk/GregNativeEventHooks.cs` |
+| **Doku-Namenskonvention `FMF.*`** | [FMF hook naming](/wiki/reference/fmf-hook-naming) |
+| **Architektur Überblick** | [Greg hooks & event runtime](/wiki/framework/greg-hooks-and-events) |
+| **Legacy-Strings** | **`GregCompatBridge`** lädt **`greg_hooks.json`** neben **`FrikaModdingFramework.dll`** |
 
-1. Add a new mod repo as `gregMod.<Name>/` under `gregFramework/` (clone or create next to `gregCore/`).
-2. Use templates from `gregCore/Templates/` (and mirrored templates under `gregDataCenterExporter/Templates/` where applicable).
-3. Maintain hook metadata and version the mod in its own repository.
+## Ersten Mod starten
 
-## Documentation site
+1. Neues Repo **`gregMod.<Name>/`** unter `gregFramework/` anlegen (oder Template klonen).
+2. **`ProjectReference`** auf **`gregCore/framework/FrikaMF.csproj`** setzen (wie **`mods/GregShowcaseMod/`**).
+3. API **`gregFramework.Core`** (`GregEventDispatcher`, `GregHookName`, `GregNativeEventHooks`, …).
+4. Vorlagen: **`gregCore/Templates/greg.BasedModTemplate/`** oder gespiegelte Templates unter **`gregDataCenterExporter/Templates/`**.
 
-- **Repository:** `gregWiki/`
-- **Content:** Markdown/MDX in this repo, aligned with the split layout.
+Referenz-Mod: **`mods/GregShowcaseMod/`** — [Greg hooks showcase](/wiki/guides/mod-developers/greg-hooks-showcase).
 
-### Docker
+## Dokumentations-Site (`gregWiki/`)
 
-From the `gregWiki` root: `docker build -t gregwiki-docs .` then `docker run --rm -p 3000:3000 gregwiki-docs`.
-
-### MCP
-
-See [`reference/mcp-server`](./reference/mcp-server.md) — implementation under **`gregCore/mcp-server/`** (install and `--data-root` per that folder’s `README.md`).
+- Markdown unter **`gregWiki/docs/`**
+- Docker: im **`gregWiki/`**-Root `docker build` / `docker run` (siehe **`gregWiki/README.md`**)
+- MCP: [mcp-server](/wiki/reference/mcp-server) — Server unter **`gregCore/mcp-server/`**

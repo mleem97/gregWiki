@@ -44,15 +44,16 @@ Domains are **closed by default**. Add a new domain only via changelog + maintai
 
 Harmony patches in **gregFramework** emit stable **`greg.<DOMAIN>.<Action>`** strings via `GregHookName` / `GregEventDispatcher`. That surface is documented in **[greg hooks registry (IL2CPP)](/wiki/reference/greg-hooks-registry)** (`greg_hooks.json`, regeneration, overlap with hand-written `HarmonyPatches`). It is separate from the `FMF.*` / `FFM.*` documentation constants below.
 
-## Legacy: `FFM.*` strings in code
+## Native pipeline: `GregNativeEventHooks` (replaces `HookNames`)
 
-The runtime currently maps numeric event IDs to **`FFM.*`** string constants in [`FrikaMF/HookNames.cs`](https://github.com/mleem97/gregFramework/blob/master/FrikaMF/HookNames.cs) (e.g. `FFM.Economy.Balance.OnChanged`). That is **legacy naming** (four segments after `FFM`).
+Numeric **`EventIds`** are mapped to canonical **`greg.*`** strings in **`GregNativeEventHooks`** ([source](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/src/Sdk/GregNativeEventHooks.cs)), aligned with **`greg_hooks.json`** where that file names the patched method. Logging uses **`GregNativeEventHooks.Resolve(uint)`**; unknown ids → **`greg.SYSTEM.UnmappedNativeEvent`**.
+
+**`GregCompatBridge`** ([source](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/src/Sdk/GregCompatBridge.cs)) redirects **deprecated** hook spellings (including older documentation-style names) to the current **`greg.*`** string — see also `legacy` entries in **`greg_hooks.json`**.
 
 **Policy**
 
-- New documentation and greenfield APIs should use **`FMF.<Domain>.*`** as above.
-- When touching `HookNames.cs`, prefer aligning new entries to **`FMF.*`**; otherwise keep **`FFM.*`** until a planned major version bump documents a rename map.
-- The [generated hook catalog](./fmf-hooks-catalog.md) lists **what the code emits today** (including `FFM.*`).
+- New **documentation** identifiers: **`FMF.<Domain>.*`** as above.
+- New **runtime** subscriptions: always **`greg.*`** via **`GregHookName.Create`** or **`GregNativeEventHooks`** constants — see [greg hooks catalog](./greg-hooks-catalog.md).
 
 ## Cross-language stubs (documentation)
 
@@ -70,5 +71,6 @@ Bindings are **not** auto-generated for all languages; stubs are for contributor
 
 ## Related
 
-- [FMF hooks catalog](./fmf-hooks-catalog.md) (generated)
-- [FMF hooks](/wiki/framework/fmf-hooks) — generated hook surface and categories
+- [greg hooks catalog](./greg-hooks-catalog.md) — EventId → **`greg.*`** (generated)
+- [FMF hooks catalog](./fmf-hooks-catalog.md) — Kurzüberblick / Redirect
+- [FMF hooks](/wiki/framework/fmf-hooks) — deklarative Oberfläche (kann hinter der Core-Registry zurückstehen)

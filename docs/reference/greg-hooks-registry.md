@@ -2,79 +2,67 @@
 id: greg-hooks-registry
 title: greg.* hooks registry (IL2CPP)
 slug: /reference/greg-hooks-registry
-description: greg_hooks.json, Harmony hook sources under gregCore, regeneration from Il2Cpp unpack, and overlap with Rust bridge patches.
+description: greg_hooks.json, Harmony-Quellen unter gregCore, Regeneration, Überschneidung mit Hand-Patches.
 ---
 
 # greg.* hooks registry (IL2CPP)
 
-This page documents the **canonical C# / MelonLoader hook surface** for *Data Center* IL2CPP interop: stable string ids, JSON registry, generated Harmony patches, and how they coexist with the existing Rust FFI bridge.
+Diese Seite beschreibt die **kanonische MelonLoader-Hook-Oberfläche** für *Data Center* (IL2CPP): stabile String-IDs, JSON-Registry, erzeugte Harmony-Stubs und das Zusammenspiel mit **handgeschriebenen** Patches (z. B. `HarmonyPatches.cs`).
 
-## Canonical hook ids
-
-Runtime identifiers follow:
+## Kanonische Hook-IDs
 
 ```text
 greg.<DOMAIN>.<Action>
 ```
 
-- **`greg`** — fixed prefix (never `FMF`, `FFM`, or product-specific spellings in new APIs).
-- **`<DOMAIN>`** — uppercase segment from `GregDomain` (`PLAYER`, `EMPLOYEE`, `NETWORK`, `UI`, `SYSTEM`, …). Same logical areas as the framework domain model; see `GregHookName` in **gregFramework** sources.
-- **`<Action>`** — `PascalCase` verb or noun phrase (`MoneyChanged`, `Hired`, `ComponentInitialized`, …).
+- **`greg`** — fester Präfix für neue APIs.
+- **`<DOMAIN>`** — u. a. aus **`GregDomain`** (`PLAYER`, `NETWORK`, `SYSTEM`, …).
+- **`<Action>`** — `PascalCase`.
 
-Always build ids with `GregHookName.Create(GregDomain.*, "Action")` in mods — do not concatenate raw strings.
+In Mods vorzugsweise **`GregHookName.Create(GregDomain.*, "Action")`** oder Konstanten aus **`GregNativeEventHooks`** verwenden.
 
-## Registry file: `greg_hooks.json`
+## Registry-Datei `greg_hooks.json`
 
-| Location | Role |
-|----------|------|
-| **Repo root** `greg_hooks.json` | Source of truth checked into **gregFramework**; documents every emitted hook (`name`, `patchTarget`, `strategy`, `payloadSchema`, optional `legacy`). |
-| **Next to `FrikaModdingFramework.dll`** (build output) | Copy via `FrikaMF.csproj` (`gregCore/framework/gregFramework/greg_hooks.json`) so `GregCompatBridge` can resolve legacy ids at runtime. |
+| Ort | Rolle |
+|-----|--------|
+| **Repo-Root** `greg_hooks.json` | Eincheckter Katalog (`name`, `patchTarget`, `strategy`, `payloadSchema`, optional `legacy`). |
+| **Neben `FrikaModdingFramework.dll`** | Build-Kopie für **`GregCompatBridge`**. |
 
-The file is **generated**; edit the generator or whitelist (see below), then re-run the script — do not hand-edit hundreds of entries unless you are fixing metadata only.
+## Code-Layout (gregFramework-Repo)
 
-## Code layout (gregFramework repo)
+| Pfad | Zweck |
+|------|--------|
+| **`gregCore/framework/src/Sdk/`** | **`gregFramework.Core`**: `GregEventDispatcher`, `GregHookName`, `GregDomain`, `GregPayload`, `GregCompatBridge`, **`GregNativeEventHooks`** |
+| **`gregCore/framework/src/ModLoader/`** | `EventDispatcher`, `HarmonyPatches`, FFI, `GregHookIntegration`, Services |
+| **`gregCore/framework/harmony/`** | Optional: generierte Domain-Harmony-Klassen (Skript **`Generate-GregHooksFromIl2CppDump.ps1`**) |
 
-| Path | Purpose |
-|------|---------|
-| `gregCore/Core/` | `GregDomain`, `GregHookName`, `GregEventDispatcher`, `GregCompatBridge`, `GregPayload` |
-| `gregCore/Hooks/` | `GregPlayerHooks`, `GregEmployeeHooks`, … — Harmony postfix patches compiled into the MelonLoader plugin |
-| `gregCore/scripts/Generate-GregHooksFromIl2CppDump.ps1` | Regenerates `greg_hooks.json` and all `Greg*Hooks.cs` files |
+Das Projekt **`gregCore/framework/FrikaMF.csproj`** fasst diese Quellen zusammen; Harmony erkennt alle `[HarmonyPatch]`-Typen in der Assembly.
 
-The main plugin project (`gregCore/framework/FrikaMF.csproj`) references `..\Core\**\*.cs` and `..\Hooks\**\*.cs`. Harmony discovers any type in that assembly marked with `[HarmonyPatch]` (see `Core.ApplyHarmonyPatchesWithDiagnostics`).
+## Regeneration
 
-## Regeneration pipeline
+```powershell
+pwsh -NoProfile -File gregCore/scripts/Generate-GregHooksFromIl2CppDump.ps1
+```
 
-1. **Source of truth for patchable signatures** — Il2CppInterop C# under `gregReferences/il2cpp-unpack/Assembly-CSharp/Il2Cpp/*.cs` (stand-in when a single-file `MergedCode.md` dump is not in the repo).
-2. Run from repo root (PowerShell):
+Anschließend **FrikaMF** neu bauen.
 
-   ```powershell
-   pwsh -NoProfile -File gregCore/scripts/Generate-GregHooksFromIl2CppDump.ps1
-   ```
+### Generator (Kurz)
 
-3. Rebuild **FrikaMF** so hooks and copied JSON match.
+- Emittiert Postfix-Stubs mit **`GregEventDispatcher.Emit`**, filtert häufige Unity-Loops und Lärm.
+- **Harmony-Ausschluss:** Das Skript wertet **`framework/src/ModLoader/HarmonyPatches.cs`** aus, damit z. B. **`Player.UpdateCoin`** nicht doppelt generiert wird (Hand-Patch + **`InvokeCancelable`** / **`GregHookIntegration`**).
 
-### Generator behaviour (summary)
+## Mod-Autor:innen
 
-- Emits **postfix** Harmony stubs with `GregEventDispatcher.Emit` and try/catch around each emit.
-- Skips high-frequency Unity loops (`Update`, `FixedUpdate`, `LateUpdate`, `OnUpdate`), coroutine `IEnumerator` entrypoints, property accessors, and obvious IL2CPP noise (`codegen`, `MethodInternalStatic`, …).
-- Skips **ECS-heavy** signatures unless Unity.Entities (and related) references are added to the project (`Entity`, `EntityCommandBuffer`, `SystemState`, `BlobArray`, …).
-- Skips additional interop-only types where the project lacks references (e.g. some `Unity.InputSystem`, UI event types) — extend `Test-SkipInteropSignature` or add references when you need those patches.
-- **Overload policy:** only the **first** overload per `Type|MethodName` per file is emitted (Harmony `nameof` ambiguity otherwise).
-- **Whitelist (`gameHookClasses`)** — keeps the **FrikaMF** build green without pulling the entire game surface into scope; expand the list in the script when you add assembly references for more types.
-- **Harmony exclusion set** — parses `gregCore/framework/FrikaMF/HarmonyPatches.cs` for `HarmonyPatch(typeof(...), nameof(...))` / string method names so **Rust bridge patches are not duplicated** by generated `Greg*Hooks` (e.g. `Player.UpdateCoin` stays owned by the hand-written patch that already forwards to `GregEventDispatcher`).
+- [Greg hooks showcase](/wiki/guides/mod-developers/greg-hooks-showcase) — Beispielmod **`mods/GregShowcaseMod`**
+- [FMF hook naming](/wiki/reference/fmf-hook-naming) — **`FMF.*`**-Doku-Konvention
+- [greg hooks catalog](/wiki/reference/greg-hooks-catalog) — **EventId → `greg.*`** (`GregNativeEventHooks`)
+- [FMF hooks catalog](/wiki/reference/fmf-hooks-catalog) — Hinweis/Redirect auf die neue Quelle
 
-## Mod author entry points
+## Legacy
 
-- [Greg hooks showcase](/wiki/guides/mod-developers/greg-hooks-showcase) — subscribe to `greg.*`, use `GregPayload`, optional cancelable flows where the bridge exposes them.
-- [FMF hook naming](/wiki/reference/fmf-hook-naming) — older **`FMF.*` / `FFM.*`** string catalog and domain policy for *documentation* constants; runtime IL2CPP Harmony surface is **`greg.*`** as above.
-- [FMF hooks catalog](/wiki/reference/fmf-hooks-catalog) — generated table from legacy `HookNames` / `EventIds` sources (distinct from `greg_hooks.json`).
+**`GregCompatBridge`** lädt **`legacy` → `name`** aus **`greg_hooks.json`**. Zusätzlich gibt es eingebaute Alias-Tabellen für ältere Schreibweisen — siehe Quellcode **`GregCompatBridge`**.
 
-## Legacy hook ids
-
-`GregCompatBridge` loads optional `legacy` → `name` mappings from `greg_hooks.json` next to the assembly. Populate `legacy` only when you intentionally support old spellings; keep new public API strictly on **`greg.*`**.
-
-## See also
+## Siehe auch
 
 - [FFI, hooks & Lua](/wiki/topics/ffi-and-hooks/overview)
 - [Framework architecture](/wiki/framework/architecture)
-- [Reference & technical hub](/wiki/topics/reference/overview)

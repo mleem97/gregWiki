@@ -13,7 +13,7 @@ This folder is the **single source of truth** for the public Docusaurus site. Th
 
 | Area | Path | Purpose |
 |------|------|--------|
-| **Landing** | [`intro` → `/wiki`](/wiki) | Mod author wiki home (`slug: /`). |
+| **Landing** | [`intro` → `/wiki`](/wiki) | Mod author wiki home (`slug: /` under the docs plugin). |
 | **Getting started** | [`getting-started.md`](../getting-started.md) | Onboarding (`getting-started`) + this layout page. |
 | **Workspace** | [`workspace/`](../workspace/index.mdx) | Map of `gregFramework/` repos on disk. |
 | **Framework** | [`framework/`](../framework/architecture.md) | Architecture, hooks, Hexmod. |
@@ -30,7 +30,7 @@ This folder is the **single source of truth** for the public Docusaurus site. Th
 
 ## URLs
 
-- Doc id `intro` → `/wiki` (root of the docs plugin).
+- Doc id `intro` → `/wiki` (`slug: /`; legacy `/wiki/docs` redirects here).
 - Typical doc → `/wiki/<doc-id-path>` (e.g. `mods/framework` → `/wiki/mods/framework`).
 
 ## Language

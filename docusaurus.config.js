@@ -77,8 +77,12 @@ const config = {
             return [`/wiki/mods/extensions/${slug}`, `/wiki/mods/mods/${slug}`];
           }
 
-          if (existingPath.startsWith('/wiki/')) {
-            const legacyPath = existingPath.replace('/wiki', '');
+          if (existingPath.startsWith('/wiki')) {
+            const legacyPath = existingPath.slice('/wiki'.length) || '/';
+            // Never map site root (/) onto /wiki — that would override the homepage.
+            if (legacyPath === '/' || legacyPath === '') {
+              return undefined;
+            }
             // Avoid shadowing static pages and explicit redirects in `redirects` below
             if (
               legacyPath === '/mods' ||

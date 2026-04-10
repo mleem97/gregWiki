@@ -16,8 +16,9 @@ The core `FrikaMF` runtime provides:
 
 ## Core references
 
-- [FMF hooks (generated)](/wiki/framework/fmf-hooks) — hook surface and categories
-- [FMF hook naming](/wiki/reference/fmf-hook-naming) — `FMF.*` vs legacy `FFM.*`
-- [FMF hooks catalog](/wiki/reference/fmf-hooks-catalog) — strings from core `HookNames.cs`
-- [greg hooks registry (IL2CPP)](/wiki/reference/greg-hooks-registry) — `greg.*` Harmony hooks and `greg_hooks.json`
+- [FMF hooks (generated)](/wiki/framework/fmf-hooks) — hook surface and categories (deklarativ; kann der JSON-Registry folgen)
+- [FMF hook naming](/wiki/reference/fmf-hook-naming) — **`FMF.*`** Doku-Konvention
+- [greg hooks catalog](/wiki/reference/greg-hooks-catalog) — **EventId → `greg.*`** (`GregNativeEventHooks`, generiert)
+- [FMF hooks catalog](/wiki/reference/fmf-hooks-catalog) — Kurzüberblick / Redirect (ersetzt altes `HookNames`)
+- [greg hooks registry (IL2CPP)](/wiki/reference/greg-hooks-registry) — `greg_hooks.json`, Generator, Harmony-Deduplizierung
 - [Framework architecture](/wiki/framework/architecture) — runtime layout and bridges

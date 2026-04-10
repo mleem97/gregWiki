@@ -18,7 +18,7 @@ This folder is the **single source of truth** for the public Docusaurus site. Th
 
 ## URLs
 
-- Doc id `intro` → `/wiki` (see front matter `slug: /`).
+- Doc id `intro` → `/wiki` (see `intro.md`, `slug: /`).
 - Most docs → `/wiki/<doc-path>` (e.g. `mods/framework` → `/wiki/mods/framework`).
 
 ## Scripts (repository root)
