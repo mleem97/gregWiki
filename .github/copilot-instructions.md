@@ -12,7 +12,7 @@
 - Apply `.github/instructions/sonarqube_mcp.instructions.md` whenever SonarQube MCP tooling is used.
 
 ## Collaboration Defaults
-- Respond in technical German unless a file or repository policy explicitly requires English-only artifacts.
+- Respond in **technical English**. All curated documentation under `docs/` and user-facing site copy in this repo is **English only**.
 - Summarize intent before code changes.
 - Keep refactors minimal and architecture-safe.
 

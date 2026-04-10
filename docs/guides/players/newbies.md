@@ -20,7 +20,6 @@ Get FrikaMF running safely and understand the minimum concepts.
 - `.wiki/End-User-Release.md`
 - `.wiki/End-User-Release-en.md`
 - `.wiki/Known-Incompatibilities-en.md`
-- `.wiki/Bekannte-Inkompatibilitaeten.md`
 
 ## Common mistakes
 

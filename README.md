@@ -26,12 +26,12 @@ Content is edited directly under [`docs/`](./docs/). **Canonical architecture & 
 
 The image expects **`package.json` at the image root `/app`**. That only happens if the **Docker build context** is this repo (gregWiki), not a parent monorepo folder.
 
-| Setting | Value |
-|--------|--------|
-| **Dockerfile location** | `Dockerfile` (or `gregWiki/Dockerfile` if the Git repo is the parent workspace) |
+| Setting                             | Value                                                                                                                                                                              |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Dockerfile location**             | `Dockerfile` (or `gregWiki/Dockerfile` if the Git repo is the parent workspace)                                                                                                    |
 | **Base directory / Root directory** | **`gregWiki`** when the cloned repo contains `gregCore/`, `gregWiki/`, … next to each other. If Coolify only clones **`mleem97/gregWiki`**, base directory is **`.`** (repo root). |
-| **Do not** | Set build context to the parent `gregFramework` folder unless Dockerfile uses `COPY gregWiki/…` (this Dockerfile does not). |
-| **Volumes** | Do **not** bind-mount an empty host path over `/app` — that hides `package.json` from the image. |
+| **Do not**                          | Set build context to the parent `gregFramework` folder unless Dockerfile uses `COPY gregWiki/…` (this Dockerfile does not).                                                        |
+| **Volumes**                         | Do **not** bind-mount an empty host path over `/app` — that hides `package.json` from the image.                                                                                   |
 
 Symptom: `docker-entrypoint: ERROR: /app/package.json not found` → wrong build context or a bad volume on `/app`.
 

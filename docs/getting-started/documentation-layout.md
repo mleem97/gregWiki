@@ -11,31 +11,31 @@ This folder is the **single source of truth** for the public Docusaurus site. Th
 
 ## How content is organized
 
-| Area | Path | Purpose |
-|------|------|--------|
-| **Landing** | [`intro` → `/wiki/docs`](/wiki/docs) | Site home. |
-| **Getting started** | [`getting-started.md`](../getting-started.md) | Onboarding (`getting-started`) + this layout page. |
-| **Workspace** | [`workspace/`](../workspace/index.mdx) | Map of `gregFramework/` repos on disk. |
-| **Framework** | [`framework/`](../framework/architecture.md) | Architecture, hooks, Hexmod. |
-| **Plugins** | [`plugins/`](../plugins/index.md) | `FFM.Plugin.*` assemblies; repos `gregExt.*` on disk. |
-| **Mods** | [`mods/`](../mods/index.md) | Gameplay mods (`FMF.*`); repos `gregMod.*` on disk. |
-| **Tools** | [`tools/`](../tools/workshop-uploader.md) | Workshop uploader and related. |
-| **Guides** | [`guides/`](../guides/players/overview.md) | Role-based paths (players, mod developers, contributors, sponsors). |
-| **Releases** | [`releases/`](../releases/index.mdx) | Per-artifact release notes. |
-| **Reference** | [`reference/`](../reference/wiki-mapping.md) | Naming, catalogs, MCP, release channels. |
-| **Contributors** | [`contributors/`](../contributors/repo-inventory.md) | Repo inventory, Docusaurus workflow, design system. |
-| **Roadmap** | [`roadmap/`](../roadmap/unified-roadmap.md) | Planning docs. |
-| **Topics hub** | [`topics/`](../topics/index.md) | Cross-cutting overviews (assets, multiplayer, security, …). |
-| **Meta** | [`meta/`](../meta/Steam-Workshop-and-Tooling.md) | Workshop tooling notes, devserver API, backlog; **[architecture principles](../meta/system-architecture-principles.md)** (stack model & doc rules). |
+| Area                | Path                                                 | Purpose                                                                                                                                             |
+| ------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Landing**         | [`intro` → `/wiki/docs`](/wiki/docs)                 | Site home.                                                                                                                                          |
+| **Getting started** | [`getting-started.md`](../getting-started.md)        | Onboarding (`getting-started`) + this layout page.                                                                                                  |
+| **Workspace**       | [`workspace/`](../workspace/index.mdx)               | Map of `gregFramework/` repos on disk.                                                                                                              |
+| **Framework**       | [`framework/`](../framework/architecture.md)         | Architecture, hooks, Hexmod.                                                                                                                        |
+| **Plugins**         | [`plugins/`](../plugins/index.md)                    | `FFM.Plugin.*` assemblies; repos `gregExt.*` on disk.                                                                                               |
+| **Mods**            | [`mods/`](../mods/index.md)                          | Gameplay mods (`FMF.*`); repos `gregMod.*` on disk.                                                                                                 |
+| **Tools**           | [`tools/`](../tools/workshop-uploader.md)            | Workshop uploader and related.                                                                                                                      |
+| **Guides**          | [`guides/`](../guides/players/overview.md)           | Role-based paths (players, mod developers, contributors, sponsors).                                                                                 |
+| **Releases**        | [`releases/`](../releases/index.mdx)                 | Per-artifact release notes.                                                                                                                         |
+| **Reference**       | [`reference/`](../reference/wiki-mapping.md)         | Naming, catalogs, MCP, release channels.                                                                                                            |
+| **Contributors**    | [`contributors/`](../contributors/repo-inventory.md) | Repo inventory, Docusaurus workflow, design system.                                                                                                 |
+| **Roadmap**         | [`roadmap/`](../roadmap/unified-roadmap.md)          | Planning docs.                                                                                                                                      |
+| **Topics hub**      | [`topics/`](../topics/index.md)                      | Cross-cutting overviews (assets, multiplayer, security, …).                                                                                         |
+| **Meta**            | [`meta/`](../meta/Steam-Workshop-and-Tooling.md)     | Workshop tooling notes, devserver API, backlog; **[architecture principles](../meta/system-architecture-principles.md)** (stack model & doc rules). |
 
 ## URLs
 
 - Doc id `intro` → `/wiki/docs`.
 - Typical doc → `/wiki/<doc-id-path>` (e.g. `mods/framework` → `/wiki/mods/framework`).
 
-## Locales
+## Language
 
-- **Language:** English only — all curated content lives under `docs/`.
+- **English only** — all curated content lives under `docs/`.
 
 ## Historical note
 

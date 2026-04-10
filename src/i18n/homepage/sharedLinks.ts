@@ -40,44 +40,6 @@ export const sharedWorkflowLinksEn: HomepageDocLink[] = [
   },
 ];
 
-export const sharedKnowledgeLinksDe: HomepageDocLink[] = [
-  {title: 'Wiki-Start', description: 'Kurzüberblick — Spieler vs. Entwickler.', link: '/wiki'},
-  {
-    title: 'Für Spieler',
-    description: 'Installation, Updates, Fehlerbehebung.',
-    link: '/wiki/guides/players/overview',
-  },
-  {
-    title: 'WorkshopManager',
-    description: 'Workshop-Mods suchen und installieren.',
-    link: '/wiki/guides/players/enduser-workshop',
-  },
-  {
-    title: 'Release-Kanäle',
-    description: 'Steam Workshop vs GitHub.',
-    link: '/wiki/reference/release-channels',
-  },
-  {title: 'Mod-Katalog', description: 'Module mit Doku- und Download-Links.', link: '/mods'},
-];
-
-export const sharedWorkflowLinksDe: HomepageDocLink[] = [
-  {
-    title: 'Entwickler (Hub)',
-    description: 'Framework, Mods, Plugins, Referenz — alle technischen Links.',
-    link: '/wiki/developers',
-  },
-  {
-    title: 'Mod-Entwickler-Guide',
-    description: 'Hooks, Setup, Einstieg.',
-    link: '/wiki/guides/mod-developers/overview',
-  },
-  {
-    title: 'Contributor-Workflow',
-    description: 'Doku-Site und Repo-Konventionen.',
-    link: '/wiki/contributors/docusaurus-workflow',
-  },
-];
-
 export const homepageShellEn: Pick<
   HomepageContent,
   | 'heroBadge'
@@ -106,34 +68,4 @@ export const homepageShellEn: Pick<
   ctaDiscordButton: 'Join Discord',
   knowledgeLinks: sharedKnowledgeLinksEn,
   workflowLinks: sharedWorkflowLinksEn,
-};
-
-export const homepageShellDe: Pick<
-  HomepageContent,
-  | 'heroBadge'
-  | 'heroBrandLine1'
-  | 'heroBrandLine2Gradient'
-  | 'knowledgeSectionTitle'
-  | 'workflowSectionTitle'
-  | 'codeSectionTitle'
-  | 'codeSectionLead'
-  | 'ctaDiscordTitle'
-  | 'ctaDiscordLead'
-  | 'ctaDiscordButton'
-  | 'knowledgeLinks'
-  | 'workflowLinks'
-> = {
-  heroBadge: 'gregFramework · Live-Dokumentation',
-  heroBrandLine1: 'greg',
-  heroBrandLine2Gradient: 'Framework',
-  knowledgeSectionTitle: 'Spieler — Einstieg',
-  workflowSectionTitle: 'Autoren & Contributors',
-  codeSectionTitle: 'Auf gregFramework aufbauen',
-  codeSectionLead:
-    'C#-Mods auf MelonLoader, FFM-Plugins, optionale Rust-Brücken — Details für Autoren unter Entwickler.',
-  ctaDiscordTitle: 'Community',
-  ctaDiscordLead: 'Fragen zum Spielen oder Bauen — im Discord.',
-  ctaDiscordButton: 'Discord beitreten',
-  knowledgeLinks: sharedKnowledgeLinksDe,
-  workflowLinks: sharedWorkflowLinksDe,
 };

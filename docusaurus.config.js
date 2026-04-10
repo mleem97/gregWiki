@@ -2,7 +2,8 @@
 
 const config = {
   title: 'gregFramework',
-  tagline: 'Player-first help for Data Center mods; full technical docs for authors under Developers.',
+  tagline:
+    'Player-first help for Data Center mods; full technical docs for authors under Developers.',
   favicon: 'img/logo.svg',
   url: 'https://frikadellental.de',
   baseUrl: '/',
@@ -80,7 +81,12 @@ const config = {
             return redirectsToHere[existingPath];
           }
 
-          if (existingPath.startsWith('/wiki/mods/') && existingPath.match(/fmf-(console-input-guard|gregify-employees|hex-label-mod|lang-compat-bridge|ui-replacement-mod)\/?$/)) {
+          if (
+            existingPath.startsWith('/wiki/mods/') &&
+            existingPath.match(
+              /fmf-(console-input-guard|gregify-employees|hex-label-mod|lang-compat-bridge|ui-replacement-mod)\/?$/,
+            )
+          ) {
             const slug = existingPath.replace('/wiki/mods/', '').replace(/\/$/, '');
             return [`/wiki/mods/extensions/${slug}`, `/wiki/mods/mods/${slug}`];
           }
@@ -212,10 +218,34 @@ const config = {
             {to: '/mods', label: 'Mod catalog'},
           ],
         },
-        {to: '/mods', label: 'Mods', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-mods', 'aria-label': 'Mods'},
-        {href: 'https://discord.gg/greg', label: 'Discord', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-discord', 'aria-label': 'Discord'},
-        {href: 'https://github.com/mleem97/gregFramework/issues', label: 'Support', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-support', 'aria-label': 'Support'},
-        {href: 'https://github.com/mleem97/gregFramework', label: 'GitHub', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-github', 'aria-label': 'GitHub'},
+        {
+          to: '/mods',
+          label: 'Mods',
+          position: 'right',
+          className: 'nav-right-icon nav-icon-only nav-link-mods',
+          'aria-label': 'Mods',
+        },
+        {
+          href: 'https://discord.gg/greg',
+          label: 'Discord',
+          position: 'right',
+          className: 'nav-right-icon nav-icon-only nav-link-discord',
+          'aria-label': 'Discord',
+        },
+        {
+          href: 'https://github.com/mleem97/gregFramework/issues',
+          label: 'Support',
+          position: 'right',
+          className: 'nav-right-icon nav-icon-only nav-link-support',
+          'aria-label': 'Support',
+        },
+        {
+          href: 'https://github.com/mleem97/gregFramework',
+          label: 'GitHub',
+          position: 'right',
+          className: 'nav-right-icon nav-icon-only nav-link-github',
+          'aria-label': 'GitHub',
+        },
       ],
     },
     footer: {
@@ -256,4 +286,3 @@ const config = {
 };
 
 module.exports = config;
-

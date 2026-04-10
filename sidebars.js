@@ -58,11 +58,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Tools & operations',
-          items: [
-            'meta/Steam-Workshop-and-Tooling',
-            'meta/devserver-betas',
-            'meta/IDEA_BACKLOG',
-          ],
+          items: ['meta/Steam-Workshop-and-Tooling', 'meta/devserver-betas', 'meta/IDEA_BACKLOG'],
         },
         {
           type: 'category',
