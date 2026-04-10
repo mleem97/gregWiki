@@ -20,7 +20,7 @@ Das gilt für alles, was als **`gregMod.*`**, **`gregExt.*`** oder **`FFM.Plugin
 
 ## Was hiervon *nicht* betroffen ist
 
-- Der **Framework-Kern** (`gregCore`) kann weiterhin **Nicht-C#**-Bestandteile enthalten (z. B. **Rust**-FFI unter `bridges/gregSta.RustBridge/`, Build-Skripte, Tools). Das ersetzt **nicht** Mod-/Plugin-/Extension-Logik außerhalb von C#.
+- Der **Framework-Kern** (`gregCore`) kann weiterhin **Nicht-C#**-Bestandteile enthalten (z. B. **Rust**-FFI unter `gregCore/bridges/gregSta.RustBridge/`, Build-Skripte, Tools). Das ersetzt **nicht** Mod-/Plugin-/Extension-Logik außerhalb von C#.
 - **Dokumentation**, **Konfiguration** (JSON/YAML) und **Assets** zählen hier nicht als „Logik“.
 - **gregStore**, **gregWiki** und andere Nicht-In-Game-Stacks dürfen andere Sprachen nutzen.
 

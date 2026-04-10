@@ -115,7 +115,7 @@ After publishing, the app re-downloads the item from Steam and replaces your loc
 
 ## Extending the service layer
 
-The `SteamWorkshopService` in `WorkshopUploader/Services/SteamWorkshopService.cs` wraps the Facepunch.Steamworks 2.3.3 API. Key methods:
+The `SteamWorkshopService` in `gregModmanager/Services/SteamWorkshopService.cs` wraps the Facepunch.Steamworks 2.3.3 API. Key methods:
 
 | Method | Purpose |
 |--------|---------|

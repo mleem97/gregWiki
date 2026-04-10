@@ -21,7 +21,7 @@ This guide is for players who want to **install and manage mods** for Data Cente
 
 ## Installation
 
-You can run WorkshopManager from **any folder you prefer** (for example `Program Files`, Desktop, Downloads, or `<Data Center install>/WorkshopUploader/`).
+You can run WorkshopManager from **any folder you prefer** (for example `Program Files`, Desktop, Downloads, or a folder next to the game). **Source code** for the app lives in the repo folder **`gregModmanager/`** (release ZIPs ship `WorkshopUploader.exe` / **Gregtools Modmanager**).
 
 ### Option A — Installer setup (recommended)
 

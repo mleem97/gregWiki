@@ -19,8 +19,14 @@ These folders typically sit **next to each other** in a developer workspace (see
 | **Mods (split repos)** | `gregMod.<Name>/` (directly under `gregFramework/`) | Standalone gameplay mods (`FMF.*` assemblies); **not** nested under a `gregMods/` umbrella |
 | **Extensions / framework plugins (split repos)** | `gregExt.<Name>/` (directly under `gregFramework/`) | FFM framework plugins (`FFM.Plugin.*`); **not** under legacy `StandaloneMods/` paths |
 | **Documentation** | `gregWiki/` ([`mleem97/gregWiki`](https://github.com/mleem97/gregWiki)) | **This site**: Docusaurus app at repo root, all authored pages under `docs/` |
-| **Tools** | `gregModmanager/` (WorkshopManager), `gregDataCenterExporter/`, etc. | Supporting apps and templates |
-| **Other** | `gregIPAM/`, `gregReferences/`, … | Side projects and references |
+| **Workshop / Modmanager** | `gregModmanager/` | **Gregtools Modmanager** (MAUI; `WorkshopUploader.csproj` → `WorkshopUploader.exe`) |
+| **Exporter & templates** | `gregDataCenterExporter/` | DC exporter, `FrikaModFramework/` assets, shared templates |
+| **Mod store (optional clone)** | `gregStore/` | Web/modstore stack when the private repo is present |
+| **IPAM / DHCP tooling** | `gregIPAM/` | e.g. `DHCPSwitches.csproj` |
+| **References** | `gregReferences/` | IL2CPP unpack, baseline refs |
+| **Meta / internal** | `gregMeta/`, `gregInternalDocs/` | Notes and non-public docs |
+| **Examples** | `exGregFramework/` | Sample workspace layout |
+| **Other** | `siblingRepos/`, … | Helper scripts and side repos |
 
 ## Canonical code locations (split repos)
 

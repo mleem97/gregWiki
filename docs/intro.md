@@ -21,9 +21,11 @@ This documentation describes the **current split layout**: a local `gregFramewor
 ## Repository hub
 
 - [Workspace map](./workspace/index.mdx) — how folders map to repos
-- Core: `gregCore/FrikaMF-StandaloneRepo/`
+- Core: `gregCore/` (`framework/FrikaMF`, `mcp-server/`, `bridges/gregSta.RustBridge/`)
 - Mods: `gregMod.<Name>/` (split repos, directly under `gregFramework/`)
 - Extensions (FFM plugins): `gregExt.<Name>/` (split repos, directly under `gregFramework/`)
+- Workshop app: `gregModmanager/` (Gregtools Modmanager — `WorkshopUploader.exe`)
+- Exporter / templates: `gregDataCenterExporter/`
 - Wiki: `gregWiki/` (this site)
 
 ## Hooks and releases
@@ -36,10 +38,10 @@ This documentation describes the **current split layout**: a local `gregFramewor
 ## Layout (contributors)
 
 - [Repo inventory](./contributors/repo-inventory.md) — project and repository overview
-- Split naming: `gregMod.<Name>`, `gregExt.<Name>`, `gregSta.<Name>`
+- Split naming: `gregMod.<Name>`, `gregExt.<Name>`, `gregSta.<Name>` (Rust bridge repo), plus apps like `gregModmanager/`, `gregDataCenterExporter/`, `gregIPAM/`, `gregStore/`
 
 ## Source model
 
 - **Authoring:** Markdown/MDX lives in the **gregWiki** repository.
 - **Technical source of truth:** runtime and bridge details come from **gregCore**.
-- **Rust bridge:** integrated in the core tree under `FrikaMF-StandaloneRepo/bridges/gregSta.RustBridge/`.
+- **Rust bridge:** `gregCore/bridges/gregSta.RustBridge/`.

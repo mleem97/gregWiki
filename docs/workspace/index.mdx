@@ -10,13 +10,19 @@ The **gregFramework** folder groups several repositories (split layout). Use thi
 
 | Area | Folder | Role |
 |------|--------|------|
-| Framework core | `gregCore/` | **Framework core**: translations, hooks, runtime (Harmony/events), MelonLoader host, plugins (`FFM.Plugin.*`), templates, bridges |
-| Mods | `gregMod.<Name>/` (direkt unter `gregFramework/`) | Standalone gameplay mods (`FMF.*`) |
-| Extensions | `gregExt.<Name>/` (direkt unter `gregFramework/`) | Extension modules (e.g. player models) |
-| Documentation | `gregWiki/` | This Docusaurus site (`docs/`) |
-| Legacy / tools | `gregDataCenterExporter/` | Historical monolith; migration staging |
-| Modstore / infra | `gregStore/` | **Gregweb** (private repo): Next.js app (`web/`), Docker stack (`infra/`, compose at repo root) |
-| IPAM / DHCP | `gregIPAM/` | **DHCP** and **IPAM** gameplay mod (MelonLoader; in-repo project still `DHCPSwitches` / `DHCPSwitches.csproj`) |
-| Misc | `gregReferences/`, `gregMeta/`, `gregInternalDocs/` | Supporting repos and notes |
+| **Framework core** | `gregCore/` | MelonLoader host (`gregCore/framework/FrikaMF.csproj`), templates, **`gregCore/mcp-server/`**, optional `gregCore/plugins/` mirrors |
+| **Gameplay mods** | `gregMod.<Name>/` | Standalone mods (`FMF.*`) — **directly under `gregFramework/`** (the `gregMods/` umbrella is deprecated) |
+| **Framework plugins** | `gregExt.<Name>/` | FFM plugins (`FFM.Plugin.*`) — **directly under `gregFramework/`** (the `gregExtensions/` umbrella is deprecated) |
+| **Workshop desktop app** | `gregModmanager/` | **Gregtools Modmanager** (MAUI); project file `WorkshopUploader.csproj`, executable **`WorkshopUploader.exe`** |
+| **Data Center exporter / assets** | `gregDataCenterExporter/` | Templates, exporter tooling, `FrikaModFramework/fmf_hooks.json` (among copies) |
+| **Documentation** | `gregWiki/` | This Docusaurus site (`docs/`) |
+| **Mod store / web (if cloned)** | `gregStore/` | Private Next.js modstore stack (`web/`, …) — optional sibling repo |
+| **IPAM / DHCP mod** | `gregIPAM/` | Gameplay tooling (e.g. `DHCPSwitches.csproj`) |
+| **References & IL2CPP** | `gregReferences/` | Unpacked assemblies, tooling baselines |
+| **Meta / internal docs** | `gregMeta/`, `gregInternalDocs/` | Notes and internal documentation |
+| **Examples** | `exGregFramework/` | Example / bootstrap layout |
+| **Helper** | `siblingRepos/` | Scripts to clone related repos |
+
+**Rust FFI bridge:** `gregCore/bridges/gregSta.RustBridge/` (not under a separate `DataCenter-RustBridge` top-level folder).
 
 **Detailed inventory** (paths, `.csproj`, hooks): [Repository inventory](../contributors/repo-inventory).

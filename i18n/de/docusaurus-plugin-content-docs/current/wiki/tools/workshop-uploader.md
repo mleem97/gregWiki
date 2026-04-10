@@ -100,10 +100,10 @@ WorkshopUploader.exe --mode publish --path <project-folder>
 Die App wird als **eigenständige** Windows-Executable veröffentlicht — auf dem Zielrechner ist keine Installation von .NET-Runtime oder Windows App SDK erforderlich.
 
 ```bash
-dotnet publish WorkshopUploader/WorkshopUploader.csproj -c Release -p:SelfContained=true -p:RuntimeIdentifier=win10-x64
+dotnet publish gregModmanager/WorkshopUploader.csproj -c Release -p:SelfContained=true -p:RuntimeIdentifier=win10-x64
 ```
 
-Ausgabe: `WorkshopUploader/bin/Release/net9.0-windows10.0.19041.0/win10-x64/publish/`
+Ausgabe: `gregModmanager/bin/Release/net9.0-windows10.0.19041.0/win10-x64/publish/`
 
 ### Alle Mods + Gregtools Modmanager in Workshop-Ordner bereitstellen
 
@@ -121,7 +121,7 @@ pwsh -File scripts/Deploy-Release-ToDataCenter.ps1 -IncludeWorkshopUploader
 
 ## See also
 
-- Repository README: [`WorkshopUploader/README.md`](https://github.com/mleem97/gregFramework/blob/master/WorkshopUploader/README.md)
+- Repository-README: [`gregModmanager/README.md`](https://github.com/mleem97/gregFramework/blob/main/gregModmanager/README.md) (Produkt **Gregtools Modmanager**; `WorkshopUploader.csproj`)
 - [End-User Guide](/wiki/guides/players/enduser-workshop)
 - [Contributor Guide](/wiki/guides/contributors/contributor-workshop)
 - [Release](/wiki/guides/contributors/release)

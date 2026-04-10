@@ -4,15 +4,16 @@ sidebar_label: Erste Schritte
 description: "Split-Repo-Workspace: gregFramework-Layout, Core bauen und wo die Doku liegt."
 ---
 
-Die Struktur ist **Multi-Repo** mit `gregFramework/` als lokalem Wrapper-Ordner. Darin liegen die eigenständigen Repositories, z. B.:
+Die Struktur ist **Multi-Repo** mit `gregFramework/` als lokalem Wrapper-Ordner. Darin liegen die eigenständigen Repositories, z. B.:
 
-- `gregCore/` — **Framework-Kern**: Übersetzung, Hooks, Harmony-/Event-Laufzeit, Templates, Bridges und übrige Kernfunktionen
-- `gregMod.<Name>/` (einzelne Mod-Repos, direkt unter `gregFramework/`)
-- `gregExt.<Name>/` (einzelne Extension-Repos, direkt unter `gregFramework/`)
-- `gregWiki/` (Dokumentation)
-- `gregStore/` (**Gregweb**, privates Repository — Modstore Web + Infra; Next.js unter `web/`)
+- `gregCore/` — Core-SDK (`gregCore/framework/FrikaMF.csproj`), MCP unter `gregCore/mcp-server/`
+- `gregMod.<Name>/` — Gameplay-Mods (`FMF.*`), **flach** neben `gregCore/` (älteres `gregMods/` ist obsolet)
+- `gregExt.<Name>/` — Framework-Plugins (`FFM.Plugin.*`), ebenfalls flach (älteres `gregExtensions/` obsolet)
+- `gregModmanager/` — **Gregtools Modmanager** (WorkshopManager; `WorkshopUploader.csproj`)
+- `gregDataCenterExporter/` — Exporter, Templates, Hook-JSON-Spiegel
+- `gregWiki/` — diese Dokumentation
 
-Das Upstream-Projekt **DataCenter-RustBridge** wird in den Core integriert und liegt unter:
+Die **Rust**-Bridge liegt unter:
 
 - `gregCore/bridges/gregSta.RustBridge/`
 
@@ -24,20 +25,16 @@ dotnet build gregCore/FrikaMF.sln -c Release
 
 Alternativ in der IDE: `gregCore/FrikaMF.sln` öffnen.
 
-## Sprache (Mods / Plugins / Extensions)
-
-**Pflicht:** Gameplay- und Integrationslogik für Mods, MelonLoader-Plugins und Extensions ausschließlich in **C#**. Siehe [Modding-Sprache (nur C#)](/wiki/reference/modding-language-requirement).
-
 ## Hook-Naming
 
-- **Zielkonvention:** `FMF.<DOMAIN>.<Event>` (siehe [`CONTRIBUTING.md`](https://github.com/mleem97/gregFramework/blob/master/CONTRIBUTING.md)).
-- **Registry:** [`FrikaModFramework/fmf_hooks.json`](https://github.com/mleem97/gregFramework/blob/master/FrikaModFramework/fmf_hooks.json).
-- **Legacy-Runtime-Strings** können noch `FFM.*` in [`HookNames`](https://github.com/mleem97/gregFramework/blob/master/framework/FrikaMF/HookNames.cs) nutzen, bis migriert.
+- **Zielkonvention:** `FMF.<DOMAIN>.<Event>` (siehe [`CONTRIBUTING.md`](https://github.com/mleem97/gregFramework/blob/main/CONTRIBUTING.md)).
+- **Registry (Beispielpfad):** [`gregDataCenterExporter/FrikaModFramework/fmf_hooks.json`](https://github.com/mleem97/gregFramework/blob/main/gregDataCenterExporter/FrikaModFramework/fmf_hooks.json).
+- **Legacy-Runtime-Strings** können noch `FFM.*` in [`HookNames.cs`](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/FrikaMF/HookNames.cs) nutzen, bis migriert.
 
 ## Mod starten
 
-1. Neues Mod-Repo als Ordner `gregMod.<Name>/` unter `gregFramework/` anlegen.
-2. Templates aus `gregCore/Templates/` nutzen.
+1. Neues Mod-Repo als `gregMod.<Name>/` unter `gregFramework/` anlegen (neben `gregCore/` klonen oder anlegen).
+2. Templates aus `gregCore/Templates/` nutzen (Spiegel unter `gregDataCenterExporter/Templates/` wo vorhanden).
 3. Hook-Metadaten pflegen und Mod im eigenen Repo versionieren.
 
 ## Dokumentations-Site
@@ -51,4 +48,4 @@ Im `gregWiki`-Root: `docker build -t gregwiki-docs .` und `docker run --rm -p 30
 
 ### MCP
 
-Siehe [`reference/mcp-server`](/wiki/reference/mcp-server) im Core (`gregCore/mcp-server/`).
+Siehe [`reference/mcp-server`](/wiki/reference/mcp-server) — Implementierung unter **`gregCore/mcp-server/`** (Installation und `--data-root` laut `README.md` dort).

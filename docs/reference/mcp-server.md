@@ -6,7 +6,7 @@ description: Model Context Protocol server bundled with the docs Docker image fo
 
 # MCP server (FrikaMF modding)
 
-The repository ships a **Model Context Protocol (MCP)** server (`mcp-server/`) that exposes:
+The **gregCore** repository ships a **Model Context Protocol (MCP)** server at **`gregCore/mcp-server/`** that exposes:
 
 - **Docs search & read** — Markdown under `docs/` (same source as Docusaurus).
 - **Hook registry** — `fmf_hooks.json` (and the same registry path in the monorepo).
@@ -42,14 +42,9 @@ Binding to `0.0.0.0` exposes the MCP endpoint on your network. Use only on trust
 
 ## Local (stdio) for Cursor
 
-From `mcp-server/` with the repo root as data (so `docs/`, `CONTRIBUTING.md`, and `FrikaModFramework/fmf_hooks.json` resolve):
+Source: **`gregCore/mcp-server/`** (see **`README.md`** in that folder). Install dependencies with `npm install`, then run `node src/index.mjs --stdio --data-root <root>`, where `<root>` is a directory that contains **`docs/`**, **`CONTRIBUTING.md`**, and **`FrikaModFramework/fmf_hooks.json`** (or a flat `fmf_hooks.json`). The README’s example uses `--data-root ..` relative to `mcp-server/`; in a **split-repo** workspace you may need a different `<root>` or `FMF_MCP_DATA_ROOT` so all three paths resolve.
 
-```bash
-cd mcp-server
-node src/index.mjs --stdio --data-root ..
-```
-
-Point your MCP client at this command (stdio transport). Adjust `--data-root` if your layout differs.
+Point your MCP client at this command (stdio transport).
 
 ## Tools (summary)
 

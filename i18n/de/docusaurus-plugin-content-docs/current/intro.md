@@ -21,9 +21,11 @@ Diese Dokumentation beschreibt den **aktuellen Split-Stand**: `gregFramework/` a
 ## Repository-Hub
 
 - [Workspace-Karte](/wiki/workspace/) — Ordner → Repos
-- Core: `gregCore/FrikaMF-StandaloneRepo/`
+- Core: `gregCore/` (`framework/FrikaMF`, `mcp-server/`, `bridges/gregSta.RustBridge/`)
 - Mods: `gregMod.<Name>/` (Split-Repos, direkt unter `gregFramework/`)
 - Extensions (FFM-Plugins): `gregExt.<Name>/` (Split-Repos, direkt unter `gregFramework/`)
+- Workshop-App: `gregModmanager/` (Gregtools Modmanager — `WorkshopUploader.exe`)
+- Exporter/Templates: `gregDataCenterExporter/`
 - Wiki: `gregWiki/`
 
 ## Hooks und Releases
@@ -36,10 +38,10 @@ Diese Dokumentation beschreibt den **aktuellen Split-Stand**: `gregFramework/` a
 ## Layout (Contributors)
 
 - [Repo-Inventar](/wiki/contributors/repo-inventory) — Projekt- und Repo-Übersicht
-- Split-Konvention: `gregMod.<Name>`, `gregExt.<Name>`, `gregSta.<Name>`
+- Split-Konvention: `gregMod.<Name>`, `gregExt.<Name>`, `gregSta.<Name>` (Rust-Bridge-Repo), plus Apps wie `gregModmanager/`, `gregDataCenterExporter/`, `gregIPAM/`, `gregStore/`
 
 ## Quellenmodell
 
 - **Authoring:** Inhalte liegen im **gregWiki**-Repo.
 - **Technische Wahrheit:** Runtime/Bridge-Details kommen aus **gregCore**.
-- **RustBridge:** im Core unter `FrikaMF-StandaloneRepo/bridges/gregSta.RustBridge/`.
+- **RustBridge:** `gregCore/bridges/gregSta.RustBridge/`.

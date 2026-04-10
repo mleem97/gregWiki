@@ -6,13 +6,14 @@ description: "Split-repo workspace: gregFramework layout, building the core, and
 
 The workspace is **multi-repo** with a local `gregFramework/` folder containing standalone repositories, for example:
 
-- `gregCore/` — **framework core**: translations, hooks, Harmony/event runtime, templates, bridges, and related core features
-- `gregMod.<Name>/` (per-mod repositories, directly under `gregFramework/`)
-- `gregExt.<Name>/` (per-extension repositories, directly under `gregFramework/`)
-- `gregWiki/` (this documentation site)
-- `gregStore/` (**Gregweb**, private repository — modstore web + infra; Next.js under `web/`)
+- `gregCore/` — core SDK (`gregCore/framework/FrikaMF.csproj`), MCP server under `gregCore/mcp-server/`
+- `gregMod.<Name>/` — gameplay mods (`FMF.*`), **flat** next to `gregCore/` (legacy umbrella `gregMods/` is deprecated)
+- `gregExt.<Name>/` — framework plugins (`FFM.Plugin.*`), same flat layout (legacy `gregExtensions/` deprecated)
+- `gregModmanager/` — **Gregtools Modmanager** (WorkshopManager; `WorkshopUploader.csproj`)
+- `gregDataCenterExporter/` — exporter, templates, hook JSON mirrors
+- `gregWiki/` — this documentation site
 
-The upstream **DataCenter-RustBridge** project is integrated into the core tree at:
+The **Rust** bridge lives under:
 
 - `gregCore/bridges/gregSta.RustBridge/`
 
@@ -24,20 +25,16 @@ dotnet build gregCore/FrikaMF.sln -c Release
 
 Or open `gregCore/FrikaMF.sln` in your IDE.
 
-## Language (mods / plugins / extensions)
-
-**Mandatory:** implement **all** gameplay and integration logic for mods, MelonLoader plugins, and extensions in **C#**. See [Modding language (C# only)](./reference/modding-language-requirement.md).
-
 ## Hook naming
 
-- **Target convention:** `FMF.<DOMAIN>.<Event>` (see [`CONTRIBUTING.md`](https://github.com/mleem97/gregFramework/blob/master/CONTRIBUTING.md)).
-- **Registry:** [`FrikaModFramework/fmf_hooks.json`](https://github.com/mleem97/gregFramework/blob/master/FrikaModFramework/fmf_hooks.json) (path may vary by branch).
-- **Legacy runtime strings** may still use `FFM.*` in [`HookNames`](https://github.com/mleem97/gregFramework/blob/master/framework/FrikaMF/HookNames.cs) until migrated.
+- **Target convention:** `FMF.<DOMAIN>.<Event>` (see [`CONTRIBUTING.md`](https://github.com/mleem97/gregFramework/blob/main/CONTRIBUTING.md)).
+- **Registry (example path in workspace):** [`gregDataCenterExporter/FrikaModFramework/fmf_hooks.json`](https://github.com/mleem97/gregFramework/blob/main/gregDataCenterExporter/FrikaModFramework/fmf_hooks.json) (exact copy may exist in other repos).
+- **Legacy runtime strings** may still use `FFM.*` in [`HookNames.cs`](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/FrikaMF/HookNames.cs) until migrated.
 
 ## Start a mod
 
-1. Create a new mod repo folder `gregMod.<Name>/` under `gregFramework/` using the `gregMod.<Name>` pattern.
-2. Use templates from `gregCore/Templates/`.
+1. Add a new mod repo as `gregMod.<Name>/` under `gregFramework/` (clone or create next to `gregCore/`).
+2. Use templates from `gregCore/Templates/` (and mirrored templates under `gregDataCenterExporter/Templates/` where applicable).
 3. Maintain hook metadata and version the mod in its own repository.
 
 ## Documentation site
@@ -51,4 +48,4 @@ From the `gregWiki` root: `docker build -t gregwiki-docs .` then `docker run --r
 
 ### MCP
 
-See [`reference/mcp-server`](./reference/mcp-server.md) — the server lives next to the core sources (`gregCore/mcp-server/`).
+See [`reference/mcp-server`](./reference/mcp-server.md) — implementation under **`gregCore/mcp-server/`** (install and `--data-root` per that folder’s `README.md`).
