@@ -21,6 +21,26 @@ const GREG_MODMANAGER_LATEST =
 
 const viewport = {once: true, margin: '-90px'};
 
+/** Inline `greg_hooks.json` in copy when the string contains that token. */
+function formatBulletWithOptionalCode(text: string): React.ReactNode {
+  if (!text.includes('greg_hooks.json')) {
+    return text;
+  }
+  const parts = text.split('greg_hooks.json');
+  return (
+    <>
+      {parts.map((part, i) => (
+        <React.Fragment key={i}>
+          {part}
+          {i < parts.length - 1 ? (
+            <code className="text-xs">greg_hooks.json</code>
+          ) : null}
+        </React.Fragment>
+      ))}
+    </>
+  );
+}
+
 function buildVariants(reducedMotion: boolean) {
   const section: Variants = reducedMotion
     ? {hidden: {opacity: 0}, show: {opacity: 1}}
@@ -81,7 +101,7 @@ export default function HomePage(): JSX.Element {
   return (
     <Layout
       title="Home"
-      description="Help for Data Center players using mods — plus developer docs under /wiki/developers."
+      description="gregFramework documentation: player guides, mod catalog, and developer references for Data Center Simulator."
     >
       <main className="bg-background text-on-surface font-sans min-h-screen editorial-bleed bg-hero-gradient">
         <section className="hero-motion-wrap relative flex min-h-[72vh] flex-col items-center justify-center overflow-hidden px-4 py-24 text-center">
@@ -301,27 +321,20 @@ export default function HomePage(): JSX.Element {
                 {t.codeSectionLead}
               </p>
               <ul className="space-y-4 text-on-surface-variant">
-                <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined mt-0.5 text-primary">
-                    check_circle
-                  </span>
-                  <span>MelonLoader + Harmony: gregCore emits typed <code className="text-xs">greg.*</code> events</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined mt-0.5 text-primary">
-                    check_circle
-                  </span>
-                  <span>Plugins and mods documented beside release metadata</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined mt-0.5 text-primary">
-                    check_circle
-                  </span>
-                  <span>Split repos: gregCore, gregMods, gregExtensions, gregWiki</span>
-                </li>
+                {t.codeSectionBullets.map((line) => (
+                  <li key={line} className="flex items-start gap-3">
+                    <span className="material-symbols-outlined mt-0.5 shrink-0 text-primary">
+                      check_circle
+                    </span>
+                    <span>{formatBulletWithOptionalCode(line)}</span>
+                  </li>
+                ))}
               </ul>
             </div>
-            <GregCoreRandomSnippet caption={t.codeSnippetCaption} />
+            <GregCoreRandomSnippet
+              caption={t.codeSnippetCaption}
+              loadingLabel={t.codeSnippetLoading}
+            />
           </div>
         </motion.section>
 

@@ -25,8 +25,12 @@ export type HomepageContent = {
   workflowSectionTitle: string;
   codeSectionTitle: string;
   codeSectionLead: string;
-  /** Homepage #code — random gregCore excerpt */
+  /** Homepage #code — random gregCore excerpt (card title) */
   codeSnippetCaption: string;
+  /** Shown while BrowserOnly mounts */
+  codeSnippetLoading: string;
+  /** Three bullets beside the gregCore snippet */
+  codeSectionBullets: [string, string, string];
   ctaDiscordTitle: string;
   ctaDiscordLead: string;
   ctaDiscordButton: string;

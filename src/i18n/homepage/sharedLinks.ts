@@ -1,41 +1,49 @@
 import type {HomepageContent, HomepageDocLink} from './types';
 
-/** Player-first links — technical docs live under /wiki/developers */
+/** Player-facing wiki entry points */
 export const sharedKnowledgeLinksEn: HomepageDocLink[] = [
-  {title: 'Wiki home', description: 'Short entry — players vs developers.', link: '/wiki'},
   {
-    title: 'For players',
-    description: 'Install, update, troubleshooting.',
+    title: 'Wiki home',
+    description: 'Overview: players, authors, and where each topic lives.',
+    link: '/wiki',
+  },
+  {
+    title: 'Player guides',
+    description: 'Install mods, updates, troubleshooting, and FAQs.',
     link: '/wiki/guides/players/overview',
   },
   {
-    title: 'GregModManager',
-    description: 'Browse, install, and manage Workshop mods (Gregtools desktop app).',
+    title: 'Greg Mod Manager',
+    description: 'Desktop app for the Workshop: browse, install, and manage mods.',
     link: '/wiki/guides/players/enduser-workshop',
   },
   {
     title: 'Release channels',
-    description: 'Steam Workshop vs GitHub for builds.',
+    description: 'Where builds come from: Steam Workshop and GitHub.',
     link: '/wiki/reference/release-channels',
   },
-  {title: 'Mod catalog', description: 'Modules with docs and download links.', link: '/mods'},
+  {
+    title: 'Mod catalog',
+    description: 'Listings with docs, versions, and download links.',
+    link: '/mods',
+  },
 ];
 
-/** Authors & contributors — one hop to the full technical tree */
+/** Authors and repo contributors */
 export const sharedWorkflowLinksEn: HomepageDocLink[] = [
   {
-    title: 'Developers (hub)',
-    description: 'Framework, mods, plugins, reference, roadmap — all technical links.',
+    title: 'Developers hub',
+    description: 'Framework, hooks, plugins, reference material, and roadmap.',
     link: '/wiki/developers',
   },
   {
     title: 'Mod developer guide',
-    description: 'Hooks, setup, and workflow entry.',
+    description: 'MelonLoader setup, gregCore hooks, and workflow.',
     link: '/wiki/guides/mod-developers/overview',
   },
   {
     title: 'Contributor workflow',
-    description: 'Docs site and repo conventions.',
+    description: 'How this docs site and the repos are maintained.',
     link: '/wiki/contributors/docusaurus-workflow',
   },
 ];
@@ -50,24 +58,33 @@ export const homepageShellEn: Pick<
   | 'codeSectionTitle'
   | 'codeSectionLead'
   | 'codeSnippetCaption'
+  | 'codeSnippetLoading'
+  | 'codeSectionBullets'
   | 'ctaDiscordTitle'
   | 'ctaDiscordLead'
   | 'ctaDiscordButton'
   | 'knowledgeLinks'
   | 'workflowLinks'
 > = {
-  heroBadge: 'gregFramework · docs live',
+  heroBadge: 'Documentation · Data Center modding',
   heroBrandLine1: 'greg',
   heroBrandLine2Gradient: 'Framework',
-  knowledgeSectionTitle: 'Players — start here',
-  workflowSectionTitle: 'Authors & contributors',
-  codeSectionTitle: 'Building on gregFramework',
+  knowledgeSectionTitle: 'Start here',
+  workflowSectionTitle: 'For authors and contributors',
+  codeSectionTitle: 'How mods connect to the game',
   codeSectionLead:
-    'C# mods on MelonLoader, Harmony hooks in gregCore, and optional Rust bridges — author details are under Developers.',
-  codeSnippetCaption: 'Random sample from gregCore',
-  ctaDiscordTitle: 'Community',
-  ctaDiscordLead: 'Questions about playing or building — ask in Discord.',
-  ctaDiscordButton: 'Join Discord',
+    'Mods use MelonLoader and Harmony. gregCore turns game methods into stable greg.* events your code can subscribe to—details are under Developers.',
+  codeSnippetCaption: 'Random excerpt from gregCore',
+  codeSnippetLoading: 'Loading code sample…',
+  codeSectionBullets: [
+    'gregCore patches the game and emits typed greg.* hook names (see greg_hooks.json).',
+    'The wiki and catalog list each mod with releases and dependencies.',
+    'Source is split across repos (for example gregCore, gregMods, gregExtensions, gregWiki).',
+  ],
+  ctaDiscordTitle: 'Questions?',
+  ctaDiscordLead:
+    'Ask in Discord for install issues, mod compatibility, or help building on gregFramework.',
+  ctaDiscordButton: 'Open Discord',
   knowledgeLinks: sharedKnowledgeLinksEn,
   workflowLinks: sharedWorkflowLinksEn,
 };

@@ -3,8 +3,8 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import {GREG_CORE_SNIPPETS} from '../data/gregCoreSnippets';
 
 type Props = {
-  /** e.g. "Random sample from gregCore" */
   caption: string;
+  loadingLabel: string;
 };
 
 /**
@@ -51,7 +51,7 @@ export function GregCoreRandomSnippet(props: Props): JSX.Element {
           aria-busy
         >
           <div className="flex min-h-[280px] items-center justify-center rounded-lg bg-surface-container-lowest p-6">
-            <span className="text-sm text-on-surface-variant">Loading code sample…</span>
+            <span className="text-sm text-on-surface-variant">{props.loadingLabel}</span>
           </div>
         </div>
       }>
