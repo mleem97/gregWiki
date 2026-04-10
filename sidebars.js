@@ -58,7 +58,11 @@ const sidebars = {
         {
           type: 'category',
           label: 'Tools & operations',
-          items: ['meta/Steam-Workshop-and-Tooling', 'meta/devserver-betas', 'meta/IDEA_BACKLOG'],
+          items: [
+            'meta/Steam-Workshop-and-Tooling',
+            'meta/devserver-betas',
+            'meta/IDEA_BACKLOG',
+          ],
         },
         {
           type: 'category',
@@ -77,7 +81,7 @@ const sidebars = {
             {
               type: 'category',
               label: 'Mod developers',
-              items: ['guides/mod-developers/overview'],
+              items: ['guides/mod-developers/overview', 'guides/mod-developers/greg-hooks-showcase'],
             },
             {
               type: 'category',

@@ -5,7 +5,18 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {motion, type Variants, useReducedMotion} from 'framer-motion';
 import {getHomepageContent} from '../i18n/homepage';
 import gregImage from '../image.png';
-import {FaArrowUpRightFromSquare, FaDiscord, FaGithub, FaLifeRing, FaShop} from 'react-icons/fa6';
+import {
+  FaArrowUpRightFromSquare,
+  FaDiscord,
+  FaDownload,
+  FaGithub,
+  FaLifeRing,
+  FaShop,
+} from 'react-icons/fa6';
+
+/** Always resolves to the newest GitHub release (redirect). */
+const GREG_MODMANAGER_LATEST =
+  'https://github.com/mleem97/GregToolsModmanager/releases/latest';
 
 const viewport = {once: true, margin: '-90px'};
 
@@ -130,7 +141,7 @@ export default function HomePage(): JSX.Element {
           </motion.p>
 
           <motion.div
-            className="flex flex-wrap items-center justify-center gap-4"
+            className="flex flex-wrap items-center justify-center gap-3 sm:gap-4"
             initial="hidden"
             whileInView="show"
             viewport={viewport}
@@ -139,13 +150,22 @@ export default function HomePage(): JSX.Element {
           >
             <Link
               to="/wiki/guides/players/overview"
-              className="btn-primary hero-glow rounded-lg px-10 py-4 text-lg"
+              className="btn-primary hero-glow rounded-lg px-8 py-4 text-lg md:px-10"
             >
               {t.ctaStart}
             </Link>
-            <Link to="/mods" className="btn-outline rounded-lg px-10 py-4 text-lg">
+            <Link to="/mods" className="btn-outline rounded-lg px-8 py-4 text-lg md:px-10">
               {t.ctaMods}
             </Link>
+            <a
+              href={GREG_MODMANAGER_LATEST}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline inline-flex items-center justify-center gap-2 rounded-lg border-primary/35 px-8 py-4 text-lg text-on-surface hover:border-primary md:px-10"
+            >
+              <FaDownload className="text-lg" aria-hidden />
+              {t.ctaModManager}
+            </a>
           </motion.div>
         </section>
 
@@ -224,6 +244,43 @@ export default function HomePage(): JSX.Element {
               </div>
             </motion.article>
           </motion.div>
+        </motion.section>
+
+        <motion.section
+          id="greg-modmanager"
+          className="px-4 py-20"
+          initial="hidden"
+          whileInView="show"
+          viewport={viewport}
+          variants={variants.section}
+        >
+          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl border border-outline-variant/20 bg-gradient-to-br from-surface-container-high to-surface-container p-10 text-center md:p-14">
+            <div
+              className="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-secondary/10 blur-[90px]"
+              aria-hidden
+            />
+            <div className="relative z-10">
+              <span className="material-symbols-outlined mb-4 text-5xl text-primary" aria-hidden>
+                download_for_offline
+              </span>
+              <h2 className="mb-4 font-headline text-3xl font-bold text-on-surface md:text-4xl">
+                {t.modManagerSectionTitle}
+              </h2>
+              <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-on-surface-variant">
+                {t.modManagerSectionBody}
+              </p>
+              <a
+                href={GREG_MODMANAGER_LATEST}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary hero-glow mb-4 inline-flex items-center gap-2 rounded-lg px-10 py-4 text-lg"
+              >
+                <FaDownload className="text-xl" aria-hidden />
+                {t.modManagerDownloadLabel}
+              </a>
+              <p className="text-sm text-on-surface-variant/90">{t.modManagerLatestHint}</p>
+            </div>
+          </div>
         </motion.section>
 
         <motion.section

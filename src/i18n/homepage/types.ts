@@ -16,6 +16,11 @@ export type HomepageContent = {
   heroSub2: string;
   ctaStart: string;
   ctaMods: string;
+  ctaModManager: string;
+  modManagerSectionTitle: string;
+  modManagerSectionBody: string;
+  modManagerDownloadLabel: string;
+  modManagerLatestHint: string;
   knowledgeSectionTitle: string;
   workflowSectionTitle: string;
   codeSectionTitle: string;

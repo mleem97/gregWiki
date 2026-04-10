@@ -4,16 +4,11 @@ sidebar_label: MCP server
 description: Model Context Protocol server bundled with the docs Docker image for assistants and IDEs.
 ---
 
-# MCP server (FrikaMF modding)
+# MCP server (gregFramework / gregCore)
 
-The **gregCore** repository ships a **Model Context Protocol (MCP)** server at **`gregCore/mcp-server/`** that exposes:
+The **gregCore** repository ships a **Model Context Protocol (MCP)** server at **`gregCore/mcp-server/`**. It lets assistants **ground** answers in your repo: documentation, **`greg.*`** hook catalog (`greg_hooks.json`), optional legacy **`fmf_hooks.json`**, and **CONTRIBUTING**.
 
-- **Docs search & read** — Markdown under `docs/` (same source as Docusaurus).
-- **Hook registry** — `fmf_hooks.json` (and the same registry path in the monorepo).
-- **CONTRIBUTING** — conventions and workflow.
-- **Repo layout** — static overview and a **`fmf_modding_context`** prompt for quick context.
-
-Use it when you want an assistant (Cursor, Claude Code, or any MCP client) to **ground answers** in this repo instead of guessing APIs.
+Use it when you want an assistant (Cursor, Claude Code, or any MCP client) to **not guess** APIs or hook names.
 
 ## Docker (single container)
 
@@ -42,20 +37,27 @@ Binding to `0.0.0.0` exposes the MCP endpoint on your network. Use only on trust
 
 ## Local (stdio) for Cursor
 
-Source: **`gregCore/mcp-server/`** (see **`README.md`** in that folder). Install dependencies with `npm install`, then run `node src/index.mjs --stdio --data-root <root>`, where `<root>` is a directory that contains **`docs/`**, **`CONTRIBUTING.md`**, and **`FrikaModFramework/fmf_hooks.json`** (or a flat `fmf_hooks.json`). The README’s example uses `--data-root ..` relative to `mcp-server/`; in a **split-repo** workspace you may need a different `<root>` or `FMF_MCP_DATA_ROOT` so all three paths resolve.
+Source: **`gregCore/mcp-server/`** (see **`README.md`** in that folder). Install dependencies with `npm install`, then run `node src/index.mjs --stdio --data-root <root>`, where `<root>` is usually **`gregCore/`** (parent of `mcp-server/`). That folder should contain **`docs/`**, **`CONTRIBUTING.md`**, and preferably **`framework/gregFramework/greg_hooks.json`** (canonical **greg.*** hook list). Legacy **`fmf_hooks.json`** (flat or under `FrikaModFramework/`) is still supported via **`fmf_hook_registry`**.
 
-Point your MCP client at this command (stdio transport).
+Set **`GREG_MCP_DATA_ROOT`** (or **`FMF_MCP_DATA_ROOT`**) if your layout differs. Point your MCP client at the stdio command.
 
-## Tools (summary)
+## Tools (what each one does)
 
-| Tool | Purpose |
-|------|--------|
-| `fmf_search_docs` | Substring search across `docs/**/*.md` |
-| `fmf_read_doc` | Read one file by path under `docs/` |
-| `fmf_list_doc_paths` | Discover Markdown paths |
-| `fmf_hook_registry` | Raw `fmf_hooks.json` |
-| `fmf_read_contributing` | `CONTRIBUTING.md` |
-| `fmf_repo_layout` | Short monorepo overview |
+| Tool | What it returns | When to use it |
+|------|------------------|----------------|
+| **`fmf_search_docs`** | Paths under `docs/` + short snippets around the match | Find a topic before reading a whole page |
+| **`fmf_read_doc`** | Full Markdown for one `docs/` path | You already know the file path |
+| **`fmf_list_doc_paths`** | List of `.md` paths (capped) | Discover what docs exist |
+| **`greg_hook_registry`** | Entire **`greg_hooks.json`** (can be large) | Need the full generated hook catalog |
+| **`greg_hook_search`** | Filtered `hooks[]` entries matching a query | Find specific `greg.*` hooks without loading the whole JSON |
+| **`greg_hook_stats`** | `version`, `stats`, `generationOptions`, etc. (no `hooks` array) | Quick sanity check after regenerating hooks |
+| **`fmf_hook_registry`** | Legacy **`fmf_hooks.json`** if present | Older FMF/FFM declarative lists |
+| **`fmf_read_contributing`** | `CONTRIBUTING.md` | Conventions and workflow |
+| **`fmf_repo_layout`** | Static Markdown overview of `gregCore` layout | Orientation before deeper reads |
+
+**Resources:** `greg://repo/overview` (alias `fmf://repo/overview`) — same text as `fmf_repo_layout`.
+
+**Prompt:** `fmf_modding_context` — short starter text + optional `topic`; always pair with tools for authoritative content.
 
 ## Related
 

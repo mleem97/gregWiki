@@ -9,6 +9,13 @@ export const en: HomepageContent = {
   heroSub2: 'Technical reference for authors lives under Developers in the wiki.',
   ctaStart: 'HELP FOR PLAYERS',
   ctaMods: 'MOD CATALOG',
+  ctaModManager: 'DOWNLOAD MOD MANAGER',
+  modManagerSectionTitle: 'GregModManager',
+  modManagerSectionBody:
+    'The Gregtools desktop app for Workshop browsing, uploads, dependency checks, and project metadata. Builds are published on GitHub — use the button below to open the latest release (the URL always tracks the newest version).',
+  modManagerDownloadLabel: 'Download latest release',
+  modManagerLatestHint:
+    'Uses GitHub’s /releases/latest redirect so you always land on the current release assets.',
   docsPaths: 'Documentation paths',
   featureTitles: ['Play with mods', 'Workshop & updates', 'Clear docs', 'Community'],
   featureDescriptions: [
