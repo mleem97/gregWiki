@@ -9,101 +9,103 @@ description: Auto-generated catalog of hook strings and event id mappings from F
 
 # FMF hooks catalog
 
-This page is **generated** from `framework/FrikaMF/HookNames.cs` and `framework/FrikaMF/EventIds.cs`.
+This page is **generated** from `gregCore/FrikaMF/HookNames.cs` and `gregCore/FrikaMF/EventIds.cs`.
+Regenerate after hook changes: `./tools/Generate-FmfHookCatalog.ps1`
 
-**Generated:** 2026-04-06 14:26:09 UTC
+**Generated:** 2026-04-10 01:36:21 UTC
 
 ## Hook string constants
 
 | C# field | Hook string |
 |----------|-------------|
-| ``CustomerContractOnSigned`` | ``FFM.Customer.Contract.OnSigned`` |
-| ``CustomerReputationOnChanged`` | ``FFM.Customer.Reputation.OnChanged`` |
-| ``CustomerSlaOnBreached`` | ``FFM.Customer.SLA.OnBreached`` |
-| ``CustomerSlaOnRestored`` | ``FFM.Customer.SLA.OnRestored`` |
-| ``EconomyBalanceOnChanged`` | ``FFM.Economy.Balance.OnChanged`` |
-| ``EmployeesStaffOnHiredCustom`` | ``FFM.Employees.Staff.OnHired`` |
-| ``EmployeesStaffOnTerminatedCustom`` | ``FFM.Employees.Staff.OnTerminated`` |
-| ``FrameworkHooksOnBridgeInstalled`` | ``FFM.Framework.Hooks.OnBridgeInstalled`` |
-| ``FrameworkHooksOnBridgeTriggered`` | ``FFM.Framework.Hooks.OnBridgeTriggered`` |
-| ``GameLoadOnCompleted`` | ``FFM.Game.Load.OnCompleted`` |
-| ``GameSaveOnCompleted`` | ``FFM.Game.Save.OnCompleted`` |
-| ``GameSaveOnRequested`` | ``FFM.Game.Save.OnRequested`` |
-| ``GameTimeOnDayChanged`` | ``FFM.Game.Time.OnDayChanged`` |
-| ``GameTimeOnMonthChanged`` | ``FFM.Game.Time.OnMonthChanged`` |
-| ``GameXpOnGained`` | ``FFM.Game.XP.OnGained`` |
-| ``NetworkCableOnConnected`` | ``FFM.Network.Cable.OnConnected`` |
-| ``NetworkCableOnConnectedSuppress`` | ``FFM.Network.Cable.OnConnected.Suppress`` |
-| ``NetworkCableOnDisconnected`` | ``FFM.Network.Cable.OnDisconnected`` |
-| ``NetworkCableOnDisconnectedSuppress`` | ``FFM.Network.Cable.OnDisconnected.Suppress`` |
-| ``NetworkCableOnLinkDown`` | ``FFM.Network.Cable.OnLinkDown`` |
-| ``NetworkCableOnLinkUp`` | ``FFM.Network.Cable.OnLinkUp`` |
-| ``NetworkTrafficOnThresholdExceeded`` | ``FFM.Network.Traffic.OnThresholdExceeded`` |
-| ``ObjectsDeviceOnDegraded`` | ``FFM.Objects.Device.OnDegraded`` |
-| ``ObjectsDeviceOnEOL`` | ``FFM.Objects.Device.OnEOL`` |
-| ``ObjectsDeviceOnPoweredOff`` | ``FFM.Objects.Device.OnPoweredOff`` |
-| ``ObjectsDeviceOnPoweredOn`` | ``FFM.Objects.Device.OnPoweredOn`` |
-| ``ObjectsDeviceOnRepaired`` | ``FFM.Objects.Device.OnRepaired`` |
-| ``ObjectsRackOnDevicePlaced`` | ``FFM.Objects.Rack.OnDevicePlaced`` |
-| ``ObjectsRackOnRemoved`` | ``FFM.Objects.Rack.OnRemoved`` |
-| ``ObjectsServerOnClientAssigned`` | ``FFM.Objects.Server.OnClientAssigned`` |
-| ``ObjectsServerOnClientUnassigned`` | ``FFM.Objects.Server.OnClientUnassigned`` |
-| ``StoreCartOnCheckedOutCleared`` | ``FFM.Store.Cart.OnCheckedOut`` |
-| ``StoreCartOnItemAdded`` | ``FFM.Store.Cart.OnItemAdded`` |
-| ``StoreCartOnItemRemoved`` | ``FFM.Store.Cart.OnItemRemoved`` |
-| ``WorldRoomOnExpanded`` | ``FFM.World.Room.OnExpanded`` |
+| ``CustomerContractOnSigned`` | ``greg.Customer.Contract.OnSigned`` |
+| ``CustomerReputationOnChanged`` | ``greg.Customer.Reputation.OnChanged`` |
+| ``CustomerSlaOnBreached`` | ``greg.Customer.SLA.OnBreached`` |
+| ``CustomerSlaOnRestored`` | ``greg.Customer.SLA.OnRestored`` |
+| ``EconomyBalanceOnChanged`` | ``greg.Economy.Balance.OnChanged`` |
+| ``EmployeesStaffOnHired`` | ``greg.Employees.Staff.OnHired`` |
+| ``EmployeesStaffOnTerminatedCustom`` | ``greg.Employees.Staff.OnTerminated`` |
+| ``FrameworkHooksOnBridgeInstalled`` | ``greg.Framework.Hooks.OnBridgeInstalled`` |
+| ``FrameworkHooksOnBridgeTriggered`` | ``greg.Framework.Hooks.OnBridgeTriggered`` |
+| ``GameLoadOnCompleted`` | ``greg.Game.Load.OnCompleted`` |
+| ``GameSaveOnCompleted`` | ``greg.Game.Save.OnCompleted`` |
+| ``GameSaveOnRequested`` | ``greg.Game.Save.OnRequested`` |
+| ``GameTimeOnDayChanged`` | ``greg.Game.Time.OnDayChanged`` |
+| ``GameTimeOnMonthChanged`` | ``greg.Game.Time.OnMonthChanged`` |
+| ``GameXpOnGained`` | ``greg.Game.XP.OnGained`` |
+| ``NetworkCableOnConnected`` | ``greg.Network.Cable.OnConnected`` |
+| ``NetworkCableOnConnectedSuppress`` | ``greg.Network.Cable.OnConnected.Suppress`` |
+| ``NetworkCableOnDisconnected`` | ``greg.Network.Cable.OnDisconnected`` |
+| ``NetworkCableOnDisconnectedSuppress`` | ``greg.Network.Cable.OnDisconnected.Suppress`` |
+| ``NetworkCableOnLinkDown`` | ``greg.Network.Cable.OnLinkDown`` |
+| ``NetworkCableOnLinkUp`` | ``greg.Network.Cable.OnLinkUp`` |
+| ``NetworkTrafficOnThresholdExceeded`` | ``greg.Network.Traffic.OnThresholdExceeded`` |
+| ``ObjectsDeviceOnDegraded`` | ``greg.Objects.Device.OnDegraded`` |
+| ``ObjectsDeviceOnEOL`` | ``greg.Objects.Device.OnEOL`` |
+| ``ObjectsDeviceOnPoweredOff`` | ``greg.Objects.Device.OnPoweredOff`` |
+| ``ObjectsDeviceOnPoweredOn`` | ``greg.Objects.Device.OnPoweredOn`` |
+| ``ObjectsDeviceOnRepaired`` | ``greg.Objects.Device.OnRepaired`` |
+| ``ObjectsRackOnDevicePlaced`` | ``greg.Objects.Rack.OnDevicePlaced`` |
+| ``ObjectsRackOnRemoved`` | ``greg.Objects.Rack.OnRemoved`` |
+| ``ObjectsServerOnClientAssigned`` | ``greg.Objects.Server.OnClientAssigned`` |
+| ``ObjectsServerOnClientUnassigned`` | ``greg.Objects.Server.OnClientUnassigned`` |
+| ``StoreCartOnCheckedOut`` | ``greg.Store.Cart.OnCheckedOut`` |
+| ``StoreCartOnItemAdded`` | ``greg.Store.Cart.OnItemAdded`` |
+| ``StoreCartOnItemRemoved`` | ``greg.Store.Cart.OnItemRemoved`` |
+| ``WorldRoomOnExpanded`` | ``greg.World.Room.OnExpanded`` |
 
 ## Event id to hook mapping
 
 | Event id (uint) | EventIds name | Resolves to field | Hook string |
 |-----------------|---------------|---------------------|-------------|
-| 213 | `CableCleared` | `StoreCartOnCheckedOutCleared` | `FFM.Store.Cart.OnCheckedOut` |
-| 204 | `CableConnected` | `NetworkCableOnConnected` | `FFM.Network.Cable.OnConnected` |
-| 211 | `CableCreated` | `NetworkCableOnConnected` | `FFM.Network.Cable.OnConnected` |
-| 205 | `CableDisconnected` | `NetworkCableOnDisconnected` | `FFM.Network.Cable.OnDisconnected` |
-| 212 | `CableRemoved` | `NetworkCableOnDisconnected` | `FFM.Network.Cable.OnDisconnected` |
-| 215 | `CableSfpInserted` | `NetworkCableOnConnected` | `FFM.Network.Cable.OnConnected` |
-| 216 | `CableSfpRemoved` | `NetworkCableOnDisconnected` | `FFM.Network.Cable.OnDisconnected` |
-| 214 | `CableSpeedChanged` | `NetworkTrafficOnThresholdExceeded` | `FFM.Network.Traffic.OnThresholdExceeded` |
-| 1001 | `CustomEmployeeFired` | `EmployeesStaffOnTerminatedCustom` | `FFM.Employees.Staff.OnTerminated` |
-| 1000 | `CustomEmployeeHired` | `EmployeesStaffOnHiredCustom` | `FFM.Employees.Staff.OnHired` |
-| 400 | `CustomerAccepted` | `CustomerContractOnSigned` | `FFM.Customer.Contract.OnSigned` |
-| 401 | `CustomerSatisfied` | `CustomerSlaOnRestored` | `FFM.Customer.SLA.OnRestored` |
-| 402 | `CustomerUnsatisfied` | `CustomerSlaOnBreached` | `FFM.Customer.SLA.OnBreached` |
-| 300 | `DayEnded` | `GameTimeOnDayChanged` | `FFM.Game.Time.OnDayChanged` |
-| 601 | `EmployeeFired` | `EmployeesStaffOnTerminated` | `FFM.Employees.Staff.OnTerminated` |
-| 600 | `EmployeeHired` | `EmployeesStaffOnHired` | `FFM.Employees.Staff.OnHired` |
-| 702 | `GameAutoSaved` | `GameSaveOnRequested` | `FFM.Game.Save.OnRequested` |
-| 701 | `GameLoaded` | `GameLoadOnCompleted` | `FFM.Game.Load.OnCompleted` |
-| 700 | `GameSaved` | `GameSaveOnCompleted` | `FFM.Game.Save.OnCompleted` |
-| 1100 | `HookBridgeInstalled` | `FrameworkHooksOnBridgeInstalled` | `FFM.Framework.Hooks.OnBridgeInstalled` |
-| 1101 | `HookBridgeTriggered` | `FrameworkHooksOnBridgeTriggered` | `FFM.Framework.Hooks.OnBridgeTriggered` |
-| 100 | `MoneyChanged` | `EconomyBalanceOnChanged` | `FFM.Economy.Balance.OnChanged` |
-| 301 | `MonthEnded` | `GameTimeOnMonthChanged` | `FFM.Game.Time.OnMonthChanged` |
-| 900 | `NetWatchDispatched` | `NetworkTrafficOnThresholdExceeded` | `FFM.Network.Traffic.OnThresholdExceeded` |
-| 208 | `RackUnmounted` | `ObjectsRackOnRemoved` | `FFM.Objects.Rack.OnRemoved` |
-| 102 | `ReputationChanged` | `CustomerReputationOnChanged` | `FFM.Customer.Reputation.OnChanged` |
-| 207 | `ServerAppChanged` | `ObjectsServerOnClientUnassigned` | `FFM.Objects.Server.OnClientUnassigned` |
-| 201 | `ServerBroken` | `ObjectsDeviceOnDegraded` | `FFM.Objects.Device.OnDegraded` |
-| 206 | `ServerCustomerChanged` | `ObjectsServerOnClientAssigned` | `FFM.Objects.Server.OnClientAssigned` |
-| 203 | `ServerInstalled` | `ObjectsRackOnDevicePlaced` | `FFM.Objects.Rack.OnDevicePlaced` |
-| 200 | `ServerPowered` | `ObjectsDeviceOnPoweredOn` | `FFM.Objects.Device.OnPoweredOn` |
-| 202 | `ServerRepaired` | `ObjectsDeviceOnRepaired` | `FFM.Objects.Device.OnRepaired` |
-| 502 | `ShopCartCleared` | `StoreCartOnCheckedOutCleared` | `FFM.Store.Cart.OnCheckedOut` |
-| 500 | `ShopCheckout` | `StoreCartOnCheckedOut` | `FFM.Store.Cart.OnCheckedOut` |
-| 501 | `ShopItemAdded` | `StoreCartOnItemAdded` | `FFM.Store.Cart.OnItemAdded` |
-| 503 | `ShopItemRemoved` | `StoreCartOnItemRemoved` | `FFM.Store.Cart.OnItemRemoved` |
-| 209 | `SwitchBroken` | `NetworkCableOnLinkDown` | `FFM.Network.Cable.OnLinkDown` |
-| 210 | `SwitchRepaired` | `NetworkCableOnLinkUp` | `FFM.Network.Cable.OnLinkUp` |
-| 800 | `WallPurchased` | `WorldRoomOnExpanded` | `FFM.World.Room.OnExpanded` |
-| 101 | `XPChanged` | `GameXpOnGained` | `FFM.Game.XP.OnGained` |
+| 213 | `CableCleared` | `StoreCartOnCheckedOutCleared` | `greg.Store.Cart.OnCheckedOut` |
+| 204 | `CableConnected` | `NetworkCableOnConnected` | `greg.Network.Cable.OnConnected` |
+| 211 | `CableCreated` | `NetworkCableOnConnected` | `greg.Network.Cable.OnConnected` |
+| 205 | `CableDisconnected` | `NetworkCableOnDisconnected` | `greg.Network.Cable.OnDisconnected` |
+| 212 | `CableRemoved` | `NetworkCableOnDisconnected` | `greg.Network.Cable.OnDisconnected` |
+| 215 | `CableSfpInserted` | `NetworkCableOnConnected` | `greg.Network.Cable.OnConnected` |
+| 216 | `CableSfpRemoved` | `NetworkCableOnDisconnected` | `greg.Network.Cable.OnDisconnected` |
+| 214 | `CableSpeedChanged` | `NetworkTrafficOnThresholdExceeded` | `greg.Network.Traffic.OnThresholdExceeded` |
+| 1001 | `CustomEmployeeFired` | `EmployeesStaffOnTerminatedCustom` | `greg.Employees.Staff.OnTerminated` |
+| 1000 | `CustomEmployeeHired` | `EmployeesStaffOnHiredCustom` | `greg.Employees.Staff.OnHired` |
+| 400 | `CustomerAccepted` | `CustomerContractOnSigned` | `greg.Customer.Contract.OnSigned` |
+| 401 | `CustomerSatisfied` | `CustomerSlaOnRestored` | `greg.Customer.SLA.OnRestored` |
+| 402 | `CustomerUnsatisfied` | `CustomerSlaOnBreached` | `greg.Customer.SLA.OnBreached` |
+| 300 | `DayEnded` | `GameTimeOnDayChanged` | `greg.Game.Time.OnDayChanged` |
+| 601 | `EmployeeFired` | `EmployeesStaffOnTerminated` | `greg.Employees.Staff.OnTerminated` |
+| 600 | `EmployeeHired` | `EmployeesStaffOnHired` | `greg.Employees.Staff.OnHired` |
+| 702 | `GameAutoSaved` | `GameSaveOnRequested` | `greg.Game.Save.OnRequested` |
+| 701 | `GameLoaded` | `GameLoadOnCompleted` | `greg.Game.Load.OnCompleted` |
+| 700 | `GameSaved` | `GameSaveOnCompleted` | `greg.Game.Save.OnCompleted` |
+| 1100 | `HookBridgeInstalled` | `FrameworkHooksOnBridgeInstalled` | `greg.Framework.Hooks.OnBridgeInstalled` |
+| 1101 | `HookBridgeTriggered` | `FrameworkHooksOnBridgeTriggered` | `greg.Framework.Hooks.OnBridgeTriggered` |
+| 100 | `MoneyChanged` | `EconomyBalanceOnChanged` | `greg.Economy.Balance.OnChanged` |
+| 301 | `MonthEnded` | `GameTimeOnMonthChanged` | `greg.Game.Time.OnMonthChanged` |
+| 900 | `NetWatchDispatched` | `NetworkTrafficOnThresholdExceeded` | `greg.Network.Traffic.OnThresholdExceeded` |
+| 208 | `RackUnmounted` | `ObjectsRackOnRemoved` | `greg.Objects.Rack.OnRemoved` |
+| 102 | `ReputationChanged` | `CustomerReputationOnChanged` | `greg.Customer.Reputation.OnChanged` |
+| 207 | `ServerAppChanged` | `ObjectsServerOnClientUnassigned` | `greg.Objects.Server.OnClientUnassigned` |
+| 201 | `ServerBroken` | `ObjectsDeviceOnDegraded` | `greg.Objects.Device.OnDegraded` |
+| 206 | `ServerCustomerChanged` | `ObjectsServerOnClientAssigned` | `greg.Objects.Server.OnClientAssigned` |
+| 203 | `ServerInstalled` | `ObjectsRackOnDevicePlaced` | `greg.Objects.Rack.OnDevicePlaced` |
+| 200 | `ServerPowered` | `ObjectsDeviceOnPoweredOn` | `greg.Objects.Device.OnPoweredOn` |
+| 202 | `ServerRepaired` | `ObjectsDeviceOnRepaired` | `greg.Objects.Device.OnRepaired` |
+| 502 | `ShopCartCleared` | `StoreCartOnCheckedOutCleared` | `greg.Store.Cart.OnCheckedOut` |
+| 500 | `ShopCheckout` | `StoreCartOnCheckedOut` | `greg.Store.Cart.OnCheckedOut` |
+| 501 | `ShopItemAdded` | `StoreCartOnItemAdded` | `greg.Store.Cart.OnItemAdded` |
+| 503 | `ShopItemRemoved` | `StoreCartOnItemRemoved` | `greg.Store.Cart.OnItemRemoved` |
+| 209 | `SwitchBroken` | `NetworkCableOnLinkDown` | `greg.Network.Cable.OnLinkDown` |
+| 210 | `SwitchRepaired` | `NetworkCableOnLinkUp` | `greg.Network.Cable.OnLinkUp` |
+| 800 | `WallPurchased` | `WorldRoomOnExpanded` | `greg.World.Room.OnExpanded` |
+| 101 | `XPChanged` | `GameXpOnGained` | `greg.Game.XP.OnGained` |
 
 ## Fallback
 
-Unknown event ids resolve to ``FFM.Framework.Unknown.OnEvent`` in `HookNames.Resolve`.
+Unknown event ids resolve to ``greg.Framework.Unknown.OnEvent`` in `HookNames.Resolve`.
 
 ## See also
 
 - [FMF hook naming](./fmf-hook-naming.md)
-- [EventIds source](https://github.com/mleem97/gregFramework/blob/master/framework/FrikaMF/EventIds.cs)
-- [HookNames source](https://github.com/mleem97/gregFramework/blob/master/framework/FrikaMF/HookNames.cs)
+- [EventIds source](https://github.com/mleem97/gregFramework/blob/main/gregCore/FrikaMF/EventIds.cs)
+- [HookNames source](https://github.com/mleem97/gregFramework/blob/main/gregCore/FrikaMF/HookNames.cs)
+- [Greg hooks & event runtime](/wiki/framework/greg-hooks-and-events)

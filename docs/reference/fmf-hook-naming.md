@@ -40,6 +40,10 @@ Domains are **closed by default**. Add a new domain only via changelog + maintai
 | `SAVE` | Save/load lifecycle |
 | `FRAMEWORK` | Loader, bridge, diagnostics |
 
+## Runtime IL2CPP (MelonLoader): `greg.*`
+
+Harmony patches in **gregFramework** emit stable **`greg.<DOMAIN>.<Action>`** strings via `GregHookName` / `GregEventDispatcher`. That surface is documented in **[greg hooks registry (IL2CPP)](/wiki/reference/greg-hooks-registry)** (`greg_hooks.json`, regeneration, overlap with hand-written `HarmonyPatches`). It is separate from the `FMF.*` / `FFM.*` documentation constants below.
+
 ## Legacy: `FFM.*` strings in code
 
 The runtime currently maps numeric event IDs to **`FFM.*`** string constants in [`FrikaMF/HookNames.cs`](https://github.com/mleem97/gregFramework/blob/master/FrikaMF/HookNames.cs) (e.g. `FFM.Economy.Balance.OnChanged`). That is **legacy naming** (four segments after `FFM`).

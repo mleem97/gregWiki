@@ -1,41 +1,77 @@
 ---
 title: Greg hooks showcase (sample mod)
 sidebar_label: Greg hooks showcase
-description: How to subscribe to greg.* hooks via GregShowcaseMod and gregFramework.Core APIs.
+description: Subscribe to greg.* hooks via GregShowcaseMod, GregEventDispatcher, GregPayload, and optional OnCancelable veto.
 ---
 
 # Greg hooks showcase
 
-The repository includes **GregShowcaseMod** (`mods/GregShowcaseMod/` in **gregFramework**): a minimal MelonLoader mod that logs one representative event per **GregDomain**, using only public APIs:
+The **gregFramework** repo ships **GregShowcaseMod** at `mods/GregShowcaseMod/`. It demonstrates the public API only:
 
-- `GregEventDispatcher.On` / `UnregisterAll`
+- `GregEventDispatcher.On` / `Once` / `OnCancelable` / `UnregisterAll`
 - `GregHookName.Create(GregDomain.*, "Action")`
-- `GregPayload.Get` / `GregPayload.Dump` for anonymous payloads
+- `GregPayload.Get<T>` / `GregPayload.Dump` for anonymous payloads
 
 ## Canonical hook strings
 
-Runtime hook names look like `greg.<DOMAIN>.<Action>`, e.g. `greg.PLAYER.MoneyChanged`. Build the string with `GregHookName.Create` — do not concatenate raw strings in mods.
+Runtime names look like `greg.<DOMAIN>.<Action>`. Always build them with `GregHookName.Create` — do not concatenate raw strings in mods.
 
-## Registry file
+## Registry
 
-`greg_hooks.json` (shipped beside `FrikaModdingFramework.dll`) is generated from `MergedCode.md` by:
+**`greg_hooks.json`** at the **gregFramework** repository root is the canonical catalog (`description`, `payloadSchema`, `strategy`, optional `legacy`). A copy is emitted next to **`FrikaModdingFramework.dll`** for `GregCompatBridge` legacy resolution.
 
-```bash
-pwsh gregCore/scripts/Generate-GregHooksFromMergedCode.ps1
+Authoritative documentation: [greg hooks registry (IL2CPP)](/wiki/reference/greg-hooks-registry) — regeneration script, whitelist, and Harmony deduplication rules.
+
+## FFI bridge and greg.* emission
+
+`DataCenterModLoader.EventDispatcher` emits **`greg.*`** events through **`GregHookIntegration`** for the same gameplay moments as the Rust FFI event ids (money, cables, customers, save/load, etc.), even when the FFI bridge is not connected.
+
+## Payload access patterns
+
+**Pattern A — dynamic (anonymous types from compiler):**
+
+```csharp
+private static void OnMoneyChanged(object payload)
+{
+    dynamic p = payload;
+    float delta = (float)p.coinChangeAmount;
+    float balance = (float)p.newBalance;
+    MelonLogger.Msg($"Δ={delta} → {balance}");
+}
 ```
 
-Options are passed through to `parse_merged_code.py` (e.g. `--no-hot-loops` to omit `Update`/`FixedUpdate` from the catalog). The dump is large; regeneration can take several minutes.
+**Pattern B — `GregPayload` (reflection, case-insensitive property names):**
 
-## Sample subscriptions
+```csharp
+private static void OnReputationChanged(object payload)
+{
+    var amount = GregPayload.Get<float>(payload, "amount");
+    var rep = GregPayload.Get<float>(payload, "reputation");
+    MelonLogger.Msg($"Reputation: {amount} → {rep}");
+}
+```
 
-See `mods/GregShowcaseMod/Handlers/*.cs` — each file registers one hook for its domain (except **POWER**, where `GregPowerHooks` is still empty until Il2Cpp types are classified).
+**Pattern C — typed record (when you define a shared contract in your mod or core):**
+
+```csharp
+// public record PlayerMoneyPayload(float CoinChangeAmount, float NewBalance, bool WithoutSound, bool Accepted);
+// if (payload is PlayerMoneyPayload p) { ... }
+```
+
+Use **`GregPayload.Dump(payload)`** for one-line debug strings.
+
+## Prefix hooks and cancellation
+
+Hooks that run **before** the original method (Harmony Prefix) can call **`GregEventDispatcher.InvokeCancelable(hookName, payload)`**. Mods register **`GregEventDispatcher.OnCancelable(hookName, p => bool, modId)`**; if any handler returns `false`, the integration can skip the original (e.g. `Player.UpdateCoin`).
+
+Showcase: enable `blockNegativeTransactions` in `content/modconfig.json` to register a veto on large negative `coinChangeAmount` values.
 
 ## Configuration
 
-Copy `mods/GregShowcaseMod/modconfig.example.json` to `{Game}/Mods/GregShowcaseMod/modconfig.json` to toggle per-domain logging.
+Edit **`content/modconfig.json`** next to the built DLL (defaults are copied from the repo). Keys include `logPlayerEvents`, `logNetworkEvents`, `blockNegativeTransactions`, `reputationWarningThreshold`.
 
 ## See also
 
 - [Mod developers (hub)](./overview)
 - [System architecture principles](/wiki/meta/system-architecture-principles)
-- [Framework](/wiki/mods/framework) — runtime overview
+- [Framework](/wiki/mods/framework)

@@ -11,5 +11,6 @@ The framework is intended to act as a **hook proxy**: Unity / IL2CPP events are 
 - [FMF hooks](/wiki/framework/fmf-hooks) — generated hook surface
 - [FMF hooks catalog](/wiki/reference/fmf-hooks-catalog) — strings from core sources
 - [FMF hook naming](/wiki/reference/fmf-hook-naming) — `FMF.*` vs legacy `FFM.*`
+- [greg hooks registry (IL2CPP)](/wiki/reference/greg-hooks-registry) — `greg_hooks.json`, `Greg*Hooks` Harmony emitters, regeneration script
 - [Framework architecture](/wiki/framework/architecture) — bridges (including Rust) and runtime layout
 - [Modding language requirement](/wiki/reference/modding-language-requirement) — C# policy for mods/plugins

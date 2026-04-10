@@ -27,7 +27,12 @@ const sidebars = {
         {
           type: 'category',
           label: 'Framework',
-          items: ['framework/architecture', 'framework/fmf-hooks', 'framework/hexmod'],
+          items: [
+            'framework/architecture',
+            'framework/greg-hooks-and-events',
+            'framework/fmf-hooks',
+            'framework/hexmod',
+          ],
         },
         {
           type: 'category',
@@ -141,6 +146,7 @@ const sidebars = {
             'reference/wiki-mapping',
             'reference/mod-store-vision',
             'reference/fmf-hook-naming',
+            'reference/greg-hooks-registry',
             'reference/fmf-hooks-catalog',
             'reference/mcp-server',
             'reference/reference-data-files',

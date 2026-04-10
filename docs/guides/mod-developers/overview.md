@@ -9,6 +9,7 @@ description: Getting started, mod config, debugging — curated docs for FMF mod
 **Mod authors** — build your own mods (hooks, configuration, debugging). Role overview: [By audience](/wiki/guides/players/audiences-overview).
 
 - [Greg hooks showcase](/wiki/guides/mod-developers/greg-hooks-showcase) — sample mod (`GregShowcaseMod`) and `GregPayload` usage
+- [greg hooks registry (IL2CPP)](/wiki/reference/greg-hooks-registry) — `greg_hooks.json`, regeneration, overlap with `HarmonyPatches`
 - [System architecture & documentation principles](/wiki/meta/system-architecture-principles) — layer model **ModManager → Framework → Plugins → Mods**, priorities, wiki rules
 - [By audience — intermediates](/wiki/audiences/intermediates) and [professionals](/wiki/audiences/professionals)
 - [Framework overview](/wiki/mods/framework) — runtime capabilities and repo layout

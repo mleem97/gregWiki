@@ -16,7 +16,7 @@ Documentation is **curated** in this repository: guides, framework articles, ref
 |------|------------|
 | **Roles** | [By audience](/wiki/guides/players/audiences-overview) — [End users](/wiki/guides/players/overview), [Mod developers](/wiki/guides/mod-developers/overview), [Contributors (workflow)](/wiki/guides/contributors/topics-overview), [Sponsors](/wiki/guides/sponsors/overview) |
 | **Experience paths** | [Newbies](/wiki/audiences/newbies) · [Intermediates](/wiki/audiences/intermediates) · [Professionals](/wiki/audiences/professionals) |
-| **Technical reference** | [Reference & technical](/wiki/topics/reference/overview) |
+| **Technical reference** | [Reference & technical](/wiki/topics/reference/overview) — includes [greg IL2CPP hook registry](/wiki/reference/greg-hooks-registry) |
 | **Ship planning** | [Roadmap & planning](/wiki/topics/roadmap/overview) |
 | **Repository inventory** | [Repo inventory](/wiki/contributors/repo-inventory) |
 | **Steam, betas, backlog, game paths** | [Meta & operations](/wiki/topics/meta/overview) — [Game folder layout](/wiki/topics/meta/game-folder-layout) |

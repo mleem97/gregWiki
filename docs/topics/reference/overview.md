@@ -13,6 +13,7 @@ Authoritative reference material for the framework and documentation site.
 - [Modding language (C# only)](/wiki/reference/modding-language-requirement) — mods, plugins, extensions: **C#** only.
 - [FMF hook naming](/wiki/reference/fmf-hook-naming) — conventions for hook identifiers.
 - [FMF hooks catalog](/wiki/reference/fmf-hooks-catalog) — generated listing from framework sources.
+- [greg hooks registry (IL2CPP)](/wiki/reference/greg-hooks-registry) — `greg.*` Harmony hooks, `greg_hooks.json`, codegen from Il2Cpp unpack.
 - [Release channels](/wiki/reference/release-channels) — how builds are staged.
 
 See also [FFI, hooks & Lua](/wiki/topics/ffi-and-hooks/overview) for imported deep dives from the legacy wiki.
