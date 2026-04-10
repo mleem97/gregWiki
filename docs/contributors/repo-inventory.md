@@ -69,6 +69,20 @@ Documentation is maintained in this repository under `docs/`; historical GitHub 
 - **Landing**: `/` → [`src/pages/index.tsx`](https://github.com/mleem97/gregWiki/blob/main/src/pages/index.tsx)
 - **Static catalog page**: `/mods`
 
+## Language bridges (code)
+
+- **Bridge host:** `gregCore/framework/ModLoader/LanguageBridges/GregLanguageBridgeHost.cs` — creates and orchestrates all bridges.
+- **Lua VM:** `gregCore/framework/ModLoader/LanguageBridges/LuaLanguageBridge.cs` — MoonSharp integration, script discovery, lifecycle dispatch (`on_update`, `on_scene`, `on_gui`).
+- **Lua API modules:** `gregCore/framework/ModLoader/LanguageBridges/LuaModules/`
+  - `GregHooksLuaModule.cs` — `greg.on()`, `greg.hook.before/after()` (connects to `GregEventDispatcher` and `HookBinder`)
+  - `GregUnityLuaModule.cs` — `greg.unity.*` (handle-based Unity object manipulation, TMPro, TextMesh, physics, materials, transforms)
+  - `GregIoLuaModule.cs` — `greg.io.*` (file read/write, directory listing)
+  - `GregInputLuaModule.cs` — `greg.input.*` (keyboard via InputSystem)
+  - `LuaObjectHandleRegistry.cs` — thread-safe int→object handle registry for Il2Cpp objects
+- **Module interface:** `gregCore/framework/ModLoader/LanguageBridges/IGregLuaModule.cs`
+- **Rust adapter:** `gregCore/framework/ModLoader/LanguageBridges/RustLanguageBridgeAdapter.cs` (delegates to `FFIBridge`)
+- **FFI bridge:** `gregCore/framework/ModLoader/FfiBridge.cs` — native DLL loading, C ABI lifecycle
+
 ## Hook / event sources of truth (code)
 
 - **Native pipeline (`EventIds` → `greg.*`):** [`gregCore/framework/src/Sdk/GregNativeEventHooks.cs`](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/src/Sdk/GregNativeEventHooks.cs) with numeric ids in [`EventDispatcher.cs` (`EventIds`)](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/src/ModLoader/EventDispatcher.cs) — wiki table: [greg hooks catalog](../reference/greg-hooks-catalog.md); generator [`gregCore/tools/Generate-GregHookCatalog.ps1`](https://github.com/mleem97/gregFramework/blob/main/gregCore/tools/Generate-GregHookCatalog.ps1).
