@@ -176,7 +176,7 @@ const config = {
             from: ['/mod/FMF.GregifyEmployees.dll'],
           },
           {
-            to: 'https://github.com/mleem97/gregFramework/releases/latest/download/FMF.HexLabelMod.dll',
+            to: 'https://github.com/mleem97/gregModHexLabelMod/releases/latest/download/FMF.HexLabelMod.dll',
             from: ['/mod/FMF.HexLabelMod.dll'],
           },
           {

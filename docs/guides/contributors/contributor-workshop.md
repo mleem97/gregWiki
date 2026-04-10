@@ -46,7 +46,7 @@ dotnet build gregCore/FrikaMF.sln -c Release
 ```bash
 dotnet build gregMod.ConsoleInputGuard/FMF.ConsoleInputGuard.csproj -c Release
 dotnet build gregMod.GregifyEmployees/FMF.GregifyEmployees.csproj -c Release
-dotnet build gregMod.HexLabelMod/FMF.HexLabelMod.csproj -c Release
+dotnet build gregModHexLabelMod/FMF.HexLabelMod.csproj -c Release
 dotnet build gregMod.LangCompatBridge/FMF.JoniMLCompatMod.csproj -c Release
 ```
 

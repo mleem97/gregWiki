@@ -5,7 +5,14 @@ sidebar_label: FMF.HexLabelMod
 
 <!-- markdownlint-disable MD060 -->
 
-`gregMod.HexLabelMod/` (assembly `FMF.HexLabelMod.dll`)
+[`gregModHexLabelMod`](https://github.com/mleem97/gregModHexLabelMod) (assembly `FMF.HexLabelMod.dll`)
+
+## Release
+
+| Channel | Link |
+| --- | --- |
+| **Steam Workshop** | [Subscribe (item 3701404621)](https://steamcommunity.com/sharedfiles/filedetails/?id=3701404621) |
+| **GitHub** | [Releases](https://github.com/mleem97/gregModHexLabelMod/releases/latest) |
 
 ## Purpose
 
@@ -23,8 +30,9 @@ This mod runs standalone and does **not** require FMF runtime APIs.
 
 ## Installation
 
-1. Drop `FMF.HexLabelMod.dll` into your `Mods/` folder.
-2. Launch the game — the config file is created automatically on first run at:
+1. **Recommended:** Subscribe on the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3701404621), or download `FMF.HexLabelMod.dll` from the [latest GitHub release](https://github.com/mleem97/gregModHexLabelMod/releases/latest).
+2. If you use a manual DLL, drop `FMF.HexLabelMod.dll` into your `Mods/` folder.
+3. Launch the game — the config file is created automatically on first run at:
 
 ```text
 UserData/hexposition.cfg
@@ -78,7 +86,7 @@ Pressing **Ctrl+F1** toggles live config reload (6-second interval), allowing yo
 ## Build
 
 ```powershell
-dotnet build .\gregMod.HexLabelMod\FMF.HexLabelMod.csproj
+dotnet build .\gregModHexLabelMod\FMF.HexLabelMod.csproj
 ```
 
 Output lands in the standard MelonLoader `Mods/` folder as configured in the `.csproj`.
@@ -94,11 +102,11 @@ Output lands in the standard MelonLoader `Mods/` folder as configured in the `.c
 ## Notes
 
 - Original gameplay behavior is unaffected.
-- This mod is developed in `gregMod.HexLabelMod/` (workspace root), not under a legacy `mods/` tree.
+- Source lives in the split repo [`gregModHexLabelMod`](https://github.com/mleem97/gregModHexLabelMod), not under a legacy `mods/` tree.
 - The config file is fully rewritten if any expected keys are missing (for example, after an update adds new keys).
 - FMF assembly presence is no longer required as a startup gate.
 
 ## Sources
 
-- Module path: `gregMod.HexLabelMod/`
-- See also: [Mods overview](/wiki/mods/)
+- Repository: [github.com/mleem97/gregModHexLabelMod](https://github.com/mleem97/gregModHexLabelMod)
+- See also: [Mods overview](/wiki/mods/) · [HexMod hub](/wiki/framework/hexmod)

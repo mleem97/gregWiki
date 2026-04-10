@@ -10,10 +10,10 @@
       "author": "mleem97",
       "workshopTags": ["modded", "melonloader", "mod"],
       "workshopContentPath": "content/Mods/",
-      "workshopUrl": "",
-      "githubReleaseUrl": "",
+      "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3701404621",
+      "githubReleaseUrl": "https://github.com/mleem97/gregModHexLabelMod/releases/latest",
       "wikiPath": "/wiki/mods/fmf-hex-label-mod",
-      "sourcePath": "gregMod.HexLabelMod"
+      "sourcePath": "gregModHexLabelMod"
     },
     {
       "id": "console-input-guard",

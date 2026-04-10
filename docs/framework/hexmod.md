@@ -20,11 +20,12 @@ The **Hex Label** mod adds in-world hex color labels for cable spinners and rack
 
 ## Downloads
 
-- **Steam Workshop:** Subscribe via the Gregtools Modmanager or the [Steam Workshop](https://steamcommunity.com/app/4170200/workshop/)
+- **Steam Workshop:** [FMF.HexLabelMod — workshop item](https://steamcommunity.com/sharedfiles/filedetails/?id=3701404621) (subscribe in-game or via GregModManager)
+- **GitHub:** [Latest release](https://github.com/mleem97/gregModHexLabelMod/releases/latest) (`FMF.HexLabelMod.dll`)
 - **Manual:** Drop `FMF.HexLabelMod.dll` into `<Data Center>/Mods/`
 
 ## Source & layout
 
-- **Build sources:** [`gregMod.HexLabelMod`](https://github.com/mleem97/gregFramework/tree/main/gregMod.HexLabelMod) (assembly `FMF.HexLabelMod.dll`)
+- **Repository:** [`mleem97/gregModHexLabelMod`](https://github.com/mleem97/gregModHexLabelMod) (assembly `FMF.HexLabelMod.dll`)
 
 See also the detailed wiki article [FMF.HexLabelMod](/wiki/mods/fmf-hex-label-mod).
