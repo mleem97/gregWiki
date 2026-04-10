@@ -37,9 +37,42 @@ Build stable hook strings with **`GregHookName.Create(GregDomain.*, "Action")`**
 - **Mapping → `greg.*`:** **`GregNativeEventHooks`** (`gregCore/framework/src/Sdk/GregNativeEventHooks.cs`); emission via **`GregHookIntegration`** in the same ModLoader tree.
 - **Wiki table:** [greg hooks catalog](/wiki/reference/greg-hooks-catalog) (generator: `gregCore/tools/Generate-GregHookCatalog.ps1`).
 
+## Lua event & hook subscriptions
+
+Lua scripts subscribe to the same event surfaces through the `greg.*` API injected by `GregHooksLuaModule`:
+
+| Lua API | C# backend | Purpose |
+|---------|-----------|---------|
+| `greg.on(hookName, fn)` | `GregEventDispatcher.On()` | Subscribe to any `greg.*` event — receives payload as Lua table |
+| `greg.off(hookName)` | `GregEventDispatcher.Off()` | Unsubscribe all Lua handlers for a hook |
+| `greg.emit(hookName, payload)` | `GregEventDispatcher.Emit()` | Emit a custom event (other Lua/C# listeners receive it) |
+| `greg.hook.before(hookName, fn)` | `HookBinder.OnBefore()` | Harmony **prefix** — fn receives `{hook_name, type_name, method_name, instance_handle, arg_count}` |
+| `greg.hook.after(hookName, fn)` | `HookBinder.OnAfter()` | Harmony **postfix** — same context table |
+| `greg.hook.off(hookName)` | `HookBinder.Unregister()` | Remove all handlers for a Harmony hook |
+
+**Example** — react to CableSpinner.Start in Lua:
+
+```lua
+greg.hook.after("greg.Misc.OnStart", function(ctx)
+    if ctx.type_name and ctx.type_name:find("CableSpinner") then
+        greg.log("new spinner spawned, handle: " .. tostring(ctx.instance_handle))
+    end
+end)
+```
+
+**Example** — listen to game events:
+
+```lua
+greg.on("greg.PLAYER.CoinChanged", function(payload)
+    greg.log("coins changed by " .. tostring(payload.coinChangeAmount))
+end)
+```
+
+All hook names from `GregNativeEventHooks` (e.g. `greg.PLAYER.CoinChanged`, `greg.SERVER.PowerButton`) and `HookBinder` aliases (e.g. `greg.Misc.OnStart`) are available to Lua.
+
 ## Rust FFI
 
-Rust/native mods receive **numeric** event ids; C# mirrors the same moments as **`greg.*`** through **`GregHookIntegration`** while the game runs (including when the FFI connection is down for the managed **`greg.*` surface). Bridge code: **`FfiBridge` / `FFIBridge`** under `framework/src/ModLoader/`.
+Rust/native mods receive **numeric** event ids; C# mirrors the same moments as **`greg.*`** through **`GregHookIntegration`** while the game runs. The `RustLanguageBridgeAdapter` fully delegates all lifecycle calls (`OnUpdate`, `OnSceneLoaded`, `Shutdown`, event dispatch) to `FFIBridge`. Bridge code: **`FfiBridge.cs`** / **`RustLanguageBridgeAdapter.cs`** under `framework/ModLoader/`.
 
 ## MelonLoader entry points (one DLL)
 
