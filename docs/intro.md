@@ -2,7 +2,7 @@
 id: intro
 title: Mod author wiki
 slug: /
-description: Technical documentation for Data Center Simulator mod and plugin authors — gregFramework, hooks, workspace, and releases.
+description: Technical documentation for Data Center mod and plugin authors — gregFramework, hooks, workspace, and releases.
 ---
 
 # Mod author wiki

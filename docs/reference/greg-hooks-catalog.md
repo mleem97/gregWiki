@@ -9,9 +9,9 @@ description: Auto-generated catalog of native pipeline hook strings from GregNat
 
 # greg hooks catalog
 
-This page is **generated** from `gregCore/framework/src/Sdk/GregNativeEventHooks.cs` and `EventIds` in `EventDispatcher.cs`.
+This page is **generated** from `gregCore/framework/Sdk/GregNativeEventHooks.cs` and `EventIds` in `EventDispatcher.cs`.
 
-**Generated:** 2026-04-10 02:07:09 UTC
+**Generated:** 2026-04-10 02:43:33 UTC
 
 ## Hook string constants
 
@@ -110,7 +110,7 @@ Unknown event ids resolve to ``greg.SYSTEM.UnmappedNativeEvent`` via ``GregNativ
 
 ## See also
 
-- [greg hooks registry](./greg-hooks-registry.md)
-- [EventIds source](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/src/ModLoader/EventDispatcher.cs)
-- [GregNativeEventHooks source](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/src/Sdk/GregNativeEventHooks.cs)
+- [greg hook naming](./greg-hook-naming.md)
+- [EventIds source](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/ModLoader/EventDispatcher.cs)
+- [GregNativeEventHooks source](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/Sdk/GregNativeEventHooks.cs)
 - [Greg hooks & event runtime](/wiki/framework/greg-hooks-and-events)

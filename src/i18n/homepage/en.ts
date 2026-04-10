@@ -33,7 +33,7 @@ export const en: HomepageContent = {
     'datacentermods.com is in preparation. Until it launches, use the player guides in the wiki and the mod catalog on this site.',
   communityTitle: 'Community',
   communityText:
-    'This site documents gregFramework, community mods, and plugins for Data Center Simulator.',
+    'This site documents gregFramework, community mods, and plugins for Data Center.',
   docsEndUserTitle: 'Players',
   docsEndUserDescription: 'Install, update, FAQ, troubleshooting.',
   docsModDevsTitle: 'Mod developers',

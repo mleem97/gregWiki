@@ -15,7 +15,7 @@ Provides language/localization compatibility bridging for mixed mod stacks.
 | **Assembly** | `FMF.JoniMLCompatMod.dll` |
 | **Version** | `00.01.0009` |
 | **Author** | mleem97 |
-| **Game** | Waseku — Data Center (App 4170200) |
+| **Game** | Data Center (App 4170200) |
 | **Workshop Tags** | `modded`, `melonloader`, `mod` |
 | **Workshop Content Path** | `content/Mods/` |
 | **Needs FMF** | No (standalone MelonLoader mod) |

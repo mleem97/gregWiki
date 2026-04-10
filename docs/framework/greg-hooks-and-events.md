@@ -6,52 +6,52 @@ description: greg.* hooks, GregEventDispatcher, GregNativeEventHooks, greg_hooks
 
 # Greg hooks & event runtime
 
-Die Assembly **`FrikaModdingFramework.dll`** entsteht aus **`gregCore/framework/FrikaMF.csproj`** und bündelt Harmony-Patches, C#-Events (`GregEventDispatcher`), sowie die Rust-/Native-Bridge. Für Mod-Autor:innen sind im Wesentlichen **drei Flächen** relevant:
+The **`FrikaModdingFramework.dll`** assembly is built from **`gregCore/framework/FrikaMF.csproj`** and combines Harmony patches, C# events (`GregEventDispatcher`), and the Rust/native bridge. Mod authors mainly care about **three surfaces**:
 
-| Fläche | Zweck | Typischer Einstieg |
-|--------|--------|---------------------|
-| **`greg.*` Hook-Strings** | Kanonische Namen für Harmony-/Mod-Code; Registry in **`greg_hooks.json`**. | `GregEventDispatcher.On("greg....", handler, modId)` in **`gregFramework.Core`** |
-| **Native Pipeline (`EventIds` → `greg.*`)** | Gleiche Spielmomente wie FFI-Events; zentral **`GregNativeEventHooks`**. | Konstanten / `Resolve(uint)` in **`gregFramework.Core.GregNativeEventHooks`** |
-| **Legacy-Aliase** | Alte String-Schreibweisen → kanonisches **`greg.*`**. | **`GregCompatBridge`** (+ optional Einträge in **`greg_hooks.json`** `legacy`) |
+| Surface | Role | Typical entry |
+|---------|------|----------------|
+| **`greg.*` hook strings** | Canonical names for Harmony/mod code; registry in **`greg_hooks.json`**. | `GregEventDispatcher.On("greg....", handler, modId)` in **`gregFramework.Core`** |
+| **Native pipeline (`EventIds` → `greg.*`)** | Same gameplay moments as FFI events; centralized in **`GregNativeEventHooks`**. | Constants / `Resolve(uint)` on **`gregFramework.Core.GregNativeEventHooks`** |
+| **Legacy aliases** | Old spellings → canonical **`greg.*`**. | **`GregCompatBridge`** (+ optional **`legacy`** entries in **`greg_hooks.json`**) |
 
-Neue **öffentliche Dokumentations-IDs** folgen weiterhin **`FMF.<Domain>.*`** — siehe [FMF hook naming](/wiki/reference/fmf-hook-naming). Die **Laufzeit** für die native Kette ist **`greg.*`** wie in **`GregNativeEventHooks`** und **`greg_hooks.json`**.
+New **documentation** identifiers still follow **`FMF.<Domain>.*`** — see [FMF hook naming](/wiki/reference/fmf-hook-naming). **Runtime** strings for the native chain are **`greg.*`** as defined by **`GregNativeEventHooks`** and **`greg_hooks.json`**.
 
-## `greg_hooks.json` (Version 2)
+## `greg_hooks.json` (version 2)
 
-| Pfad | Rolle |
-|------|--------|
-| **Repo-Root** `greg_hooks.json` | Quelle der Wahrheit: `name`, `patchTarget`, `strategy`, `payloadSchema`, optional `legacy`. |
-| **Neben `FrikaModdingFramework.dll`** | Wird per `FrikaMF.csproj` aus dem Monorepo-Root kopiert, damit **`GregCompatBridge`** Legacy-Namen auflösen kann. |
+| Path | Role |
+|------|------|
+| **Repo root** `greg_hooks.json` | Source of truth: `name`, `patchTarget`, `strategy`, `payloadSchema`, optional `legacy`. |
+| **Next to `FrikaModdingFramework.dll`** | Copied from the monorepo root on build so **`GregCompatBridge`** can resolve legacy names. |
 
-Regenerieren: `gregCore/scripts/Generate-GregHooksFromIl2CppDump.ps1` bei geändertem Il2Cpp-/Interop-Stand.
+Regenerate: `gregCore/scripts/Generate-GregHooksFromIl2CppDump.ps1` when Il2Cpp/interop inputs change.
 
 ## `GregEventDispatcher` / SDK
 
-Implementierung: **`gregCore/framework/src/Sdk/GregEventDispatcher.cs`** (`namespace gregFramework.Core`). API: **`On` / `Once` / `Off` / `Emit`**, **`OnCancelable` / `InvokeCancelable`**, **`UnregisterAll(modId)`**.
+Implementation: **`gregCore/framework/src/Sdk/GregEventDispatcher.cs`** (`namespace gregFramework.Core`). API: **`On` / `Once` / `Off` / `Emit`**, **`OnCancelable` / `InvokeCancelable`**, **`UnregisterAll(modId)`**.
 
-Hook-Strings stabil mit **`GregHookName.Create(GregDomain.*, "Action")`** oder den **`GregNativeEventHooks.*`**-Konstanten bauen.
+Build stable hook strings with **`GregHookName.Create(GregDomain.*, "Action")`** or **`GregNativeEventHooks.*`** constants.
 
-## Native Events (`EventIds`)
+## Native events (`EventIds`)
 
-- **`EventIds`** und **`EventDispatcher`:** `gregCore/framework/src/ModLoader/EventDispatcher.cs` (Rust-kompatible numerische IDs).
-- **Mapping → `greg.*`:** **`GregNativeEventHooks`** (`gregCore/framework/src/Sdk/GregNativeEventHooks.cs`); Emission über **`GregHookIntegration`** im selben ModLoader-Baum.
-- **Katalog (Wiki):** [greg hooks catalog](/wiki/reference/greg-hooks-catalog) (Generator: `gregCore/tools/Generate-GregHookCatalog.ps1`).
+- **`EventIds` and `EventDispatcher`:** `gregCore/framework/src/ModLoader/EventDispatcher.cs` (numeric ids aligned with Rust).
+- **Mapping → `greg.*`:** **`GregNativeEventHooks`** (`gregCore/framework/src/Sdk/GregNativeEventHooks.cs`); emission via **`GregHookIntegration`** in the same ModLoader tree.
+- **Wiki table:** [greg hooks catalog](/wiki/reference/greg-hooks-catalog) (generator: `gregCore/tools/Generate-GregHookCatalog.ps1`).
 
 ## Rust FFI
 
-Rust-/Native-Mods erhalten **numerische** Event-IDs; C# spiegelt dieselben Momente als **`greg.*`** über **`GregHookIntegration`**, sobald der Code läuft (auch ohne aktive FFI-Verbindung für die greg-Oberfläche). Bridge-Code: **`FfiBridge` / `FFIBridge`** unter `framework/src/ModLoader/`.
+Rust/native mods receive **numeric** event ids; C# mirrors the same moments as **`greg.*`** through **`GregHookIntegration`** while the game runs (including when the FFI connection is down for the managed **`greg.*` surface). Bridge code: **`FfiBridge` / `FFIBridge`** under `framework/src/ModLoader/`.
 
-## MelonLoader-Einstiege (eine DLL)
+## MelonLoader entry points (one DLL)
 
-Je nach Build können mehrere **`MelonMod`**-Typen in derselben Assembly liegen (z. B. Framework-Hauptplugin, AssetExporter-Pfade) — **`MelonInfo`** / **`MelonGame`** in den Quellen prüfen.
+Depending on the build, multiple **`MelonMod`** types may ship in the same assembly (e.g. main framework plugin vs. AssetExporter paths) — check **`MelonInfo`** / **`MelonGame`** in source.
 
 ## Tooling
 
-- **MCP:** `greg_hook_registry`, `greg_hook_search`, … mit `dataRoot` → **`gregCore/`** — [MCP server](/wiki/reference/mcp-server).
-- **Legacy-Seite [FMF hooks catalog](/wiki/reference/fmf-hooks-catalog)** verweist nur noch auf **`GregNativeEventHooks`** / greg-Katalog (kein `HookNames.cs` mehr).
+- **MCP:** `greg_hook_registry`, `greg_hook_search`, … with `dataRoot` → **`gregCore/`** — [MCP server](/wiki/reference/mcp-server).
+- **[FMF hooks catalog](/wiki/reference/fmf-hooks-catalog)** is now a **short redirect** to **`GregNativeEventHooks`** / [greg hooks catalog](/wiki/reference/greg-hooks-catalog) (the old **`HookNames.cs`** table is gone).
 
-## Siehe auch
+## See also
 
 - [Repository architecture](/wiki/framework/architecture)
-- [FFI, hooks & Lua (Hub)](/wiki/topics/ffi-and-hooks/overview)
+- [FFI, hooks & Lua (hub)](/wiki/topics/ffi-and-hooks/overview)
 - [Getting started](/wiki/getting-started)

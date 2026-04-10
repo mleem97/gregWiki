@@ -12,7 +12,7 @@ export default function PlayersPage(): JSX.Element {
   return (
     <Layout
       title="For players"
-      description="Install and use Data Center Simulator mods: MelonLoader, Greg Mod Manager, Workshop, and troubleshooting."
+      description="Install and use Data Center mods: MelonLoader, Greg Mod Manager, Workshop, and troubleshooting."
     >
       <main className="bg-background text-on-surface mx-auto max-w-3xl px-4 py-16 font-sans">
         <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">
@@ -35,7 +35,7 @@ export default function PlayersPage(): JSX.Element {
           <ul className="list-inside list-disc space-y-2 text-on-surface-variant">
             <li>
               <a href={STEAM_STORE} className="text-primary hover:underline">
-                Data Center Simulator
+                Data Center
               </a>{' '}
               on Steam (AppID 4170200)
             </li>
@@ -50,7 +50,7 @@ export default function PlayersPage(): JSX.Element {
           <h2 className="mb-3 font-headline text-2xl font-bold">MelonLoader</h2>
           <ol className="list-inside list-decimal space-y-2 text-on-surface-variant">
             <li>Download the latest MelonLoader installer from the official MelonLoader GitHub.</li>
-            <li>Run it, select <strong>Data Center Simulator</strong>, choose the <strong>IL2CPP</strong> profile.</li>
+            <li>Run it, select <strong>Data Center</strong>, choose the <strong>IL2CPP</strong> profile.</li>
             <li>Start the game once and exit so interop assemblies are generated.</li>
             <li>If something fails, check <code className="text-sm">MelonLoader/Latest.log</code> in the game folder.</li>
           </ol>

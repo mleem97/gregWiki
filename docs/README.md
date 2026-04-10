@@ -8,7 +8,7 @@ This folder is the **single source of truth** for the public Docusaurus site. Th
 |------|------|--------|
 | **Landing** | [`intro` → `/wiki`](/wiki) | Mod author wiki home. |
 | **Topics hub** | [`topics/`](./topics/index.md) | Cross-cutting overviews (security, FFI, multiplayer, assets, meta). |
-| **Mods & plugins** | [`mods/`](./mods/), [`plugins/`](./plugins/) | Gameplay mods (`FMF.*`) and framework plugins (`FFM.Plugin.*`). |
+| **Mods & plugins** | [`mods/`](./mods/), [`plugins/`](./plugins/) | Gameplay mods (`FMF.*`) and framework plugins (`greg.Plugin.*` / `FFM.Plugin.*` depending on repo). |
 | **Releases** | [`releases/`](./releases/) | Per-artifact release notes. |
 | **Reference** | [`reference/`](./reference/) | Hooks, naming, MCP, generated catalogs. |
 | **Contributors** | [`contributors/`](./contributors/) | Repo layout, Docusaurus workflow, design system. |

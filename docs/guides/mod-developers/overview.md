@@ -13,6 +13,6 @@ description: Getting started, mod config, debugging — curated docs for FMF mod
 - [Getting started](/wiki/getting-started) and [Documentation hub](/wiki/developers)
 - [Framework overview](/wiki/mods/framework) — runtime capabilities and repo layout
 - [FMF hooks](/wiki/framework/fmf-hooks) — hook surface (generated article)
-- [FMF hook naming](/wiki/reference/fmf-hook-naming) and [hooks catalog](/wiki/reference/fmf-hooks-catalog)
+- [FMF hook naming](/wiki/reference/fmf-hook-naming); runtime map: [greg hooks catalog](/wiki/reference/greg-hooks-catalog) (see also [FMF hooks catalog (legacy redirect)](/wiki/reference/fmf-hooks-catalog))
 - [Contributor workshop](/wiki/guides/contributors/contributor-workshop) — builds, CI, and PRs
 - [Mods](/wiki/mods/) — gameplay mods (`FMF.*`) and release pages

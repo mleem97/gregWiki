@@ -9,7 +9,7 @@ sidebar_label: FMF.HexLabelMod
 
 ## Purpose
 
-Standalone MelonLoader mod for **Data Center** (Waseku) that overlays the hex color code of each `CableSpinner` and `Rack` directly in-world, so you can identify cable and rack colors at a glance without opening any menu.
+Standalone MelonLoader mod for **Data Center** that overlays the hex color code of each `CableSpinner` and `Rack` directly in-world, so you can identify cable and rack colors at a glance without opening any menu.
 
 Rewritten from the former root `HexLabelMod` for the FrikaModdingFramework workflow, now running fully standalone.
 

@@ -13,7 +13,7 @@ The repository **stays one Git repo**. The goal is **clear boundaries** between 
 
 | Top-level | Purpose |
 |-----------|---------|
-| `framework/` | Core MelonLoader framework (`framework/FrikaMF.csproj`, `framework/FrikaMF/`, entry `Main.cs`) |
+| `gregCore/framework/` | Core MelonLoader framework (`gregCore/framework/FrikaMF.csproj`, `Sdk/`, `ModLoader/`, entry `framework/Main.cs`) |
 | `mods/` | Gameplay mods (`FMF.Mod.*`, `FMF.*.dll` style) |
 | `plugins/` | FFM plugins (`FFM.Plugin.*`) |
 | `Templates/` | Scaffolds for new mods/plugins |

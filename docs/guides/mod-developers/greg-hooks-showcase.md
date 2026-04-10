@@ -31,7 +31,7 @@ Authoritative documentation: [greg hooks registry (IL2CPP)](/wiki/reference/greg
 **Pattern A — dynamic (anonymous types from compiler):**
 
 ```csharp
-private static void OnMoneyChanged(object payload)
+private static void OnCoinChanged(object payload)
 {
     dynamic p = payload;
     float delta = (float)p.coinChangeAmount;
@@ -62,7 +62,7 @@ Use **`GregPayload.Dump(payload)`** for one-line debug strings.
 
 ## Prefix hooks and cancellation
 
-Hooks that run **before** the original method (Harmony Prefix) can call **`GregEventDispatcher.InvokeCancelable(hookName, payload)`**. Mods register **`GregEventDispatcher.OnCancelable(hookName, p => bool, modId)`**; if any handler returns `false`, the integration can skip the original (e.g. `Player.UpdateCoin`).
+Hooks that run **before** the original method (Harmony Prefix) can call **`GregEventDispatcher.InvokeCancelable(hookName, payload)`**. Mods register **`GregEventDispatcher.OnCancelable(hookName, p => bool, modId)`**; if any handler returns `false`, the integration can skip the original (e.g. `Player.UpdateCoin`). Der Showcase nutzt **`GregNativeEventHooks.PlayerCoinChanged`** (`greg.PLAYER.CoinChanged`).
 
 Showcase: enable `blockNegativeTransactions` in `content/modconfig.json` to register a veto on large negative `coinChangeAmount` values.
 

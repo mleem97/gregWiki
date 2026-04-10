@@ -101,7 +101,7 @@ export default function HomePage(): JSX.Element {
   return (
     <Layout
       title="Home"
-      description="gregFramework: player help at /players, mod catalog, and mod-author wiki at /wiki for Data Center Simulator."
+      description="gregFramework: player help at /players, mod catalog, and mod-author wiki at /wiki for Data Center."
     >
       <main className="bg-background text-on-surface font-sans min-h-screen editorial-bleed bg-hero-gradient">
         <section className="hero-motion-wrap relative flex min-h-[72vh] flex-col items-center justify-center overflow-hidden px-4 py-24 text-center">

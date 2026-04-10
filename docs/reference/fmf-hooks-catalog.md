@@ -5,31 +5,31 @@ slug: /reference/fmf-hooks-catalog
 description: Redirect — native EventId → greg.* mapping now lives in GregNativeEventHooks; see greg hooks catalog.
 ---
 
-<!-- Former auto-generated page; content replaced — do not restore old HookNames tables. -->
+<!-- Former auto-generated page; replaced — do not restore old HookNames tables. -->
 
 # FMF hooks catalog (legacy)
 
-Die frühere, aus **`HookNames.cs`** generierte Tabelle wurde **entfernt**. Die Laufzeit mappt numerische **`EventIds`** heute zentral über **`GregNativeEventHooks`** auf kanonische **`greg.*`**-Strings (siehe auch **`GregCompatBridge`** für veraltete Schreibweisen).
+The old table generated from **`HookNames.cs`** has been **removed**. Runtime mapping of numeric **`EventIds`** to canonical **`greg.*`** strings is centralized in **`GregNativeEventHooks`** (see **`GregCompatBridge`** for deprecated spellings).
 
-## Aktuelle Quellen
+## Current sources
 
-| Thema | Wo |
-|--------|-----|
-| **EventId → `greg.*` (FFI / natives Pipeline)** | [greg hooks catalog](./greg-hooks-catalog.md) — generiert aus `gregCore/framework/src/Sdk/GregNativeEventHooks.cs` und `EventIds` in `EventDispatcher.cs` |
-| **Il2Cpp-Hook-Registry (JSON)** | `greg_hooks.json` im Repo-Root; Kopie neben `FrikaModdingFramework.dll` beim Build |
-| **Doku-Politik `FMF.*`** | [FMF hook naming](./fmf-hook-naming.md) — Namenskonvention für neue *Dokumentations*-IDs (nicht 1:1 jedes Runtime-Strings) |
+| Topic | Where |
+|-------|--------|
+| **EventId → `greg.*` (FFI / native pipeline)** | [greg hooks catalog](./greg-hooks-catalog.md) — generated from `gregCore/framework/src/Sdk/GregNativeEventHooks.cs` and `EventIds` in `EventDispatcher.cs` |
+| **Il2Cpp hook registry (JSON)** | `greg_hooks.json` at repo root; copied next to `FrikaModdingFramework.dll` on build |
+| **`FMF.*` documentation policy** | [FMF hook naming](./fmf-hook-naming.md) — naming for new *documentation* IDs (not byte-for-byte every runtime string) |
 
-## Katalog neu erzeugen
+## Regenerate the wiki table
 
-Im **gregCore**-Repo (gregWiki-Checkout liegt typischerweise **nebendran**):
+From the **gregCore** repo (with **gregWiki** checked out **next to** **gregCore**):
 
 ```powershell
 ./tools/Generate-GregHookCatalog.ps1
 ```
 
-Aktualisiert `gregWiki/docs/reference/greg-hooks-catalog.md`.
+Updates `gregWiki/docs/reference/greg-hooks-catalog.md`.
 
-## Siehe auch
+## See also
 
 - [greg hooks catalog](./greg-hooks-catalog.md)
 - [Greg hooks & event runtime](/wiki/framework/greg-hooks-and-events)

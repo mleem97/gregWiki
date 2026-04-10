@@ -15,7 +15,7 @@ The **Hex Label** mod adds in-world hex color labels for cable spinners and rack
 | **Assembly** | `FMF.HexLabelMod.dll` |
 | **Version** | `00.01.0009` |
 | **Author** | mleem97 |
-| **Game** | Waseku — Data Center (App 4170200) |
+| **Game** | Data Center (App 4170200) |
 | **Workshop Tags** | `modded`, `melonloader`, `mod` |
 
 ## Downloads

@@ -2,7 +2,7 @@
 
 const config = {
   title: 'gregFramework',
-  tagline: 'Mod-author documentation for Data Center Simulator; players use /players and the mod catalog.',
+  tagline: 'Mod-author documentation for Data Center; players use /players and the mod catalog.',
   favicon: 'img/logo.svg',
   url: 'https://frikadellental.de',
   baseUrl: '/',
@@ -264,7 +264,7 @@ const config = {
           ],
         },
       ],
-      copyright: `Copyright ${new Date().getFullYear()} <a href="https://meyermedia.eu" target="_blank" rel="noopener noreferrer">Meyer Media</a><br/>This wiki is a community project and is not affiliated with WASEKU or the game.`,
+      copyright: `Copyright ${new Date().getFullYear()} <a href="https://meyermedia.eu" target="_blank" rel="noopener noreferrer">Meyer Media</a><br/>This wiki is a community project and is not affiliated with the developer or publisher of Data Center.`,
     },
   },
 };

@@ -15,7 +15,7 @@ Provides guardrails around console input handling and accidental interactions.
 | **Assembly** | `FMF.ConsoleInputGuard.dll` |
 | **Version** | `00.01.0001` |
 | **Author** | mleem97 |
-| **Game** | Waseku — Data Center (App 4170200) |
+| **Game** | Data Center (App 4170200) |
 | **Workshop Tags** | `modded`, `melonloader`, `mod` |
 | **Workshop Content Path** | `content/Mods/` |
 | **Needs FMF** | No (standalone MelonLoader mod) |
