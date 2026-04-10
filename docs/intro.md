@@ -1,47 +1,29 @@
 ---
 id: intro
-title: gregFramework documentation
+title: Documentation
 slug: /docs
-description: Entry point for the split-repo workspace — core, mods, extensions, and this wiki.
+description: Help for Data Center players using mods — install, Workshop, troubleshooting. Technical docs for authors are separated.
 ---
 
-This documentation describes the **current split layout**: a local `gregFramework/` workspace with separate repositories for **core**, **mods**, **extensions**, and **wiki**. It is written for **players**, **mod developers**, **contributors**, and **sponsors**.
+# Welcome
 
-## Who is this for?
+**gregFramework** is the modding stack for *Data Center*. If you **play with mods**, you only need a short path: install, browse the Workshop, and fix common issues.
 
-| Audience | Start here |
-|----------|------------|
-| **Players** — install, play, troubleshoot | [End users (hub)](./guides/players/overview.md) · [End-user workshop](./guides/players/enduser-workshop.md) |
-| **Mod developers** — build mods, hooks, debugging | [Mod developers (hub)](./guides/mod-developers/overview.md) · [Framework](./mods/framework.md) · [FMF hooks](/wiki/framework/fmf-hooks) |
-| **Contributors** — PRs, docs, plugins, CI | [Contributors (workflow)](./guides/contributors/topics-overview.md) · [Contributor workshop](./guides/contributors/contributor-workshop.md) |
-| **Sponsors** — support & transparency | [Sponsors (hub)](./guides/sponsors/overview.md) · [GitHub Sponsors](https://github.com/sponsors) (project policies in repo `LICENSE` / `CONTRIBUTING`) |
+## Players — start here
 
-**Experience tracks** (newbies → pros): [By audience](./guides/players/audiences-overview.md) → [Newbies](/wiki/audiences/newbies), [Intermediates](/wiki/audiences/intermediates), [Professionals](/wiki/audiences/professionals).
+1. **[End users](/wiki/guides/players/overview)** — install, update, troubleshooting  
+2. **[WorkshopManager guide](/wiki/guides/players/enduser-workshop)** — browse and install mods  
+3. **[Release channels](/wiki/reference/release-channels)** — Steam Workshop vs GitHub  
+4. **[WorkshopManager (tool)](/wiki/tools/workshop-uploader)** — desktop app for Workshop content  
 
-## Repository hub
+[**Mod catalog**](/mods) lists modules with links to docs and downloads.
 
-- [Workspace map](./workspace/index.mdx) — how folders map to repos
-- Core: `gregCore/` (`framework/FrikaMF`, `mcp-server/`, `bridges/gregSta.RustBridge/`)
-- Mods: `gregMod.<Name>/` (split repos, directly under `gregFramework/`)
-- Extensions (FFM plugins): `gregExt.<Name>/` (split repos, directly under `gregFramework/`)
-- Workshop app: `gregModmanager/` (Gregtools Modmanager — `WorkshopUploader.exe`)
-- Exporter / templates: `gregDataCenterExporter/`
-- Wiki: `gregWiki/` (this site)
+## Mod authors, plugins, and repo work
 
-## Hooks and releases
+Everything for **building mods**, **FFM plugins**, hooks, CI, and **contributing** lives in one place:
 
-- [FMF hook naming](./reference/fmf-hook-naming.md) — `FMF.<Domain>.…` and legacy `FFM.*`
-- [FMF hooks catalog](./reference/fmf-hooks-catalog.md) — generated from core `HookNames.cs`
-- [Release channels](./reference/release-channels.md) — Steam Workshop vs GitHub (beta)
-- [MCP server](./reference/mcp-server.md) — optional LLM/IDE tooling over docs + `fmf_hooks.json`
+**[Developers & contributors →](/wiki/developers)**
 
-## Layout (contributors)
+Technical docs follow one stack model: **ModManager (MAUI) → framework / SDK → plugins → mods** — explained in **[System architecture & documentation principles](/wiki/meta/system-architecture-principles)**.
 
-- [Repo inventory](./contributors/repo-inventory.md) — project and repository overview
-- Split naming: `gregMod.<Name>`, `gregExt.<Name>`, `gregSta.<Name>` (Rust bridge repo), plus apps like `gregModmanager/`, `gregDataCenterExporter/`, `gregIPAM/`, `gregStore/`
-
-## Source model
-
-- **Authoring:** Markdown/MDX lives in the **gregWiki** repository.
-- **Technical source of truth:** runtime and bridge details come from **gregCore**.
-- **Rust bridge:** `gregCore/bridges/gregSta.RustBridge/`.
+Do not use the sidebar’s technical sections unless you are developing — the default view stays short on purpose.

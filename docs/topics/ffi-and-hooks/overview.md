@@ -6,6 +6,8 @@ description: FFI, hook lists, naming — curated reference for mod and plugin au
 
 # FFI, hooks & Lua
 
+The framework is intended to act as a **hook proxy**: Unity / IL2CPP events are surfaced as **stable framework events** for mods — see [System architecture & documentation principles](/wiki/meta/system-architecture-principles).
+
 - [FMF hooks](/wiki/framework/fmf-hooks) — generated hook surface
 - [FMF hooks catalog](/wiki/reference/fmf-hooks-catalog) — strings from core sources
 - [FMF hook naming](/wiki/reference/fmf-hook-naming) — `FMF.*` vs legacy `FFM.*`

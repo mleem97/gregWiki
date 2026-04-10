@@ -26,5 +26,6 @@ That applies to anything shipped as a **`gregMod.*`**, **`gregExt.*`**, or **`FF
 
 ## See also
 
+- [System architecture & documentation principles](/wiki/meta/system-architecture-principles) — stack model and documentation rules
 - [Framework](/wiki/mods/framework) — runtime surface for mod authors
 - [FMF hook naming](/wiki/reference/fmf-hook-naming)

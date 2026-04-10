@@ -12,4 +12,4 @@ Hosts standalone player-model specific behavior and integration.
 ## Sources
 
 - Module path: `gregExt.PlayerModels/`
-- Debug docs: [`Mod Developer Debug`](/wiki/legacy/wiki-import/Mod-Developer-Debug)
+- Debug: [Mod developers (hub)](/wiki/guides/mod-developers/overview)

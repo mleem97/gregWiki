@@ -12,4 +12,4 @@ Focuses on standalone web UI bridge integration flows.
 ## Sources
 
 - Module path: `gregExt.WebUIBridge/`
-- Reference: [`Web UI Bridge (DC2WEB)`](/wiki/legacy/wiki-import/Web-UI-Bridge)
+- Related: [Multiplayer & networking hub](/wiki/topics/multiplayer-and-networking/overview)

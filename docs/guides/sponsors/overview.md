@@ -1,19 +1,19 @@
 ---
 title: Sponsors & support
 sidebar_label: Sponsors (hub)
-description: Für Unterstützerinnen und Unterstützer — Sponsoring, Transparenz, Anlaufstellen.
+description: For supporters — sponsorship, transparency, where to start.
 ---
 
 # Sponsors & support
 
-Die Community finanziert u. a. Infrastruktur, Tools und Zeit für Pflege der Doku und des Frameworks. Hier startest du als **potenzielle Sponsorin oder Sponsor** (oder als Spielerin, die nur informieren möchte, wohin Unterstützung fließt).
+The community funds infrastructure, tools, and time to maintain documentation and the framework. Use this page if you are a **potential sponsor** (or a player who wants to see where support goes).
 
-## Kurzüberblick
+## At a glance
 
-- **GitHub:** [mleem97/gregFramework](https://github.com/mleem97/gregFramework) — Sponsoring- und Community-Richtlinien stehen in `README`, `LICENSE` und `CONTRIBUTING`.
-- **Transparenz:** Release-Notes und [Release-Kanäle](/wiki/reference/release-channels) beschreiben, wie Builds verteilt werden.
-- **Rechtliches:** [Security & legal](/wiki/topics/security-legal/overview) — verbindliche Texte liegen im Repository, nicht nur im Wiki.
+- **GitHub:** [mleem97/gregFramework](https://github.com/mleem97/gregFramework) — sponsorship and community policies are in `README`, `LICENSE`, and `CONTRIBUTING`.
+- **Transparency:** Release notes and [Release channels](/wiki/reference/release-channels) describe how builds are distributed.
+- **Legal:** [Security & legal](/wiki/topics/security-legal/overview) — binding text lives in the repository, not only in the wiki.
 
-:::note Zielgruppe
-Diese Seite richtet sich an **Sponsorinnen, Sponsoren und Fördernde**. Spielerinnen und Spieler finden den Einstieg unter [End users](/wiki/guides/players/overview); Mod-Autoren unter [Mod developers](/wiki/guides/mod-developers/overview); Mitwirkende am Repo unter [Contributors (workflow)](/wiki/guides/contributors/topics-overview).
+:::note Audience
+This page is for **sponsors and supporters**. Players start at [End users](/wiki/guides/players/overview); mod authors at [Mod developers](/wiki/guides/mod-developers/overview); repo contributors at [Contributors (workflow)](/wiki/guides/contributors/topics-overview).
 :::

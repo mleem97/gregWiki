@@ -25,9 +25,7 @@ function useLocaleDropdownUtils() {
   const getLocaleConfig = (locale: string) => {
     const localeConfig = localeConfigs[locale];
     if (!localeConfig) {
-      throw new Error(
-        `Docusaurus bug, no locale config found for locale=${locale}`,
-      );
+      throw new Error(`Docusaurus bug, no locale config found for locale=${locale}`);
     }
     return localeConfig;
   };
@@ -49,10 +47,7 @@ function useLocaleDropdownUtils() {
 
   return {
     getURL: (locale: string, options: {queryString: string | undefined}) => {
-      const finalSearch = mergeSearchStrings(
-        [search, options.queryString],
-        'append',
-      );
+      const finalSearch = mergeSearchStrings([search, options.queryString], 'append');
       return `${getBaseURLForLocale(locale)}${finalSearch}${hash}`;
     },
     getLabel: (locale: string) => {
@@ -85,11 +80,7 @@ export default function LocaleDropdownNavbarItem({
       target: '_self',
       autoAddBaseUrl: false,
       className:
-        locale === currentLocale
-          ? mobile
-            ? 'menu__link--active'
-            : 'dropdown__link--active'
-          : '',
+        locale === currentLocale ? (mobile ? 'menu__link--active' : 'dropdown__link--active') : '',
     };
   });
 
@@ -103,15 +94,11 @@ export default function LocaleDropdownNavbarItem({
       })
     : utils.getLabel(currentLocale);
 
-  const iconOnlyDesktop =
-    !mobile && String(className ?? '').includes('nav-icon-only');
+  const iconOnlyDesktop = !mobile && String(className ?? '').includes('nav-icon-only');
 
   const label: ReactNode = (
     <>
-      <IoLanguage
-        className={iconOnlyDesktop ? styles.iconOnly : styles.iconLanguage}
-        aria-hidden
-      />
+      <IoLanguage className={iconOnlyDesktop ? styles.iconOnly : styles.iconLanguage} aria-hidden />
       {mobile || !iconOnlyDesktop ? (
         dropdownLabel
       ) : (

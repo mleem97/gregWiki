@@ -24,13 +24,7 @@ function walk(dir) {
   }
 }
 
-const roots = [
-  path.resolve(import.meta.dirname, '../docs/legacy/wiki-import'),
-  path.resolve(
-    import.meta.dirname,
-    '../i18n/de/docusaurus-plugin-content-docs/current/legacy/wiki-import',
-  ),
-];
+const roots = [path.resolve(import.meta.dirname, '../docs/legacy/wiki-import')];
 for (const r of roots) {
   if (fs.existsSync(r)) walk(r);
 }

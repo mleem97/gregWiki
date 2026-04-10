@@ -6,8 +6,9 @@ description: Getting started, mod config, debugging — curated docs for FMF mod
 
 # Mod developers
 
-**Mod-Autorinnen und -Autoren** — eigene Mods bauen (Hooks, Konfiguration, Debug). Überblick über alle Rollen: [By audience](/wiki/guides/players/audiences-overview).
+**Mod authors** — build your own mods (hooks, configuration, debugging). Role overview: [By audience](/wiki/guides/players/audiences-overview).
 
+- [System architecture & documentation principles](/wiki/meta/system-architecture-principles) — layer model **ModManager → Framework → Plugins → Mods**, priorities, wiki rules
 - [By audience — intermediates](/wiki/audiences/intermediates) and [professionals](/wiki/audiences/professionals)
 - [Framework overview](/wiki/mods/framework) — runtime capabilities and repo layout
 - [FMF hooks](/wiki/framework/fmf-hooks) — hook surface (generated article)

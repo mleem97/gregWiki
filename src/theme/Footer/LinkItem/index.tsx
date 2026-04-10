@@ -48,7 +48,8 @@ export default function FooterLinkItem({item}: Props): ReactNode {
         : {
             to: toUrl,
           })}
-      {...props}>
+      {...props}
+    >
       {icon ? (
         <span className="footer-link-with-icon">
           {icon}

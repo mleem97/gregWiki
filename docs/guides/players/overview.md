@@ -6,7 +6,7 @@ description: FAQs, install paths, troubleshooting — entry point for players us
 
 # End users
 
-**Spielerinnen und Spieler** — Mods installieren und spielen, ohne am Framework mitzuentwickeln. Überblick über alle Rollen: [By audience](/wiki/guides/players/audiences-overview).
+**Players** — install and play with mods without developing the framework. Role overview: [By audience](/wiki/guides/players/audiences-overview).
 
 - [By audience — newbies](/wiki/audiences/newbies)
 - [End-user workshop](/wiki/guides/players/enduser-workshop) — install, updates, Workshop

@@ -97,7 +97,8 @@ export const moduleCatalog: ModuleEntry[] = [
     name: 'FMF.ModPathRedirector',
     repoFolder: 'gregMod.PathRedirector',
     type: 'plugin',
-    description: 'MelonLoader plugin: waits for each subscribed Workshop item (Steam + StreamingAssets/Mods/workshop_*) before MelonMods load.',
+    description:
+      'MelonLoader plugin: waits for each subscribed Workshop item (Steam + StreamingAssets/Mods/workshop_*) before MelonMods load.',
     version: '1.5.0',
     author: 'DataCenterExporter / gregFramework Community',
     languages: ['C#'],

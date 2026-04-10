@@ -1,121 +1,80 @@
-import type { HomepageContent, HomepageDocLink } from './types';
+import type {HomepageContent, HomepageDocLink} from './types';
 
-/** English link hub — reused for locales without dedicated translations. */
+/** Player-first links — technical docs live under /wiki/developers */
 export const sharedKnowledgeLinksEn: HomepageDocLink[] = [
-  { title: 'Wiki Overview', description: 'Canonical docs entry under /wiki.', link: '/wiki' },
+  {title: 'Wiki home', description: 'Short entry — players vs developers.', link: '/wiki'},
   {
-    title: 'Framework Core',
-    description: 'Runtime hooks, bridge, events, and architecture.',
-    link: '/wiki/mods/framework',
-  },
-  {
-    title: 'Plugins (FFM)',
-    description: 'FFM.Plugin.* docs and release pages.',
-    link: '/wiki/plugins/',
-  },
-  { title: 'Mods (FMF)', description: 'Gameplay mods, releases, and module docs.', link: '/wiki/mods/' },
-  {
-    title: 'FMF Hooks Catalog',
-    description: 'Hook strings and event IDs generated from core sources.',
-    link: '/wiki/reference/fmf-hooks-catalog',
-  },
-  {
-    title: 'Release Channels',
-    description: 'Steam Workshop vs GitHub for discovery and betas.',
-    link: '/wiki/reference/release-channels',
-  },
-  {
-    title: 'Unified Roadmap',
-    description: 'Consolidated planning with duplicate tracks removed.',
-    link: '/wiki/roadmap/unified-roadmap',
-  },
-  { title: 'Mods Catalog', description: 'Dynamic /mods page with wiki and download links.', link: '/mods' },
-];
-
-export const sharedWorkflowLinksEn: HomepageDocLink[] = [
-  {
-    title: 'End-user docs',
-    description: 'Install, update, and troubleshooting paths.',
+    title: 'For players',
+    description: 'Install, update, troubleshooting.',
     link: '/wiki/guides/players/overview',
   },
   {
-    title: 'Mod developer docs',
-    description: 'Setup, debugging, and hook integration.',
+    title: 'WorkshopManager',
+    description: 'Browse and install Workshop mods.',
+    link: '/wiki/guides/players/enduser-workshop',
+  },
+  {
+    title: 'Release channels',
+    description: 'Steam Workshop vs GitHub for builds.',
+    link: '/wiki/reference/release-channels',
+  },
+  {title: 'Mod catalog', description: 'Modules with docs and download links.', link: '/mods'},
+];
+
+/** Authors & contributors — one hop to the full technical tree */
+export const sharedWorkflowLinksEn: HomepageDocLink[] = [
+  {
+    title: 'Developers (hub)',
+    description: 'Framework, mods, plugins, reference, roadmap — all technical links.',
+    link: '/wiki/developers',
+  },
+  {
+    title: 'Mod developer guide',
+    description: 'Hooks, setup, and workflow entry.',
     link: '/wiki/guides/mod-developers/overview',
   },
   {
-    title: 'Repo inventory',
-    description: 'Split-repo layout and drift notes for contributors.',
-    link: '/wiki/contributors/repo-inventory',
-  },
-  {
     title: 'Contributor workflow',
-    description: 'Standards, CI, and documentation workflow.',
+    description: 'Docs site and repo conventions.',
     link: '/wiki/contributors/docusaurus-workflow',
-  },
-  {
-    title: 'Plugin security audit',
-    description: 'Submission and malicious-code review process.',
-    link: '/wiki/contributors/plugin-submission-audit',
   },
 ];
 
 export const sharedKnowledgeLinksDe: HomepageDocLink[] = [
-  { title: 'Wiki-Übersicht', description: 'Einstieg unter /wiki.', link: '/wiki' },
+  {title: 'Wiki-Start', description: 'Kurzüberblick — Spieler vs. Entwickler.', link: '/wiki'},
   {
-    title: 'Framework-Core',
-    description: 'Runtime-Hooks, Bridge, Events und Architektur.',
-    link: '/wiki/mods/framework',
+    title: 'Für Spieler',
+    description: 'Installation, Updates, Fehlerbehebung.',
+    link: '/wiki/guides/players/overview',
   },
   {
-    title: 'Plugins (FFM)',
-    description: 'FFM.Plugin.*-Doku und Release-Seiten.',
-    link: '/wiki/plugins/',
-  },
-  { title: 'Mods (FMF)', description: 'Gameplay-Mods, Releases und Modul-Doku.', link: '/wiki/mods/' },
-  {
-    title: 'FMF-Hooks-Katalog',
-    description: 'Hook-Strings und Event-IDs aus den Core-Quellen.',
-    link: '/wiki/reference/fmf-hooks-catalog',
+    title: 'WorkshopManager',
+    description: 'Workshop-Mods suchen und installieren.',
+    link: '/wiki/guides/players/enduser-workshop',
   },
   {
     title: 'Release-Kanäle',
-    description: 'Steam Workshop vs GitHub für Discovery und Betas.',
+    description: 'Steam Workshop vs GitHub.',
     link: '/wiki/reference/release-channels',
   },
-  {
-    title: 'Einheitliche Roadmap',
-    description: 'Zusammengeführte Planung ohne doppelte Tracks.',
-    link: '/wiki/roadmap/unified-roadmap',
-  },
-  { title: 'Mods-Katalog', description: 'Dynamische /mods-Seite mit Wiki- und Download-Links.', link: '/mods' },
+  {title: 'Mod-Katalog', description: 'Module mit Doku- und Download-Links.', link: '/mods'},
 ];
 
 export const sharedWorkflowLinksDe: HomepageDocLink[] = [
   {
-    title: 'Endnutzer-Doku',
-    description: 'Installation, Updates und Fehlerbehebung.',
-    link: '/wiki/guides/players/overview',
+    title: 'Entwickler (Hub)',
+    description: 'Framework, Mods, Plugins, Referenz — alle technischen Links.',
+    link: '/wiki/developers',
   },
   {
-    title: 'Mod-Entwickler-Doku',
-    description: 'Setup, Debugging und Hook-Integration.',
+    title: 'Mod-Entwickler-Guide',
+    description: 'Hooks, Setup, Einstieg.',
     link: '/wiki/guides/mod-developers/overview',
   },
   {
-    title: 'Repo-Inventar',
-    description: 'Split-Repo-Layout und Drift-Hinweise.',
-    link: '/wiki/contributors/repo-inventory',
-  },
-  {
     title: 'Contributor-Workflow',
-    description: 'Standards, CI und Doku-Workflow.',
+    description: 'Doku-Site und Repo-Konventionen.',
     link: '/wiki/contributors/docusaurus-workflow',
-  },
-  {
-    title: 'Plugin-Security-Audit',
-    description: 'Einreichung und Review auf Schadcode.',
-    link: '/wiki/contributors/plugin-submission-audit',
   },
 ];
 
@@ -137,13 +96,13 @@ export const homepageShellEn: Pick<
   heroBadge: 'gregFramework · docs live',
   heroBrandLine1: 'greg',
   heroBrandLine2Gradient: 'Framework',
-  knowledgeSectionTitle: 'Knowledge architecture',
-  workflowSectionTitle: 'Workflows',
-  codeSectionTitle: 'Engineered for mod authors',
+  knowledgeSectionTitle: 'Players — start here',
+  workflowSectionTitle: 'Authors & contributors',
+  codeSectionTitle: 'Building on gregFramework',
   codeSectionLead:
-    'C# mods on MelonLoader, FMF plugins, and optional Rust FFI bridges — one documentation hub, versioned with the split repos.',
-  ctaDiscordTitle: 'Build with the community',
-  ctaDiscordLead: 'Ask questions, share mods, and follow framework releases alongside core development.',
+    'C# mods on MelonLoader, FFM plugins, and optional Rust bridges — details for authors are under Developers.',
+  ctaDiscordTitle: 'Community',
+  ctaDiscordLead: 'Questions about playing or building — ask in Discord.',
   ctaDiscordButton: 'Join Discord',
   knowledgeLinks: sharedKnowledgeLinksEn,
   workflowLinks: sharedWorkflowLinksEn,
@@ -167,13 +126,13 @@ export const homepageShellDe: Pick<
   heroBadge: 'gregFramework · Live-Dokumentation',
   heroBrandLine1: 'greg',
   heroBrandLine2Gradient: 'Framework',
-  knowledgeSectionTitle: 'Wissensarchitektur',
-  workflowSectionTitle: 'Arbeitsabläufe',
-  codeSectionTitle: 'Für Mod-Autoren gebaut',
+  knowledgeSectionTitle: 'Spieler — Einstieg',
+  workflowSectionTitle: 'Autoren & Contributors',
+  codeSectionTitle: 'Auf gregFramework aufbauen',
   codeSectionLead:
-    'C#-Mods auf MelonLoader, FMF-Plugins und optionale Rust-FFI-Brücken — ein Dokumentations-Hub, versioniert mit den Split-Repos.',
-  ctaDiscordTitle: 'Mit der Community bauen',
-  ctaDiscordLead: 'Fragen stellen, Mods teilen und Releases parallel zur Core-Entwicklung verfolgen.',
+    'C#-Mods auf MelonLoader, FFM-Plugins, optionale Rust-Brücken — Details für Autoren unter Entwickler.',
+  ctaDiscordTitle: 'Community',
+  ctaDiscordLead: 'Fragen zum Spielen oder Bauen — im Discord.',
   ctaDiscordButton: 'Discord beitreten',
   knowledgeLinks: sharedKnowledgeLinksDe,
   workflowLinks: sharedWorkflowLinksDe,

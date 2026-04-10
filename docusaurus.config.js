@@ -2,7 +2,7 @@
 
 const config = {
   title: 'gregFramework',
-  tagline: 'Community docs for gregFramework — Data Center mods, FMF plugins, hooks, and split-repo layout',
+  tagline: 'Player-first help for Data Center mods; full technical docs for authors under Developers.',
   favicon: 'img/logo.svg',
   url: 'https://frikadellental.de',
   baseUrl: '/',
@@ -24,10 +24,9 @@ const config = {
   ],
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'de'],
+    locales: ['en'],
     localeConfigs: {
       en: {label: 'English', htmlLang: 'en-GB'},
-      de: {label: 'Deutsch', htmlLang: 'de-DE'},
     },
   },
   presets: [
@@ -204,22 +203,14 @@ const config = {
       items: [
         {to: '/', label: 'Home', position: 'left'},
         {
-          label: 'Docs Hub',
+          label: 'Docs',
           position: 'left',
           items: [
             {to: '/wiki', label: 'Overview'},
-            {to: '/wiki/mods/framework', label: 'Framework'},
-            {to: '/wiki/plugins/', label: 'Plugins'},
-            {to: '/wiki/mods/', label: 'Mods'},
-            {to: '/wiki/roadmap/unified-roadmap', label: 'Roadmap'},
+            {to: '/wiki/guides/players/overview', label: 'For players'},
+            {to: '/wiki/developers', label: 'Developers'},
+            {to: '/mods', label: 'Mod catalog'},
           ],
-        },
-        {
-          type: 'localeDropdown',
-          className: 'nav-locale nav-right-icon nav-icon-only',
-          position: 'right',
-          dropdownItemsBefore: [],
-          dropdownItemsAfter: [],
         },
         {to: '/mods', label: 'Mods', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-mods', 'aria-label': 'Mods'},
         {href: 'https://discord.gg/greg', label: 'Discord', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-discord', 'aria-label': 'Discord'},
@@ -230,6 +221,14 @@ const config = {
     footer: {
       style: 'dark',
       links: [
+        {
+          title: 'Wiki',
+          items: [
+            {label: 'Home', to: '/wiki'},
+            {label: 'For players', to: '/wiki/guides/players/overview'},
+            {label: 'Developers', to: '/wiki/developers'},
+          ],
+        },
         {
           title: 'Community',
           items: [
@@ -251,7 +250,7 @@ const config = {
           ],
         },
       ],
-      copyright: `Copyright ${new Date().getFullYear()} <a href="https://meyermedia.eu" target="_blank" rel="noopener noreferrer">Meyer Media</a><br/>Dieses Wiki ist ein Community-Projekt und steht in keiner Verbindung zu WASEKU oder dem Spiel selbst.`,
+      copyright: `Copyright ${new Date().getFullYear()} <a href="https://meyermedia.eu" target="_blank" rel="noopener noreferrer">Meyer Media</a><br/>This wiki is a community project and is not affiliated with WASEKU or the game.`,
     },
   },
 };

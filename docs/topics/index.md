@@ -8,6 +8,8 @@ description: Thematic index — cross-cutting overviews (assets, multiplayer, se
 
 Documentation is **curated** in this repository: guides, framework articles, reference data (hook catalogs), and contributor workflow — versioned with **gregFramework** and **gregWiki**.
 
+**Stack model:** [System architecture & documentation principles](/wiki/meta/system-architecture-principles) — **ModManager → Framework → Plugins → Mods**, priorities, and author guidelines.
+
 ## Quick map
 
 | Area | Start here |

@@ -12,4 +12,4 @@ Provides export-focused tooling for asset-related workflows.
 ## Sources
 
 - Module path: `gregExt.AssetExporter/`
-- Overview: [`Standalone Mods`](/wiki/legacy/wiki-import/StandaloneMods)
+- See also: [Mods overview](/wiki/mods/)

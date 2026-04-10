@@ -1,50 +1,9 @@
-import {existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync} from 'node:fs';
-import {join, resolve} from 'node:path';
-
-const projectRoot = resolve(process.cwd());
-const gregFrameworkRoot = resolve(projectRoot, '..');
-const wikiDir = join(gregFrameworkRoot, '.wiki');
-const outDir = join(projectRoot, 'docs', 'legacy', 'wiki-import');
-
-if (!existsSync(wikiDir)) {
-  console.error(
-    `Missing ${wikiDir}. Clone or restore the GitHub Wiki working tree there, then re-run this script.\n` +
-      'Existing files under docs/legacy/wiki-import/ are left unchanged.',
-  );
-  process.exit(1);
-}
-
-mkdirSync(outDir, {recursive: true});
-
-function collectMarkdownFiles(rootDir, prefix = '') {
-  const entries = readdirSync(join(rootDir, prefix), {withFileTypes: true});
-  const results = [];
-
-  for (const entry of entries) {
-    const relativePath = prefix ? join(prefix, entry.name) : entry.name;
-    if (entry.isDirectory()) {
-      results.push(...collectMarkdownFiles(rootDir, relativePath));
-      continue;
-    }
-
-    if (entry.isFile() && entry.name.toLowerCase().endsWith('.md')) {
-      results.push(relativePath);
-    }
-  }
-
-  return results;
-}
-
-const files = collectMarkdownFiles(wikiDir);
-
-for (const file of files) {
-  const source = join(wikiDir, file);
-  const sanitizedRelative = file.replace(/\s+/g, '-');
-  const target = join(outDir, sanitizedRelative);
-  const targetDir = resolve(target, '..');
-  mkdirSync(targetDir, {recursive: true});
-  const raw = readFileSync(source, 'utf8');
-  writeFileSync(target, raw, 'utf8');
-}
-
-console.log(`Synced ${files.length} wiki files to ${outDir}`);
+/**
+ * Legacy GitHub Wiki → docs/ mirror. Removed: content now lives only under docs/ (curated).
+ * Keep this script as a no-op so old CI or docs do not reference a missing file.
+ */
+console.log(
+  '[wiki:sync] Skipped: the bulk wiki-import under docs/legacy/wiki-import/ was retired.\n' +
+    'Author and edit Markdown under docs/ in gregWiki; use git history for old mirror text.',
+);
+process.exit(0);

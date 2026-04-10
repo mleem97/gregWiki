@@ -101,4 +101,4 @@ Output lands in the standard MelonLoader `Mods/` folder as configured in the `.c
 ## Sources
 
 - Module path: `gregMod.HexLabelMod/`
-- Relatedocs: [`Standalone Mods`](/wiki/legacy/wiki-import/StandaloneMods)
+- See also: [Mods overview](/wiki/mods/)

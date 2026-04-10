@@ -12,4 +12,4 @@ Contains **sysadmin-oriented UI** features (Unity UI modernization, mod settings
 ## Sources
 
 - Module path: `gregExt.Sysadmin/`
-- Framework context: [`Framework Features & Use Cases`](/wiki/legacy/wiki-import/Framework-Features-Use-Cases)
+- Framework context: [Framework](/wiki/mods/framework)

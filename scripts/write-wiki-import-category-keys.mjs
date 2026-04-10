@@ -17,13 +17,7 @@ const pairs = [
   ['TechnicalReference/Troubleshooting', 'wiki-import-techref-troubleshooting'],
 ];
 
-const bases = [
-  path.resolve(import.meta.dirname, '../docs/legacy/wiki-import'),
-  path.resolve(
-    import.meta.dirname,
-    '../i18n/de/docusaurus-plugin-content-docs/current/legacy/wiki-import',
-  ),
-];
+const bases = [path.resolve(import.meta.dirname, '../docs/legacy/wiki-import')];
 
 for (const base of bases) {
   if (!fs.existsSync(base)) continue;

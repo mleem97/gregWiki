@@ -1,16 +1,6 @@
-# gregWiki
+# gregWiki — gregFramework documentation
 
-Docusaurus site for **gregFramework** / Data Center modding: `docusaurus.config.js`, `sidebars.js`, React under `src/`, content under [`docs/`](./docs/). Published route base path: **`/wiki`**.
-
----
-
-## Part of gregFramework
-
-This directory is part of the **[gregFramework](https://github.com/mleem97/gregFramework)** workspace. Clone sibling repositories side by side so each project lives at `gregFramework/<RepoName>/`. See the workspace [README](https://github.com/mleem97/gregFramework/blob/master/README.md) for the full layout and migration notes.
-
-**Remote:** [`mleem97/gregWiki`](https://github.com/mleem97/gregWiki) — on-disk path: `gregFramework/gregWiki/`.
-
----
+This repository contains the **Docusaurus site** (`docusaurus.config.js`, `src/`, `sidebars.js`) and all **Markdown/MDX content** under [`docs/`](./docs/). Published docs use the route base path **`/wiki`**.
 
 ## Local development
 
@@ -25,50 +15,47 @@ Production build:
 npm run build
 ```
 
-Optional: mirror the legacy GitHub Wiki — see [`docs/getting-started/documentation-layout.md`](./docs/getting-started/documentation-layout.md) and scripts `wiki:sync` / `wiki:normalize-i18n`.
-
----
+Content is edited directly under [`docs/`](./docs/). **Canonical architecture & doc rules:** [`docs/meta/system-architecture-principles.md`](./docs/meta/system-architecture-principles.md) (ModManager → Framework → Plugins → Mods). The old GitHub Wiki bulk-import scripts (`wiki:sync`, `wiki:normalize-i18n`) are no-ops; see [`docs/getting-started/documentation-layout.md`](./docs/getting-started/documentation-layout.md).
 
 ## Deployment (Coolify / CI)
 
 - **Default branch:** `main` — use this for new work and PRs.
-- **`master`:** may still exist for older deployments; in Coolify, set the branch to **`main`** when possible.
+- **`master`:** kept in sync with `main` for hosts that still clone `master` (e.g. older Coolify defaults). Prefer setting the deployment **branch to `main`** in Coolify → Application → **Git** → Branch.
 
-### Coolify (Dockerfile) — missing `/app/package.json`
+### Coolify (Dockerfile) — avoid `/app/package.json` missing
 
-The image expects **`package.json` at the image root `/app`**. That only works if the **Docker build context** is this repository (gregWiki), not a parent monorepo folder without adjustments.
+The image expects **`package.json` at the image root `/app`**. That only happens if the **Docker build context** is this repo (gregWiki), not a parent monorepo folder.
 
 | Setting | Value |
-|---------|--------|
-| **Dockerfile** | `Dockerfile` at the gregWiki root |
-| **Base directory** | **`.`** when only `gregWiki` is cloned. If gregWiki sits **next to** gregCore in the same clone, often set **`gregWiki`** as the subdirectory. |
-| **Volumes** | Do not use an empty host mount over `/app` that hides `package.json`. |
+|--------|--------|
+| **Dockerfile location** | `Dockerfile` (or `gregWiki/Dockerfile` if the Git repo is the parent workspace) |
+| **Base directory / Root directory** | **`gregWiki`** when the cloned repo contains `gregCore/`, `gregWiki/`, … next to each other. If Coolify only clones **`mleem97/gregWiki`**, base directory is **`.`** (repo root). |
+| **Do not** | Set build context to the parent `gregFramework` folder unless Dockerfile uses `COPY gregWiki/…` (this Dockerfile does not). |
+| **Volumes** | Do **not** bind-mount an empty host path over `/app` — that hides `package.json` from the image. |
 
-Symptom: `docker-entrypoint: ERROR: /app/package.json not found` → wrong context or volume.
+Symptom: `docker-entrypoint: ERROR: /app/package.json not found` → wrong build context or a bad volume on `/app`.
 
----
+## Docker
 
-## Docker (local)
-
-Build context = **this** repository (folder that contains `package.json`):
+Build context **must** be this repository root (the folder that contains `package.json`):
 
 ```bash
-cd path/to/gregWiki
+cd path/to/gregWiki   # directory that contains package.json
 docker compose up --build
+# or
+docker build -t gregwiki-docs .
+docker run --rm -p 3000:3000 gregwiki-docs
 ```
 
-If gregWiki lives inside **gregFramework**, from the workspace root:
+If the wiki lives inside a **gregFramework** workspace, run Compose from the parent folder:
 
 ```bash
 cd path/to/gregFramework
 docker compose -f docker-compose.gregwiki.yml up --build
 ```
 
-(`docker-compose.gregwiki.yml` sets `build.context: ./gregWiki`.)
+(`docker-compose.gregwiki.yml` sets `build.context: ./gregWiki` and mounts `./gregWiki` to `/app` for dev.)
 
----
+## Related repositories
 
-## See also
-
-- [gregFramework README](../README.md) — flat layout `gregFramework/{RepoName}/`
-- Source code and builds: **gregCore**, **gregMod.*** , **gregExt.*** as separate repositories (not only this documentation)
+The [`gregFramework`](https://github.com/mleem97/gregFramework) workspace groups **gregCore**, **gregMods**, **gregExtensions**, **gregWiki**, and related tools. Source-of-truth code paths for hooks and builds live in those repos, not only in this documentation tree.

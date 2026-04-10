@@ -4,7 +4,7 @@ sidebar_label: Getting started
 description: "Split-repo workspace: gregFramework layout, building the core, and where docs live."
 ---
 
-The workspace is **multi-repo** with a local `gregFramework/` folder containing standalone repositories, for example:
+The workspace is **multi-repo** with a local `gregFramework/` folder containing standalone repositories. **Logical stack:** **ModManager → framework / SDK → plugins → mods** — see [System architecture & documentation principles](/wiki/meta/system-architecture-principles).
 
 - `gregCore/` — core SDK (`gregCore/framework/FrikaMF.csproj`), MCP server under `gregCore/mcp-server/`
 - `gregMod.<Name>/` — gameplay mods (`FMF.*`), **flat** next to `gregCore/` (legacy umbrella `gregMods/` is deprecated)

@@ -5,6 +5,8 @@ sidebar_label: Framework
 
 **Language:** mod, plugin, and extension **logic must be written in C#** — see [Modding language (C# only)](/wiki/reference/modding-language-requirement).
 
+**Stack position:** gameplay **mods** sit on top of **plugins** and the **framework SDK**; the **ModManager** (MAUI) is the out-of-game front-end — see [System architecture & documentation principles](/wiki/meta/system-architecture-principles).
+
 The core `FrikaMF` runtime provides:
 
 - Harmony patch integration for gameplay hooks

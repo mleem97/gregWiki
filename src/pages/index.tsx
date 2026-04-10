@@ -69,7 +69,7 @@ export default function HomePage(): JSX.Element {
   return (
     <Layout
       title="Home"
-      description="Community documentation for gregFramework — Data Center modding, plugins, and hooks."
+      description="Help for Data Center players using mods — plus developer docs under /wiki/developers."
     >
       <main className="bg-background text-on-surface font-sans min-h-screen editorial-bleed bg-hero-gradient">
         <section className="hero-motion-wrap relative flex min-h-[72vh] flex-col items-center justify-center overflow-hidden px-4 py-24 text-center">
@@ -138,7 +138,7 @@ export default function HomePage(): JSX.Element {
             transition={{delay: reducedMotion ? 0 : 0.22}}
           >
             <Link
-              to="/wiki/mods/framework"
+              to="/wiki/guides/players/overview"
               className="btn-primary hero-glow rounded-lg px-10 py-4 text-lg"
             >
               {t.ctaStart}
