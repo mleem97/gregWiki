@@ -34,7 +34,7 @@ These folders typically sit **next to each other** in a developer workspace (see
 |---------|----------------|
 | Framework `.csproj` | `gregCore/framework/FrikaMF.csproj` (see `gregCore/FrikaMF.sln`; a root `gregCore/FrikaMF.csproj` may exist for alternate layouts) |
 | Plugins (`FFM.Plugin.*`) — authoring | `gregExt.<Name>/` (e.g. `gregExt.AssetExporter/`) |
-| Plugins — optional mirrors | `gregCore/plugins/FFM.Plugin.*` |
+| Plugins — optional mirrors | `gregCore/plugins/greg.Plugin.*` (und ältere `FFM.Plugin.*`-Spiegel je nach Branch) |
 | Mod sources (`FMF.*`) | `gregMod.<Name>/` |
 | Templates | `gregCore/Templates/` |
 | Wiki content | `gregWiki/docs/` |
@@ -71,9 +71,9 @@ Documentation is maintained in this repository under `docs/`; historical GitHub 
 
 ## Hook / event sources of truth (code)
 
-- **Runtime strings + id map:** [`gregCore/framework/FrikaMF/HookNames.cs`](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/FrikaMF/HookNames.cs) and [`EventIds.cs`](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/FrikaMF/EventIds.cs) — see [FMF hooks catalog](../reference/fmf-hooks-catalog.md).
-- **Canonical `greg.*` registry (JSON):** `gregCore/gregFramework/greg_hooks.json` — regenerate with [`scripts/Generate-GregHooksFromIl2CppDump.ps1`](https://github.com/mleem97/gregFramework/blob/main/gregCore/scripts/Generate-GregHooksFromIl2CppDump.ps1); overview [Greg hooks & event runtime](../framework/greg-hooks-and-events.md).
-- **Wiki catalog generator:** [`gregCore/tools/Generate-FmfHookCatalog.ps1`](https://github.com/mleem97/gregFramework/blob/main/gregCore/tools/Generate-FmfHookCatalog.ps1) → updates [`fmf-hooks-catalog`](../reference/fmf-hooks-catalog.md) when run from a workspace that includes **gregWiki** next to **gregCore**.
+- **Native pipeline (`EventIds` → `greg.*`):** [`gregCore/framework/src/Sdk/GregNativeEventHooks.cs`](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/src/Sdk/GregNativeEventHooks.cs) with numeric ids in [`EventDispatcher.cs` (`EventIds`)](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/src/ModLoader/EventDispatcher.cs) — wiki table: [greg hooks catalog](../reference/greg-hooks-catalog.md); generator [`gregCore/tools/Generate-GregHookCatalog.ps1`](https://github.com/mleem97/gregFramework/blob/main/gregCore/tools/Generate-GregHookCatalog.ps1).
+- **Canonical `greg.*` registry (JSON):** `greg_hooks.json` (repo root; mirrored under `gregCore/gregFramework/`) — regenerate with [`scripts/Generate-GregHooksFromIl2CppDump.ps1`](https://github.com/mleem97/gregFramework/blob/main/gregCore/scripts/Generate-GregHooksFromIl2CppDump.ps1); overview [Greg hooks & event runtime](../framework/greg-hooks-and-events.md).
+- **Legacy spellings:** [`GregCompatBridge`](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/src/Sdk/GregCompatBridge.cs) + optional `legacy` fields in `greg_hooks.json`.
 
 ## Debugging (MelonLoader, IL2CPP, Unity)
 
