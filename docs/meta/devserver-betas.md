@@ -1,6 +1,6 @@
 # DevServer API — beta channels (`gregframework.eu`)
 
-This document defines the **intended** client contract for the FrikaMF **WorkshopUploader** “Betas” panel. The server may be implemented separately; keep URLs and tokens configurable.
+This document defines the **intended** client contract for the gregCore **WorkshopUploader** “Betas” panel. The server may be implemented separately; keep URLs and tokens configurable.
 
 ## Base URL
 

@@ -18,7 +18,7 @@ The following components are built and packaged for Steam Workshop distribution:
 
 | Component | Assembly | Workshop content path | Tags |
 |-----------|----------|----------------------|------|
-| FrikaModFramework | `FrikaModdingFramework.dll` | `content/Mods/` | modded, melonloader, framework, fmf |
+| FrikaModFramework | `gregCore.dll` | `content/Mods/` | modded, melonloader, framework, fmf |
 
 ### FMF Plugins
 
@@ -57,7 +57,7 @@ The following components are built and packaged for Steam Workshop distribution:
 ### Manual installation
 
 1. Download the DLL from the Workshop or a release.
-2. Framework: place `FrikaModdingFramework.dll` in `<Data Center>/Mods/`.
+2. Framework: place `gregCore.dll` in `<Data Center>/Mods/`.
 3. Plugins: place `FFM.Plugin.*.dll` in `<Data Center>/FMF/Plugins/`.
 4. Mods: place `FMF.*.dll` in `<Data Center>/Mods/`.
 5. Start the game and check `MelonLoader/Latest.log`.
@@ -67,7 +67,7 @@ The following components are built and packaged for Steam Workshop distribution:
 ```text
 Data Center/
 ├── Mods/
-│   ├── FrikaModdingFramework.dll
+│   ├── gregCore.dll
 │   ├── FMF.ConsoleInputGuard.dll
 │   ├── FMF.GregifyEmployees.dll
 │   ├── FMF.HexLabelMod.dll
@@ -85,7 +85,7 @@ Data Center/
 │   └── ModCfg/
 └── workshop/
     ├── FrikaModFramework/
-    │   ├── content/Mods/FrikaModdingFramework.dll
+    │   ├── content/Mods/gregCore.dll
     │   └── metadata.json
     ├── FFM.Plugin.Multiplayer/
     │   ├── content/FMF/Plugins/FFM.Plugin.Multiplayer.dll
@@ -114,5 +114,5 @@ See also: [Contributor Guide](./contributor-workshop)
 |-----------|----------|
 | All mods/plugins | Data Center (Steam App 4170200) |
 | All mods/plugins | MelonLoader (IL2CPP, stable) |
-| FMF Plugins | FrikaModdingFramework.dll in Mods/ |
+| FMF Plugins | gregCore.dll in Mods/ |
 | Gregtools Modmanager | Windows 10 1809+ (self-contained, no runtime install needed) |

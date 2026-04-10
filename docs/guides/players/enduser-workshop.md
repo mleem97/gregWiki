@@ -98,7 +98,7 @@ If anything is missing, follow the instructions shown.
 ### Mod does not load in-game
 
 - Check `MelonLoader/Latest.log` in the game directory.
-- Ensure `FrikaModdingFramework.dll` is in `<game>/Mods/`.
+- Ensure `gregCore.dll` is in `<game>/Mods/`.
 - Verify the mod DLL is also in `<game>/Mods/` or `<game>/FMF/Plugins/`.
 
 ### Subscription does not appear

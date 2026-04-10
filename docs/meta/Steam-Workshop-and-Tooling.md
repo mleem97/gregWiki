@@ -35,5 +35,5 @@ Do not redistribute game binaries or extracted assets. Workshop packages should 
 
 ## CI / agents
 
-- `FrikaMF.csproj` builds on Windows agents that have either a Steam *Data Center* install **or** a populated `lib/references/MelonLoader/` (from `refresh_refs.py`).
+- `gregCore.csproj` builds on Windows agents that have either a Steam *Data Center* install **or** a populated `lib/references/MelonLoader/` (from `refresh_refs.py`).
 - `gregModmanager/WorkshopUploader.csproj` targets **.NET 9** MAUI (`net9.0-windows…`); build it on Windows (not Linux-hosted runners unless cross-compilation is configured).

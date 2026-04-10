@@ -17,7 +17,7 @@ Describe the runtime as a **layered system**, not a flat list of DLLs:
 | Layer | Role | Typical workspace artifacts |
 |--------|--------|------------------------------|
 | **1. ModManager (front-end)** | UI to enable/disable mods and plugins, ordering, configuration, game state (e.g. no save loaded, level loading). Talks to the framework through **well-defined** interfaces (shared library, config files, IPC, named pipes, HTTP — depending on implementation). | `gregModmanager/` — **Gregtools Modmanager** (MAUI, e.g. `WorkshopUploader.csproj`). |
-| **2. Modding framework / SDK** | Stable API surface for plugins and mods: lifecycle, events, versioning, dependencies, logging, error handling. Hooks Unity / MelonLoader / IL2CPP and **maps** low-level events to **framework events** (hook proxy). | `gregCore/` — e.g. `framework/` (`FrikaMF`), Harmony integration, **native FFI** (`FfiBridge`), hook registry. |
+| **2. Modding framework / SDK** | Stable API surface for plugins and mods: lifecycle, events, versioning, dependencies, logging, error handling. Hooks Unity / MelonLoader / IL2CPP and **maps** low-level events to **framework events** (hook proxy). | `gregCore/` — e.g. `framework/` (**`gregCore` runtime**), Harmony integration, **native FFI** (`FfiBridge`), hook registry. |
 | **3. Plugins** | Extend the framework (new services, hook types, optional ModManager UI). Clear extension points. | `FFM.Plugin.*`, repos **`gregExt.<Name>/`**. |
 | **4. Mods** | User extensions via the **documented** framework API; avoid direct IL2CPP details where possible; load in isolation; soft-fail on errors. | `FMF.*`, repos **`gregMod.<Name>/`**. |
 
@@ -56,7 +56,7 @@ When documentation or API design must choose, use this **order**:
 - **Language:** **English only** for all user-facing documentation in `docs/`, the homepage, and UI strings in this site.
 - **Repos:** Keep paths such as `gregCore/`, `gregMod.*`, `gregExt.*`, `gregModmanager/` consistent with the [Workspace map](/wiki/workspace) and [Repository architecture](/wiki/framework/architecture).
 - **No invented APIs:** New pages must not promise hooks or events that are not evidenced in core/registry — link to [FMF hooks](/wiki/framework/fmf-hooks) and the [Hooks catalog](/wiki/reference/fmf-hooks-catalog).
-- **Cross-links:** Entry [Developers & contributors](/wiki/developers), architecture [Repository architecture](/wiki/framework/architecture), language rule [Modding language (C# only)](/wiki/reference/modding-language-requirement).
+- **Cross-links:** Entry [Developers & contributors](/wiki/developers), architecture [Repository architecture](/wiki/framework/architecture), language rule [Modding language support](/wiki/reference/modding-language-requirement).
 
 ## See also
 

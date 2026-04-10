@@ -6,13 +6,13 @@ slug: /audiences/newbies
 
 ## Goal
 
-Get FrikaMF running safely and understand the minimum concepts.
+Get gregCore running safely and understand the minimum concepts.
 
 ## Start here
 
 1. Install MelonLoader and run the game once.
-2. Copy `FrikaModdingFramework.dll` into `Data Center/Mods`.
-3. Add the mod that depends on FrikaMF.
+2. Copy `gregCore.dll` into `Data Center/Mods`.
+3. Add the mod that depends on gregCore.
 4. Check `MelonLoader/Latest.log`.
 
 ## Read next

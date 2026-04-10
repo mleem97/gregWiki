@@ -15,8 +15,8 @@ The old table generated from **`HookNames.cs`** has been **removed**. Runtime ma
 
 | Topic | Where |
 |-------|--------|
-| **EventId → `greg.*` (FFI / native pipeline)** | [greg hooks catalog](./greg-hooks-catalog.md) — generated from `gregCore/framework/src/Sdk/GregNativeEventHooks.cs` and `EventIds` in `EventDispatcher.cs` |
-| **Il2Cpp hook registry (JSON)** | `greg_hooks.json` at repo root; copied next to `FrikaModdingFramework.dll` on build |
+| **EventId → `greg.*` (FFI / native pipeline)** | [greg hooks catalog](./greg-hooks-catalog.md) — generated from `gregCore/framework/Sdk/GregNativeEventHooks.cs` and `EventIds` in `EventDispatcher.cs` |
+| **Il2Cpp hook registry (JSON)** | `greg_hooks.json` at repo root; copied next to `gregCore.dll` on build |
 | **`FMF.*` documentation policy** | [FMF hook naming](./fmf-hook-naming.md) — naming for new *documentation* IDs (not byte-for-byte every runtime string) |
 
 ## Regenerate the wiki table

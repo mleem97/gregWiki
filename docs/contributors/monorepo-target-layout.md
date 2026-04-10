@@ -13,7 +13,7 @@ The repository **stays one Git repo**. The goal is **clear boundaries** between 
 
 | Top-level | Purpose |
 |-----------|---------|
-| `gregCore/framework/` | Core MelonLoader framework (`gregCore/framework/FrikaMF.csproj`, `Sdk/`, `ModLoader/`, entry `framework/Main.cs`) |
+| `gregCore/framework/` | Core MelonLoader framework (`gregCore/framework/gregCore.csproj`, `Sdk/`, `ModLoader/`, entry `framework/Main.cs`) |
 | `mods/` | Gameplay mods (`FMF.Mod.*`, `FMF.*.dll` style) |
 | `plugins/` | FFM plugins (`FFM.Plugin.*`) |
 | `Templates/` | Scaffolds for new mods/plugins |
@@ -38,12 +38,12 @@ flowchart LR
 |-------|--------|---------------|
 | **1** | Docs, `tools/`, naming wiki, hook catalog script | Docusaurus build green; script generates catalog |
 | **2** | `git mv` former `ModsAndPlugins/` → `mods/` / `plugins/` | Done — `.csproj` relative paths unchanged (depth preserved); CI/docs updated |
-| **3** | Framework sources under `framework/` | Done — `FrikaMF.sln` points at `framework\framework/FrikaMF.csproj`; plugins reference `..\..\framework\framework/FrikaMF.csproj` |
+| **3** | Framework sources under `framework/` | Done — `gregCore.sln` points at `framework\framework/gregCore.csproj`; plugins reference `..\..\framework\framework/gregCore.csproj` |
 | **4** | CI matrix: docs + dotnet; `plugin-client-redirects` for old URLs | PR checks match local workflow |
 
 ## Path updates checklist (Phase 2 applied)
 
-- [x] `FrikaMF.sln` project paths (`plugins\FFM.Plugin.*`)
+- [x] `gregCore.sln` project paths (`plugins\FFM.Plugin.*`)
 - [x] `.github/workflows` (CodeQL, release assets, Discord feed)
 - [x] Contributor docs and mod/plugin wiki pages (`Project Path` lines)
 - [ ] [`wiki/docusaurus.config.js`](https://github.com/mleem97/gregFramework/blob/master/wiki/docusaurus.config.js) redirects (only if public URLs must map old paths)

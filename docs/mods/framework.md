@@ -3,16 +3,16 @@ title: Framework
 sidebar_label: Framework
 ---
 
-**Language:** mod, plugin, and extension **logic must be written in C#** — see [Modding language (C# only)](/wiki/reference/modding-language-requirement).
+**Languages:** gameplay and script mods can be written in **C#**, **Lua** (MoonSharp, `greg.*` API), or **Rust / native** (FFI) — see [Modding language support](/wiki/reference/modding-language-requirement). **Lua API reference** (events, hooks, Unity handles, I/O): [Language Bridges README](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/ModLoader/LanguageBridges/README.md).
 
 **Stack position:** gameplay **mods** sit on top of **plugins** and the **framework SDK**; the **ModManager** (MAUI) is the out-of-game front-end — see [System architecture & documentation principles](/wiki/meta/system-architecture-principles).
 
-The core `FrikaMF` runtime provides:
+The core runtime ships as **`gregCore.dll`** (MelonLoader loads this assembly; not a legacy **`FrikaModdingFramework.dll`** name). It provides:
 
 - Harmony patch integration for gameplay hooks
-- Event dispatch and stable event contracts
-- Native bridge for Rust modules
-- Shared game API abstractions for mod authors
+- Event dispatch and stable event contracts (`greg.*`)
+- Language bridges (C# direct, **Lua** via `LuaLanguageBridge`, **Rust** via `FFIBridge` / `RustLanguageBridgeAdapter`)
+- Shared game API abstractions for mod authors (C# SDK and Lua `greg.*` modules)
 
 ## Core references
 

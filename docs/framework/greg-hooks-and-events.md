@@ -6,7 +6,7 @@ description: greg.* hooks, GregEventDispatcher, GregNativeEventHooks, greg_hooks
 
 # Greg hooks & event runtime
 
-The **`FrikaModdingFramework.dll`** assembly is built from **`gregCore/framework/FrikaMF.csproj`** and combines Harmony patches, C# events (`GregEventDispatcher`), and the Rust/native bridge. Mod authors mainly care about **three surfaces**:
+The **`gregCore.dll`** assembly is built from **`gregCore/framework/gregCore.csproj`** and combines Harmony patches, C# events (`GregEventDispatcher`), and the Rust/native bridge. Mod authors mainly care about **three surfaces**:
 
 | Surface | Role | Typical entry |
 |---------|------|----------------|
@@ -21,20 +21,20 @@ New **documentation** identifiers still follow **`FMF.<Domain>.*`** — see [FMF
 | Path | Role |
 |------|------|
 | **Repo root** `greg_hooks.json` | Source of truth: `name`, `patchTarget`, `strategy`, `payloadSchema`, optional `legacy`. |
-| **Next to `FrikaModdingFramework.dll`** | Copied from the monorepo root on build so **`GregCompatBridge`** can resolve legacy names. |
+| **Next to `gregCore.dll`** | Copied from the monorepo root on build so **`GregCompatBridge`** can resolve legacy names. |
 
 Regenerate: `gregCore/scripts/Generate-GregHooksFromIl2CppDump.ps1` when Il2Cpp/interop inputs change.
 
 ## `GregEventDispatcher` / SDK
 
-Implementation: **`gregCore/framework/src/Sdk/GregEventDispatcher.cs`** (`namespace gregFramework.Core`). API: **`On` / `Once` / `Off` / `Emit`**, **`OnCancelable` / `InvokeCancelable`**, **`UnregisterAll(modId)`**.
+Implementation: **`gregCore/framework/Sdk/GregEventDispatcher.cs`** (`namespace gregFramework.Core`). API: **`On` / `Once` / `Off` / `Emit`**, **`OnCancelable` / `InvokeCancelable`**, **`UnregisterAll(modId)`**.
 
 Build stable hook strings with **`GregHookName.Create(GregDomain.*, "Action")`** or **`GregNativeEventHooks.*`** constants.
 
 ## Native events (`EventIds`)
 
-- **`EventIds` and `EventDispatcher`:** `gregCore/framework/src/ModLoader/EventDispatcher.cs` (numeric ids aligned with Rust).
-- **Mapping → `greg.*`:** **`GregNativeEventHooks`** (`gregCore/framework/src/Sdk/GregNativeEventHooks.cs`); emission via **`GregHookIntegration`** in the same ModLoader tree.
+- **`EventIds` and `EventDispatcher`:** `gregCore/framework/ModLoader/EventDispatcher.cs` (numeric ids aligned with Rust).
+- **Mapping → `greg.*`:** **`GregNativeEventHooks`** (`gregCore/framework/Sdk/GregNativeEventHooks.cs`); emission via **`GregHookIntegration`** in the same ModLoader tree.
 - **Wiki table:** [greg hooks catalog](/wiki/reference/greg-hooks-catalog) (generator: `gregCore/tools/Generate-GregHookCatalog.ps1`).
 
 ## Lua event & hook subscriptions

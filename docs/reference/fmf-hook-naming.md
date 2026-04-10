@@ -46,9 +46,9 @@ Harmony patches in **gregFramework** emit stable **`greg.<DOMAIN>.<Action>`** st
 
 ## Native pipeline: `GregNativeEventHooks` (replaces `HookNames`)
 
-Numeric **`EventIds`** are mapped to canonical **`greg.*`** strings in **`GregNativeEventHooks`** ([source](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/src/Sdk/GregNativeEventHooks.cs)), aligned with **`greg_hooks.json`** where that file names the patched method. Logging uses **`GregNativeEventHooks.Resolve(uint)`**; unknown ids → **`greg.SYSTEM.UnmappedNativeEvent`**.
+Numeric **`EventIds`** are mapped to canonical **`greg.*`** strings in **`GregNativeEventHooks`** ([source](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/Sdk/GregNativeEventHooks.cs)), aligned with **`greg_hooks.json`** where that file names the patched method. Logging uses **`GregNativeEventHooks.Resolve(uint)`**; unknown ids → **`greg.SYSTEM.UnmappedNativeEvent`**.
 
-**`GregCompatBridge`** ([source](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/src/Sdk/GregCompatBridge.cs)) redirects **deprecated** hook spellings (including older documentation-style names) to the current **`greg.*`** string — see also `legacy` entries in **`greg_hooks.json`**.
+**`GregCompatBridge`** ([source](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/Sdk/GregCompatBridge.cs)) redirects **deprecated** hook spellings (including older documentation-style names) to the current **`greg.*`** string — see also `legacy` entries in **`greg_hooks.json`**.
 
 **Policy**
 

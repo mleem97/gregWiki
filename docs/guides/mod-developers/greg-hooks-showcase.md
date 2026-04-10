@@ -18,7 +18,7 @@ Runtime names look like `greg.<DOMAIN>.<Action>`. Always build them with `GregHo
 
 ## Registry
 
-**`greg_hooks.json`** at the **gregFramework** repository root is the canonical catalog (`description`, `payloadSchema`, `strategy`, optional `legacy`). A copy is emitted next to **`FrikaModdingFramework.dll`** for `GregCompatBridge` legacy resolution.
+**`greg_hooks.json`** at the **gregFramework** repository root is the canonical catalog (`description`, `payloadSchema`, `strategy`, optional `legacy`). A copy is emitted next to **`gregCore.dll`** for `GregCompatBridge` legacy resolution.
 
 Authoritative documentation: [greg hooks registry (IL2CPP)](/wiki/reference/greg-hooks-registry) — regeneration script, whitelist, and Harmony deduplication rules.
 

@@ -10,7 +10,7 @@ The **gregFramework** folder groups several repositories (split layout). Use thi
 
 | Area | Folder | Role |
 |------|--------|------|
-| **Framework core** | `gregCore/` | MelonLoader host: **`gregCore/FrikaMF.sln`** / **`gregCore/framework/FrikaMF.csproj`**, templates, **`gregCore/mcp-server/`**, optional `gregCore/plugins/` mirrors |
+| **Framework core** | `gregCore/` | MelonLoader host: **`gregCore/gregCore.sln`** / **`gregCore/framework/gregCore.csproj`** → runtime **`gregCore.dll`**; **`framework/ModLoader/LanguageBridges/`** (incl. **`LuaModules/`** for Lua `greg.*`); templates, **`gregCore/mcp-server/`**, optional `gregCore/plugins/` mirrors |
 | **Gameplay mods** | `gregMod.<Name>/` | Standalone mods (`FMF.*`) — **directly under `gregFramework/`** (the `gregMods/` umbrella is deprecated) |
 | **Framework plugins** | `gregExt.<Name>/` | FFM plugins (`FFM.Plugin.*`) — **directly under `gregFramework/`** (the `gregExtensions/` umbrella is deprecated) |
 | **GregModManager (MAUI)** | `gregModmanager/` | **Gregtools Modmanager** — UI for managing mods/plugins; `WorkshopUploader.csproj`, **`WorkshopUploader.exe`**. See [Architecture principles](/wiki/meta/system-architecture-principles). |
@@ -23,6 +23,8 @@ The **gregFramework** folder groups several repositories (split layout). Use thi
 | **Examples** | `exGregFramework/` | Example / bootstrap layout |
 | **Helper** | `siblingRepos/` | Scripts to clone related repos |
 
-**Rust / native FFI:** implementiert im **Framework-Core** (`gregCore/framework/src/ModLoader/FfiBridge.cs`, zusammen mit `Core.cs`).
+**Rust / native FFI:** implementiert im **Framework-Core** (`gregCore/framework/ModLoader/FfiBridge.cs`, zusammen mit `Core.cs`).
+
+**Lua script mods (in-game):** nach Build/Install unter **`Data Center/Mods/ScriptMods/lua/`** (Modulordner mit `.lua`-Dateien; siehe [Language Bridges README](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/ModLoader/LanguageBridges/README.md)).
 
 **Detailed inventory** (paths, `.csproj`, hooks): [Repository inventory](../contributors/repo-inventory).

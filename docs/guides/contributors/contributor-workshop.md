@@ -26,7 +26,7 @@ Paths are relative to the **`gregFramework/`** workspace root (split repos clone
 
 | Path | Purpose |
 |------|---------|
-| `gregCore/framework/FrikaMF.csproj` (via `gregCore/FrikaMF.sln`) | Core MelonLoader framework DLL |
+| `gregCore/framework/gregCore.csproj` (via `gregCore/gregCore.sln`) | Core MelonLoader framework DLL |
 | `gregExt.*/` | FFM framework plugins (`FFM.Plugin.*` assemblies — one repo per plugin) |
 | `gregMod.*/` | Standalone gameplay mods (`FMF.*` assemblies) |
 | `gregModmanager/WorkshopUploader.csproj` | GregModManager MAUI app |
@@ -38,7 +38,7 @@ Paths are relative to the **`gregFramework/`** workspace root (split repos clone
 ### Build everything (solution)
 
 ```bash
-dotnet build gregCore/FrikaMF.sln -c Release
+dotnet build gregCore/gregCore.sln -c Release
 ```
 
 ### Build standalone mods (per split repo)
@@ -65,7 +65,7 @@ Each mod/plugin gets its own folder under `<GameRoot>/workshop/`:
 ├── FrikaModFramework/
 │   ├── content/
 │   │   └── Mods/
-│   │       └── FrikaModdingFramework.dll
+│   │       └── gregCore.dll
 │   ├── metadata.json
 │   └── preview.png
 ├── FFM.Plugin.Multiplayer/
