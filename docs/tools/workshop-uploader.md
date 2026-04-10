@@ -750,6 +750,6 @@ Yes. Browse or search for mods, then click **Subscribe**. Steam will download th
 ## See also
 
 - Repository README: [`gregModmanager/README.md`](https://github.com/mleem97/gregFramework/blob/main/gregModmanager/README.md) (product **Gregtools Modmanager**; `WorkshopUploader.csproj`)
-- [End-User Guide](/wiki/guides/players/enduser-workshop)
+- [For players](/players) (install, Mod Manager, Workshop)
 - [Contributor Guide](/wiki/guides/contributors/contributor-workshop)
 - [Release](/wiki/guides/contributors/release)

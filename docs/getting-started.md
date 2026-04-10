@@ -13,9 +13,7 @@ The workspace is **multi-repo** with a local `gregFramework/` folder containing 
 - `gregDataCenterExporter/` — exporter, templates, hook JSON mirrors
 - `gregWiki/` — this documentation site
 
-The **Rust** bridge lives under:
-
-- `gregCore/bridges/gregSta.RustBridge/`
+**Rust / native mods** are loaded by the **core** via **`FFIBridge`** (`gregCore/framework/src/ModLoader/FfiBridge.cs`); there is no separate `bridges/gregSta.RustBridge` tree in the workspace anymore.
 
 ## Build the core
 

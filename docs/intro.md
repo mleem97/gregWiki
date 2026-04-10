@@ -1,29 +1,26 @@
 ---
 id: intro
-title: Documentation
-slug: /docs
-description: Help for Data Center players using mods — install, Workshop, troubleshooting. Technical docs for authors are separated.
+title: Mod author wiki
+slug: /
+description: Technical documentation for Data Center Simulator mod and plugin authors — gregFramework, hooks, workspace, and releases.
 ---
 
-# Welcome
+# Mod author wiki
 
-**gregFramework** is the modding stack for *Data Center*. If you **play with mods**, you only need a short path: install, browse the Workshop, and fix common issues.
+This site (**`/wiki`**) is for people who **write or maintain mods and plugins**, work on **gregFramework**, or contribute to **repos and documentation**.
 
-## Players — start here
+**Players** — install MelonLoader, browse mods, and get help on the **[For players](/players)** page (`/players`), the **[mod catalog](/mods)**, and Discord.
 
-1. **[End users](/wiki/guides/players/overview)** — install, update, troubleshooting  
-2. **[GregModManager (players)](/wiki/guides/players/enduser-workshop)** — browse and install mods  
-3. **[Release channels](/wiki/reference/release-channels)** — Steam Workshop vs GitHub  
-4. **[GregModManager (full tool reference)](/wiki/tools/workshop-uploader)** — MAUI app: Mod Store, uploads, metadata  
+## Getting started
 
-[**Mod catalog**](/mods) lists modules with links to docs and downloads.
+1. **[Getting started](/wiki/getting-started)** — split-repo layout, build gregCore, hooks and registries  
+2. **[Documentation layout](/wiki/getting-started/documentation-layout)** — how `docs/` is organised  
+3. **[Workspace map](/wiki/workspace/)** — folders on disk  
 
-## Mod authors, plugins, and repo work
+Then read **[System architecture & documentation principles](/wiki/meta/system-architecture-principles)** — canonical **Mod Manager → Framework → Plugins → Mods** model.
 
-Everything for **building mods**, **FFM plugins**, hooks, CI, and **contributing** lives in one place:
+## Full index
 
-**[Developers & contributors →](/wiki/developers)**
+**[Documentation hub →](/wiki/developers)** — complete table of contents: framework, plugins, mods, guides, releases, reference, roadmap.
 
-Technical docs follow one stack model: **ModManager (MAUI) → framework / SDK → plugins → mods** — explained in **[System architecture & documentation principles](/wiki/meta/system-architecture-principles)**.
-
-Do not open **Developers & contributors** unless you are building or maintaining code — the first entries in the sidebar stay short on purpose.
+The sidebar matches this wiki: **Getting started** is at the top, then the rest of the author tree.

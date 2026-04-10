@@ -110,7 +110,7 @@ Unknown event ids resolve to ``greg.SYSTEM.UnmappedNativeEvent`` via ``GregNativ
 
 ## See also
 
-- [greg hook naming](./greg-hook-naming.md)
+- [greg hooks registry](./greg-hooks-registry.md)
 - [EventIds source](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/src/ModLoader/EventDispatcher.cs)
 - [GregNativeEventHooks source](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/src/Sdk/GregNativeEventHooks.cs)
 - [Greg hooks & event runtime](/wiki/framework/greg-hooks-and-events)

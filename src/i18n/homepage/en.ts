@@ -5,10 +5,9 @@ export const en: HomepageContent = {
   ...homepageShellEn,
   heroLine1: 'Play with mods.',
   heroLine2: 'Ship with confidence.',
-  heroSub1:
-    'Player guides cover install, Workshop, and common fixes—without engine deep dives.',
-  heroSub2: 'Authors get hooks, APIs, and repo layout under Developers in the wiki.',
-  ctaStart: 'Player guides',
+  heroSub1: 'Players use /players and the mod catalog — install, Workshop, and common fixes.',
+  heroSub2: 'Authors use /wiki: Getting started, Documentation hub, hooks, and repo layout.',
+  ctaStart: 'For players',
   ctaMods: 'Mod catalog',
   ctaModManager: 'Download Greg Mod Manager',
   modManagerSectionTitle: 'Greg Mod Manager',
@@ -24,10 +23,10 @@ export const en: HomepageContent = {
     'Community',
   ],
   featureDescriptions: [
-    'Step-by-step install and troubleshooting. No repository jargon on day one.',
-    'Greg Mod Manager and the release-channels page explain where mods are published.',
-    'Short paths for players; technical depth lives under Developers.',
-    'Discord and GitHub for support—dig into gregCore only when you need to.',
+    'Step-by-step help on /players — no author wiki required.',
+    'Greg Mod Manager and release channels explain where mods are published.',
+    'The mod wiki (/wiki) is for authors; structure starts with Getting started.',
+    'Discord and GitHub for support — dig into gregCore when you build mods.',
   ],
   comingSoon: 'Coming soon',
   comingSoonText:

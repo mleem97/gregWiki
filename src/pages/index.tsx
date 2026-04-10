@@ -101,7 +101,7 @@ export default function HomePage(): JSX.Element {
   return (
     <Layout
       title="Home"
-      description="gregFramework documentation: player guides, mod catalog, and developer references for Data Center Simulator."
+      description="gregFramework: player help at /players, mod catalog, and mod-author wiki at /wiki for Data Center Simulator."
     >
       <main className="bg-background text-on-surface font-sans min-h-screen editorial-bleed bg-hero-gradient">
         <section className="hero-motion-wrap relative flex min-h-[72vh] flex-col items-center justify-center overflow-hidden px-4 py-24 text-center">
@@ -169,10 +169,7 @@ export default function HomePage(): JSX.Element {
             variants={variants.textReveal}
             transition={{delay: reducedMotion ? 0 : 0.22}}
           >
-            <Link
-              to="/wiki/guides/players/overview"
-              className="btn-primary hero-glow rounded-lg px-8 py-4 text-lg md:px-10"
-            >
+            <Link to="/players" className="btn-primary hero-glow rounded-lg px-8 py-4 text-lg md:px-10">
               {t.ctaStart}
             </Link>
             <Link to="/mods" className="btn-outline rounded-lg px-8 py-4 text-lg md:px-10">

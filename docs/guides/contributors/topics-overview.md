@@ -6,7 +6,7 @@ description: Monorepo layout, design system, Docusaurus workflow, plugin audits.
 
 # Contributors (workflow)
 
-**Repository contributors** — framework, website, CI, plugins. Role overview (including players, mod developers, sponsors): [By audience](/wiki/guides/players/audiences-overview).
+**Repository contributors** — framework, website, CI, plugins. **Players** use [/players](/players); mod authors and sponsors have their own guide hubs in the sidebar.
 
 Operational docs for people changing the framework, site, or release pipeline.
 

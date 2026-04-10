@@ -15,5 +15,5 @@ The community funds infrastructure, tools, and time to maintain documentation an
 - **Legal:** [Security & legal](/wiki/topics/security-legal/overview) — binding text lives in the repository, not only in the wiki.
 
 :::note Audience
-This page is for **sponsors and supporters**. Players start at [End users](/wiki/guides/players/overview); mod authors at [Mod developers](/wiki/guides/mod-developers/overview); repo contributors at [Contributors (workflow)](/wiki/guides/contributors/topics-overview).
+This page is for **sponsors and supporters**. Players start at [/players](/players); mod authors at [Mod developers](/wiki/guides/mod-developers/overview); repo contributors at [Contributors (workflow)](/wiki/guides/contributors/topics-overview).
 :::

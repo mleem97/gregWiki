@@ -1,16 +1,16 @@
 ---
 id: developers
-title: Developers & contributors
-sidebar_label: Developers (hub)
+title: Documentation hub
+sidebar_label: Documentation hub
 slug: /developers
 description: Technical documentation for mod authors, plugin authors, and repo contributors — hooks, workspace, releases, and internals.
 ---
 
-# Developers & contributors
+# Documentation hub
 
-Use this hub if you **build mods or plugins**, work on **framework** code, or contribute to **repositories and docs**.  
+Use this index if you **build mods or plugins**, work on **framework** code, or contribute to **repositories and docs**.
 
-**Players** should use the **short list at the top of the sidebar** (starting with [End users](/wiki/guides/players/overview)) — install, Workshop, troubleshooting.
+**Players** — install and troubleshooting: **[For players](/players)** (not part of this wiki sidebar).
 
 **Architecture:** read **[System architecture & documentation principles](/wiki/meta/system-architecture-principles)** first — canonical **ModManager → Framework → Plugins → Mods** model, priorities (stability, maintainability, DX), and wiki writing rules.
 
@@ -39,7 +39,6 @@ Use this hub if you **build mods or plugins**, work on **framework** code, or co
 - [Contributor workshop](/wiki/guides/contributors/contributor-workshop)
 - [Release guide](/wiki/guides/contributors/release)
 - [Sponsors](/wiki/guides/sponsors/overview)
-- [By audience (paths)](/wiki/guides/players/audiences-overview) · [Newbies](/wiki/audiences/newbies) · [Intermediates](/wiki/audiences/intermediates) · [Professionals](/wiki/audiences/professionals)
 
 ## Tools & meta (advanced)
 
@@ -58,7 +57,7 @@ Use this hub if you **build mods or plugins**, work on **framework** code, or co
 - [FMF hook naming](/wiki/reference/fmf-hook-naming)
 - [FMF hooks catalog](/wiki/reference/fmf-hooks-catalog)
 - [MCP server](/wiki/reference/mcp-server)
-- [Release channels](/wiki/reference/release-channels) — same page is linked next to the other player-facing entries
+- [Release channels](/wiki/reference/release-channels) — where authors publish (Workshop vs GitHub); players see a short summary on [/players](/players)
 - [Reference data files](/wiki/reference/reference-data-files)
 - [Modding language requirement](/wiki/reference/modding-language-requirement)
 

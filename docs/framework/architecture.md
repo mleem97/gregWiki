@@ -25,7 +25,7 @@ Above the raw repositories, the **logical** model is **ModManager → Framework 
 | ------ | ------ |
 | **Wrapper** | `gregFramework/` holds local checkouts of individual repositories. |
 | **Core** | `gregCore/` — **framework core**: translation, hooks, Harmony/event runtime, MCP, templates, and related core features. |
-| **Rust bridge** | Integrated in core under `gregCore/bridges/gregSta.RustBridge/`. |
+| **Rust / native FFI** | Loads native mod exports inside the **framework** assembly: `gregCore/framework/src/ModLoader/FfiBridge.cs`; Melon host remains **`DataCenterModLoader.Core`** in `Core.cs` (Melon display name **RustBridge**). |
 | **Mods** | `gregMod.<Name>/` — one repo each, directly under `gregFramework/`. |
 | **Extensions** | `gregExt.<Name>/` — one repo each, directly under `gregFramework/`. |
 | **Docs** | `gregWiki/` — documentation site repository. |

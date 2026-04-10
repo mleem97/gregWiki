@@ -29,7 +29,7 @@ Implemented in **`gregCore/Core/GregEventDispatcher.cs`** (`namespace gregFramew
 
 ## Rust FFI and numeric events
 
-Rust mods receive **numeric** event ids; C# maps them via **`EventDispatcher`** / **`GregHookIntegration`** in the **`FrikaMF`** tree so that game and bridge traffic can still surface as **`greg.*`** where integrated. Standalone bridge documentation: `gregCore/bridges/gregSta.RustBridge/README.md`.
+Rust/native mods receive **numeric** event ids; C# maps them via **`EventDispatcher`** / **`GregHookIntegration`** in **`gregCore/framework/src/ModLoader`** so that game and bridge traffic can still surface as **`greg.*`** where integrated. Native loading is **`FFIBridge`** (`FfiBridge.cs`) in the same tree — there is no separate `gregSta.RustBridge` project.
 
 ## MelonLoader entry points (same DLL)
 

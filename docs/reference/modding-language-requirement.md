@@ -20,7 +20,7 @@ That applies to anything shipped as a **`gregMod.*`**, **`gregExt.*`**, or **`FF
 
 ## What this does *not* restrict
 
-- **Framework core** (`gregCore`) may still contain **non-C#** components maintained by core maintainers (for example the **Rust** FFI bridge under `gregCore/bridges/gregSta.RustBridge/`, build scripts, or tooling). Those are **not** substitutes for implementing mod/plugin/extension behavior outside C#.
+- **Framework core** (`gregCore`) may still ship **native** loading paths maintained by core maintainers (Rust/other natives als **vorkompilierte** `.dll`/`.greg`/…-Module, geladen über **`FFIBridge`** in `gregCore/framework/src/ModLoader/`), plus build scripts and tooling. Those are **not** substitutes for implementing mod/plugin/extension **logic** outside C#.
 - **Documentation**, **config** (JSON/YAML), and **assets** are not “logic” in this sense.
 - **gregStore**, **gregWiki**, and other non–in-game stacks may use other languages as appropriate.
 

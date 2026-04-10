@@ -2,7 +2,7 @@
 
 const config = {
   title: 'gregFramework',
-  tagline: 'Documentation for Data Center Simulator mods: player guides, catalog, and author references.',
+  tagline: 'Mod-author documentation for Data Center Simulator; players use /players and the mod catalog.',
   favicon: 'img/logo.svg',
   url: 'https://frikadellental.de',
   baseUrl: '/',
@@ -37,6 +37,8 @@ const config = {
           path: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/wiki',
+          /** Player help lives on /players; keep sources in repo but do not publish duplicate routes. */
+          exclude: ['**/guides/players/**'],
           editUrl: 'https://github.com/mleem97/gregWiki/tree/main/docs/',
         },
         blog: false,
@@ -53,24 +55,14 @@ const config = {
       '@docusaurus/plugin-client-redirects',
       {
         createRedirects(existingPath) {
-          if (existingPath === '/wiki/docs') {
-            return ['/docs'];
-          }
-
           const redirectsToHere = {
             '/wiki/framework/architecture': ['/wiki/architecture'],
             '/wiki/framework/fmf-hooks': ['/wiki/fmf-hooks'],
             '/wiki/framework/hexmod': ['/wiki/hexmod'],
             '/wiki/tools/workshop-uploader': ['/wiki/workshop-uploader'],
             '/wiki/getting-started/documentation-layout': ['/wiki/README'],
-            '/wiki/guides/players/newbies': ['/wiki/audiences/newbies'],
-            '/wiki/guides/players/intermediates': ['/wiki/audiences/intermediates'],
-            '/wiki/guides/players/professionals': ['/wiki/audiences/professionals'],
-            '/wiki/guides/players/audiences-overview': ['/wiki/topics/audiences/overview'],
-            '/wiki/guides/players/overview': ['/wiki/topics/end-user/overview'],
             '/wiki/guides/mod-developers/overview': ['/wiki/topics/mod-developers/overview'],
             '/wiki/guides/sponsors/overview': ['/wiki/topics/sponsors/overview'],
-            '/wiki/guides/players/enduser-workshop': ['/wiki/guides/enduser-workshop'],
             '/wiki/guides/contributors/contributor-workshop': ['/wiki/guides/contributor-workshop'],
             '/wiki/guides/contributors/release': ['/wiki/guides/release'],
             '/wiki/guides/contributors/topics-overview': ['/wiki/topics/contributors/overview'],
@@ -103,17 +95,33 @@ const config = {
         },
         redirects: [
           {
-            to: '/wiki/docs',
+            to: '/wiki',
             from: [
+              '/wiki/docs',
               '/wiki/legacy/wiki-import/Home',
               '/wiki/wiki-import/Home',
               '/wiki/legacy/wiki-import',
               '/wiki/wiki-import',
+              '/docs',
             ],
           },
           {
-            to: '/wiki/guides/players/overview',
-            from: ['/wiki/legacy/wiki-import/EndUser/', '/wiki/wiki-import/EndUser/'],
+            to: '/players',
+            from: [
+              '/wiki/legacy/wiki-import/EndUser/',
+              '/wiki/wiki-import/EndUser/',
+              '/wiki/guides/players/overview',
+              '/wiki/guides/players/enduser-workshop',
+              '/wiki/guides/players/audiences-overview',
+              '/wiki/guides/players/newbies',
+              '/wiki/guides/players/intermediates',
+              '/wiki/guides/players/professionals',
+              '/wiki/guides/enduser-workshop',
+              '/wiki/topics/end-user/overview',
+              '/wiki/audiences/newbies',
+              '/wiki/audiences/intermediates',
+              '/wiki/audiences/professionals',
+            ],
           },
           {
             to: '/wiki/guides/mod-developers/overview',
@@ -202,13 +210,14 @@ const config = {
       style: 'dark',
       items: [
         {to: '/', label: 'Home', position: 'left'},
+        {to: '/players', label: 'For players', position: 'left'},
         {
-          label: 'Docs',
+          label: 'Mod wiki',
           position: 'left',
           items: [
-            {to: '/wiki', label: 'Overview'},
-            {to: '/wiki/guides/players/overview', label: 'For players'},
-            {to: '/wiki/developers', label: 'Developers'},
+            {to: '/wiki', label: 'Wiki home'},
+            {to: '/wiki/getting-started', label: 'Getting started'},
+            {to: '/wiki/developers', label: 'Documentation hub'},
             {to: '/mods', label: 'Mod catalog'},
           ],
         },
@@ -224,9 +233,10 @@ const config = {
         {
           title: 'Wiki',
           items: [
-            {label: 'Home', to: '/wiki'},
-            {label: 'For players', to: '/wiki/guides/players/overview'},
-            {label: 'Developers', to: '/wiki/developers'},
+            {label: 'Wiki home', to: '/wiki'},
+            {label: 'Getting started', to: '/wiki/getting-started'},
+            {label: 'Documentation hub', to: '/wiki/developers'},
+            {label: 'For players', to: '/players'},
           ],
         },
         {

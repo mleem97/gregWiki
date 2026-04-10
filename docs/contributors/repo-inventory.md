@@ -11,7 +11,7 @@ This page is the **source of truth snapshot** for how the **gregFramework worksp
 
 ## Top-level workspace (`gregFramework/`)
 
-These folders typically sit **next to each other** in a developer workspace (see also [intro](/wiki/docs)):
+These folders typically sit **next to each other** in a developer workspace (see also [intro](/wiki)):
 
 | Area | Path (on disk) | Role |
 |------|----------------|------|
@@ -52,7 +52,7 @@ Documentation is maintained in this repository under `docs/`; historical GitHub 
 
 ## Build status (framework project)
 
-- `gregCore/framework/FrikaMF.csproj` does not compile GregModManager; that builds from `gregModmanager/WorkshopUploader.csproj`.
+- `gregCore/framework/FrikaMF.csproj` does not compile the WorkshopManager app; that builds from `gregModmanager/WorkshopUploader.csproj`.
 - `dotnet build` on the framework solution (when present under `gregCore/`) builds core + optional `gregCore/plugins/*` — **not** split-repo `gregExt.*` / `gregMod.*` folders unless you add them to the solution.
 
 ## `FrikaMF.sln` drift (action items)
@@ -63,7 +63,7 @@ Documentation is maintained in this repository under `docs/`; historical GitHub 
 
 ## Documentation (Docusaurus)
 
-- **Entry**: `/wiki` → [`intro`](/wiki/docs)
+- **Entry**: `/wiki` → [`intro`](/wiki) · **Players:** `/players`
 - **Sidebar**: [`sidebars.js`](https://github.com/mleem97/gregWiki/blob/main/sidebars.js)
 - **Module catalog** (downloads table): [`src/data/moduleCatalog.ts`](https://github.com/mleem97/gregWiki/blob/main/src/data/moduleCatalog.ts)
 - **Landing**: `/` → [`src/pages/index.tsx`](https://github.com/mleem97/gregWiki/blob/main/src/pages/index.tsx)

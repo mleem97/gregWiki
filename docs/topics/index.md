@@ -14,9 +14,9 @@ Documentation is **curated** in this repository: guides, framework articles, ref
 
 | Area | Start here |
 |------|------------|
-| **Roles** | [By audience](/wiki/guides/players/audiences-overview) — [End users](/wiki/guides/players/overview), [Mod developers](/wiki/guides/mod-developers/overview), [Contributors (workflow)](/wiki/guides/contributors/topics-overview), [Sponsors](/wiki/guides/sponsors/overview) |
-| **Experience paths** | [Newbies](/wiki/audiences/newbies) · [Intermediates](/wiki/audiences/intermediates) · [Professionals](/wiki/audiences/professionals) |
-| **Technical reference** | [Reference & technical](/wiki/topics/reference/overview) — includes [greg IL2CPP hook registry](/wiki/reference/greg-hooks-registry) |
+| **Roles** | **Players:** [/players](/players) · **Mod authors:** [Mod developers](/wiki/guides/mod-developers/overview) · **Contributors:** [Contributor topics](/wiki/guides/contributors/topics-overview) · **Sponsors:** [Sponsors](/wiki/guides/sponsors/overview) |
+| **Experience paths** | Player install help is on [/players](/players); author depth lives under [Getting started](/wiki/getting-started) and the [Documentation hub](/wiki/developers). |
+| **Technical reference** | [Reference & technical](/wiki/topics/reference/overview) |
 | **Ship planning** | [Roadmap & planning](/wiki/topics/roadmap/overview) |
 | **Repository inventory** | [Repo inventory](/wiki/contributors/repo-inventory) |
 | **Steam, betas, backlog, game paths** | [Meta & operations](/wiki/topics/meta/overview) — [Game folder layout](/wiki/topics/meta/game-folder-layout) |
@@ -27,7 +27,7 @@ Documentation is **curated** in this repository: guides, framework articles, ref
 - [FFI, hooks & Lua](/wiki/topics/ffi-and-hooks/overview)
 - [Multiplayer & networking](/wiki/topics/multiplayer-and-networking/overview)
 - [Assets & export](/wiki/topics/assets-and-export/overview)
-- [End users](/wiki/guides/players/overview)
+- [For players](/players)
 - [Mod developers](/wiki/guides/mod-developers/overview)
 
 ## Releases vs. articles

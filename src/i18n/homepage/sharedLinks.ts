@@ -1,30 +1,25 @@
 import type {HomepageContent, HomepageDocLink} from './types';
 
-/** Player-facing wiki entry points */
+/** Primary entry points from the homepage */
 export const sharedKnowledgeLinksEn: HomepageDocLink[] = [
   {
-    title: 'Wiki home',
-    description: 'Overview: players, authors, and where each topic lives.',
+    title: 'For players',
+    description: 'MelonLoader, Greg Mod Manager, Workshop, troubleshooting — separate from the author wiki.',
+    link: '/players',
+  },
+  {
+    title: 'Mod author wiki',
+    description: 'Getting started, hooks, plugins, mods, and reference (this is /wiki).',
     link: '/wiki',
   },
   {
-    title: 'Player guides',
-    description: 'Install mods, updates, troubleshooting, and FAQs.',
-    link: '/wiki/guides/players/overview',
-  },
-  {
-    title: 'Greg Mod Manager',
-    description: 'Desktop app for the Workshop: browse, install, and manage mods.',
-    link: '/wiki/guides/players/enduser-workshop',
-  },
-  {
     title: 'Release channels',
-    description: 'Where builds come from: Steam Workshop and GitHub.',
+    description: 'Where builds ship: Steam Workshop and GitHub Releases.',
     link: '/wiki/reference/release-channels',
   },
   {
     title: 'Mod catalog',
-    description: 'Listings with docs, versions, and download links.',
+    description: 'Modules with docs, versions, and download links.',
     link: '/mods',
   },
 ];
@@ -32,8 +27,13 @@ export const sharedKnowledgeLinksEn: HomepageDocLink[] = [
 /** Authors and repo contributors */
 export const sharedWorkflowLinksEn: HomepageDocLink[] = [
   {
-    title: 'Developers hub',
-    description: 'Framework, hooks, plugins, reference material, and roadmap.',
+    title: 'Getting started',
+    description: 'Workspace layout, build gregCore, hooks and registries.',
+    link: '/wiki/getting-started',
+  },
+  {
+    title: 'Documentation hub',
+    description: 'Full index: framework, plugins, mods, releases, roadmap.',
     link: '/wiki/developers',
   },
   {
@@ -73,7 +73,7 @@ export const homepageShellEn: Pick<
   workflowSectionTitle: 'For authors and contributors',
   codeSectionTitle: 'How mods connect to the game',
   codeSectionLead:
-    'Mods use MelonLoader and Harmony. gregCore turns game methods into stable greg.* events your code can subscribe to—details are under Developers.',
+    'Mods use MelonLoader and Harmony. gregCore turns game methods into stable greg.* events your code can subscribe to — see the mod author wiki and Documentation hub.',
   codeSnippetCaption: 'Random excerpt from gregCore',
   codeSnippetLoading: 'Loading code sample…',
   codeSectionBullets: [
