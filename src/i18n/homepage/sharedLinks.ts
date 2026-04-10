@@ -49,6 +49,7 @@ export const homepageShellEn: Pick<
   | 'workflowSectionTitle'
   | 'codeSectionTitle'
   | 'codeSectionLead'
+  | 'codeSnippetCaption'
   | 'ctaDiscordTitle'
   | 'ctaDiscordLead'
   | 'ctaDiscordButton'

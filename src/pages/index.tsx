@@ -13,6 +13,7 @@ import {
   FaLifeRing,
   FaShop,
 } from 'react-icons/fa6';
+import {GregCoreRandomSnippet} from '../components/GregCoreRandomSnippet';
 
 /** Always resolves to the newest GitHub release (redirect). */
 const GREG_MODMANAGER_LATEST =
@@ -304,13 +305,13 @@ export default function HomePage(): JSX.Element {
                   <span className="material-symbols-outlined mt-0.5 text-primary">
                     check_circle
                   </span>
-                  <span>MelonLoader + Harmony patches with typed hook names</span>
+                  <span>MelonLoader + Harmony: gregCore emits typed <code className="text-xs">greg.*</code> events</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="material-symbols-outlined mt-0.5 text-primary">
                     check_circle
                   </span>
-                  <span>FFM plugins and FMF mods documented beside release metadata</span>
+                  <span>Plugins and mods documented beside release metadata</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="material-symbols-outlined mt-0.5 text-primary">
@@ -320,35 +321,7 @@ export default function HomePage(): JSX.Element {
                 </li>
               </ul>
             </div>
-            <div className="rounded-xl border border-outline-variant/20 bg-surface-container-highest p-1 shadow-2xl">
-              <div className="rounded-lg bg-surface-container-lowest p-6 font-mono text-sm">
-                <div className="mb-4 flex gap-2">
-                  <div className="h-3 w-3 rounded-full bg-error-dim" />
-                  <div className="h-3 w-3 rounded-full bg-tertiary" />
-                  <div className="h-3 w-3 rounded-full bg-primary" />
-                </div>
-                <pre className="leading-relaxed text-on-surface/90">
-                  <span className="text-error-dim">using</span> MelonLoader;
-                  {'\n\n'}
-                  <span className="text-tertiary">public</span>{' '}
-                  <span className="text-tertiary">sealed</span>{' '}
-                  <span className="text-tertiary">class</span>{' '}
-                  <span className="text-primary">MyMod</span> : MelonMod
-                  {' {\n'}
-                  {'  '}
-                  <span className="text-tertiary">public</span>{' '}
-                  <span className="text-tertiary">override</span>{' '}
-                  <span className="text-tertiary">void</span>{' '}
-                  <span className="text-primary-dim">OnInitializeMelon</span>
-                  {'() {\n'}
-                  {'    '}
-                  <span className="text-on-surface-variant">
-                    // gregFramework — attach hooks, log, ship.
-                  </span>
-                  {'\n  }\n}'}
-                </pre>
-              </div>
-            </div>
+            <GregCoreRandomSnippet caption={t.codeSnippetCaption} />
           </div>
         </motion.section>
 

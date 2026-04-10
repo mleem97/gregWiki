@@ -25,6 +25,8 @@ export type HomepageContent = {
   workflowSectionTitle: string;
   codeSectionTitle: string;
   codeSectionLead: string;
+  /** Homepage #code — random gregCore excerpt */
+  codeSnippetCaption: string;
   ctaDiscordTitle: string;
   ctaDiscordLead: string;
   ctaDiscordButton: string;
