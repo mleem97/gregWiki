@@ -12,39 +12,39 @@ Use this index if you **build mods or plugins**, work on **framework** code, or 
 
 **Players** — install and troubleshooting: **[For players](/players)** (not part of this wiki sidebar).
 
-**Architecture:** read **[System architecture & documentation principles](/wiki/meta/system-architecture-principles)** first — canonical **ModManager → Framework → Plugins → Mods** model, priorities (stability, maintainability, DX), and wiki writing rules.
+**Architecture:** read **[System architecture & documentation principles](/wiki/getting-started/architecture)** first — canonical **ModManager → Framework → Plugins → Mods** model, priorities (stability, maintainability, DX), and wiki writing rules.
 
 ## Workspace & onboarding
 
-- [Getting started](/wiki/getting-started) — split-repo layout, build core, hook naming
-- [Documentation layout](/wiki/getting-started/documentation-layout) — how `docs/` is organized
-- [Workspace map](/wiki/workspace/) — folders on disk
+- [Getting started](/wiki/getting-started/intro) — split-repo layout, build core, hook naming
+- [Documentation layout](/wiki/getting-started/intro) — how `docs/` is organized
+- [Workspace map](/wiki/getting-started/architecture) — folders on disk
 
 ## Framework
 
-- [Architecture](/wiki/framework/architecture)
-- [Greg hooks & event runtime](/wiki/framework/greg-hooks-and-events)
-- [FMF hooks](/wiki/framework/fmf-hooks)
-- [Hexmod](/wiki/framework/hexmod)
+- [Architecture](/wiki/getting-started/architecture)
+- [Greg hooks & event runtime](/wiki/development/concepts/hooks-and-events)
+- [FMF hooks](/wiki/reference/fmf-hook-naming)
+- [Hexmod](/wiki/development/concepts/modding-basics)
 
 ## Plugins (`FFM.Plugin.*`) & mods (`FMF.*`)
 
-- [Plugins overview](/wiki/plugins/)
-- [Mods overview](/wiki/mods/) — gameplay mods and [Framework](/wiki/mods/framework) article
+- [Plugins overview](/mods)
+- [Mods overview](/mods) — gameplay mods and framework catalog
 
 ## Guides (authors & repo)
 
-- [Mod developers](/wiki/guides/mod-developers/overview)
-- [Contributors (workflow)](/wiki/guides/contributors/topics-overview)
-- [Contributor workshop](/wiki/guides/contributors/contributor-workshop)
-- [Release guide](/wiki/guides/contributors/release)
-- [Sponsors](/wiki/guides/sponsors/overview)
+- [Mod developers](/wiki/development/concepts/modding-basics)
+- [Contributors (workflow)](/wiki/contributors/docusaurus-workflow)
+- [Contributor workshop](/wiki/contributors/docusaurus-workflow)
+- [Release guide](/wiki/releases)
+- [Sponsors](/wiki/legal/sponsors)
 
 ## Tools & meta (advanced)
 
-- [Steam Workshop & tooling](/wiki/meta/Steam-Workshop-and-Tooling)
-- [Devserver betas](/wiki/meta/devserver-betas)
-- [IDEA backlog](/wiki/meta/IDEA_BACKLOG)
+- [Steam Workshop & tooling](/wiki/developers)
+- [Devserver betas](/wiki/developers)
+- [IDEA backlog](/wiki/developers)
 
 ## Releases
 
@@ -52,18 +52,18 @@ Use this index if you **build mods or plugins**, work on **framework** code, or 
 
 ## Reference
 
-- [Wiki mapping](/wiki/reference/wiki-mapping)
-- [Mod store vision](/wiki/reference/mod-store-vision)
+- [Wiki mapping](/wiki/developers)
+- [Mod store vision](/wiki/developers)
 - [FMF hook naming](/wiki/reference/fmf-hook-naming)
-- [FMF hooks catalog](/wiki/reference/fmf-hooks-catalog)
-- [MCP server](/wiki/reference/mcp-server)
-- [Release channels](/wiki/reference/release-channels) — where authors publish (Workshop vs GitHub); players see a short summary on [/players](/players)
-- [Reference data files](/wiki/reference/reference-data-files)
-- [Modding language requirement](/wiki/reference/modding-language-requirement)
+- [FMF hooks catalog](/wiki/reference/fmf-hook-naming)
+- [MCP server](/wiki/developers)
+- [Release channels](/wiki/developers) — where authors publish (Workshop vs GitHub); players see a short summary on [/players](/players)
+- [Reference data files](/wiki/developers)
+- [Modding language requirement](/wiki/developers)
 
 ## Topics
 
-- [Topics hub](/wiki/topics/)
+- [Topics hub](/wiki/developers)
 
 ## Contributors (workflow)
 
@@ -81,5 +81,5 @@ Use this index if you **build mods or plugins**, work on **framework** code, or 
 
 ## Sponsors
 
-- [SPONSORS](/wiki/SPONSORS)
+- [SPONSORS](/wiki/legal/sponsors)
 

@@ -85,7 +85,7 @@ Depending on the build, multiple **`MelonMod`** types may ship in the same assem
 
 ## See also
 
-- [Repository architecture](/wiki/framework/architecture)
-- [FFI, hooks & Lua (hub)](/wiki/topics/ffi-and-hooks/overview)
-- [Getting started](/wiki/getting-started)
+- [Repository architecture](/wiki/getting-started/architecture)
+- [FFI, hooks & Lua (hub)](/wiki/development/concepts/hooks-and-events)
+- [Getting started](/wiki/getting-started/intro)
 

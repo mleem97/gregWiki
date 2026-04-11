@@ -54,15 +54,15 @@ When documentation or API design must choose, use this **order**:
 
 - **Terminology:** Always name the layer (ModManager, framework, plugin, mod). Do not conflate “plugin” and “mod” without context.
 - **Language:** **English only** for all user-facing documentation in `docs/`, the homepage, and UI strings in this site.
-- **Repos:** Keep paths such as `gregCore/`, `gregMod.*`, `gregExt.*`, `gregModmanager/` consistent with the [Workspace map](/wiki/workspace) and [Repository architecture](/wiki/framework/architecture).
-- **No invented APIs:** New pages must not promise hooks or events that are not evidenced in core/registry — link to [FMF hooks](/wiki/framework/fmf-hooks) and the [Hooks catalog](/wiki/reference/fmf-hooks-catalog).
-- **Cross-links:** Entry [Developers & contributors](/wiki/developers), architecture [Repository architecture](/wiki/framework/architecture), language rule [Modding language support](/wiki/reference/modding-language-requirement).
+- **Repos:** Keep paths such as `gregCore/`, `gregMod.*`, `gregExt.*`, `gregModmanager/` consistent with the [Workspace map](/wiki/getting-started/architecture) and [Repository architecture](/wiki/development/concepts/hooks-and-events).
+- **No invented APIs:** New pages must not promise hooks or events that are not evidenced in core/registry — link to [FMF hooks](/wiki/reference/fmf-hook-naming) and the [Hooks catalog](/wiki/reference/greg-hooks-catalog).
+- **Cross-links:** Entry [Developers & contributors](/wiki/developers), architecture [Repository architecture](/wiki/development/concepts/hooks-and-events), language rule [Modding language support](/wiki/developers).
 
 ## See also
 
-- [Repository architecture](/wiki/framework/architecture) — multi-repo layout and core
-- [Getting started](/wiki/getting-started) — workspace and build
-- [Mods — Framework](/wiki/mods/framework) — runtime from mod authors’ perspective
-- [Plugins overview](/wiki/plugins/) — `FFM.Plugin.*`
-- [Mod developers](/wiki/guides/mod-developers/overview)
+- [Repository architecture](/wiki/development/concepts/hooks-and-events) — multi-repo layout and core
+- [Getting started](/wiki/getting-started/intro) — workspace and build
+- [Mods — Framework](/mods) — runtime from mod authors’ perspective
+- [Plugins overview](/mods) — `FFM.Plugin.*`
+- [Mod developers](/wiki/development/concepts/modding-basics)
 

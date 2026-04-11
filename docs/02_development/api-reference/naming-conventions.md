@@ -53,7 +53,7 @@ Numeric **`EventIds`** are mapped to canonical **`greg.*`** strings in **`GregNa
 **Policy**
 
 - New **documentation** identifiers: **`FMF.<Domain>.*`** as above.
-- New **runtime** subscriptions: always **`greg.*`** via **`GregHookName.Create`** or **`GregNativeEventHooks`** constants — see [greg hooks catalog](./greg-hooks-catalog.md).
+- New **runtime** subscriptions: always **`greg.*`** via **`GregHookName.Create`** or **`GregNativeEventHooks`** constants — see [greg hooks catalog](/wiki/reference/greg-hooks-catalog).
 
 ## Cross-language stubs (documentation)
 
@@ -71,7 +71,7 @@ Bindings are **not** auto-generated for all languages; stubs are for contributor
 
 ## Related
 
-- [greg hooks catalog](./greg-hooks-catalog.md) — EventId → **`greg.*`** (generated)
-- [FMF hooks catalog](./fmf-hooks-catalog.md) — Short overview / Redirect
-- [FMF hooks](/wiki/framework/fmf-hooks) — declarative surface (may be superseded by the core registry)
+- [greg hooks catalog](/wiki/reference/greg-hooks-catalog) — EventId → **`greg.*`** (generated)
+- [FMF hooks catalog](/wiki/reference/fmf-hook-naming) — Short overview / Redirect
+- [FMF hooks](/wiki/reference/fmf-hook-naming) — declarative surface (may be superseded by the core registry)
 

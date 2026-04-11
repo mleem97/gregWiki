@@ -29,7 +29,7 @@ export const sharedWorkflowLinksEn: HomepageDocLink[] = [
   {
     title: 'Getting started',
     description: 'Workspace layout, build gregCore, hooks and registries.',
-    link: '/wiki/getting-started',
+    link: '/wiki/getting-started/intro',
   },
   {
     title: 'Documentation hub',
@@ -39,7 +39,7 @@ export const sharedWorkflowLinksEn: HomepageDocLink[] = [
   {
     title: 'Mod developer guide',
     description: 'MelonLoader setup, gregCore hooks, and workflow.',
-    link: '/wiki/guides/mod-developers/overview',
+    link: '/wiki/development/concepts/modding-basics',
   },
   {
     title: 'Contributor workflow',

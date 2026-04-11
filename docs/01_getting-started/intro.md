@@ -13,11 +13,11 @@ This site (**`/wiki`**) is for people who **write or maintain mods and plugins**
 
 ## Getting started
 
-1. **[Getting started](/wiki/getting-started)** — split-repo layout, build gregCore, hooks and registries  
-2. **[Documentation layout](/wiki/getting-started/documentation-layout)** — how `docs/` is organised  
-3. **[Workspace map](/wiki/workspace/)** — folders on disk  
+1. **[Getting started](/wiki/getting-started/intro)** — split-repo layout, build gregCore, hooks and registries  
+2. **[Documentation layout](/wiki/getting-started/intro)** — how `docs/` is organised  
+3. **[Workspace map](/wiki/getting-started/architecture)** — folders on disk  
 
-Then read **[System architecture & documentation principles](/wiki/meta/system-architecture-principles)** — canonical **Mod Manager → Framework → Plugins → Mods** model.
+Then read **[System architecture & documentation principles](/wiki/getting-started/architecture)** — canonical **Mod Manager → Framework → Plugins → Mods** model.
 
 ## Full index
 
