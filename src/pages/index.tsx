@@ -1,4 +1,4 @@
-import React, {useMemo} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -18,8 +18,32 @@ import {GregCoreRandomSnippet} from '../components/GregCoreRandomSnippet';
 /** Always resolves to the newest GitHub release (redirect). */
 const GREG_MODMANAGER_LATEST =
   'https://github.com/mleem97/GregToolsModmanager/releases/latest';
+const DISCORD_GUILD_ID = '1392073682133848075';
+const DISCORD_WIDGET_API = `https://discord.com/api/guilds/${DISCORD_GUILD_ID}/widget.json`;
 
 const viewport = {once: true, margin: '-90px'};
+
+type DiscordWidgetChannel = {
+  id: string;
+  name: string;
+  position: number;
+};
+
+type DiscordWidgetMember = {
+  id: string;
+  username: string;
+  status: string;
+  avatar_url?: string;
+};
+
+type DiscordWidgetResponse = {
+  id: string;
+  name: string;
+  instant_invite?: string;
+  presence_count: number;
+  channels: DiscordWidgetChannel[];
+  members: DiscordWidgetMember[];
+};
 
 /** Inline `greg_hooks.json` in copy when the string contains that token. */
 function formatBulletWithOptionalCode(text: string): React.ReactNode {
@@ -27,16 +51,21 @@ function formatBulletWithOptionalCode(text: string): React.ReactNode {
     return text;
   }
   const parts = text.split('greg_hooks.json');
+  let keyCursor = 0;
   return (
     <>
-      {parts.map((part, i) => (
-        <React.Fragment key={i}>
-          {part}
-          {i < parts.length - 1 ? (
+      {parts.map((part) => {
+        const key = `${part}-${keyCursor}`;
+        keyCursor += part.length + 1;
+        return (
+          <React.Fragment key={key}>
+            {part}
+            {keyCursor <= text.length ? (
             <code className="text-xs">greg_hooks.json</code>
-          ) : null}
-        </React.Fragment>
-      ))}
+            ) : null}
+          </React.Fragment>
+        );
+      })}
     </>
   );
 }
@@ -97,6 +126,39 @@ export default function HomePage(): JSX.Element {
   const t = getHomepageContent(currentLocale);
   const reducedMotion = useReducedMotion();
   const variants = useMemo(() => buildVariants(Boolean(reducedMotion)), [reducedMotion]);
+  const [discordWidget, setDiscordWidget] = useState<DiscordWidgetResponse | null>(null);
+  const [discordWidgetError, setDiscordWidgetError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const abortController = new AbortController();
+
+    async function loadDiscordWidget() {
+      try {
+        setDiscordWidgetError(null);
+        const response = await fetch(DISCORD_WIDGET_API, {signal: abortController.signal});
+        if (!response.ok) {
+          throw new Error(`Discord widget request failed with ${response.status}`);
+        }
+        const payload = (await response.json()) as DiscordWidgetResponse;
+        setDiscordWidget(payload);
+      } catch (error) {
+        if ((error as Error).name === 'AbortError') {
+          return;
+        }
+        setDiscordWidgetError('Discord widget is currently unavailable.');
+      }
+    }
+
+    loadDiscordWidget();
+
+    return () => {
+      abortController.abort();
+    };
+  }, []);
+
+  const discordInviteLink = discordWidget?.instant_invite ?? 'https://discord.gg/greg';
+  const discordVisibleMembers = discordWidget?.members.slice(0, 6) ?? [];
+  const discordVisibleChannels = discordWidget?.channels.slice(0, 3) ?? [];
 
   return (
     <Layout
@@ -425,12 +487,81 @@ export default function HomePage(): JSX.Element {
                 {t.ctaDiscordLead}
               </p>
               <Link
-                to="https://discord.gg/greg"
+                to={discordInviteLink}
                 className="btn-primary hero-glow inline-flex items-center gap-2 rounded-lg px-10 py-4 text-lg"
               >
                 <FaDiscord className="text-xl" />
                 {t.ctaDiscordButton}
               </Link>
+              <div className="mx-auto mt-8 w-full max-w-xl rounded-xl border border-primary/20 bg-surface-container-high p-5 text-left shadow-lg">
+                <div className="mb-4 flex items-center justify-between gap-3">
+                  <h3 className="font-headline text-xl font-bold text-on-surface">
+                    {discordWidget?.name ?? 'GregFramework Discord'}
+                  </h3>
+                  <span className="inline-flex items-center gap-2 rounded-full border border-outline-variant/20 bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">
+                    <span className="h-2 w-2 rounded-full bg-green-500" aria-hidden />
+                    {discordWidget?.presence_count ?? 0} online
+                  </span>
+                </div>
+
+                {discordWidgetError ? (
+                  <p className="text-sm text-on-surface-variant">{discordWidgetError}</p>
+                ) : null}
+
+                {!discordWidget && !discordWidgetError ? (
+                  <p className="text-sm text-on-surface-variant">Loading Discord widget…</p>
+                ) : null}
+
+                {discordVisibleChannels.length > 0 ? (
+                  <div className="mb-4">
+                    <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-on-surface-variant">
+                      Active channels
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {discordVisibleChannels.map((channel) => (
+                        <span
+                          key={channel.id}
+                          className="rounded-full border border-outline-variant/25 bg-surface-container px-2.5 py-1 text-xs text-on-surface-variant"
+                        >
+                          #{channel.name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+
+                {discordVisibleMembers.length > 0 ? (
+                  <div>
+                    <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-on-surface-variant">
+                      Online now
+                    </div>
+                    <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                      {discordVisibleMembers.map((member) => (
+                        <div
+                          key={member.id}
+                          className="flex items-center gap-2 rounded-lg border border-outline-variant/20 bg-surface-container px-2.5 py-2"
+                        >
+                          {member.avatar_url ? (
+                            <img
+                              src={member.avatar_url}
+                              alt={member.username}
+                              className="h-8 w-8 rounded-full object-cover"
+                            />
+                          ) : (
+                            <div className="h-8 w-8 rounded-full bg-primary/20" aria-hidden />
+                          )}
+                          <div className="min-w-0">
+                            <div className="truncate text-sm font-semibold text-on-surface">
+                              {member.username}
+                            </div>
+                            <div className="text-xs text-on-surface-variant">{member.status}</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+              </div>
             </div>
           </div>
         </motion.section>
