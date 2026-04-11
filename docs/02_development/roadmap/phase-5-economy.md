@@ -1,5 +1,5 @@
 ---
-title: Phase 5: Economy & Data
+title: "Phase 5: Economy & Data"
 sidebar_label: Phase 5 (WIP)
 description: Dokumentation für geplante Economy und Data-Bridges.
 ---

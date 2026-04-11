@@ -65,6 +65,7 @@ const sidebars = {
         '02_development/roadmap/overview',
         '02_development/roadmap/phase-5-economy',
         '02_development/roadmap/phase-6-hardware',
+        '02_development/roadmap/phase-8-unity-api',
       ],
     },
     'design-system/visual-philosophy',

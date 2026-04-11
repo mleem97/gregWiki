@@ -14,6 +14,11 @@ Dieses Dokument zeigt den aktuellen Fortschritt des `gregCore` SDKs im Vergleich
 | **Phase 5** | Economy & Data | 🚧 WIP | SaveSystem, Finanzen, Lokalisierung. |
 | **Phase 6** | Deep Hardware & UI | 📅 GEPLANT | SFP-Details, Patch-Panels, Audio, Erweiterte UI. |
 | **Phase 7** | Simulation | 📅 GEPLANT | HR-System, Steam-Integration, Objectives. |
+| **Phase 8** | Unity API Integration | 🔄 LAUFEND | Abgleich mit Unity Scripting API, Bridge-Implementierung für Standard-Module. |
+
+:::info 🔄 Laufende Updates
+Diese Roadmap ist ein **lebendes Dokument**. Da *Data Center* durch die Spieleentwickler kontinuierlich mit neuen Features und Systemen erweitert wird, passen wir diese Liste laufend an. Unser Ziel ist es, mit der Entwicklung des Spiels Schritt zu halten und neue Funktionen zeitnah im `gregCore` SDK zur Verfügung zu stellen.
+:::
 
 ## Aktueller Coverage-Grad
 Wir haben aktuell ca. **65%** der für Modder relevanten IL2CPP-Klassen durch typsichere Bridges abstrahiert.
