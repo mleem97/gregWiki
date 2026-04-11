@@ -14,7 +14,7 @@ export default function PlayersPage(): JSX.Element {
       title="For players"
       description="Install and use Data Center mods: MelonLoader, Greg Mod Manager, Workshop, and troubleshooting."
     >
-      <main className="bg-background text-on-surface mx-auto max-w-3xl px-4 py-16 font-sans editorial-bleed">
+      <main className="bg-background text-on-surface mx-auto max-w-3xl px-4 py-16 font-sans">
         <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">
           Not for mod authors
         </p>
@@ -114,10 +114,7 @@ export default function PlayersPage(): JSX.Element {
           </Link>
         </section>
 
-        <section
-          id="help"
-          className="app-card app-card-glow mb-12 scroll-mt-20 rounded-xl bg-surface-container-high p-6"
-        >
+        <section id="help" className="mb-12 scroll-mt-20 rounded-xl border border-outline-variant/20 bg-surface-container-high p-6">
           <h2 className="mb-3 font-headline text-2xl font-bold">Help</h2>
           <p className="mb-4 text-on-surface-variant">
             For install issues, crashes, or compatibility questions, ask on Discord. For bugs in a
@@ -131,7 +128,7 @@ export default function PlayersPage(): JSX.Element {
           </Link>
         </section>
 
-        <section className="pt-10">
+        <section className="border-t border-outline-variant/20 pt-10">
           <h2 className="mb-3 font-headline text-xl font-bold">Writing mods?</h2>
           <p className="mb-4 text-on-surface-variant">
             Use the wiki under <Link to="/wiki">/wiki</Link>: start with{' '}

@@ -177,7 +177,7 @@ export default function HomePage(): JSX.Element {
       description="gregFramework: player help at /players, mod catalog, and mod-author wiki at /wiki for Data Center."
     >
       <main className="bg-background text-on-surface font-sans min-h-screen editorial-bleed bg-hero-gradient">
-        <section className="hero-motion-wrap relative flex min-h-[72vh] flex-col items-center justify-center overflow-hidden px-4 py-24 text-center md:items-start md:text-left">
+        <section className="hero-motion-wrap relative flex min-h-[72vh] flex-col items-center justify-center overflow-hidden px-4 py-24 text-center">
           <div className="hero-particles" aria-hidden="true" />
           <div className="hero-orb hero-orb-pink" aria-hidden="true" />
           <div className="hero-orb hero-orb-green" aria-hidden="true" />
@@ -235,7 +235,7 @@ export default function HomePage(): JSX.Element {
           </motion.p>
 
           <motion.div
-            className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:justify-start"
+            className="flex flex-wrap items-center justify-center gap-3 sm:gap-4"
             initial="hidden"
             whileInView="show"
             viewport={viewport}
@@ -345,7 +345,7 @@ export default function HomePage(): JSX.Element {
           viewport={viewport}
           variants={variants.section}
         >
-          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl bg-gradient-to-br from-surface-container-high to-surface-container p-10 text-center md:p-14 md:text-left">
+          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl bg-gradient-to-br from-surface-container-high to-surface-container p-10 text-center md:p-14">
             <div
               className="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-secondary/10 blur-[90px]"
               aria-hidden
@@ -416,7 +416,7 @@ export default function HomePage(): JSX.Element {
           viewport={viewport}
           variants={variants.section}
         >
-          <div className="mx-auto max-w-6xl md:text-left">
+          <div className="mx-auto max-w-6xl text-center">
             <motion.h2
               className="mb-10 font-headline text-3xl font-bold text-on-surface"
               variants={variants.textReveal}
@@ -452,7 +452,7 @@ export default function HomePage(): JSX.Element {
           viewport={viewport}
           variants={variants.section}
         >
-          <div className="mx-auto max-w-5xl md:text-left">
+          <div className="mx-auto max-w-5xl text-center">
             <motion.h2
               className="mb-10 font-headline text-3xl font-bold text-on-surface"
               variants={variants.textReveal}
@@ -485,26 +485,26 @@ export default function HomePage(): JSX.Element {
           viewport={viewport}
           variants={variants.section}
         >
-          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl bg-gradient-to-br from-surface-container to-surface-container-high p-12 text-center md:p-16 md:text-left">
+          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl bg-gradient-to-br from-surface-container to-surface-container-high p-12 text-center md:p-16">
             <div
               className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-primary/10 blur-[100px]"
               aria-hidden
             />
-            <div className="relative z-10">
-              <h2 className="mb-6 font-headline text-3xl font-bold text-on-surface md:text-4xl">
-                {t.ctaDiscordTitle}
-              </h2>
-              <p className="mx-auto mb-10 max-w-xl text-lg text-on-surface-variant">
-                {t.ctaDiscordLead}
-              </p>
-              <Link
-                to={discordInviteLink}
-                className="btn-primary hero-glow inline-flex items-center gap-2 rounded-lg px-10 py-4 text-lg"
-              >
-                <FaDiscord className="text-xl" />
-                {t.ctaDiscordButton}
-              </Link>
-              <div className="mx-auto mt-8 w-full max-w-xl rounded-xl bg-surface-container-high p-5 text-left">
+            <div className="relative z-10 grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,30rem)] lg:items-start">
+              <div>
+                <h2 className="mb-6 font-headline text-3xl font-bold text-on-surface md:text-4xl">
+                  {t.ctaDiscordTitle}
+                </h2>
+                <p className="mb-10 max-w-xl text-lg text-on-surface-variant">{t.ctaDiscordLead}</p>
+                <Link
+                  to={discordInviteLink}
+                  className="btn-primary hero-glow inline-flex items-center gap-2 rounded-lg px-10 py-4 text-lg"
+                >
+                  <FaDiscord className="text-xl" />
+                  {t.ctaDiscordButton}
+                </Link>
+              </div>
+              <div className="w-full rounded-xl bg-surface-container-high p-5 text-left">
                 <div className="mb-4 flex items-center justify-between gap-3">
                   <h3 className="font-headline text-xl font-bold text-on-surface">
                     {discordWidget?.name ?? 'GregFramework Discord'}
