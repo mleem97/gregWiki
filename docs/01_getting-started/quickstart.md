@@ -57,7 +57,7 @@ gregCore supports **four modding paths** in parallel:
 |-------|--------|
 | **Canonical `greg.*` (JSON, Il2Cpp)** | Repo root **`greg_hooks.json`** |
 | **`greg.*` Hooks** | **`gregSdk.gregNativeEventHooks`** — [greg hooks catalog](/wiki/reference/greg-hooks-catalog), source `gregCore/gregSdk/gregNativeEventHooks.cs` |
-| **Architecture** | [Greg hooks & event runtime](/wiki/development/concepts/hooks-and-events) |
+| **Runtime architecture** | [greg hooks catalog & events runtime](/wiki/reference/greg-hooks-catalog) |
 
 Engine integration rule:
 

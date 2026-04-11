@@ -13,6 +13,7 @@ import {
   FaShop,
 } from 'react-icons/fa6';
 import {GregCoreRandomSnippet} from '../components/GregCoreRandomSnippet';
+import GradientBlinds from '../components/GradientBlinds';
 
 /** Always resolves to the newest GitHub release (redirect). */
 const GREG_MODMANAGER_LATEST =
@@ -174,36 +175,30 @@ export default function HomePage(): JSX.Element {
     >
       <main className="bg-background text-on-surface font-sans min-h-screen editorial-bleed bg-hero-gradient">
         <section className="hero-motion-wrap relative flex min-h-[72vh] flex-col items-center justify-center overflow-hidden px-4 py-24 text-center">
+          <div className="absolute inset-0 z-0 opacity-60" aria-hidden>
+            <GradientBlinds
+              className="h-full w-full"
+              gradientColors={['#001715', '#001e1c', '#002422', '#08c1a6', '#1cede1', '#64d0ff']}
+              angle={-16}
+              blindCount={20}
+              blindMinWidth={52}
+              noise={0.12}
+              mirrorGradient
+              spotlightRadius={0.42}
+              spotlightSoftness={1.2}
+              spotlightOpacity={0.72}
+              distortAmount={0.15}
+              mouseDampening={0.2}
+              shineDirection="left"
+              mixBlendMode="lighten"
+            />
+          </div>
           <div className="hero-particles" aria-hidden="true" />
           <div className="hero-orb hero-orb-pink" aria-hidden="true" />
           <div className="hero-orb hero-orb-green" aria-hidden="true" />
 
-          <motion.div
-            className="mb-8 inline-flex items-center gap-2 rounded-full bg-surface-container-high px-4 py-1.5"
-            initial="hidden"
-            whileInView="show"
-            viewport={viewport}
-            variants={variants.textReveal}
-          >
-            <span className="h-2 w-2 animate-pulse rounded-full bg-primary" aria-hidden />
-            <span className="text-xs font-bold uppercase tracking-widest text-primary-dim">
-              {t.heroBadge}
-            </span>
-          </motion.div>
-
-          <motion.img
-            src="/img/greg.svg"
-            alt=""
-            aria-hidden
-            className="mb-6 h-16 w-16 opacity-85"
-            initial="hidden"
-            whileInView="show"
-            viewport={viewport}
-            variants={variants.textReveal}
-          />
-
           <motion.h1
-            className="homepage-logo-title mb-6 text-5xl font-black leading-none tracking-tighter text-on-surface md:text-7xl lg:text-8xl"
+            className="homepage-logo-title relative z-10 mb-6 text-5xl font-black leading-none tracking-tighter text-on-surface md:text-7xl lg:text-8xl"
             initial="hidden"
             whileInView="show"
             viewport={viewport}
@@ -216,7 +211,7 @@ export default function HomePage(): JSX.Element {
           </motion.h1>
 
           <motion.h2
-            className="mb-4 max-w-3xl font-headline text-2xl font-bold tracking-tight text-on-surface md:text-4xl"
+            className="relative z-10 mb-4 max-w-3xl font-headline text-2xl font-bold tracking-tight text-on-surface md:text-4xl"
             initial="hidden"
             whileInView="show"
             viewport={viewport}
@@ -229,7 +224,7 @@ export default function HomePage(): JSX.Element {
           </motion.h2>
 
           <motion.p
-            className="mb-10 max-w-2xl text-base font-medium leading-relaxed text-on-surface-variant md:text-xl"
+            className="relative z-10 mb-10 max-w-2xl text-base font-medium leading-relaxed text-on-surface-variant md:text-xl"
             initial="hidden"
             whileInView="show"
             viewport={viewport}
@@ -242,7 +237,7 @@ export default function HomePage(): JSX.Element {
           </motion.p>
 
           <motion.div
-            className="flex flex-wrap items-center justify-center gap-3 sm:gap-4"
+            className="relative z-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4"
             initial="hidden"
             whileInView="show"
             viewport={viewport}
@@ -504,98 +499,105 @@ export default function HomePage(): JSX.Element {
           variants={variants.section}
         >
           <div className="mx-auto grid w-full max-w-[96rem] grid-cols-1 gap-6 lg:grid-cols-2">
-            <motion.div
-              id="discord-cta"
-              className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-surface-container to-surface-container-high p-8 text-center md:p-10"
-              variants={variants.card}
-            >
-              <div
-                className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-primary/10 blur-[100px]"
-                aria-hidden
-              />
-              <div className="relative z-10">
-                <h2 className="mb-6 font-headline text-3xl font-bold text-on-surface md:text-4xl">
-                  {t.ctaDiscordTitle}
-                </h2>
-                <p className="mb-10 text-lg text-on-surface-variant">{t.ctaDiscordLead}</p>
-                <Link
-                  to={discordInviteLink}
-                  className="btn-primary hero-glow inline-flex items-center gap-2 rounded-lg px-10 py-4 text-lg"
-                >
-                  <FaDiscord className="text-xl" />
-                  {t.ctaDiscordButton}
-                </Link>
-                <div className="mt-8 w-full rounded-xl bg-surface-container-high p-5 text-left">
-                  <div className="mb-4 flex items-center justify-between gap-3">
-                    <h3 className="font-headline text-xl font-bold text-on-surface">
-                      {discordWidget?.name ?? 'GregFramework Discord'}
-                    </h3>
-                    <span className="inline-flex items-center gap-2 rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">
-                      <span className="h-2 w-2 rounded-full bg-green-500" aria-hidden />
-                      {discordWidget?.presence_count ?? 0} online
-                    </span>
-                  </div>
-
-                  {discordWidgetError ? (
-                    <p className="text-sm text-on-surface-variant">{discordWidgetError}</p>
-                  ) : null}
-
-                  {!discordWidget && !discordWidgetError ? (
-                    <p className="text-sm text-on-surface-variant">Loading Discord widget…</p>
-                  ) : null}
-
-                  {discordVisibleChannels.length > 0 ? (
-                    <div className="mb-4">
-                      <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-on-surface-variant">
-                        Active channels
-                      </div>
-                      <div className="flex flex-wrap gap-2">
-                        {discordVisibleChannels.map((channel) => (
-                          <span
-                            key={channel.id}
-                            className="rounded-full bg-surface-container px-2.5 py-1 text-xs text-on-surface-variant"
-                          >
-                            #{channel.name}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  ) : null}
-
-                  {discordVisibleMembers.length > 0 ? (
-                    <div>
-                      <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-on-surface-variant">
-                        Online now
-                      </div>
-                      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                        {discordVisibleMembers.map((member) => (
-                          <div
-                            key={member.id}
-                            className="flex items-center gap-2 rounded-lg bg-surface-container px-2.5 py-2"
-                          >
-                            {member.avatar_url ? (
-                              <img
-                                src={member.avatar_url}
-                                alt={member.username}
-                                className="h-8 w-8 rounded-full object-cover"
-                              />
-                            ) : (
-                              <div className="h-8 w-8 rounded-full bg-primary/20" aria-hidden />
-                            )}
-                            <div className="min-w-0">
-                              <div className="truncate text-sm font-semibold text-on-surface">
-                                {member.username}
-                              </div>
-                              <div className="text-xs text-on-surface-variant">{member.status}</div>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  ) : null}
+            <div className="flex flex-col gap-6">
+              <motion.div
+                id="discord-cta"
+                className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-surface-container to-surface-container-high p-8 text-center md:p-10"
+                variants={variants.card}
+              >
+                <div
+                  className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-primary/10 blur-[100px]"
+                  aria-hidden
+                />
+                <div className="relative z-10">
+                  <h2 className="mb-6 font-headline text-3xl font-bold text-on-surface md:text-4xl">
+                    {t.ctaDiscordTitle}
+                  </h2>
+                  <p className="mb-10 text-lg text-on-surface-variant">{t.ctaDiscordLead}</p>
+                  <Link
+                    to={discordInviteLink}
+                    className="btn-primary hero-glow inline-flex items-center gap-2 rounded-lg px-10 py-4 text-lg"
+                  >
+                    <FaDiscord className="text-xl" />
+                    {t.ctaDiscordButton}
+                  </Link>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+
+              <motion.div
+                id="discord-widget"
+                className="app-card app-card-glow rounded-2xl p-6"
+                variants={variants.card}
+              >
+                <div className="mb-4 flex items-center justify-between gap-3">
+                  <h3 className="font-headline text-xl font-bold text-on-surface">
+                    {discordWidget?.name ?? 'GregFramework Discord'}
+                  </h3>
+                  <span className="inline-flex items-center gap-2 rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">
+                    <span className="h-2 w-2 rounded-full bg-green-500" aria-hidden />
+                    {discordWidget?.presence_count ?? 0} online
+                  </span>
+                </div>
+
+                {discordWidgetError ? (
+                  <p className="text-sm text-on-surface-variant">{discordWidgetError}</p>
+                ) : null}
+
+                {!discordWidget && !discordWidgetError ? (
+                  <p className="text-sm text-on-surface-variant">Loading Discord widget…</p>
+                ) : null}
+
+                {discordVisibleChannels.length > 0 ? (
+                  <div className="mb-4">
+                    <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-on-surface-variant">
+                      Active channels
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {discordVisibleChannels.map((channel) => (
+                        <span
+                          key={channel.id}
+                          className="rounded-full bg-surface-container px-2.5 py-1 text-xs text-on-surface-variant"
+                        >
+                          #{channel.name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+
+                {discordVisibleMembers.length > 0 ? (
+                  <div>
+                    <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-on-surface-variant">
+                      Online now
+                    </div>
+                    <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                      {discordVisibleMembers.map((member) => (
+                        <div
+                          key={member.id}
+                          className="flex items-center gap-2 rounded-lg bg-surface-container px-2.5 py-2"
+                        >
+                          {member.avatar_url ? (
+                            <img
+                              src={member.avatar_url}
+                              alt={member.username}
+                              className="h-8 w-8 rounded-full object-cover"
+                            />
+                          ) : (
+                            <div className="h-8 w-8 rounded-full bg-primary/20" aria-hidden />
+                          )}
+                          <div className="min-w-0">
+                            <div className="truncate text-sm font-semibold text-on-surface">
+                              {member.username}
+                            </div>
+                            <div className="text-xs text-on-surface-variant">{member.status}</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+              </motion.div>
+            </div>
 
             <motion.div
               id="greg-story"

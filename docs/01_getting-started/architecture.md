@@ -54,13 +54,13 @@ When documentation or API design must choose, use this **order**:
 
 - **Terminology:** Always name the layer (ModManager, framework, plugin, mod). Do not conflate “plugin” and “mod” without context.
 - **Language:** **English only** for all user-facing documentation in `docs/`, the homepage, and UI strings in this site.
-- **Repos:** Keep paths such as `gregCore/`, `gregMod.*`, `gregExt.*`, `gregModmanager/` consistent with the [Workspace map](/wiki/getting-started/architecture) and [Repository architecture](/wiki/development/concepts/hooks-and-events).
+- **Repos:** Keep paths such as `gregCore/`, `gregMod.*`, `gregExt.*`, `gregModmanager/` consistent with the [Workspace map](/wiki/getting-started/architecture) and [runtime hook architecture](/wiki/reference/greg-hooks-catalog).
 - **No invented APIs:** New pages must not promise hooks or events that are not evidenced in core/registry — link to [FMF hooks](/wiki/reference/fmf-hook-naming) and the [Hooks catalog](/wiki/reference/greg-hooks-catalog).
-- **Cross-links:** Entry [Developers & contributors](/wiki/developers), architecture [Repository architecture](/wiki/development/concepts/hooks-and-events), language rule [Modding language support](/wiki/developers).
+- **Cross-links:** Entry [Developers & contributors](/wiki/developers), architecture [runtime hook architecture](/wiki/reference/greg-hooks-catalog), language rule [Modding language support](/wiki/developers).
 
 ## See also
 
-- [Repository architecture](/wiki/development/concepts/hooks-and-events) — multi-repo layout and core
+- [Runtime hook architecture](/wiki/reference/greg-hooks-catalog) — `greg.*` hook/event flow and mapping
 - [Getting started](/wiki/getting-started/quickstart) — workspace and build
 - [Mods — Framework](/mods) — runtime from mod authors’ perspective
 - [Plugins overview](/mods) — `FFM.Plugin.*`

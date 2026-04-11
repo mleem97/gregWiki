@@ -40,7 +40,6 @@ const sidebars = {
     },
   ],
   apiSidebar: [
-    'development/concepts/hooks-and-events',
     'development/api-reference/greg-hooks-catalog',
     {
       type: 'category',

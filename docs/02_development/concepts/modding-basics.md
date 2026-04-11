@@ -23,7 +23,7 @@ Use this index if you **build mods or plugins**, work on **framework** code, or 
 ## Framework
 
 - [Architecture](/wiki/getting-started/architecture)
-- [Greg hooks & event runtime](/wiki/development/concepts/hooks-and-events)
+- [greg hooks catalog & events runtime](/wiki/reference/greg-hooks-catalog)
 - [FMF hooks](/wiki/reference/fmf-hook-naming)
 - [Hexmod](/wiki/developers)
 
