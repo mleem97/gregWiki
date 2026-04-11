@@ -1,6 +1,6 @@
 ---
 title: greg.RACK.AudioVolumeChanged
-sidebar_label: greg.RACK.AudioVolumeChanged
+sidebar_label: AudioVolumeChanged
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.UpdateAudioVolume"
 ---
 

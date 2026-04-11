@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.CableFromLACPGroupsRemoved
-sidebar_label: greg.NETWORK.CableFromLACPGroupsRemoved
+sidebar_label: CableFromLACPGroupsRemoved
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.RemoveCableFromLACPGroups"
 ---
 

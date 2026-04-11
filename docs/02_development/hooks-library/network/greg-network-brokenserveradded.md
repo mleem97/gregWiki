@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.BrokenServerAdded
-sidebar_label: greg.NETWORK.BrokenServerAdded
+sidebar_label: BrokenServerAdded
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.AddBrokenServer"
 ---
 

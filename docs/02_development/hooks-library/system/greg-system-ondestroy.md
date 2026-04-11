@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.OnDestroy
-sidebar_label: greg.SYSTEM.OnDestroy
+sidebar_label: OnDestroy
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.OnDestroy"
 ---
 

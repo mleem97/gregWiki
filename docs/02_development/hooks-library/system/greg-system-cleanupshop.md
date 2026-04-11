@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.CleanUpShop
-sidebar_label: greg.SYSTEM.CleanUpShop
+sidebar_label: CleanUpShop
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.CleanUpShop"
 ---
 

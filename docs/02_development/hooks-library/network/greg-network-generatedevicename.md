@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GenerateDeviceName
-sidebar_label: greg.NETWORK.GenerateDeviceName
+sidebar_label: GenerateDeviceName
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.GenerateDeviceName"
 ---
 

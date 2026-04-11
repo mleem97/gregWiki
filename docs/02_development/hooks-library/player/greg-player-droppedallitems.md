@@ -1,6 +1,6 @@
 ---
 title: greg.PLAYER.DroppedAllItems
-sidebar_label: greg.PLAYER.DroppedAllItems
+sidebar_label: DroppedAllItems
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Player.DropAllItems"
 ---
 

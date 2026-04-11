@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GetLACPGroupForCable
-sidebar_label: greg.NETWORK.GetLACPGroupForCable
+sidebar_label: GetLACPGroupForCable
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.GetLACPGroupForCable"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.PLAYER.ConfinedCursorforUI
-sidebar_label: greg.PLAYER.ConfinedCursorforUI
+sidebar_label: ConfinedCursorforUI
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: PlayerManager.ConfinedCursorforUI"
 ---
 

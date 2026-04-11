@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GetCableMaterial
-sidebar_label: greg.NETWORK.GetCableMaterial
+sidebar_label: GetCableMaterial
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.GetCableMaterial"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.RedrawCable
-sidebar_label: greg.NETWORK.RedrawCable
+sidebar_label: RedrawCable
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.RedrawCable"
 ---
 

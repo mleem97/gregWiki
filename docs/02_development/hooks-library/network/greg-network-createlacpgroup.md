@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.CreateLACPGroup
-sidebar_label: greg.NETWORK.CreateLACPGroup
+sidebar_label: CreateLACPGroup
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.CreateLACPGroup"
 ---
 

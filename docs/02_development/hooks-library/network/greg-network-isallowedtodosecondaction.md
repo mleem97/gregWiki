@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.IsAllowedToDoSecondAction
-sidebar_label: greg.NETWORK.IsAllowedToDoSecondAction
+sidebar_label: IsAllowedToDoSecondAction
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CableLink.IsAllowedToDoSecondAction"
 ---
 

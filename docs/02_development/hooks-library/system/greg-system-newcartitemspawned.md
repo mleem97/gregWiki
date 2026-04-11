@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.NewCartItemSpawned
-sidebar_label: greg.SYSTEM.NewCartItemSpawned
+sidebar_label: NewCartItemSpawned
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.SpawnNewCartItem"
 ---
 

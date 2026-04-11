@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.ComponentInitialized
-sidebar_label: greg.SERVER.ComponentInitialized
+sidebar_label: ComponentInitialized
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.Awake"
 ---
 

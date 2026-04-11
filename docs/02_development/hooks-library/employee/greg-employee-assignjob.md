@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.AssignJob
-sidebar_label: greg.EMPLOYEE.AssignJob
+sidebar_label: AssignJob
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Technician.AssignJob"
 ---
 

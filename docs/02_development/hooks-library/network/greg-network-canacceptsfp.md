@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.CanAcceptSFP
-sidebar_label: greg.NETWORK.CanAcceptSFP
+sidebar_label: CanAcceptSFP
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: SFPBox.CanAcceptSFP"
 ---
 

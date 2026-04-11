@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.CustomerServerCountAndSpeedChanged
-sidebar_label: greg.CUSTOMER.CustomerServerCountAndSpeedChanged
+sidebar_label: CustomerServerCountAndSpeedChanged
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.UpdateCustomerServerCountAndSpeed"
 ---
 

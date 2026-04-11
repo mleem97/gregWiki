@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ShuffleAvailableCustomers
-sidebar_label: greg.SYSTEM.ShuffleAvailableCustomers
+sidebar_label: ShuffleAvailableCustomers
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ShuffleAvailableCustomers"
 ---
 

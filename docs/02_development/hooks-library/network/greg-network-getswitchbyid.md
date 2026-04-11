@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GetSwitchById
-sidebar_label: greg.NETWORK.GetSwitchById
+sidebar_label: GetSwitchById
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.GetSwitchById"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ButtonAssetManagementScreen
-sidebar_label: greg.SYSTEM.ButtonAssetManagementScreen
+sidebar_label: ButtonAssetManagementScreen
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonAssetManagementScreen"
 ---
 

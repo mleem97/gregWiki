@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.OnDestroy
-sidebar_label: greg.EMPLOYEE.OnDestroy
+sidebar_label: OnDestroy
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Technician.OnDestroy"
 ---
 

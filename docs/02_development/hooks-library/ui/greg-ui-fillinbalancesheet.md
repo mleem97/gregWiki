@@ -1,6 +1,6 @@
 ---
 title: greg.UI.FillInBalanceSheet
-sidebar_label: greg.UI.FillInBalanceSheet
+sidebar_label: FillInBalanceSheet
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.FillInBalanceSheet"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.UI.QuitGame
-sidebar_label: greg.UI.QuitGame
+sidebar_label: QuitGame
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainMenu.QuitGame"
 ---
 

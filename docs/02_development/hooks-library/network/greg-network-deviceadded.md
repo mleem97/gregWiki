@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.DeviceAdded
-sidebar_label: greg.NETWORK.DeviceAdded
+sidebar_label: DeviceAdded
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.AddDevice"
 ---
 

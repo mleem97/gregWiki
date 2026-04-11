@@ -1,6 +1,6 @@
 ---
 title: greg.UI.RestoreRecord
-sidebar_label: greg.UI.RestoreRecord
+sidebar_label: RestoreRecord
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.RestoreRecord"
 ---
 

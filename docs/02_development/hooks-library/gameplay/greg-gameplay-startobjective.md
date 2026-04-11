@@ -1,6 +1,6 @@
 ---
 title: greg.GAMEPLAY.StartObjective
-sidebar_label: greg.GAMEPLAY.StartObjective
+sidebar_label: StartObjective
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.StartObjective"
 ---
 

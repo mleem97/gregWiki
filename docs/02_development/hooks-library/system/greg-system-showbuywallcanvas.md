@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ShowBuyWallCanvas
-sidebar_label: greg.SYSTEM.ShowBuyWallCanvas
+sidebar_label: ShowBuyWallCanvas
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ShowBuyWallCanvas"
 ---
 

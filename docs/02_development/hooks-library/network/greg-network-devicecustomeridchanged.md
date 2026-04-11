@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.DeviceCustomerIDChanged
-sidebar_label: greg.NETWORK.DeviceCustomerIDChanged
+sidebar_label: DeviceCustomerIDChanged
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.UpdateDeviceCustomerID"
 ---
 

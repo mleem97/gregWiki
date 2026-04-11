@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.Hired
-sidebar_label: greg.EMPLOYEE.Hired
+sidebar_label: Hired
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: TechnicianManager.AddTechnician"
 ---
 

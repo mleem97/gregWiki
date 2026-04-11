@@ -1,6 +1,6 @@
 ---
 title: greg.GAMEPLAY.InstantiateObjectiveSign
-sidebar_label: greg.GAMEPLAY.InstantiateObjectiveSign
+sidebar_label: InstantiateObjectiveSign
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.InstantiateObjectiveSign"
 ---
 

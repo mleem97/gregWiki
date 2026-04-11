@@ -1,6 +1,6 @@
 ---
 title: greg.UI.PointerEnter
-sidebar_label: greg.UI.PointerEnter
+sidebar_label: PointerEnter
 description: "gregCore Hook — Normalized Unity signal for UI pointer enter."
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.SecondActionOnClick
-sidebar_label: greg.NETWORK.SecondActionOnClick
+sidebar_label: SecondActionOnClick
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CableLink.SecondActionOnClick"
 ---
 

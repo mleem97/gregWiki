@@ -1,6 +1,6 @@
 ---
 title: greg.PLAYER.CheckFallsThroughMap
-sidebar_label: greg.PLAYER.CheckFallsThroughMap
+sidebar_label: CheckFallsThroughMap
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Player.CheckFallsThroughMap"
 ---
 

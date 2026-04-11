@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.CartTotalChanged
-sidebar_label: greg.SYSTEM.CartTotalChanged
+sidebar_label: CartTotalChanged
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.UpdateCartTotal"
 ---
 

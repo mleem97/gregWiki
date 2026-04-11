@@ -1,6 +1,6 @@
 ---
 title: greg.UI.HideMiddleMenu
-sidebar_label: greg.UI.HideMiddleMenu
+sidebar_label: HideMiddleMenu
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainMenu.HideMiddleMenu"
 ---
 

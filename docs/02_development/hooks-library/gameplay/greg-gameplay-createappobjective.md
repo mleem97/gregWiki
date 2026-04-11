@@ -1,6 +1,6 @@
 ---
 title: greg.GAMEPLAY.CreateAppObjective
-sidebar_label: greg.GAMEPLAY.CreateAppObjective
+sidebar_label: CreateAppObjective
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.CreateAppObjective"
 ---
 

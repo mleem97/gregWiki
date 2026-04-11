@@ -1,6 +1,6 @@
 ---
 title: greg.Input.BindingStarted
-sidebar_label: greg.Input.BindingStarted
+sidebar_label: BindingStarted
 description: "gregCore Hook — Normalized Unity signal for an input binding process starting."
 ---
 

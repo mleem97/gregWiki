@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.GetNextAvailableSpawnPoint
-sidebar_label: greg.SYSTEM.GetNextAvailableSpawnPoint
+sidebar_label: GetNextAvailableSpawnPoint
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.GetNextAvailableSpawnPoint"
 ---
 

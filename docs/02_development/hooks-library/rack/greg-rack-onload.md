@@ -1,6 +1,6 @@
 ---
 title: greg.RACK.OnLoad
-sidebar_label: greg.RACK.OnLoad
+sidebar_label: OnLoad
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.OnLoad"
 ---
 

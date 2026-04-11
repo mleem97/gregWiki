@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.IsCableComplete
-sidebar_label: greg.NETWORK.IsCableComplete
+sidebar_label: IsCableComplete
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.IsCableComplete"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.GAMEPLAY.GetTimedObjective
-sidebar_label: greg.GAMEPLAY.GetTimedObjective
+sidebar_label: GetTimedObjective
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.GetTimedObjective"
 ---
 

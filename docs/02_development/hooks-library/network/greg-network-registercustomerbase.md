@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.RegisterCustomerBase
-sidebar_label: greg.NETWORK.RegisterCustomerBase
+sidebar_label: RegisterCustomerBase
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.RegisterCustomerBase"
 ---
 

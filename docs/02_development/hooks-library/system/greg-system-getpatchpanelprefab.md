@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.GetPatchPanelPrefab
-sidebar_label: greg.SYSTEM.GetPatchPanelPrefab
+sidebar_label: GetPatchPanelPrefab
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.GetPatchPanelPrefab"
 ---
 

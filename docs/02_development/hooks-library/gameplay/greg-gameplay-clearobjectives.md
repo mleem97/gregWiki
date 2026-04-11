@@ -1,6 +1,6 @@
 ---
 title: greg.GAMEPLAY.ClearObjectives
-sidebar_label: greg.GAMEPLAY.ClearObjectives
+sidebar_label: ClearObjectives
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.ClearObjectives"
 ---
 

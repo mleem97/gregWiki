@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ShowCustomerCardsCanvas
-sidebar_label: greg.SYSTEM.ShowCustomerCardsCanvas
+sidebar_label: ShowCustomerCardsCanvas
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ShowCustomerCardsCanvas"
 ---
 

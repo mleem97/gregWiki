@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.GetAppIDForIP
-sidebar_label: greg.CUSTOMER.GetAppIDForIP
+sidebar_label: GetAppIDForIP
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.GetAppIDForIP"
 ---
 

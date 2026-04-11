@@ -1,6 +1,6 @@
 ---
 title: greg.Input.BindingApplied
-sidebar_label: greg.Input.BindingApplied
+sidebar_label: BindingApplied
 description: "gregCore Hook — Normalized Unity signal for an input binding being applied."
 ---
 

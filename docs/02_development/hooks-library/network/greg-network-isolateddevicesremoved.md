@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.IsolatedDevicesRemoved
-sidebar_label: greg.NETWORK.IsolatedDevicesRemoved
+sidebar_label: IsolatedDevicesRemoved
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.RemoveIsolatedDevices"
 ---
 

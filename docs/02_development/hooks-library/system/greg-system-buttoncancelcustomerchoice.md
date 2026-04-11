@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ButtonCancelCustomerChoice
-sidebar_label: greg.SYSTEM.ButtonCancelCustomerChoice
+sidebar_label: ButtonCancelCustomerChoice
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ButtonCancelCustomerChoice"
 ---
 

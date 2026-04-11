@@ -1,6 +1,6 @@
 ---
 title: greg.UI.RegisterSalary
-sidebar_label: greg.UI.RegisterSalary
+sidebar_label: RegisterSalary
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.RegisterSalary"
 ---
 

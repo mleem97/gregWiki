@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ApplyColorToSpawnedItem
-sidebar_label: greg.SYSTEM.ApplyColorToSpawnedItem
+sidebar_label: ApplyColorToSpawnedItem
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ApplyColorToSpawnedItem"
 ---
 

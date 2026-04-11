@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.AssignNewPosition
-sidebar_label: greg.NETWORK.AssignNewPosition
+sidebar_label: AssignNewPosition
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.AssignNewPosition"
 ---
 

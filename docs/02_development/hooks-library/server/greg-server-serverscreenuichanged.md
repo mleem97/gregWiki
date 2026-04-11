@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.ServerScreenUIChanged
-sidebar_label: greg.SERVER.ServerScreenUIChanged
+sidebar_label: ServerScreenUIChanged
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.UpdateServerScreenUI"
 ---
 

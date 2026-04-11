@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ButtonChosenColor
-sidebar_label: greg.SYSTEM.ButtonChosenColor
+sidebar_label: ButtonChosenColor
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonChosenColor"
 ---
 

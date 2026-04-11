@@ -1,6 +1,6 @@
 ---
 title: greg.UI.InstantiateRow
-sidebar_label: greg.UI.InstantiateRow
+sidebar_label: InstantiateRow
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.InstantiateRow"
 ---
 

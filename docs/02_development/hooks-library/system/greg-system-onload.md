@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.OnLoad
-sidebar_label: greg.SYSTEM.OnLoad
+sidebar_label: OnLoad
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.OnLoad"
 ---
 

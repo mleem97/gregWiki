@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.ButtonShowNetworkSwitchConfig
-sidebar_label: greg.NETWORK.ButtonShowNetworkSwitchConfig
+sidebar_label: ButtonShowNetworkSwitchConfig
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.ButtonShowNetworkSwitchConfig"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.JobQueueLoaded
-sidebar_label: greg.EMPLOYEE.JobQueueLoaded
+sidebar_label: JobQueueLoaded
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: TechnicianManager.RestoreJobQueue"
 ---
 

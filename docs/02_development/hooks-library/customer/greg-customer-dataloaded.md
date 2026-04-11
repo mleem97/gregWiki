@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.DataLoaded
-sidebar_label: greg.CUSTOMER.DataLoaded
+sidebar_label: DataLoaded
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.LoadData"
 ---
 

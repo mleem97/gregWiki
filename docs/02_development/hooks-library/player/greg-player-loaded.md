@@ -1,6 +1,6 @@
 ---
 title: greg.PLAYER.Loaded
-sidebar_label: greg.PLAYER.Loaded
+sidebar_label: Loaded
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Player.LoadPlayer"
 ---
 

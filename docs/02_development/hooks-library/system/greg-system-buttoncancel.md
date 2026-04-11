@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ButtonCancel
-sidebar_label: greg.SYSTEM.ButtonCancel
+sidebar_label: ButtonCancel
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonCancel"
 ---
 

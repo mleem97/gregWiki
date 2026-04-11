@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.CableConnectionRemoved
-sidebar_label: greg.NETWORK.CableConnectionRemoved
+sidebar_label: CableConnectionRemoved
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.RemoveCableConnection"
 ---
 

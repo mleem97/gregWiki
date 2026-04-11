@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.IsIpAddressDuplicate
-sidebar_label: greg.NETWORK.IsIpAddressDuplicate
+sidebar_label: IsIpAddressDuplicate
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.IsIpAddressDuplicate"
 ---
 

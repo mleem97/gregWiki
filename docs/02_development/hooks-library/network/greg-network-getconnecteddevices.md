@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GetConnectedDevices
-sidebar_label: greg.NETWORK.GetConnectedDevices
+sidebar_label: GetConnectedDevices
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.GetConnectedDevices"
 ---
 

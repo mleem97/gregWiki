@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GetRawCablePositions
-sidebar_label: greg.NETWORK.GetRawCablePositions
+sidebar_label: GetRawCablePositions
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.GetRawCablePositions"
 ---
 

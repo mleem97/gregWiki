@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.CurrentTimeInHours
-sidebar_label: greg.SYSTEM.CurrentTimeInHours
+sidebar_label: CurrentTimeInHours
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: TimeController.CurrentTimeInHours"
 ---
 

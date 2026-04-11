@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.LACPGroupsSet
-sidebar_label: greg.NETWORK.LACPGroupsSet
+sidebar_label: LACPGroupsSet
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.SetLACPGroups"
 ---
 

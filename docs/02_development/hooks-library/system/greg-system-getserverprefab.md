@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.GetServerPrefab
-sidebar_label: greg.SYSTEM.GetServerPrefab
+sidebar_label: GetServerPrefab
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.GetServerPrefab"
 ---
 

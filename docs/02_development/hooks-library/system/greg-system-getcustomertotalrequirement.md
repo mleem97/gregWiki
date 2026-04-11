@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.GetCustomerTotalRequirement
-sidebar_label: greg.SYSTEM.GetCustomerTotalRequirement
+sidebar_label: GetCustomerTotalRequirement
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.GetCustomerTotalRequirement"
 ---
 

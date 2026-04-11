@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.OnLoadingStarted
-sidebar_label: greg.SERVER.OnLoadingStarted
+sidebar_label: OnLoadingStarted
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.OnLoadingStarted"
 ---
 

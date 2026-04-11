@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.Fired
-sidebar_label: greg.EMPLOYEE.Fired
+sidebar_label: Fired
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: TechnicianManager.FireTechnician"
 ---
 

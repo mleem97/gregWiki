@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.Method_Internal_Static_Void_IntPtr_IntPtr_PDM_1
-sidebar_label: greg.NETWORK.Method_Internal_Static_Void_IntPtr_IntPtr_PDM_1
+sidebar_label: Method_Internal_Static_Void_IntPtr_IntPtr_PDM_1
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: PacketSpawnerSystem.Method_Internal_Static_Void_IntPtr_IntPtr_PDM_1"
 ---
 

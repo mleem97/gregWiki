@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.ClearWarningSign
-sidebar_label: greg.SERVER.ClearWarningSign
+sidebar_label: ClearWarningSign
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.ClearWarningSign"
 ---
 

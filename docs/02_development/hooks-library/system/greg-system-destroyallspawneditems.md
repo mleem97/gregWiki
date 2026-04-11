@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.DestroyAllSpawnedItems
-sidebar_label: greg.SYSTEM.DestroyAllSpawnedItems
+sidebar_label: DestroyAllSpawnedItems
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.DestroyAllSpawnedItems"
 ---
 

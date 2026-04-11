@@ -1,6 +1,6 @@
 ---
 title: greg.Content.Loaded
-sidebar_label: greg.Content.Loaded
+sidebar_label: Loaded
 description: "gregCore Hook — Normalized Unity signal for content being loaded."
 ---
 

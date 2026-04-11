@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.InsertedInSFPPort
-sidebar_label: greg.NETWORK.InsertedInSFPPort
+sidebar_label: InsertedInSFPPort
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: SFPModule.InsertedInSFPPort"
 ---
 

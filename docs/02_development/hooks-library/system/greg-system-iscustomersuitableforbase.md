@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.IsCustomerSuitableForBase
-sidebar_label: greg.SYSTEM.IsCustomerSuitableForBase
+sidebar_label: IsCustomerSuitableForBase
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.IsCustomerSuitableForBase"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.LACPGroupRemoved
-sidebar_label: greg.NETWORK.LACPGroupRemoved
+sidebar_label: LACPGroupRemoved
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.RemoveLACPGroup"
 ---
 

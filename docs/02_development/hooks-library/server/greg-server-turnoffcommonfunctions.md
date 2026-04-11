@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.TurnOffCommonFunctions
-sidebar_label: greg.SERVER.TurnOffCommonFunctions
+sidebar_label: TurnOffCommonFunctions
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.TurnOffCommonFunctions"
 ---
 

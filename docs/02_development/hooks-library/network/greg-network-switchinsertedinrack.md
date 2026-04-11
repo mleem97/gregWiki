@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.SwitchInsertedInRack
-sidebar_label: greg.NETWORK.SwitchInsertedInRack
+sidebar_label: SwitchInsertedInRack
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.SwitchInsertedInRack"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.GetSfpBoxPrefab
-sidebar_label: greg.SYSTEM.GetSfpBoxPrefab
+sidebar_label: GetSfpBoxPrefab
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.GetSfpBoxPrefab"
 ---
 

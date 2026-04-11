@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.ClearErrorSign
-sidebar_label: greg.SERVER.ClearErrorSign
+sidebar_label: ClearErrorSign
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.ClearErrorSign"
 ---
 

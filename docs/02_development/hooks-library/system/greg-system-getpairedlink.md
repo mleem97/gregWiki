@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.GetPairedLink
-sidebar_label: greg.SYSTEM.GetPairedLink
+sidebar_label: GetPairedLink
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: PatchPanel.GetPairedLink"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.UI.CountFailingApps
-sidebar_label: greg.UI.CountFailingApps
+sidebar_label: CountFailingApps
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.CountFailingApps"
 ---
 

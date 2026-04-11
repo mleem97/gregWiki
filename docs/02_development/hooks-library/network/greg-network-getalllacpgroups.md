@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GetAllLACPGroups
-sidebar_label: greg.NETWORK.GetAllLACPGroups
+sidebar_label: GetAllLACPGroups
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.GetAllLACPGroups"
 ---
 

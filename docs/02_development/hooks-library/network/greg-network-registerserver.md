@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.RegisterServer
-sidebar_label: greg.NETWORK.RegisterServer
+sidebar_label: RegisterServer
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.RegisterServer"
 ---
 

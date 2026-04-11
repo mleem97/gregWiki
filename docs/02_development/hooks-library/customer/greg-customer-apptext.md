@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.AppText
-sidebar_label: greg.CUSTOMER.AppText
+sidebar_label: AppText
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.AppText"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.CableLoaded
-sidebar_label: greg.NETWORK.CableLoaded
+sidebar_label: CableLoaded
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.LoadCable"
 ---
 

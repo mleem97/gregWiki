@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.ReconnectCables
-sidebar_label: greg.NETWORK.ReconnectCables
+sidebar_label: ReconnectCables
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.ReconnectCables"
 ---
 

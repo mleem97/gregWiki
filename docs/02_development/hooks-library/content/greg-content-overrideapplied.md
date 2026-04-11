@@ -1,6 +1,6 @@
 ---
 title: greg.Content.OverrideApplied
-sidebar_label: greg.Content.OverrideApplied
+sidebar_label: OverrideApplied
 description: "gregCore Hook — Normalized Unity signal for content override being applied."
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.IPSet
-sidebar_label: greg.SERVER.IPSet
+sidebar_label: IPSet
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.SetIP"
 ---
 

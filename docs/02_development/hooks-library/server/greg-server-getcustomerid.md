@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.GetCustomerID
-sidebar_label: greg.SERVER.GetCustomerID
+sidebar_label: GetCustomerID
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.GetCustomerID"
 ---
 

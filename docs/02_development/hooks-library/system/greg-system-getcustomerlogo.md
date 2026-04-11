@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.GetCustomerLogo
-sidebar_label: greg.SYSTEM.GetCustomerLogo
+sidebar_label: GetCustomerLogo
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.GetCustomerLogo"
 ---
 

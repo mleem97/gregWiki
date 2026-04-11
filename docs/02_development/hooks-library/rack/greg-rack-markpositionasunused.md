@@ -1,6 +1,6 @@
 ---
 title: greg.RACK.MarkPositionAsUnused
-sidebar_label: greg.RACK.MarkPositionAsUnused
+sidebar_label: MarkPositionAsUnused
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.MarkPositionAsUnused"
 ---
 

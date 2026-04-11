@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GenerateCornerBend
-sidebar_label: greg.NETWORK.GenerateCornerBend
+sidebar_label: GenerateCornerBend
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.GenerateCornerBend"
 ---
 

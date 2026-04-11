@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.InteractOnClick
-sidebar_label: greg.SERVER.InteractOnClick
+sidebar_label: InteractOnClick
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.InteractOnClick"
 ---
 

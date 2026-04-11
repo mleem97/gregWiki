@@ -1,6 +1,6 @@
 ---
 title: greg.GAMEPLAY.IsTutorialInProgress
-sidebar_label: greg.GAMEPLAY.IsTutorialInProgress
+sidebar_label: IsTutorialInProgress
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.IsTutorialInProgress"
 ---
 

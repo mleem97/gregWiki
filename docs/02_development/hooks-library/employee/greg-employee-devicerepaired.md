@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.DeviceRepaired
-sidebar_label: greg.EMPLOYEE.DeviceRepaired
+sidebar_label: DeviceRepaired
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Technician.RepairDevice"
 ---
 

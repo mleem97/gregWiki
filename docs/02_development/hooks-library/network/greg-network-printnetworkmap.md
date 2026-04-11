@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.PrintNetworkMap
-sidebar_label: greg.NETWORK.PrintNetworkMap
+sidebar_label: PrintNetworkMap
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.PrintNetworkMap"
 ---
 

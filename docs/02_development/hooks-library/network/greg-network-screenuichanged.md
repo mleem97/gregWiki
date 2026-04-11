@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.ScreenUIChanged
-sidebar_label: greg.NETWORK.ScreenUIChanged
+sidebar_label: ScreenUIChanged
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.UpdateScreenUI"
 ---
 

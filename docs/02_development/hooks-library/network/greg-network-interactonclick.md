@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.InteractOnClick
-sidebar_label: greg.NETWORK.InteractOnClick
+sidebar_label: InteractOnClick
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CableLink.InteractOnClick"
 ---
 

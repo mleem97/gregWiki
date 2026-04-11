@@ -1,6 +1,6 @@
 ---
 title: greg.RACK.DisablePositionsButtonMaterialSet
-sidebar_label: greg.RACK.DisablePositionsButtonMaterialSet
+sidebar_label: DisablePositionsButtonMaterialSet
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.SetDisablePositionsButtonMaterial"
 ---
 

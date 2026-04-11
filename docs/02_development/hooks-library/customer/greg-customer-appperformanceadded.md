@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.AppPerformanceAdded
-sidebar_label: greg.CUSTOMER.AppPerformanceAdded
+sidebar_label: AppPerformanceAdded
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.AddAppPerformance"
 ---
 

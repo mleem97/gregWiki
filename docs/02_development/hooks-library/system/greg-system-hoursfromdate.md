@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.HoursFromDate
-sidebar_label: greg.SYSTEM.HoursFromDate
+sidebar_label: HoursFromDate
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: TimeController.HoursFromDate"
 ---
 

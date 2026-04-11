@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.UpBaseSet
-sidebar_label: greg.CUSTOMER.UpBaseSet
+sidebar_label: UpBaseSet
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.SetUpBase"
 ---
 

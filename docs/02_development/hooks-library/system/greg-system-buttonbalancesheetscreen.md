@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ButtonBalanceSheetScreen
-sidebar_label: greg.SYSTEM.ButtonBalanceSheetScreen
+sidebar_label: ButtonBalanceSheetScreen
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonBalanceSheetScreen"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.AnotherItemPurchased
-sidebar_label: greg.SYSTEM.AnotherItemPurchased
+sidebar_label: AnotherItemPurchased
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.BuyAnotherItem"
 ---
 

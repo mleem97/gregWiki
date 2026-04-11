@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.TimeIsBetween
-sidebar_label: greg.SYSTEM.TimeIsBetween
+sidebar_label: TimeIsBetween
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: TimeController.TimeIsBetween"
 ---
 

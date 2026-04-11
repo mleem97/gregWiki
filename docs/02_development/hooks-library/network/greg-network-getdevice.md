@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GetDevice
-sidebar_label: greg.NETWORK.GetDevice
+sidebar_label: GetDevice
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.GetDevice"
 ---
 

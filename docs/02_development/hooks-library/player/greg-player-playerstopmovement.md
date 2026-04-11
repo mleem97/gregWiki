@@ -1,6 +1,6 @@
 ---
 title: greg.PLAYER.PlayerStopMovement
-sidebar_label: greg.PLAYER.PlayerStopMovement
+sidebar_label: PlayerStopMovement
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: PlayerManager.PlayerStopMovement"
 ---
 

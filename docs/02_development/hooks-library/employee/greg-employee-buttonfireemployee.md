@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.ButtonFireEmployee
-sidebar_label: greg.EMPLOYEE.ButtonFireEmployee
+sidebar_label: ButtonFireEmployee
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: HRSystem.ButtonFireEmployee"
 ---
 

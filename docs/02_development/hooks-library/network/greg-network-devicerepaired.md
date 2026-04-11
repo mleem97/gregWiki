@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.DeviceRepaired
-sidebar_label: greg.NETWORK.DeviceRepaired
+sidebar_label: DeviceRepaired
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.RepairDevice"
 ---
 

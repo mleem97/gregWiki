@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.LastPositionRemoved
-sidebar_label: greg.NETWORK.LastPositionRemoved
+sidebar_label: LastPositionRemoved
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.RemoveLastPosition"
 ---
 

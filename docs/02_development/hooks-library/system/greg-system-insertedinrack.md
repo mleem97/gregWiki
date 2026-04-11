@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.InsertedInRack
-sidebar_label: greg.SYSTEM.InsertedInRack
+sidebar_label: InsertedInRack
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: PatchPanel.InsertedInRack"
 ---
 

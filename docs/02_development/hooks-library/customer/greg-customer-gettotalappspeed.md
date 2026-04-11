@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.GetTotalAppSpeed
-sidebar_label: greg.CUSTOMER.GetTotalAppSpeed
+sidebar_label: GetTotalAppSpeed
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.GetTotalAppSpeed"
 ---
 

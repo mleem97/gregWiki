@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GetCustomerBase
-sidebar_label: greg.NETWORK.GetCustomerBase
+sidebar_label: GetCustomerBase
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.GetCustomerBase"
 ---
 

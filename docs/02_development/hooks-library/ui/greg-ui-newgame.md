@@ -1,6 +1,6 @@
 ---
 title: greg.UI.NewGame
-sidebar_label: greg.UI.NewGame
+sidebar_label: NewGame
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainMenu.NewGame"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GetAllBrokenServers
-sidebar_label: greg.NETWORK.GetAllBrokenServers
+sidebar_label: GetAllBrokenServers
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.GetAllBrokenServers"
 ---
 

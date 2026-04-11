@@ -1,6 +1,6 @@
 ---
 title: greg.UI.GetOrCreateRecord
-sidebar_label: greg.UI.GetOrCreateRecord
+sidebar_label: GetOrCreateRecord
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.GetOrCreateRecord"
 ---
 

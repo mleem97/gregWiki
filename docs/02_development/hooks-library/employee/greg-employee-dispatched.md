@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.Dispatched
-sidebar_label: greg.EMPLOYEE.Dispatched
+sidebar_label: Dispatched
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: TechnicianManager.SendTechnician"
 ---
 

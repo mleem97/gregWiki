@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.PowerButton
-sidebar_label: greg.NETWORK.PowerButton
+sidebar_label: PowerButton
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.PowerButton"
 ---
 

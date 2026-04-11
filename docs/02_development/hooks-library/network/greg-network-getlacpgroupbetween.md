@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GetLACPGroupBetween
-sidebar_label: greg.NETWORK.GetLACPGroupBetween
+sidebar_label: GetLACPGroupBetween
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.GetLACPGroupBetween"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.RACK.IsPositionAvailable
-sidebar_label: greg.RACK.IsPositionAvailable
+sidebar_label: IsPositionAvailable
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.IsPositionAvailable"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.OnDestroy
-sidebar_label: greg.SERVER.OnDestroy
+sidebar_label: OnDestroy
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.OnDestroy"
 ---
 

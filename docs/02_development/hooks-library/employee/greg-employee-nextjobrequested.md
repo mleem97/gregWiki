@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.NextJobRequested
-sidebar_label: greg.EMPLOYEE.NextJobRequested
+sidebar_label: NextJobRequested
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: TechnicianManager.RequestNextJob"
 ---
 

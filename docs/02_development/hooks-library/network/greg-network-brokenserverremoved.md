@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.BrokenServerRemoved
-sidebar_label: greg.NETWORK.BrokenServerRemoved
+sidebar_label: BrokenServerRemoved
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.RemoveBrokenServer"
 ---
 

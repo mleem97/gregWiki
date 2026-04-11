@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ButtonCancelBuyWall
-sidebar_label: greg.SYSTEM.ButtonCancelBuyWall
+sidebar_label: ButtonCancelBuyWall
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ButtonCancelBuyWall"
 ---
 

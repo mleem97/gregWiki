@@ -1,6 +1,6 @@
 ---
 title: greg.GAMEPLAY.DestroyObjective
-sidebar_label: greg.GAMEPLAY.DestroyObjective
+sidebar_label: DestroyObjective
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.DestroyObjective"
 ---
 

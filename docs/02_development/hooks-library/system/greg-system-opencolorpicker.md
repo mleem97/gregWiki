@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.OpenColorPicker
-sidebar_label: greg.SYSTEM.OpenColorPicker
+sidebar_label: OpenColorPicker
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.OpenColorPicker"
 ---
 

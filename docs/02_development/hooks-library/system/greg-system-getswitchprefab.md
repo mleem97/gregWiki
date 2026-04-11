@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.GetSwitchPrefab
-sidebar_label: greg.SYSTEM.GetSwitchPrefab
+sidebar_label: GetSwitchPrefab
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.GetSwitchPrefab"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.GetFreeSubnet
-sidebar_label: greg.SYSTEM.GetFreeSubnet
+sidebar_label: GetFreeSubnet
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.GetFreeSubnet"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.UI.GameLoaded
-sidebar_label: greg.UI.GameLoaded
+sidebar_label: GameLoaded
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainMenu.LoadGame"
 ---
 

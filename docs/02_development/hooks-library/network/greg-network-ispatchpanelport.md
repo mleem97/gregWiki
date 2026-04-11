@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.IsPatchPanelPort
-sidebar_label: greg.NETWORK.IsPatchPanelPort
+sidebar_label: IsPatchPanelPort
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.IsPatchPanelPort"
 ---
 

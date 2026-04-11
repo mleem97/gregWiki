@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ButtonCancelColorPicker
-sidebar_label: greg.SYSTEM.ButtonCancelColorPicker
+sidebar_label: ButtonCancelColorPicker
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonCancelColorPicker"
 ---
 

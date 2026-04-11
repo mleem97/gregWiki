@@ -1,6 +1,6 @@
 ---
 title: greg.GAMEPLAY.CreateNewObjective
-sidebar_label: greg.GAMEPLAY.CreateNewObjective
+sidebar_label: CreateNewObjective
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.CreateNewObjective"
 ---
 

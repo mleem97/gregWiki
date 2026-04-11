@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GetRopeAttachPoint
-sidebar_label: greg.NETWORK.GetRopeAttachPoint
+sidebar_label: GetRopeAttachPoint
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CableLink.GetRopeAttachPoint"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ComponentDisabled
-sidebar_label: greg.SYSTEM.ComponentDisabled
+sidebar_label: ComponentDisabled
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: TimeController.OnDisable"
 ---
 

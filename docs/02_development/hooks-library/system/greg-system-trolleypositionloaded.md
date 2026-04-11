@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.TrolleyPositionLoaded
-sidebar_label: greg.SYSTEM.TrolleyPositionLoaded
+sidebar_label: TrolleyPositionLoaded
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.LoadTrolleyPosition"
 ---
 

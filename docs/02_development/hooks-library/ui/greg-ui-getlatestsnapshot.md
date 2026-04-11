@@ -1,6 +1,6 @@
 ---
 title: greg.UI.GetLatestSnapshot
-sidebar_label: greg.UI.GetLatestSnapshot
+sidebar_label: GetLatestSnapshot
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.GetLatestSnapshot"
 ---
 

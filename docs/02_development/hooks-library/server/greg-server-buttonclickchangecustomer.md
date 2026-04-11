@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.ButtonClickChangeCustomer
-sidebar_label: greg.SERVER.ButtonClickChangeCustomer
+sidebar_label: ButtonClickChangeCustomer
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.ButtonClickChangeCustomer"
 ---
 

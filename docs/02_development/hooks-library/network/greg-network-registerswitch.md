@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.RegisterSwitch
-sidebar_label: greg.NETWORK.RegisterSwitch
+sidebar_label: RegisterSwitch
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.RegisterSwitch"
 ---
 

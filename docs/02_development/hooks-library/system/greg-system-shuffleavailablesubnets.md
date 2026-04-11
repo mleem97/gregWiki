@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ShuffleAvailableSubnets
-sidebar_label: greg.SYSTEM.ShuffleAvailableSubnets
+sidebar_label: ShuffleAvailableSubnets
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ShuffleAvailableSubnets"
 ---
 

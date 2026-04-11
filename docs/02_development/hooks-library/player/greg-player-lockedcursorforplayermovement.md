@@ -1,6 +1,6 @@
 ---
 title: greg.PLAYER.LockedCursorForPlayerMovement
-sidebar_label: greg.PLAYER.LockedCursorForPlayerMovement
+sidebar_label: LockedCursorForPlayerMovement
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: PlayerManager.LockedCursorForPlayerMovement"
 ---
 

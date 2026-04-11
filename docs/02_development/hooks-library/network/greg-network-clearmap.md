@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.ClearMap
-sidebar_label: greg.NETWORK.ClearMap
+sidebar_label: ClearMap
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.ClearMap"
 ---
 

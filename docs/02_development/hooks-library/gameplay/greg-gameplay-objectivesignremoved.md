@@ -1,6 +1,6 @@
 ---
 title: greg.GAMEPLAY.ObjectiveSignRemoved
-sidebar_label: greg.GAMEPLAY.ObjectiveSignRemoved
+sidebar_label: ObjectiveSignRemoved
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.RemoveObjectiveSign"
 ---
 

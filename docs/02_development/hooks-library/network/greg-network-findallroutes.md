@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.FindAllRoutes
-sidebar_label: greg.NETWORK.FindAllRoutes
+sidebar_label: FindAllRoutes
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.FindAllRoutes"
 ---
 

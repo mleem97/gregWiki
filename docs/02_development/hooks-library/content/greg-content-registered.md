@@ -1,6 +1,6 @@
 ---
 title: greg.Content.Registered
-sidebar_label: greg.Content.Registered
+sidebar_label: Registered
 description: "gregCore Hook — Normalized Unity signal for content being registered."
 ---
 

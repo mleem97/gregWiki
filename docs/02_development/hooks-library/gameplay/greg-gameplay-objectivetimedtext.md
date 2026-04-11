@@ -1,6 +1,6 @@
 ---
 title: greg.GAMEPLAY.ObjectiveTimedText
-sidebar_label: greg.GAMEPLAY.ObjectiveTimedText
+sidebar_label: ObjectiveTimedText
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.ObjectiveTimedText"
 ---
 

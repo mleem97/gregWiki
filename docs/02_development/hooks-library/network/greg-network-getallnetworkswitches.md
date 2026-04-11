@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GetAllNetworkSwitches
-sidebar_label: greg.NETWORK.GetAllNetworkSwitches
+sidebar_label: GetAllNetworkSwitches
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.GetAllNetworkSwitches"
 ---
 
