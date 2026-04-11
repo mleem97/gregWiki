@@ -11,48 +11,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.UpdateAu
 
 # `greg.RACK.AudioVolumeChanged`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Rack.UpdateAudioVolume
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Rack::UpdateAudioVolume()` | Postfix | Auto-generated from Il2Cpp unpack: Rack.UpdateAudioVolume |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.RACK.AudioVolumeChanged`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.RACK.AudioVolumeChanged`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.RACK.AudioVolumeChanged", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.RACK.AudioVolumeChanged` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.RACK.AudioVolumeChanged`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -61,16 +61,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.RACK.AudioVolumeChanged", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.RACK.AudioVolumeChanged", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.RACK.AudioVolumeChanged", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## RACK-ButtonDisablePositionsInRack
@@ -82,48 +82,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.ButtonDi
 
 # `greg.RACK.ButtonDisablePositionsInRack`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Rack.ButtonDisablePositionsInRack
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Rack::ButtonDisablePositionsInRack()` | Postfix | Auto-generated from Il2Cpp unpack: Rack.ButtonDisablePositionsInRack |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.RACK.ButtonDisablePositionsInRack`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.RACK.ButtonDisablePositionsInRack`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.RACK.ButtonDisablePositionsInRack", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.RACK.ButtonDisablePositionsInRack` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.RACK.ButtonDisablePositionsInRack`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -132,16 +132,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.RACK.ButtonDisablePositionsInRack", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.RACK.ButtonDisablePositionsInRack", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.RACK.ButtonDisablePositionsInRack", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## RACK-ComponentInitialized
@@ -153,50 +153,50 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.Awake"
 
 # `greg.RACK.ComponentInitialized`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Rack.Awake
 - Auto-generated from Il2Cpp unpack: Rack.Start
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **2** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **2** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Rack::Awake()` | Postfix | Auto-generated from Il2Cpp unpack: Rack.Awake |
 | `Il2Cpp.Rack::Start()` | Postfix | Auto-generated from Il2Cpp unpack: Rack.Start |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.RACK.ComponentInitialized`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.RACK.ComponentInitialized`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.RACK.ComponentInitialized", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.RACK.ComponentInitialized` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.RACK.ComponentInitialized`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -205,16 +205,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.RACK.ComponentInitialized", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.RACK.ComponentInitialized", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.RACK.ComponentInitialized", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## RACK-DisablePositionsButtonMaterialSet
@@ -226,48 +226,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.SetDisab
 
 # `greg.RACK.DisablePositionsButtonMaterialSet`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Rack.SetDisablePositionsButtonMaterial
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Rack::SetDisablePositionsButtonMaterial(Material)` | Postfix | Auto-generated from Il2Cpp unpack: Rack.SetDisablePositionsButtonMaterial |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.RACK.DisablePositionsButtonMaterialSet`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.RACK.DisablePositionsButtonMaterialSet`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.RACK.DisablePositionsButtonMaterialSet", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.RACK.DisablePositionsButtonMaterialSet` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.RACK.DisablePositionsButtonMaterialSet`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -276,16 +276,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.RACK.DisablePositionsButtonMaterialSet", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.RACK.DisablePositionsButtonMaterialSet", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.RACK.DisablePositionsButtonMaterialSet", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## RACK-IsPositionAvailable
@@ -297,48 +297,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.IsPositi
 
 # `greg.RACK.IsPositionAvailable`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Rack.IsPositionAvailable
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Rack::IsPositionAvailable(int, int)` | Postfix | Auto-generated from Il2Cpp unpack: Rack.IsPositionAvailable |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.RACK.IsPositionAvailable`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.RACK.IsPositionAvailable`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.RACK.IsPositionAvailable", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.RACK.IsPositionAvailable` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.RACK.IsPositionAvailable`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -347,16 +347,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.RACK.IsPositionAvailable", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.RACK.IsPositionAvailable", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.RACK.IsPositionAvailable", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## RACK-MarkPositionAsUnused
@@ -368,48 +368,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.MarkPosi
 
 # `greg.RACK.MarkPositionAsUnused`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Rack.MarkPositionAsUnused
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Rack::MarkPositionAsUnused(int, int)` | Postfix | Auto-generated from Il2Cpp unpack: Rack.MarkPositionAsUnused |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.RACK.MarkPositionAsUnused`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.RACK.MarkPositionAsUnused`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.RACK.MarkPositionAsUnused", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.RACK.MarkPositionAsUnused` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.RACK.MarkPositionAsUnused`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -418,16 +418,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.RACK.MarkPositionAsUnused", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.RACK.MarkPositionAsUnused", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.RACK.MarkPositionAsUnused", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## RACK-MarkPositionAsUsed
@@ -439,48 +439,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.MarkPosi
 
 # `greg.RACK.MarkPositionAsUsed`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Rack.MarkPositionAsUsed
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Rack::MarkPositionAsUsed(int, int)` | Postfix | Auto-generated from Il2Cpp unpack: Rack.MarkPositionAsUsed |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.RACK.MarkPositionAsUsed`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.RACK.MarkPositionAsUsed`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.RACK.MarkPositionAsUsed", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.RACK.MarkPositionAsUsed` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.RACK.MarkPositionAsUsed`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -489,16 +489,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.RACK.MarkPositionAsUsed", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.RACK.MarkPositionAsUsed", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.RACK.MarkPositionAsUsed", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## RACK-OnDestroy
@@ -510,48 +510,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.OnDestro
 
 # `greg.RACK.OnDestroy`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Rack.OnDestroy
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Rack::OnDestroy()` | Postfix | Auto-generated from Il2Cpp unpack: Rack.OnDestroy |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.RACK.OnDestroy`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.RACK.OnDestroy`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.RACK.OnDestroy", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.RACK.OnDestroy` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.RACK.OnDestroy`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -560,16 +560,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.RACK.OnDestroy", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.RACK.OnDestroy", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.RACK.OnDestroy", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## RACK-OnLoad
@@ -581,48 +581,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.OnLoad"
 
 # `greg.RACK.OnLoad`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Rack.OnLoad
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Rack::OnLoad()` | Postfix | Auto-generated from Il2Cpp unpack: Rack.OnLoad |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.RACK.OnLoad`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.RACK.OnLoad`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.RACK.OnLoad", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.RACK.OnLoad` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.RACK.OnLoad`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -631,15 +631,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.RACK.OnLoad", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.RACK.OnLoad", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.RACK.OnLoad", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
+
 
 

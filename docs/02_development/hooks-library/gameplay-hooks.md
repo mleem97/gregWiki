@@ -11,48 +11,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.Cl
 
 # `greg.GAMEPLAY.ClearObjectives`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Objectives.ClearObjectives
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Objectives::ClearObjectives()` | Postfix | Auto-generated from Il2Cpp unpack: Objectives.ClearObjectives |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.GAMEPLAY.ClearObjectives`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.ClearObjectives`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.ClearObjectives", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.GAMEPLAY.ClearObjectives` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.ClearObjectives`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -61,16 +61,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.GAMEPLAY.ClearObjectives", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.GAMEPLAY.ClearObjectives", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.GAMEPLAY.ClearObjectives", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## GAMEPLAY-ComponentInitialized
@@ -82,50 +82,50 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.Aw
 
 # `greg.GAMEPLAY.ComponentInitialized`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Objectives.Awake
 - Auto-generated from Il2Cpp unpack: Objectives.Start
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **2** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **2** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Objectives::Awake()` | Postfix | Auto-generated from Il2Cpp unpack: Objectives.Awake |
 | `Il2Cpp.Objectives::Start()` | Postfix | Auto-generated from Il2Cpp unpack: Objectives.Start |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.GAMEPLAY.ComponentInitialized`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.ComponentInitialized`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.ComponentInitialized", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.GAMEPLAY.ComponentInitialized` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.ComponentInitialized`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -134,16 +134,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.GAMEPLAY.ComponentInitialized", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.GAMEPLAY.ComponentInitialized", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.GAMEPLAY.ComponentInitialized", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## GAMEPLAY-CreateAppObjective
@@ -155,48 +155,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.Cr
 
 # `greg.GAMEPLAY.CreateAppObjective`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Objectives.CreateAppObjective
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Objectives::CreateAppObjective(int, int, int, int)` | Postfix | Auto-generated from Il2Cpp unpack: Objectives.CreateAppObjective |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.GAMEPLAY.CreateAppObjective`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.CreateAppObjective`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.CreateAppObjective", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.GAMEPLAY.CreateAppObjective` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.CreateAppObjective`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -205,16 +205,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.GAMEPLAY.CreateAppObjective", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.GAMEPLAY.CreateAppObjective", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.GAMEPLAY.CreateAppObjective", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## GAMEPLAY-CreateNewObjective
@@ -226,48 +226,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.Cr
 
 # `greg.GAMEPLAY.CreateNewObjective`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Objectives.CreateNewObjective
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Objectives::CreateNewObjective(int, int, Vector3, int, int, bool)` | Postfix | Auto-generated from Il2Cpp unpack: Objectives.CreateNewObjective |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.GAMEPLAY.CreateNewObjective`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.CreateNewObjective`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.CreateNewObjective", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.GAMEPLAY.CreateNewObjective` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.CreateNewObjective`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -276,16 +276,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.GAMEPLAY.CreateNewObjective", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.GAMEPLAY.CreateNewObjective", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.GAMEPLAY.CreateNewObjective", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## GAMEPLAY-DestroyObjective
@@ -297,48 +297,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.De
 
 # `greg.GAMEPLAY.DestroyObjective`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Objectives.DestroyObjective
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Objectives::DestroyObjective(int)` | Postfix | Auto-generated from Il2Cpp unpack: Objectives.DestroyObjective |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.GAMEPLAY.DestroyObjective`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.DestroyObjective`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.DestroyObjective", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.GAMEPLAY.DestroyObjective` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.DestroyObjective`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -347,16 +347,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.GAMEPLAY.DestroyObjective", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.GAMEPLAY.DestroyObjective", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.GAMEPLAY.DestroyObjective", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## GAMEPLAY-GetTimedObjective
@@ -368,48 +368,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.Ge
 
 # `greg.GAMEPLAY.GetTimedObjective`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Objectives.GetTimedObjective
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Objectives::GetTimedObjective(int)` | Postfix | Auto-generated from Il2Cpp unpack: Objectives.GetTimedObjective |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.GAMEPLAY.GetTimedObjective`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.GetTimedObjective`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.GetTimedObjective", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.GAMEPLAY.GetTimedObjective` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.GetTimedObjective`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -418,16 +418,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.GAMEPLAY.GetTimedObjective", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.GAMEPLAY.GetTimedObjective", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.GAMEPLAY.GetTimedObjective", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## GAMEPLAY-InstantiateObjectiveSign
@@ -439,48 +439,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.In
 
 # `greg.GAMEPLAY.InstantiateObjectiveSign`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Objectives.InstantiateObjectiveSign
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Objectives::InstantiateObjectiveSign(int, Vector3)` | Postfix | Auto-generated from Il2Cpp unpack: Objectives.InstantiateObjectiveSign |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.GAMEPLAY.InstantiateObjectiveSign`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.InstantiateObjectiveSign`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.InstantiateObjectiveSign", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.GAMEPLAY.InstantiateObjectiveSign` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.InstantiateObjectiveSign`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -489,16 +489,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.GAMEPLAY.InstantiateObjectiveSign", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.GAMEPLAY.InstantiateObjectiveSign", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.GAMEPLAY.InstantiateObjectiveSign", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## GAMEPLAY-IsTutorialInProgress
@@ -510,48 +510,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.Is
 
 # `greg.GAMEPLAY.IsTutorialInProgress`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Objectives.IsTutorialInProgress
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Objectives::IsTutorialInProgress()` | Postfix | Auto-generated from Il2Cpp unpack: Objectives.IsTutorialInProgress |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.GAMEPLAY.IsTutorialInProgress`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.IsTutorialInProgress`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.IsTutorialInProgress", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.GAMEPLAY.IsTutorialInProgress` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.IsTutorialInProgress`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -560,16 +560,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.GAMEPLAY.IsTutorialInProgress", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.GAMEPLAY.IsTutorialInProgress", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.GAMEPLAY.IsTutorialInProgress", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## GAMEPLAY-ObjectiveSignRemoved
@@ -581,48 +581,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.Re
 
 # `greg.GAMEPLAY.ObjectiveSignRemoved`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Objectives.RemoveObjectiveSign
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Objectives::RemoveObjectiveSign(int)` | Postfix | Auto-generated from Il2Cpp unpack: Objectives.RemoveObjectiveSign |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.GAMEPLAY.ObjectiveSignRemoved`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.ObjectiveSignRemoved`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.ObjectiveSignRemoved", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.GAMEPLAY.ObjectiveSignRemoved` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.ObjectiveSignRemoved`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -631,16 +631,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.GAMEPLAY.ObjectiveSignRemoved", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.GAMEPLAY.ObjectiveSignRemoved", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.GAMEPLAY.ObjectiveSignRemoved", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## GAMEPLAY-ObjectiveTimedText
@@ -652,48 +652,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.Ob
 
 # `greg.GAMEPLAY.ObjectiveTimedText`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Objectives.ObjectiveTimedText
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Objectives::ObjectiveTimedText()` | Postfix | Auto-generated from Il2Cpp unpack: Objectives.ObjectiveTimedText |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.GAMEPLAY.ObjectiveTimedText`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.ObjectiveTimedText`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.ObjectiveTimedText", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.GAMEPLAY.ObjectiveTimedText` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.ObjectiveTimedText`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -702,16 +702,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.GAMEPLAY.ObjectiveTimedText", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.GAMEPLAY.ObjectiveTimedText", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.GAMEPLAY.ObjectiveTimedText", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## GAMEPLAY-OnDestroy
@@ -723,48 +723,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.On
 
 # `greg.GAMEPLAY.OnDestroy`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Objectives.OnDestroy
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Objectives::OnDestroy()` | Postfix | Auto-generated from Il2Cpp unpack: Objectives.OnDestroy |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.GAMEPLAY.OnDestroy`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.OnDestroy`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.OnDestroy", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.GAMEPLAY.OnDestroy` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.OnDestroy`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -773,16 +773,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.GAMEPLAY.OnDestroy", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.GAMEPLAY.OnDestroy", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.GAMEPLAY.OnDestroy", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## GAMEPLAY-OnLoad
@@ -794,48 +794,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.On
 
 # `greg.GAMEPLAY.OnLoad`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Objectives.OnLoad
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Objectives::OnLoad()` | Postfix | Auto-generated from Il2Cpp unpack: Objectives.OnLoad |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.GAMEPLAY.OnLoad`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.OnLoad`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.OnLoad", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.GAMEPLAY.OnLoad` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.OnLoad`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -844,16 +844,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.GAMEPLAY.OnLoad", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.GAMEPLAY.OnLoad", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.GAMEPLAY.OnLoad", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
 
 
 ## GAMEPLAY-StartObjective
@@ -865,48 +865,48 @@ description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.St
 
 # `greg.GAMEPLAY.StartObjective`
 
-## Kurzbeschreibung
+## Description
 
 - Auto-generated from Il2Cpp unpack: Objectives.StartObjective
 
-## Patch-Ziele (Il2Cpp)
+## Patch Targets (Il2Cpp)
 
-Dieser Hook-Name kann auf **1** Harmony-Ziel(e) abgebildet sein:
+This hook name can be mapped to **1** Harmony target(s):
 
-| Patch-Ziel | Strategie | Beschreibung |
+| Patch Target | Strategy | Description |
 |------------|-----------|--------------|
 | `Il2Cpp.Objectives::StartObjective(int, Vector3, bool)` | Postfix | Auto-generated from Il2Cpp unpack: Objectives.StartObjective |
 
-**Strategie:** Postfix — Im Katalog steht **Postfix** → verwende typischerweise `HookBinder.OnAfter(...)`.
+**Strategy:** Postfix — The catalog says **Postfix** → typically use `HookBinder.OnAfter(...)`.
 
-## Payload-Schema (aus Registry)
+## Payload Schema (from Registry)
 
-| Feld | Typ / Hinweis |
+| Field | Type / Note |
 |------|----------------|
 | `method` | `string` |
 
-## So verwendest du den Hook
+## How to use this hook
 
-### 1. Harmony-Pipeline: `HookBinder` (Hauptweg für `greg_hooks.json`)
+### 1. Harmony Pipeline: `HookBinder` (Main path for `greg_hooks.json`)
 
-Der Framework-Code patcht Il2Cpp-Methoden und ruft `HookBinder.DispatchBefore` / `DispatchAfter` auf. Du registrierst Handler mit dem **exakten** String `greg.GAMEPLAY.StartObjective`:
+The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.StartObjective`:
 
 ```csharp
 using FrikaMF.Hooks;
 
-// Bei Postfix-Strategie (üblich):
+// For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.StartObjective", ctx =>
 {
     // ctx.HookName, ctx.Method, ctx.Instance, ctx.Arguments, ctx.ReturnValue
 });
 ```
 
-Voraussetzungen:
+Prerequisites:
 
-- Ein Hook-**Katalog** / Alias-Datei wurde geladen (z. B. `HookBinder.LoadAliases(pfad)` oder `Hooker.InstallFromCatalog(...)`), sodass die Il2Cpp-Signatur auf den kanonischen String `greg.GAMEPLAY.StartObjective` gemappt ist.
-- Namespace `FrikaMF.Hooks`, Typ `HookContext` (u. a. `Arguments`, `Instance`, `ReturnValue`).
+- A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.StartObjective`.
+- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
-### 2. Objekt-Bus: `GregEventDispatcher` (Rust / FFI / manuelle Emits)
+### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
 Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
 
@@ -915,15 +915,16 @@ using gregFramework.Core;
 
 GregEventDispatcher.On("greg.GAMEPLAY.StartObjective", payload =>
 {
-    // je nach Payload-Typ; Hilfen: GregPayload.Get<T>(payload, "feld", fallback)
+    // depending on the payload type; helpers: GregPayload.Get<T>(payload, "field", fallback)
 });
 ```
 
-Abmelden: `GregEventDispatcher.Off("greg.GAMEPLAY.StartObjective", handler)` (dieselbe Delegaten-Referenz wie bei `On`).
+Unregister: `GregEventDispatcher.Off("greg.GAMEPLAY.StartObjective", handler)` (same delegate reference as for `On`).
 
-## Siehe auch
+## See also
 
-- [Übersicht aller greg-Hooks](../../_internal/README.md)
-- Quelle: `gregCore/gregFramework/greg_hooks.json`
+- [Overview of all greg hooks](../../_internal/README.md)
+- Source: `gregCore/gregFramework/greg_hooks.json`
+
 
 
