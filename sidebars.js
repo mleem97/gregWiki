@@ -16,6 +16,8 @@ const sidebars = {
         'development/modding-guides/lua-modding',
         'development/modding-guides/rust-modding',
         'development/modding-guides/typescript-modding',
+        'development/modding-guides/prepare-content-workshop',
+        'development/modding-guides/prepare-content-gregmodstore',
       ],
     },
   ],
