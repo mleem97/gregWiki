@@ -4,10 +4,6 @@ sidebar_label: greg.NETWORK.IsAllowedToDoSecondAction
 description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CableLink.IsAllowedToDoSecondAction"
 ---
 
-:::caution WIP
-This document contains placeholders (TODOs) and is currently under development.
-:::
-
 # `greg.NETWORK.IsAllowedToDoSecondAction`
 
 ## Description
