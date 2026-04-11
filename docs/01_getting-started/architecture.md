@@ -61,8 +61,8 @@ When documentation or API design must choose, use this **order**:
 ## See also
 
 - [Repository architecture](/wiki/development/concepts/hooks-and-events) — multi-repo layout and core
-- [Getting started](/wiki/getting-started/intro) — workspace and build
+- [Getting started](/wiki/getting-started/quickstart) — workspace and build
 - [Mods — Framework](/mods) — runtime from mod authors’ perspective
 - [Plugins overview](/mods) — `FFM.Plugin.*`
-- [Mod developers](/wiki/development/concepts/modding-basics)
+- [Mod developers](/wiki/developers)
 

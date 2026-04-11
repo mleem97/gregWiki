@@ -16,8 +16,8 @@ Use this index if you **build mods or plugins**, work on **framework** code, or 
 
 ## Workspace & onboarding
 
-- [Getting started](/wiki/getting-started/intro) — split-repo layout, build core, hook naming
-- [Documentation layout](/wiki/getting-started/intro) — how `docs/` is organized
+- [Getting started](/wiki/getting-started/quickstart) — split-repo layout, build core, hook naming
+- [Documentation layout](/wiki/getting-started/quickstart) — how `docs/` is organized
 - [Workspace map](/wiki/getting-started/architecture) — folders on disk
 
 ## Framework
@@ -25,7 +25,7 @@ Use this index if you **build mods or plugins**, work on **framework** code, or 
 - [Architecture](/wiki/getting-started/architecture)
 - [Greg hooks & event runtime](/wiki/development/concepts/hooks-and-events)
 - [FMF hooks](/wiki/reference/fmf-hook-naming)
-- [Hexmod](/wiki/development/concepts/modding-basics)
+- [Hexmod](/wiki/developers)
 
 ## Plugins (`FFM.Plugin.*`) & mods (`FMF.*`)
 
@@ -34,10 +34,10 @@ Use this index if you **build mods or plugins**, work on **framework** code, or 
 
 ## Guides (authors & repo)
 
-- [Mod developers](/wiki/development/concepts/modding-basics)
-- [Contributors (workflow)](/wiki/contributors/docusaurus-workflow)
-- [Contributor workshop](/wiki/contributors/docusaurus-workflow)
-- [Release guide](/wiki/releases)
+- [Mod developers](/wiki/developers)
+- [Contributors (workflow)](/contributors/docusaurus-workflow)
+- [Contributor workshop](/contributors/docusaurus-workflow)
+- [Release guide](/releases)
 - [Sponsors](/wiki/legal/sponsors)
 
 ## Tools & meta (advanced)
@@ -48,7 +48,7 @@ Use this index if you **build mods or plugins**, work on **framework** code, or 
 
 ## Releases
 
-- [Releases index](/wiki/releases)
+- [Releases index](/releases)
 
 ## Reference
 
@@ -67,17 +67,17 @@ Use this index if you **build mods or plugins**, work on **framework** code, or 
 
 ## Contributors (workflow)
 
-- [Repo inventory](/wiki/contributors/repo-inventory)
-- [Monorepo target layout](/wiki/contributors/monorepo-target-layout)
-- [Design system](/wiki/contributors/luminescent-design-system)
-- [Docusaurus workflow](/wiki/contributors/docusaurus-workflow)
-- [Plugin submission audit](/wiki/contributors/plugin-submission-audit)
-- [Sponsorship automation](/wiki/contributors/sponsorship-automation)
+- [Repo inventory](/contributors/repo-inventory)
+- [Monorepo target layout](/contributors/monorepo-target-layout)
+- [Design system](/contributors/luminescent-design-system)
+- [Docusaurus workflow](/contributors/docusaurus-workflow)
+- [Plugin submission audit](/contributors/plugin-submission-audit)
+- [Sponsorship automation](/contributors/sponsorship-automation)
 
 ## Roadmap
 
-- [Unified roadmap](/wiki/roadmap/unified-roadmap)
-- [Mod store stages](/wiki/roadmap/mod-store-stages)
+- [Unified roadmap](/roadmap/unified-roadmap)
+- [Mod store stages](/roadmap/mod-store-stages)
 
 ## Sponsors
 

@@ -80,12 +80,12 @@ Depending on the build, multiple **`MelonMod`** types may ship in the same assem
 
 ## Tooling
 
-- **MCP:** `greg_hook_registry`, `greg_hook_search`, … with `dataRoot` → **`gregCore/`** — [MCP server](/wiki/reference/mcp-server).
-- **[FMF hooks catalog](/wiki/reference/fmf-hooks-catalog)** is now a **short redirect** to **`GregNativeEventHooks`** / [greg hooks catalog](/wiki/reference/greg-hooks-catalog) (the old **`HookNames.cs`** table is gone).
+- **MCP:** `greg_hook_registry`, `greg_hook_search`, … with `dataRoot` → **`gregCore/`** — [MCP references](/wiki/developers).
+- **[FMF hooks catalog](/wiki/reference/fmf-hook-naming)** is now a **short redirect** to **`GregNativeEventHooks`** / [greg hooks catalog](/wiki/reference/greg-hooks-catalog) (the old **`HookNames.cs`** table is gone).
 
 ## See also
 
 - [Repository architecture](/wiki/getting-started/architecture)
 - [FFI, hooks & Lua (hub)](/wiki/development/concepts/hooks-and-events)
-- [Getting started](/wiki/getting-started/intro)
+- [Getting started](/wiki/getting-started/quickstart)
 

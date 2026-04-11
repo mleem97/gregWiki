@@ -15,7 +15,7 @@ export const sharedKnowledgeLinksEn: HomepageDocLink[] = [
   {
     title: 'Release channels',
     description: 'Where builds ship: Steam Workshop and GitHub Releases.',
-    link: '/wiki/reference/release-channels',
+    link: '/wiki/developers',
   },
   {
     title: 'Mod catalog',
@@ -29,7 +29,7 @@ export const sharedWorkflowLinksEn: HomepageDocLink[] = [
   {
     title: 'Getting started',
     description: 'Workspace layout, build gregCore, hooks and registries.',
-    link: '/wiki/getting-started/intro',
+      link: '/wiki/getting-started/quickstart',
   },
   {
     title: 'Documentation hub',
@@ -39,7 +39,7 @@ export const sharedWorkflowLinksEn: HomepageDocLink[] = [
   {
     title: 'Mod developer guide',
     description: 'MelonLoader setup, gregCore hooks, and workflow.',
-    link: '/wiki/development/concepts/modding-basics',
+      link: '/wiki/developers',
   },
   {
     title: 'Contributor workflow',

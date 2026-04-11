@@ -5,6 +5,14 @@ import {moduleCatalog} from '../data/moduleCatalog';
 import {modsPageEn as m} from '../i18n/modsPage';
 
 export default function ModsCatalogPage(): JSX.Element {
+  const normalizeCatalogLink = (path: string): string => {
+    if (path.startsWith('/wiki/')) {
+      return '/mods';
+    }
+
+    return path;
+  };
+
   const grouped = useMemo(() => {
     const plugins = moduleCatalog.filter((entry) => entry.type === 'plugin');
     const mods = moduleCatalog.filter((entry) => entry.type === 'mod');
@@ -56,10 +64,10 @@ export default function ModsCatalogPage(): JSX.Element {
                     Languages: {entry.languages.join(', ')}
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <Link to={entry.wikiPath} className="button button--secondary button--sm">
+                    <Link to={normalizeCatalogLink(entry.wikiPath)} className="button button--secondary button--sm">
                       {m.wiki}
                     </Link>
-                    <Link to={entry.releasePath} className="button button--secondary button--sm">
+                    <Link to={normalizeCatalogLink(entry.releasePath)} className="button button--secondary button--sm">
                       {m.release}
                     </Link>
                     {entry.releaseReady ? (
@@ -103,10 +111,10 @@ export default function ModsCatalogPage(): JSX.Element {
                     Dependencies: {entry.dependencies.join(', ')}
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <Link to={entry.wikiPath} className="button button--secondary button--sm">
+                    <Link to={normalizeCatalogLink(entry.wikiPath)} className="button button--secondary button--sm">
                       {m.wiki}
                     </Link>
-                    <Link to={entry.releasePath} className="button button--secondary button--sm">
+                    <Link to={normalizeCatalogLink(entry.releasePath)} className="button button--secondary button--sm">
                       {m.release}
                     </Link>
                     {entry.releaseReady ? (

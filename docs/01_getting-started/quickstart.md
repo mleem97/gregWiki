@@ -4,7 +4,7 @@ sidebar_label: Getting started
 description: Workspace layout (gregFramework), building gregCore, hooks, and your first mod.
 ---
 
-The workspace is **multi-repo**: several Git checkouts live **side by side** under a common `gregFramework/` folder. **Logical stack:** **ModManager → Framework / SDK → Plugins → Mods** — see [System architecture & documentation principles](/wiki/meta/system-architecture-principles).
+The workspace is **multi-repo**: several Git checkouts live **side by side** under a common `gregFramework/` folder. **Logical stack:** **ModManager → Framework / SDK → Plugins → Mods** — see [System architecture & documentation principles](/wiki/getting-started/architecture).
 
 | Folder | Role |
 |--------|--------|
@@ -48,7 +48,7 @@ gregCore supports **three modding paths** in parallel:
 | **Lua** | MoonSharp-hosted scripts via **`LuaLanguageBridge`**; game access through the **`greg.*`** API (events, Harmony bindings, Unity handles). Deploy under **`Data Center/Mods/ScriptMods/lua/`**. |
 | **Rust / native** | **`FFIBridge`** native pipeline; deploy under **`Data Center/Mods/RustMods/`**. |
 
-Policy, paths, and trade-offs: [Modding language support](/wiki/reference/modding-language-requirement). Lua API tables: [Language Bridges README](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/ModLoader/LanguageBridges/README.md).
+Policy, paths, and trade-offs: [Modding language support](/wiki/developers). Lua API tables: [Language Bridges README](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/ModLoader/LanguageBridges/README.md).
 
 ## Hooks and registries
 
@@ -57,7 +57,7 @@ Policy, paths, and trade-offs: [Modding language support](/wiki/reference/moddin
 | **Canonical `greg.*` (JSON, Il2Cpp)** | Repo root **`greg_hooks.json`**; regenerate: **`gregCore/scripts/Generate-GregHooksFromIl2CppDump.ps1`** |
 | **EventId → `greg.*` (native / FFI pipeline)** | **`GregNativeEventHooks`** — [greg hooks catalog](/wiki/reference/greg-hooks-catalog), source `gregCore/framework/Sdk/GregNativeEventHooks.cs` |
 | **`FMF.*` documentation naming** | [FMF hook naming](/wiki/reference/fmf-hook-naming) |
-| **Architecture** | [Greg hooks & event runtime](/wiki/framework/greg-hooks-and-events) |
+| **Architecture** | [Greg hooks & event runtime](/wiki/development/concepts/hooks-and-events) |
 | **Legacy spellings** | **`GregCompatBridge`** loads **`greg_hooks.json`** next to **`gregCore.dll`** |
 
 ## Start a new mod
@@ -67,11 +67,11 @@ Policy, paths, and trade-offs: [Modding language support](/wiki/reference/moddin
 3. Use **`gregFramework.Core`** (`GregEventDispatcher`, `GregHookName`, `GregNativeEventHooks`, …).
 4. Templates: **`gregCore/Templates/greg.BasedModTemplate/`** or mirrored templates under **`gregDataCenterExporter/Templates/`**.
 
-Reference mod: **`mods/GregShowcaseMod/`** — [Greg hooks showcase](/wiki/guides/mod-developers/greg-hooks-showcase).
+Reference mod: **`mods/GregShowcaseMod/`** — [Documentation hub](/wiki/developers).
 
 ## Documentation site (`gregWiki/`)
 
 - Markdown under **`gregWiki/docs/`**
 - Docker: from **`gregWiki/`** root — see **`gregWiki/README.md`**
-- MCP: [mcp-server](/wiki/reference/mcp-server) — server code under **`gregCore/mcp-server/`**
+- MCP: [MCP references](/wiki/developers) — server code under **`gregCore/mcp-server/`**
 

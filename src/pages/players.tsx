@@ -132,7 +132,7 @@ export default function PlayersPage(): JSX.Element {
           <h2 className="mb-3 font-headline text-xl font-bold">Writing mods?</h2>
           <p className="mb-4 text-on-surface-variant">
             Use the wiki under <Link to="/wiki">/wiki</Link>: start with{' '}
-            <Link to="/wiki/getting-started/intro" className="text-primary hover:underline">
+            <Link to="/wiki/getting-started/quickstart" className="text-primary hover:underline">
               Getting started
             </Link>{' '}
             and the{' '}
