@@ -19,10 +19,10 @@ export default function ModsCatalogPage(): JSX.Element {
 
   return (
     <Layout title={m.title} description={m.description}>
-      <main className="bg-background min-h-screen text-on-surface">
-        <div className="border-b border-outline-variant/10 bg-surface-container-low/80 py-10 backdrop-blur-md">
+      <main className="bg-background min-h-screen text-on-surface editorial-bleed">
+        <div className="bg-surface-container-low/80 py-10 backdrop-blur-md">
           <div className="mx-auto max-w-6xl px-4 md:px-8">
-            <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-outline-variant/20 bg-surface-container-high px-3 py-1">
+            <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-surface-container-high px-3 py-1">
               <span className="material-symbols-outlined text-sm text-primary">extension</span>
               <span className="text-[10px] font-bold uppercase tracking-widest text-primary-dim">
                 gregFramework
@@ -73,12 +73,7 @@ export default function ModsCatalogPage(): JSX.Element {
                         {m.download}
                       </a>
                     ) : (
-                      <span
-                        className="button button--secondary button--sm cursor-not-allowed opacity-80"
-                        role="button"
-                        aria-disabled="true"
-                        tabIndex={-1}
-                      >
+                      <span className="button button--secondary button--sm cursor-not-allowed opacity-80">
                         {m.notReleased}
                       </span>
                     )}
@@ -125,12 +120,7 @@ export default function ModsCatalogPage(): JSX.Element {
                         {m.download}
                       </a>
                     ) : (
-                      <span
-                        className="button button--secondary button--sm cursor-not-allowed opacity-80"
-                        role="button"
-                        aria-disabled="true"
-                        tabIndex={-1}
-                      >
+                      <span className="button button--secondary button--sm cursor-not-allowed opacity-80">
                         {m.notReleased}
                       </span>
                     )}

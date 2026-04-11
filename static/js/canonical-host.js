@@ -11,6 +11,7 @@
     const currentHost = globalThis.window.location.hostname.toLowerCase();
     const currentOrigin = globalThis.window.location.origin;
     const path = globalThis.window.location.pathname + globalThis.window.location.search;
+    const currentPathname = globalThis.window.location.pathname.toLowerCase();
 
     const isDataCenterModsHost =
       currentHost === 'datacentermods.com' ||
@@ -19,6 +20,17 @@
 
     if (isDataCenterModsHost) {
       document.documentElement.classList.add('host-datacentermods');
+    }
+
+    const isLegalRoute =
+      currentPathname.includes('/imprint') ||
+      currentPathname.includes('/impressum') ||
+      currentPathname.includes('/privacy') ||
+      currentPathname.includes('/privacy-policy') ||
+      currentPathname.includes('/datenschutz');
+
+    if (isLegalRoute) {
+      document.documentElement.classList.add('route-legal');
     }
 
     function isAllowedHost(host, root) {

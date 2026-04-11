@@ -177,13 +177,13 @@ export default function HomePage(): JSX.Element {
       description="gregFramework: player help at /players, mod catalog, and mod-author wiki at /wiki for Data Center."
     >
       <main className="bg-background text-on-surface font-sans min-h-screen editorial-bleed bg-hero-gradient">
-        <section className="hero-motion-wrap relative flex min-h-[72vh] flex-col items-center justify-center overflow-hidden px-4 py-24 text-center">
+        <section className="hero-motion-wrap relative flex min-h-[72vh] flex-col items-center justify-center overflow-hidden px-4 py-24 text-center md:items-start md:text-left">
           <div className="hero-particles" aria-hidden="true" />
           <div className="hero-orb hero-orb-pink" aria-hidden="true" />
           <div className="hero-orb hero-orb-green" aria-hidden="true" />
 
           <motion.div
-            className="mb-8 inline-flex items-center gap-2 rounded-full border border-outline-variant/20 bg-surface-container-high px-4 py-1.5"
+            className="mb-8 inline-flex items-center gap-2 rounded-full bg-surface-container-high px-4 py-1.5"
             initial="hidden"
             whileInView="show"
             viewport={viewport}
@@ -235,7 +235,7 @@ export default function HomePage(): JSX.Element {
           </motion.p>
 
           <motion.div
-            className="flex flex-wrap items-center justify-center gap-3 sm:gap-4"
+            className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:justify-start"
             initial="hidden"
             whileInView="show"
             viewport={viewport}
@@ -295,7 +295,7 @@ export default function HomePage(): JSX.Element {
               </div>
             </motion.article>
             <motion.article
-              className="app-card app-card-motion app-card-glow rounded-2xl border border-outline-variant/10 p-8 md:col-span-4"
+              className="app-card app-card-motion app-card-glow rounded-2xl p-8 md:col-span-4"
               variants={variants.card}
             >
               <span className="material-symbols-outlined mb-6 text-3xl text-tertiary">cable</span>
@@ -307,7 +307,7 @@ export default function HomePage(): JSX.Element {
               </p>
             </motion.article>
             <motion.article
-              className="app-card app-card-motion app-card-glow rounded-2xl border border-outline-variant/10 p-8 md:col-span-4"
+              className="app-card app-card-motion app-card-glow rounded-2xl p-8 md:col-span-4"
               variants={variants.card}
             >
               <span className="material-symbols-outlined mb-6 text-3xl text-secondary">
@@ -321,7 +321,7 @@ export default function HomePage(): JSX.Element {
               </p>
             </motion.article>
             <motion.article
-              className="app-card app-card-motion app-card-glow flex flex-col justify-between rounded-2xl border border-outline-variant/10 p-10 md:col-span-8"
+              className="app-card app-card-motion app-card-glow flex flex-col justify-between rounded-2xl p-10 md:col-span-8"
               variants={variants.card}
             >
               <div>
@@ -345,7 +345,7 @@ export default function HomePage(): JSX.Element {
           viewport={viewport}
           variants={variants.section}
         >
-          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl border border-outline-variant/20 bg-gradient-to-br from-surface-container-high to-surface-container p-10 text-center md:p-14">
+          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl bg-gradient-to-br from-surface-container-high to-surface-container p-10 text-center md:p-14 md:text-left">
             <div
               className="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-secondary/10 blur-[90px]"
               aria-hidden
@@ -416,7 +416,7 @@ export default function HomePage(): JSX.Element {
           viewport={viewport}
           variants={variants.section}
         >
-          <div className="mx-auto max-w-6xl text-center">
+          <div className="mx-auto max-w-6xl md:text-left">
             <motion.h2
               className="mb-10 font-headline text-3xl font-bold text-on-surface"
               variants={variants.textReveal}
@@ -452,7 +452,7 @@ export default function HomePage(): JSX.Element {
           viewport={viewport}
           variants={variants.section}
         >
-          <div className="mx-auto max-w-5xl text-center">
+          <div className="mx-auto max-w-5xl md:text-left">
             <motion.h2
               className="mb-10 font-headline text-3xl font-bold text-on-surface"
               variants={variants.textReveal}
@@ -485,7 +485,7 @@ export default function HomePage(): JSX.Element {
           viewport={viewport}
           variants={variants.section}
         >
-          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl border border-primary/10 bg-gradient-to-br from-surface-container to-surface-container-high p-12 text-center md:p-16">
+          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl bg-gradient-to-br from-surface-container to-surface-container-high p-12 text-center md:p-16 md:text-left">
             <div
               className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-primary/10 blur-[100px]"
               aria-hidden
@@ -504,12 +504,12 @@ export default function HomePage(): JSX.Element {
                 <FaDiscord className="text-xl" />
                 {t.ctaDiscordButton}
               </Link>
-              <div className="mx-auto mt-8 w-full max-w-xl rounded-xl border border-primary/20 bg-surface-container-high p-5 text-left shadow-lg">
+              <div className="mx-auto mt-8 w-full max-w-xl rounded-xl bg-surface-container-high p-5 text-left">
                 <div className="mb-4 flex items-center justify-between gap-3">
                   <h3 className="font-headline text-xl font-bold text-on-surface">
                     {discordWidget?.name ?? 'GregFramework Discord'}
                   </h3>
-                  <span className="inline-flex items-center gap-2 rounded-full border border-outline-variant/20 bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">
                     <span className="h-2 w-2 rounded-full bg-green-500" aria-hidden />
                     {discordWidget?.presence_count ?? 0} online
                   </span>
@@ -532,7 +532,7 @@ export default function HomePage(): JSX.Element {
                       {discordVisibleChannels.map((channel) => (
                         <span
                           key={channel.id}
-                          className="rounded-full border border-outline-variant/25 bg-surface-container px-2.5 py-1 text-xs text-on-surface-variant"
+                          className="rounded-full bg-surface-container px-2.5 py-1 text-xs text-on-surface-variant"
                         >
                           #{channel.name}
                         </span>
@@ -550,7 +550,7 @@ export default function HomePage(): JSX.Element {
                       {discordVisibleMembers.map((member) => (
                         <div
                           key={member.id}
-                          className="flex items-center gap-2 rounded-lg border border-outline-variant/20 bg-surface-container px-2.5 py-2"
+                          className="flex items-center gap-2 rounded-lg bg-surface-container px-2.5 py-2"
                         >
                           {member.avatar_url ? (
                             <img
@@ -608,7 +608,7 @@ export default function HomePage(): JSX.Element {
                 className="shrink-0"
                 whileHover={reducedMotion ? undefined : {rotate: 1.2, y: -3}}
               >
-                <div className="h-40 w-32 overflow-hidden rounded-xl border-2 border-primary/25 md:h-56 md:w-48">
+                <div className="h-40 w-32 overflow-hidden rounded-xl md:h-56 md:w-48">
                   <img src={gregImage} alt="Greg" className="h-full w-full object-cover" />
                 </div>
               </motion.div>
@@ -627,7 +627,7 @@ export default function HomePage(): JSX.Element {
           <div className="mx-auto max-w-6xl">
             {showDataCenterModsComingSoon ? (
               <motion.div
-                className="mb-6 rounded-xl border border-outline-variant/15 bg-surface-container-high p-4"
+                className="mb-6 rounded-xl bg-surface-container-high p-4"
                 variants={variants.card}
               >
                 <div className="text-sm font-semibold uppercase tracking-wide text-tertiary">
