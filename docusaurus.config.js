@@ -61,7 +61,7 @@ const config = {
             '/wiki/framework/hexmod': ['/wiki/hexmod'],
             '/wiki/tools/workshop-uploader': ['/wiki/workshop-uploader'],
             '/wiki/getting-started/documentation-layout': ['/wiki/README'],
-            '/wiki/getting-started/quickstart': ['/wiki/getting-started', '/wiki/getting-started/documentation-layout', '/wiki/workspace', '/wiki/workspace/'],
+            '/wiki/getting-started/quickstart': ['/wiki/getting-started', '/wiki/getting-started/documentation-layout'],
             '/wiki/development/concepts/hooks-and-events': [
               '/wiki/framework/architecture',
               '/wiki/framework/greg-hooks-and-events',

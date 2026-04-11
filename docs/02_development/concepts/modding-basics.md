@@ -35,9 +35,9 @@ Use this index if you **build mods or plugins**, work on **framework** code, or 
 ## Guides (authors & repo)
 
 - [Mod developers](/wiki/developers)
-- [Contributors (workflow)](/contributors/docusaurus-workflow)
-- [Contributor workshop](/contributors/docusaurus-workflow)
-- [Release guide](/releases)
+- [Contributors (workflow)](/wiki/contributors/docusaurus-workflow)
+- [Contributor workshop](/wiki/contributors/docusaurus-workflow)
+- [Release guide](/wiki/developers)
 - [Sponsors](/wiki/legal/sponsors)
 
 ## Tools & meta (advanced)
@@ -48,7 +48,7 @@ Use this index if you **build mods or plugins**, work on **framework** code, or 
 
 ## Releases
 
-- [Releases index](/releases)
+- [Releases index](/wiki/developers)
 
 ## Reference
 
@@ -67,17 +67,17 @@ Use this index if you **build mods or plugins**, work on **framework** code, or 
 
 ## Contributors (workflow)
 
-- [Repo inventory](/contributors/repo-inventory)
-- [Monorepo target layout](/contributors/monorepo-target-layout)
-- [Design system](/contributors/luminescent-design-system)
-- [Docusaurus workflow](/contributors/docusaurus-workflow)
-- [Plugin submission audit](/contributors/plugin-submission-audit)
-- [Sponsorship automation](/contributors/sponsorship-automation)
+- [Repo inventory](/wiki/contributors/docusaurus-workflow)
+- [Monorepo target layout](/wiki/contributors/docusaurus-workflow)
+- [Design system](/wiki/contributors/docusaurus-workflow)
+- [Docusaurus workflow](/wiki/contributors/docusaurus-workflow)
+- [Plugin submission audit](/wiki/contributors/docusaurus-workflow)
+- [Sponsorship automation](/wiki/contributors/docusaurus-workflow)
 
 ## Roadmap
 
-- [Unified roadmap](/roadmap/unified-roadmap)
-- [Mod store stages](/roadmap/mod-store-stages)
+- [Unified roadmap](/wiki/developers)
+- [Mod store stages](/wiki/developers)
 
 ## Sponsors
 

@@ -42,7 +42,7 @@ Domains are **closed by default**. Add a new domain only via changelog + maintai
 
 ## Runtime IL2CPP (MelonLoader): `greg.*`
 
-Harmony patches in **gregFramework** emit stable **`greg.<DOMAIN>.<Action>`** strings via `GregHookName` / `GregEventDispatcher`. That surface is documented in **[greg hooks registry (IL2CPP)](/wiki/reference/greg-hooks-registry)** (`greg_hooks.json`, regeneration, overlap with hand-written `HarmonyPatches`). It is separate from the `FMF.*` / `FFM.*` documentation constants below.
+Harmony patches in **gregFramework** emit stable **`greg.<DOMAIN>.<Action>`** strings via `GregHookName` / `GregEventDispatcher`. That surface is documented in **[greg hooks catalog (IL2CPP)](/wiki/reference/greg-hooks-catalog)** (`greg_hooks.json`, regeneration, overlap with hand-written `HarmonyPatches`). It is separate from the `FMF.*` / `FFM.*` documentation constants below.
 
 ## Native pipeline: `GregNativeEventHooks` (replaces `HookNames`)
 
