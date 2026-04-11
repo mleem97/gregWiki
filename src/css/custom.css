@@ -87,6 +87,56 @@
   --ifm-global-shadow-lw: 0 0 32px -4px rgba(0, 191, 165, 0.1);
 }
 
+html.host-datacentermods,
+html.host-datacentermods[data-theme='dark'] {
+  --color-background: #0b1220;
+  --color-surface: #0b1220;
+  --color-surface-dim: #0b1220;
+  --color-surface-bright: #141f33;
+  --color-surface-variant: #111a2c;
+  --color-surface-container-lowest: #090f1b;
+  --color-surface-container-low: #0d1626;
+  --color-surface-container: #111a2c;
+  --color-surface-container-high: #15233a;
+  --color-surface-container-highest: #1a2941;
+  --color-on-background: #e6edf3;
+  --color-on-surface: #e6edf3;
+  --color-on-surface-variant: #a8b3c5;
+  --color-primary: #6ea8fe;
+  --color-primary-dim: #8ab9ff;
+  --color-primary-container: #214375;
+  --color-on-primary: #09101d;
+  --color-secondary: #83d3ff;
+  --color-tertiary: #9be7ff;
+  --color-outline: #41567a;
+  --color-outline-variant: #27344f;
+  --ifm-color-primary: #6ea8fe;
+  --ifm-color-primary-dark: #5d9afa;
+  --ifm-color-primary-darker: #4d8bf0;
+  --ifm-color-primary-light: #8ab9ff;
+  --ifm-color-primary-lighter: #b5d3ff;
+  --ifm-navbar-background-color: rgba(11, 18, 32, 0.88);
+  --ifm-global-shadow-lw: 0 10px 35px -20px rgba(0, 0, 0, 0.7);
+}
+
+html.host-datacentermods body {
+  background-color: var(--color-background);
+  background-image: linear-gradient(180deg, #0b1220 0%, #0e1627 100%);
+}
+
+html.host-datacentermods .navbar {
+  background: rgba(11, 18, 32, 0.88) !important;
+  box-shadow: 0 10px 35px -20px rgba(0, 0, 0, 0.7);
+}
+
+html.host-datacentermods .app-card,
+html.host-datacentermods .card,
+html.host-datacentermods .pagination-nav__link,
+html.host-datacentermods .menu__link,
+html.host-datacentermods .table-of-contents__link {
+  border-color: rgba(39, 52, 79, 0.75);
+}
+
 html {
   scroll-behavior: smooth;
 }

@@ -126,6 +126,17 @@ export default function HomePage(): JSX.Element {
   const t = getHomepageContent(currentLocale);
   const reducedMotion = useReducedMotion();
   const variants = useMemo(() => buildVariants(Boolean(reducedMotion)), [reducedMotion]);
+  const showDataCenterModsComingSoon = useMemo(() => {
+    if (globalThis.window === undefined) {
+      return false;
+    }
+    const hostname = globalThis.window.location.hostname.toLowerCase();
+    return (
+      hostname === 'datacentermods.com' ||
+      hostname === 'www.datacentermods.com' ||
+      hostname.endsWith('.datacentermods.com')
+    );
+  }, []);
   const [discordWidget, setDiscordWidget] = useState<DiscordWidgetResponse | null>(null);
   const [discordWidgetError, setDiscordWidgetError] = useState<string | null>(null);
 
@@ -614,15 +625,17 @@ export default function HomePage(): JSX.Element {
           variants={variants.section}
         >
           <div className="mx-auto max-w-6xl">
-            <motion.div
-              className="mb-6 rounded-xl border border-outline-variant/15 bg-surface-container-high p-4"
-              variants={variants.card}
-            >
-              <div className="text-sm font-semibold uppercase tracking-wide text-tertiary">
-                {t.comingSoon}
-              </div>
-              <div className="mt-1 text-base font-medium text-on-surface">{t.comingSoonText}</div>
-            </motion.div>
+            {showDataCenterModsComingSoon ? (
+              <motion.div
+                className="mb-6 rounded-xl border border-outline-variant/15 bg-surface-container-high p-4"
+                variants={variants.card}
+              >
+                <div className="text-sm font-semibold uppercase tracking-wide text-tertiary">
+                  {t.comingSoon}
+                </div>
+                <div className="mt-1 text-base font-medium text-on-surface">{t.comingSoonText}</div>
+              </motion.div>
+            ) : null}
 
             <motion.div
               className="app-card app-card-glow flex flex-col gap-6 rounded-xl p-6 md:flex-row md:items-center md:justify-between"
