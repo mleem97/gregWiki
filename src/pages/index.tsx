@@ -15,6 +15,7 @@ import {
 import {GregCoreRandomSnippet} from '../components/GregCoreRandomSnippet';
 import GradientBlinds from '../components/GradientBlinds';
 import ShapeGrid from '../components/ShapeGrid';
+import DotGrid from '../components/DotGrid';
 
 /** Always resolves to the newest GitHub release (redirect). */
 const GREG_MODMANAGER_LATEST =
@@ -22,6 +23,7 @@ const GREG_MODMANAGER_LATEST =
 const TEAM_GREG_GIT = 'https://git.datacentermods.com/teamGreg';
 const DISCORD_GUILD_ID = '1392073682133848075';
 const DISCORD_WIDGET_API = `https://discord.com/api/guilds/${DISCORD_GUILD_ID}/widget.json`;
+const LOWER_BACKGROUND_VARIANT: 'shape' | 'dot' = 'dot';
 
 const viewport = {once: true, margin: '-90px'};
 
@@ -425,7 +427,20 @@ export default function HomePage(): JSX.Element {
 
         <div className="shapegrid-surface">
           <div className="shapegrid-surface-canvas" aria-hidden>
-            <ShapeGrid className="h-full w-full" cellSize={66} strokeWidth={1} drift={0.2} />
+            {LOWER_BACKGROUND_VARIANT === 'dot' ? (
+              <DotGrid
+                className="h-full w-full"
+                dotSize={8}
+                gap={22}
+                baseColor="#0f514c"
+                activeColor="#61f4d8"
+                proximity={160}
+                shockStrength={4}
+                returnDuration={1.25}
+              />
+            ) : (
+              <ShapeGrid className="h-full w-full" cellSize={66} strokeWidth={1} drift={0.2} />
+            )}
           </div>
           <div className="shapegrid-surface-vignette" aria-hidden />
 
