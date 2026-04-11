@@ -20,7 +20,11 @@ const sidebars = {
           type: 'category',
           label: 'API reference',
           items: [
-            'development/api-reference/fmf-hook-naming',
+            {
+              type: 'doc',
+              id: 'development/api-reference/fmf-hook-naming',
+              label: 'FMF hook naming (legacy)',
+            },
             'development/api-reference/greg-hooks-catalog',
           ],
         },
@@ -32,6 +36,24 @@ const sidebars = {
             'development/tutorials/hexviewer-lua',
             'development/tutorials/hexviewer-rust',
             'development/tutorials/hexviewer-ts',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Content Creation',
+          items: [
+            'content-creation/content-creation-introduction',
+            'content-creation/content-creation-project-structure',
+            'content-creation/content-creation-custom-servers',
+            'content-creation/content-creation-custom-switches',
+            'content-creation/content-creation-custom-customers',
+            'content-creation/content-creation-custom-network-items',
+            'content-creation/content-creation-custom-employees',
+            'content-creation/content-creation-custom-furniture',
+            'content-creation/content-creation-model-overrides',
+            'content-creation/content-creation-integration',
+            'content-creation/content-creation-deployment',
+            'content-creation/content-creation-combined-tutorial',
           ],
         },
         {

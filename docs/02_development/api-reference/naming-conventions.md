@@ -2,10 +2,15 @@
 id: fmf-hook-naming
 title: FMF hook and event naming
 slug: /reference/fmf-hook-naming
-description: Canonical naming for hooks, events, and cross-language documentation stubs.
+description: Legacy documentation naming (`FMF.*`) and migration notes to canonical runtime `greg.*` hooks.
 ---
 
 # FMF hook and event naming
+
+:::warning Legacy documentation namespace
+`FMF.*` is kept for documentation compatibility and historical references.
+For runtime subscriptions and new APIs, use canonical `greg.*` hooks from `GregHookName` / `GregNativeEventHooks`.
+:::
 
 ## Target format
 
