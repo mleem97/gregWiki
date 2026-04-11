@@ -29,15 +29,29 @@ unsafe {
         "my_mod_id\0".as_ptr() as *const c_char,
     );
 }
+
+extern "C" fn my_handler_callback(payload: *mut c_void) {
+    // Process the payload dynamically
+}
 ```
 
-### HUD and IMGUI
-Access the native Unity IMGUI surface:
+### HUD, IMGUI, and Targeting
+Access the native Unity IMGUI surface and perform raycasts:
 ```rust
 unsafe {
-    (api.gui_begin_panel)("DebugPanel\0".as_ptr() as *const c_char, 10.0, 10.0, 300.0, 100.0);
-    (api.gui_label)("Native Logic Active\0".as_ptr() as *const c_char);
-    (api.gui_end_panel)();
+    let mut out_name: *const c_char = std::ptr::null();
+    let mut out_dist: f32 = 0.0;
+    let mut out_x: f32 = 0.0;
+    let mut out_y: f32 = 0.0;
+    let mut out_z: f32 = 0.0;
+
+    let hit = (api.raycast_forward)(10.0, &mut out_name, &mut out_dist, &mut out_x, &mut out_y, &mut out_z);
+
+    if hit != 0 {
+        (api.gui_begin_panel)("TargetPanel\0".as_ptr() as *const c_char, 10.0, 10.0, 300.0, 100.0);
+        (api.gui_label)("Target Acquired!\0".as_ptr() as *const c_char);
+        (api.gui_end_panel)();
+    }
 }
 ```
 

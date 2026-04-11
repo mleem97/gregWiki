@@ -22,15 +22,26 @@ The bridge provides a globally accessible `greg` object (signatures are consiste
 ```typescript
 greg.events.on("greg.SERVER.LoadingStarted", (payload) => {
     const serverId = greg.payload.get(payload, "EntityId", "unknown");
-    console.log(`TS Mod: Server detected -> ${serverId}`);
+    greg.log(`TS Mod: Server detected -> ${serverId}`);
+});
+
+greg.events.onUpdate((dt) => {
+    // Process continuous logic
 });
 ```
 
-### HUD and Panels
+### Targeting & HUD Panels
 ```typescript
-greg.hud.beginPanel("WebHUD", 10, 10, 300, 100);
-greg.hud.label("TypeScript Bridge Active");
-greg.hud.endPanel();
+greg.events.onGui(() => {
+    const hit = greg.target.raycastForward(10.0);
+
+    if (hit) {
+        greg.hud.beginPanel("WebHUD", 10, 10, 300, 100);
+        greg.hud.label("TypeScript Bridge Active");
+        greg.hud.label(`Targeting: ${hit.name}`);
+        greg.hud.endPanel();
+    }
+});
 ```
 
 ## 3. Deployment

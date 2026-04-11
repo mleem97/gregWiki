@@ -31,6 +31,10 @@ Register update or GUI loops:
 ```lua
 greg.events.on_update(function(dt)
     -- Logic that runs every frame
+    local hit = greg.target.raycast_forward(10.0)
+    if hit then
+        greg.log("Currently targeting: " .. hit.name)
+    end
 end)
 
 greg.events.on_gui(function()
@@ -40,13 +44,14 @@ greg.events.on_gui(function()
 end)
 ```
 
-### Targeting
-Perform raycasts from the player's view:
+### Advanced Integrations
+You can also interact with the content registries to check loaded items:
 ```lua
-local hit = greg.target.raycast_forward(10.0)
-if hit then
-    greg.log("Looking at: " .. hit.name)
-end
+greg.events.on("greg.CONTENT.Registered", function(payload)
+    local contentId = greg.payload.get(payload, "Id", "")
+    local typeName = greg.payload.get(payload, "Type", "")
+    greg.log("New content detected: " .. contentId .. " [" .. typeName .. "]")
+end)
 ```
 
 ## 3. Deployment
