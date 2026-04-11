@@ -1,4 +1,4 @@
-﻿---
+---
 title: Gameplay Hooks
 sidebar_label: Gameplay Hooks
 ---
@@ -38,7 +38,7 @@ This hook name can be mapped to **1** Harmony target(s):
 The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.ClearObjectives`:
 
 ```csharp
-using FrikaMF.Hooks;
+using GregFramework.Hooks;
 
 // For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.ClearObjectives", ctx =>
@@ -50,11 +50,11 @@ HookBinder.OnAfter("greg.GAMEPLAY.ClearObjectives", ctx =>
 Prerequisites:
 
 - A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.ClearObjectives`.
-- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
+- Namespace `GregFramework.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
 ### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
-Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
+Some names in the form `greg.<Domain>.<Action>` are additionally fired from the core via `GregHookIntegration` / `GregEventDispatcher.Emit` (numeric `EventIds` → String). If your hook is only defined in `greg_hooks.json` as an Il2Cpp patch, **HookBinder** is the correct entry point; use `GregEventDispatcher` if you want to explicitly listen to the payload bus:
 
 ```csharp
 using gregFramework.Core;
@@ -111,7 +111,7 @@ This hook name can be mapped to **2** Harmony target(s):
 The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.ComponentInitialized`:
 
 ```csharp
-using FrikaMF.Hooks;
+using GregFramework.Hooks;
 
 // For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.ComponentInitialized", ctx =>
@@ -123,11 +123,11 @@ HookBinder.OnAfter("greg.GAMEPLAY.ComponentInitialized", ctx =>
 Prerequisites:
 
 - A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.ComponentInitialized`.
-- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
+- Namespace `GregFramework.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
 ### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
-Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
+Some names in the form `greg.<Domain>.<Action>` are additionally fired from the core via `GregHookIntegration` / `GregEventDispatcher.Emit` (numeric `EventIds` → String). If your hook is only defined in `greg_hooks.json` as an Il2Cpp patch, **HookBinder** is the correct entry point; use `GregEventDispatcher` if you want to explicitly listen to the payload bus:
 
 ```csharp
 using gregFramework.Core;
@@ -182,7 +182,7 @@ This hook name can be mapped to **1** Harmony target(s):
 The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.CreateAppObjective`:
 
 ```csharp
-using FrikaMF.Hooks;
+using GregFramework.Hooks;
 
 // For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.CreateAppObjective", ctx =>
@@ -194,11 +194,11 @@ HookBinder.OnAfter("greg.GAMEPLAY.CreateAppObjective", ctx =>
 Prerequisites:
 
 - A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.CreateAppObjective`.
-- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
+- Namespace `GregFramework.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
 ### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
-Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
+Some names in the form `greg.<Domain>.<Action>` are additionally fired from the core via `GregHookIntegration` / `GregEventDispatcher.Emit` (numeric `EventIds` → String). If your hook is only defined in `greg_hooks.json` as an Il2Cpp patch, **HookBinder** is the correct entry point; use `GregEventDispatcher` if you want to explicitly listen to the payload bus:
 
 ```csharp
 using gregFramework.Core;
@@ -253,7 +253,7 @@ This hook name can be mapped to **1** Harmony target(s):
 The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.CreateNewObjective`:
 
 ```csharp
-using FrikaMF.Hooks;
+using GregFramework.Hooks;
 
 // For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.CreateNewObjective", ctx =>
@@ -265,11 +265,11 @@ HookBinder.OnAfter("greg.GAMEPLAY.CreateNewObjective", ctx =>
 Prerequisites:
 
 - A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.CreateNewObjective`.
-- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
+- Namespace `GregFramework.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
 ### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
-Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
+Some names in the form `greg.<Domain>.<Action>` are additionally fired from the core via `GregHookIntegration` / `GregEventDispatcher.Emit` (numeric `EventIds` → String). If your hook is only defined in `greg_hooks.json` as an Il2Cpp patch, **HookBinder** is the correct entry point; use `GregEventDispatcher` if you want to explicitly listen to the payload bus:
 
 ```csharp
 using gregFramework.Core;
@@ -324,7 +324,7 @@ This hook name can be mapped to **1** Harmony target(s):
 The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.DestroyObjective`:
 
 ```csharp
-using FrikaMF.Hooks;
+using GregFramework.Hooks;
 
 // For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.DestroyObjective", ctx =>
@@ -336,11 +336,11 @@ HookBinder.OnAfter("greg.GAMEPLAY.DestroyObjective", ctx =>
 Prerequisites:
 
 - A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.DestroyObjective`.
-- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
+- Namespace `GregFramework.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
 ### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
-Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
+Some names in the form `greg.<Domain>.<Action>` are additionally fired from the core via `GregHookIntegration` / `GregEventDispatcher.Emit` (numeric `EventIds` → String). If your hook is only defined in `greg_hooks.json` as an Il2Cpp patch, **HookBinder** is the correct entry point; use `GregEventDispatcher` if you want to explicitly listen to the payload bus:
 
 ```csharp
 using gregFramework.Core;
@@ -395,7 +395,7 @@ This hook name can be mapped to **1** Harmony target(s):
 The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.GetTimedObjective`:
 
 ```csharp
-using FrikaMF.Hooks;
+using GregFramework.Hooks;
 
 // For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.GetTimedObjective", ctx =>
@@ -407,11 +407,11 @@ HookBinder.OnAfter("greg.GAMEPLAY.GetTimedObjective", ctx =>
 Prerequisites:
 
 - A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.GetTimedObjective`.
-- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
+- Namespace `GregFramework.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
 ### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
-Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
+Some names in the form `greg.<Domain>.<Action>` are additionally fired from the core via `GregHookIntegration` / `GregEventDispatcher.Emit` (numeric `EventIds` → String). If your hook is only defined in `greg_hooks.json` as an Il2Cpp patch, **HookBinder** is the correct entry point; use `GregEventDispatcher` if you want to explicitly listen to the payload bus:
 
 ```csharp
 using gregFramework.Core;
@@ -466,7 +466,7 @@ This hook name can be mapped to **1** Harmony target(s):
 The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.InstantiateObjectiveSign`:
 
 ```csharp
-using FrikaMF.Hooks;
+using GregFramework.Hooks;
 
 // For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.InstantiateObjectiveSign", ctx =>
@@ -478,11 +478,11 @@ HookBinder.OnAfter("greg.GAMEPLAY.InstantiateObjectiveSign", ctx =>
 Prerequisites:
 
 - A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.InstantiateObjectiveSign`.
-- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
+- Namespace `GregFramework.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
 ### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
-Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
+Some names in the form `greg.<Domain>.<Action>` are additionally fired from the core via `GregHookIntegration` / `GregEventDispatcher.Emit` (numeric `EventIds` → String). If your hook is only defined in `greg_hooks.json` as an Il2Cpp patch, **HookBinder** is the correct entry point; use `GregEventDispatcher` if you want to explicitly listen to the payload bus:
 
 ```csharp
 using gregFramework.Core;
@@ -537,7 +537,7 @@ This hook name can be mapped to **1** Harmony target(s):
 The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.IsTutorialInProgress`:
 
 ```csharp
-using FrikaMF.Hooks;
+using GregFramework.Hooks;
 
 // For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.IsTutorialInProgress", ctx =>
@@ -549,11 +549,11 @@ HookBinder.OnAfter("greg.GAMEPLAY.IsTutorialInProgress", ctx =>
 Prerequisites:
 
 - A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.IsTutorialInProgress`.
-- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
+- Namespace `GregFramework.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
 ### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
-Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
+Some names in the form `greg.<Domain>.<Action>` are additionally fired from the core via `GregHookIntegration` / `GregEventDispatcher.Emit` (numeric `EventIds` → String). If your hook is only defined in `greg_hooks.json` as an Il2Cpp patch, **HookBinder** is the correct entry point; use `GregEventDispatcher` if you want to explicitly listen to the payload bus:
 
 ```csharp
 using gregFramework.Core;
@@ -608,7 +608,7 @@ This hook name can be mapped to **1** Harmony target(s):
 The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.ObjectiveSignRemoved`:
 
 ```csharp
-using FrikaMF.Hooks;
+using GregFramework.Hooks;
 
 // For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.ObjectiveSignRemoved", ctx =>
@@ -620,11 +620,11 @@ HookBinder.OnAfter("greg.GAMEPLAY.ObjectiveSignRemoved", ctx =>
 Prerequisites:
 
 - A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.ObjectiveSignRemoved`.
-- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
+- Namespace `GregFramework.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
 ### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
-Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
+Some names in the form `greg.<Domain>.<Action>` are additionally fired from the core via `GregHookIntegration` / `GregEventDispatcher.Emit` (numeric `EventIds` → String). If your hook is only defined in `greg_hooks.json` as an Il2Cpp patch, **HookBinder** is the correct entry point; use `GregEventDispatcher` if you want to explicitly listen to the payload bus:
 
 ```csharp
 using gregFramework.Core;
@@ -679,7 +679,7 @@ This hook name can be mapped to **1** Harmony target(s):
 The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.ObjectiveTimedText`:
 
 ```csharp
-using FrikaMF.Hooks;
+using GregFramework.Hooks;
 
 // For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.ObjectiveTimedText", ctx =>
@@ -691,11 +691,11 @@ HookBinder.OnAfter("greg.GAMEPLAY.ObjectiveTimedText", ctx =>
 Prerequisites:
 
 - A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.ObjectiveTimedText`.
-- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
+- Namespace `GregFramework.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
 ### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
-Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
+Some names in the form `greg.<Domain>.<Action>` are additionally fired from the core via `GregHookIntegration` / `GregEventDispatcher.Emit` (numeric `EventIds` → String). If your hook is only defined in `greg_hooks.json` as an Il2Cpp patch, **HookBinder** is the correct entry point; use `GregEventDispatcher` if you want to explicitly listen to the payload bus:
 
 ```csharp
 using gregFramework.Core;
@@ -750,7 +750,7 @@ This hook name can be mapped to **1** Harmony target(s):
 The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.OnDestroy`:
 
 ```csharp
-using FrikaMF.Hooks;
+using GregFramework.Hooks;
 
 // For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.OnDestroy", ctx =>
@@ -762,11 +762,11 @@ HookBinder.OnAfter("greg.GAMEPLAY.OnDestroy", ctx =>
 Prerequisites:
 
 - A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.OnDestroy`.
-- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
+- Namespace `GregFramework.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
 ### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
-Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
+Some names in the form `greg.<Domain>.<Action>` are additionally fired from the core via `GregHookIntegration` / `GregEventDispatcher.Emit` (numeric `EventIds` → String). If your hook is only defined in `greg_hooks.json` as an Il2Cpp patch, **HookBinder** is the correct entry point; use `GregEventDispatcher` if you want to explicitly listen to the payload bus:
 
 ```csharp
 using gregFramework.Core;
@@ -821,7 +821,7 @@ This hook name can be mapped to **1** Harmony target(s):
 The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.OnLoad`:
 
 ```csharp
-using FrikaMF.Hooks;
+using GregFramework.Hooks;
 
 // For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.OnLoad", ctx =>
@@ -833,11 +833,11 @@ HookBinder.OnAfter("greg.GAMEPLAY.OnLoad", ctx =>
 Prerequisites:
 
 - A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.OnLoad`.
-- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
+- Namespace `GregFramework.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
 ### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
-Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
+Some names in the form `greg.<Domain>.<Action>` are additionally fired from the core via `GregHookIntegration` / `GregEventDispatcher.Emit` (numeric `EventIds` → String). If your hook is only defined in `greg_hooks.json` as an Il2Cpp patch, **HookBinder** is the correct entry point; use `GregEventDispatcher` if you want to explicitly listen to the payload bus:
 
 ```csharp
 using gregFramework.Core;
@@ -892,7 +892,7 @@ This hook name can be mapped to **1** Harmony target(s):
 The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.GAMEPLAY.StartObjective`:
 
 ```csharp
-using FrikaMF.Hooks;
+using GregFramework.Hooks;
 
 // For Postfix strategy (common):
 HookBinder.OnAfter("greg.GAMEPLAY.StartObjective", ctx =>
@@ -904,11 +904,11 @@ HookBinder.OnAfter("greg.GAMEPLAY.StartObjective", ctx =>
 Prerequisites:
 
 - A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.GAMEPLAY.StartObjective`.
-- Namespace `FrikaMF.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
+- Namespace `GregFramework.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
 ### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 
-Manche Namen der Form `greg.<Domäne>.<Aktion>` werden **zusätzlich** vom Kern über `GregHookIntegration` / `GregEventDispatcher.Emit` gefeuert (numerische `EventIds` → String). Wenn dein Hook **nur** in `greg_hooks.json` als Il2Cpp-Patch steht, ist **`HookBinder`** der richtige Einstieg; `GregEventDispatcher` nutzt du, wenn du explizit auf den Payload-Bus hörst:
+Some names in the form `greg.<Domain>.<Action>` are additionally fired from the core via `GregHookIntegration` / `GregEventDispatcher.Emit` (numeric `EventIds` → String). If your hook is only defined in `greg_hooks.json` as an Il2Cpp patch, **HookBinder** is the correct entry point; use `GregEventDispatcher` if you want to explicitly listen to the payload bus:
 
 ```csharp
 using gregFramework.Core;
@@ -925,6 +925,9 @@ Unregister: `GregEventDispatcher.Off("greg.GAMEPLAY.StartObjective", handler)` (
 
 - [Overview of all greg hooks](../../_internal/README.md)
 - Source: `gregCore/gregFramework/greg_hooks.json`
+
+
+
 
 
 
