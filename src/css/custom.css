@@ -487,11 +487,8 @@ body {
 
 /* Doc canvas — editorial bleed (wiki layout alignment); no hard section borders */
 .theme-doc-wrapper {
-  background: linear-gradient(
-    180deg,
-    var(--color-surface-container-low) 0%,
-    var(--color-background) 42%
-  );
+  background: var(--color-background);
+  background-image: none;
 }
 
 .theme-doc-root .theme-doc-sidebar-container {
@@ -646,7 +643,7 @@ body {
 html.route-legal body,
 html.route-legal .main-wrapper,
 html.route-legal .theme-doc-wrapper {
-  background: var(--color-surface) !important;
+  background: var(--color-background) !important;
   background-image: none !important;
 }
 
