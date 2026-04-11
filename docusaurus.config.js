@@ -235,17 +235,10 @@ const config = {
       style: 'dark',
       links: [
         {
-          title: 'Wiki',
+          title: 'Community Project',
           items: [
-            {label: 'Wiki home', to: '/wiki'},
-            {label: 'Getting started', to: '/wiki/getting-started'},
-            {label: 'Documentation hub', to: '/wiki/developers'},
-            {label: 'For players', to: '/players'},
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
+            {label: 'Catalog', to: '/mods'},
+            {label: 'frikadellental.de', href: 'https://frikadellental.de'},
             {
               label: 'GitHub',
               href: 'https://github.com/mleem97/gregFramework',
@@ -256,15 +249,11 @@ const config = {
               href: 'https://discord.gg/greg',
               className: 'footer-link-icon footer-link-discord',
             },
-            {
-              label: 'Support',
-              href: 'https://github.com/mleem97/gregFramework/issues',
-              className: 'footer-link-icon footer-link-support',
-            },
           ],
         },
       ],
-      copyright: `Copyright ${new Date().getFullYear()} <a href="https://meyermedia.eu" target="_blank" rel="noopener noreferrer">Meyer Media</a><br/>This wiki is a community project and is not affiliated with the developer or publisher of Data Center.`,
+      copyright:
+        'COPYRIGHT 2026 MEYER MEDIA. This is a community-run project, not affiliated with the official Data Center developers.',
     },
   },
 };

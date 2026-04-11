@@ -195,6 +195,17 @@ export default function HomePage(): JSX.Element {
             </span>
           </motion.div>
 
+          <motion.img
+            src="/img/greg.svg"
+            alt=""
+            aria-hidden
+            className="mb-6 h-16 w-16 opacity-85"
+            initial="hidden"
+            whileInView="show"
+            viewport={viewport}
+            variants={variants.textReveal}
+          />
+
           <motion.h1
             className="homepage-logo-title mb-6 text-5xl font-black leading-none tracking-tighter text-on-surface md:text-7xl lg:text-8xl"
             initial="hidden"
@@ -478,24 +489,27 @@ export default function HomePage(): JSX.Element {
         </motion.section>
 
         <motion.section
-          id="discord-cta"
-          className="px-4 py-24"
+          className="px-4 py-20"
           initial="hidden"
           whileInView="show"
           viewport={viewport}
           variants={variants.section}
         >
-          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl bg-gradient-to-br from-surface-container to-surface-container-high p-12 text-center md:p-16">
-            <div
-              className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-primary/10 blur-[100px]"
-              aria-hidden
-            />
-            <div className="relative z-10 grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,30rem)] lg:items-start">
-              <div>
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 lg:grid-cols-2">
+            <motion.div
+              id="discord-cta"
+              className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-surface-container to-surface-container-high p-8 text-center md:p-10"
+              variants={variants.card}
+            >
+              <div
+                className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-primary/10 blur-[100px]"
+                aria-hidden
+              />
+              <div className="relative z-10">
                 <h2 className="mb-6 font-headline text-3xl font-bold text-on-surface md:text-4xl">
                   {t.ctaDiscordTitle}
                 </h2>
-                <p className="mb-10 max-w-xl text-lg text-on-surface-variant">{t.ctaDiscordLead}</p>
+                <p className="mb-10 text-lg text-on-surface-variant">{t.ctaDiscordLead}</p>
                 <Link
                   to={discordInviteLink}
                   className="btn-primary hero-glow inline-flex items-center gap-2 rounded-lg px-10 py-4 text-lg"
@@ -503,90 +517,80 @@ export default function HomePage(): JSX.Element {
                   <FaDiscord className="text-xl" />
                   {t.ctaDiscordButton}
                 </Link>
-              </div>
-              <div className="w-full rounded-xl bg-surface-container-high p-5 text-left">
-                <div className="mb-4 flex items-center justify-between gap-3">
-                  <h3 className="font-headline text-xl font-bold text-on-surface">
-                    {discordWidget?.name ?? 'GregFramework Discord'}
-                  </h3>
-                  <span className="inline-flex items-center gap-2 rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">
-                    <span className="h-2 w-2 rounded-full bg-green-500" aria-hidden />
-                    {discordWidget?.presence_count ?? 0} online
-                  </span>
-                </div>
-
-                {discordWidgetError ? (
-                  <p className="text-sm text-on-surface-variant">{discordWidgetError}</p>
-                ) : null}
-
-                {!discordWidget && !discordWidgetError ? (
-                  <p className="text-sm text-on-surface-variant">Loading Discord widget…</p>
-                ) : null}
-
-                {discordVisibleChannels.length > 0 ? (
-                  <div className="mb-4">
-                    <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-on-surface-variant">
-                      Active channels
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {discordVisibleChannels.map((channel) => (
-                        <span
-                          key={channel.id}
-                          className="rounded-full bg-surface-container px-2.5 py-1 text-xs text-on-surface-variant"
-                        >
-                          #{channel.name}
-                        </span>
-                      ))}
-                    </div>
+                <div className="mt-8 w-full rounded-xl bg-surface-container-high p-5 text-left">
+                  <div className="mb-4 flex items-center justify-between gap-3">
+                    <h3 className="font-headline text-xl font-bold text-on-surface">
+                      {discordWidget?.name ?? 'GregFramework Discord'}
+                    </h3>
+                    <span className="inline-flex items-center gap-2 rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">
+                      <span className="h-2 w-2 rounded-full bg-green-500" aria-hidden />
+                      {discordWidget?.presence_count ?? 0} online
+                    </span>
                   </div>
-                ) : null}
 
-                {discordVisibleMembers.length > 0 ? (
-                  <div>
-                    <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-on-surface-variant">
-                      Online now
+                  {discordWidgetError ? (
+                    <p className="text-sm text-on-surface-variant">{discordWidgetError}</p>
+                  ) : null}
+
+                  {!discordWidget && !discordWidgetError ? (
+                    <p className="text-sm text-on-surface-variant">Loading Discord widget…</p>
+                  ) : null}
+
+                  {discordVisibleChannels.length > 0 ? (
+                    <div className="mb-4">
+                      <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-on-surface-variant">
+                        Active channels
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {discordVisibleChannels.map((channel) => (
+                          <span
+                            key={channel.id}
+                            className="rounded-full bg-surface-container px-2.5 py-1 text-xs text-on-surface-variant"
+                          >
+                            #{channel.name}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                    <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                      {discordVisibleMembers.map((member) => (
-                        <div
-                          key={member.id}
-                          className="flex items-center gap-2 rounded-lg bg-surface-container px-2.5 py-2"
-                        >
-                          {member.avatar_url ? (
-                            <img
-                              src={member.avatar_url}
-                              alt={member.username}
-                              className="h-8 w-8 rounded-full object-cover"
-                            />
-                          ) : (
-                            <div className="h-8 w-8 rounded-full bg-primary/20" aria-hidden />
-                          )}
-                          <div className="min-w-0">
-                            <div className="truncate text-sm font-semibold text-on-surface">
-                              {member.username}
+                  ) : null}
+
+                  {discordVisibleMembers.length > 0 ? (
+                    <div>
+                      <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-on-surface-variant">
+                        Online now
+                      </div>
+                      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                        {discordVisibleMembers.map((member) => (
+                          <div
+                            key={member.id}
+                            className="flex items-center gap-2 rounded-lg bg-surface-container px-2.5 py-2"
+                          >
+                            {member.avatar_url ? (
+                              <img
+                                src={member.avatar_url}
+                                alt={member.username}
+                                className="h-8 w-8 rounded-full object-cover"
+                              />
+                            ) : (
+                              <div className="h-8 w-8 rounded-full bg-primary/20" aria-hidden />
+                            )}
+                            <div className="min-w-0">
+                              <div className="truncate text-sm font-semibold text-on-surface">
+                                {member.username}
+                              </div>
+                              <div className="text-xs text-on-surface-variant">{member.status}</div>
                             </div>
-                            <div className="text-xs text-on-surface-variant">{member.status}</div>
                           </div>
-                        </div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                ) : null}
+                  ) : null}
+                </div>
               </div>
-            </div>
-          </div>
-        </motion.section>
+            </motion.div>
 
-        <motion.section
-          id="greg-story"
-          className="px-4 py-20"
-          initial="hidden"
-          whileInView="show"
-          viewport={viewport}
-          variants={variants.section}
-        >
-          <div className="mx-auto max-w-6xl">
             <motion.div
+              id="greg-story"
               className="app-card app-card-glow flex flex-col gap-6 rounded-2xl p-6 md:flex-row md:items-center md:justify-between md:p-8"
               variants={variants.card}
             >
@@ -600,9 +604,7 @@ export default function HomePage(): JSX.Element {
                 <p className="mb-4 max-w-md text-sm leading-relaxed text-on-surface-variant md:text-base">
                   {t.gregText2}
                 </p>
-                <p className="font-headline text-lg font-bold italic text-secondary">
-                  {t.gregQuote}
-                </p>
+                <p className="font-headline text-lg font-bold italic text-secondary">{t.gregQuote}</p>
               </div>
               <motion.div
                 className="shrink-0"
@@ -613,57 +615,48 @@ export default function HomePage(): JSX.Element {
                 </div>
               </motion.div>
             </motion.div>
-          </div>
-        </motion.section>
 
-        <motion.section
-          id="community"
-          className="px-4 py-16"
-          initial="hidden"
-          whileInView="show"
-          viewport={viewport}
-          variants={variants.section}
-        >
-          <div className="mx-auto max-w-6xl">
-            {showDataCenterModsComingSoon ? (
+            <motion.div id="community" className="lg:col-span-2" variants={variants.card}>
+              {showDataCenterModsComingSoon ? (
+                <motion.div
+                  className="mb-6 rounded-xl bg-surface-container-high p-4"
+                  variants={variants.card}
+                >
+                  <div className="text-sm font-semibold uppercase tracking-wide text-tertiary">
+                    {t.comingSoon}
+                  </div>
+                  <div className="mt-1 text-base font-medium text-on-surface">{t.comingSoonText}</div>
+                </motion.div>
+              ) : null}
+
               <motion.div
-                className="mb-6 rounded-xl bg-surface-container-high p-4"
+                className="app-card app-card-glow flex flex-col gap-6 rounded-xl p-6 md:flex-row md:items-center md:justify-between"
                 variants={variants.card}
               >
-                <div className="text-sm font-semibold uppercase tracking-wide text-tertiary">
-                  {t.comingSoon}
+                <div>
+                  <h3 className="font-headline text-2xl font-bold text-on-surface">
+                    {t.communityTitle}
+                  </h3>
+                  <p className="mt-2 text-on-surface-variant">{t.communityText}</p>
                 </div>
-                <div className="mt-1 text-base font-medium text-on-surface">{t.comingSoonText}</div>
+                <div className="flex flex-wrap gap-3">
+                  <Link to="https://frikadellental.de" className="btn-social">
+                    <FaArrowUpRightFromSquare /> frikadellental.de
+                  </Link>
+                  <Link to="/mods" className="btn-social">
+                    <FaShop /> {t.availableModsLabel}
+                  </Link>
+                  <Link to="https://github.com/mleem97/gregFramework" className="btn-social">
+                    <FaGithub /> {t.repositoryLabel}
+                  </Link>
+                  <Link
+                    to="https://discord.gg/greg"
+                    className="btn-social border-transparent bg-[#5865F2] text-white hover:bg-[#4752C4]"
+                  >
+                    <FaDiscord /> {t.joinLabel}
+                  </Link>
+                </div>
               </motion.div>
-            ) : null}
-
-            <motion.div
-              className="app-card app-card-glow flex flex-col gap-6 rounded-xl p-6 md:flex-row md:items-center md:justify-between"
-              variants={variants.card}
-            >
-              <div>
-                <h3 className="font-headline text-2xl font-bold text-on-surface">
-                  {t.communityTitle}
-                </h3>
-                <p className="mt-2 text-on-surface-variant">{t.communityText}</p>
-              </div>
-              <div className="flex flex-wrap gap-3">
-                <Link to="https://frikadellental.de" className="btn-social">
-                  <FaArrowUpRightFromSquare /> frikadellental.de
-                </Link>
-                <Link to="/mods" className="btn-social">
-                  <FaShop /> {t.availableModsLabel}
-                </Link>
-                <Link to="https://github.com/mleem97/gregFramework" className="btn-social">
-                  <FaGithub /> {t.repositoryLabel}
-                </Link>
-                <Link
-                  to="https://discord.gg/greg"
-                  className="btn-social border-transparent bg-[#5865F2] text-white hover:bg-[#4752C4]"
-                >
-                  <FaDiscord /> {t.joinLabel}
-                </Link>
-              </div>
             </motion.div>
           </div>
         </motion.section>
@@ -681,14 +674,32 @@ export default function HomePage(): JSX.Element {
               <h3 className="font-headline text-2xl font-bold text-on-surface">{t.supportTitle}</h3>
               <p className="text-on-surface-variant">{t.supportText}</p>
             </div>
-            <motion.div whileHover={reducedMotion ? undefined : {y: -2, scale: 1.01}}>
-              <Link
-                to="https://github.com/mleem97/gregFramework/issues"
-                className="btn-primary inline-flex items-center gap-2 rounded-xl px-5 py-3"
-              >
-                <FaLifeRing /> {t.supportCta}
-              </Link>
-            </motion.div>
+            <div className="flex flex-wrap gap-3">
+              <motion.div whileHover={reducedMotion ? undefined : {y: -2, scale: 1.01}}>
+                <Link
+                  to="/wiki/developers"
+                  className="btn-primary inline-flex items-center gap-2 rounded-xl px-5 py-3"
+                >
+                  <FaLifeRing /> {t.supportCta}
+                </Link>
+              </motion.div>
+              <motion.div whileHover={reducedMotion ? undefined : {y: -2, scale: 1.01}}>
+                <Link
+                  to="https://github.com/mleem97/gregCore"
+                  className="btn-social inline-flex items-center gap-2 rounded-xl px-5 py-3"
+                >
+                  <FaGithub /> {t.repositoryLabel}
+                </Link>
+              </motion.div>
+              <motion.div whileHover={reducedMotion ? undefined : {y: -2, scale: 1.01}}>
+                <Link
+                  to="https://discord.gg/greg"
+                  className="btn-social inline-flex items-center gap-2 rounded-xl px-5 py-3"
+                >
+                  <FaDiscord /> {t.joinLabel}
+                </Link>
+              </motion.div>
+            </div>
           </div>
         </motion.section>
       </main>

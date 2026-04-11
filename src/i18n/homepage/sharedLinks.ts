@@ -66,7 +66,7 @@ export const homepageShellEn: Pick<
   | 'knowledgeLinks'
   | 'workflowLinks'
 > = {
-  heroBadge: 'Documentation · Data Center modding',
+  heroBadge: 'MODDING FOR DATA CENTER',
   heroBrandLine1: 'greg',
   heroBrandLine2Gradient: 'Framework',
   knowledgeSectionTitle: 'Start here',
@@ -83,7 +83,7 @@ export const homepageShellEn: Pick<
   ],
   ctaDiscordTitle: 'Questions?',
   ctaDiscordLead:
-    'Ask in Discord for install issues, mod compatibility, or help building on gregFramework.',
+    'Need help with installs, compatibility, or setup? Ask the community and get practical answers.',
   ctaDiscordButton: 'Open Discord',
   knowledgeLinks: sharedKnowledgeLinksEn,
   workflowLinks: sharedWorkflowLinksEn,
