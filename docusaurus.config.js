@@ -4,7 +4,7 @@ const config = {
   title: 'gregFramework',
   tagline: 'Mod-author documentation for Data Center; players use /players and the mod catalog.',
   favicon: 'img/greg_dc.png',
-  url: 'https://frikadellental.de',
+  url: 'https://gregframework.eu',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   markdown: {
