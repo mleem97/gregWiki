@@ -608,6 +608,12 @@ export default function HomePage(): JSX.Element {
                 <h2 className="mb-4 font-headline text-2xl font-bold text-on-surface md:text-3xl">
                   {t.gregTitle}
                 </h2>
+                <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-tertiary">
+                  {t.communityTitle}
+                </p>
+                <p className="mb-4 max-w-md text-sm leading-relaxed text-on-surface-variant md:text-base">
+                  {t.communityText}
+                </p>
                 <p className="mb-4 max-w-md text-sm leading-relaxed text-on-surface-variant md:text-base">
                   {t.gregText1}
                 </p>
