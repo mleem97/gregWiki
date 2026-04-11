@@ -54,6 +54,7 @@ const sidebars = {
             'content-creation/content-creation-integration',
             'content-creation/content-creation-deployment',
             'content-creation/content-creation-combined-tutorial',
+            'content-creation/content-creation-development-status-and-remaining-backlog',
           ],
         },
         {

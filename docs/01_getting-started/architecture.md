@@ -16,10 +16,10 @@ Describe the runtime as a **layered system**, not a flat list of DLLs:
 
 | Layer | Role | Typical workspace artifacts |
 |--------|--------|------------------------------|
-| **1. ModManager (front-end)** | UI to enable/disable mods and plugins, ordering, configuration, game state (e.g. no save loaded, level loading). Talks to the framework through **well-defined** interfaces (shared library, config files, IPC, named pipes, HTTP — depending on implementation). | `gregModmanager/` — **Gregtools Modmanager** (MAUI, e.g. `WorkshopUploader.csproj`). |
-| **2. Modding framework / SDK** | Stable API surface for plugins and mods: lifecycle, events, versioning, dependencies, logging, error handling. Hooks Unity / MelonLoader / IL2CPP and **maps** low-level events to **framework events** (hook proxy). | `gregCore/` — e.g. `framework/` (**`gregCore` runtime**), Harmony integration, **native FFI** (`FfiBridge`), hook registry. |
-| **3. Plugins** | Extend the framework (new services, hook types, optional ModManager UI). Clear extension points. | `FFM.Plugin.*`, repos **`gregExt.<Name>/`**. |
-| **4. Mods** | User extensions via the **documented** framework API; avoid direct IL2CPP details where possible; load in isolation; soft-fail on errors. | `FMF.*`, repos **`gregMod.<Name>/`**. |
+| **1. ModManager (front-end)** | UI to enable/disable mods and plugins, ordering, configuration. | `gregModmanager/` — **GregModmanager** (MAUI). |
+| **2. Modding framework / SDK** | Stable API surface for mods: lifecycle, events, registries. Hooks Unity and maps events to **framework events**. | `gregCore/` — runtime components in `gregModLoader/`, SDK in `gregSdk/`, Harmony integration in `gregHarmony/`. |
+| **3. Plugins** | Extend the framework (new services, hook types). | Repos **`gregExt.<Name>/`**. |
+| **4. Mods** | User extensions via the **documented** framework API. | Repos **`gregMod.<Name>/`**. |
 
 **Mnemonic:** `ModManager → Framework → Plugins → Mods`.
 
