@@ -16,11 +16,11 @@ This hook is triggered during the $fullHook event lifecycle. It is part of the n
 - TimestampUtc: Time of the event
 
 ## Example
-``csharp
+````csharp
 using gregSdk;
 
 gregEventDispatcher.On(gregNativeEventHooks.SystemSaveStarted, payload => {
     var entityId = gregPayload.Get<string>(payload, "EntityId");
     MelonLoader.MelonLogger.Msg($"Event greg.SYSTEM.SaveStarted triggered for {entityId}");
 });
-``
+```
