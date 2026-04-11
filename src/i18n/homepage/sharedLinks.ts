@@ -74,7 +74,7 @@ export const homepageShellEn: Pick<
   codeSectionTitle: 'How mods connect to the game',
   codeSectionLead:
     'Mods use MelonLoader and Harmony. gregCore turns game methods into stable greg.* events your code can subscribe to — see the mod author wiki and Documentation hub.',
-  codeSnippetCaption: 'Random excerpt from gregCore',
+  codeSnippetCaption: 'Random practical usage from gregCore',
   codeSnippetLoading: 'Loading code sample…',
   codeSectionBullets: [
     'gregCore patches the game and emits typed greg.* hook names (see greg_hooks.json).',

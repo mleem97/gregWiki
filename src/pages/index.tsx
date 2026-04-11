@@ -14,6 +14,7 @@ import {
 } from 'react-icons/fa6';
 import {GregCoreRandomSnippet} from '../components/GregCoreRandomSnippet';
 import GradientBlinds from '../components/GradientBlinds';
+import ShapeGrid from '../components/ShapeGrid';
 
 /** Always resolves to the newest GitHub release (redirect). */
 const GREG_MODMANAGER_LATEST =
@@ -422,82 +423,88 @@ export default function HomePage(): JSX.Element {
           </div>
         </motion.section>
 
-        <motion.section
-          id="docs"
-          className="px-4 py-20"
-          initial="hidden"
-          whileInView="show"
-          viewport={viewport}
-          variants={variants.section}
-        >
-          <div className="mx-auto max-w-6xl text-center">
-            <motion.h2
-              className="mb-10 font-headline text-3xl font-bold text-on-surface"
-              variants={variants.textReveal}
-            >
-              {t.knowledgeSectionTitle}
-            </motion.h2>
-            <motion.div
-              className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
-              variants={variants.grid}
-            >
-              {t.knowledgeLinks.map((doc) => (
-                <motion.div key={doc.link} variants={variants.card}>
-                  <Link
-                    to={doc.link}
-                    className="app-card app-card-motion app-card-glow group block rounded-lg p-5 text-left text-on-surface"
-                  >
-                    <div className="mb-2 font-headline text-lg font-bold text-on-surface transition-colors group-hover:text-primary">
-                      {doc.title}
-                    </div>
-                    <div className="text-sm text-on-surface-variant">{doc.description}</div>
-                  </Link>
-                </motion.div>
-              ))}
-            </motion.div>
+        <div className="shapegrid-surface">
+          <div className="shapegrid-surface-canvas" aria-hidden>
+            <ShapeGrid className="h-full w-full" cellSize={66} strokeWidth={1} drift={0.2} />
           </div>
-        </motion.section>
+          <div className="shapegrid-surface-vignette" aria-hidden />
 
-        <motion.section
-          id="ecosystem"
-          className="section-surface-alt px-4 py-20"
-          initial="hidden"
-          whileInView="show"
-          viewport={viewport}
-          variants={variants.section}
-        >
-          <div className="mx-auto max-w-5xl text-center">
-            <motion.h2
-              className="mb-10 font-headline text-3xl font-bold text-on-surface"
-              variants={variants.textReveal}
-            >
-              {t.workflowSectionTitle}
-            </motion.h2>
-            <motion.div className="grid grid-cols-1 gap-4 md:grid-cols-2" variants={variants.grid}>
-              {t.workflowLinks.map((doc) => (
-                <motion.div key={doc.link} variants={variants.card}>
-                  <Link
-                    to={doc.link}
-                    className="app-card app-card-motion app-card-glow group block rounded-lg p-5 text-left text-on-surface"
-                  >
-                    <div className="mb-2 font-headline text-lg font-bold text-on-surface transition-colors group-hover:text-primary">
-                      {doc.title}
-                    </div>
-                    <div className="text-sm text-on-surface-variant">{doc.description}</div>
-                  </Link>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </motion.section>
+          <motion.section
+            id="docs"
+            className="relative z-10 px-4 py-20"
+            initial="hidden"
+            whileInView="show"
+            viewport={viewport}
+            variants={variants.section}
+          >
+            <div className="mx-auto max-w-6xl text-center">
+              <motion.h2
+                className="mb-10 font-headline text-3xl font-bold text-on-surface"
+                variants={variants.textReveal}
+              >
+                {t.knowledgeSectionTitle}
+              </motion.h2>
+              <motion.div
+                className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+                variants={variants.grid}
+              >
+                {t.knowledgeLinks.map((doc) => (
+                  <motion.div key={doc.link} variants={variants.card}>
+                    <Link
+                      to={doc.link}
+                      className="app-card app-card-motion app-card-glow group block rounded-lg p-5 text-left text-on-surface"
+                    >
+                      <div className="mb-2 font-headline text-lg font-bold text-on-surface transition-colors group-hover:text-primary">
+                        {doc.title}
+                      </div>
+                      <div className="text-sm text-on-surface-variant">{doc.description}</div>
+                    </Link>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+          </motion.section>
 
-        <motion.section
-          className="px-4 py-20"
-          initial="hidden"
-          whileInView="show"
-          viewport={viewport}
-          variants={variants.section}
-        >
+          <motion.section
+            id="ecosystem"
+            className="section-surface-alt relative z-10 px-4 py-20"
+            initial="hidden"
+            whileInView="show"
+            viewport={viewport}
+            variants={variants.section}
+          >
+            <div className="mx-auto max-w-5xl text-center">
+              <motion.h2
+                className="mb-10 font-headline text-3xl font-bold text-on-surface"
+                variants={variants.textReveal}
+              >
+                {t.workflowSectionTitle}
+              </motion.h2>
+              <motion.div className="grid grid-cols-1 gap-4 md:grid-cols-2" variants={variants.grid}>
+                {t.workflowLinks.map((doc) => (
+                  <motion.div key={doc.link} variants={variants.card}>
+                    <Link
+                      to={doc.link}
+                      className="app-card app-card-motion app-card-glow group block rounded-lg p-5 text-left text-on-surface"
+                    >
+                      <div className="mb-2 font-headline text-lg font-bold text-on-surface transition-colors group-hover:text-primary">
+                        {doc.title}
+                      </div>
+                      <div className="text-sm text-on-surface-variant">{doc.description}</div>
+                    </Link>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+          </motion.section>
+
+          <motion.section
+            className="relative z-10 px-4 py-20"
+            initial="hidden"
+            whileInView="show"
+            viewport={viewport}
+            variants={variants.section}
+          >
           <div className="mx-auto grid w-full max-w-[96rem] grid-cols-1 gap-6 lg:grid-cols-2">
             <div className="flex flex-col gap-6">
               <motion.div
@@ -678,7 +685,8 @@ export default function HomePage(): JSX.Element {
               </motion.div>
             </motion.div>
           </div>
-        </motion.section>
+          </motion.section>
+        </div>
 
         <motion.section
           id="support"

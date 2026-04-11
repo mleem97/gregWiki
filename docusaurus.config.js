@@ -297,10 +297,22 @@ const config = {
       style: 'dark',
       links: [
         {
-          title: 'Community Project',
+          title: 'Game & Mods',
           items: [
+            {label: 'Data Center (Steam)', href: 'https://store.steampowered.com/app/4170200/'},
+            {label: 'Steam Workshop', href: 'https://steamcommunity.com/workshop/browse/?appid=4170200'},
+            {label: 'Players Guide', to: '/players'},
             {label: 'Catalog', to: '/mods'},
-            {label: 'frikadellental.de', href: 'https://frikadellental.de'},
+          ],
+        },
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'Discord',
+              to: '/discord',
+              className: 'footer-link-icon footer-link-discord',
+            },
             {
               label: 'GitHub',
               href: 'https://github.com/mleem97/gregFramework',
@@ -311,11 +323,16 @@ const config = {
               href: 'https://git.datacentermods.com/teamGreg',
               className: 'footer-link-icon footer-link-github',
             },
-            {
-              label: 'Discord',
-              href: 'https://discord.gg/greg',
-              className: 'footer-link-icon footer-link-discord',
-            },
+            {label: 'frikadellental.de', href: 'https://frikadellental.de'},
+          ],
+        },
+        {
+          title: 'Legal',
+          items: [
+            {label: 'Imprint', to: '/imprint'},
+            {label: 'Privacy', to: '/privacy'},
+            {label: 'Terms', to: '/terms'},
+            {label: 'Sponsors', to: '/wiki/legal/sponsors'},
           ],
         },
       ],

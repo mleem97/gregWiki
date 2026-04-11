@@ -407,6 +407,36 @@ body {
   background-color: var(--color-surface-container-low);
 }
 
+.shapegrid-surface {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.shapegrid-surface-canvas,
+.shapegrid-surface-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.shapegrid-surface-canvas {
+  z-index: 0;
+  opacity: 0.72;
+}
+
+.shapegrid-surface-vignette {
+  z-index: 1;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(97, 244, 216, 0.12), transparent 52%),
+    radial-gradient(circle at 80% 86%, rgba(28, 237, 225, 0.1), transparent 56%),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-surface-container-low) 30%, transparent) 0%,
+      color-mix(in srgb, var(--color-background) 52%, transparent) 100%
+    );
+}
+
 /* Glass cards */
 .glass-card {
   background: rgba(0, 30, 28, 0.8);
