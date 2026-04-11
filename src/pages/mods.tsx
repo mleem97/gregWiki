@@ -1,16 +1,10 @@
 import React, {useMemo} from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {moduleCatalog} from '../data/moduleCatalog';
-import {getModsPageStrings} from '../i18n/modsPage';
+import {modsPageEn as m} from '../i18n/modsPage';
 
 export default function ModsCatalogPage(): JSX.Element {
-  const {
-    i18n: {currentLocale},
-  } = useDocusaurusContext();
-  const m = useMemo(() => getModsPageStrings(currentLocale), [currentLocale]);
-
   const grouped = useMemo(() => {
     const plugins = moduleCatalog.filter((entry) => entry.type === 'plugin');
     const mods = moduleCatalog.filter((entry) => entry.type === 'mod');

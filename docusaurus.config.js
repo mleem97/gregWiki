@@ -226,6 +226,7 @@ const config = {
           ],
         },
         {to: '/mods', label: 'Mods', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-mods', 'aria-label': 'Mods'},
+        {href: 'https://git.datacentermods.com/teamGreg', label: 'teamGreg Git', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-github', 'aria-label': 'teamGreg Git'},
         {href: 'https://discord.gg/greg', label: 'Discord', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-discord', 'aria-label': 'Discord'},
         {href: 'https://github.com/mleem97/gregFramework/issues', label: 'Support', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-support', 'aria-label': 'Support'},
         {href: 'https://github.com/mleem97/gregFramework', label: 'GitHub', position: 'right', className: 'nav-right-icon nav-icon-only nav-link-github', 'aria-label': 'GitHub'},
@@ -242,6 +243,11 @@ const config = {
             {
               label: 'GitHub',
               href: 'https://github.com/mleem97/gregFramework',
+              className: 'footer-link-icon footer-link-github',
+            },
+            {
+              label: 'teamGreg Git',
+              href: 'https://git.datacentermods.com/teamGreg',
               className: 'footer-link-icon footer-link-github',
             },
             {

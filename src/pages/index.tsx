@@ -1,9 +1,8 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {motion, type Variants, useReducedMotion} from 'framer-motion';
-import {getHomepageContent} from '../i18n/homepage';
+import {en as homepageContentEn} from '../i18n/homepage/en';
 import gregImage from '../image.png';
 import {
   FaArrowUpRightFromSquare,
@@ -18,6 +17,7 @@ import {GregCoreRandomSnippet} from '../components/GregCoreRandomSnippet';
 /** Always resolves to the newest GitHub release (redirect). */
 const GREG_MODMANAGER_LATEST =
   'https://github.com/mleem97/GregToolsModmanager/releases/latest';
+const TEAM_GREG_GIT = 'https://git.datacentermods.com/teamGreg';
 const DISCORD_GUILD_ID = '1392073682133848075';
 const DISCORD_WIDGET_API = `https://discord.com/api/guilds/${DISCORD_GUILD_ID}/widget.json`;
 
@@ -119,11 +119,7 @@ function buildVariants(reducedMotion: boolean) {
 }
 
 export default function HomePage(): JSX.Element {
-  const {
-    i18n: {currentLocale},
-  } = useDocusaurusContext();
-
-  const t = getHomepageContent(currentLocale);
+  const t = homepageContentEn;
   const reducedMotion = useReducedMotion();
   const variants = useMemo(() => buildVariants(Boolean(reducedMotion)), [reducedMotion]);
   const showDataCenterModsComingSoon = useMemo(() => {
@@ -649,6 +645,9 @@ export default function HomePage(): JSX.Element {
                   <Link to="https://github.com/mleem97/gregFramework" className="btn-social">
                     <FaGithub /> {t.repositoryLabel}
                   </Link>
+                  <Link to={TEAM_GREG_GIT} className="btn-social">
+                    <FaGithub /> teamGreg Git
+                  </Link>
                   <Link
                     to="https://discord.gg/greg"
                     className="btn-social border-transparent bg-[#5865F2] text-white hover:bg-[#4752C4]"
@@ -689,6 +688,14 @@ export default function HomePage(): JSX.Element {
                   className="btn-social inline-flex items-center gap-2 rounded-xl px-5 py-3"
                 >
                   <FaGithub /> {t.repositoryLabel}
+                </Link>
+              </motion.div>
+              <motion.div whileHover={reducedMotion ? undefined : {y: -2, scale: 1.01}}>
+                <Link
+                  to={TEAM_GREG_GIT}
+                  className="btn-social inline-flex items-center gap-2 rounded-xl px-5 py-3"
+                >
+                  <FaGithub /> teamGreg Git
                 </Link>
               </motion.div>
               <motion.div whileHover={reducedMotion ? undefined : {y: -2, scale: 1.01}}>

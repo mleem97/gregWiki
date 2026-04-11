@@ -11,7 +11,7 @@ export type ModsPageStrings = {
   legacyNoSplitRepo: string;
 };
 
-const en: ModsPageStrings = {
+export const modsPageEn: ModsPageStrings = {
   title: 'Mods & plugins catalog',
   description:
     'Generated from the module catalog. Each entry links to its wiki article, release page, and download route.',
@@ -26,6 +26,5 @@ const en: ModsPageStrings = {
 };
 
 export function getModsPageStrings(_locale: string): ModsPageStrings {
-  void _locale;
-  return en;
+  return modsPageEn;
 }
