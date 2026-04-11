@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.ButtonShowNetworkSwitchConfig
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.ButtonShowNetworkSwitchConfig
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.ButtonShowNetworkSwitchConfig"
 ---
 
 # `greg.NETWORK.ButtonShowNetworkSwitchConfig`

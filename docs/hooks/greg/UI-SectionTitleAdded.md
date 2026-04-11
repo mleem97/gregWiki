@@ -1,6 +1,6 @@
 ---
 title: greg.UI.SectionTitleAdded
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.AddSectionTitle
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.AddSectionTitle"
 ---
 
 # `greg.UI.SectionTitleAdded`

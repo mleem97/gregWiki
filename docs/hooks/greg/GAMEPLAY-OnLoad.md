@@ -1,6 +1,6 @@
 ---
 title: greg.GAMEPLAY.OnLoad
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.OnLoad
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.OnLoad"
 ---
 
 # `greg.GAMEPLAY.OnLoad`

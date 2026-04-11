@@ -1,6 +1,6 @@
 ---
 title: greg.RACK.DisablePositionsButtonMaterialSet
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.SetDisablePositionsButtonMaterial
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.SetDisablePositionsButtonMaterial"
 ---
 
 # `greg.RACK.DisablePositionsButtonMaterialSet`

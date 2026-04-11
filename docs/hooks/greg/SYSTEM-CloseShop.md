@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.CloseShop
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.CloseShop
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.CloseShop"
 ---
 
 # `greg.SYSTEM.CloseShop`

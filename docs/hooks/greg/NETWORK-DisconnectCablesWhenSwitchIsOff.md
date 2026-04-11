@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.DisconnectCablesWhenSwitchIsOff
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.DisconnectCablesWhenSwitchIsOff
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.DisconnectCablesWhenSwitchIsOff"
 ---
 
 # `greg.NETWORK.DisconnectCablesWhenSwitchIsOff`

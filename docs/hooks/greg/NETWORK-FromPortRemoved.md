@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.FromPortRemoved
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: SFPModule.RemoveFromPort
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: SFPModule.RemoveFromPort"
 ---
 
 # `greg.NETWORK.FromPortRemoved`

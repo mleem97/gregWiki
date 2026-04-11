@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.IPSet
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Server.SetIP
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.SetIP"
 ---
 
 # `greg.SERVER.IPSet`

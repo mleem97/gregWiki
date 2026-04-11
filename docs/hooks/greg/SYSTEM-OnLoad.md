@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.OnLoad
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.OnLoad
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.OnLoad"
 ---
 
 # `greg.SYSTEM.OnLoad`

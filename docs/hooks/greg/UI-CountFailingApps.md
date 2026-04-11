@@ -1,6 +1,6 @@
 ---
 title: greg.UI.CountFailingApps
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.CountFailingApps
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.CountFailingApps"
 ---
 
 # `greg.UI.CountFailingApps`

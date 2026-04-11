@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.TakeSFPFromBox
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: SFPBox.TakeSFPFromBox
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: SFPBox.TakeSFPFromBox"
 ---
 
 # `greg.NETWORK.TakeSFPFromBox`

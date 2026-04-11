@@ -1,6 +1,6 @@
 ---
 title: greg.UI.TotalRowAdded
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.AddTotalRow
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.AddTotalRow"
 ---
 
 # `greg.UI.TotalRowAdded`

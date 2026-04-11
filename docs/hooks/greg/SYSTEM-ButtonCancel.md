@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ButtonCancel
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonCancel
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonCancel"
 ---
 
 # `greg.SYSTEM.ButtonCancel`

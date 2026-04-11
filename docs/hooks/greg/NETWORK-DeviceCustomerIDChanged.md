@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.DeviceCustomerIDChanged
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.UpdateDeviceCustomerID
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.UpdateDeviceCustomerID"
 ---
 
 # `greg.NETWORK.DeviceCustomerIDChanged`

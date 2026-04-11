@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GetRawLinkTransforms
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.GetRawLinkTransforms
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.GetRawLinkTransforms"
 ---
 
 # `greg.NETWORK.GetRawLinkTransforms`

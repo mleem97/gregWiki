@@ -1,6 +1,6 @@
 ---
 title: greg.UI.NewGame
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainMenu.NewGame
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainMenu.NewGame"
 ---
 
 # `greg.UI.NewGame`

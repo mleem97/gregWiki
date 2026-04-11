@@ -1,6 +1,6 @@
 ---
 title: greg.RACK.AudioVolumeChanged
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.UpdateAudioVolume
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.UpdateAudioVolume"
 ---
 
 # `greg.RACK.AudioVolumeChanged`

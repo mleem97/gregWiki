@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.ButtonFireEmployee
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: HRSystem.ButtonFireEmployee
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: HRSystem.ButtonFireEmployee"
 ---
 
 # `greg.EMPLOYEE.ButtonFireEmployee`

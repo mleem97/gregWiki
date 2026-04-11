@@ -1,6 +1,6 @@
 ---
 title: greg.UI.QuitGame
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainMenu.QuitGame
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainMenu.QuitGame"
 ---
 
 # `greg.UI.QuitGame`

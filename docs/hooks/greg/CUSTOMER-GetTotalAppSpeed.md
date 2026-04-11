@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.GetTotalAppSpeed
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.GetTotalAppSpeed
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.GetTotalAppSpeed"
 ---
 
 # `greg.CUSTOMER.GetTotalAppSpeed`

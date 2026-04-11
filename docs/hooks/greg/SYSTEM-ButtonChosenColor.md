@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ButtonChosenColor
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonChosenColor
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonChosenColor"
 ---
 
 # `greg.SYSTEM.ButtonChosenColor`

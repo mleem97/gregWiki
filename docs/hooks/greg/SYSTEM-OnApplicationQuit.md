@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.OnApplicationQuit
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.OnApplicationQuit
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.OnApplicationQuit"
 ---
 
 # `greg.SYSTEM.OnApplicationQuit`

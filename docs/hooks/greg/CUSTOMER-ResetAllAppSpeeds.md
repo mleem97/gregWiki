@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.ResetAllAppSpeeds
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.ResetAllAppSpeeds
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.ResetAllAppSpeeds"
 ---
 
 # `greg.CUSTOMER.ResetAllAppSpeeds`

@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.InteractOnClick
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: PatchPanel.InteractOnClick
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: PatchPanel.InteractOnClick"
 ---
 
 # `greg.SYSTEM.InteractOnClick`

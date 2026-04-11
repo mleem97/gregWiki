@@ -1,6 +1,6 @@
 ---
 title: greg.GAMEPLAY.ComponentInitialized
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.Awake
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.Awake"
 ---
 
 # `greg.GAMEPLAY.ComponentInitialized`

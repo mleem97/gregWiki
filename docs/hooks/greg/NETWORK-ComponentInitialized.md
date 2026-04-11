@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.ComponentInitialized
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CableLink.Start
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CableLink.Start"
 ---
 
 # `greg.NETWORK.ComponentInitialized`

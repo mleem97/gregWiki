@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.OnHoverOver
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CableLink.OnHoverOver
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CableLink.OnHoverOver"
 ---
 
 # `greg.NETWORK.OnHoverOver`

@@ -1,6 +1,6 @@
 ---
 title: greg.PLAYER.PlayerStopMovement
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: PlayerManager.PlayerStopMovement
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: PlayerManager.PlayerStopMovement"
 ---
 
 # `greg.PLAYER.PlayerStopMovement`

@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.UpAppSet
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.SetUpApp
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.SetUpApp"
 ---
 
 # `greg.CUSTOMER.UpAppSet`

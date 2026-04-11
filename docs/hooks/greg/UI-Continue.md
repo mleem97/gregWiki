@@ -1,6 +1,6 @@
 ---
 title: greg.UI.Continue
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainMenu.Continue
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainMenu.Continue"
 ---
 
 # `greg.UI.Continue`

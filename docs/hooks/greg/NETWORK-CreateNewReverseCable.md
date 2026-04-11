@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.CreateNewReverseCable
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.CreateNewReverseCable
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.CreateNewReverseCable"
 ---
 
 # `greg.NETWORK.CreateNewReverseCable`

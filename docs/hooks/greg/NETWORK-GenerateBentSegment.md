@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GenerateBentSegment
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.GenerateBentSegment
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.GenerateBentSegment"
 ---
 
 # `greg.NETWORK.GenerateBentSegment`

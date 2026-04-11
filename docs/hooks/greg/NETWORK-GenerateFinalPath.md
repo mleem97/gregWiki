@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GenerateFinalPath
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.GenerateFinalPath
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.GenerateFinalPath"
 ---
 
 # `greg.NETWORK.GenerateFinalPath`

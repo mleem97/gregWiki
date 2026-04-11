@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.PowerLightMaterialSet
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.SetPowerLightMaterial
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.SetPowerLightMaterial"
 ---
 
 # `greg.NETWORK.PowerLightMaterialSet`

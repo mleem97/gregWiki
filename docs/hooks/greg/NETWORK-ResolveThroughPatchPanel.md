@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.ResolveThroughPatchPanel
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.ResolveThroughPatchPanel
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.ResolveThroughPatchPanel"
 ---
 
 # `greg.NETWORK.ResolveThroughPatchPanel`

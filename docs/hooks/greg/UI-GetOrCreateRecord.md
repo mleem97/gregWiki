@@ -1,6 +1,6 @@
 ---
 title: greg.UI.GetOrCreateRecord
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.GetOrCreateRecord
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.GetOrCreateRecord"
 ---
 
 # `greg.UI.GetOrCreateRecord`

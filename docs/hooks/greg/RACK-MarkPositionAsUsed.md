@@ -1,6 +1,6 @@
 ---
 title: greg.RACK.MarkPositionAsUsed
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.MarkPositionAsUsed
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.MarkPositionAsUsed"
 ---
 
 # `greg.RACK.MarkPositionAsUsed`

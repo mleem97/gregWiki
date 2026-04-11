@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.OnLoadingStarted
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Technician.OnLoadingStarted
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Technician.OnLoadingStarted"
 ---
 
 # `greg.EMPLOYEE.OnLoadingStarted`

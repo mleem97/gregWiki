@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.TurnOffCommonFunctions
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.TurnOffCommonFunctions
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.TurnOffCommonFunctions"
 ---
 
 # `greg.NETWORK.TurnOffCommonFunctions`

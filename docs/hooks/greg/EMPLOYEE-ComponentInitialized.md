@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.ComponentInitialized
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Technician.Awake
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Technician.Awake"
 ---
 
 # `greg.EMPLOYEE.ComponentInitialized`

@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ButtonCancelCustomerChoice
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ButtonCancelCustomerChoice
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ButtonCancelCustomerChoice"
 ---
 
 # `greg.SYSTEM.ButtonCancelCustomerChoice`

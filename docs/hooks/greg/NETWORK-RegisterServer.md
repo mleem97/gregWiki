@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.RegisterServer
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.RegisterServer
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.RegisterServer"
 ---
 
 # `greg.NETWORK.RegisterServer`

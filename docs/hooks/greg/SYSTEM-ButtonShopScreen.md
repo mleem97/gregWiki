@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ButtonShopScreen
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonShopScreen
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonShopScreen"
 ---
 
 # `greg.SYSTEM.ButtonShopScreen`

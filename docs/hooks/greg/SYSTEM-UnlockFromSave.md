@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.UnlockFromSave
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.UnlockFromSave
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.UnlockFromSave"
 ---
 
 # `greg.SYSTEM.UnlockFromSave`

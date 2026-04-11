@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.GetCableSpinnerPrefab
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.GetCableSpinnerPrefab
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.GetCableSpinnerPrefab"
 ---
 
 # `greg.SYSTEM.GetCableSpinnerPrefab`

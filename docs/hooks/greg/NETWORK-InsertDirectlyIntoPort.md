@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.InsertDirectlyIntoPort
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: SFPModule.InsertDirectlyIntoPort
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: SFPModule.InsertDirectlyIntoPort"
 ---
 
 # `greg.NETWORK.InsertDirectlyIntoPort`

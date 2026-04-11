@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.PhysicalItemSpawned
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.SpawnPhysicalItem
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.SpawnPhysicalItem"
 ---
 
 # `greg.SYSTEM.PhysicalItemSpawned`

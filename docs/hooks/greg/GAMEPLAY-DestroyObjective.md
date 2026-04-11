@@ -1,6 +1,6 @@
 ---
 title: greg.GAMEPLAY.DestroyObjective
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.DestroyObjective
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.DestroyObjective"
 ---
 
 # `greg.GAMEPLAY.DestroyObjective`

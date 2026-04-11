@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.OnLoadingComplete
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Server.OnLoadingComplete
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.OnLoadingComplete"
 ---
 
 # `greg.SERVER.OnLoadingComplete`

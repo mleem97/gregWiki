@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ShowNetworkConfigCanvas
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ShowNetworkConfigCanvas
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ShowNetworkConfigCanvas"
 ---
 
 # `greg.SYSTEM.ShowNetworkConfigCanvas`

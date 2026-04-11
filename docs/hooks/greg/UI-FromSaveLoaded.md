@@ -1,6 +1,6 @@
 ---
 title: greg.UI.FromSaveLoaded
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.LoadFromSave
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.LoadFromSave"
 ---
 
 # `greg.UI.FromSaveLoaded`

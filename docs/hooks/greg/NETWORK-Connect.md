@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.Connect
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.Connect
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.Connect"
 ---
 
 # `greg.NETWORK.Connect`

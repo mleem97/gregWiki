@@ -1,6 +1,6 @@
 ---
 title: greg.UI.OnDestroy
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.OnDestroy
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.OnDestroy"
 ---
 
 # `greg.UI.OnDestroy`

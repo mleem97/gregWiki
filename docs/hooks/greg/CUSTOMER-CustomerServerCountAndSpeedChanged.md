@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.CustomerServerCountAndSpeedChanged
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.UpdateCustomerServerCountAndSpeed
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.UpdateCustomerServerCountAndSpeed"
 ---
 
 # `greg.CUSTOMER.CustomerServerCountAndSpeedChanged`

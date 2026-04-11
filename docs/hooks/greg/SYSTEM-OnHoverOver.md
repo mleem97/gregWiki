@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.OnHoverOver
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.OnHoverOver
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.OnHoverOver"
 ---
 
 # `greg.SYSTEM.OnHoverOver`

@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GetAllDevices
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.GetAllDevices
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.GetAllDevices"
 ---
 
 # `greg.NETWORK.GetAllDevices`

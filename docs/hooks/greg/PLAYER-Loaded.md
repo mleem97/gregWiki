@@ -1,6 +1,6 @@
 ---
 title: greg.PLAYER.Loaded
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Player.LoadPlayer
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Player.LoadPlayer"
 ---
 
 # `greg.PLAYER.Loaded`

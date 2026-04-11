@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.IsDeviceAlreadyAssigned
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: TechnicianManager.IsDeviceAlreadyAssigned
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: TechnicianManager.IsDeviceAlreadyAssigned"
 ---
 
 # `greg.EMPLOYEE.IsDeviceAlreadyAssigned`

@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.PositionHandTargetsOnDevice
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Technician.PositionHandTargetsOnDevice
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Technician.PositionHandTargetsOnDevice"
 ---
 
 # `greg.EMPLOYEE.PositionHandTargetsOnDevice`

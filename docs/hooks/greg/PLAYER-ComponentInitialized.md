@@ -1,6 +1,6 @@
 ---
 title: greg.PLAYER.ComponentInitialized
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Player.Start
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Player.Start"
 ---
 
 # `greg.PLAYER.ComponentInitialized`

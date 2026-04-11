@@ -1,6 +1,6 @@
 ---
 title: greg.PLAYER.DroppedAllItems
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Player.DropAllItems
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Player.DropAllItems"
 ---
 
 # `greg.PLAYER.DroppedAllItems`

@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.RotateTowardsGoal
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Technician.RotateTowardsGoal
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Technician.RotateTowardsGoal"
 ---
 
 # `greg.EMPLOYEE.RotateTowardsGoal`

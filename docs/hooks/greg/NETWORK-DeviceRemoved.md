@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.DeviceRemoved
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.RemoveDevice
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.RemoveDevice"
 ---
 
 # `greg.NETWORK.DeviceRemoved`

@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.GetAppIDForIP
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.GetAppIDForIP
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.GetAppIDForIP"
 ---
 
 # `greg.CUSTOMER.GetAppIDForIP`

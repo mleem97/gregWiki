@@ -1,6 +1,6 @@
 ---
 title: greg.PLAYER.DefaultActionEffect
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: PlayerManager.DefaultActionEffect
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: PlayerManager.DefaultActionEffect"
 ---
 
 # `greg.PLAYER.DefaultActionEffect`

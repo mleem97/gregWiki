@@ -1,6 +1,6 @@
 ---
 title: greg.RACK.ButtonDisablePositionsInRack
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.ButtonDisablePositionsInRack
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.ButtonDisablePositionsInRack"
 ---
 
 # `greg.RACK.ButtonDisablePositionsInRack`

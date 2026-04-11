@@ -1,6 +1,6 @@
 ---
 title: greg.GAMEPLAY.ClearObjectives
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.ClearObjectives
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.ClearObjectives"
 ---
 
 # `greg.GAMEPLAY.ClearObjectives`

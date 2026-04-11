@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.ReturnSFPDirectly
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: SFPBox.ReturnSFPDirectly
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: SFPBox.ReturnSFPDirectly"
 ---
 
 # `greg.NETWORK.ReturnSFPDirectly`

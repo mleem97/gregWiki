@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.OpenAnyCanvas
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.OpenAnyCanvas
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.OpenAnyCanvas"
 ---
 
 # `greg.SYSTEM.OpenAnyCanvas`

@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.HandleObjectives
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.HandleObjectives
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.HandleObjectives"
 ---
 
 # `greg.SYSTEM.HandleObjectives`

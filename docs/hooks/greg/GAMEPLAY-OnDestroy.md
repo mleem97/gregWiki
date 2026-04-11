@@ -1,6 +1,6 @@
 ---
 title: greg.GAMEPLAY.OnDestroy
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.OnDestroy
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.OnDestroy"
 ---
 
 # `greg.GAMEPLAY.OnDestroy`

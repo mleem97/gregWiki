@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.CloseAnyCanvas
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.CloseAnyCanvas
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.CloseAnyCanvas"
 ---
 
 # `greg.SYSTEM.CloseAnyCanvas`

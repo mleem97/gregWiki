@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ButtonReturnMainScreen
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonReturnMainScreen
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonReturnMainScreen"
 ---
 
 # `greg.SYSTEM.ButtonReturnMainScreen`

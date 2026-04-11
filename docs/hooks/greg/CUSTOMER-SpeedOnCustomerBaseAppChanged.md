@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.SpeedOnCustomerBaseAppChanged
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.UpdateSpeedOnCustomerBaseApp
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.UpdateSpeedOnCustomerBaseApp"
 ---
 
 # `greg.CUSTOMER.SpeedOnCustomerBaseAppChanged`

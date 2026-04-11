@@ -1,6 +1,6 @@
 ---
 title: greg.PLAYER.GainIOPSEffect
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: PlayerManager.GainIOPSEffect
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: PlayerManager.GainIOPSEffect"
 ---
 
 # `greg.PLAYER.GainIOPSEffect`

@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ReturnSwitchNameFromType
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ReturnSwitchNameFromType
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ReturnSwitchNameFromType"
 ---
 
 # `greg.SYSTEM.ReturnSwitchNameFromType`

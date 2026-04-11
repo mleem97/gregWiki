@@ -1,6 +1,6 @@
 ---
 title: greg.GAMEPLAY.StartObjective
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.StartObjective
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.StartObjective"
 ---
 
 # `greg.GAMEPLAY.StartObjective`

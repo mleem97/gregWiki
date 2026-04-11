@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.IsSubnetValid
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.IsSubnetValid
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.IsSubnetValid"
 ---
 
 # `greg.SYSTEM.IsSubnetValid`

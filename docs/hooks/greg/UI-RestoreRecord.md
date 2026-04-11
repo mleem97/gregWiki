@@ -1,6 +1,6 @@
 ---
 title: greg.UI.RestoreRecord
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.RestoreRecord
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.RestoreRecord"
 ---
 
 # `greg.UI.RestoreRecord`

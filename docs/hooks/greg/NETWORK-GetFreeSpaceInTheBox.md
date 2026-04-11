@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GetFreeSpaceInTheBox
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: SFPBox.GetFreeSpaceInTheBox
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: SFPBox.GetFreeSpaceInTheBox"
 ---
 
 # `greg.NETWORK.GetFreeSpaceInTheBox`

@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.InsertSFPBackIntoBox
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: SFPBox.InsertSFPBackIntoBox
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: SFPBox.InsertSFPBackIntoBox"
 ---
 
 # `greg.NETWORK.InsertSFPBackIntoBox`

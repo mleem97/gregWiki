@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ResetTrolleyPosition
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ResetTrolleyPosition
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ResetTrolleyPosition"
 ---
 
 # `greg.SYSTEM.ResetTrolleyPosition`

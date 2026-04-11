@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ButtonNetworkMap
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonNetworkMap
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonNetworkMap"
 ---
 
 # `greg.SYSTEM.ButtonNetworkMap`

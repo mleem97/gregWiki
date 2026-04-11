@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.LastPositionRemoved
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.RemoveLastPosition
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.RemoveLastPosition"
 ---
 
 # `greg.NETWORK.LastPositionRemoved`

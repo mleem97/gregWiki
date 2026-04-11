@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.SFPFromBoxRemoved
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: SFPBox.RemoveSFPFromBox
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: SFPBox.RemoveSFPFromBox"
 ---
 
 # `greg.NETWORK.SFPFromBoxRemoved`

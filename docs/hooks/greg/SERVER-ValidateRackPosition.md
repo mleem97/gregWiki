@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.ValidateRackPosition
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Server.ValidateRackPosition
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.ValidateRackPosition"
 ---
 
 # `greg.SERVER.ValidateRackPosition`

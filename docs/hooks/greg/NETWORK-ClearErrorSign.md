@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.ClearErrorSign
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.ClearErrorSign
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.ClearErrorSign"
 ---
 
 # `greg.NETWORK.ClearErrorSign`

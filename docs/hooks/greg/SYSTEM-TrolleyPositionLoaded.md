@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.TrolleyPositionLoaded
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.LoadTrolleyPosition
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.LoadTrolleyPosition"
 ---
 
 # `greg.SYSTEM.TrolleyPositionLoaded`

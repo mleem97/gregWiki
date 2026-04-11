@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ClearTrackingWithoutDestroying
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ClearTrackingWithoutDestroying
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ClearTrackingWithoutDestroying"
 ---
 
 # `greg.SYSTEM.ClearTrackingWithoutDestroying`

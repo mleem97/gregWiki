@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ShowCustomerCardsCanvas
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ShowCustomerCardsCanvas
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ShowCustomerCardsCanvas"
 ---
 
 # `greg.SYSTEM.ShowCustomerCardsCanvas`

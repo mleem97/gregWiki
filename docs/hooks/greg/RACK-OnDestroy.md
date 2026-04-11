@@ -1,6 +1,6 @@
 ---
 title: greg.RACK.OnDestroy
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.OnDestroy
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.OnDestroy"
 ---
 
 # `greg.RACK.OnDestroy`

@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.ButtonClickChangeIP
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Server.ButtonClickChangeIP
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.ButtonClickChangeIP"
 ---
 
 # `greg.SERVER.ButtonClickChangeIP`

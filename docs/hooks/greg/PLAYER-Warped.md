@@ -1,6 +1,6 @@
 ---
 title: greg.PLAYER.Warped
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Player.WarpPlayer
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Player.WarpPlayer"
 ---
 
 # `greg.PLAYER.Warped`

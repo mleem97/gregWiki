@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.Hired
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: TechnicianManager.AddTechnician
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: TechnicianManager.AddTechnician"
 ---
 
 # `greg.EMPLOYEE.Hired`

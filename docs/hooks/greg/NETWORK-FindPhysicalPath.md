@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.FindPhysicalPath
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.FindPhysicalPath
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.FindPhysicalPath"
 ---
 
 # `greg.NETWORK.FindPhysicalPath`

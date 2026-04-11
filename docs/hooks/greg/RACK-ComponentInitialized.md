@@ -1,6 +1,6 @@
 ---
 title: greg.RACK.ComponentInitialized
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.Awake
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.Awake"
 ---
 
 # `greg.RACK.ComponentInitialized`

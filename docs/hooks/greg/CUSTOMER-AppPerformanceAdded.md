@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.AppPerformanceAdded
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.AddAppPerformance
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.AddAppPerformance"
 ---
 
 # `greg.CUSTOMER.AppPerformanceAdded`

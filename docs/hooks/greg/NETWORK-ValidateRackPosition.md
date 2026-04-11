@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.ValidateRackPosition
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.ValidateRackPosition
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.ValidateRackPosition"
 ---
 
 # `greg.NETWORK.ValidateRackPosition`

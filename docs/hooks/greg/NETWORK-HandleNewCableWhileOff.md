@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.HandleNewCableWhileOff
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.HandleNewCableWhileOff
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.HandleNewCableWhileOff"
 ---
 
 # `greg.NETWORK.HandleNewCableWhileOff`

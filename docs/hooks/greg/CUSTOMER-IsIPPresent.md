@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.IsIPPresent
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.IsIPPresent
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.IsIPPresent"
 ---
 
 # `greg.CUSTOMER.IsIPPresent`

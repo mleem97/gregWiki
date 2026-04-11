@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.CartUIItemRemoved
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.RemoveCartUIItem
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.RemoveCartUIItem"
 ---
 
 # `greg.SYSTEM.CartUIItemRemoved`

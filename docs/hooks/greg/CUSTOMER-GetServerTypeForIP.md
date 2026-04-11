@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.GetServerTypeForIP
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.GetServerTypeForIP
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.GetServerTypeForIP"
 ---
 
 # `greg.CUSTOMER.GetServerTypeForIP`

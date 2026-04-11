@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ButtonHireScreen
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonHireScreen
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonHireScreen"
 ---
 
 # `greg.SYSTEM.ButtonHireScreen`

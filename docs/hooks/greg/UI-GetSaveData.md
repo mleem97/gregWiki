@@ -1,6 +1,6 @@
 ---
 title: greg.UI.GetSaveData
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.GetSaveData
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.GetSaveData"
 ---
 
 # `greg.UI.GetSaveData`

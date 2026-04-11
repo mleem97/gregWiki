@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.SFPsFromSaveLoaded
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: SFPBox.LoadSFPsFromSave
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: SFPBox.LoadSFPsFromSave"
 ---
 
 # `greg.NETWORK.SFPsFromSaveLoaded`

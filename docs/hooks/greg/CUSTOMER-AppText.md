@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.AppText
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.AppText
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.AppText"
 ---
 
 # `greg.CUSTOMER.AppText`

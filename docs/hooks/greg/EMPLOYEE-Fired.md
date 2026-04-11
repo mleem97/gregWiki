@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.Fired
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: TechnicianManager.FireTechnician
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: TechnicianManager.FireTechnician"
 ---
 
 # `greg.EMPLOYEE.Fired`

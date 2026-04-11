@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.UsedSubnetRemoved
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.RemoveUsedSubnet
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.RemoveUsedSubnet"
 ---
 
 # `greg.SYSTEM.UsedSubnetRemoved`

@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GetServer
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.GetServer
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.GetServer"
 ---
 
 # `greg.NETWORK.GetServer`

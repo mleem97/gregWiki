@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.DataLoaded
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.LoadData
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.LoadData"
 ---
 
 # `greg.CUSTOMER.DataLoaded`

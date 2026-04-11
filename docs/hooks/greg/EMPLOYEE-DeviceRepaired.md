@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.DeviceRepaired
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Technician.RepairDevice
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Technician.RepairDevice"
 ---
 
 # `greg.EMPLOYEE.DeviceRepaired`

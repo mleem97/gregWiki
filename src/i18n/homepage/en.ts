@@ -3,12 +3,10 @@ import {homepageShellEn} from './sharedLinks';
 
 export const en: HomepageContent = {
   ...homepageShellEn,
-  heroLine1: 'Just make it work.',
-  heroLine2:
-    'gregFramework helps you install, manage, and actually play your mods without the usual headache.',
-  heroSub1:
-    'Modding can be messy. We built this framework to clean things up—providing a stable base for the game and a simple way to keep your mods organized.',
-  heroSub2: 'No magic, just solid tools.',
+  heroLine1: 'Modding for Data Center.',
+  heroLine2: 'Just make it work.',
+  heroSub1: 'Install, manage, and play your mods without the usual headache.',
+  heroSub2: 'No magic. Just tools that work.',
   ctaStart: 'For players',
   ctaMods: "See what's in the Catalog",
   ctaModManager: 'Download Mod Manager',

@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GetCablePositions
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.GetCablePositions
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.GetCablePositions"
 ---
 
 # `greg.NETWORK.GetCablePositions`

@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ReturnSubnet
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ReturnSubnet
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ReturnSubnet"
 ---
 
 # `greg.SYSTEM.ReturnSubnet`

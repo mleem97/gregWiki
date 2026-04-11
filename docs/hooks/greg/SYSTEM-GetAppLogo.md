@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.GetAppLogo
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.GetAppLogo
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.GetAppLogo"
 ---
 
 # `greg.SYSTEM.GetAppLogo`

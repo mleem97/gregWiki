@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ReturnServerNameFromType
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ReturnServerNameFromType
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.ReturnServerNameFromType"
 ---
 
 # `greg.SYSTEM.ReturnServerNameFromType`

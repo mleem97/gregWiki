@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.AutoSaveEnabledSet
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.SetAutoSaveEnabled
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.SetAutoSaveEnabled"
 ---
 
 # `greg.SYSTEM.AutoSaveEnabledSet`

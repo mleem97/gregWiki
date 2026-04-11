@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ComponentInitialized
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.Awake
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.Awake"
 ---
 
 # `greg.SYSTEM.ComponentInitialized`

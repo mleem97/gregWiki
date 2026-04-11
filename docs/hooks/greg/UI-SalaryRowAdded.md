@@ -1,6 +1,6 @@
 ---
 title: greg.UI.SalaryRowAdded
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.AddSalaryRow
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.AddSalaryRow"
 ---
 
 # `greg.UI.SalaryRowAdded`

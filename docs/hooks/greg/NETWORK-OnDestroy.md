@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.OnDestroy
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.OnDestroy
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.OnDestroy"
 ---
 
 # `greg.NETWORK.OnDestroy`

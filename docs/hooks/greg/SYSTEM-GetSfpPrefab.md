@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.GetSfpPrefab
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.GetSfpPrefab
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.GetSfpPrefab"
 ---
 
 # `greg.SYSTEM.GetSfpPrefab`

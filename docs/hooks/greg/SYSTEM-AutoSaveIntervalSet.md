@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.AutoSaveIntervalSet
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.SetAutoSaveInterval
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.SetAutoSaveInterval"
 ---
 
 # `greg.SYSTEM.AutoSaveIntervalSet`

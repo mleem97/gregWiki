@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.FreeUpSpawnPoint
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.FreeUpSpawnPoint
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.FreeUpSpawnPoint"
 ---
 
 # `greg.SYSTEM.FreeUpSpawnPoint`

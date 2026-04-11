@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.GetAllNetworkSwitches
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.GetAllNetworkSwitches
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.GetAllNetworkSwitches"
 ---
 
 # `greg.NETWORK.GetAllNetworkSwitches`

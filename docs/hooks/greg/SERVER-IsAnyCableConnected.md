@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.IsAnyCableConnected
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Server.IsAnyCableConnected
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.IsAnyCableConnected"
 ---
 
 # `greg.SERVER.IsAnyCableConnected`

@@ -1,6 +1,6 @@
 ---
 title: greg.EMPLOYEE.GetCorrectDevicePrefab
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Technician.GetCorrectDevicePrefab
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Technician.GetCorrectDevicePrefab"
 ---
 
 # `greg.EMPLOYEE.GetCorrectDevicePrefab`

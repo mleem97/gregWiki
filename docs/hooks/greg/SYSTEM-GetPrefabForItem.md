@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.GetPrefabForItem
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.GetPrefabForItem
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.GetPrefabForItem"
 ---
 
 # `greg.SYSTEM.GetPrefabForItem`

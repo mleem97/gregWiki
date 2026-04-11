@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.CreateTubeMesh
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.CreateTubeMesh
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CablePositions.CreateTubeMesh"
 ---
 
 # `greg.NETWORK.CreateTubeMesh`

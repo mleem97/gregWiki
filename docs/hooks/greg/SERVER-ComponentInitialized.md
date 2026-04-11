@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.ComponentInitialized
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Server.Awake
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.Awake"
 ---
 
 # `greg.SERVER.ComponentInitialized`

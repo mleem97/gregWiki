@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.CreateRopeAttachPoint
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CableLink.CreateRopeAttachPoint
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CableLink.CreateRopeAttachPoint"
 ---
 
 # `greg.NETWORK.CreateRopeAttachPoint`

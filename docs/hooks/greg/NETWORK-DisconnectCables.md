@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.DisconnectCables
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.DisconnectCables
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.DisconnectCables"
 ---
 
 # `greg.NETWORK.DisconnectCables`

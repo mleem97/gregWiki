@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.RegisterCableConnection
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.RegisterCableConnection
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.RegisterCableConnection"
 ---
 
 # `greg.NETWORK.RegisterCableConnection`

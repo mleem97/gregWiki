@@ -1,6 +1,6 @@
 ---
 title: greg.RACK.IsPositionAvailable
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.IsPositionAvailable
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Rack.IsPositionAvailable"
 ---
 
 # `greg.RACK.IsPositionAvailable`

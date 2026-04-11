@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.SwitchConnectionAdded
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.AddSwitchConnection
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.AddSwitchConnection"
 ---
 
 # `greg.NETWORK.SwitchConnectionAdded`

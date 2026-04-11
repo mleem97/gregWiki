@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.ClearWarningSign
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.ClearWarningSign
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.ClearWarningSign"
 ---
 
 # `greg.NETWORK.ClearWarningSign`

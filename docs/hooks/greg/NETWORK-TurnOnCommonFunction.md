@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.TurnOnCommonFunction
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.TurnOnCommonFunction
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.TurnOnCommonFunction"
 ---
 
 # `greg.NETWORK.TurnOnCommonFunction`

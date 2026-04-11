@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.GetCustomerTotalRequirement
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.GetCustomerTotalRequirement
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.GetCustomerTotalRequirement"
 ---
 
 # `greg.SYSTEM.GetCustomerTotalRequirement`

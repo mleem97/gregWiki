@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.PowerButton
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.PowerButton
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.PowerButton"
 ---
 
 # `greg.NETWORK.PowerButton`

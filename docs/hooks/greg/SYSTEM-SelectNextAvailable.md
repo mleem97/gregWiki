@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.SelectNextAvailable
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.SelectNextAvailable
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.SelectNextAvailable"
 ---
 
 # `greg.SYSTEM.SelectNextAvailable`

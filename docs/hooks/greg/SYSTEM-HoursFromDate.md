@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.HoursFromDate
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: TimeController.HoursFromDate
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: TimeController.HoursFromDate"
 ---
 
 # `greg.SYSTEM.HoursFromDate`

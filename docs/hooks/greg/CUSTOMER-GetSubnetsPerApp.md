@@ -1,6 +1,6 @@
 ---
 title: greg.CUSTOMER.GetSubnetsPerApp
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.GetSubnetsPerApp
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: CustomerBase.GetSubnetsPerApp"
 ---
 
 # `greg.CUSTOMER.GetSubnetsPerApp`

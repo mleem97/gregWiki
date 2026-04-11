@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.Disconnect
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.Disconnect
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.Disconnect"
 ---
 
 # `greg.NETWORK.Disconnect`

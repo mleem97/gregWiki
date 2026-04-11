@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.RegisterCustomerBase
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.RegisterCustomerBase
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.RegisterCustomerBase"
 ---
 
 # `greg.NETWORK.RegisterCustomerBase`

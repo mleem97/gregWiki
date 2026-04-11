@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.PowerLightMaterialSet
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Server.SetPowerLightMaterial
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.SetPowerLightMaterial"
 ---
 
 # `greg.SERVER.PowerLightMaterialSet`

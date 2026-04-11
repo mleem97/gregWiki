@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.ItIsBroken
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.ItIsBroken
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkSwitch.ItIsBroken"
 ---
 
 # `greg.NETWORK.ItIsBroken`

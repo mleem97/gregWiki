@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.RestartAutoSave
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.RestartAutoSave
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.RestartAutoSave"
 ---
 
 # `greg.SYSTEM.RestartAutoSave`

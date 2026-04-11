@@ -1,6 +1,6 @@
 ---
 title: greg.UI.RegisterSalary
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.RegisterSalary
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.RegisterSalary"
 ---
 
 # `greg.UI.RegisterSalary`

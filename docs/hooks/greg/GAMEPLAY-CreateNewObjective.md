@@ -1,6 +1,6 @@
 ---
 title: greg.GAMEPLAY.CreateNewObjective
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.CreateNewObjective
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Objectives.CreateNewObjective"
 ---
 
 # `greg.GAMEPLAY.CreateNewObjective`

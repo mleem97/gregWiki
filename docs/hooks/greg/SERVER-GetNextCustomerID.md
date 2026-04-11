@@ -1,6 +1,6 @@
 ---
 title: greg.SERVER.GetNextCustomerID
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: Server.GetNextCustomerID
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: Server.GetNextCustomerID"
 ---
 
 # `greg.SERVER.GetNextCustomerID`

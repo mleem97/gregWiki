@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.CloseNetworkConfigCanvas
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.CloseNetworkConfigCanvas
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: MainGameManager.CloseNetworkConfigCanvas"
 ---
 
 # `greg.SYSTEM.CloseNetworkConfigCanvas`

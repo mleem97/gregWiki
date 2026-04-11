@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.ButtonAssetManagementScreen
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonAssetManagementScreen
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.ButtonAssetManagementScreen"
 ---
 
 # `greg.SYSTEM.ButtonAssetManagementScreen`

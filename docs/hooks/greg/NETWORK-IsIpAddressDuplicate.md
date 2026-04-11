@@ -1,6 +1,6 @@
 ---
 title: greg.NETWORK.IsIpAddressDuplicate
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.IsIpAddressDuplicate
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: NetworkMap.IsIpAddressDuplicate"
 ---
 
 # `greg.NETWORK.IsIpAddressDuplicate`

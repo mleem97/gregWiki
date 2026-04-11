@@ -1,6 +1,6 @@
 ---
 title: greg.UI.ClearRows
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.ClearRows
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: BalanceSheet.ClearRows"
 ---
 
 # `greg.UI.ClearRows`

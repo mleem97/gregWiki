@@ -1,6 +1,6 @@
 ---
 title: greg.SYSTEM.CartTotalChanged
-description: gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.UpdateCartTotal
+description: "gregCore Hook — Auto-generated from Il2Cpp unpack: ComputerShop.UpdateCartTotal"
 ---
 
 # `greg.SYSTEM.CartTotalChanged`
