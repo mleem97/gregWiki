@@ -1,7 +1,7 @@
 ---
-title: Phase 6: Deep Hardware & UI
-sidebar_label: Phase 6 (Planned)
-description: Documentation for planned Hardware and UI bridges.
+title: "Phase 6: Deep Hardware & UI"
+sidebar_label: "Phase 6 (Planned)"
+description: "Documentation for planned Hardware and UI bridges."
 ---
 
 :::caution WIP

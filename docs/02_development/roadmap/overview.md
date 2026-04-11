@@ -1,7 +1,7 @@
 ---
-title: <span class="material-symbols-outlined">assignment</span> Roadmap to 100% Coverage
-sidebar_label: Overview
-description: Strategic plan for full coverage of all game systems.
+title: "assignment Roadmap to 100% Coverage"
+sidebar_label: "Overview"
+description: "Strategic plan for full coverage of all game systems."
 ---
 
 # <span class="material-symbols-outlined">assignment</span> Roadmap to 100% Coverage

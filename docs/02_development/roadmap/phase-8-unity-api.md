@@ -1,7 +1,7 @@
 ---
-title: Phase 8: Unity Scripting API Integration
-sidebar_label: Phase 8 (Ongoing)
-description: Documentation for alignment and integration of the official Unity Scripting API.
+title: "Phase 8: Unity Scripting API Integration"
+sidebar_label: "Phase 8 (Ongoing)"
+description: "Documentation for alignment and integration of the official Unity Scripting API."
 ---
 
 :::caution WIP
