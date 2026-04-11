@@ -10,11 +10,15 @@ Dieses Dokument zeigt den aktuellen Fortschritt des `gregCore` SDKs im Vergleich
 
 | Phase | Bereich | Status | Ziel |
 | :--- | :--- | :--- | :--- |
-| **Phase 1-4** | Kern-Systeme | ✅ READY | EventBus, Registries, JADE Style, Engine-Bridges. |
+| **Phase 0** | Baseline | ✅ READY | Standalone Setup, Namespace-Migration. |
+| **Phase 1** | Foundation | ✅ READY | Registrierungssystem, EventBus, Basis-Hardware. |
+| **Phase 2** | Runtime | ✅ READY | SDK Services, Kunden/Mitarbeiter-Registries. |
+| **Phase 3** | Visual Layer | ✅ READY | Modell-Overrides, JADE Style HUD. |
+| **Phase 4** | Quality | ✅ READY | Unit-Tests, 30+ Unity-Signale, Game-Bridges. |
 | **Phase 5** | Economy & Data | 🚧 WIP | SaveSystem, Finanzen, Lokalisierung. |
-| **Phase 6** | Deep Hardware & UI | 📅 GEPLANT | SFP-Details, Patch-Panels, Audio, Erweiterte UI. |
+| **Phase 6** | Deep Hardware | 📅 GEPLANT | Port-Details, Patch-Panels, Audio, Tooltips. |
 | **Phase 7** | Simulation | 📅 GEPLANT | HR-System, Steam-Integration, Objectives. |
-| **Phase 8** | Unity API Integration | 🔄 LAUFEND | Abgleich mit Unity Scripting API, Bridge-Implementierung für Standard-Module. |
+| **Phase 8** | Unity API | 🔄 LAUFEND | Abgleich mit Unity Scripting API, Standard-Module. |
 
 :::info 🔄 Laufende Updates
 Diese Roadmap ist ein **lebendes Dokument**. Da *Data Center* durch die Spieleentwickler kontinuierlich mit neuen Features und Systemen erweitert wird, passen wir diese Liste laufend an. Unser Ziel ist es, mit der Entwicklung des Spiels Schritt zu halten und neue Funktionen zeitnah im `gregCore` SDK zur Verfügung zu stellen.
