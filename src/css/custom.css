@@ -69,23 +69,18 @@
 :root,
 [data-theme='dark'] {
   --layout-max-width: 80rem;
-  --ifm-color-primary: #61f4d8;
-  --ifm-color-primary-dark: #4fe5ca;
-  --ifm-color-primary-darker: #08c1a6;
-  --ifm-color-primary-light: #7ff7e4;
-  --ifm-color-primary-lighter: #bafdf1;
-  --ifm-background-color: var(--color-background);
-  --ifm-color-content: var(--color-on-surface);
-  --ifm-color-content-secondary: var(--color-on-surface-variant);
-  --ifm-font-family-base: var(--font-sans);
-  --ifm-heading-font-family: var(--font-headline);
-  --ifm-font-family-monospace: var(--font-mono);
-  --ifm-navbar-height: 72px;
-  --ifm-navbar-background-color: rgba(0, 17, 16, 0.8);
-  --ifm-card-background-color: var(--color-surface-container);
-  --ifm-code-font-size: 0.9rem;
-  --ifm-pre-background: var(--color-surface-container-highest);
-  --ifm-global-shadow-lw: 0 0 32px -4px rgba(0, 191, 165, 0.1);
+  --ifm-color-primary: #B8EDB8;        /* JADE Green */
+  --ifm-color-primary-dark: #a0d9a0;
+  --ifm-color-primary-darker: #8bc28b;
+  --ifm-color-primary-light: #cfffcf;
+  --ifm-color-primary-lighter: #e6ffe6;
+  --ifm-background-color: #0b1220;    /* Dark Deep Blue */
+  --ifm-color-content: #e6edf3;
+  --ifm-navbar-background-color: #0d1626;
+  --ifm-sidebar-background: #0d1626;
+  --ifm-font-family-base: 'Inter', sans-serif;
+  --ifm-heading-font-family: 'Space Grotesk', sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', monospace;
 }
 
 html.host-datacentermods,

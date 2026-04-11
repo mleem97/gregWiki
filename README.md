@@ -1,61 +1,51 @@
-# gregWiki — gregFramework documentation
+# 🟢 **GREG Framework** — gregWiki
 
-This repository contains the **Docusaurus site** (`docusaurus.config.js`, `src/`, `sidebars.js`) and all **Markdown/MDX content** under [`docs/`](./docs/). Published docs use the route base path **`/wiki`**.
+> Part of the [GREG Universe](https://gregframework.eu) — The official documentation hub and knowledge base for *Data Center*.
 
-## Local development
+---
 
-```bash
-npm install
-npm run start
-```
+## 📖 **Overview**
+This repository contains the source content for the **Greg Framework Wiki**. It is built using **Docusaurus** and serves as the primary resource for modders, including API references, tutorials, and style guides.
 
-Production build:
+- **Content:** Markdown (Docusaurus)
+- **Layer:** Documentation / Community
+- **Version:** `v1.0.0-pre.5` (Content Status)
 
-```bash
-npm run build
-```
+---
 
-Content is edited directly under [`docs/`](./docs/). **Canonical architecture & doc rules:** [`docs/meta/system-architecture-principles.md`](./docs/meta/system-architecture-principles.md) (ModManager → Framework → Plugins → Mods). The old GitHub Wiki bulk-import scripts (`wiki:sync`, `wiki:normalize-i18n`) are no-ops; see [`docs/getting-started/documentation-layout.md`](./docs/getting-started/documentation-layout.md).
+## 🚀 **Quick Start**
 
-## Deployment (Coolify / CI)
+### Local Development
+1. Clone this repository.
+2. Install dependencies: `npm install`.
+3. Run the dev server: `npm run start`.
 
-- **Default branch:** `main` — use this for new work and PRs.
-- **`master`:** kept in sync with `main` for hosts that still clone `master` (e.g. older Coolify defaults). Prefer setting the deployment **branch to `main`** in Coolify → Application → **Git** → Branch.
+### Contribution
+- All documentation files live in the `docs/` folder.
+- Ensure all code snippets use the **gregSdk** namespace.
+- HUD tutorials must strictly follow the **JADE Style Guide**.
 
-### Coolify (Dockerfile) — avoid `/app/package.json` missing
+---
 
-The image expects **`package.json` at the image root `/app`**. That only happens if the **Docker build context** is this repo (gregWiki), not a parent monorepo folder.
+## 🛠️ **Wiki Structure**
 
-| Setting                             | Value                                                                                                                                                                              |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Dockerfile location**             | `Dockerfile` (or `gregWiki/Dockerfile` if the Git repo is the parent workspace)                                                                                                    |
-| **Base directory / Root directory** | **`gregWiki`** when the cloned repo contains `gregCore/`, `gregWiki/`, … next to each other. If Coolify only clones **`mleem97/gregWiki`**, base directory is **`.`** (repo root). |
-| **Do not**                          | Set build context to the parent `gregFramework` folder unless Dockerfile uses `COPY gregWiki/…` (this Dockerfile does not).                                                        |
-| **Volumes**                         | Do **not** bind-mount an empty host path over `/app` — that hides `package.json` from the image.                                                                                   |
+- **`01_getting-started/`**: Architecture and Quickstart.
+- **`02_development/`**: Deep dives into the SDK, Hooks, and Modding Guides.
+- **`03_design-system/`**: Visual standards (JADE).
+- **`content-creation/`**: Guides for custom hardware and entities.
 
-Symptom: `docker-entrypoint: ERROR: /app/package.json not found` → wrong build context or a bad volume on `/app`.
+---
 
-## Docker
+## 🌍 **Repositories & Remotes**
+This project is mirrored for high availability.
 
-Build context **must** be this repository root (the folder that contains `package.json`):
+- **GitHub (Primary):** [mleem97/gregWiki](https://github.com/mleem97/gregWiki)
+- **Gitea (Mirror):** [git.datacentermods.com/teamGreg/gregWiki](https://git.datacentermods.com/teamGreg/gregWiki)
 
-```bash
-cd path/to/gregWiki   # directory that contains package.json
-docker compose up --build
-# or
-docker build -t gregwiki-docs .
-docker run --rm -p 3000:3000 gregwiki-docs
-```
+---
 
-If the wiki lives inside a **gregFramework** workspace, run Compose from the parent folder:
+## 🤝 **Contributing**
+Please format your Markdown according to Docusaurus standards. Any "TODO" in the documentation should be clearly marked with a `:::caution WIP` block at the top of the page.
 
-```bash
-cd path/to/gregFramework
-docker compose -f docker-compose.gregwiki.yml up --build
-```
-
-(`docker-compose.gregwiki.yml` sets `build.context: ./gregWiki` and mounts `./gregWiki` to `/app` for dev.)
-
-## Related repositories
-
-The [`gregFramework`](https://github.com/mleem97/gregFramework) workspace groups **gregCore**, **gregMods**, **gregExtensions**, **gregWiki**, and related tools. Source-of-truth code paths for hooks and builds live in those repos, not only in this documentation tree.
+---
+*© 2026 teamGreg | Developed by [mleem97](https://github.com/mleem97)*
