@@ -52,8 +52,8 @@ gregCore/
 
 Extension ownership:
 
-- `framework/Sdk/`: public API surfaces (`gregFramework.Core` namespace)
-- `framework/ModLoader/`: runtime loading and integration plumbing
+- `gregSdk/`: public API surfaces (`gregFramework.Core` namespace)
+- `gregModLoader/`: runtime loading and integration plumbing
 - `framework/harmony/`: game interception via Harmony patches
 - `plugins/`: feature modules using SDK APIs
 
@@ -63,7 +63,7 @@ Extension ownership:
 
 Target file:
 
-- `framework/Sdk/GregNativeEventHooks.cs`
+- `gregSdk/GregNativeEventHooks.cs`
 
 ### Step-by-step
 
@@ -74,7 +74,7 @@ Target file:
 ### Before (existing)
 
 ```csharp
-namespace gregFramework.Core;
+namespace gregSdk;
 
 public static class GregNativeEventHooks
 {
@@ -85,7 +85,7 @@ public static class GregNativeEventHooks
 ### After (with parser extension)
 
 ```csharp
-namespace gregFramework.Core;
+namespace gregSdk;
 
 public static class GregNativeEventHooks
 {
@@ -103,7 +103,7 @@ public static class GregNativeEventHooks
 ### Subscription test
 
 ```csharp
-using gregFramework.Core;
+using gregSdk;
 
 GregEventDispatcher.On(
     GregNativeEventHooks.CableColorChanged,
@@ -121,14 +121,14 @@ GregEventDispatcher.On(
 
 Target file:
 
-- `framework/Sdk/GregPayload.cs`
+- `gregSdk/GregPayload.cs`
 
 Goal: add an explicit parser helper for color payload fields.
 
 ### Before
 
 ```csharp
-namespace gregFramework.Core;
+namespace gregSdk;
 
 public static class GregPayload
 {
@@ -145,7 +145,7 @@ public static class GregPayload
 ```csharp
 using UnityEngine;
 
-namespace gregFramework.Core;
+namespace gregSdk;
 
 public static class GregPayload
 {
@@ -210,7 +210,7 @@ Use `Templates/greg.PluginTemplate/` as baseline.
 
 ```csharp
 using MelonLoader;
-using gregFramework.Core;
+using gregSdk;
 
 [assembly: MelonInfo(typeof(greg.Plugin.CableInspector.Main), "CableInspector", "00.01.0001", "teamGreg")]
 [assembly: MelonGame("Waseku", "Data Center")]
@@ -245,7 +245,7 @@ Target file:
 
 ```csharp
 using HarmonyLib;
-using gregFramework.Core;
+using gregSdk;
 
 namespace gregFramework.Harmony;
 
@@ -383,7 +383,7 @@ Example:
 - Signature:
   - `public interface IModExtension { void Initialize(); void Shutdown(); }`
 - Target location:
-  - `framework/ModLoader/IModExtension.cs`
+  - `gregModLoader/IModExtension.cs`
 - Impact:
   - Plugin load lifecycle and dependency registration
 - Pseudo code:

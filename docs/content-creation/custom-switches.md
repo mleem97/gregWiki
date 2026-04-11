@@ -63,7 +63,7 @@ Use documented network hooks for runtime behavior:
 Example event observation:
 
 ```csharp
-using gregFramework.Core;
+using gregSdk;
 
 namespace CustomContentPack.Runtime;
 

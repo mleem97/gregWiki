@@ -1,4 +1,4 @@
-﻿---
+---
 id: greg-hooks-catalog
 title: greg hooks catalog
 slug: /reference/greg-hooks-catalog
@@ -14,7 +14,7 @@ This page is the runtime source for hook/event names used by `GregEventDispatche
 If a legacy `FMF.*` naming page conflicts with this catalog, prefer this catalog and `hooks-and-events`.
 :::
 
-This page is **generated** from `gregCore/framework/Sdk/GregNativeEventHooks.cs` and `EventIds` in `EventDispatcher.cs`.
+This page is **generated** from `gregCore/gregSdk/GregNativeEventHooks.cs` and `EventIds` in `EventDispatcher.cs`.
 
 **Generated:** 2026-04-10 02:43:33 UTC
 
@@ -116,7 +116,7 @@ Unknown event ids resolve to ``greg.SYSTEM.UnmappedNativeEvent`` via ``GregNativ
 ## See also
 
 - [greg hook naming](/wiki/reference/fmf-hook-naming)
-- [EventIds source](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/ModLoader/EventDispatcher.cs)
-- [GregNativeEventHooks source](https://github.com/mleem97/gregFramework/blob/main/gregCore/framework/Sdk/GregNativeEventHooks.cs)
+- [EventIds source](https://github.com/mleem97/gregFramework/blob/main/gregCore/gregModLoader/EventDispatcher.cs)
+- [GregNativeEventHooks source](https://github.com/mleem97/gregFramework/blob/main/gregCore/gregSdk/GregNativeEventHooks.cs)
 - [Greg hooks & event runtime](/wiki/development/concepts/hooks-and-events)
 

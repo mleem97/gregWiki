@@ -150,7 +150,7 @@ Add `gregCore.dll` reference to `.csproj`:
 ```csharp
 using MelonLoader;
 using UnityEngine;
-using gregFramework.Core;
+using gregSdk;
 
 [assembly: MelonInfo(typeof(MyFirstDataCenterMod.Main), "MyFirstDataCenterMod", "1.0.0", "teamGreg")]
 [assembly: MelonGame("Waseku", "Data Center")]
@@ -350,7 +350,7 @@ Template:
 - `public interface INewExtensionPoint { void Register(); }`
 
 ## Expected location
-- `framework/ModLoader/INewExtensionPoint.cs`
+- `gregModLoader/INewExtensionPoint.cs`
 
 ## Compatibility impact
 - Affects plugin registration and runtime initialization order.

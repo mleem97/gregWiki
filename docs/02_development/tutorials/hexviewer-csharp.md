@@ -98,7 +98,7 @@ Create `csharp/HexViewerMod.cs`:
 using System;
 using MelonLoader;
 using GregFramework.Hooks;
-using gregFramework.Core;
+using gregSdk;
 
 namespace GregMod.HexViewer;
 

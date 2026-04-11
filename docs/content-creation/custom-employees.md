@@ -40,7 +40,7 @@ Create `Content/Employees/FieldNetworkSpecialist.json`:
 ## Runtime policy sample
 
 ```csharp
-using gregFramework.Core;
+using gregSdk;
 
 namespace CustomContentPack.Runtime;
 

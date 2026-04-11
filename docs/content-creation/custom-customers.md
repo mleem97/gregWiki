@@ -54,7 +54,7 @@ public sealed class CustomerOwnershipRule
 Hook into customer events and enforce assignment constraints in your mod logic:
 
 ```csharp
-using gregFramework.Core;
+using gregSdk;
 
 namespace CustomContentPack.Runtime;
 

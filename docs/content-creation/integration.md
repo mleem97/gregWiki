@@ -22,7 +22,7 @@ description: Registration order, load timing, runtime discovery, and contributor
 ```csharp
 using MelonLoader;
 using GregFramework.Hooks;
-using gregFramework.Core;
+using gregSdk;
 
 namespace CustomContentPack;
 
