@@ -33,7 +33,7 @@ This hook name can be mapped to **1** Harmony target(s):
 The framework code patches Il2Cpp methods and calls `HookBinder.DispatchBefore` / `DispatchAfter`. You register handlers with the **exact** string `greg.NETWORK.GetAllDevices`:
 
 ```csharp
-using GregFramework.Hooks;
+using gregSdk;
 
 // For Postfix strategy (common):
 HookBinder.OnAfter("greg.NETWORK.GetAllDevices", ctx =>
@@ -45,7 +45,7 @@ HookBinder.OnAfter("greg.NETWORK.GetAllDevices", ctx =>
 Prerequisites:
 
 - A hook **catalog** / alias file has been loaded (e.g., `HookBinder.LoadAliases(path)` or `Hooker.InstallFromCatalog(...)`), so the Il2Cpp signature is mapped to the canonical string `greg.NETWORK.GetAllDevices`.
-- Namespace `GregFramework.Hooks`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
+- Namespace `gregSdk`, type `HookContext` (includes `Arguments`, `Instance`, `ReturnValue`, etc.).
 
 ### 2. Object Bus: `GregEventDispatcher` (Rust / FFI / manual emits)
 

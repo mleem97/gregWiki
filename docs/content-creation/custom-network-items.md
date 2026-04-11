@@ -81,7 +81,7 @@ public static class NetworkCompatibilityResolver
 ## Runtime hook integration
 
 ```csharp
-using GregFramework.Hooks;
+using gregSdk;
 
 namespace CustomContentPack.Runtime;
 

@@ -28,7 +28,7 @@ Prerequisites:
 
 ⚠️ **WIKI/CODE CONFLICT**
 
-The conceptual extension points use `framework/Sdk`, `framework/ModLoader`, and `framework/harmony` naming in docs.
+The conceptual extension points use `gregSdk`, `gregModLoader`, and `framework/harmony` naming in docs.
 In the currently verified checkout, equivalent files are located under `gregSdk/`, `gregModLoader/`, and `gregMain.cs`.
 
 ```text
@@ -52,7 +52,7 @@ gregCore/
 
 Extension ownership:
 
-- `gregSdk/`: public API surfaces (`gregFramework.Core` namespace)
+- `gregSdk/`: public API surfaces (`gregSdk` namespace)
 - `gregModLoader/`: runtime loading and integration plumbing
 - `framework/harmony/`: game interception via Harmony patches
 - `plugins/`: feature modules using SDK APIs
