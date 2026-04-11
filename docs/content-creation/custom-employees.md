@@ -21,26 +21,60 @@ Create `Content/Employees/FieldNetworkSpecialist.json`:
 ```json
 {
   "id": "ccp.employee.field_network_specialist",
-  "displayName": "Field Network Specialist",
-  "skills": {
-    "networking": 9,
-    "hardwareRepair": 7,
-    "customerSupport": 5
-  },
-  "dailyCost": 950,
-  "availability": {
-    "startDay": 5,
-    "requiresReputation": 22
-  },
+  "role": "Field Network Specialist",
+  "baseSalary": 950.0,
+  "skillLevel": 9,
   "specialization": "NetworkOperations",
-  "model": "Models/Shared/FieldNetworkSpecialist.prefab"
+  "isAvailable": true,
+  "visualPrefabId": "Models/Shared/FieldNetworkSpecialist.prefab"
 }
 ```
 
-## Runtime policy sample
+## C# model
+
+```csharp
+namespace gregSdk.Definitions;
+
+public class EmployeeDefinition
+{
+    public string Id { get; set; } = string.Empty;
+    public string Role { get; set; } = string.Empty;
+    public float BaseSalary { get; set; }
+    public int SkillLevel { get; set; }
+    public string Specialization { get; set; } = "Generalist";
+    public bool IsAvailable { get; set; } = true;
+    public string VisualPrefabId { get; set; }
+}
+```
+
+## Integration and registration
+
+Use `GregEmployeeRegistry` to register your custom employee definitions.
 
 ```csharp
 using gregSdk;
+using gregSdk.Definitions;
+using gregSdk.Registries;
+
+namespace CustomContentPack.Runtime;
+
+public static class EmployeeContentLoader
+{
+    public static void Load(EmployeeDefinition myEmployee)
+    {
+        var registry = new GregEmployeeRegistry();
+        registry.Register(myEmployee);
+    }
+}
+```
+
+## AI Bridge and runtime behavior
+
+Use `GregEmployeeAIBridge` to control employee animations and states dynamically based on custom specialization logic.
+
+```csharp
+using gregSdk;
+using gregSdk.Services;
 
 namespace CustomContentPack.Runtime;
 
@@ -50,24 +84,19 @@ public static class EmployeePolicyRuntime
     {
         GregEventDispatcher.On("greg.SYSTEM.ButtonConfirmHire", payload =>
         {
-            // Validate budget, reputation, and specialization constraints.
-        }, "CustomContentPack");
-
-        GregEventDispatcher.On("greg.SYSTEM.ButtonConfirmFireEmployee", payload =>
-        {
-            // Optional bookkeeping for custom class metrics.
+            // Trigger custom AI behaviors via the bridge
+            // GregEmployeeAIBridge.ForceStateTransition(employeeId, "Hired");
         }, "CustomContentPack");
     }
 }
 ```
 
-## Framework extension candidate
+## Shop/placement strategy
 
-```csharp
-// Placeholder only: API not documented in current wiki.
-// GregContentRegistry.RegisterEmployeeClass(EmployeeDefinition definition);
-```
+Without a documented registry API:
 
-If native integration is required, track it in local `Docs/MISSING.md`.
+1. Load employee definitions and register in `GregEmployeeRegistry`.
+2. Use `GregEmployeeAIBridge` for advanced runtime behavior.
+3. Track missing native registration API in local `MISSING.md`.
 
 Next: [Custom furniture](/wiki/development/content-creation/custom-furniture).

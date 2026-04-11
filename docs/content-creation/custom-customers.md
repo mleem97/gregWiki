@@ -23,38 +23,56 @@ Create `Content/Customers/NorthFinanceGroup.json`:
   "id": "ccp.customer.fin_north",
   "name": "North Finance Group",
   "segment": "Finance",
-  "requirements": {
-    "minUptime": 99.95,
-    "requiredServerTier": "Enterprise",
-    "preferredLatencyMs": 2,
-    "securityProfile": "Strict"
-  },
-  "budget": 250000,
-  "ownershipRules": {
-    "allowedServerTypeIds": ["ccp.servertype.enterprise", "ccp.servertype.edge"],
-    "requiresDedicatedSwitch": true
-  }
+  "budget": 250000.0,
+  "requirementRules": ["MinimumIOPS", "RequiredSpeed"],
+  "ownershipRules": ["ccp.servertype.enterprise", "ccp.servertype.edge"]
 }
 ```
 
 ## Assignment model
 
 ```csharp
-namespace CustomContentPack.Runtime;
+namespace gregSdk.Definitions;
 
-public sealed class CustomerOwnershipRule
+public class CustomerDefinition
 {
-    public string[] AllowedServerTypeIds { get; set; } = System.Array.Empty<string>();
-    public bool RequiresDedicatedSwitch { get; set; }
+    public string Id { get; set; } = string.Empty;
+    public string Name { get; set; } = string.Empty;
+    public string Segment { get; set; } = "SmallBusiness";
+    public float Budget { get; set; }
+    public string[] RequirementRules { get; set; } = System.Array.Empty<string>();
+    public string[] OwnershipRules { get; set; } = System.Array.Empty<string>();
 }
 ```
 
-## Runtime usage pattern
+## Integration and registration
 
-Hook into customer events and enforce assignment constraints in your mod logic:
+Use `GregCustomerRegistry` to register your custom customers. Runtime rules are evaluated by the `GregCustomerPolicyEngine`.
 
 ```csharp
 using gregSdk;
+using gregSdk.Definitions;
+using gregSdk.Registries;
+
+namespace CustomContentPack.Runtime;
+
+public static class CustomerContentLoader
+{
+    public static void Load(CustomerDefinition myCustomer)
+    {
+        var registry = new GregCustomerRegistry();
+        registry.Register(myCustomer);
+    }
+}
+```
+
+## Runtime policy evaluation
+
+Hook into customer events and enforce assignment constraints using `GregCustomerPolicyEngine`:
+
+```csharp
+using gregSdk;
+using gregSdk.Definitions;
 
 namespace CustomContentPack.Runtime;
 
@@ -64,22 +82,20 @@ public static class CustomerRuntimePolicy
     {
         GregEventDispatcher.On("greg.SYSTEM.ButtonCustomerChosen", payload =>
         {
-            // Evaluate selected customer against content ownership rules.
-            // Keep this logic deterministic and data-driven.
+            // The policy engine can evaluate requirements and assignment feasibility.
+            // string error;
+            // GregCustomerPolicyEngine.EvaluateRequirement(customer, ruleId, payload, out error);
         }, "CustomContentPack");
     }
 }
 ```
 
-## Framework extension candidate
+## Shop/placement strategy
 
-Placeholder (not documented API):
+Without a documented registry API:
 
-```csharp
-// Placeholder only.
-// GregContentRegistry.RegisterCustomerDefinition(CustomerDefinition definition);
-```
-
-Use local `Docs/MISSING.md` if customer registry support is required for your scenario.
+1. Load customer definitions and register in `GregCustomerRegistry`.
+2. Apply custom checks during relevant `greg.*` hooks using `GregCustomerPolicyEngine`.
+3. Track missing native registration API in local `MISSING.md`.
 
 Next: [Custom network items](/wiki/development/content-creation/custom-network-items).

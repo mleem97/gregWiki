@@ -8,11 +8,11 @@ description: Define and register custom server content with gregCore-compatible 
 
 **Layer ownership:** content definitions live in the **Mod Layer**; registration hooks into the **Core SDK layer**.
 
-## Capability split
+## Capability status (v1.0.0-pre.4)
 
-- **Already possible:** load JSON definitions, bind runtime behavior via `HookBinder` / `GregEventDispatcher`.
-- **Needs FrameworkExtension:** official server registry and spawn catalog API.
-- **Currently missing:** documented typed API to inject custom server SKUs into native purchase/spawn systems.
+- **Ready:** Official `GregServerRegistry` and `ServerDefinition` types are available in `gregSdk`.
+- **Validation:** Use `ServerValidator` for automatic schema enforcement.
+- **Injection:** Content is automatically registered into the framework's internal catalogs.
 
 ## Server definition schema
 
@@ -21,142 +21,52 @@ Create `Content/Servers/EnterpriseRackServer.json`:
 ```json
 {
   "id": "ccp.server.enterprise_rack_v1",
-  "displayName": "Enterprise Rack Server",
+  "name": "Enterprise Rack Server",
   "serverTypeId": "ccp.servertype.enterprise",
-  "slots": 4,
-  "computeScore": 280,
-  "powerWatts": 540,
+  "rackUnits": 4,
+  "powerUsageWatts": 540,
+  "maxIOPS": 12000,
   "price": 42000,
-  "customerTier": "Enterprise",
-  "defaultOwnerCustomerId": "ccp.customer.fin_north",
-  "optionalModel": "Models/Servers/EnterpriseRackServer.prefab",
-  "tags": ["rack", "high-density", "custom-content-pack"]
+  "tags": ["EnterpriseGrade", "RackMount"],
+  "modelOverridePath": "Models/Servers/EnterpriseRackServer.prefab"
 }
 ```
 
-## Server type definition
+## C# Registration flow
 
-Create `Content/ServerTypes/EnterpriseType.json`:
-
-```json
-{
-    "id": "ccp.servertype.enterprise",
-    "displayName": "Enterprise",
-    "tier": 3,
-    "description": "High-density business-critical server class",
-    "availability": {
-        "minPlayerLevel": 12,
-        "requiresReputation": 30
-    }
-}
-```
-
-## C# model + validation
-
-Create `Scripts/Runtime/ServerDefinition.cs`:
+You no longer need to implement your own validator or registry logic. Use the official `gregSdk` components:
 
 ```csharp
-namespace CustomContentPack.Runtime;
-
-public sealed class ServerDefinition
-{
-    public string Id { get; set; } = string.Empty;
-    public string DisplayName { get; set; } = string.Empty;
-    public string ServerTypeId { get; set; } = string.Empty;
-    public int Slots { get; set; }
-    public int ComputeScore { get; set; }
-    public int PowerWatts { get; set; }
-    public int Price { get; set; }
-    public string CustomerTier { get; set; } = string.Empty;
-    public string DefaultOwnerCustomerId { get; set; } = string.Empty;
-    public string? OptionalModel { get; set; }
-}
-```
-
-Create `Scripts/Registries/ServerDefinitionValidator.cs`:
-
-```csharp
-using System.Collections.Generic;
-using CustomContentPack.Runtime;
-
-namespace CustomContentPack.Registries;
-
-public static class ServerDefinitionValidator
-{
-    public static IReadOnlyList<string> Validate(ServerDefinition definition)
-    {
-        var issues = new List<string>();
-
-        if (string.IsNullOrWhiteSpace(definition.Id)) issues.Add("id is required");
-        if (string.IsNullOrWhiteSpace(definition.ServerTypeId)) issues.Add("serverTypeId is required");
-        if (definition.Slots <= 0) issues.Add("slots must be > 0");
-        if (definition.ComputeScore <= 0) issues.Add("computeScore must be > 0");
-        if (definition.PowerWatts <= 0) issues.Add("powerWatts must be > 0");
-        if (definition.Price < 0) issues.Add("price must be >= 0");
-
-        return issues;
-    }
-}
-```
-
-## Registration flow
-
-Create `Scripts/Registries/ServerRegistrar.cs`:
-
-```csharp
-using System.Collections.Generic;
-using MelonLoader;
-using CustomContentPack.Runtime;
-
-namespace CustomContentPack.Registries;
+using gregSdk.Definitions;
+using gregSdk.Registries;
+using gregSdk.Validators;
 
 public static class ServerRegistrar
 {
-    public static void Register(IReadOnlyList<ServerDefinition> servers)
+    public static void Register(ServerDefinition server)
     {
-        foreach (var server in servers)
-        {
-            var issues = ServerDefinitionValidator.Validate(server);
-            if (issues.Count > 0)
-            {
-                MelonLogger.Warning($"[CustomContentPack] Skip server {server.Id}: {string.Join(", ", issues)}");
-                continue;
-            }
+        // 1. Get the official registry
+        var registry = new GregServerRegistry();
 
-            // Placeholder API: not documented in current gregCore wiki.
-            // GregContentRegistry.RegisterServerType(server);
+        // 2. The registry automatically uses ServerValidator
+        registry.Register(server);
 
-            // Placeholder API: not documented in current gregCore wiki.
-            // GregContentRegistry.RegisterServerCategory(server.ServerTypeId);
-
-            MelonLogger.Msg($"[CustomContentPack] Prepared server definition: {server.Id}");
-        }
+        MelonLogger.Msg($"[Mod] Registered server: {server.Id}");
     }
 }
 ```
 
 ## Availability and spawn logic
 
-Use documented hooks/events to drive availability gates:
+The framework automatically maps these definitions to game systems. To react to a purchase, use the normalized hooks:
 
 ```csharp
-using GregFramework.Hooks;
+using gregSdk;
 
-namespace CustomContentPack.Runtime;
-
-public static class RuntimeIntegration
-{
-    public static void InstallHooks()
-    {
-        HookBinder.OnAfter("greg.SYSTEM.ButtonBuyShopItem", OnShopBuyAfter);
-    }
-
-    private static void OnShopBuyAfter(HookContext context)
-    {
-        // Use payload/context to apply custom gating rules.
-        // Do not call undocumented game internals directly.
-    }
-}
+gregEventDispatcher.On(gregNativeEventHooks.SystemButtonBuyShopItem, payload => {
+    var itemId = gregPayload.Get<string>(payload, "EntityId");
+    // Handle post-purchase logic
+});
 ```
 
 Next: [Custom switches](/wiki/development/content-creation/custom-switches).

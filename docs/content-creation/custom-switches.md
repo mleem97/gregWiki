@@ -21,37 +21,62 @@ Create `Content/Switches/EdgeBackboneSwitch.json`:
 ```json
 {
   "id": "ccp.switch.edge_backbone_24",
-  "displayName": "Edge Backbone 24",
-  "ports": 24,
+  "name": "Edge Backbone 24",
+  "frontPorts": 24,
+  "rearPorts": 2,
   "throughputGbps": 400,
+  "isManaged": true,
   "supportedSfpProfiles": ["sfp-10g", "sfp-25g", "sfp-40g"],
-  "powerWatts": 220,
-  "price": 18000,
-  "model": "Models/Switches/EdgeBackboneSwitch.prefab",
-  "shopCategory": "Networking"
+  "powerUsageWatts": 220,
+  "price": 18000.0,
+  "modelOverridePath": "Models/Switches/EdgeBackboneSwitch.prefab"
 }
 ```
 
 ## C# model
 
 ```csharp
-namespace CustomContentPack.Runtime;
+namespace gregSdk.Definitions;
 
-public sealed class SwitchDefinition
+public class SwitchDefinition
 {
     public string Id { get; set; } = string.Empty;
-    public string DisplayName { get; set; } = string.Empty;
-    public int Ports { get; set; }
+    public string Name { get; set; } = string.Empty;
+    public int FrontPorts { get; set; }
+    public int RearPorts { get; set; }
     public int ThroughputGbps { get; set; }
+    public bool IsManaged { get; set; }
     public string[] SupportedSfpProfiles { get; set; } = System.Array.Empty<string>();
-    public int PowerWatts { get; set; }
-    public int Price { get; set; }
-    public string Model { get; set; } = string.Empty;
-    public string ShopCategory { get; set; } = string.Empty;
+    public int PowerUsageWatts { get; set; }
+    public float Price { get; set; }
+    public string ModelOverridePath { get; set; }
 }
 ```
 
-## Integration points
+## Integration and registration
+
+Use `GregSwitchRegistry` to register your custom switches. The `SwitchValidator` ensures that the definition is valid before it's added to the registry.
+
+```csharp
+using gregSdk;
+using gregSdk.Definitions;
+using gregSdk.Registries;
+using gregSdk.Validators;
+
+namespace CustomContentPack.Runtime;
+
+public static class SwitchContentLoader
+{
+    public static void Load(SwitchDefinition mySwitch)
+    {
+        var registry = new GregSwitchRegistry();
+        // The registry automatically uses SwitchValidator
+        registry.Register(mySwitch);
+    }
+}
+```
+
+## Telemetry and hooks
 
 Use documented network hooks for runtime behavior:
 
@@ -85,8 +110,9 @@ public static class SwitchTelemetry
 Without a documented registry API:
 
 1. Load switch definitions.
-2. Keep an internal compatibility index.
-3. Apply custom checks during relevant `greg.*` hooks.
-4. Track missing native registration API in local `MISSING.md`.
+2. Register in `GregSwitchRegistry`.
+3. Keep an internal compatibility index.
+4. Apply custom checks during relevant `greg.*` hooks.
+5. Track missing native registration API in local `MISSING.md`.
 
 Next: [Custom customers](/wiki/development/content-creation/custom-customers).

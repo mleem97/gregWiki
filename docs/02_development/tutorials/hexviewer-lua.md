@@ -3,214 +3,153 @@ id: hexviewer-lua
 title: HexViewer Mod Tutorial (Lua)
 sidebar_label: HexViewer in LUA
 slug: /development/tutorials/hexviewer-lua
-description: Technical writing tutorial for the HexViewer Lua config and hook layer in gregCore.
+description: Technical writing tutorial for the HexViewer Lua implementation using JADE Style and gregSdk v1.0.0-pre.4.
 ---
 
-This page implements the **Lua Config + Hook layer** for HexViewer.
+This page implements the **Lua HUD layer** for HexViewer using the JADE Style.
 
 Role in architecture:
 
-- Register mod profile in gregCore registry
-- Define target filters and thresholds
-- Consume enriched events and apply display policy
+- Initialize mod via `greg.events.on_update`
+- Perform raycasting using `greg.target.raycast_forward`
+- Render JADE-compliant HUD via `greg.events.on_gui` and `greg.hud.*`
 
-> Layer ownership: Lua runs in **Language Bridge layer** and only uses gregCore runtime APIs.
+> Layer ownership: Lua runs in the **Language Bridge layer** and uses the Official SDK API.
 
 ## Introduction
 
-Lua determines whether a detected object should be shown in HUD output.
+Lua provides a high-performance way to implement real-time HUD elements. In this tutorial, we build a "HexViewer" that identifies objects under the player's crosshair.
 
-Filtering criteria in this tutorial:
+JADE Style criteria in this tutorial:
 
-- accepted object types: `Rack`, `Cable`, `CableSpinner`
-- max distance threshold
-- owner blacklist
+- Panel Width: 400px
+- Header: `▶ <ObjectType>`
+- Data Rows: 8-character right-aligned keys (e.g., `  TYPE     : Rack`)
 
-## Project structure (Lua segment)
+## Project structure (Lua)
 
 ```text
 gregMod.HexViewer/lua/
-├─ init.lua
-├─ hexviewer_config.lua
-└─ filters.lua
+├─ manifest.json
+├─ config.json
+└─ HexViewer.lua
 ```
 
 Deploy location:
 
-- `Data Center/Mods/ScriptMods/lua/hexviewer/`
+- `Data Center/Mods/ScriptMods/lua/greg.HexViewer/`
 
 ## Lua implementation
 
-`lua/hexviewer_config.lua`:
+`lua/HexViewer.lua`:
 
 ```lua
-local config = {
-  max_distance_m = 14.0,
-  allowed_types = {
-    Rack = true,
-    Cable = true,
-    CableSpinner = true
-  },
-  owner_blacklist = {
-    ["Unknown"] = true
-  }
+-- HexViewer for gregFramework (Lua) - JADE Style Implementation
+local mod = {}
+local currentTarget = nil
+local config = nil
+
+-- JADE Style Layout Constants
+local JadeStyle = {
+    PanelWidth = 400,
+    OffsetTop = 10,
+    PaddingLeft = 8
 }
 
-return config
-```
-
-`lua/filters.lua`:
-
-```lua
-local cfg = require("hexviewer.hexviewer_config")
-
-local M = {}
-
-function M.should_display(payload)
-  if not payload then return false end
-
-  if not cfg.allowed_types[payload.entityType] then
-    return false
-  end
-
-  if (payload.distanceMeters or 9999) > cfg.max_distance_m then
-    return false
-  end
-
-  if cfg.owner_blacklist[payload.ownerName or ""] then
-    return false
-  end
-
-  return true
+function mod.OnLoad()
+    -- Load configuration using Official SDK API
+    local configPath = greg.paths.scripts .. "/greg.HexViewer/lua/config.json"
+    config = greg.io.read_json(configPath)
+    if not config then
+        greg.log("Failed to load config.json for HexViewer (Lua)")
+        return
+    end
+    greg.log("HexViewer JADE Style initialized (Lua)")
 end
 
-return M
-```
-
-`lua/init.lua`:
-
-```lua
-local filters = require("hexviewer.filters")
-
--- gregCore-specific: mod registration in greg runtime registry
-greg.registry.register_mod({
-  id = "hexviewer.lua",
-  name = "HexViewer Lua Profile",
-  version = "1.0.0"
-})
-
--- gregCore-specific: subscribe to enriched cross-language payload event
-greg.on("greg.HEXVIEWER.TargetEnriched", function(payload)
-  if not filters.should_display(payload) then
-    return
-  end
-
-  greg.emit("greg.HEXVIEWER.TargetFiltered", payload)
+-- Raycast update loop - Official SDK API
+greg.events.on_update(function(dt)
+    if not config or not config.enabled then return end
+    
+    local distance = config.raycastDistance or 10.0
+    currentTarget = greg.target.raycast_forward(distance)
 end)
 
-greg.log("[HexViewer/Lua] Filter profile active")
+-- JADE Style Rendering - Official SDK API
+greg.events.on_gui(function()
+    if not currentTarget or not config or not config.enabled then return end
+    
+    local objType = currentTarget.type or "Unknown"
+    local objLower = string.lower(objType)
+    
+    -- Select header color based on type from config
+    local headerColor = config.colors[objLower] or config.colors.unknown
+    
+    -- Calculate screen center
+    local screenWidth = greg.unity.get_screen_width()
+    local x = (screenWidth / 2) - (JadeStyle.PanelWidth / 2)
+    local y = JadeStyle.OffsetTop
+    
+    -- Draw JADE Panel
+    greg.hud.begin_panel("HexViewer_JADE", x, y, JadeStyle.PanelWidth, 0)
+    
+    -- Header: "▶ <ObjectType>"
+    greg.hud.label("▶ " .. objType, headerColor)
+    greg.hud.label(" ") -- Spacer
+    
+    -- Data Rows with 8-character right-aligned keys
+    if config.fields.showType then
+        greg.hud.label(string.format("  %-8s : %s", "TYPE", objType))
+    end
+    
+    if config.fields.showColor then
+        local color = currentTarget.color or "—"
+        greg.hud.label(string.format("  %-8s : %s", "COLOR", color))
+    end
+    
+    if config.fields.showOwner then
+        local owner = currentTarget.owner or "—"
+        greg.hud.label(string.format("  %-8s : %s", "OWNER", owner))
+    end
+    
+    greg.hud.end_panel()
+end)
+
+return mod
 ```
 
-## Placeholder policy
+## Official SDK API Policy
 
-If `greg.registry.register_mod` is not available in your current branch, do not replace it with custom global state. Keep a placeholder following greg naming conventions, for example:
+Always use the `greg` global object. If a specific sub-module is unavailable in your build, use the following patterns:
 
-- `greg.Registry.RegisterMod`
-- `greg.registry.register_mod`
+- `greg.target.raycast_forward` (Targeting)
+- `greg.hud.begin_panel` (HUD/GUI)
+- `greg.events.on_gui` (Event Hooks)
 
-## Integration with C#/Rust/TS
+## Integration
 
 Event chain:
 
-1. C# emits `greg.HEXVIEWER.TargetUpdated`
-2. Rust enriches and emits `greg.HEXVIEWER.TargetEnriched`
-3. Lua filters and emits `greg.HEXVIEWER.TargetFiltered`
-4. TypeScript HUD renders filtered payload
+1. `on_update` triggers `raycast_forward`.
+2. `currentTarget` is cached in the Lua state.
+3. `on_gui` renders the cached target using `greg.hud` methods.
 
 ## Deploy and test in game
 
 Copy Lua folder:
 
 ```powershell
-Copy-Item .\lua\* "C:\Program Files (x86)\Steam\steamapps\common\Data Center\Mods\ScriptMods\lua\hexviewer\" -Recurse -Force
+Copy-Item .\lua\* "C:\Program Files (x86)\Steam\steamapps\common\Data Center\Mods\ScriptMods\lua\greg.HexViewer\" -Recurse -Force
 ```
 
 Validation checklist:
 
-- Registry log confirms module registration
-- Blacklisted owners are hidden
-- Distance threshold limits output as configured
+- JADE Panel appears at top-center when hovering objects.
+- Labels follow the `KEY : Value` format with 8-character padding.
+- `greg.log` confirms "HexViewer JADE Style initialized".
 
 ## Troubleshooting
 
-- `require` fails: check folder/module naming (`hexviewer/...`).
-- No filtering effect: ensure UI consumes `greg.HEXVIEWER.TargetFiltered` event.
-- Nil payload fields: verify Rust enrichment event schema.
-
-## 1) Prerequisites
-
-- Data Center + MelonLoader + `gregCore.dll`
-- Lua bridge enabled by your gregCore runtime
-- Access to `Data Center/Mods/ScriptMods/lua/`
-
-## 2) Create mod folder
-
-Create:
-
-- `Data Center/Mods/ScriptMods/lua/hexviewer/init.lua`
-
-## 3) Implement HexViewer script
-
-```lua
-local hooks = {
-  "greg.UI.OnHoverOver",
-  "greg.SYSTEM.OnHoverOver",
-  "greg.PLAYER.InteractOnClick"
-}
-
-local function to_hex(num)
-  if num == nil then return "0x00000000" end
-  return string.format("0x%08X", tonumber(num) or 0)
-end
-
-local function on_event(payload)
-  local method = payload and payload.method or "unknown"
-  local instance_handle = payload and payload.instance_handle or 0
-  local hex = to_hex(instance_handle)
-  greg.log("[HexViewer/Lua] method=" .. tostring(method) .. " hex=" .. hex)
-end
-
-for _, hook in ipairs(hooks) do
-  greg.on(hook, on_event)
-end
-
-greg.log("[HexViewer/Lua] Registered " .. tostring(#hooks) .. " hooks")
-```
-
-## 4) Deploy
-
-No compile step required. Save file under Lua mods folder and start the game.
-
-## 5) Test in game
-
-1. Launch game.
-2. Trigger hover/click interactions.
-3. Check runtime log output for HexViewer lines.
-
-Expected line:
-
-```text
-[HexViewer/Lua] method=OnHoverOver hex=0x00F1A22B
-```
-
-## 6) Troubleshooting
-
-- `greg` is nil: Lua bridge not loaded or wrong folder.
-- No events: hook names differ in your catalog; test one known hook first.
-- Performance issues: throttle logs (e.g. every 100ms).
-
-## 7) Next improvements
-
-- Add on-screen label via UI bridge API.
-- Persist latest hovered hex in a Lua table for quick recall.
-- Add command toggle (`/hexviewer on|off`) if your command bridge is enabled.
+- `greg` is nil: Ensure the gregFramework bridge is active.
+- Panel doesn't show: Verify `config.json` has `"enabled": true`.
+- Script error: Check the MelonLoader console for Lua traceback.

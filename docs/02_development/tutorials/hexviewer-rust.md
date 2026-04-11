@@ -3,242 +3,155 @@ id: hexviewer-rust
 title: HexViewer Mod Tutorial (Rust)
 sidebar_label: HexViewer in Rust
 slug: /development/tutorials/hexviewer-rust
-description: Technical writing tutorial for the HexViewer Rust data layer in gregCore, including FFI contract, pipeline, and game validation.
+description: Technical writing tutorial for the HexViewer Rust implementation using JADE Style and the v8 gregSdk FFI API.
 ---
 
-This page implements the **Rust Low-Level Data layer** for HexViewer.
+This page implements the **Rust High-Performance layer** for HexViewer.
 
 Role in architecture:
 
-- Input event from C#: `greg.HEXVIEWER.TargetUpdated`
-- Rust enrichment: resolve color/owner metadata at low overhead
-- Output event to UI: `greg.HEXVIEWER.TargetEnriched`
+- Direct FFI access to the **Official SDK API (v8)**
+- Perform raycasting and HUD rendering at the native layer
+- JADE-compliant layout with zero allocation in the hot path
 
-> Layer ownership: Rust bridge is in **Language Bridge layer**, never direct Unity gameplay logic.
+> Layer ownership: Rust runs in the **Language Bridge layer** and communicates via a structured `greg_api_t` table.
 
 ## Introduction
 
-Rust is used for hot-path metadata operations where frequent target updates would otherwise allocate heavily on managed paths.
+Rust is preferred for mods that require high-frequency updates or complex geometric calculations. This tutorial demonstrates how to use the v8 API table to implement a JADE-style HUD.
 
-## Project structure (Rust segment)
+## Project structure (Rust)
 
 ```text
 gregMod.HexViewer/rust/
 ├─ Cargo.toml
-├─ src/
-│  ├─ lib.rs
-│  ├─ bridge.rs
-│  └─ metadata.rs
-└─ target/release/hexviewer_rust.dll
+├─ manifest.json
+└─ src/
+   ├─ lib.rs
+   └─ hud.rs
 ```
 
-## FFI contract with gregCore
-
-Required exported functions:
-
-- `greg_mod_init` — register module and callbacks
-- `greg_mod_shutdown` — release resources
-- `greg_on_hexviewer_target_updated` — process event payload from C#
-
-If your current bridge uses different names, keep semantics and align naming with `greg.*` conventions.
-
-## Rust implementation
-
-`rust/Cargo.toml`:
-
-```toml
-[package]
-name = "hexviewer_rust"
-version = "0.1.0"
-edition = "2021"
-
-[lib]
-crate-type = ["cdylib"]
-```
+## Rust implementation (v8 API)
 
 `rust/src/lib.rs`:
 
 ```rust
-mod bridge;
-mod metadata;
+use std::ffi::{c_char, c_void};
+use std::sync::atomic::{AtomicPtr, Ordering};
 
-use std::ffi::CStr;
-use std::os::raw::c_char;
+pub mod hud;
+
+#[repr(C)]
+pub struct greg_api_t {
+    pub api_version: u32,
+    // ... (v1-v7 omitted for brevity)
+    pub reserved_v1_v7: [usize; 60], 
+
+    // v8 Official SDK API
+    pub payload_get_string: extern "C" fn(*mut c_void, *const c_char, *const c_char) -> *const c_char,
+    pub subscribe_event: extern "C" fn(*const c_char, extern "C" fn(*mut c_void), *const c_char),
+    pub gui_begin_panel: extern "C" fn(*const c_char, f32, f32, f32, f32),
+    pub gui_label: extern "C" fn(*const c_char),
+    pub gui_end_panel: extern "C" fn(),
+    pub raycast_forward: extern "C" fn(f32, *mut *const c_char, *mut f32, *mut f32, *mut f32, *mut f32) -> i32,
+    pub publish_tick: extern "C" fn(f32, i32),
+}
+
+static API: AtomicPtr<greg_api_t> = AtomicPtr::new(std::ptr::null_mut());
 
 #[no_mangle]
-pub extern "C" fn greg_mod_init() {
-    // gregCore-specific: register this Rust module with the bridge runtime
-    bridge::register_module("hexviewer_rust");
+pub extern "C" fn mod_init(api: *mut greg_api_t) -> bool {
+    if api.is_null() { return false; }
+    API.store(api, Ordering::SeqCst);
+    true
 }
 
 #[no_mangle]
-pub extern "C" fn greg_mod_shutdown() {
-    bridge::unregister_module("hexviewer_rust");
-}
-
-#[no_mangle]
-pub extern "C" fn greg_on_hexviewer_target_updated(
-    entity_id: u64,
-    entity_type_ptr: *const c_char,
-) {
-    let entity_type = unsafe {
-        if entity_type_ptr.is_null() {
-            "unknown"
-        } else {
-            CStr::from_ptr(entity_type_ptr).to_str().unwrap_or("unknown")
-        }
-    };
-
-    let meta = metadata::query_entity_metadata(entity_id, entity_type);
-
-    // gregCore-specific: emit enriched event back to the shared event bus
-    bridge::emit_target_enriched(
-        entity_id,
-        entity_type,
-        &meta.color_hex,
-        &meta.owner_name,
-    );
-}
-```
-
-`rust/src/metadata.rs`:
-
-```rust
-pub struct EntityMeta {
-    pub color_hex: String,
-    pub owner_name: String,
-}
-
-pub fn query_entity_metadata(entity_id: u64, entity_type: &str) -> EntityMeta {
-    // gregCore-specific placeholder:
-    // Replace with gregCore::ffi metadata access when available in your branch.
-    // Do NOT replace with direct engine pointers outside gregCore bridge.
-    let _ = (entity_id, entity_type);
-
-    EntityMeta {
-        color_hex: "#55AAFF".to_string(),
-        owner_name: "Unassigned".to_string(),
+pub extern "C" fn mod_on_gui() {
+    let api_ptr = API.load(Ordering::SeqCst);
+    if api_ptr.is_null() { return; }
+    unsafe {
+        hud::update_hud(&*api_ptr);
     }
 }
 ```
 
+`rust/src/hud.rs`:
+
+```rust
+use std::ffi::{CStr, CString};
+use crate::greg_api_t;
+
+pub const JADE_GREEN: &str = "#80FF99";
+pub const JADE_TEXT: &str = "#B8ECB8";
+
+pub fn update_hud(api: &greg_api_t) {
+    let mut out_name: *const std::ffi::c_char = std::ptr::null();
+    let mut out_dist: f32 = 0.0;
+    let mut out_x: f32 = 0.0;
+    let mut out_y: f32 = 0.0;
+    let mut out_z: f32 = 0.0;
+
+    // Raycast using Official SDK API
+    let hit = (api.raycast_forward)(10.0, &mut out_name, &mut out_dist, &mut out_x, &mut out_y, &mut out_z);
+    
+    if hit != 0 && !out_name.is_null() {
+        let name_str = unsafe { CStr::from_ptr(out_name).to_string_lossy() };
+        
+        // JADE Panel Layout (400px width)
+        (api.gui_begin_panel)(b"HexViewerJade\0".as_ptr() as *const _, 0.5, 0.1, 400.0, 200.0);
+        
+        // Header: ▶ <ObjectType>
+        let header = format!("<color={}>▶ {}</color>", JADE_GREEN, name_str.to_uppercase());
+        if let Ok(c_header) = CString::new(header) {
+            (api.gui_label)(c_header.as_ptr());
+        }
+
+        // Data:   KEY      : Value (8-char keys)
+        draw_row(api, "NAME", &name_str);
+        draw_row(api, "DIST", &format!("{:.2}m", out_dist));
+        draw_row(api, "POS", &format!("{:.1}, {:.1}, {:.1}", out_x, out_y, out_z));
+        
+        (api.gui_end_panel)();
+    }
+}
+
+fn draw_row(api: &greg_api_t, key: &str, value: &str) {
+    let row = format!("<color={}>  {:<8} : {}</color>", JADE_TEXT, key.to_uppercase(), value);
+    if let Ok(c_row) = CString::new(row) {
+        (api.gui_label)(c_row.as_ptr());
+    }
+}
+```
+
+## Official SDK API Policy
+
+The Rust bridge uses the `greg_api_t` struct to access engine functions. Version 8 of the API introduces direct `raycast_forward` and `gui_*` methods to avoid string-based event overhead.
+
 ## Build pipeline
 
 ```powershell
-cargo build --manifest-path .\rust\Cargo.toml --release
+cargo build --release --target wasm32-unknown-unknown
 ```
 
-Output:
+Deploy the resulting `.wasm` (or `.dll` if using native bridge) to the `Mods/RustMods/` folder.
 
-- `rust\target\release\hexviewer_rust.dll`
+## Integration
 
-## Integration with other languages
-
-Data flow:
-
-1. C# emits `greg.HEXVIEWER.TargetUpdated`
-2. Rust callback receives entity id/type
-3. Rust queries metadata and emits `greg.HEXVIEWER.TargetEnriched`
-4. TypeScript HUD updates panel
-5. Lua config filters what is displayed
+1. The game calls `mod_init` with the API table.
+2. Every GUI frame, `mod_on_gui` is invoked.
+3. The mod performs a raycast and updates the JADE panel immediately.
 
 ## Deploy and test
 
-```powershell
-Copy-Item .\rust\target\release\hexviewer_rust.dll "C:\Program Files (x86)\Steam\steamapps\common\Data Center\Mods\RustMods\" -Force
-```
-
 Validation checklist:
 
-- Bridge logs module registration
-- No FFI crashes on hover/click
-- `TargetEnriched` events contain color/owner fields
+- WASM/DLL loads without symbols errors.
+- Raycast identifies "Rack", "Cable", etc.
+- JADE HUD colors (`#80FF99`) match the specification.
 
 ## Troubleshooting
 
-- DLL not loaded: check `cdylib`, exports, and architecture (x64).
-- Invalid strings: always guard pointer conversion.
-- Missing metadata API: keep placeholder layer in `metadata.rs` until gregCore binding exists.
-
-## 1) Prerequisites
-
-- `rustup` + stable toolchain
-- Working gregCore Rust bridge (`RustLanguageBridgeAdapter`/FFI)
-- Data Center game setup with `Mods/RustMods/`
-
-## 2) Create crate
-
-```powershell
-cargo new hexviewer --lib
-```
-
-`Cargo.toml`:
-
-```toml
-[package]
-name = "hexviewer"
-version = "0.1.0"
-edition = "2021"
-
-[lib]
-crate-type = ["cdylib"]
-```
-
-## 3) Implement event hook
-
-`src/lib.rs`:
-
-```rust
-use std::ffi::c_char;
-
-#[no_mangle]
-pub extern "C" fn greg_mod_init() {
-    // Register callback through your bridge-specific API.
-    // Example only: actual function names depend on bridge ABI.
-    println!("[HexViewer/Rust] init");
-}
-
-#[no_mangle]
-pub extern "C" fn greg_on_event(event_name: *const c_char, instance_id: u64) {
-    // Convert pointers in your real bridge helper, then log a hex id:
-    let hex = format!("0x{:08X}", instance_id as u32);
-    let _ = event_name;
-    println!("[HexViewer/Rust] hex={}", hex);
-}
-```
-
-## 4) Build
-
-```powershell
-cargo build --release
-```
-
-Artifact example:
-
-- `target/release/hexviewer.dll`
-
-## 5) Deploy
-
-Copy binary to Rust mods folder:
-
-```powershell
-Copy-Item .\target\release\hexviewer.dll "C:\Program Files (x86)\Steam\steamapps\common\Data Center\Mods\RustMods\" -Force
-```
-
-## 6) Test in game
-
-1. Start Data Center.
-2. Ensure bridge logs module load success.
-3. Hover/click objects and verify Rust log lines with hex IDs.
-
-## 7) Troubleshooting
-
-- Module not loaded: confirm `cdylib` target and exported symbols.
-- No events: validate FFI callback signatures against bridge ABI.
-- Invalid strings/panic: guard all FFI boundaries and avoid `unwrap()`.
-
-## 8) Next improvements
-
-- Parse payload structs for richer labels.
-- Add in-game toggle via shared config file.
-- Emit events to C# side for UI rendering.
+- Null Pointer Exception: Always check if `api_ptr` is null before use.
+- Alignment issues: Ensure `greg_api_t` struct layout matches the SDK version exactly.
+- Linker errors: Verify that all `extern "C"` functions are correctly defined.

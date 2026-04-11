@@ -16,32 +16,62 @@ If a legacy `FMF.*` naming page conflicts with this catalog, prefer this catalog
 
 This page is **generated** from `gregCore/gregSdk/GregNativeEventHooks.cs` and `EventIds` in `EventDispatcher.cs`.
 
-**Generated:** 2026-04-10 02:43:33 UTC
+**Generated:** 2026-04-11 00:00:00 UTC
 
 ## Hook string constants
 
 | C# field | Hook string / expression |
 |----------|----------------------------|
+| ``ContentOverrideApplied`` | ``greg.CONTENT.OverrideApplied`` |
+| ``ContentRegistered`` | ``greg.CONTENT.Registered`` |
+| ``ContentLoaded`` | ``greg.CONTENT.Loaded`` |
+| ``CustomerAppRequirementsFailed`` | ``GregHookName.Create(GregDomain.Customer, "AppRequirementsFailed")`` |
+| ``CustomerAppRequirementsSatisfied`` | ``GregHookName.Create(GregDomain.Customer, "AppRequirementsSatisfied")`` |
+| ``CustomerMoneyUpdated`` | ``greg.CUSTOMER.MoneyUpdated`` |
+| ``CustomerRequirementEvaluated`` | ``greg.CUSTOMER.RequirementEvaluated`` |
+| ``EmployeeAnimationStateChanged`` | ``greg.EMPLOYEE.AnimationStateChanged`` |
+| ``EmployeeCustomFired`` | ``GregHookName.Create(GregDomain.Employee, "CustomFired")`` |
+| ``EmployeeCustomHired`` | ``GregHookName.Create(GregDomain.Employee, "CustomHired")`` |
+| ``EmployeeDispatchProcessed`` | ``greg.EMPLOYEE.DispatchProcessed`` |
+| ``EmployeeDispatchQueued`` | ``greg.EMPLOYEE.DispatchQueued`` |
+| ``EmployeeIdleStateEntered`` | ``greg.EMPLOYEE.IdleStateEntered`` |
+| ``EmployeeIdleStateExited`` | ``greg.EMPLOYEE.IdleStateExited`` |
+| ``GameplayIncidentTriggered`` | ``greg.GAMEPLAY.IncidentTriggered`` |
+| ``InputActionTriggered`` | ``greg.INPUT.ActionTriggered`` |
+| ``InputBindingApplied`` | ``greg.INPUT.BindingApplied`` |
+| ``InputBindingStarted`` | ``greg.INPUT.BindingStarted`` |
 | ``NetworkBrokenSwitchAdded`` | ``greg.NETWORK.BrokenSwitchAdded`` |
+| ``NetworkBrokenSwitchRemoved`` | ``greg.NETWORK.oveBrokenSwitchRemoved`` |
+| ``NetworkCableLifecycleChanged`` | ``greg.NETWORK.CableLifecycleChanged`` |
 | ``NetworkClearAllCables`` | ``greg.NETWORK.ClearAllCables`` |
 | ``NetworkConnectionSpeedSet`` | ``greg.NETWORK.ConnectionSpeedSet`` |
 | ``NetworkCreateNewCable`` | ``greg.NETWORK.CreateNewCable`` |
+| ``NetworkDispatchProcessed`` | ``greg.NETWORK.DispatchProcessed`` |
+| ``NetworkDispatchQueued`` | ``greg.NETWORK.DispatchQueued`` |
 | ``NetworkInsertSfp`` | ``greg.NETWORK.InsertSFP`` |
-| ``NetworkBrokenSwitchRemoved`` | ``greg.NETWORK.oveBrokenSwitchRemoved`` |
+| ``NetworkNetWatchDispatched`` | ``GregHookName.Create(GregDomain.Network, "NetWatchDispatched")`` |
 | ``NetworkPositionRemoved`` | ``greg.NETWORK.ovePositionRemoved`` |
 | ``NetworkSfpRemoved`` | ``greg.NETWORK.oveSFPRemoved`` |
+| ``NetworkSwitchConfigClosed`` | ``greg.NETWORK.SwitchConfigClosed`` |
+| ``NetworkSwitchConfigOpened`` | ``greg.NETWORK.SwitchConfigOpened`` |
+| ``NetworkTopologyValidated`` | ``greg.NETWORK.TopologyValidated`` |
 | ``PlayerCoinChanged`` | ``greg.PLAYER.CoinChanged`` |
 | ``PlayerReputationChanged`` | ``greg.PLAYER.ReputationChanged`` |
 | ``PlayerXpChanged`` | ``greg.PLAYER.XPChanged`` |
 | ``RackButtonUnmountRack`` | ``greg.RACK.ButtonUnmountRack`` |
+| ``RackDoorStateChanged`` | ``greg.RACK.DoorStateChanged`` |
 | ``ServerAppIdChanged`` | ``greg.SERVER.AppIDChanged`` |
 | ``ServerCustomerChanged`` | ``greg.SERVER.CustomerChanged`` |
 | ``ServerDeviceRepaired`` | ``greg.SERVER.DeviceRepaired`` |
+| ``ServerInsertedInRack`` | ``greg.SERVER.ServerInsertedInRack`` |
 | ``ServerItIsBroken`` | ``greg.SERVER.ItIsBroken`` |
+| ``ServerLoadingCompleted`` | ``greg.SERVER.LoadingCompleted`` |
+| ``ServerLoadingStarted`` | ``greg.SERVER.LoadingStarted`` |
 | ``ServerPowerButton`` | ``greg.SERVER.PowerButton`` |
 | ``ServerRegisterLink`` | ``greg.SERVER.RegisterLink`` |
-| ``ServerInsertedInRack`` | ``greg.SERVER.ServerInsertedInRack`` |
 | ``ServerUnregisterLink`` | ``greg.SERVER.UnregisterLink`` |
+| ``SystemApplicationQuit`` | ``greg.SYSTEM.ApplicationQuit`` |
+| ``SystemAutoSaveRequested`` | ``GregHookName.Create(GregDomain.System, "AutoSaveRequested")`` |
 | ``SystemButtonBuyShopItem`` | ``greg.SYSTEM.ButtonBuyShopItem`` |
 | ``SystemButtonBuyWall`` | ``greg.SYSTEM.ButtonBuyWall`` |
 | ``SystemButtonCheckOut`` | ``greg.SYSTEM.ButtonCheckOut`` |
@@ -49,20 +79,37 @@ This page is **generated** from `gregCore/gregSdk/GregNativeEventHooks.cs` and `
 | ``SystemButtonConfirmFireEmployee`` | ``greg.SYSTEM.ButtonConfirmFireEmployee`` |
 | ``SystemButtonConfirmHire`` | ``greg.SYSTEM.ButtonConfirmHire`` |
 | ``SystemButtonCustomerChosen`` | ``greg.SYSTEM.ButtonCustomerChosen`` |
-| ``SystemSpawnedItemRemoved`` | ``greg.SYSTEM.oveSpawnedItemRemoved`` |
-| ``SystemSnapshotSaved`` | ``greg.SYSTEM.SnapshotSaved`` |
-| ``UnknownNativeEvent`` | ``greg.SYSTEM.UnmappedNativeEvent`` |
-| ``CustomerAppRequirementsFailed`` | ``GregHookName.Create(GregDomain.Customer, "AppRequirementsFailed")`` |
-| ``CustomerAppRequirementsSatisfied`` | ``GregHookName.Create(GregDomain.Customer, "AppRequirementsSatisfied")`` |
-| ``EmployeeCustomFired`` | ``GregHookName.Create(GregDomain.Employee, "CustomFired")`` |
-| ``EmployeeCustomHired`` | ``GregHookName.Create(GregDomain.Employee, "CustomHired")`` |
-| ``NetworkNetWatchDispatched`` | ``GregHookName.Create(GregDomain.Network, "NetWatchDispatched")`` |
-| ``SystemAutoSaveRequested`` | ``GregHookName.Create(GregDomain.System, "AutoSaveRequested")`` |
+| ``SystemDayEnded`` | ``greg.SYSTEM.DayEnded`` |
 | ``SystemGameDayAdvanced`` | ``GregHookName.Create(GregDomain.System, "GameDayAdvanced")`` |
 | ``SystemGameLoaded`` | ``GregHookName.Create(GregDomain.System, "GameLoaded")`` |
 | ``SystemGameSaved`` | ``GregHookName.Create(GregDomain.System, "GameSaved")`` |
 | ``SystemHookBridgeInstalled`` | ``GregHookName.Create(GregDomain.System, "HookBridgeInstalled")`` |
 | ``SystemHookBridgeTriggered`` | ``GregHookName.Create(GregDomain.System, "HookBridgeTriggered")`` |
+| ``SystemIncidentResolved`` | ``greg.SYSTEM.IncidentResolved`` |
+| ``SystemIncidentTriggered`` | ``greg.SYSTEM.IncidentTriggered`` |
+| ``SystemLoadCompleted`` | ``greg.SYSTEM.LoadCompleted`` |
+| ``SystemLoadStarted`` | ``greg.SYSTEM.LoadStarted`` |
+| ``SystemRuntimeObjectDestroyed`` | ``greg.SYSTEM.RuntimeObjectDestroyed`` |
+| ``SystemRuntimeObjectDisabled`` | ``greg.SYSTEM.RuntimeObjectDisabled`` |
+| ``SystemRuntimeObjectEnabled`` | ``greg.SYSTEM.RuntimeObjectEnabled`` |
+| ``SystemRuntimeObjectLoaded`` | ``greg.SYSTEM.RuntimeObjectLoaded`` |
+| ``SystemSaveStarted`` | ``greg.SYSTEM.SaveStarted`` |
+| ``SystemShopCartItemAdded`` | ``greg.SYSTEM.ShopCartItemAdded`` |
+| ``SystemShopCartItemRemoved`` | ``greg.SYSTEM.ShopCartItemRemoved`` |
+| ``SystemSnapshotSaved`` | ``greg.SYSTEM.SnapshotSaved`` |
+| ``SystemSpawnedItemRemoved`` | ``greg.SYSTEM.oveSpawnedItemRemoved`` |
+| ``UiCancel`` | ``greg.UI.Cancel`` |
+| ``UiPauseClosed`` | ``greg.UI.PauseClosed`` |
+| ``UiPauseOpened`` | ``greg.UI.PauseOpened`` |
+| ``UiPointerClick`` | ``greg.UI.PointerClick`` |
+| ``UiPointerEnter`` | ``greg.UI.PointerEnter`` |
+| ``UiPointerExit`` | ``greg.UI.PointerExit`` |
+| ``UiSubmit`` | ``greg.UI.Submit`` |
+| ``UiTabSelected`` | ``greg.UI.TabSelected`` |
+| ``UnknownNativeEvent`` | ``greg.SYSTEM.UnmappedNativeEvent`` |
+| ``WorldCollisionEntered`` | ``greg.WORLD.CollisionEntered`` |
+| ``WorldInteractionHovered`` | ``greg.WORLD.InteractionHovered`` |
+| ``WorldTriggerEntered`` | ``greg.WORLD.TriggerEntered`` |
 
 ## Event id to hook mapping
 
