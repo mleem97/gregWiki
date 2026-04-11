@@ -64,6 +64,10 @@ Policy, paths, and trade-offs: [Modding language support](/wiki/developers). Lua
 | **Architecture** | [Greg hooks & event runtime](/wiki/development/concepts/hooks-and-events) |
 | **Legacy spellings** | **`GregCompatBridge`** loads **`greg_hooks.json`** next to **`gregCore.dll`** |
 
+Engine integration rule:
+
+- Anything sourced from Unity engine APIs (ScriptReference/runtime methods) must be normalized into canonical `greg.*` hook/event contracts before mod/plugin consumption.
+
 ## Start a new mod
 
 1. Create **`gregMod.<Name>/`** under `gregFramework/` (or clone a template).
