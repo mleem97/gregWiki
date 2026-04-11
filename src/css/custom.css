@@ -68,7 +68,7 @@
 
 :root,
 [data-theme='dark'] {
-  --layout-max-width: 72rem;
+  --layout-max-width: 80rem;
   --ifm-color-primary: #61f4d8;
   --ifm-color-primary-dark: #4fe5ca;
   --ifm-color-primary-darker: #08c1a6;
@@ -521,7 +521,7 @@ body {
   }
 
   .theme-doc-main {
-    max-width: min(100%, 78ch);
+    max-width: min(100%, var(--layout-max-width));
     margin-inline: auto;
   }
 }
