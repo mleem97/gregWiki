@@ -58,6 +58,15 @@ const sidebars = {
         '02_development/tutorials/hexviewer-ts',
       ],
     },
+    {
+      type: 'category',
+      label: '🗺️ Roadmap to 100%',
+      items: [
+        '02_development/roadmap/overview',
+        '02_development/roadmap/phase-5-economy',
+        '02_development/roadmap/phase-6-hardware',
+      ],
+    },
     'design-system/visual-philosophy',
   ],
   communitySidebar: [
