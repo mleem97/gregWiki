@@ -25,6 +25,11 @@ Prerequisites:
 
 ## 2. Framework structure overview
 
+⚠️ **WIKI/CODE CONFLICT**
+
+The conceptual extension points use `framework/Sdk`, `framework/ModLoader`, and `framework/harmony` naming in docs.
+In the currently verified checkout, equivalent files are located under `gregSdk/`, `gregModLoader/`, and `gregMain.cs`.
+
 ```text
 gregCore/
 ├─ framework/
@@ -65,7 +70,7 @@ Target file:
 2. Map event ID to hook in `ByEventId` lookup.
 3. Rebuild and test subscription from a plugin/mod.
 
-### Before
+### Before (existing)
 
 ```csharp
 namespace gregFramework.Core;
@@ -76,7 +81,7 @@ public static class GregNativeEventHooks
 }
 ```
 
-### After
+### After (with parser extension)
 
 ```csharp
 namespace gregFramework.Core;
@@ -308,9 +313,59 @@ Validation:
 
 ---
 
+## 10. Contributor workflow
+
+### Add new content categories
+
+- Start in SDK contracts (`GregXxxRegistry` interfaces).
+- Add harmony hook points only where required by runtime data extraction.
+- Expose stable event names through `GregNativeEventHooks`.
+
+### Registry naming convention
+
+- `GregServerRegistry`
+- `GregSwitchRegistry`
+- `GregCustomerRegistry`
+- `GregModelOverrideRegistry`
+
+### Versioning for model overrides
+
+- Add schema version to every manifest.
+- Keep migration path for previous schema versions.
+- Fail with clear log warning if schema is unsupported.
+
+### Backward compatibility
+
+- Add aliases in `GregCompatBridge` for renamed hooks.
+- Never remove hook constants without alias/deprecation period.
+
+### Mandatory tests
+
+- Hook mapping tests (`EventId` -> `greg.*`)
+- Payload parser tests (`GregPayload`)
+- Plugin registration and `NotifyFrameworkReady()` tests
+- Compatibility tests for legacy aliases
+
+---
+
 ## MISSING.md rule (required for absent abstractions)
 
 If an extension depends on a non-existing abstraction (example: `IModExtension`), create `MISSING.md` in the affected folder.
+
+Required local-only header:
+
+```text
+---
+MISSING.md – DEVELOPMENT ONLY
+===
+⚠️  DIESE DATEI NICHT COMMITTEN! ⚠️
+.gitignore PFLICHT:
+    **/MISSING.md
+    **/MISSING*.md
+Löschen nach Framework-Erweiterung!
+===
+---
+```
 
 Required content:
 

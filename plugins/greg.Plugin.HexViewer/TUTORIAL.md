@@ -38,14 +38,12 @@ plugins/greg.Plugin.HexViewer/
 ├── cs/
 │   └── HexViewer.cs
 ├── lua/
-│   ├── HexViewer.lua
-│   └── MISSING.md
+│   └── HexViewer.lua
 ├── ts/
-│   ├── HexViewer.ts
-│   └── MISSING.md
+│   └── HexViewer.ts
 ├── rs/
-│   ├── HexViewer.rs
-│   └── MISSING.md
+│   └── HexViewer.rs
+├── MISSING.md
 └── TUTORIAL.md
 ```
 
@@ -120,7 +118,7 @@ These files model bridge-hosted logic under the gregCore transpiler/host paradig
 
 Important: bridge API surfaces for Lua/TS/Rust are not fully verified in the supplied runtime context.
 
-Therefore each language folder includes `MISSING.md` with:
+Therefore this project uses one central `MISSING.md` (`plugins/greg.Plugin.HexViewer/MISSING.md`) with:
 
 - Missing API name/signature
 - Required behavior

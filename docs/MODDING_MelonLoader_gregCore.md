@@ -62,19 +62,15 @@ Templates/
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <LangVersion>latest</LangVersion>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
     <Reference Include="MelonLoader">
-      <HintPath>..\..\lib\references\MelonLoader\MelonLoader.dll</HintPath>
+            <HintPath>$(MelonLoaderPath)/MelonLoader.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\lib\references\MelonLoader\net6\UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>..\..\lib\references\MelonLoader\net6\UnityEngine.IMGUIModule.dll</HintPath>
-    </Reference>
+        <Reference Include="gregCore">
+            <HintPath>$(gregCorePath)/gregCore.dll</HintPath>
+        </Reference>
   </ItemGroup>
 </Project>
 ```
@@ -171,6 +167,14 @@ public sealed class Main : MelonMod
     {
         LoggerInstance.Msg("MyFirstDataCenterMod initializing...");
 
+        if (Core.Instance == null)
+        {
+            LoggerInstance.Warning("Core.Instance is null in OnInitializeMelon(). Waiting in OnUpdate().");
+            return;
+        }
+
+        _frameworkReady = true;
+
         GregEventDispatcher.On(
             GregNativeEventHooks.ServerInsertedInRack,
             OnServerInserted,
@@ -192,19 +196,16 @@ public sealed class Main : MelonMod
 
     public override void OnUpdate()
     {
-        if (Core.Instance == null)
-        {
-            _frameworkReady = false;
-            return;
-        }
-
         if (!_frameworkReady)
         {
+            if (Core.Instance == null)
+            {
+                return;
+            }
+
             _frameworkReady = true;
             LoggerInstance.Msg("gregCore ready");
         }
-
-        Core.Instance.Publish(new ModTickEvent(System.DateTime.UtcNow));
     }
 
     public override void OnGUI()
@@ -277,6 +278,10 @@ Quick checks:
 - No missing assembly errors
 - Hook callbacks trigger when gameplay events occur
 
+Dependency warning reference:
+
+- If `MelonLoader/Latest.log` shows `gregCore is missing MoonSharp.Interpreter v2.0.0.0`, download it from [NuGet: MoonSharp.Interpreter 2.0.0](https://www.nuget.org/packages/MoonSharp.Interpreter/2.0.0).
+
 ---
 
 ## 7. Next steps (advanced)
@@ -288,6 +293,43 @@ After first success, continue with:
 - 🔥 Harmony patches for game methods
 - 🔥 gregCore plugin architecture (`Templates/greg.PluginTemplate`)
 - 🔥 Workshop packaging and release workflow
+
+---
+
+## 8. Framework guard pattern (required)
+
+Use this minimal pattern in every gregCore mod:
+
+```csharp
+private bool _frameworkReady;
+
+public override void OnInitializeMelon()
+{
+    if (Core.Instance == null)
+    {
+        LoggerInstance.Warning("Core.Instance is null in OnInitializeMelon(). Waiting in OnUpdate().");
+        return;
+    }
+
+    _frameworkReady = true;
+}
+
+public override void OnUpdate()
+{
+    if (_frameworkReady)
+        return;
+
+    if (Core.Instance == null)
+        return;
+
+    _frameworkReady = true;
+}
+
+public override void OnApplicationQuit()
+{
+    _frameworkReady = false;
+}
+```
 
 ---
 

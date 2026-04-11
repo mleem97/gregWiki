@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using MelonLoader;
 using UnityEngine;
 using gregFramework.Core;
@@ -12,10 +11,6 @@ namespace HexViewer;
 public sealed class Main : MelonMod
 {
     private const string ModId = "HexViewer";
-    private const float MaxRayDistance = 10f;
-
-    private readonly List<string> _registeredHooks = new();
-
     private bool _frameworkReady;
     private bool _showPanel;
 
@@ -29,48 +24,41 @@ public sealed class Main : MelonMod
 
     public override void OnInitializeMelon()
     {
-        _frameworkReady = false;
         EnsureStyles();
+
+        if (Core.Instance == null)
+        {
+            LoggerInstance.Warning("[HexViewer] Core.Instance is null in OnInitializeMelon(). Waiting in OnUpdate().");
+            return;
+        }
+
         RegisterCoreHooks();
+        _frameworkReady = true;
     }
 
     public override void OnUpdate()
     {
         if (Core.Instance == null)
         {
-            _frameworkReady = false;
             return;
         }
 
         if (!_frameworkReady)
         {
+            RegisterCoreHooks();
             _frameworkReady = true;
-            MelonLogger.Msg("[HexViewer] gregCore ready.");
+            LoggerInstance.Msg("[HexViewer] gregCore ready.");
         }
-
-        ModFramework.Events.Publish(new ModTickEvent(Time.deltaTime, Time.frameCount));
 
         UpdateTargetFromRaycast();
     }
 
     private void RegisterCoreHooks()
     {
-        RegisterHook(GregNativeEventHooks.ServerInsertedInRack);
-        RegisterHook(GregNativeEventHooks.NetworkCreateNewCable);
-        RegisterHook(GregNativeEventHooks.ServerCustomerChanged);
-        RegisterHook(GregNativeEventHooks.RackButtonUnmountRack);
-    }
-
-    private void RegisterHook(string hookName)
-    {
-        var canonical = GregCompatBridge.Resolve(hookName);
-        if (GregCompatBridge.TryGetCanonical(hookName, out var gregName) && !string.IsNullOrWhiteSpace(gregName))
-        {
-            canonical = gregName;
-        }
-
-        GregEventDispatcher.On(canonical, OnHexTarget, ModId);
-        _registeredHooks.Add(canonical);
+        GregEventDispatcher.On(GregNativeEventHooks.ServerInsertedInRack, OnHexTarget, ModId);
+        GregEventDispatcher.On(GregNativeEventHooks.NetworkCreateNewCable, OnHexTarget, ModId);
+        GregEventDispatcher.On(GregNativeEventHooks.ServerCustomerChanged, OnHexTarget, ModId);
+        GregEventDispatcher.On(GregNativeEventHooks.RackButtonUnmountRack, OnHexTarget, ModId);
     }
 
     private void OnHexTarget(object payload)
@@ -96,7 +84,7 @@ public sealed class Main : MelonMod
         var rayOrigin = camera.transform.position;
         var rayDirection = camera.transform.forward;
 
-        if (!Physics.Raycast(rayOrigin, rayDirection, out RaycastHit hit, MaxRayDistance))
+        if (!Physics.Raycast(rayOrigin, rayDirection, out RaycastHit hit, 10f))
         {
             _showPanel = false;
             return;
@@ -153,13 +141,7 @@ public sealed class Main : MelonMod
     public override void OnApplicationQuit()
     {
         GregEventDispatcher.UnregisterAll(ModId);
-
-        foreach (var hook in _registeredHooks)
-        {
-            GregEventDispatcher.Off(hook, OnHexTarget);
-        }
-
-        _registeredHooks.Clear();
+        _frameworkReady = false;
     }
 
     private void EnsureStyles()

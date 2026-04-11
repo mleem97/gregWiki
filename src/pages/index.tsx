@@ -377,6 +377,18 @@ export default function HomePage(): JSX.Element {
                 {t.modManagerDownloadLabel}
               </a>
               <p className="text-sm text-on-surface-variant/90">{t.modManagerLatestHint}</p>
+              <p className="mt-2 text-sm text-on-surface-variant/90">
+                Attribution: Greg Mod Manager includes code originating from{' '}
+                <a
+                  href="https://github.com/ASavageSwan/-DataCenter-ModLoader"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  @ASavageSwan / DataCenter-ModLoader
+                </a>
+                {'.'}
+              </p>
             </div>
           </div>
         </motion.section>

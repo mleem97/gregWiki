@@ -55,6 +55,20 @@ export default function PlayersPage(): JSX.Element {
             <li>Start the game once and exit so interop assemblies are generated.</li>
             <li>If something fails, check <code className="text-sm">MelonLoader/Latest.log</code> in the game folder.</li>
           </ol>
+          <p className="mt-3 text-sm text-on-surface-variant">
+            If <code className="text-sm">Latest.log</code> shows{' '}
+            <code className="text-sm">gregCore is missing MoonSharp.Interpreter v2.0.0.0</code>,
+            download it from{' '}
+            <a
+              href="https://www.nuget.org/packages/MoonSharp.Interpreter/2.0.0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              NuGet (MoonSharp.Interpreter 2.0.0)
+            </a>
+            {'.'}
+          </p>
           <p className="mt-4 text-sm text-on-surface-variant">
             <strong>Greg Mod Manager</strong> includes a Health tab that checks MelonLoader and related
             folders — useful if a mod does not load.
@@ -78,6 +92,18 @@ export default function PlayersPage(): JSX.Element {
           <p className="mt-3 text-sm text-on-surface-variant">
             Uses GitHub’s <code className="text-sm">/releases/latest</code> redirect so the link always
             points at the newest build.
+          </p>
+          <p className="mt-2 text-sm text-on-surface-variant">
+            Attribution: Greg Mod Manager includes code originating from{' '}
+            <a
+              href="https://github.com/ASavageSwan/-DataCenter-ModLoader"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              @ASavageSwan / DataCenter-ModLoader
+            </a>
+            {'.'}
           </p>
         </section>
 

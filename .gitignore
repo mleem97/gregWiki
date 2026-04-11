@@ -9,3 +9,5 @@ build/
 npm-debug.log*
 pnpm-debug.log*
 **/MISSING.md
+**/MISSING*.md
+docs/FRAMEWORK_READINESS.md
