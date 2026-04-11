@@ -29,8 +29,14 @@
       currentPathname.includes('/privacy-policy') ||
       currentPathname.includes('/datenschutz');
 
+    const isModsRoute = /\/mods(\/|$)/.test(currentPathname);
+
     if (isLegalRoute) {
       document.documentElement.classList.add('route-legal');
+    }
+
+    if (isModsRoute) {
+      document.documentElement.classList.add('route-mods');
     }
 
     function isAllowedHost(host, root) {

@@ -503,7 +503,7 @@ export default function HomePage(): JSX.Element {
           viewport={viewport}
           variants={variants.section}
         >
-          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 lg:grid-cols-2">
+          <div className="mx-auto grid w-full max-w-[96rem] grid-cols-1 gap-6 lg:grid-cols-2">
             <motion.div
               id="discord-cta"
               className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-surface-container to-surface-container-high p-8 text-center md:p-10"
@@ -680,7 +680,7 @@ export default function HomePage(): JSX.Element {
           viewport={viewport}
           variants={variants.section}
         >
-          <div className="mx-auto flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div className="mx-auto flex w-full max-w-[96rem] flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
               <h3 className="font-headline text-2xl font-bold text-on-surface">{t.supportTitle}</h3>
               <p className="text-on-surface-variant">{t.supportText}</p>
