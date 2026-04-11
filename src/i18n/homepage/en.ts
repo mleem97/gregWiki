@@ -9,11 +9,11 @@ export const en: HomepageContent = {
   heroSub2: 'No magic. Just tools that work.',
   ctaStart: 'For players',
   ctaMods: "See what's in the Catalog",
-  ctaModManager: 'Download Mod Manager',
+  ctaModManager: 'Currently Windows Only',
   modManagerSectionTitle: '🎮 For Players (The "Greg" Approach)',
   modManagerSectionBody:
     'The Mod Manager is basically your toolbox. Use it to browse the Workshop, handle installs, and check missing dependencies. It is the easiest way to get started without digging through folders.',
-  modManagerDownloadLabel: 'Download Mod Manager',
+  modManagerDownloadLabel: 'Currently Windows Only',
   modManagerLatestHint: 'Uses GitHub’s /releases/latest redirect so you always get current assets.',
   docsPaths: 'Documentation',
   featureTitles: ['Help when it breaks', 'A cleaner Menu', '⚙️ Why use a Framework?', 'Compatibility'],

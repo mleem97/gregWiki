@@ -19,7 +19,7 @@ Prerequisites:
 
 - Visual Studio 2022 (or `dotnet` CLI)
 - .NET 6 SDK
-- MelonLoader reference assemblies in `gregCore/lib/references/`
+- MelonLoader/reference assemblies available to the upgraded loader in `gregModLoader/References/ReferenceScanner.cs`
 
 ---
 
@@ -308,7 +308,7 @@ Validation:
 
 - **`Core.Instance is null`**: framework bootstrap not ready; defer logic to next update tick.
 - **`EventId not mapped`**: update `GregNativeEventHooks` event ID mapping table.
-- **Build failures on references**: refresh MelonLoader references under `lib/references/` (for example via `tools/refresh_refs.py` in the gregCore repository).
+- **Build/reference resolution failures**: verify the folder passed to `ReferenceScanner.Initialize(basePath)` exists and contains required managed DLLs recursively (`*.dll`); verify `MelonLoader/Latest.log` for scanner warnings/errors.
 - **No event callbacks**: verify `GregEventDispatcher.On(...)` uses canonical `greg.*` hook names.
 
 ---

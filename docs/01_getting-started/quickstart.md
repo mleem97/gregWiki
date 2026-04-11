@@ -27,7 +27,11 @@ Or open **`gregCore/gregCore.sln`** in your IDE and build the **`gregCore/framew
 
 For CI without a local game install, many projects support **`-p:CI=true`** (see each `.csproj`).
 
-**Prerequisites:** MelonLoader **net6** assemblies and game Il2Cpp interop — either from `{Game}/MelonLoader/` or **`gregCore/lib/references/MelonLoader`** (e.g. `python gregCore/tools/refresh_refs.py`). Set **`DATA_CENTER_GAME_DIR`** if MSBuild should discover the game path.
+**Prerequisites:** MelonLoader **net6** assemblies and game Il2Cpp interop must be available at runtime/build. `gregCore` now contains a recursive reference loader in `gregModLoader/References/ReferenceScanner.cs` that scans a configured base folder for `*.dll`.
+
+⚠️ **WIKI/CODE CONFLICT**
+
+Older docs mention `gregCore/lib/references/MelonLoader` + `tools/refresh_refs.py`; with the upgraded reference system, the canonical behavior is scanner-driven from a host-configured base path. The exact runtime base path wiring for `ReferenceScanner.Initialize(basePath)` is **UNVERIFIED** in this wiki checkout and should be confirmed in the active `gregCore` startup/bootstrap path.
 
 ### Quick install (matches `gregCore/README.md`)
 

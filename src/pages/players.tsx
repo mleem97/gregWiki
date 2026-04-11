@@ -87,7 +87,7 @@ export default function PlayersPage(): JSX.Element {
             rel="noopener noreferrer"
             className="btn-primary inline-block rounded-lg px-6 py-3 font-semibold"
           >
-            Download latest release
+            Currently Windows Only
           </a>
           <p className="mt-3 text-sm text-on-surface-variant">
             Uses GitHub’s <code className="text-sm">/releases/latest</code> redirect so the link always
