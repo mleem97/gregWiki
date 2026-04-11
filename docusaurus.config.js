@@ -128,19 +128,19 @@ const config = {
             ],
           },
           {
-            to: '/wiki/guides/mod-developers/overview',
+            to: '/wiki/developers',
             from: ['/wiki/legacy/wiki-import/ModDevs/', '/wiki/wiki-import/ModDevs/'],
           },
           {
-            to: '/wiki/guides/contributors/topics-overview',
+            to: '/wiki/contributors/docusaurus-workflow',
             from: ['/wiki/legacy/wiki-import/Contributors/', '/wiki/wiki-import/Contributors/'],
           },
           {
-            to: '/wiki/mods/framework',
+            to: '/wiki/community/mod-index',
             from: ['/framework'],
           },
           {
-            to: '/wiki/plugins/',
+            to: '/mods',
             from: ['/plugins', '/standalone-mods', '/wiki/mods/plugins', '/wiki/mods/extensions'],
           },
           {
