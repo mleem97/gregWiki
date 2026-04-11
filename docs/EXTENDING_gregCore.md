@@ -20,6 +20,7 @@ Prerequisites:
 - Visual Studio 2022 (or `dotnet` CLI)
 - .NET 6 SDK
 - MelonLoader/reference assemblies available to the upgraded loader in `gregModLoader/References/ReferenceScanner.cs`
+- `MoonSharp.Interpreter` (`v2.0.0.0`) available at runtime for `gregCore` (typically `Data Center/Mods/MoonSharp.Interpreter.dll`)
 
 ---
 

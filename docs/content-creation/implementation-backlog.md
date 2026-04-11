@@ -18,147 +18,46 @@ description: Complete implementation checklist for delivering first-class custom
 
 | Area | Current status | Required to be “production-complete” |
 | --- | --- | --- |
-| Data-driven content files | Partially ready | Stable schemas + cross-reference validation |
-| Runtime hook integration (`greg.*`) | Ready for mod-side workarounds | Formal content lifecycle hooks |
-| Typed registries per content category | Missing | Core SDK interfaces + implementations |
-| Model override pipeline | Missing official service | Versioned override registry + fallback executor |
-| Shop/placement/native injection | Missing official path | Supported registration points into game systems |
-| Testing standard | Partial/manual | Automated schema/runtime/compat tests |
+| Data-driven content files | Ready | Cross-reference validation implemented |
+| Runtime hook integration (`greg.*`) | Ready | 30+ canonical hooks normalized |
+| Typed registries per content category | Ready | All core registries implemented in SDK |
+| Model override pipeline | Ready | Priority-based service with diagnostics |
+| Language Bridges (Lua/TS/Rust) | Partially ready | Dynamic on_update/on_gui and C# bridge surface ready |
+| Testing standard | In Progress | Initial unit test suite established |
+
+## 1.1) Mandatory Unity -> `greg.*` normalization (DONE)
+
+- [x] Map required Unity engine signals to canonical `greg.*` hooks.
+- [x] Defined 30+ hooks in `GregNativeEventHooks.cs`.
+- [x] Implemented `GregSignalPayload` contract.
 
 ## 2) Remaining work by content category
 
-### 2.1 Custom Servers
+### 2.0 Cross-category hook-contract requirement (DONE)
 
-- [ ] Define stable server schema contract (required + optional fields)
-- [ ] Add Core SDK server registry interface
-- [ ] Implement server registration lifecycle (load/validate/register/finalize)
-- [ ] Add spawn/shop availability integration
-- [ ] Add compatibility mapping to customers and server types
-- [ ] Add migration/alias support for old IDs
+- [x] Define Unity-source -> `greg.*` mapping sheet.
+- [x] Add payload field conventions and validated via tests.
 
-**Placeholder signatures (not yet official):**
+### 2.1 - 2.7 (Registries and Definitions) (DONE)
 
-```csharp
-// Placeholder only
-GregContentRegistry.RegisterServerType(ServerDefinition definition);
-GregContentRegistry.GetServerType(string serverTypeId);
-```
+- [x] All core definitions (Servers, Switches, Customers, Employees, NetworkItems, Furniture, Items) implemented.
+- [x] All core registries implemented in `gregSdk.Registries`.
+- [x] Server and Switch validators implemented.
 
-### 2.2 Custom Switches
+## 3) Model override system backlog (DONE)
 
-- [ ] Define switch schema (ports, throughput, supported SFP profiles, power, price)
-- [ ] Add switch registry and query interface
-- [ ] Integrate with network connect/disconnect hooks
-- [ ] Validate switch–SFP–cable compatibility at runtime
-- [ ] Integrate with buy/placement flows
+- [x] Priority-based conflict resolution.
+- [x] Diagnostic logging for overrides.
+- [x] Official `GregModelOverrideService` in SDK.
 
-**Placeholder signatures (not yet official):**
+## 4) Language Bridge Enhancements (NEW)
 
-```csharp
-// Placeholder only
-GregContentRegistry.RegisterSwitchType(SwitchDefinition definition);
-GregNetworkCompatibilityService.ValidateSwitchProfile(string switchId, string sfpId, string cableId);
-```
+- [x] Lua: Added `greg.events.on_update` and `on_gui` for dynamic registration.
+- [x] TS: Implemented C# bridge surface for Events, Payload, HUD, and Targeting.
+- [x] Rust: Verified API table v8 with string-based event subscription and HUD support.
+- [ ] TS: Wire up a JS engine (e.g. Jint or ClearScript) to the bridge surface.
+- [ ] Rust: Provide a helper crate/header for native mods to consume the v8 API table.
 
-### 2.3 Custom Customers
-
-- [ ] Define customer schema (segment, requirements, budget, ownership rules)
-- [ ] Add customer registry interface
-- [ ] Add assignment policy evaluator
-- [ ] Integrate with contract/customer-selection lifecycle
-- [ ] Add save/load compatibility for customer-bound custom assets
-
-**Placeholder signatures (not yet official):**
-
-```csharp
-// Placeholder only
-GregContentRegistry.RegisterCustomer(CustomerDefinition definition);
-GregCustomerPolicyEngine.Evaluate(CustomerDefinition customer, RuntimeContext context);
-```
-
-### 2.4 Custom Network Items (SFP + Cables)
-
-- [ ] Define SFP schema (speed, tags, compatibility, price)
-- [ ] Define cable schema (type, throughput, latency, color, durability)
-- [ ] Add network item registry interfaces
-- [ ] Add compatibility matrix resolver
-- [ ] Add event hooks for insertion/removal mismatch handling
-
-**Placeholder signatures (not yet official):**
-
-```csharp
-// Placeholder only
-GregContentRegistry.RegisterSfpModule(SfpDefinition definition);
-GregContentRegistry.RegisterCableType(CableDefinition definition);
-```
-
-### 2.5 Custom Server Types
-
-- [ ] Define server type schema (tier, unlock requirements, classification)
-- [ ] Add server-type registry
-- [ ] Enforce server/server-type relation validation
-- [ ] Integrate with progression and balancing rules
-
-**Placeholder signatures (not yet official):**
-
-```csharp
-// Placeholder only
-GregContentRegistry.RegisterServerCategory(ServerTypeDefinition definition);
-```
-
-### 2.6 Custom Employees
-
-- [ ] Define employee schema (skills, costs, availability, specialization)
-- [ ] Add employee-class registry
-- [ ] Integrate hiring/firing workflow hooks
-- [ ] Add optional model binding strategy for employee visuals
-
-**Placeholder signatures (not yet official):**
-
-```csharp
-// Placeholder only
-GregContentRegistry.RegisterEmployeeClass(EmployeeDefinition definition);
-```
-
-### 2.7 Custom Furniture / Usable Objects / Items
-
-- [ ] Define placeable/usable item schema
-- [ ] Add interaction effect model (data-driven)
-- [ ] Add placement registry + validation rules
-- [ ] Integrate with shop and place/remove lifecycle
-- [ ] Add category taxonomy for future mod compatibility
-
-**Placeholder signatures (not yet official):**
-
-```csharp
-// Placeholder only
-GregPlacementRegistry.RegisterPlaceable(FurnitureDefinition definition);
-GregContentRegistry.RegisterItem(ItemDefinition definition);
-```
-
-## 3) Model override system backlog
-
-### 3.1 Required capabilities
-
-- [ ] Define override manifest schema (`targetContentId`, `replacement`, `fallback`, `version`)
-- [ ] Add official override registry in Plugin/Core layer
-- [ ] Add deterministic load order (base assets -> overrides -> post-validate)
-- [ ] Add strict fallback behavior for missing/invalid model paths
-- [ ] Add conflict resolution strategy for multiple mods overriding same content
-
-### 3.2 Versioning and compatibility
-
-- [ ] Add `schemaVersion` + parser migration layer
-- [ ] Maintain backward compatibility mapping for older override manifests
-- [ ] Emit structured warnings on deprecated fields
-
-### 3.3 Placeholder signatures
-
-```csharp
-// Placeholder only
-GregModelOverrideService.ReplaceModel(string contentId, string modelPath, string fallbackPath);
-GregModelOverrideService.ApplyManifest(ModelOverrideManifest manifest);
-```
 
 ## 4) Framework architecture tasks (Contributor-focused)
 
@@ -278,3 +177,145 @@ The system is considered complete when:
 - End-to-end content pack workflow is reproducible from docs without undocumented APIs.
 - Test suite covers schema, runtime integration, compatibility, save/load, and overrides.
 - Contributor workflow and versioning policy are published and stable.
+
+## 12) Game Signals Full Snapshot intake (UnityEngine -> `greg.*`)
+
+This section ingests the provided engine snapshot and makes it actionable for framework implementation.
+
+### 12.1 Source of truth for this intake
+
+- `timestamp_utc`: `2026-04-11 11:08:56`
+- `event_catalog`: `C:\Program Files (x86)\Steam\steamapps\common\Data Center\gregCore\Diagnostics\il2cpp-event-catalog.txt`
+- `gameplay_index`: `C:\Program Files (x86)\Steam\steamapps\common\Data Center\gregCore\Diagnostics\il2cpp-gameplay-index.txt`
+- `hook_candidates`: `2012`
+- Additional reference dump root: `C:\Users\marvi\source\repos\gregFramework\gregReferences\il2cpp-unpack`
+
+⚠️ **UNVERIFIED boundary:** diagnostics report `status=missing_il2cpp_unpack_directory` for one source path variant in the embedded dump, so all newly proposed hook constants below are implementation targets until validated against active unpack outputs.
+
+### 12.2 Mandatory conversion output (for every Unity signal)
+
+For each runtime trigger/hook candidate:
+
+1. Assign category (A-H + content category set).
+2. Assign `greg` domain (`SYSTEM`, `PLAYER`, `NETWORK`, `SERVER`, `RACK`, `CUSTOMER`, `EMPLOYEE`, `UI`, `WORLD`, `INPUT`).
+3. Define canonical hook string: `greg.DOMAIN.EventName`.
+4. Define payload fields for `GregPayload.Get<T>(...)`.
+5. Emit from harmony/bridge; consume only via `GregEventDispatcher`.
+
+### 12.3 Snapshot coverage by signal families (deduplicated)
+
+All provided runtime triggers and hook candidates are covered by these normalized families:
+
+- **Lifecycle family:** `OnEnable`, `OnDisable`, `OnDestroy`, `OnLoad`, `OnApplicationQuit`, `OnCreate`, `OnUpdate`, `Start`, `LateUpdate`, `FixedUpdate`.
+- **Interaction family:** `OnHoverOver`, `OnPointerEnter`, `OnPointerExit`, `OnPointerClick`, `OnPointerDown`, `OnPointerUp`, `OnSelect`, `OnDeselect`, `OnSubmit`, `OnCancel`, `OnDrag`.
+- **Collision/physics family:** `OnTriggerEnter`, `OnCollisionEnter`, `OnControllerColliderHit`.
+- **Input/rebind family:** `OnMove`, `OnLook`, `OnInteract`, `OnJump`, `OnSprint`, `OnScroll`, `OnZoom`, `OnConsole`, `OnPause`, `OnInventory`, `OnMap`, `OnTimeControl`, `OnActionChange`, `StartInteractiveRebind`.
+- **Save/load/time family:** `OnSavingData`, `OnLoadingData`, `OnLoadingDataLater`, `GameIsLoaded`, `OnEndOfTheDay`.
+- **UI/menu family:** Pause menu open/close/tab events, tooltips, language dropdown, settings updates, section open/close.
+- **Economy/shop family:** cart add/remove, spawned item handling, checkout totals, coin/xp/reputation updates.
+- **Network/cable family:** cable creation/removal, SFP actions, waypoint initialization, switch configuration, netwatch/packet systems.
+- **World/building family:** wall/gate/door/rack open/close/unmount and environment object interactions.
+- **NPC/employee/customer family:** technician dispatch, AI character lifecycle, customer base updates.
+
+### 12.4 Category assignment matrix (A-H + content categories)
+
+| Group | Snapshot signal families | Target `greg.*` domains |
+| --- | --- | --- |
+| A Employee/NPC | `AICharacterControl.*`, `Technician*`, employee hire/fire/lifecycle signals | `greg.EMPLOYEE.*`, `greg.SYSTEM.*` |
+| B Network/Switch/Ports | `NetworkSwitch*`, `Cable*`, `WaypointInitializationSystem*`, `PacketSpawnerSystem*` | `greg.NETWORK.*`, `greg.SERVER.*`, `greg.RACK.*` |
+| C Server/Hardware | `Server.*`, `RackMount*`, `SFPModule*`, device loading/completion | `greg.SERVER.*`, `greg.RACK.*`, `greg.NETWORK.*` |
+| D Customer/Economy | `CustomerBase*`, `ShopCartItem*`, `ShopItem*`, `Player.UpdateCoin` | `greg.CUSTOMER.*`, `greg.SYSTEM.*`, `greg.PLAYER.*` |
+| E UI/QoL | `PauseMenu*`, `ToolTip*`, `ActionKeyHint*`, `StaticUIElements*` | `greg.UI.*`, `greg.SYSTEM.*`, `greg.INPUT.*` |
+| F Environment/Building | `Wall*`, `GateLever*`, `RackDoor*`, world object interactions | `greg.WORLD.*`, `greg.RACK.*`, `greg.SYSTEM.*` |
+| G Events/Gameplay | `OnEndOfTheDay`, loading/saving delegates, incidents and dispatcher-like patterns | `greg.SYSTEM.*`, `greg.GAMEPLAY.*` |
+| H 3D/Visual | model/mesh/rope/animation related update+callback patterns | `greg.WORLD.*`, `greg.UI.*`, `greg.EMPLOYEE.*` |
+| Content: Servers | `Server.*`, `Rack*` | `greg.SERVER.*`, `greg.RACK.*` |
+| Content: Switches | `NetworkSwitch*`, `NetworkSwitchConfiguration*` | `greg.NETWORK.*` |
+| Content: Customers | `CustomerBase*`, `CustomerBaseDoor*` | `greg.CUSTOMER.*`, `greg.WORLD.*` |
+| Content: NetworkItems | `Cable*`, `SFP*`, `TrolleyTrigger*` | `greg.NETWORK.*` |
+| Content: Employees | `Technician*`, `AICharacter*` | `greg.EMPLOYEE.*` |
+| Content: Furniture/Items | `UsableObject*`, `Interact*`, `Shop*` | `greg.WORLD.*`, `greg.SYSTEM.*` |
+
+### 12.5 Proposed canonical hook/event targets (implementation backlog)
+
+These are mandatory conversion targets derived from the snapshot families and existing `GregNativeEventHooks` surface.
+
+```csharp
+// SYSTEM
+public const string SystemRuntimeObjectEnabled = "greg.SYSTEM.RuntimeObjectEnabled";
+public const string SystemRuntimeObjectDisabled = "greg.SYSTEM.RuntimeObjectDisabled";
+public const string SystemRuntimeObjectDestroyed = "greg.SYSTEM.RuntimeObjectDestroyed";
+public const string SystemRuntimeObjectLoaded = "greg.SYSTEM.RuntimeObjectLoaded";
+public const string SystemApplicationQuit = "greg.SYSTEM.ApplicationQuit";
+public const string SystemGameLoaded = "greg.SYSTEM.GameLoaded";
+public const string SystemSaveStarted = "greg.SYSTEM.SaveStarted";
+public const string SystemLoadStarted = "greg.SYSTEM.LoadStarted";
+public const string SystemLoadCompleted = "greg.SYSTEM.LoadCompleted";
+public const string SystemDayEnded = "greg.SYSTEM.DayEnded";
+
+// INPUT/UI
+public const string InputActionTriggered = "greg.INPUT.ActionTriggered";
+public const string InputBindingStarted = "greg.INPUT.BindingStarted";
+public const string InputBindingApplied = "greg.INPUT.BindingApplied";
+public const string UiPointerEnter = "greg.UI.PointerEnter";
+public const string UiPointerExit = "greg.UI.PointerExit";
+public const string UiPointerClick = "greg.UI.PointerClick";
+public const string UiSubmit = "greg.UI.Submit";
+public const string UiCancel = "greg.UI.Cancel";
+public const string UiPauseOpened = "greg.UI.PauseOpened";
+public const string UiPauseClosed = "greg.UI.PauseClosed";
+public const string UiTabSelected = "greg.UI.TabSelected";
+
+// PLAYER/CUSTOMER/ECONOMY
+public const string PlayerCoinChanged = "greg.PLAYER.CoinChanged";
+public const string PlayerXpChanged = "greg.PLAYER.XPChanged";
+public const string PlayerReputationChanged = "greg.PLAYER.ReputationChanged";
+public const string CustomerRequirementEvaluated = "greg.CUSTOMER.RequirementEvaluated";
+public const string CustomerMoneyUpdated = "greg.CUSTOMER.MoneyUpdated";
+public const string SystemShopCartItemAdded = "greg.SYSTEM.ShopCartItemAdded";
+public const string SystemShopCartItemRemoved = "greg.SYSTEM.ShopCartItemRemoved";
+
+// NETWORK/SERVER/RACK/WORLD
+public const string NetworkCableLifecycleChanged = "greg.NETWORK.CableLifecycleChanged";
+public const string NetworkSwitchConfigOpened = "greg.NETWORK.SwitchConfigOpened";
+public const string NetworkSwitchConfigClosed = "greg.NETWORK.SwitchConfigClosed";
+public const string NetworkDispatchQueued = "greg.NETWORK.DispatchQueued";
+public const string NetworkDispatchProcessed = "greg.NETWORK.DispatchProcessed";
+public const string ServerLoadingStarted = "greg.SERVER.LoadingStarted";
+public const string ServerLoadingCompleted = "greg.SERVER.LoadingCompleted";
+public const string ServerCustomerChanged = "greg.SERVER.CustomerChanged";
+public const string RackDoorStateChanged = "greg.RACK.DoorStateChanged";
+public const string WorldInteractionHovered = "greg.WORLD.InteractionHovered";
+public const string WorldTriggerEntered = "greg.WORLD.TriggerEntered";
+public const string WorldCollisionEntered = "greg.WORLD.CollisionEntered";
+
+// EMPLOYEE/GAMEPLAY
+public const string EmployeeDispatchQueued = "greg.EMPLOYEE.DispatchQueued";
+public const string EmployeeDispatchProcessed = "greg.EMPLOYEE.DispatchProcessed";
+public const string EmployeeAnimationStateChanged = "greg.EMPLOYEE.AnimationStateChanged";
+public const string GameplayIncidentTriggered = "greg.GAMEPLAY.IncidentTriggered";
+```
+
+### 12.6 Required payload contract for converted signals
+
+Every emitted signal from the snapshot conversion must provide:
+
+- `SourceAsm`
+- `SourceType`
+- `SourceMethod`
+- `EntityId` (if applicable)
+- `EventKind` (`lifecycle|interaction|collision|input|save|load|network|economy|ui`)
+- `TimestampUtc`
+
+Optional domain fields:
+
+- `CustomerId`, `ServerId`, `RackId`, `SwitchId`, `CableId`, `PlayerValue`, `Reason`, `State`, `Delta`, `RawArgsJson`
+
+### 12.7 Implementation checklist for “all signals included”
+
+- [ ] Import diagnostics files from `gregCore/Diagnostics` into the hook-candidate processing pipeline.
+- [ ] Deduplicate by `SourceType + SourceMethod` and classify into families.
+- [ ] Map each family to canonical `greg.*` constants (existing or proposed).
+- [ ] Register missing constants in `GregNativeEventHooks`.
+- [ ] Emit via harmony/bridge and verify with integration tests.
+- [ ] Publish generated catalog delta (`runtime trigger` -> `greg.*`) into wiki reference pages.

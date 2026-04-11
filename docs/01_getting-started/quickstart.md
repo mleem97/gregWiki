@@ -29,6 +29,8 @@ For CI without a local game install, many projects support **`-p:CI=true`** (see
 
 **Prerequisites:** MelonLoader **net6** assemblies and game Il2Cpp interop must be available at runtime/build. `gregCore` now contains a recursive reference loader in `gregModLoader/References/ReferenceScanner.cs` that scans a configured base folder for `*.dll`.
 
+`gregCore` also requires `MoonSharp.Interpreter` (`v2.0.0.0`) at runtime. If missing, place `MoonSharp.Interpreter.dll` next to `gregCore.dll` under `Data Center/Mods/`.
+
 ⚠️ **WIKI/CODE CONFLICT**
 
 Older docs mention `gregCore/lib/references/MelonLoader` + `tools/refresh_refs.py`; with the upgraded reference system, the canonical behavior is scanner-driven from a host-configured base path. The exact runtime base path wiring for `ReferenceScanner.Initialize(basePath)` is **UNVERIFIED** in this wiki checkout and should be confirmed in the active `gregCore` startup/bootstrap path.

@@ -258,6 +258,11 @@ const config = {
     },
   ],
   themeConfig: {
+    docs: {
+      sidebar: {
+        autoCollapseCategories: false,
+      },
+    },
     image: 'img/logo.svg',
     colorMode: {
       defaultMode: 'dark',
