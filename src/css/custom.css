@@ -807,6 +807,13 @@ html.route-legal .app-card-glow::after {
   text-decoration: none;
 }
 
+.players-content-container {
+  max-width: var(--layout-max-width);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--color-surface-container-low) 84%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-outline-variant) 14%, transparent);
+}
+
 @media (max-width: 996px) {
   .navbar {
     -webkit-backdrop-filter: blur(14px) saturate(130%);

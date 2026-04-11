@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import GregGithubReleases from '../components/GregGithubReleases';
 
 const GREG_MODMANAGER_LATEST =
   'https://github.com/mleem97/GregToolsModmanager/releases/latest';
@@ -14,7 +15,7 @@ export default function PlayersPage(): JSX.Element {
       title="For players"
       description="Install and use Data Center mods: MelonLoader, Greg Mod Manager, Workshop, and troubleshooting."
     >
-      <main className="bg-background text-on-surface mx-auto max-w-3xl px-4 py-16 font-sans">
+      <main className="players-content-container bg-background text-on-surface mx-auto px-4 py-16 font-sans">
         <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">
           Not for mod authors
         </p>
@@ -102,6 +103,9 @@ export default function PlayersPage(): JSX.Element {
             </Link>{' '}
             and in the author wiki.
           </p>
+          <div className="mt-6">
+            <GregGithubReleases owner="mleem97" repoPrefix="greg" />
+          </div>
         </section>
 
         <section id="catalog" className="mb-12 scroll-mt-20">
