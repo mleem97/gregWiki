@@ -1,4 +1,10 @@
 ﻿{
-    "position":  4,
-    "label":  "👥 Community"
+    "label": "🤝 Community",
+    "position": 8,
+    "collapsible": true,
+    "collapsed": true,
+    "link": {
+        "type": "generated-index",
+        "description": "Community workflows, contribution guides, compatibility, and troubleshooting resources."
+    }
 }

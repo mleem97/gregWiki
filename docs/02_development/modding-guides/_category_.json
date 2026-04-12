@@ -1,8 +1,10 @@
 {
-    "label": "🚀 Modding Guides",
-    "position": 1,
+    "label": "Languages",
+    "position": 4,
+    "collapsible": true,
+    "collapsed": true,
     "link": {
         "type": "generated-index",
-        "description": "Step-by-step guides for building mods in C#, Lua, Rust, and TypeScript."
+        "description": "Language-specific modding guides for C#, Lua, Rust, and TypeScript."
     }
 }

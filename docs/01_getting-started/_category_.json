@@ -1,4 +1,10 @@
 ﻿{
-    "position":  1,
-    "label":  "🚀 Getting Started"
+    "label": "🚀 Start",
+    "position": 1,
+    "collapsible": true,
+    "collapsed": false,
+    "link": {
+        "type": "generated-index",
+        "description": "Intro, architecture, and quickstart for gregFramework mod and plugin authors."
+    }
 }

@@ -1,4 +1,10 @@
 ﻿{
-    "position":  3,
-    "label":  "🎨 Design System"
+    "label": "🖥️ UI",
+    "position": 4,
+    "collapsible": true,
+    "collapsed": true,
+    "link": {
+        "type": "generated-index",
+        "description": "Design language, visual philosophy, and component styling guidance for UI work."
+    }
 }

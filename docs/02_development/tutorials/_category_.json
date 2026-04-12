@@ -1,6 +1,10 @@
 {
-  "label": "Tutorials",
-  "position": 3,
+  "label": "HexViewer",
+  "position": 5,
   "collapsible": true,
-  "collapsed": false
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Hands-on HexViewer tutorials across supported scripting languages."
+  }
 }

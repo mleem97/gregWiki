@@ -1,0 +1,10 @@
+{
+  "label": "🎓 Guides",
+  "position": 3,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Content creation workflows, data integration patterns, and deployment guidance."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "label": "Hooks Library",
+  "position": 3,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Domain-organized `greg.*` hook pages with payload contracts and examples."
+  }
+}

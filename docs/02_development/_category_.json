@@ -1,4 +1,10 @@
 ﻿{
-    "position":  2,
-    "label":  "🛠️ Development"
+    "label": "📡 API",
+    "position": 2,
+    "collapsible": true,
+    "collapsed": true,
+    "link": {
+        "type": "generated-index",
+        "description": "Core API concepts, references, hook domains, and development internals."
+    }
 }

@@ -1,4 +1,10 @@
 ﻿{
-    "position":  5,
-    "label":  "⚖️ Legal"
+    "label": "⚖️ Legal",
+    "position": 10,
+    "collapsible": true,
+    "collapsed": true,
+    "link": {
+        "type": "generated-index",
+        "description": "Legal and sponsorship pages relevant to gregFramework documentation."
+    }
 }
