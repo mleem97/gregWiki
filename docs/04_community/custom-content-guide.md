@@ -30,4 +30,3 @@ Asset-side readiness assumes model and game runtime constraints may require dev-
 - Define item/category IDs before asset import.
 - Define interaction rules (proximity, keybind, target type).
 - Define save/load mapping for all placeable assets.
-

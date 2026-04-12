@@ -77,6 +77,7 @@ Get-ChildItem "$env:STEAM_LIBRARY\Data Center\MelonLoader\Il2CppAssemblies\" -Fi
 ```
 
 Use the **ILSpy VSCode Extension** to decompile:
+
 - `Ctrl+Shift+P` → `ILSpy: Decompile Assembly`
 - Navigate to `Il2CppAssemblies\Assembly-CSharp.dll`
 - Search for the class/method being documented
@@ -92,6 +93,7 @@ Use the **ILSpy VSCode Extension** to decompile:
 ```
 
 Use gregReferences as a fast lookup before opening ILSpy:
+
 - Check `methods.json` for method signatures
 - Check `changelog.md` for renamed/removed methods since last analysis
 
@@ -120,6 +122,7 @@ Use gregReferences as a fast lookup before opening ILSpy:
 **Source of truth:** gregCore `Services/` + `Hooks/` + `hooks-catalog.md`
 
 Check for:
+
 - [ ] All public methods documented with correct signatures
 - [ ] All parameters typed correctly (match C# source)
 - [ ] Return types correct
@@ -129,6 +132,7 @@ Check for:
 - [ ] Version number when introduced
 
 **Hook entry must match this format exactly:**
+
 ```markdown
 ### greg.CATEGORY.EventName
 
@@ -149,6 +153,7 @@ Check for:
 **Source of truth:** gregCore source + Assembly-CSharp.dll
 
 Check for:
+
 - [ ] Code examples compile against current gregCore API
 - [ ] Method names match Assembly-CSharp.dll (not assumed names)
 - [ ] No references to removed/renamed services
@@ -156,11 +161,13 @@ Check for:
 - [ ] Links to related hooks in `hooks-catalog.md` resolve correctly
 
 **Code block header format:**
+
 ```markdown
 ```csharp
 // gregCore v1.x.x | Assembly-CSharp v{game_version}
 // Verified against: GregXyzService.cs
 ```
+
 ```
 
 ---
@@ -194,6 +201,7 @@ Check for:
 Run these checks on every wiki update session:
 
 ```
+
 CHECK 1 — Method name drift
   For every method name in wiki code blocks:
   → Search in Assembly-CSharp.dll (via gregReferences/methods.json)
@@ -218,6 +226,7 @@ CHECK 5 — Assembly-divergent types
   For every C# type in wiki code examples:
   → Verify type exists in Il2CppAssemblies or gregCore
   → IL2CPP types: check for Il2Cpp prefix variants
+
 ```
 
 ---
@@ -234,6 +243,7 @@ Every wiki page that mentions a class from `Assembly-CSharp.dll` must include:
 ```
 
 Every wiki page that documents a gregCore service must link:
+
 - The source file in `gregCore/csharp/Services/`
 - The corresponding hook(s) in `hooks-catalog.md`
 - The relevant patch in `gregCore/csharp/Patches/`
@@ -287,6 +297,7 @@ Assembly verified : [yes/no — which methods checked]
 Recommended next  : [list]
 ═══════════════════════════════════════════════════════
 ```
+
 ```
 
 ***

@@ -59,11 +59,13 @@ Verschiebe hierhin: README.md, tree.md, IDEA_BACKLOG.md, repo-inventory.md, mono
 Phase 3: Docusaurus Metadata (Refinement)
 Erstelle in jedem Hauptordner eine _category_.json Datei mit dem passenden Label (z.B. label: "🛠️ Development") und setze die position entsprechend der Nummerierung.
 
-Füge in jede Markdown-Datei einen sauberen Frontmatter Block am Anfang ein:
+Füge in jede Markdown-Datei einen sauberen Frontmatter Block am Anfang ein
 ---
+
 title: [Generiere Titel basierend auf Dateiname/Inhalt]
 sidebar_label: [Kurzer Name]
 ---
+
 Prüfe interne Links: Wenn eine Datei auf eine alte Struktur verlinkt (z.B. [Arch](../framework/architecture.md)), korrigiere den Link auf die neue flache Struktur.
 
 Phase 4: Cleanup

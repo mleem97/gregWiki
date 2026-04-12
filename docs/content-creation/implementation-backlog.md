@@ -58,7 +58,6 @@ description: Complete implementation checklist for delivering first-class custom
 - [ ] TS: Wire up a JS engine (e.g. Jint or ClearScript) to the bridge surface.
 - [ ] Rust: Provide a helper crate/header for native mods to consume the v8 API table.
 
-
 ## 4) Framework architecture tasks (Contributor-focused)
 
 ### 4.1 Core SDK work

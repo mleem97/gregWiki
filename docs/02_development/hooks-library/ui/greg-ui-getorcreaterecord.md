@@ -66,6 +66,7 @@ Unregister: `GregEventDispatcher.Off("greg.UI.GetOrCreateRecord", handler)` (sam
 
 - [Overview of all greg hooks](/wiki/_internal/README)
 - Source: `gregCore/gregFramework/greg_hooks.json`
+
 ## Usage in Rust
 
 If your Rust bridge exposes the event bus, subscribe to the exact hook name:
@@ -117,4 +118,3 @@ gregBus.on("greg.UI.GetOrCreateRecord", (payload) => {
 ~~~
 
 When using RPC/WebSocket transport, keep `greg.UI.GetOrCreateRecord` as the canonical routing key end-to-end.
-

@@ -9,10 +9,12 @@ description: Fired when a UI element is clicked. (Normalized Unity Signal)
 This hook is triggered when a user clicks on a supported UI component.
 
 ## Payload
+
 - `EntityId`: Name of the UI element.
 - `TimestampUtc`: Time of the event.
 
 ## Example
+
 ```csharp
 using gregSdk;
 

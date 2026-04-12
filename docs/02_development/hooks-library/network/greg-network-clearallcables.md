@@ -9,6 +9,7 @@ description: Canonical event hook for greg.NETWORK.ClearAllCables (Normalized Un
 This hook is triggered during the $fullHook event lifecycle. It is part of the normalized gregCore event pipeline.
 
 ## Payload Contract (GregSignalPayload)
+
 - SourceAsm: Assembly name
 - SourceType: Type name
 - SourceMethod: Method name
@@ -16,6 +17,7 @@ This hook is triggered during the $fullHook event lifecycle. It is part of the n
 - TimestampUtc: Time of the event
 
 ## Example
+
 ````csharp
 using gregSdk;
 

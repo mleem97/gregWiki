@@ -14,6 +14,7 @@ import TabItem from '@theme/TabItem';
 ## Verfügbare Services (gregSdk.Services)
 
 ### 1. GregGameManagerService
+
 Steuerung des globalen Spielzustands und der UI-Layer.
 
 <Tabs groupId="language">
@@ -37,6 +38,7 @@ Steuerung des globalen Spielzustands und der UI-Layer.
 </Tabs>
 
 ### 2. GregPlayerManagerService
+
 Interaktion mit dem Spieler-Avatar und dem Cursor.
 
 <Tabs groupId="language">
@@ -54,6 +56,7 @@ Interaktion mit dem Spieler-Avatar und dem Cursor.
 </Tabs>
 
 ### 3. GregShopService
+
 Vollständige Kontrolle über das Einkaufsmenü und physische Pakete.
 
 <Tabs groupId="language">
@@ -73,4 +76,5 @@ Vollständige Kontrolle über das Einkaufsmenü und physische Pakete.
 *(Weitere Services finden Sie in den entsprechenden Sprach-SDK-Referenzen.)*
 
 ## Best Practices
+
 Alle Services nutzen intern `UnityEngine.Object.FindObjectOfType`. Rufen Sie diese Methoden daher **nicht** in jeder `Update()`-Schleife auf, sondern nur bei Bedarf (z.B. Event-getrieben), um die Performance zu schonen.

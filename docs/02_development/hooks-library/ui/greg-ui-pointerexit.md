@@ -9,10 +9,12 @@ description: Fired when the mouse pointer leaves a UI element. (Normalized Unity
 This hook is triggered whenever the mouse cursor leaves the boundaries of a supported UI element.
 
 ## Payload
+
 - `EntityId`: Name of the UI element.
 - `TimestampUtc`: Time of the event.
 
 ## Example
+
 ```csharp
 using gregSdk;
 

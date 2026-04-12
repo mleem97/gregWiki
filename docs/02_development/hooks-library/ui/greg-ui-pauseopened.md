@@ -9,6 +9,7 @@ description: Fired when the pause menu is opened. (Normalized Unity Signal)
 Triggered when the player opens the game's pause menu.
 
 ## Example
+
 ```csharp
 using gregSdk;
 

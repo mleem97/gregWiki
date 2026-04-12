@@ -38,4 +38,3 @@ What you cannot do in a public repo:
 - Fully hide tracked source files from non-contributors.
 
 If you need true visibility restriction, use a private repo/submodule for docs infra.
-

@@ -9,17 +9,21 @@ description: How to build native mods in Rust using the gregCore FFI bridge.
 Rust is preferred for high-performance logic, low-level engine access, and compiled safety.
 
 ## 1. Project Setup
+
 Use the **`HexLabelMod`** Rust template.
 
-1.  Copy the `rust/` folder from the `HexLabelMod` template.
-2.  The template includes a `Cargo.toml` configured for building a dynamic library (`cdylib`).
-3.  Include `greg_api.h` in your project if you need to use the C-compatible header for FFI.
+1. Copy the `rust/` folder from the `HexLabelMod` template.
+2. The template includes a `Cargo.toml` configured for building a dynamic library (`cdylib`).
+3. Include `greg_api.h` in your project if you need to use the C-compatible header for FFI.
 
 ## 2. Consuming the API
+
 Native mods receive a function pointer table from `gregCore`.
 
 ### Event Subscription
+
 Subscribe to events via the `subscribe_event` function pointer:
+
 ```rust
 // Pseudocode for Rust FFI usage
 unsafe {
@@ -36,7 +40,9 @@ extern "C" fn my_handler_callback(payload: *mut c_void) {
 ```
 
 ### HUD, IMGUI, and Targeting
+
 Access the native Unity IMGUI surface and perform raycasts:
+
 ```rust
 unsafe {
     let mut out_name: *const c_char = std::ptr::null();
@@ -56,6 +62,7 @@ unsafe {
 ```
 
 ## 3. Deployment
+
 1. Build your Rust project using `cargo build --release`.
 2. Copy the resulting `.dll` (or `.so`) from `target/release/` to `Data Center/Mods/RustMods/`.
 3. Ensure `gregCore.dll` is present in `Data Center/Mods/`.

@@ -6,7 +6,7 @@ slug: /development/tutorials/hexviewer-csharp
 description: Learn how to build a JADE-style HUD mod using gregCore and gregSdk.
 ---
 
-# Building the HexViewer in C#
+# Building the HexViewer in C #
 
 The HexViewer is the reference implementation for a JADE-style HUD. It detects the object the player is looking at and displays technical metadata.
 
@@ -34,6 +34,7 @@ Create a new C# Class Library project targeting **.NET 6.0**. Ensure you referen
 We will use `gregGameHooks` for targeting and `GregMetadataService` for retrieving object info.
 
 ### The JADE Style Class
+
 First, define the JADE visual constants:
 
 ```csharp
@@ -47,6 +48,7 @@ public static class JadeStyle {
 ```
 
 ### The Mod Logic
+
 Implement the `OnGUI` loop to render the panel:
 
 ```csharp
@@ -87,11 +89,12 @@ public class HexViewerMod : MelonMod {
 
 ## 3. Deployment
 
-1.  Compile your mod.
-2.  Copy the `.dll` to `Data Center/Mods/`.
-3.  Launch the game and hover over a rack or server to see the JADE HUD in action.
+1. Compile your mod.
+2. Copy the `.dll` to `Data Center/Mods/`.
+3. Launch the game and hover over a rack or server to see the JADE HUD in action.
 
 ## Key Takeaways
+
 - Use **`gregGameHooks.RaycastForward`** for consistent targeting.
 - Pull custom data from **`GregMetadataService`**.
 - Always follow the **JADE Style** (Center-top, 400px width, specific colors).

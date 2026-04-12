@@ -28,4 +28,3 @@ Then read **[System architecture & documentation principles](/wiki/getting-start
 **[Documentation hub →](/wiki/developers)** — complete table of contents: framework, plugins, mods, guides, releases, reference, roadmap.
 
 The sidebar matches this wiki: **Getting started** is at the top, then the rest of the author tree.
-

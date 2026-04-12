@@ -19,6 +19,7 @@ canvasGo.AddComponent<GraphicRaycaster>();
 Instead of using Unity's default `Legacy Text` (which the game often uses), you should aim for **TextMeshPro** for a modern look.
 
 ### Adding a Background (Image)
+
 ```csharp
 var panel = new GameObject("Panel_Background");
 panel.transform.SetParent(canvasGo.transform, false);
@@ -27,6 +28,7 @@ img.color = new Color(0.12f, 0.12f, 0.14f, 0.9f); // Dark Slate
 ```
 
 ### Positioning with RectTransform
+
 ```csharp
 var rt = panel.GetComponent<RectTransform>();
 rt.anchorMin = new Vector2(0.5f, 0.5f); // Center
@@ -56,4 +58,5 @@ GameInputSuppression.SetSuppressed(true);
 ---
 
 ## Example Case: `gregIPAM`
+
 Check `gregAddons/gregMods/gregIPAM/Ipam/IPAMOverlay.WindowUi.cs` to see how the IPAM mod handles its extensive IMGUI window, or `SetIpKeypadDhcpButton.cs` for the modern uGUI injection.

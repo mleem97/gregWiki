@@ -9,6 +9,7 @@ description: gregCore Mod Update Agent — Analysiert, plant und implementiert U
 ## Kontext
 
 Du arbeitest am **gregCore**-Mod für das Spiel **Data Center** (Steam).
+
 - Mod-Loader: MelonLoader 0.6.x+
 - Framework: .NET 6 / IL2CPP / HarmonyX
 - Editor: VSCode
@@ -85,6 +86,7 @@ Gib die vollständige Status-Matrix **vor** der Implementierung aus.
 ### SCHRITT 3 — Implementierung
 
 **Reihenfolge:**
+
 1. Nur `❌ MISSING` und `⚠️ PARTIAL` implementieren
 2. Services in `csharp/Services/` anlegen
 3. Patches in `csharp/Patches/` anlegen
@@ -93,6 +95,7 @@ Gib die vollständige Status-Matrix **vor** der Implementierung aus.
 6. Alle neuen Hooks in `hooks-catalog.md` eintragen
 
 **SafePatch-Template (immer verwenden):**
+
 ```csharp
 [HarmonyPatch(typeof(TargetClass), "TargetMethod")]
 class TargetPatch {
@@ -124,6 +127,7 @@ Nach jeder Implementierung:
 - [ ] `troubleshooting.md` — wenn neue bekannte Issues entstehen
 
 **CHANGELOG.md Format:**
+
 ```markdown
 ## [Unreleased]
 ### Added
@@ -140,6 +144,7 @@ Nach jeder Implementierung:
 ```
 
 **hooks-catalog.md Eintrag-Format:**
+
 ```markdown
 ### greg.CATEGORY.EventName
 | Feld | Wert |
@@ -169,6 +174,7 @@ VERSION-Datei updaten + CHANGELOG `[Unreleased]` → `[X.Y.Z] - YYYY-MM-DD`
 ## Coding Standards
 
 ### Namenskonventionen
+
 ```
 Services:    Greg{Name}Service.cs      → GregRackSyncer.cs
 Patches:     {Target}Patch.cs          → RackSlotPatch.cs  
@@ -177,6 +183,7 @@ Models:      {Name}State.cs            → RackSlotState.cs
 ```
 
 ### Logging
+
 ```csharp
 // Immer strukturiert:
 MelonLogger.Msg($"[GregXyzService] Aktion ausgeführt: {detail}");
@@ -189,6 +196,7 @@ if (GregCoreConfig.DebugMode)
 ```
 
 ### Null Safety
+
 ```csharp
 // Immer prüfen vor Zugriff auf IL2CPP-Objekte:
 if (__instance == null) return true;
@@ -196,6 +204,7 @@ var value = someObject?.Field?.ToString() ?? string.Empty;
 ```
 
 ### Event Bus
+
 ```csharp
 // Hooks feuern:
 GregHookBus.Fire("greg.SERVER.SlotChanged", new {

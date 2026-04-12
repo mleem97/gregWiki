@@ -24,7 +24,7 @@ JADE Style criteria in this tutorial:
 
 - Panel Width: 400px
 - Header: `▶ <ObjectType>`
-- Data Rows: 8-character right-aligned keys (e.g., `  TYPE     : Rack`)
+- Data Rows: 8-character right-aligned keys (e.g., `TYPE     : Rack`)
 
 ## Project structure (Lua)
 

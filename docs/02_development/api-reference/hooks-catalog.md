@@ -210,4 +210,3 @@ Unknown event ids resolve to ``greg.SYSTEM.UnmappedNativeEvent`` via ``GregNativ
 - [hooks library](/wiki/development/hooks-library)
 - [EventIds source](https://github.com/mleem97/gregFramework/blob/main/gregCore/gregModLoader/EventDispatcher.cs)
 - [GregNativeEventHooks source](https://github.com/mleem97/gregFramework/blob/main/gregCore/gregSdk/GregNativeEventHooks.cs)
-

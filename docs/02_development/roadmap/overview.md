@@ -25,6 +25,7 @@ This document shows the current progress of the `gregCore` SDK compared to the i
 | **Phase 12** | LiveOps & System Management | <span class="material-symbols-outlined">construction</span> WIP | Player hardware, staff systems, environment control, tracking dashboards, multiplayer readiness prep. |
 
 ## Current Coverage Level
+
 We currently have approximately **65%** of the IL2CPP classes relevant to modders abstracted through type-safe bridges.
 
 :::info <span class="material-symbols-outlined">sync</span> Ongoing Updates

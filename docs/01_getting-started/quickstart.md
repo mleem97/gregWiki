@@ -7,7 +7,7 @@ description: Workspace layout (gregFramework), building gregCore, hooks, and you
 The workspace is **multi-repo**: several Git checkouts live **side by side** under a common `gregFramework/` folder. **Logical stack:** **ModManager → Framework / SDK → Plugins → Mods** — see [System architecture & documentation principles](/wiki/getting-started/architecture).
 
 | Folder | Role |
-|--------|--------|
+| --- | --- |
 | **`gregCore/`** | Framework: **`gregCore/gregCore.sln`**, main project **`gregCore/gregCore.csproj`**; SDK under `gregSdk/`; MCP under `gregCore/mcp-server/` |
 | **`gregMod.<Name>/`** | Gameplay mods (often `FMF.*` assemblies), **flat** next to `gregCore/` |
 | **`gregExt.<Name>/`** | Framework plugins (`FFM.Plugin.*` / `greg.Plugin.*`), also flat |
@@ -45,7 +45,7 @@ For CI without a local game install, many projects support **`-p:CI=true`** (see
 gregCore supports **four modding paths** in parallel:
 
 | Language | Role |
-|----------|--------|
+| --- | --- |
 | **C#** | Full MelonLoader / IL2CPP interop, Harmony, and **`gregSdk`** — the default for framework extensions. |
 | **Lua** | MoonSharp-hosted scripts; game access through the **`greg.*`** API. Deploy under **`Data Center/Mods/ScriptMods/lua/`**. |
 | **TypeScript/JS** | Web-tech modding via the TS bridge. Deploy under **`Data Center/Mods/ScriptMods/tsjs/`**. |
@@ -54,7 +54,7 @@ gregCore supports **four modding paths** in parallel:
 ## Hooks and registries
 
 | Topic | Where |
-|-------|--------|
+| --- | --- |
 | **Canonical `greg.*` (JSON, Il2Cpp)** | Repo root **`greg_hooks.json`** |
 | **`greg.*` Hooks** | **`gregSdk.gregNativeEventHooks`** — [greg hooks catalog](/wiki/reference/greg-hooks-catalog), source `gregCore/gregSdk/gregNativeEventHooks.cs` |
 | **Runtime architecture** | [greg hooks catalog & events runtime](/wiki/reference/greg-hooks-catalog) |
@@ -69,4 +69,3 @@ Engine integration rule:
 2. Add **`ProjectReference`** to **`gregCore/gregCore.csproj`**.
 3. Use **`gregSdk`** (`gregEventDispatcher`, `gregNativeEventHooks`, …).
 4. Template: **`gregCore/Templates/CustomContentPack/`**.
-

@@ -9,16 +9,20 @@ description: How to build Lua scripts using gregCore and the MoonSharp bridge.
 Lua is ideal for rapid prototyping, UI tweaks, and gameplay logic that doesn't require deep IL2CPP access.
 
 ## 1. Project Setup
+
 Lua mods are standalone scripts located in the game directory. Use the **`HexLabelMod`** Lua template as a starting point.
 
-1.  Copy the `lua/` folder from the `HexLabelMod` template.
-2.  Your main logic goes into your `.lua` file (e.g., `MyMod.lua`).
+1. Copy the `lua/` folder from the `HexLabelMod` template.
+2. Your main logic goes into your `.lua` file (e.g., `MyMod.lua`).
 
 ## 2. Using the greg.* API
+
 The Lua bridge injects a global `greg` table into your script.
 
 ### Event Handling
+
 You can subscribe to game events dynamically:
+
 ```lua
 greg.events.on("greg.SERVER.LoadingStarted", function(payload)
     local serverId = greg.payload.get(payload, "EntityId", "unknown")
@@ -27,7 +31,9 @@ end)
 ```
 
 ### Lifecycle Hooks
+
 Register update or GUI loops:
+
 ```lua
 greg.events.on_update(function(dt)
     -- Logic that runs every frame
@@ -45,7 +51,9 @@ end)
 ```
 
 ### Advanced Integrations
+
 You can also interact with the content registries to check loaded items:
+
 ```lua
 greg.events.on("greg.CONTENT.Registered", function(payload)
     local contentId = greg.payload.get(payload, "Id", "")
@@ -55,5 +63,6 @@ end)
 ```
 
 ## 3. Deployment
+
 1. Place your `.lua` file and its `manifest.json` under `Data Center/Mods/ScriptMods/lua/<YourModName>/`.
 2. Ensure `gregCore.dll` is active.

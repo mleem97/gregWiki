@@ -74,6 +74,7 @@ Unregister: `GregEventDispatcher.Off("greg.PLAYER.ComponentInitialized", handler
 
 - [Overview of all greg hooks](/wiki/_internal/README)
 - Source: `gregCore/gregFramework/greg_hooks.json`
+
 ## Usage in Rust
 
 If your Rust bridge exposes the event bus, subscribe to the exact hook name:
@@ -125,4 +126,3 @@ gregBus.on("greg.PLAYER.ComponentInitialized", (payload) => {
 ~~~
 
 When using RPC/WebSocket transport, keep `greg.PLAYER.ComponentInitialized` as the canonical routing key end-to-end.
-

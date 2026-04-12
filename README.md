@@ -5,6 +5,7 @@
 ---
 
 ## 📖 **Overview**
+
 This repository contains the source content for the **Greg Framework Wiki**. It is built using **Docusaurus** and serves as the primary resource for modders, including API references, tutorials, and style guides.
 
 - **Content:** Markdown (Docusaurus)
@@ -16,11 +17,13 @@ This repository contains the source content for the **Greg Framework Wiki**. It 
 ## 🚀 **Quick Start**
 
 ### Local Development
+
 1. Clone this repository.
 2. Install dependencies: `npm install`.
 3. Run the dev server: `npm run start`.
 
 ### Contribution
+
 - All documentation files live in the `docs/` folder.
 - Ensure all code snippets use the **gregSdk** namespace.
 - HUD tutorials must strictly follow the **JADE Style Guide**.
@@ -37,6 +40,7 @@ This repository contains the source content for the **Greg Framework Wiki**. It 
 ---
 
 ## 🌍 **Repositories & Remotes**
+
 This project is mirrored for high availability.
 
 - **GitHub (Primary):** [mleem97/gregWiki](https://github.com/mleem97/gregWiki)
@@ -45,6 +49,7 @@ This project is mirrored for high availability.
 ---
 
 ## 🤝 **Contributing**
+
 Please format your Markdown according to Docusaurus standards. Any "TODO" in the documentation should be clearly marked with a `:::caution WIP` block at the top of the page.
 
 ---

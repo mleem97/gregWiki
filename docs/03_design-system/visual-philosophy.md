@@ -80,13 +80,13 @@ We abandon the traditional drop-shadow. Depth is achieved via **Tonal Layering**
 
 ## 6. Do’s and Don’ts
 
-### Do:
+### Do
 
 - **Do** use `primary_fixed_dim` for icons to ensure they don't overpower the text.
 - **Do** allow for generous "negative space." High-end editorial design requires breathing room to feel premium.
 - **Do** use `surface_bright` as a very subtle "top-light" gradient on large containers to simulate overhead lighting.
 
-### Don’t:
+### Don’t
 
 - **Don’t** use pure white (#FFFFFF) for text. Always use `on_surface` (#C0FCF6) to reduce eye strain in dark mode.
 - **Don’t** use 1px solid borders to separate sidebar items; use vertical spacing or a subtle background hover state.
@@ -95,4 +95,3 @@ We abandon the traditional drop-shadow. Depth is achieved via **Tonal Layering**
 ## 7. Token map (implementation)
 
 Semantic colors are defined as Tailwind v4 `@theme` variables in `wiki/src/css/custom.css` (e.g. `--color-primary`, `--color-on-surface`, `--color-surface-container-low`). Prefer those utilities in React pages (`bg-background`, `text-on-surface`, `border-outline-variant/15`) so the site stays aligned with this spec.
-

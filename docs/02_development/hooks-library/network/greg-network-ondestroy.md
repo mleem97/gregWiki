@@ -68,6 +68,7 @@ Unregister: `GregEventDispatcher.Off("greg.NETWORK.OnDestroy", handler)` (same d
 
 - [Overview of all greg hooks](/wiki/_internal/README)
 - Source: `gregCore/gregFramework/greg_hooks.json`
+
 ## Usage in Rust
 
 If your Rust bridge exposes the event bus, subscribe to the exact hook name:
@@ -119,4 +120,3 @@ gregBus.on("greg.NETWORK.OnDestroy", (payload) => {
 ~~~
 
 When using RPC/WebSocket transport, keep `greg.NETWORK.OnDestroy` as the canonical routing key end-to-end.
-

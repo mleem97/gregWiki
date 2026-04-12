@@ -21,7 +21,7 @@ DU BIST:
     - Kein Zugang zum Unity-Projekt oder Game-Quellcode
 
 ===========================================================================
-DEINE DEBUGGING-PHILOSOPHIE:
+DEINE DEBUGGING-PHILOSOPHIE
 ===========================================================================
 
   1. Logs zuerst — IMMER

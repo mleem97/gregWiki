@@ -15,22 +15,27 @@ In addition to specific IL2CPP classes of the game (Phases 5-7), `gregCore` syst
 ## Planned Module Bridges
 
 ### 1. Physics & Collision (Extended)
+
 - **TODO**: Deeper access to rigidbodies and raycast filters.
 - **Target**: `UnityEngine.PhysicsModule`.
 
 ### 2. Scene Management
+
 - **TODO**: Abstraction for loading/unloading scene addons (e.g., for custom rooms).
 - **Target**: `UnityEngine.SceneManagement`.
 
 ### 3. AI & Navigation (NavMesh)
+
 - **TODO**: Manipulation of NavMeshAgent paths for custom employee routes.
 - **Target**: `UnityEngine.AIModule`.
 
 ### 4. Audio & Sound (Extended)
+
 - **TODO**: Control of audio mixers and ambient sounds.
 - **Target**: `UnityEngine.AudioModule`.
 
 ### 5. UI & Canvas (Extended)
+
 - **TODO**: Dynamic creation of native uGUI/Canvas elements without rect hacks.
 - **Target**: `UnityEngine.UIModule` / `UnityEngine.TextRenderingModule`.
 

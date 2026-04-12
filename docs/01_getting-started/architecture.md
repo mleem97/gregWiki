@@ -4,8 +4,6 @@ sidebar_label: Architecture principles
 description: Canonical stack model (ModManager → Framework → Plugins → Mods), priorities, and how wiki pages should align.
 ---
 
-# System architecture & documentation principles
-
 This page is the **canonical reference** for how gregFramework documentation describes the stack: **ModManager (MAUI) → modding framework / SDK → plugins → mods**, plus priorities (stability first), the hook-proxy idea, and **authoring rules**. All wiki content must be written in **English** only.
 
 Detail pages (individual mods, plugins, releases) should align with this model without repeating the full narrative each time — **link here** for the big picture.
@@ -15,7 +13,7 @@ Detail pages (individual mods, plugins, releases) should align with this model w
 Describe the runtime as a **layered system**, not a flat list of DLLs:
 
 | Layer | Role | Typical workspace artifacts |
-|--------|--------|------------------------------|
+| --- | --- | --- |
 | **1. ModManager (front-end)** | UI to enable/disable mods and plugins, ordering, configuration. | `gregModmanager/` — **GregModmanager** (MAUI). |
 | **2. Modding framework / SDK** | Stable API surface for mods: lifecycle, events, registries. Hooks Unity and maps events to **framework events**. | `gregCore/` — runtime components in `gregModLoader/`, SDK in `gregSdk/`, Harmony integration in `gregHarmony/`. |
 | **3. Plugins** | Extend the framework (new services, hook types). | Repos **`gregExt.<Name>/`**. |
@@ -65,4 +63,3 @@ When documentation or API design must choose, use this **order**:
 - [Mods — Framework](/mods) — runtime from mod authors’ perspective
 - [Plugins overview](/mods) — `FFM.Plugin.*`
 - [Mod developers](/wiki/developers)
-

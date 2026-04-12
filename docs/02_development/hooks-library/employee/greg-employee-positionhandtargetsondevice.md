@@ -66,6 +66,7 @@ Unregister: `GregEventDispatcher.Off("greg.EMPLOYEE.PositionHandTargetsOnDevice"
 
 - [Overview of all greg hooks](/wiki/_internal/README)
 - Source: `gregCore/gregFramework/greg_hooks.json`
+
 ## Usage in Rust
 
 If your Rust bridge exposes the event bus, subscribe to the exact hook name:
@@ -117,4 +118,3 @@ gregBus.on("greg.EMPLOYEE.PositionHandTargetsOnDevice", (payload) => {
 ~~~
 
 When using RPC/WebSocket transport, keep `greg.EMPLOYEE.PositionHandTargetsOnDevice` as the canonical routing key end-to-end.
-

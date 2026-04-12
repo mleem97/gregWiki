@@ -42,7 +42,7 @@ bgImg.color = new Color(0.1f, 0.1f, 0.12f, 0.95f); // Deep dark blue
 
 ## 4. Hooking the Logic
 
-Your modern buttons should trigger the original methods. 
+Your modern buttons should trigger the original methods.
 
 ```csharp
 myModernButton.onClick.AddListener((UnityAction)(() => {
