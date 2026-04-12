@@ -9,6 +9,10 @@ description: Technical documentation for Data Center mod and plugin authors — 
 
 This site (**`/wiki`**) is for people who **write or maintain mods and plugins**, work on **gregFramework**, or contribute to **repos and documentation**.
 
+:::important Compatibility Scope
+This wiki targets **Data Center by Waseku only**. Content here is not a generic Unity modding guide and is not maintained for other games.
+:::
+
 **Players** — install MelonLoader, browse mods, and get help on the **[For players](/players)** page (`/players`), the **[mod catalog](/mods)**, and Discord.
 
 ## Getting started

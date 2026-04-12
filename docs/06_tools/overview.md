@@ -6,6 +6,10 @@ description: Curated toolbox for Data Center modding across Core SDK, reverse en
 
 This section lists practical tools for day-to-day mod development in the GregFramework ecosystem.
 
+:::important Scope
+All tooling guidance in this section is curated for **Data Center by Waseku** compatibility only.
+:::
+
 ## By Architecture Layer
 
 - **Core SDK layer (`gregCore`)**: event hooks, bridges, registries, runtime contracts.
