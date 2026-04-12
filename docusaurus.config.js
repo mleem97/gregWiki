@@ -279,6 +279,7 @@ const config = {
         { type: 'docSidebar', sidebarId: 'bridgesSidebar',        label: '🌉 Game Bridges', position: 'left' },
         { type: 'docSidebar', sidebarId: 'apiSidebar',            label: '📡 API Reference', position: 'left' },
         { type: 'docSidebar', sidebarId: 'tutorialsSidebar',      label: '🎓 Tutorials', position: 'left' },
+        { type: 'docSidebar', sidebarId: 'toolsSidebar',          label: '🧰 Tools', position: 'left' },
         { type: 'docSidebar', sidebarId: 'roadmapSidebar',        label: '🗺️ Roadmap', position: 'left' },
         {
           label: '🧬 SDKs',

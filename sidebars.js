@@ -78,6 +78,20 @@ const sidebars = {
       ],
     },
   ],
+  toolsSidebar: [
+    {
+      type: 'category',
+      label: '🧰 Tools',
+      collapsed: false,
+      items: [
+        'tools/overview',
+        'tools/core-runtime-tooling',
+        'tools/reverse-debug-tooling',
+        'tools/publishing-platform-tooling',
+        'tools/workshop-uploader',
+      ],
+    },
+  ],
   communitySidebar: [
     {
       type: 'category',
