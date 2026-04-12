@@ -80,7 +80,7 @@ export function registerHexViewer(): void {
   greg.registry.registerMod({
     id: MOD_ID,
     name: 'HexViewer',
-    version: '00.01.0001',
+    version: '0.1.9',
   });
 
   for (const hookName of hooks) {
