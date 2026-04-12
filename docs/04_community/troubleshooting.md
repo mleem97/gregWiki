@@ -21,3 +21,24 @@ Operational troubleshooting notes for issues reported by community and acknowled
 ## Documentation Rule
 
 When an issue is game-owned, keep this page as user guidance and avoid marking framework implementation as complete.
+
+## Runtime Debug Case: `Interact.OnHoverOver` hook loop (resolved)
+
+### Scope and layer ownership
+
+- **Core SDK layer:** `gregCore` Harmony patch path around `Interact.OnHoverOver` (`GregHexViewerPatch`)
+- **Mod layer symptom:** startup instability with early process termination during hover-driven interaction flow
+
+### Verified diagnosis chain
+
+1. **Crash signature collection:** Windows `Application Error (1000)` repeatedly showed stack overflow (`0xc00000fd`) in CLR modules.
+2. **Dump forensics:** Managed stack inspection exposed recursive repetition of `OnHoverOver` trampoline frames and `GregHexViewerPatch.Postfix`.
+3. **Mitigation:** The unsafe hover postfix path was guarded/disabled in the Core SDK layer to stop the recursion vector.
+4. **Post-mitigation validation:** No further `0xc00000fd` overflow signatures were observed in follow-up startup runs.
+5. **Current state distinction:** Recent short-lifetime runs can end as clean exits (no new `.NET Runtime 1026` or `Application Error 1000` events), which is different from the earlier hard crash loop.
+
+### Operational guidance
+
+- Treat this as a **stability gate**, not as final feature completion.
+- Keep `Latest.log` + `Player.log` + Event Viewer triage as the default sequence for any recurrence.
+- Re-enable hover-path behavior only after a non-recursive implementation passes repeated startup + interaction stress checks.

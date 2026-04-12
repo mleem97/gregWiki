@@ -190,6 +190,16 @@ The complete hook inventory (including non-EventIds HookBinder hooks) is documen
 - Hooks Library root: `/wiki/development/hooks-library`
 - Source for generated hook pages: `gregCore/gregFramework/greg_hooks.json`
 
+## Stability advisory: `Interact.OnHoverOver`
+
+- **Layer:** Core SDK layer (`gregCore` Harmony patch class `GregHexViewerPatch`)
+- **Current runtime status:** The `Interact.OnHoverOver` postfix hook path is currently safeguarded and disabled as a temporary stability gate.
+- **Why:** Crash dump analysis identified a recursive hook loop in the hover path that produced stack overflow failures (`0xc00000fd`) during early runtime interaction.
+- **Mitigation applied:** The hook was hard-gated to prevent execution while preserving broader hook/event runtime initialization.
+- **Activation switch:** The hook is **opt-in** and only active when environment variable `GREG_ENABLE_HOVER_PATCH` is truthy (`1`, `true`, `yes`, `on`).
+- **Impact to mods:** `greg.WORLD.InteractionHovered`-adjacent behavior may be reduced until a safe reimplementation is shipped.
+- **Re-enable policy:** Re-enable only after a validated non-recursive implementation passes startup stability and interaction stress checks.
+
 ## Fallback behavior
 
 Unknown event ids resolve to ``greg.SYSTEM.UnmappedNativeEvent`` via ``GregNativeEventHooks.Resolve``.
