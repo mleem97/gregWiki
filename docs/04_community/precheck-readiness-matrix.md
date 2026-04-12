@@ -60,7 +60,7 @@ These are treated as **baseline available signals** and drive `⚠️ PARTIAL` d
 | A-10 | RGB Walls Mod | ⚠️ PARTIAL IN CORE | `greg.SYSTEM.ButtonBuyWall` | `GregWorldColorService` persistence and registry | color/Shop collisions | SDK |
 | A-11 | Big Trolley Mod | ❌ MISSING | none dedicated | `GregInventoryContainerRegistry`, `GregTrolleyConfigService` | perf loop pressure | SDK |
 
-## B — Community Requests (B-01..B-83)
+## B — Community Requests (B-01..B-84)
 
 | ID | Feature | Status | Verfügbare Hooks/Basis | Fehlende Komponenten | Konflikte | Layer |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -153,6 +153,7 @@ These are treated as **baseline available signals** and drive `⚠️ PARTIAL` d
 | B-81 | Mass deletion cables/servers | ⚠️ PARTIAL IN CORE | batch cleanup and world interaction planned | multi-select deletion contract + safety prompts | accidental deletion risk | SDK + UI |
 | B-82 | Motion blur/camera smoothness startup bug | 🎮 GAME-LEVEL | known demo behavior from developer note | troubleshooting documentation and workaround only | startup settings ownership | Docs + 🎮 |
 | B-83 | XP progression/unlock rebalance | ⚠️ PARTIAL IN CORE | shop/electricity planning baseline | XP multiplier and unlock-order contracts | economy progression coupling | SDK + Harmony |
+| B-84 | Wall removal recurring expense / lease model | ❌ MISSING | `greg.SYSTEM.ButtonBuyWall` baseline only | `GregWallLifecycleBillingService`, optional XP cost policy, removal upkeep ledger, UI transparency in balance sheet | economy and progression balancing | SDK + UI |
 
 ## C/E/H — Custom Content & Asset Tracks (C-01..C-40)
 
@@ -221,7 +222,7 @@ These are treated as **baseline available signals** and drive `⚠️ PARTIAL` d
 This page now includes all requested IDs across:
 
 - Mods: `A-01..A-11`
-- Feature Requests: `B-01..B-83`
+- Feature Requests: `B-01..B-84`
 - Assets/Models: `C-01..C-40`
 
 All entries are visible as WIP planning items and are mapped to concrete status categories.
@@ -231,7 +232,7 @@ All entries are visible as WIP planning items and are mapped to concrete status 
 | Part | Current Coverage in this Matrix | Status |
 | --- | --- | --- |
 | A | Community mods mapped (`A-01..A-11`) | ✅ Covered |
-| B | Feature requests mapped (`B-01..B-83`) | ✅ Covered |
+| B | Feature requests mapped (`B-01..B-84`) | ✅ Covered |
 | C | Assets mapped (`C-01..C-40`) | ✅ Covered |
 | D | Integrated via expanded `B-20+` and roadmap tracks | ✅ Covered |
 | E | Integrated via asset tracks (`C-11+`) and custom-content pages | ✅ Covered |

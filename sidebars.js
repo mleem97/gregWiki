@@ -133,6 +133,10 @@ const sidebars = {
         'community/planned-features',
         'community/troubleshooting',
         'community/multiplayer-readiness',
+        'community/multiplayer-architecture',
+        'community/multiplayer-dev-guide',
+        'community/relay-protocol',
+        'community/multiplayer-troubleshooting',
       ],
     },
     {
