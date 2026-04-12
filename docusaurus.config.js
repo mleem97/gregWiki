@@ -275,12 +275,13 @@ const config = {
       hideOnScroll: true,
       style: 'primary',
       items: [
-        { type: 'docSidebar', sidebarId: 'gettingStartedSidebar', label: '🚀 Fundamentals', position: 'left' },
-        { type: 'docSidebar', sidebarId: 'bridgesSidebar',        label: '🌉 Game Bridges',    position: 'left' },
-        { type: 'docSidebar', sidebarId: 'apiSidebar',            label: '📡 API Reference',   position: 'left' },
-        { type: 'docSidebar', sidebarId: 'tutorialsSidebar',      label: '🎓 Tutorials',       position: 'left' },
+        { type: 'docSidebar', sidebarId: 'gettingStartedSidebar', label: 'Fundamentals', position: 'left' },
+        { type: 'docSidebar', sidebarId: 'bridgesSidebar',        label: 'Game Bridges', position: 'left' },
+        { type: 'docSidebar', sidebarId: 'apiSidebar',            label: 'API Reference', position: 'left' },
+        { type: 'docSidebar', sidebarId: 'tutorialsSidebar',      label: 'Tutorials', position: 'left' },
+        { type: 'docSidebar', sidebarId: 'roadmapSidebar',        label: 'Roadmap', position: 'left' },
         {
-          label: '🧬 SDKs',
+          label: 'SDKs',
           position: 'right',
           items: [
             { to: '/wiki/development/modding-guides/csharp-modding',     label: 'C#' },
