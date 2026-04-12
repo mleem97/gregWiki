@@ -284,7 +284,7 @@ const config = {
         { to: '/wiki/development/roadmap/overview', label: '🗺️ Roadmap', position: 'left' },
         {
           label: '🧬 SDKs',
-          position: 'right',
+          position: 'left',
           items: [
             { to: '/wiki/development/modding-guides/csharp-modding',     label: 'C#' },
             { to: '/wiki/development/modding-guides/lua-modding',        label: 'Lua' },

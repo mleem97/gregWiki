@@ -199,6 +199,16 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: '🏢 Operations',
+      collapsed: true,
+      items: [
+        'community/server-builder-guide',
+        'community/floor-layout-guide',
+        'community/power-management-guide',
+      ],
+    },
+    {
+      type: 'category',
       label: '🧰 Tools',
       collapsed: true,
       items: [
