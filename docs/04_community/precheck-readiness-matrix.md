@@ -60,7 +60,7 @@ These are treated as **baseline available signals** and drive `⚠️ PARTIAL` d
 | A-10 | RGB Walls Mod | ⚠️ PARTIAL IN CORE | `greg.SYSTEM.ButtonBuyWall` | `GregWorldColorService` persistence and registry | color/Shop collisions | SDK |
 | A-11 | Big Trolley Mod | ❌ MISSING | none dedicated | `GregInventoryContainerRegistry`, `GregTrolleyConfigService` | perf loop pressure | SDK |
 
-## B — Community Requests (B-01..B-54)
+## B — Community Requests (B-01..B-83)
 
 | ID | Feature | Status | Verfügbare Hooks/Basis | Fehlende Komponenten | Konflikte | Layer |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -118,8 +118,43 @@ These are treated as **baseline available signals** and drive `⚠️ PARTIAL` d
 | B-52 | CPU optimization framework | 🔄 REFACTOR NEEDED | optimization mods exist | profiler + throttling/batch interval system | engine-loop side effects | Harmony + SDK |
 | B-53 | Queue all technicians/bulk EOL dispatch | ❌ MISSING | break/repair hook baseline | dispatch queue + bulk EOL job orchestration | queue starvation risk | SDK + UI |
 | B-54 | Sound environment mod | ❌ MISSING | no audio service baseline documented | audio/spatial/LOD/reverb/dynamic sound services | source licensing and perf limits | SDK + Asset |
+| B-55 | MacroLeft store and player PC upgrades | ❌ MISSING | shop extension concept only | `GregPlayerHardwareRegistry`, player-hardware hooks, terminal perf scaling | overlap with server-builder scope | SDK + UI |
+| B-56 | Future client preview dashboard | ⚠️ PARTIAL IN CORE | contract preview concept exists | terminal dashboard composition + unified preview schema | low | SDK + UI |
+| B-57 | Staff app leveling and task rules | ❌ MISSING | employee registry baseline only | leveling, certifications, auto-rule dispatch contracts | overlap with bulk dispatch | SDK + UI |
+| B-58 | All colors for all cable types | ⚠️ PARTIAL IN CORE | color registry planning + drum labels planning | cable color validation patch + mapping override contract | color/mod composition risk | SDK + Harmony |
+| B-59 | Cart physics straps + pickup collision grace | ❌ MISSING | inventory extension planning only | trolley straps upgrade + temporary collision-layer policy | physics side effects | SDK + Harmony |
+| B-60 | Cable disconnect/reconnect without full redraw | 🎮 GAME-LEVEL | developer-planned feature | docs and compatibility preparation only | engine behavior ownership | Docs + 🎮 |
+| B-61 | Colored cable hook mounts | ❌ MISSING | world color service missing | hook color variants + placement variant registry | none | SDK + Asset |
+| B-62a | WinSCP-style SFTP interface | 🎮 GAME-LEVEL | terminal extension concept | gameplay-level file simulation systems | scope beyond framework-only | SDK + 🎮 |
+| B-62b | Dedicated hosting active panel | ⚠️ PARTIAL IN CORE | floorplan/network baselines partial | support tickets, customer service dashboard model | ties to colo contract model | SDK + UI |
+| B-62c | DNS config + security/sinkhole | 🎮 GAME-LEVEL | IP/network baselines partial | DNS gameplay layer + routing semantics | game mechanic depth | SDK + 🎮 |
+| B-62d | Anomaly management | 🎮 GAME-LEVEL | none | game-mode content layer | out-of-scope for core baseline | Docs + 🎮 |
+| B-62e | Facility security and sensors | ❌ MISSING | placement/power planning only | sensor registry + trigger hooks + policy integration | overlaps environment control | SDK + Asset |
+| B-62f | Network heatmaps + optical load logic | ⚠️ PARTIAL IN CORE | throughput hooks planned | visual load overlay service + ticket automation | render/perf overhead | SDK + UI |
+| B-62g | Dynamic economy risk margins | ⚠️ PARTIAL IN CORE | electricity billing planned | risk-tier policy engine + multiplier hook | economy balancing | SDK |
+| B-63 | LACP interface bonding | ⚠️ PARTIAL IN CORE | switch stack service planned | explicit LACP bond contract + hook surface | protocol orchestration | SDK |
+| B-64 | Uplink ports and MLAG | ❌ MISSING | compatibility baseline partial | uplink registry + MLAG model + hooks | none | SDK |
+| B-65 | Customer churn and unlock-gated contracts | ❌ MISSING | customer requirement baseline partial | contract expiry/churn lifecycle + IP forwarding | ties to colo and dynamic hosting | SDK |
+| B-66 | Fiber patch panel | ⚠️ PARTIAL IN GAME | dev roadmap indicates fiber track | framework compatibility + fiber registry prep | final behavior owned by game roadmap | SDK + 🎮 |
+| B-67 | Pick up whole SFP box | 🎮 GAME-LEVEL | partially present in game | framework inventory compatibility only | spawn behavior controlled by game | SDK + 🎮 |
+| B-68 | VLAN/trunk/load balancing/dual-port | ⚠️ PARTIAL IN CORE | VLAN/LACP planned, network compatibility exists | switch oversubscription + failover policy + power-cable semantics | broad cross-service dependency | SDK + 🎮 |
+| B-69 | Difficulty and feature toggles | ⚠️ PARTIAL IN GAME | game-mode planning baseline | global feature-toggle contract across services | toggle consistency risk | SDK + 🎮 |
+| B-70 | Multiplayer | 🎮 GAME-LEVEL | post-release interest only | multiplayer runtime/session and sync model | fundamental architecture scope | SDK + 🎮 |
+| B-71 | Stuck button/respawn | ❌ MISSING | no dedicated player rescue hook | settings action + teleport safety contract | low | SDK + Harmony |
+| B-72 | XP/shop rebalance + upgrade tree | ⚠️ PARTIAL IN CORE | research/shop extension planning | reputation economy model + slot spacing fixes | economy progression coupling | SDK + Harmony |
+| B-73 | SAN/NAS/FC/InfiniBand storage infra | ❌ MISSING | server/network baselines partial | storage tiers, FC/IB compatibility, storage controller components | deep hardware scope | SDK + Asset |
+| B-74 | OS clipboard paste integration | ❌ MISSING | no clipboard hook yet | system clipboard bridge + input patch | low | Harmony + UI |
+| B-75 | Scrap/dumpster workflow | ✅ ALREADY IN GAME | in-game delete flow exists | docs and edge cleanup guidance only | 0.0m cable edge case | Docs only |
+| B-76 | Tycoon environment stages | 🎮 GAME-LEVEL | wall/placement partials only | stage progression and asset swaps | heavy asset/dev dependency | SDK + 🎮 |
+| B-77 | Environment control (temp/humidity/cooling/CCTV) | ⚠️ PARTIAL IN GAME | UPS/power plans + sensor planning | `GregTemperatureService`, cooling loops, overheat hooks | physics and thermal simulation complexity | SDK + 🎮 |
+| B-78 | In-game source-of-truth spreadsheet | ❌ MISSING | floorplan/network baselines partial | export and spreadsheet terminal surface | none | SDK + UI |
+| B-79 | Asset tags and inventory log | ❌ MISSING | persistence planning only | asset tag registry + audit lifecycle hooks | none | SDK |
+| B-80 | Soundtrack and adaptive music | ⚠️ PARTIAL IN CORE | audio foundation planned via B-54 | mood-state music manager + content pack governance | licensing/content availability | SDK + Asset |
+| B-81 | Mass deletion cables/servers | ⚠️ PARTIAL IN CORE | batch cleanup and world interaction planned | multi-select deletion contract + safety prompts | accidental deletion risk | SDK + UI |
+| B-82 | Motion blur/camera smoothness startup bug | 🎮 GAME-LEVEL | known demo behavior from developer note | troubleshooting documentation and workaround only | startup settings ownership | Docs + 🎮 |
+| B-83 | XP progression/unlock rebalance | ⚠️ PARTIAL IN CORE | shop/electricity planning baseline | XP multiplier and unlock-order contracts | economy progression coupling | SDK + Harmony |
 
-## C/E — Custom Content & Asset Tracks (C-01..C-27)
+## C/E/H — Custom Content & Asset Tracks (C-01..C-40)
 
 | ID | Asset/Visual Item | Status | Verfügbare Hooks/Basis | Fehlende Komponenten | Konflikte | Layer |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -150,6 +185,19 @@ These are treated as **baseline available signals** and drive `⚠️ PARTIAL` d
 | C-25 | Blade chassis 8U | ❌ MISSING | tier/component systems missing | custom server component model | none | Asset + SDK |
 | C-26 | Blade module | ❌ MISSING | none dedicated | component registry + builder integration | none | Asset + SDK |
 | C-27 | Wire tracer tool | ❌ MISSING | wire packet toggle in game | orb visibility by held item + settings bridge | perf/UI interplay | Asset + SDK |
+| C-28 | MacroLeft store UI tab | ❌ MISSING | terminal extension baseline missing | dedicated store tab and player-hardware UX | none | UI + SDK |
+| C-29 | Staff certification items | ❌ MISSING | employee baseline partial | certification registry + item integration | none | Asset + SDK |
+| C-30 | Keycard reader | ❌ MISSING | sensor systems missing | security sensor placement + trigger policies | none | Asset + SDK |
+| C-31 | Biometric scanner | ❌ MISSING | sensor systems missing | security sensor placement + trigger policies | none | Asset + SDK |
+| C-32 | Water/smoke sensors | ❌ MISSING | sensor systems missing | env control + security sensor triggers | none | Asset + SDK |
+| C-33 | CCTV camera | ❌ MISSING | placement baseline partial | CCTV entity lifecycle and event hooks | none | Asset + SDK |
+| C-34 | Cooling system (CRAC) | ⚠️ PARTIAL IN GAME | power management planning exists | temperature loop and cooling effectiveness model | game thermal model dependency | Asset + SDK + 🎮 |
+| C-35 | Storage array 4U | ❌ MISSING | server tier planning partial | storage array service + network/storage integration | none | Asset + SDK |
+| C-36 | Fibre channel switch | ❌ MISSING | network compatibility partial | FC protocol and compatibility contracts | none | Asset + SDK |
+| C-37 | Cart straps upgrade item | ❌ MISSING | container registry missing | trolley strap physics policy | none | Asset + SDK |
+| C-38 | Colored cable hook set | ❌ MISSING | world color service missing | cable hook color registry + placement variants | none | Asset + SDK |
+| C-39 | MLAG stack cable | ❌ MISSING | switch stack planning partial | MLAG cable semantics and limits | none | Asset + SDK |
+| C-40 | Asset tag label | ❌ MISSING | tracking baseline missing | asset tag rendering + persistence/log lifecycle | none | Asset + SDK |
 
 ## Conflict Pre-Check Summary (Required)
 
@@ -173,7 +221,24 @@ These are treated as **baseline available signals** and drive `⚠️ PARTIAL` d
 This page now includes all requested IDs across:
 
 - Mods: `A-01..A-11`
-- Feature Requests: `B-01..B-54`
-- Assets/Models: `C-01..C-27`
+- Feature Requests: `B-01..B-83`
+- Assets/Models: `C-01..C-40`
 
 All entries are visible as WIP planning items and are mapped to concrete status categories.
+
+## Part Coverage (A–J)
+
+| Part | Current Coverage in this Matrix | Status |
+| --- | --- | --- |
+| A | Community mods mapped (`A-01..A-11`) | ✅ Covered |
+| B | Feature requests mapped (`B-01..B-83`) | ✅ Covered |
+| C | Assets mapped (`C-01..C-40`) | ✅ Covered |
+| D | Integrated via expanded `B-20+` and roadmap tracks | ✅ Covered |
+| E | Integrated via asset tracks (`C-11+`) and custom-content pages | ✅ Covered |
+| F | Integrated via performance/accessibility/dispatch entries (`B-43..B-54`) | ✅ Covered |
+| G | Integrated via audio track (`B-54`) and sound docs | ✅ Covered |
+| H | Integrated via Batch 3 entries (`B-55..B-83`, `C-28..C-40`) | ✅ Covered |
+| I | No canonical request block provided yet | ⏳ Pending Input |
+| J | No canonical request block provided yet | ⏳ Pending Input |
+
+If you provide `Teil I` and `Teil J` in the same format, they will be added to this matrix immediately using the same pre-check workflow.

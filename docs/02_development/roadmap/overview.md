@@ -22,6 +22,7 @@ This document shows the current progress of the `gregCore` SDK compared to the i
 | **Phase 9** | Community Platform | <span class="material-symbols-outlined">construction</span> WIP | Compatibility, persistence contracts, conflict-safe composition APIs. |
 | **Phase 10** | Infra, Performance & Accessibility | <span class="material-symbols-outlined">construction</span> WIP | Network infra backlog, dispatch scaling, route/orb performance, accessibility APIs. |
 | **Phase 11** | Audio & Immersion | <span class="material-symbols-outlined">construction</span> WIP | Sound environment services, spatial/LOD audio, asset governance. |
+| **Phase 12** | LiveOps & System Management | <span class="material-symbols-outlined">construction</span> WIP | Player hardware, staff systems, environment control, tracking dashboards, multiplayer readiness prep. |
 
 ## Current Coverage Level
 We currently have approximately **65%** of the IL2CPP classes relevant to modders abstracted through type-safe bridges.
@@ -39,4 +40,5 @@ If you need a specific system that is not yet listed, please open an issue in th
 - [Phase 9: Community Platform Stabilization](/wiki/development/roadmap/phase-9-community-platform)
 - [Phase 10: Infrastructure, Performance, and Accessibility](/wiki/development/roadmap/phase-10-infra-performance)
 - [Phase 11: Audio and Immersive Systems](/wiki/development/roadmap/phase-11-audio-and-immersive)
+- [Phase 12: LiveOps and System Management](/wiki/development/roadmap/phase-12-liveops-and-systems)
 - [Community Readiness Index](/wiki/community/community-readiness-index)
