@@ -19,6 +19,9 @@ This document shows the current progress of the `gregCore` SDK compared to the i
 | **Phase 6** | Deep Hardware | <span class="material-symbols-outlined">calendar_month</span> PLANNED | Port Details, Patch Panels, Audio, Tooltips. |
 | **Phase 7** | Simulation | <span class="material-symbols-outlined">calendar_month</span> PLANNED | HR System, Steam Integration, Objectives. |
 | **Phase 8** | Unity API | <span class="material-symbols-outlined">sync</span> ONGOING | Unity Scripting API Alignment, Standard Modules. |
+| **Phase 9** | Community Platform | <span class="material-symbols-outlined">construction</span> WIP | Compatibility, persistence contracts, conflict-safe composition APIs. |
+| **Phase 10** | Infra, Performance & Accessibility | <span class="material-symbols-outlined">construction</span> WIP | Network infra backlog, dispatch scaling, route/orb performance, accessibility APIs. |
+| **Phase 11** | Audio & Immersion | <span class="material-symbols-outlined">construction</span> WIP | Sound environment services, spatial/LOD audio, asset governance. |
 
 ## Current Coverage Level
 We currently have approximately **65%** of the IL2CPP classes relevant to modders abstracted through type-safe bridges.
@@ -30,3 +33,10 @@ This roadmap is a **living document**. Since *Data Center* is continuously expan
 :::info
 If you need a specific system that is not yet listed, please open an issue in the [gregCore Repository](https://github.com/mleem97/gregCore).
 :::
+
+## Community Backlog (WIP)
+
+- [Phase 9: Community Platform Stabilization](/wiki/development/roadmap/phase-9-community-platform)
+- [Phase 10: Infrastructure, Performance, and Accessibility](/wiki/development/roadmap/phase-10-infra-performance)
+- [Phase 11: Audio and Immersive Systems](/wiki/development/roadmap/phase-11-audio-and-immersive)
+- [Community Readiness Index](/wiki/community/community-readiness-index)
