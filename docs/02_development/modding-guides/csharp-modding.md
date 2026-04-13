@@ -12,7 +12,7 @@ C# is the primary language for building framework-heavy mods, plugins, and deep 
 
 - .NET 6.0 SDK
 - IDE (Visual Studio, VS Code, or Rider)
-- `gregCore.dll` (Build from source or download from releases)
+- `gregCore.dll` (Build from source or download from [GitHub](https://github.com/mleem97/gregCore/raw/main/Releases/gregCore.dll))
 
 ## 1. Project Setup
 

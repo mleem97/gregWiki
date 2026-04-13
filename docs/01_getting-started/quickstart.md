@@ -1,4 +1,4 @@
-﻿---
+---
 title: Getting started
 sidebar_label: Getting started
 description: Workspace layout (gregFramework), building gregCore, hooks, and your first mod.
@@ -29,7 +29,7 @@ For CI without a local game install, many projects support **`-p:CI=true`** (see
 
 **Prerequisites:** MelonLoader **net6** assemblies and game Il2Cpp interop must be available at runtime/build. `gregCore` now contains a recursive reference loader in `gregModLoader/References/ReferenceScanner.cs` that scans a configured base folder for `*.dll`.
 
-`gregCore` also includes `MoonSharp.Interpreter.dll` (`v2.0.0.0`) in its release package. Place it next to `gregCore.dll` under `Data Center/Mods/`.
+`gregCore` also includes `MoonSharp.Interpreter.dll` (`v2.0.0.0`) and `Newtonsoft.Json.dll` in its release package. Download them from [gregCore Releases](https://github.com/mleem97/gregCore/tree/main/Releases) and place them next to `gregCore.dll` under `Data Center/Mods/`.
 
 ### Quick install
 

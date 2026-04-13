@@ -13,7 +13,7 @@ Before you start, make sure the full toolchain is ready:
 - ✅ .NET 6 SDK
 - ✅ Data Center (Steam)
 - ✅ MelonLoader installer
-- ✅ `gregCore.dll` (Release artifact or local build)
+- ✅ `gregCore.dll` (Download from [GitHub Releases](https://github.com/mleem97/gregCore/raw/main/Releases/gregCore.dll) or local build)
 - ✅ `MoonSharp.Interpreter.dll` (`v2.0.0.0`) next to `gregCore.dll` in `Data Center/Mods/`
 
 Recommended quick checks:
