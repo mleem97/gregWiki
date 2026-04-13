@@ -6,14 +6,49 @@ description: typsichere C# Bridges für interne IL2CPP Spielsysteme (GameManager
 
 # Game System Bridges (IL2CPP)
 
-Seit `v1.0.0-pre.5` bietet `gregCore` typsichere Abstraktionen für die wichtigsten internen Spielsysteme. Diese ermöglichen es, komplexe Spiellogik zu steuern, ohne direkt mit IL2CPP-Objekten hantieren zu müssen.
+Seit `v1.0.0.30-pre` bietet `gregCore` (API v12) typsichere Abstraktionen für die wichtigsten internen Spielsysteme. Diese ermöglichen es, komplexe Spiellogik zu steuern, ohne direkt mit IL2CPP-Objekten hantieren zu müssen.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 ## Verfügbare Services (gregSdk.Services)
 
-### 1. GregGameManagerService
+### 1. GregUiService (v12 UI Hijack)
+
+Ermöglicht das sichere Ersetzen von vanilla Spiel-UI nach der "Silent Takedown" Architektur.
+
+<Tabs groupId="language">
+  <TabItem value="csharp" label="C#" default>
+    ```csharp
+    using greg.Sdk.Services;
+    // Phase 2: Silent Takedown
+    GregUiService.HijackCanvas("PauseMenuCanvas", false);
+    
+    // Phase 3: New Foundation
+    var myCanvas = GregUiService.CreateCanvas("MyModCanvas", 999);
+    ```
+  </TabItem>
+  <TabItem value="lua" label="Lua">
+    ```lua
+    -- Phase 2
+    greg.sdk.ui.hijack_canvas("PauseMenuCanvas", false)
+    
+    -- Phase 3
+    local my_canvas = greg.sdk.ui.create_modern_canvas("MyModCanvas", 999)
+    ```
+  </TabItem>
+  <TabItem value="rust" label="Rust">
+    ```rust
+    // Phase 2: Silent Takedown
+    api.hijack_vanilla_canvas("PauseMenuCanvas");
+    
+    // Phase 3: New Foundation
+    let my_canvas = api.create_modern_canvas("MyModCanvas", 999);
+    ```
+  </TabItem>
+</Tabs>
+
+### 2. GregGameManagerService
 
 Steuerung des globalen Spielzustands und der UI-Layer.
 
