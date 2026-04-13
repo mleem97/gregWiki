@@ -55,4 +55,4 @@ myModernButton.onClick.AddListener((UnityAction)(() => {
 
 The `gregIPAM` mod uses this technique to add a "DHCP" button below the vanilla keypad. It finds the keypad's `RectTransform` and parents its own custom panel to it:
 
-- See `gregAddons/gregMods/gregIPAM/Patches/SetIpKeypadDhcpButton.cs` for a real-world example of uGUI injection.
+- See `gregAddons/mods/gregIPAM/Patches/SetIpKeypadDhcpButton.cs` for a real-world example of uGUI injection.

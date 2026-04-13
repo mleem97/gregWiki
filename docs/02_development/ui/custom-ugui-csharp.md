@@ -59,4 +59,4 @@ GameInputSuppression.SetSuppressed(true);
 
 ## Example Case: `gregIPAM`
 
-Check `gregAddons/gregMods/gregIPAM/Ipam/IPAMOverlay.WindowUi.cs` to see how the IPAM mod handles its extensive IMGUI window, or `SetIpKeypadDhcpButton.cs` for the modern uGUI injection.
+Check `gregAddons/mods/gregIPAM/Ipam/IPAMOverlay.WindowUi.cs` to see how the IPAM mod handles its extensive IMGUI window, or `SetIpKeypadDhcpButton.cs` for the modern uGUI injection.
