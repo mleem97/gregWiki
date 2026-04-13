@@ -115,4 +115,49 @@ Without a documented registry API:
 4. Apply custom checks during relevant `greg.*` hooks.
 5. Track missing native registration API in local `MISSING.md`.
 
+## Persistence & IL2CPP Compatibility
+
+:::danger IL2CPP LIMITS
+In *Data Center*, modified fields on IL2CPP objects (like colors or custom logic states) are **not automatically saved**. Additionally, you cannot simply use `AddComponent<MyCustomLogic>()` because the game's save system won't recognize your custom type upon reloading.
+:::
+
+To ensure your custom switches retain their state and logic after a game reload, use the **gregCore SDK Services**.
+
+### 1. Persistent Data (GregSaveService)
+
+If you change properties (like custom paint or status flags), use `GregSaveService` to mirror these changes in a persistent way.
+
+```csharp
+using greg.Sdk.Services;
+
+public void OnSwitchPainted(int switchInstanceId, Color newColor)
+{
+    // Store the color in the persistent gregSave buffer
+    GregSaveService.SetData("MyModID", $"switch_color_{switchInstanceId}", newColor);
+}
+
+public void RestoreSwitchColor(int switchInstanceId, GameObject switchGo)
+{
+    // Retrieve the color after reload
+    var color = GregSaveService.GetData<Color>("MyModID", $"switch_color_{switchInstanceId}", Color.white);
+    switchGo.GetComponent<Renderer>().material.color = color;
+}
+```
+
+### 2. Custom Logic (GregIl2CppRegistry)
+
+To attach custom `MonoBehaviour` logic that persists across the IL2CPP boundary, you must register your type during initialization.
+
+```csharp
+using greg.Sdk.Registries;
+
+// In your OnInitializeMelon:
+GregIl2CppRegistry.RegisterType<MyCustomSwitchLogic>();
+
+// When spawning your switch:
+var logic = GregIl2CppRegistry.AddCustomComponent<MyCustomSwitchLogic>(switchGameObject);
+```
+
+By using these services, you bypass the common "Paint didn't stick" and "Logic disappeared" issues common in IL2CPP modding.
+
 Next: [Custom customers](/wiki/development/content-creation/custom-customers).

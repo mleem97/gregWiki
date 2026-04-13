@@ -2,13 +2,19 @@
 
 ## 1. Introduction
 
-`HexViewer` is a compact JADE-like HUD module for **Data Center** that displays focused target information at the top-center of the screen.
+`HexViewer` is a compact JADE-like HUD module for **Data Center** that displays focused rack information at the top-right of the screen.
 
 When the player focuses racks, cables, or cable spinners, the panel shows:
 
-- Type
-- Color
-- Owner (`OwnerID` / customer)
+- Rack name
+- Color as HEX
+- Installed devices count
+- Problem devices count
+- Rack IOPS
+
+If rack issues are detected (`ISSUES > 0`), the HUD shows `Press F8 for Analysis`.
+When `gregResetSwitch` is installed, pressing `F8` can show optional analysis output.
+If it is not installed, HexViewer continues running without dependency errors.
 
 The tutorial uses the verified gregCore runtime model:
 
@@ -98,7 +104,7 @@ Inside event handler:
 
 - Executes in `OnGUI()`
 - Required rectangle:
-  - `new Rect((Screen.width / 2f) - 200f, 10f, 400f, 80f)`
+  - `new Rect(Screen.width - panelWidth - rightOffset, topOffset, panelWidth, panelHeight)`
 - Background texture:
   - `Texture2D(1,1,TextureFormat.RGBA32,false)`
   - color `new Color(0.05f, 0.08f, 0.12f, 0.82f)`
