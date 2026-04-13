@@ -20,7 +20,7 @@ Prerequisites:
 - Visual Studio 2022 (or `dotnet` CLI)
 - .NET 6 SDK
 - MelonLoader/reference assemblies available to the upgraded loader in `gregModLoader/References/ReferenceScanner.cs`
-- `MoonSharp.Interpreter` (`v2.0.0.0`) available at runtime for `gregCore` (typically `Data Center/Mods/MoonSharp.Interpreter.dll`)
+- `MoonSharp.Interpreter` (`v3.0.0-beta.1`) available at runtime for `gregCore` (typically `Data Center/Mods/MoonSharp.Interpreter.dll`)
 
 ---
 
@@ -33,15 +33,15 @@ In the currently verified checkout, equivalent files are located under `gregSdk/
 
 ```text
 gregCore/
-├─ framework/
-│  ├─ Sdk/
-│  │  ├─ GregNativeEventHooks.cs
-│  │  ├─ GregEventDispatcher.cs
-│  │  └─ GregPayload.cs
-│  ├─ ModLoader/
-│  ├─ harmony/
-│  ├─ Main.cs
-│  └─ gregCore.csproj
+├─ gregSdk/
+│  ├─ GregNativeEventHooks.cs
+│  ├─ GregEventDispatcher.cs
+│  └─ GregPayload.cs
+├─ gregModLoader/
+├─ lib/
+│  └─ MoonSharp/
+├─ gregMain.cs
+└─ gregCore.csproj
 ├─ plugins/
 │  └─ greg.Plugin.<Feature>/
 ├─ Templates/
