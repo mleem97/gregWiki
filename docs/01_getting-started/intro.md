@@ -7,6 +7,10 @@ description: Technical documentation for Data Center mod and plugin authors — 
 
 # Mod author wiki
 
+:::danger ENGINE UPGRADE
+Data Center has been upgraded to **Unity 6**. All mods must be updated to target **.NET 6** and use the modernized assembly references. See the [Engine Upgrade Guide](/docs/02_development/engine-upgrades) for details.
+:::
+
 This site (**`/wiki`**) is for people who **write or maintain mods and plugins**, work on **gregFramework**, or contribute to **repos and documentation**.
 
 :::important Compatibility Scope

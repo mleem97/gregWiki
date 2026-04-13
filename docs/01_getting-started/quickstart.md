@@ -1,71 +1,62 @@
----
-title: Getting started
-sidebar_label: Getting started
-description: Workspace layout (gregFramework), building gregCore, hooks, and your first mod.
----
+# Quickstart: Build Your First Mod
 
-The workspace is **multi-repo**: several Git checkouts live **side by side** under a common `gregFramework/` folder. **Logical stack:** **ModManager → Framework / SDK → Plugins → Mods** — see [System architecture & documentation principles](/wiki/getting-started/architecture).
+Welcome to the **gregFramework** ecosystem! This guide will help you set up your environment and build a simple "Hello World" mod in less than 5 minutes.
 
-| Folder | Role |
-| --- | --- |
-| **`gregCore/`** | Framework: **`gregCore/gregCore.sln`**, main project **`gregCore/gregCore.csproj`**; SDK under `gregSdk/`; MCP under `gregCore/mcp-server/` |
-| **`gregMod.<Name>/`** | Gameplay mods (often `FMF.*` assemblies), **flat** next to `gregCore/` |
-| **`gregExt.<Name>/`** | Framework plugins (`FFM.Plugin.*` / `greg.Plugin.*`), also flat |
-| **`gregModmanager/`** | GregModManager / Workshop UI (`GregModmanager.csproj`) |
-| **`gregDataCenterExporter/`** | Exporter, templates, mirrors |
-| **`gregWiki/`** | This documentation site (Docusaurus) |
+## 1. Prerequisites
+- **Visual Studio 2022** or **VS Code** with .NET 6 SDK.
+- **MelonLoader v0.7.2+** installed in your Data Center game folder.
+- **gregCore.dll** placed in the `Mods/` folder of your game.
 
-Rust/native mods are loaded through the core FFI layer; bridge code lives under **`gregCore/gregModLoader/LanguageBridges/`**.
+## 2. Using the Templates
+The easiest way to start is using the `gregModmanager` template system:
+1. Open `gregModmanager`.
+2. Go to the **New Project** tab.
+3. Select the **gregCore Framework** template.
+4. Enter a name (e.g., `MyFirstMod`) and click **Create**.
 
-## Build the framework
+## 3. Basic Code Structure
+Open your new project. Your main class should look like this:
 
-```bash
-dotnet build gregCore/gregCore.csproj -c Release
+```csharp
+using MelonLoader;
+using UnityEngine;
+using greg.Core;
+using greg.Sdk.Services;
+
+[assembly: MelonInfo(typeof(MyFirstMod.Main), "MyFirstMod", "1.0.0", "YourName")]
+[assembly: MelonGame("Waseku", "Data Center")]
+
+namespace MyFirstMod;
+
+public class Main : MelonMod
+{
+    public override void OnInitializeMelon()
+    {
+        MelonLogger.Msg("Hello gregFramework!");
+        
+        // Register your mod for discovery
+        GregModRegistry.Register("MyFirstMod", "1.0.0");
+    }
+
+    public override void OnUpdate()
+    {
+        if (UnityEngine.InputSystem.Keyboard.current.f5Key.wasPressedThisFrame)
+        {
+            GregNotificationService.Show("Mod is working!", "SUCCESS");
+        }
+    }
+}
 ```
 
-Or open **`gregCore/gregCore.sln`** in your IDE and build the **`gregCore/gregCore.csproj`** output. A **Release** build produces **`gregCore.dll`** (the MelonLoader framework assembly).
+## 4. Build & Run
+1. Press `F6` or run `dotnet build`.
+2. Copy the resulting `.dll` from `bin/Debug/net6.0/` to your game's `Mods/` folder.
+3. Start the game!
 
-For CI without a local game install, many projects support **`-p:CI=true`** (see each `.csproj`).
+## 5. Next Steps
+- Explore the [SDK Services](/docs/02_development/sdk-services) to interact with game logic.
+- Learn about [Custom UI](/docs/02_development/ui/custom-ugui-csharp).
+- Join our [Discord](https://discord.gg/greg) for support.
 
-**Prerequisites:** MelonLoader **net6** assemblies and game Il2Cpp interop must be available at runtime/build. `gregCore` now contains a recursive reference loader in `gregModLoader/References/ReferenceScanner.cs` that scans a configured base folder for `*.dll`.
-
-`gregCore` also includes `MoonSharp.Interpreter.dll` (`v2.0.0.0`) and `Newtonsoft.Json.dll` in its release package. Download them from [gregCore Releases](https://github.com/mleem97/gregCore/tree/main/Releases) and place them next to `gregCore.dll` under `Data Center/Mods/`.
-
-### Quick install
-
-1. Build or obtain **`gregCore.dll`**.
-2. Copy it to **`Data Center/Mods/`**.
-3. **C# mods:** additional managed mods stay under **`Data Center/Mods/`**.
-4. **Lua mods:** place `.lua` trees under **`Data Center/Mods/ScriptMods/lua/`**.
-5. **Rust / native mods:** place modules under **`Data Center/Mods/RustMods/`**.
-6. Launch the game and confirm load order in **`MelonLoader/Latest.log`**.
-
-## Supported modding languages
-
-gregCore supports **four modding paths** in parallel:
-
-| Language | Role |
-| --- | --- |
-| **C#** | Full MelonLoader / IL2CPP interop, Harmony, and **`gregSdk`** — the default for framework extensions. |
-| **Lua** | MoonSharp-hosted scripts; game access through the **`greg.*`** API. Deploy under **`Data Center/Mods/ScriptMods/lua/`**. |
-| **TypeScript/JS** | Web-tech modding via the TS bridge. Deploy under **`Data Center/Mods/ScriptMods/tsjs/`**. |
-| **Rust / native** | **`FFIBridge`** native pipeline; deploy under **`Data Center/Mods/RustMods/`**. |
-
-## Hooks and registries
-
-| Topic | Where |
-| --- | --- |
-| **Canonical `greg.*` (JSON, Il2Cpp)** | Repo root **`greg_hooks.json`** |
-| **`greg.*` Hooks** | **`gregSdk.gregNativeEventHooks`** — [greg hooks catalog](/wiki/reference/greg-hooks-catalog), source `gregCore/gregSdk/gregNativeEventHooks.cs` |
-| **Runtime architecture** | [greg hooks catalog & events runtime](/wiki/reference/greg-hooks-catalog) |
-
-Engine integration rule:
-
-- Anything sourced from Unity engine APIs must be normalized into canonical `greg.*` hook/event contracts before consumption.
-
-## Start a new mod
-
-1. Create **`gregMod.<Name>/`** under `gregFramework/`.
-2. Add **`ProjectReference`** to **`gregCore/gregCore.csproj`**.
-3. Use **`gregSdk`** (`gregEventDispatcher`, `gregNativeEventHooks`, …).
-4. Template: **`gregCore/Templates/CustomContentPack/`**.
+---
+*Follow best practices: Always use SDK services instead of direct patches when possible.*
