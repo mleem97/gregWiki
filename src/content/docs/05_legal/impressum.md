@@ -4,26 +4,29 @@ description: Provider identification according to § 5 DDG (Digital-Dienste-Gese
 ---
 
 :::caution LEGAL NOTICE
-This site is a documentation wiki for the **gregFramework** modding project. The following information is provided to comply with the legal requirements for online services in Germany/EU.
+This site is the documentation wiki for the **gregFramework** modding project.
 :::
 
 ## Angaben gemäß § 5 DDG
 
 **Betreiber der Website:**
-[Name / Alias des Betreibers]
-[Straße, Hausnummer]
-[PLZ, Ort]
-[Land]
+Meyer Media (Einzelunternehmen)
+Marvin Lee Meyer
+Am Friedrich-Ebert-Park 1a
+31157 Sarstedt
+Deutschland
 
 **Kontakt:**
-E-Mail: [Ihre E-Mail-Adresse]
-Website: [URL der Haupt-Website]
+E-Mail: info@meyermedia.eu
+Website: https://meyermedia.eu
 
 ## Inhaltliche Verantwortlichkeit
 
 Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:
-[Name des Verantwortlichen]
-[Anschrift wie oben]
+Marvin Lee Meyer
+Am Friedrich-Ebert-Park 1a
+31157 Sarstedt
+Deutschland
 
 ## Haftung für Inhalte
 
@@ -42,7 +45,7 @@ Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unt
 ## English Version (Summary)
 
 **Provider identification:**
-This documentation is provided by [User Name/Alias]. For formal inquiries, please contact [Email Address].
+This documentation is provided by **Meyer Media (Marvin Lee Meyer)**. For formal inquiries, please contact **info@meyermedia.eu**.
 
 **Disclaimer:**
 The content on this wiki is for educational and modding purposes. We are not responsible for the content of external links. All code examples provided are subject to the project's license (e.g., MIT/GPL).
