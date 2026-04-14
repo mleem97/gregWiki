@@ -1,6 +1,6 @@
 import { c as createComponent, r as renderComponent, b as renderTemplate } from '../chunks/astro/server_gdVP-I2a.mjs';
 import 'piccolore';
-import { $ as $$Common } from '../chunks/common_R2Mg-G5S.mjs';
+import { $ as $$Common } from '../chunks/common_CFh0GYN2.mjs';
 export { renderers } from '../renderers.mjs';
 
 const prerender = true;

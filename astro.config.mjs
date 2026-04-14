@@ -13,7 +13,9 @@ export default defineConfig({
 			social: {
 				github: 'https://github.com/mleem97/gregCore',
 			},
-            editUrl: 'https://github.com/mleem97/gregFramework/edit/main/gregWiki/',
+            editLink: {
+                baseUrl: 'https://github.com/mleem97/gregFramework/edit/main/gregWiki/',
+            },
 			sidebar: [
 				{
 					label: 'Getting Started',
