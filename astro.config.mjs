@@ -42,6 +42,12 @@ export default defineConfig({
 					autogenerate: { directory: '06_tools' },
 				},
 			],
+            footer: {
+                links: [
+                    { label: 'Impressum / Imprint', href: '/05_legal/impressum/' },
+                    { label: 'Datenschutz / Privacy', href: '/05_legal/privacy/' },
+                ],
+            },
             customCss: [
                 './src/styles/custom.css',
                 './src/styles/global.css',
