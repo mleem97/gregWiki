@@ -46,6 +46,7 @@ export default defineConfig({
                 links: [
                     { label: 'Impressum / Imprint', href: '/05_legal/impressum/' },
                     { label: 'Datenschutz / Privacy', href: '/05_legal/privacy/' },
+                    { label: 'Nutzungsbedingungen / Terms', href: '/05_legal/terms/' },
                 ],
             },
             customCss: [
