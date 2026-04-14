@@ -1,4 +1,4 @@
-﻿---
+---
 title: Greg hooks & events (moved)
 sidebar_label: Greg hooks & events (moved)
 description: This page has been merged into the canonical greg hooks catalog & events runtime page.

@@ -1,7 +1,6 @@
 ---
 id: greg-hooks-catalog
 title: greg hooks catalog & events runtime
-slug: /reference/greg-hooks-catalog
 description: Canonical `greg.*` runtime reference across HookBinder, GregEventDispatcher, GregNativeEventHooks, and EventIds mappings.
 ---
 

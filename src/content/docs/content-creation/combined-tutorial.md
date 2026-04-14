@@ -2,7 +2,6 @@
 id: content-creation-combined-tutorial
 title: Combined End-to-End Tutorial
 sidebar_label: Combined Tutorial
-slug: /development/content-creation/combined-tutorial
 description: End-to-end walkthrough from empty project to a functional custom content pack with server, cable, customer, furniture, and model override.
 ---
 

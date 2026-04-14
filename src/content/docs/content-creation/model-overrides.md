@@ -2,7 +2,6 @@
 id: content-creation-model-overrides
 title: Model Overrides
 sidebar_label: Model Overrides
-slug: /development/content-creation/model-overrides
 description: Replace existing visuals or assign custom models to new content while keeping gameplay data independent.
 ---
 

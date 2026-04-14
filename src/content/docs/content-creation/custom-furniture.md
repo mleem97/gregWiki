@@ -2,7 +2,6 @@
 id: content-creation-custom-furniture
 title: Custom Furniture and Usable Objects
 sidebar_label: Custom Furniture
-slug: /development/content-creation/custom-furniture
 description: Create placeable furniture and usable gameplay objects with interaction rules, categories, and model mapping.
 ---
 

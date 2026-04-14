@@ -1,12 +1,12 @@
-Ôªø---
+---
 title: System architecture & documentation principles
 sidebar_label: Architecture principles
-description: Canonical stack model (ModManager ‚Üí Framework ‚Üí Plugins ‚Üí Mods), priorities, and how wiki pages should align.
+description: Canonical stack model (ModManager ? Framework ? Plugins ? Mods), priorities, and how wiki pages should align.
 ---
 
-This page is the **canonical reference** for how gregFramework documentation describes the stack: **ModManager (MAUI) ‚Üí modding framework / SDK ‚Üí plugins ‚Üí mods**, plus priorities (stability first), the hook-proxy idea, and **authoring rules**. All wiki content must be written in **English** only.
+This page is the **canonical reference** for how gregFramework documentation describes the stack: **ModManager (MAUI) ? modding framework / SDK ? plugins ? mods**, plus priorities (stability first), the hook-proxy idea, and **authoring rules**. All wiki content must be written in **English** only.
 
-Detail pages (individual mods, plugins, releases) should align with this model without repeating the full narrative each time ‚Äî **link here** for the big picture.
+Detail pages (individual mods, plugins, releases) should align with this model without repeating the full narrative each time ó **link here** for the big picture.
 
 ## Layer model (target architecture)
 
@@ -14,17 +14,17 @@ Describe the runtime as a **layered system**, not a flat list of DLLs:
 
 | Layer | Role | Typical workspace artifacts |
 | --- | --- | --- |
-| **1. ModManager (front-end)** | UI to enable/disable mods and plugins, ordering, configuration. | `gregModmanager/` ‚Äî **GregModmanager** (MAUI). |
-| **2. Modding framework / SDK** | Stable API surface for mods: lifecycle, events, registries. Hooks Unity and maps events to **framework events**. | `gregCore/` ‚Äî runtime components in `gregModLoader/`, SDK in `gregSdk/`, Harmony integration in `gregHarmony/`. |
+| **1. ModManager (front-end)** | UI to enable/disable mods and plugins, ordering, configuration. | `gregModmanager/` ó **GregModmanager** (MAUI). |
+| **2. Modding framework / SDK** | Stable API surface for mods: lifecycle, events, registries. Hooks Unity and maps events to **framework events**. | `gregCore/` ó runtime components in `gregModLoader/`, SDK in `gregSdk/`, Harmony integration in `gregHarmony/`. |
 | **3. Plugins** | Extend the framework (new services, hook types). | Repos **`gregExt.<Name>/`**. |
 | **4. Mods** | User extensions via the **documented** framework API. | Repos **`gregMod.<Name>/`**. |
 
-**Mnemonic:** `ModManager ‚Üí Framework ‚Üí Plugins ‚Üí Mods`.
+**Mnemonic:** `ModManager ? Framework ? Plugins ? Mods`.
 
 ### Hook proxy and hotloading (concept)
 
 - The framework should map **Unity / IL2CPP events** (MelonLoader hooks, patches) to **stable, named framework events** (e.g. level loaded, scene changed, update) so mods do not couple to concrete Unity signatures.
-- **Hotloading** mods is a target state: load only in **safe** states (e.g. no active save, menu), re-bind on level change ‚Äî exact rules live in framework code and should appear in technical articles **only** when anchored in the repo.
+- **Hotloading** mods is a target state: load only in **safe** states (e.g. no active save, menu), re-bind on level change ó exact rules live in framework code and should appear in technical articles **only** when anchored in the repo.
 
 These wiki pages do **not** mandate a specific implementation; they **align** authors and readers on the same vocabulary.
 
@@ -42,24 +42,24 @@ Documentation and reviews in the gregFramework space typically assume:
 
 When documentation or API design must choose, use this **order**:
 
-1. **Stability and fault tolerance** ‚Äî faulty mods must not tear down the whole system arbitrarily; clear error paths and logging.
-2. **Clean architecture and maintainability** ‚Äî clear layers, documented interfaces.
-3. **Developer experience** ‚Äî understandable APIs, hooks, logging for mod authors.
+1. **Stability and fault tolerance** ó faulty mods must not tear down the whole system arbitrarily; clear error paths and logging.
+2. **Clean architecture and maintainability** ó clear layers, documented interfaces.
+3. **Developer experience** ó understandable APIs, hooks, logging for mod authors.
 4. **Performance and low invasiveness** toward the game.
-5. **Extensibility and long-term compatibility** ‚Äî versioning, dependency rules.
+5. **Extensibility and long-term compatibility** ó versioning, dependency rules.
 
 ## Rules for wiki authors
 
-- **Terminology:** Always name the layer (ModManager, framework, plugin, mod). Do not conflate ‚Äúplugin‚Äù and ‚Äúmod‚Äù without context.
+- **Terminology:** Always name the layer (ModManager, framework, plugin, mod). Do not conflate ìpluginî and ìmodî without context.
 - **Language:** **English only** for all user-facing documentation in `docs/`, the homepage, and UI strings in this site.
 - **Repos:** Keep paths such as `gregCore/`, `gregMod.*`, `gregExt.*`, `gregModmanager/` consistent with the [Workspace map](/wiki/getting-started/architecture) and [runtime hook architecture](/wiki/reference/greg-hooks-catalog).
-- **No invented APIs:** New pages must not promise hooks or events that are not evidenced in core/registry ‚Äî link to [FMF hooks](/wiki/reference/fmf-hook-naming) and the [Hooks catalog](/wiki/reference/greg-hooks-catalog).
+- **No invented APIs:** New pages must not promise hooks or events that are not evidenced in core/registry ó link to [FMF hooks](/wiki/reference/fmf-hook-naming) and the [Hooks catalog](/wiki/reference/greg-hooks-catalog).
 - **Cross-links:** Entry [Developers & contributors](/wiki/developers), architecture [runtime hook architecture](/wiki/reference/greg-hooks-catalog), language rule [Modding language support](/wiki/developers).
 
 ## See also
 
-- [Runtime hook architecture](/wiki/reference/greg-hooks-catalog) ‚Äî `greg.*` hook/event flow and mapping
-- [Getting started](/wiki/getting-started/quickstart) ‚Äî workspace and build
-- [Mods ‚Äî Framework](/mods) ‚Äî runtime from mod authors‚Äô perspective
-- [Plugins overview](/mods) ‚Äî `FFM.Plugin.*`
+- [Runtime hook architecture](/wiki/reference/greg-hooks-catalog) ó `greg.*` hook/event flow and mapping
+- [Getting started](/wiki/getting-started/quickstart) ó workspace and build
+- [Mods ó Framework](/mods) ó runtime from mod authorsí perspective
+- [Plugins overview](/mods) ó `FFM.Plugin.*`
 - [Mod developers](/wiki/developers)

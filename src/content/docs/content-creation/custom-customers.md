@@ -2,7 +2,6 @@
 id: content-creation-custom-customers
 title: Custom Customers
 sidebar_label: Custom Customers
-slug: /development/content-creation/custom-customers
 description: Define customer segments, requirements, budgets, and ownership assignment rules for custom content.
 ---
 

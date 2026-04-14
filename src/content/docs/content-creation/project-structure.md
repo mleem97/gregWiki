@@ -2,7 +2,6 @@
 id: content-creation-project-structure
 title: Project Structure for Custom Content Packs
 sidebar_label: Project Structure
-slug: /development/content-creation/project-structure
 description: Reference structure for custom content packs, registration code, runtime behavior, and model override mapping.
 ---
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Mod Index
 sidebar_label: Mod Index
 ---

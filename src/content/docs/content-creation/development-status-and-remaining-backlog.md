@@ -3,7 +3,6 @@ id: content-creation-development-status-and-remaining-backlog
 title: Development Status and Remaining Backlog
 sidebar_label: Development Status
 description: Evidence-based snapshot of completed work and remaining implementation tasks for custom content and model override support.
-slug: /development/content-creation/development-status
 ---
 
 ## Scope and intent

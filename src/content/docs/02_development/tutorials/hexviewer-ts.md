@@ -2,7 +2,6 @@
 id: hexviewer-ts
 title: HexViewer Mod Tutorial (TypeScript)
 sidebar_label: HexViewer in TypeScript
-slug: /development/tutorials/hexviewer-ts
 description: Technical writing tutorial for the HexViewer TypeScript implementation using JADE Style and the greg bridge object.
 ---
 

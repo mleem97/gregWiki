@@ -1,7 +1,6 @@
 ---
 id: extending-gregcore
 title: EXTENDING gregCore
-slug: /reference/extending-gregcore
 description: Framework extension tutorial for adding hooks, payload parsers, plugins, and Harmony patches in gregCore.
 ---
 

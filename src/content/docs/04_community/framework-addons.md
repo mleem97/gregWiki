@@ -2,7 +2,6 @@
 id: framework-addons
 title: Framework Addons
 sidebar_label: Framework Addons
-slug: /community/framework-addons
 description: Extension guide for gregCore framework addons, including install locations, load order, and validation steps.
 ---
 

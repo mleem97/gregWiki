@@ -2,7 +2,6 @@
 id: content-creation-deployment
 title: Deployment, Build, and Testing
 sidebar_label: Deployment
-slug: /development/content-creation/deployment
 description: Build, package, copy, and validate custom content packs for Data Center using gregCore + MelonLoader.
 ---
 

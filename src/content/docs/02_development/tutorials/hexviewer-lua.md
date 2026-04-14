@@ -2,7 +2,6 @@
 id: hexviewer-lua
 title: HexViewer Mod Tutorial (Lua)
 sidebar_label: HexViewer in LUA
-slug: /development/tutorials/hexviewer-lua
 description: Technical writing tutorial for the HexViewer Lua implementation using JADE Style and gregSdk v1.0.0-pre.4.
 ---
 

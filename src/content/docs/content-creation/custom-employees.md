@@ -2,7 +2,6 @@
 id: content-creation-custom-employees
 title: Custom Employees
 sidebar_label: Custom Employees
-slug: /development/content-creation/custom-employees
 description: Build custom employee classes and profiles with skills, costs, availability, specialization, and optional visual mapping.
 ---
 

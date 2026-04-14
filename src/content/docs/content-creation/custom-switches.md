@@ -2,7 +2,6 @@
 id: content-creation-custom-switches
 title: Custom Switches
 sidebar_label: Custom Switches
-slug: /development/content-creation/custom-switches
 description: Define custom switch hardware including ports, throughput, supported SFP profiles, and placement/shop integration.
 ---
 

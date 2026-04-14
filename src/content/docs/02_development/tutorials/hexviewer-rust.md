@@ -2,7 +2,6 @@
 id: hexviewer-rust
 title: HexViewer Mod Tutorial (Rust)
 sidebar_label: HexViewer in Rust
-slug: /development/tutorials/hexviewer-rust
 description: Technical writing tutorial for the HexViewer Rust implementation using JADE Style and the v8 gregSdk FFI API.
 ---
 

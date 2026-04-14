@@ -1,7 +1,6 @@
 ---
 id: modding-melonloader-gregcore
 title: MelonLoader + gregCore Modding Tutorial
-slug: /guides/modding-melonloader-gregcore
 description: Beginner tutorial for building a first Data Center mod with MelonLoader and gregCore.
 ---
 

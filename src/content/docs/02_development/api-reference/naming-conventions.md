@@ -1,7 +1,6 @@
 ---
 id: fmf-hook-naming
 title: FMF hook and event naming
-slug: /reference/fmf-hook-naming
 description: Legacy documentation naming (`FMF.*`) and migration notes to canonical runtime `greg.*` hooks.
 ---
 

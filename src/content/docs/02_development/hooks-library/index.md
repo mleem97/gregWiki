@@ -1,7 +1,6 @@
 ---
 id: hooks-library-index
 title: Hooks Library
-slug: /development/hooks-library
 description: Generated per-hook documentation for the full greg.* hook inventory from greg_hooks.json.
 ---
 

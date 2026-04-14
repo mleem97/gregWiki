@@ -2,7 +2,6 @@
 id: content-creation-custom-servers
 title: Custom Servers
 sidebar_label: Custom Servers
-slug: /development/content-creation/custom-servers
 description: Define and register custom server content with gregCore-compatible bootstrap flow.
 ---
 

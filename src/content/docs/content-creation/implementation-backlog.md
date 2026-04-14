@@ -2,7 +2,6 @@
 id: content-creation-implementation-backlog
 title: Custom Content Implementation Backlog
 sidebar_label: Implementation Backlog
-slug: /development/content-creation/implementation-backlog
 description: Complete implementation checklist for delivering first-class custom content and model override support in gregCore.
 ---
 

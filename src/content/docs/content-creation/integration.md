@@ -2,7 +2,6 @@
 id: content-creation-integration
 title: Integration
 sidebar_label: Integration
-slug: /development/content-creation/integration
 description: Registration order, load timing, runtime discovery, and contributor workflow for custom content systems.
 ---
 

@@ -2,7 +2,6 @@
 id: content-creation-introduction
 title: Creating Custom Content and Model Overrides in gregCore
 sidebar_label: Introduction
-slug: /development/content-creation/introduction
 description: Official overview for data-driven custom content in Data Center with gregCore + MelonLoader, including model override strategy and framework gaps.
 ---
 

@@ -2,7 +2,6 @@
 id: content-creation-custom-network-items
 title: Custom Network Items (SFP, Cables, Related Objects)
 sidebar_label: Custom Network Items
-slug: /development/content-creation/custom-network-items
 description: Build data-driven SFP modules and cable types with compatibility and balancing rules.
 ---
 

@@ -2,7 +2,6 @@
 id: hexviewer-csharp
 title: HexViewer Mod Tutorial (C#)
 sidebar_label: HexViewer in C#
-slug: /development/tutorials/hexviewer-csharp
 description: Learn how to build a JADE-style HUD mod using gregCore and gregSdk.
 ---
 
