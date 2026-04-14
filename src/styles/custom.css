@@ -1,0 +1,23 @@
+:root {
+	--sl-color-accent-low: #002b26;
+	--sl-color-accent: #008f7a;
+	--sl-color-accent-high: #61f4d8;
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #eceef2;
+	--sl-color-gray-2: #c0c4ce;
+	--sl-color-gray-3: #888e96;
+	--sl-color-gray-4: #545861;
+	--sl-color-gray-5: #353941;
+	--sl-color-gray-6: #24292f;
+	--sl-color-black: #001110;
+}
+
+/* Custom styles for gregWiki */
+.hero-tagline {
+    color: var(--sl-color-accent-high) !important;
+    font-weight: 600;
+}
+
+[data-theme='dark'] body {
+    background-color: #001110;
+}

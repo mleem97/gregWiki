@@ -1,13 +1,1 @@
-bin/
-obj/
-node_modules/
-.DS_Store
-.docusaurus/
-build/
-.cache/
-*.log
-npm-debug.log*
-pnpm-debug.log*
-**/MISSING.md
-**/MISSING*.md
-docs/FRAMEWORK_READINESS.md
+node_modules

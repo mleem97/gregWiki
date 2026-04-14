@@ -1,49 +1,30 @@
 {
-  "name": "gregwiki-docs-site",
-  "version": "0.1.0",
-  "private": true,
+  "name": "greg-wiki",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "docusaurus clear && docusaurus build && docusaurus start --host 0.0.0.0 --port 3000",
-    "start": "docusaurus start --host 0.0.0.0 --port 3000",
-    "build": "docusaurus build",
-    "serve": "docusaurus serve",
-    "clear": "docusaurus clear",
-    "wiki:sync": "node ./scripts/sync-wiki-to-docs.mjs",
-    "wiki:normalize-i18n": "node ./scripts/normalize-wiki-import-i18n.mjs",
-    "wiki:refresh": "node ./scripts/sync-wiki-to-docs.mjs && node ./scripts/normalize-wiki-import-i18n.mjs",
-    "format": "prettier --write src scripts docusaurus.config.js sidebars.js README.md docs/README.md docs/getting-started/documentation-layout.md package.json .prettierrc.json docker-compose.yml",
-    "format:check": "prettier --check src scripts docusaurus.config.js sidebars.js README.md docs/README.md docs/getting-started/documentation-layout.md package.json .prettierrc.json docker-compose.yml"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.10.0",
-    "@docusaurus/plugin-client-redirects": "^3.10.0",
-    "@docusaurus/plugin-content-docs": "^3.10.0",
-    "@docusaurus/plugin-content-pages": "^3.10.0",
-    "@docusaurus/plugin-css-cascade-layers": "^3.10.0",
-    "@docusaurus/plugin-sitemap": "^3.10.0",
-    "@docusaurus/plugin-svgr": "^3.10.0",
-    "@docusaurus/preset-classic": "^3.10.0",
-    "@docusaurus/theme-live-codeblock": "^3.10.0",
-    "@docusaurus/theme-search-algolia": "^3.10.0",
-    "@tailwindcss/postcss": "^4.2.2",
-    "@tsparticles/engine": "^3.9.1",
-    "@tsparticles/react": "^3.0.0",
-    "@tsparticles/slim": "^3.9.1",
+    "@astrojs/react": "^4.2.0",
+    "@astrojs/starlight": "^0.32.1",
+    "@astrojs/tailwind": "^6.0.2",
+    "@tailwindcss/vite": "^4.2.2",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "astro": "^5.4.1",
+    "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",
-    "gsap": "^3.14.2",
-    "ogl": "^1.0.11",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "lucide-react": "^1.8.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-icons": "^5.6.0",
+    "sharp": "^0.33.5",
+    "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.2.2"
-  },
-  "devDependencies": {
-    "@docusaurus/eslint-plugin": "^3.10.0",
-    "prettier": "^3.5.3"
-  },
-  "pnpm": {
-    "overrides": {
-      "webpack": "5.102.1"
-    }
   }
 }

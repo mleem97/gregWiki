@@ -1,0 +1,103 @@
+---
+import { moduleCatalog } from '../data/moduleCatalog';
+import '../styles/global.css';
+import { FaDownload, FaArrowRight, FaGithub, FaDiscord } from 'react-icons/fa6';
+
+const plugins = moduleCatalog.filter(m => m.type === 'plugin');
+const mods = moduleCatalog.filter(m => m.type === 'mod');
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<title>gregWiki - Modules & Plugins</title>
+	</head>
+	<body class="bg-slate-950 text-white font-sans min-h-screen">
+        <nav class="border-b border-slate-800 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+                <a href="/" class="text-xl font-black tracking-tighter text-teal-400">gregWiki</a>
+                <div class="flex gap-6 text-sm font-medium">
+                    <a href="/01_getting-started/intro" class="hover:text-teal-400 transition-colors">Docs</a>
+                    <a href="/mods" class="text-teal-400">Modules</a>
+                    <a href="https://github.com/mleem97/gregCore" class="hover:text-teal-400 transition-colors">GitHub</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="max-w-7xl mx-auto px-4 py-16">
+            <header class="mb-16">
+                <h1 class="text-5xl font-black mb-4 tracking-tight">Modules & Plugins</h1>
+                <p class="text-xl text-slate-400 max-w-3xl">Official extensions for the gregFramework ecosystem. Built for performance and compatibility.</p>
+            </header>
+
+            <section class="mb-20">
+                <div class="flex items-center gap-4 mb-10">
+                    <h2 class="text-3xl font-bold">Framework Plugins</h2>
+                    <div class="h-px bg-slate-800 flex-1"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {plugins.map(item => (
+                        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-teal-500/50 transition-all group flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-4">
+                                    <span class="bg-teal-500/10 text-teal-400 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider border border-teal-500/20">Plugin</span>
+                                    <span class="text-slate-500 text-xs font-mono">{item.version}</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-2 group-hover:text-teal-400 transition-colors">{item.name}</h3>
+                                <p class="text-slate-400 text-sm mb-6 line-clamp-3">{item.description}</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href={item.releasePath} target="_blank" class="flex-1 bg-slate-800 hover:bg-slate-700 text-center py-2 rounded-lg text-sm font-bold transition-colors">Details</a>
+                                <a href={item.downloadPath} class="bg-teal-500 hover:bg-teal-400 text-slate-950 px-4 py-2 rounded-lg transition-colors flex items-center justify-center">
+                                    <FaDownload />
+                                </a>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <section>
+                <div class="flex items-center gap-4 mb-10">
+                    <h2 class="text-3xl font-bold">Gameplay Modules</h2>
+                    <div class="h-px bg-slate-800 flex-1"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {mods.map(item => (
+                        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-cyan-500/50 transition-all group flex flex-col justify-between">
+                            <div>
+                                <div class="flex justify-between items-start mb-4">
+                                    <span class="bg-cyan-500/10 text-cyan-400 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider border border-cyan-500/20">Mod</span>
+                                    <span class="text-slate-500 text-xs font-mono">{item.version}</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">{item.name}</h3>
+                                <p class="text-slate-400 text-sm mb-6 line-clamp-3">{item.description}</p>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href={item.releasePath} target="_blank" class="flex-1 bg-slate-800 hover:bg-slate-700 text-center py-2 rounded-lg text-sm font-bold transition-colors">Details</a>
+                                <a href={item.downloadPath} class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-4 py-2 rounded-lg transition-colors flex items-center justify-center">
+                                    <FaDownload />
+                                </a>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-slate-950 py-20 px-4 border-t border-slate-900">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+                <div>
+                    <h2 class="text-2xl font-bold text-teal-400 mb-2">gregFramework</h2>
+                    <p class="text-slate-500">Built for the community, by teamGreg.</p>
+                </div>
+                <div class="flex gap-6 text-3xl">
+                    <a href="https://github.com/mleem97/gregCore" class="text-slate-400 hover:text-white transition-colors"><FaGithub /></a>
+                    <a href="https://discord.gg/greg" class="text-slate-400 hover:text-white transition-colors"><FaDiscord /></a>
+                </div>
+            </div>
+        </footer>
+	</body>
+</html>
