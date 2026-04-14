@@ -1,3 +1,6 @@
+---
+title: Building Custom UIs with C(uGUI)
+---
 # Building Custom UIs with C# (uGUI)
 
 For a modern, polished UI, you should use Unity's **uGUI** system. While the game uses some older IMGUI (`OnGUI`), a modernization mod should stick to the newer `GameObject`-based approach.
@@ -55,7 +58,6 @@ If you create your own UI, you need to prevent the game from detecting mouse cli
 GameInputSuppression.SetSuppressed(true);
 ```
 
----
 
 ## Example Case: `gregIPAM`
 

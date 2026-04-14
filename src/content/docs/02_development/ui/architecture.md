@@ -1,3 +1,6 @@
+---
+title: UI Architecture in Data Center
+---
 # UI Architecture in Data Center
 
 Data Center uses a standard Unity **uGUI** system. Understanding how it is structured is the first step to modernizing it.
@@ -22,7 +25,6 @@ To replace the "shitty" vanilla UI with a modern design:
 3. **Inject**: Instantiate your own modern UI prefabs or build them via C# code.
 4. **Sync**: Bind your UI events to the original game logic (e.g., clicking your modern "Apply" button calls the vanilla `SetIP.Apply()` method).
 
----
 
 ## Further Reading
 * [Replacing Vanilla UI Elements](./replacing-vanilla-ui.md)

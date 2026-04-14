@@ -1,3 +1,6 @@
+---
+title: Replacing Vanilla UI Elements
+---
 # Replacing Vanilla UI Elements
 
 This guide explains how to surgically replace or "re-skin" the game's existing UI elements using C#.

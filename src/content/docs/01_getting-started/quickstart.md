@@ -1,4 +1,7 @@
-# Quickstart: Build Your First Mod
+---
+title: Quickstart - Build Your First Mod
+description: Set up your environment and build a simple mod in less than 5 minutes.
+---
 
 Welcome to the **gregFramework** ecosystem! This guide will help you set up your environment and build a simple "Hello World" mod in less than 5 minutes.
 
@@ -54,9 +57,8 @@ public class Main : MelonMod
 3. Start the game!
 
 ## 5. Next Steps
-- Explore the [SDK Services](/docs/02_development/sdk-services) to interact with game logic.
-- Learn about [Custom UI](/docs/02_development/ui/custom-ugui-csharp).
+- Explore the [SDK Services](/docs/02_development/api-reference/game-system-bridges) to interact with game logic.
+- Learn about [Custom UI](/02_development/ui/custom-ugui-csharp).
 - Join our [Discord](https://discord.gg/greg) for support.
 
----
 *Follow best practices: Always use SDK services instead of direct patches when possible.*

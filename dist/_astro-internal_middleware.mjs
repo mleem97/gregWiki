@@ -5,7 +5,7 @@ import 'piccolore';
 import { o as originPathnameSymbol, A as AstroError, F as ForbiddenRewrite, a as AstroUserError } from './chunks/astro/server_gdVP-I2a.mjs';
 import 'clsx';
 import 'html-escaper';
-import { u as useTranslations } from './chunks/translations_CJDiZ1Re.mjs';
+import { u as useTranslations } from './chunks/translations_DXJZ6Uho.mjs';
 
 function shouldAppendForwardSlash(trailingSlash, buildFormat) {
   switch (trailingSlash) {

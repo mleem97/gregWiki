@@ -1,5 +1,5 @@
 ---
-sidebar_label: Luminescent design system
+title: Luminescent design system
 description: Visual and interaction guidelines for the docs site (Luminescent Architect).
 ---
 
