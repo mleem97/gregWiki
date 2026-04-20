@@ -1,7 +1,7 @@
 ---
 title: FlexibleColorPicker.TypeHex
 description: Hook event for FlexibleColorPicker.TypeHex
-path: /api/hooks/visualui/flexible-color-picker-type-hex
+path: /api/hooks/visualui/flexible-color-picker-type-hex-input-finish
 ---
 
 # FlexibleColorPicker.TypeHex
@@ -14,7 +14,7 @@ This hook intercepts calls to `FlexibleColorPicker.TypeHex()` and broadcasts an 
 
 ## Native Signature
 ```csharp
-Void TypeHex(String input)
+Void TypeHex(String input, Boolean finish)
 ```
 
 ## Payload Context
@@ -23,6 +23,7 @@ When this hook fires, the event payload contains the argument data from the orig
 | Name | Type | Description |
 |---|---|---|
 | `input` | `String` | ... |
+| `finish` | `Boolean` | ... |
 
 
 ## Using this Hook

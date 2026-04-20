@@ -1,20 +1,20 @@
 ---
-title: FlexibleColorPicker.TypeHex
-description: Hook event for FlexibleColorPicker.TypeHex
-path: /api/hooks/visualui/flexible-color-picker-type-hex
+title: FlexibleColorPicker.ChangeMode
+description: Hook event for FlexibleColorPicker.ChangeMode
+path: /api/hooks/visualui/flexible-color-picker-change-mode-mode
 ---
 
-# FlexibleColorPicker.TypeHex
+# FlexibleColorPicker.ChangeMode
 
-> **Hook ID:** `greg.visualui.flexiblecolorpicker.typehex`
+> **Hook ID:** `greg.visualui.flexiblecolorpicker.changemode`
 > **Category:** Visualui
 > **Namespace:** `Il2Cpp`
 
-This hook intercepts calls to `FlexibleColorPicker.TypeHex()` and broadcasts an event to the `gregCore` EventBus.
+This hook intercepts calls to `FlexibleColorPicker.ChangeMode()` and broadcasts an event to the `gregCore` EventBus.
 
 ## Native Signature
 ```csharp
-Void TypeHex(String input)
+Void ChangeMode(MainPickingMode mode)
 ```
 
 ## Payload Context
@@ -22,13 +22,13 @@ When this hook fires, the event payload contains the argument data from the orig
 
 | Name | Type | Description |
 |---|---|---|
-| `input` | `String` | ... |
+| `mode` | `MainPickingMode` | ... |
 
 
 ## Using this Hook
 
 ::: tip
-Use this hook to react to `TypeHex` events in `FlexibleColorPicker`. 
+Use this hook to react to `ChangeMode` events in `FlexibleColorPicker`. 
 :::
 
 #Tabset
@@ -40,7 +40,7 @@ public class MyMod : MelonMod
 {
     public override void OnInitializeMelon()
     {
-        GregAPI.Subscribe("greg.visualui.flexiblecolorpicker.typehex", OnHookTriggered);
+        GregAPI.Subscribe("greg.visualui.flexiblecolorpicker.changemode", OnHookTriggered);
     }
 
     private void OnHookTriggered(EventPayload payload)
@@ -51,32 +51,32 @@ public class MyMod : MelonMod
 ```
 #Tab: Lua
 ```lua
-greg.subscribe("greg.visualui.flexiblecolorpicker.typehex", function(payload)
+greg.subscribe("greg.visualui.flexiblecolorpicker.changemode", function(payload)
     -- Custom Lua logic here
 end)
 ```
 #Tab: Python
 ```python
-@greg.hook("greg.visualui.flexiblecolorpicker.typehex")
+@greg.hook("greg.visualui.flexiblecolorpicker.changemode")
 def on_hook_triggered(payload):
     # Custom Python logic here
     pass
 ```
 #Tab: JavaScript
 ```javascript
-greg.events.on("greg.visualui.flexiblecolorpicker.typehex", (payload) => {
+greg.events.on("greg.visualui.flexiblecolorpicker.changemode", (payload) => {
     // Custom JS logic here
 });
 ```
 #Tab: Rust
 ```rust
-greg::subscribe("greg.visualui.flexiblecolorpicker.typehex", |payload| {
+greg::subscribe("greg.visualui.flexiblecolorpicker.changemode", |payload| {
     // Custom Rust logic here
 });
 ```
 #Tab: Go
 ```go
-greg.Subscribe("greg.visualui.flexiblecolorpicker.typehex", func(payload greg.EventPayload) {
+greg.Subscribe("greg.visualui.flexiblecolorpicker.changemode", func(payload greg.EventPayload) {
     // Custom Go logic here
 })
 ```

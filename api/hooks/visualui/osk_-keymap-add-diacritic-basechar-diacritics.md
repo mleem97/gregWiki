@@ -1,7 +1,7 @@
 ---
 title: OSK_Keymap.AddDiacritic
 description: Hook event for OSK_Keymap.AddDiacritic
-path: /api/hooks/visualui/osk_-keymap-add-diacritic
+path: /api/hooks/visualui/osk_-keymap-add-diacritic-basechar-diacritics
 ---
 
 # OSK_Keymap.AddDiacritic
@@ -14,7 +14,7 @@ This hook intercepts calls to `OSK_Keymap.AddDiacritic()` and broadcasts an even
 
 ## Native Signature
 ```csharp
-String AddDiacritic(Char baseChar, Il2CppStructArray`1 diacritics)
+String AddDiacritic(Char baseChar, Char[] diacritics)
 ```
 
 ## Payload Context
@@ -23,7 +23,7 @@ When this hook fires, the event payload contains the argument data from the orig
 | Name | Type | Description |
 |---|---|---|
 | `baseChar` | `Char` | ... |
-| `diacritics` | `Il2CppStructArray`1` | ... |
+| `diacritics` | `Char[]` | ... |
 
 
 ## Using this Hook

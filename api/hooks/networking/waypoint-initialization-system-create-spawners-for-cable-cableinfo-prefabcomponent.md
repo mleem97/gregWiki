@@ -1,7 +1,7 @@
 ---
 title: WaypointInitializationSystem.CreateSpawnersForCable
 description: Hook event for WaypointInitializationSystem.CreateSpawnersForCable
-path: /api/hooks/networking/waypoint-initialization-system-create-spawners-for-cable
+path: /api/hooks/networking/waypoint-initialization-system-create-spawners-for-cable-cableinfo-prefabcomponent
 ---
 
 # WaypointInitializationSystem.CreateSpawnersForCable
@@ -14,7 +14,7 @@ This hook intercepts calls to `WaypointInitializationSystem.CreateSpawnersForCab
 
 ## Native Signature
 ```csharp
-Void CreateSpawnersForCable(CableInfo& cableInfo)
+Void CreateSpawnersForCable(CableInfo& cableInfo, PacketSpawnerComponent prefabComponent)
 ```
 
 ## Payload Context
@@ -23,6 +23,7 @@ When this hook fires, the event payload contains the argument data from the orig
 | Name | Type | Description |
 |---|---|---|
 | `cableInfo` | `CableInfo&` | ... |
+| `prefabComponent` | `PacketSpawnerComponent` | ... |
 
 
 ## Using this Hook

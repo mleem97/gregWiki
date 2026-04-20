@@ -1,7 +1,7 @@
 ---
 title: FlexibleColorPicker.GetValue
 description: Hook event for FlexibleColorPicker.GetValue
-path: /api/hooks/visualui/flexible-color-picker-get-value
+path: /api/hooks/visualui/flexible-color-picker-get-value-mode
 ---
 
 # FlexibleColorPicker.GetValue
@@ -14,7 +14,7 @@ This hook intercepts calls to `FlexibleColorPicker.GetValue()` and broadcasts an
 
 ## Native Signature
 ```csharp
-Vector2 GetValue(PickerType type)
+Vector2 GetValue(MainPickingMode mode)
 ```
 
 ## Payload Context
@@ -22,7 +22,7 @@ When this hook fires, the event payload contains the argument data from the orig
 
 | Name | Type | Description |
 |---|---|---|
-| `type` | `PickerType` | ... |
+| `mode` | `MainPickingMode` | ... |
 
 
 ## Using this Hook

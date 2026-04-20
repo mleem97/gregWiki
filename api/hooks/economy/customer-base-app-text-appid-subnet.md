@@ -1,7 +1,7 @@
 ---
 title: CustomerBase.AppText
 description: Hook event for CustomerBase.AppText
-path: /api/hooks/economy/customer-base-app-text
+path: /api/hooks/economy/customer-base-app-text-appid-subnet
 ---
 
 # CustomerBase.AppText
@@ -14,7 +14,7 @@ This hook intercepts calls to `CustomerBase.AppText()` and broadcasts an event t
 
 ## Native Signature
 ```csharp
-String AppText(Int32 lastUsedApp)
+String AppText(Int32 appID, String subnet)
 ```
 
 ## Payload Context
@@ -22,7 +22,8 @@ When this hook fires, the event payload contains the argument data from the orig
 
 | Name | Type | Description |
 |---|---|---|
-| `lastUsedApp` | `Int32` | ... |
+| `appID` | `Int32` | ... |
+| `subnet` | `String` | ... |
 
 
 ## Using this Hook

@@ -1,7 +1,7 @@
 ---
 title: FlexibleColorPicker.ParseHex
 description: Hook event for FlexibleColorPicker.ParseHex
-path: /api/hooks/visualui/flexible-color-picker-parse-hex
+path: /api/hooks/visualui/flexible-color-picker-parse-hex-input-defaultcolor
 ---
 
 # FlexibleColorPicker.ParseHex
@@ -14,7 +14,7 @@ This hook intercepts calls to `FlexibleColorPicker.ParseHex()` and broadcasts an
 
 ## Native Signature
 ```csharp
-Color ParseHex(String input)
+Color ParseHex(String input, Color defaultColor)
 ```
 
 ## Payload Context
@@ -23,6 +23,7 @@ When this hook fires, the event payload contains the argument data from the orig
 | Name | Type | Description |
 |---|---|---|
 | `input` | `String` | ... |
+| `defaultColor` | `Color` | ... |
 
 
 ## Using this Hook

@@ -1,20 +1,20 @@
 ---
-title: FlexibleColorPicker.TypeHex
-description: Hook event for FlexibleColorPicker.TypeHex
-path: /api/hooks/visualui/flexible-color-picker-type-hex
+title: OSK_Keyboard.SetSelectedKey
+description: Hook event for OSK_Keyboard.SetSelectedKey
+path: /api/hooks/visualui/osk_-keyboard-set-selected-key-c
 ---
 
-# FlexibleColorPicker.TypeHex
+# OSK_Keyboard.SetSelectedKey
 
-> **Hook ID:** `greg.visualui.flexiblecolorpicker.typehex`
+> **Hook ID:** `greg.visualui.osk_keyboard.setselectedkey`
 > **Category:** Visualui
-> **Namespace:** `Il2Cpp`
+> **Namespace:** `Il2CppviperOSK`
 
-This hook intercepts calls to `FlexibleColorPicker.TypeHex()` and broadcasts an event to the `gregCore` EventBus.
+This hook intercepts calls to `OSK_Keyboard.SetSelectedKey()` and broadcasts an event to the `gregCore` EventBus.
 
 ## Native Signature
 ```csharp
-Void TypeHex(String input)
+Void SetSelectedKey(String c)
 ```
 
 ## Payload Context
@@ -22,13 +22,13 @@ When this hook fires, the event payload contains the argument data from the orig
 
 | Name | Type | Description |
 |---|---|---|
-| `input` | `String` | ... |
+| `c` | `String` | ... |
 
 
 ## Using this Hook
 
 ::: tip
-Use this hook to react to `TypeHex` events in `FlexibleColorPicker`. 
+Use this hook to react to `SetSelectedKey` events in `OSK_Keyboard`. 
 :::
 
 #Tabset
@@ -40,7 +40,7 @@ public class MyMod : MelonMod
 {
     public override void OnInitializeMelon()
     {
-        GregAPI.Subscribe("greg.visualui.flexiblecolorpicker.typehex", OnHookTriggered);
+        GregAPI.Subscribe("greg.visualui.osk_keyboard.setselectedkey", OnHookTriggered);
     }
 
     private void OnHookTriggered(EventPayload payload)
@@ -51,32 +51,32 @@ public class MyMod : MelonMod
 ```
 #Tab: Lua
 ```lua
-greg.subscribe("greg.visualui.flexiblecolorpicker.typehex", function(payload)
+greg.subscribe("greg.visualui.osk_keyboard.setselectedkey", function(payload)
     -- Custom Lua logic here
 end)
 ```
 #Tab: Python
 ```python
-@greg.hook("greg.visualui.flexiblecolorpicker.typehex")
+@greg.hook("greg.visualui.osk_keyboard.setselectedkey")
 def on_hook_triggered(payload):
     # Custom Python logic here
     pass
 ```
 #Tab: JavaScript
 ```javascript
-greg.events.on("greg.visualui.flexiblecolorpicker.typehex", (payload) => {
+greg.events.on("greg.visualui.osk_keyboard.setselectedkey", (payload) => {
     // Custom JS logic here
 });
 ```
 #Tab: Rust
 ```rust
-greg::subscribe("greg.visualui.flexiblecolorpicker.typehex", |payload| {
+greg::subscribe("greg.visualui.osk_keyboard.setselectedkey", |payload| {
     // Custom Rust logic here
 });
 ```
 #Tab: Go
 ```go
-greg.Subscribe("greg.visualui.flexiblecolorpicker.typehex", func(payload greg.EventPayload) {
+greg.Subscribe("greg.visualui.osk_keyboard.setselectedkey", func(payload greg.EventPayload) {
     // Custom Go logic here
 })
 ```

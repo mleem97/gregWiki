@@ -1,7 +1,7 @@
 ---
 title: FlexibleColorPicker.IsPickerAvailable
 description: Hook event for FlexibleColorPicker.IsPickerAvailable
-path: /api/hooks/visualui/flexible-color-picker-is-picker-available
+path: /api/hooks/visualui/flexible-color-picker-is-picker-available-index
 ---
 
 # FlexibleColorPicker.IsPickerAvailable
@@ -14,7 +14,7 @@ This hook intercepts calls to `FlexibleColorPicker.IsPickerAvailable()` and broa
 
 ## Native Signature
 ```csharp
-Boolean IsPickerAvailable(PickerType type)
+Boolean IsPickerAvailable(Int32 index)
 ```
 
 ## Payload Context
@@ -22,7 +22,7 @@ When this hook fires, the event payload contains the argument data from the orig
 
 | Name | Type | Description |
 |---|---|---|
-| `type` | `PickerType` | ... |
+| `index` | `Int32` | ... |
 
 
 ## Using this Hook

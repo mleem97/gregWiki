@@ -39,6 +39,13 @@ def generate_page(hook):
     file_name = f"{camel_to_kebab(cls)}-{camel_to_kebab(method)}.md"
     file_path = os.path.join(group_dir, file_name)
     
+    # Handle Overloads: if file exists, append param count or names to be unique
+    if os.path.exists(file_path):
+        param_suffix = "-".join([p.get('Name').lower() for p in params])
+        if not param_suffix: param_suffix = "alt"
+        file_name = f"{camel_to_kebab(cls)}-{camel_to_kebab(method)}-{param_suffix}.md"
+        file_path = os.path.join(group_dir, file_name)
+
     # Payload table
     param_table = "| Name | Type | Description |\n|---|---|---|\n"
     for p in params:

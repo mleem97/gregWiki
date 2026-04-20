@@ -1,20 +1,20 @@
 ---
-title: OSK_GamepadHelper.SetSelectedKey
-description: Hook event for OSK_GamepadHelper.SetSelectedKey
-path: /api/hooks/visualui/osk_-gamepad-helper-set-selected-key
+title: OSK_UI_Keyboard.SetSelectedKey
+description: Hook event for OSK_UI_Keyboard.SetSelectedKey
+path: /api/hooks/visualui/osk_ui_-keyboard-set-selected-key-c
 ---
 
-# OSK_GamepadHelper.SetSelectedKey
+# OSK_UI_Keyboard.SetSelectedKey
 
-> **Hook ID:** `greg.visualui.osk_gamepadhelper.setselectedkey`
+> **Hook ID:** `greg.visualui.osk_ui_keyboard.setselectedkey`
 > **Category:** Visualui
 > **Namespace:** `Il2CppviperOSK`
 
-This hook intercepts calls to `OSK_GamepadHelper.SetSelectedKey()` and broadcasts an event to the `gregCore` EventBus.
+This hook intercepts calls to `OSK_UI_Keyboard.SetSelectedKey()` and broadcasts an event to the `gregCore` EventBus.
 
 ## Native Signature
 ```csharp
-Void SetSelectedKey(OSK_Key k)
+Void SetSelectedKey(String c)
 ```
 
 ## Payload Context
@@ -22,13 +22,13 @@ When this hook fires, the event payload contains the argument data from the orig
 
 | Name | Type | Description |
 |---|---|---|
-| `k` | `OSK_Key` | ... |
+| `c` | `String` | ... |
 
 
 ## Using this Hook
 
 ::: tip
-Use this hook to react to `SetSelectedKey` events in `OSK_GamepadHelper`. 
+Use this hook to react to `SetSelectedKey` events in `OSK_UI_Keyboard`. 
 :::
 
 #Tabset
@@ -40,7 +40,7 @@ public class MyMod : MelonMod
 {
     public override void OnInitializeMelon()
     {
-        GregAPI.Subscribe("greg.visualui.osk_gamepadhelper.setselectedkey", OnHookTriggered);
+        GregAPI.Subscribe("greg.visualui.osk_ui_keyboard.setselectedkey", OnHookTriggered);
     }
 
     private void OnHookTriggered(EventPayload payload)
@@ -51,32 +51,32 @@ public class MyMod : MelonMod
 ```
 #Tab: Lua
 ```lua
-greg.subscribe("greg.visualui.osk_gamepadhelper.setselectedkey", function(payload)
+greg.subscribe("greg.visualui.osk_ui_keyboard.setselectedkey", function(payload)
     -- Custom Lua logic here
 end)
 ```
 #Tab: Python
 ```python
-@greg.hook("greg.visualui.osk_gamepadhelper.setselectedkey")
+@greg.hook("greg.visualui.osk_ui_keyboard.setselectedkey")
 def on_hook_triggered(payload):
     # Custom Python logic here
     pass
 ```
 #Tab: JavaScript
 ```javascript
-greg.events.on("greg.visualui.osk_gamepadhelper.setselectedkey", (payload) => {
+greg.events.on("greg.visualui.osk_ui_keyboard.setselectedkey", (payload) => {
     // Custom JS logic here
 });
 ```
 #Tab: Rust
 ```rust
-greg::subscribe("greg.visualui.osk_gamepadhelper.setselectedkey", |payload| {
+greg::subscribe("greg.visualui.osk_ui_keyboard.setselectedkey", |payload| {
     // Custom Rust logic here
 });
 ```
 #Tab: Go
 ```go
-greg.Subscribe("greg.visualui.osk_gamepadhelper.setselectedkey", func(payload greg.EventPayload) {
+greg.Subscribe("greg.visualui.osk_ui_keyboard.setselectedkey", func(payload greg.EventPayload) {
     // Custom Go logic here
 })
 ```

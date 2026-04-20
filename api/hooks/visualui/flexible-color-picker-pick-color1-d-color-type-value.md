@@ -1,7 +1,7 @@
 ---
 title: FlexibleColorPicker.PickColor1D
 description: Hook event for FlexibleColorPicker.PickColor1D
-path: /api/hooks/visualui/flexible-color-picker-pick-color1-d
+path: /api/hooks/visualui/flexible-color-picker-pick-color1-d-color-type-value
 ---
 
 # FlexibleColorPicker.PickColor1D
@@ -14,7 +14,7 @@ This hook intercepts calls to `FlexibleColorPicker.PickColor1D()` and broadcasts
 
 ## Native Signature
 ```csharp
-BufferedColor PickColor1D(BufferedColor color, PickerType type, Vector2 v)
+BufferedColor PickColor1D(BufferedColor color, PickerType type, Single value)
 ```
 
 ## Payload Context
@@ -24,7 +24,7 @@ When this hook fires, the event payload contains the argument data from the orig
 |---|---|---|
 | `color` | `BufferedColor` | ... |
 | `type` | `PickerType` | ... |
-| `v` | `Vector2` | ... |
+| `value` | `Single` | ... |
 
 
 ## Using this Hook

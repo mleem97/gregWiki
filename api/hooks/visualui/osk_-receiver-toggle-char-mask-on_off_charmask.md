@@ -1,7 +1,7 @@
 ---
 title: OSK_Receiver.ToggleCharMask
 description: Hook event for OSK_Receiver.ToggleCharMask
-path: /api/hooks/visualui/osk_-receiver-toggle-char-mask
+path: /api/hooks/visualui/osk_-receiver-toggle-char-mask-on_off_charmask
 ---
 
 # OSK_Receiver.ToggleCharMask
@@ -14,13 +14,15 @@ This hook intercepts calls to `OSK_Receiver.ToggleCharMask()` and broadcasts an 
 
 ## Native Signature
 ```csharp
-Void ToggleCharMask()
+Void ToggleCharMask(Boolean on_off_charmask)
 ```
 
 ## Payload Context
 When this hook fires, the event payload contains the argument data from the original method call.
 
-*No parameters in payload.*
+| Name | Type | Description |
+|---|---|---|
+| `on_off_charmask` | `Boolean` | ... |
 
 
 ## Using this Hook

@@ -1,7 +1,7 @@
 ---
 title: Objectives.StartObjective
 description: Hook event for Objectives.StartObjective
-path: /api/hooks/lifecycle/objectives-start-objective
+path: /api/hooks/lifecycle/objectives-start-objective-_objectiveuid-_loadsave
 ---
 
 # Objectives.StartObjective
@@ -14,7 +14,7 @@ This hook intercepts calls to `Objectives.StartObjective()` and broadcasts an ev
 
 ## Native Signature
 ```csharp
-Void StartObjective(Int32 _objectiveUID, Vector3 objectivePosition, Boolean _loadSave)
+Void StartObjective(Int32 _objectiveUID, Boolean _loadSave)
 ```
 
 ## Payload Context
@@ -23,7 +23,6 @@ When this hook fires, the event payload contains the argument data from the orig
 | Name | Type | Description |
 |---|---|---|
 | `_objectiveUID` | `Int32` | ... |
-| `objectivePosition` | `Vector3` | ... |
 | `_loadSave` | `Boolean` | ... |
 
 

@@ -1,7 +1,7 @@
 ---
 title: FlexibleColorPicker.HSVToRGB
 description: Hook event for FlexibleColorPicker.HSVToRGB
-path: /api/hooks/visualui/flexible-color-picker-hsv-to-rgb
+path: /api/hooks/visualui/flexible-color-picker-hsv-to-rgb-h-s-v
 ---
 
 # FlexibleColorPicker.HSVToRGB
@@ -14,7 +14,7 @@ This hook intercepts calls to `FlexibleColorPicker.HSVToRGB()` and broadcasts an
 
 ## Native Signature
 ```csharp
-Color HSVToRGB(Vector3 hsv)
+Color HSVToRGB(Single h, Single s, Single v)
 ```
 
 ## Payload Context
@@ -22,7 +22,9 @@ When this hook fires, the event payload contains the argument data from the orig
 
 | Name | Type | Description |
 |---|---|---|
-| `hsv` | `Vector3` | ... |
+| `h` | `Single` | ... |
+| `s` | `Single` | ... |
+| `v` | `Single` | ... |
 
 
 ## Using this Hook

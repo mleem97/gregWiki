@@ -1,7 +1,7 @@
 ---
 title: RecyclableScrollRect.ReloadData
 description: Hook event for RecyclableScrollRect.ReloadData
-path: /api/hooks/persistence/recyclable-scroll-rect-reload-data
+path: /api/hooks/persistence/recyclable-scroll-rect-reload-data-datasource
 ---
 
 # RecyclableScrollRect.ReloadData
@@ -14,13 +14,15 @@ This hook intercepts calls to `RecyclableScrollRect.ReloadData()` and broadcasts
 
 ## Native Signature
 ```csharp
-Void ReloadData()
+Void ReloadData(IRecyclableScrollRectDataSource dataSource)
 ```
 
 ## Payload Context
 When this hook fires, the event payload contains the argument data from the original method call.
 
-*No parameters in payload.*
+| Name | Type | Description |
+|---|---|---|
+| `dataSource` | `IRecyclableScrollRectDataSource` | ... |
 
 
 ## Using this Hook

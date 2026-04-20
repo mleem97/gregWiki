@@ -1,7 +1,7 @@
 ---
 title: FlexibleColorPicker.PickColorMain
 description: Hook event for FlexibleColorPicker.PickColorMain
-path: /api/hooks/visualui/flexible-color-picker-pick-color-main
+path: /api/hooks/visualui/flexible-color-picker-pick-color-main-color-mode-v
 ---
 
 # FlexibleColorPicker.PickColorMain
@@ -14,7 +14,7 @@ This hook intercepts calls to `FlexibleColorPicker.PickColorMain()` and broadcas
 
 ## Native Signature
 ```csharp
-BufferedColor PickColorMain(BufferedColor color, Vector2 v)
+BufferedColor PickColorMain(BufferedColor color, MainPickingMode mode, Vector2 v)
 ```
 
 ## Payload Context
@@ -23,6 +23,7 @@ When this hook fires, the event payload contains the argument data from the orig
 | Name | Type | Description |
 |---|---|---|
 | `color` | `BufferedColor` | ... |
+| `mode` | `MainPickingMode` | ... |
 | `v` | `Vector2` | ... |
 
 

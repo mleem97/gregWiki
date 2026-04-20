@@ -14,7 +14,7 @@ This hook intercepts calls to `OSK_UI_Keyboard.SetSelectedKey()` and broadcasts 
 
 ## Native Signature
 ```csharp
-Void SetSelectedKey(OSK_UI_Key k)
+Void SetSelectedKey(OSK_KeyCode k)
 ```
 
 ## Payload Context
@@ -22,7 +22,7 @@ When this hook fires, the event payload contains the argument data from the orig
 
 | Name | Type | Description |
 |---|---|---|
-| `k` | `OSK_UI_Key` | ... |
+| `k` | `OSK_KeyCode` | ... |
 
 
 ## Using this Hook

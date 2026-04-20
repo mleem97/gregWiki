@@ -1,7 +1,7 @@
 ---
 title: RecyclableScrollRect.Initialize
 description: Hook event for RecyclableScrollRect.Initialize
-path: /api/hooks/visualui/recyclable-scroll-rect-initialize
+path: /api/hooks/visualui/recyclable-scroll-rect-initialize-datasource
 ---
 
 # RecyclableScrollRect.Initialize
@@ -14,13 +14,15 @@ This hook intercepts calls to `RecyclableScrollRect.Initialize()` and broadcasts
 
 ## Native Signature
 ```csharp
-Void Initialize()
+Void Initialize(IRecyclableScrollRectDataSource dataSource)
 ```
 
 ## Payload Context
 When this hook fires, the event payload contains the argument data from the original method call.
 
-*No parameters in payload.*
+| Name | Type | Description |
+|---|---|---|
+| `dataSource` | `IRecyclableScrollRectDataSource` | ... |
 
 
 ## Using this Hook

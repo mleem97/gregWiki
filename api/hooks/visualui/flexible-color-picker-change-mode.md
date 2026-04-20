@@ -14,7 +14,7 @@ This hook intercepts calls to `FlexibleColorPicker.ChangeMode()` and broadcasts 
 
 ## Native Signature
 ```csharp
-Void ChangeMode(MainPickingMode mode)
+Void ChangeMode(Int32 newMode)
 ```
 
 ## Payload Context
@@ -22,7 +22,7 @@ When this hook fires, the event payload contains the argument data from the orig
 
 | Name | Type | Description |
 |---|---|---|
-| `mode` | `MainPickingMode` | ... |
+| `newMode` | `Int32` | ... |
 
 
 ## Using this Hook

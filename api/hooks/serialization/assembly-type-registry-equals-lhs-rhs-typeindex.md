@@ -1,7 +1,7 @@
 ---
 title: AssemblyTypeRegistry.Equals
 description: Hook event for AssemblyTypeRegistry.Equals
-path: /api/hooks/serialization/assembly-type-registry-equals
+path: /api/hooks/serialization/assembly-type-registry-equals-lhs-rhs-typeindex
 ---
 
 # AssemblyTypeRegistry.Equals
@@ -14,7 +14,7 @@ This hook intercepts calls to `AssemblyTypeRegistry.Equals()` and broadcasts an 
 
 ## Native Signature
 ```csharp
-Boolean Equals(Object lhs, Object rhs, Int32 typeIndex)
+Boolean Equals(Object lhs, Void* rhs, Int32 typeIndex)
 ```
 
 ## Payload Context
@@ -23,7 +23,7 @@ When this hook fires, the event payload contains the argument data from the orig
 | Name | Type | Description |
 |---|---|---|
 | `lhs` | `Object` | ... |
-| `rhs` | `Object` | ... |
+| `rhs` | `Void*` | ... |
 | `typeIndex` | `Int32` | ... |
 
 

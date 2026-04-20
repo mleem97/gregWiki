@@ -1,7 +1,7 @@
 ---
 title: OSK_GamepadHelper.SetSelectedKey
 description: Hook event for OSK_GamepadHelper.SetSelectedKey
-path: /api/hooks/visualui/osk_-gamepad-helper-set-selected-key
+path: /api/hooks/visualui/osk_-gamepad-helper-set-selected-key-k
 ---
 
 # OSK_GamepadHelper.SetSelectedKey
@@ -14,7 +14,7 @@ This hook intercepts calls to `OSK_GamepadHelper.SetSelectedKey()` and broadcast
 
 ## Native Signature
 ```csharp
-Void SetSelectedKey(OSK_Key k)
+Void SetSelectedKey(String k)
 ```
 
 ## Payload Context
@@ -22,7 +22,7 @@ When this hook fires, the event payload contains the argument data from the orig
 
 | Name | Type | Description |
 |---|---|---|
-| `k` | `OSK_Key` | ... |
+| `k` | `String` | ... |
 
 
 ## Using this Hook
