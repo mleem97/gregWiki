@@ -1,0 +1,86 @@
+---
+title: OSK_Keyboard.SelectSound
+description: Hook event for OSK_Keyboard.SelectSound
+path: /api/hooks/visualui/osk_-keyboard-select-sound
+---
+
+# OSK_Keyboard.SelectSound
+
+> **Hook ID:** `greg.visualui.osk_keyboard.selectsound`
+> **Category:** Visualui
+> **Namespace:** `Il2CppviperOSK`
+
+This hook intercepts calls to `OSK_Keyboard.SelectSound()` and broadcasts an event to the `gregCore` EventBus.
+
+## Native Signature
+```csharp
+Void SelectSound()
+```
+
+## Payload Context
+When this hook fires, the event payload contains the argument data from the original method call.
+
+*No parameters in payload.*
+
+
+## Using this Hook
+
+::: tip
+Use this hook to react to `SelectSound` events in `OSK_Keyboard`. 
+:::
+
+#Tabset
+#Tab: C#
+```csharp
+using gregCore.API;
+
+public class MyMod : MelonMod
+{
+    public override void OnInitializeMelon()
+    {
+        GregAPI.Subscribe("greg.visualui.osk_keyboard.selectsound", OnHookTriggered);
+    }
+
+    private void OnHookTriggered(EventPayload payload)
+    {
+        // Custom logic here
+    }
+}
+```
+#Tab: Lua
+```lua
+greg.subscribe("greg.visualui.osk_keyboard.selectsound", function(payload)
+    -- Custom Lua logic here
+end)
+```
+#Tab: Python
+```python
+@greg.hook("greg.visualui.osk_keyboard.selectsound")
+def on_hook_triggered(payload):
+    # Custom Python logic here
+    pass
+```
+#Tab: JavaScript
+```javascript
+greg.events.on("greg.visualui.osk_keyboard.selectsound", (payload) => {
+    // Custom JS logic here
+});
+```
+#Tab: Rust
+```rust
+greg::subscribe("greg.visualui.osk_keyboard.selectsound", |payload| {
+    // Custom Rust logic here
+});
+```
+#Tab: Go
+```go
+greg.Subscribe("greg.visualui.osk_keyboard.selectsound", func(payload greg.EventPayload) {
+    // Custom Go logic here
+})
+```
+#EndTabset
+
+## Safety & Compatibility
+- **Status:** Active
+- **Return Type Expected:** `Void`
+- **Safe to block?**: Depends on implementation

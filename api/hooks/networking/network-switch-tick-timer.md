@@ -1,0 +1,86 @@
+---
+title: NetworkSwitch.TickTimer
+description: Hook event for NetworkSwitch.TickTimer
+path: /api/hooks/networking/network-switch-tick-timer
+---
+
+# NetworkSwitch.TickTimer
+
+> **Hook ID:** `greg.networking.networkswitch.ticktimer`
+> **Category:** Networking
+> **Namespace:** `Il2Cpp`
+
+This hook intercepts calls to `NetworkSwitch.TickTimer()` and broadcasts an event to the `gregCore` EventBus.
+
+## Native Signature
+```csharp
+Void TickTimer()
+```
+
+## Payload Context
+When this hook fires, the event payload contains the argument data from the original method call.
+
+*No parameters in payload.*
+
+
+## Using this Hook
+
+::: tip
+Use this hook to react to `TickTimer` events in `NetworkSwitch`. 
+:::
+
+#Tabset
+#Tab: C#
+```csharp
+using gregCore.API;
+
+public class MyMod : MelonMod
+{
+    public override void OnInitializeMelon()
+    {
+        GregAPI.Subscribe("greg.networking.networkswitch.ticktimer", OnHookTriggered);
+    }
+
+    private void OnHookTriggered(EventPayload payload)
+    {
+        // Custom logic here
+    }
+}
+```
+#Tab: Lua
+```lua
+greg.subscribe("greg.networking.networkswitch.ticktimer", function(payload)
+    -- Custom Lua logic here
+end)
+```
+#Tab: Python
+```python
+@greg.hook("greg.networking.networkswitch.ticktimer")
+def on_hook_triggered(payload):
+    # Custom Python logic here
+    pass
+```
+#Tab: JavaScript
+```javascript
+greg.events.on("greg.networking.networkswitch.ticktimer", (payload) => {
+    // Custom JS logic here
+});
+```
+#Tab: Rust
+```rust
+greg::subscribe("greg.networking.networkswitch.ticktimer", |payload| {
+    // Custom Rust logic here
+});
+```
+#Tab: Go
+```go
+greg.Subscribe("greg.networking.networkswitch.ticktimer", func(payload greg.EventPayload) {
+    // Custom Go logic here
+})
+```
+#EndTabset
+
+## Safety & Compatibility
+- **Status:** Active
+- **Return Type Expected:** `Void`
+- **Safe to block?**: Depends on implementation

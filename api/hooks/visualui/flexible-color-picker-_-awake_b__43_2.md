@@ -1,0 +1,88 @@
+---
+title: FlexibleColorPicker._Awake_b__43_2
+description: Hook event for FlexibleColorPicker._Awake_b__43_2
+path: /api/hooks/visualui/flexible-color-picker-_-awake_b__43_2
+---
+
+# FlexibleColorPicker._Awake_b__43_2
+
+> **Hook ID:** `greg.visualui.flexiblecolorpicker._awake_b__43_2`
+> **Category:** Visualui
+> **Namespace:** `Il2Cpp`
+
+This hook intercepts calls to `FlexibleColorPicker._Awake_b__43_2()` and broadcasts an event to the `gregCore` EventBus.
+
+## Native Signature
+```csharp
+Void _Awake_b__43_2(Single v)
+```
+
+## Payload Context
+When this hook fires, the event payload contains the argument data from the original method call.
+
+| Name | Type | Description |
+|---|---|---|
+| `v` | `Single` | ... |
+
+
+## Using this Hook
+
+::: tip
+Use this hook to react to `_Awake_b__43_2` events in `FlexibleColorPicker`. 
+:::
+
+#Tabset
+#Tab: C#
+```csharp
+using gregCore.API;
+
+public class MyMod : MelonMod
+{
+    public override void OnInitializeMelon()
+    {
+        GregAPI.Subscribe("greg.visualui.flexiblecolorpicker._awake_b__43_2", OnHookTriggered);
+    }
+
+    private void OnHookTriggered(EventPayload payload)
+    {
+        // Custom logic here
+    }
+}
+```
+#Tab: Lua
+```lua
+greg.subscribe("greg.visualui.flexiblecolorpicker._awake_b__43_2", function(payload)
+    -- Custom Lua logic here
+end)
+```
+#Tab: Python
+```python
+@greg.hook("greg.visualui.flexiblecolorpicker._awake_b__43_2")
+def on_hook_triggered(payload):
+    # Custom Python logic here
+    pass
+```
+#Tab: JavaScript
+```javascript
+greg.events.on("greg.visualui.flexiblecolorpicker._awake_b__43_2", (payload) => {
+    // Custom JS logic here
+});
+```
+#Tab: Rust
+```rust
+greg::subscribe("greg.visualui.flexiblecolorpicker._awake_b__43_2", |payload| {
+    // Custom Rust logic here
+});
+```
+#Tab: Go
+```go
+greg.Subscribe("greg.visualui.flexiblecolorpicker._awake_b__43_2", func(payload greg.EventPayload) {
+    // Custom Go logic here
+})
+```
+#EndTabset
+
+## Safety & Compatibility
+- **Status:** Active
+- **Return Type Expected:** `Void`
+- **Safe to block?**: Depends on implementation

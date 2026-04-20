@@ -1,0 +1,88 @@
+---
+title: viperInput.KeyUp
+description: Hook event for viperInput.KeyUp
+path: /api/hooks/input/viper-input-key-up
+---
+
+# viperInput.KeyUp
+
+> **Hook ID:** `greg.input.viperinput.keyup`
+> **Category:** Input
+> **Namespace:** `Il2CppviperTools`
+
+This hook intercepts calls to `viperInput.KeyUp()` and broadcasts an event to the `gregCore` EventBus.
+
+## Native Signature
+```csharp
+Boolean KeyUp(KeyCode k)
+```
+
+## Payload Context
+When this hook fires, the event payload contains the argument data from the original method call.
+
+| Name | Type | Description |
+|---|---|---|
+| `k` | `KeyCode` | ... |
+
+
+## Using this Hook
+
+::: tip
+Use this hook to react to `KeyUp` events in `viperInput`. 
+:::
+
+#Tabset
+#Tab: C#
+```csharp
+using gregCore.API;
+
+public class MyMod : MelonMod
+{
+    public override void OnInitializeMelon()
+    {
+        GregAPI.Subscribe("greg.input.viperinput.keyup", OnHookTriggered);
+    }
+
+    private void OnHookTriggered(EventPayload payload)
+    {
+        // Custom logic here
+    }
+}
+```
+#Tab: Lua
+```lua
+greg.subscribe("greg.input.viperinput.keyup", function(payload)
+    -- Custom Lua logic here
+end)
+```
+#Tab: Python
+```python
+@greg.hook("greg.input.viperinput.keyup")
+def on_hook_triggered(payload):
+    # Custom Python logic here
+    pass
+```
+#Tab: JavaScript
+```javascript
+greg.events.on("greg.input.viperinput.keyup", (payload) => {
+    // Custom JS logic here
+});
+```
+#Tab: Rust
+```rust
+greg::subscribe("greg.input.viperinput.keyup", |payload| {
+    // Custom Rust logic here
+});
+```
+#Tab: Go
+```go
+greg.Subscribe("greg.input.viperinput.keyup", func(payload greg.EventPayload) {
+    // Custom Go logic here
+})
+```
+#EndTabset
+
+## Safety & Compatibility
+- **Status:** Active
+- **Return Type Expected:** `Boolean`
+- **Safe to block?**: Yes

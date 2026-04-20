@@ -1,0 +1,88 @@
+---
+title: NetworkSwitchConfiguration.OpenConfig
+description: Hook event for NetworkSwitchConfiguration.OpenConfig
+path: /api/hooks/networking/network-switch-configuration-open-config
+---
+
+# NetworkSwitchConfiguration.OpenConfig
+
+> **Hook ID:** `greg.networking.networkswitchconfiguration.openconfig`
+> **Category:** Networking
+> **Namespace:** `Il2Cpp`
+
+This hook intercepts calls to `NetworkSwitchConfiguration.OpenConfig()` and broadcasts an event to the `gregCore` EventBus.
+
+## Native Signature
+```csharp
+Void OpenConfig(NetworkSwitch networkSwitch)
+```
+
+## Payload Context
+When this hook fires, the event payload contains the argument data from the original method call.
+
+| Name | Type | Description |
+|---|---|---|
+| `networkSwitch` | `NetworkSwitch` | ... |
+
+
+## Using this Hook
+
+::: tip
+Use this hook to react to `OpenConfig` events in `NetworkSwitchConfiguration`. 
+:::
+
+#Tabset
+#Tab: C#
+```csharp
+using gregCore.API;
+
+public class MyMod : MelonMod
+{
+    public override void OnInitializeMelon()
+    {
+        GregAPI.Subscribe("greg.networking.networkswitchconfiguration.openconfig", OnHookTriggered);
+    }
+
+    private void OnHookTriggered(EventPayload payload)
+    {
+        // Custom logic here
+    }
+}
+```
+#Tab: Lua
+```lua
+greg.subscribe("greg.networking.networkswitchconfiguration.openconfig", function(payload)
+    -- Custom Lua logic here
+end)
+```
+#Tab: Python
+```python
+@greg.hook("greg.networking.networkswitchconfiguration.openconfig")
+def on_hook_triggered(payload):
+    # Custom Python logic here
+    pass
+```
+#Tab: JavaScript
+```javascript
+greg.events.on("greg.networking.networkswitchconfiguration.openconfig", (payload) => {
+    // Custom JS logic here
+});
+```
+#Tab: Rust
+```rust
+greg::subscribe("greg.networking.networkswitchconfiguration.openconfig", |payload| {
+    // Custom Rust logic here
+});
+```
+#Tab: Go
+```go
+greg.Subscribe("greg.networking.networkswitchconfiguration.openconfig", func(payload greg.EventPayload) {
+    // Custom Go logic here
+})
+```
+#EndTabset
+
+## Safety & Compatibility
+- **Status:** Active
+- **Return Type Expected:** `Void`
+- **Safe to block?**: Depends on implementation
