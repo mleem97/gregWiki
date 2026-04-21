@@ -1,113 +1,78 @@
 ---
-title: Custom NPCs and Employees
-description: Learn how to add new staff types and behavior to your Data Center
+title: Custom NPCs & Employees
+description: Create and manage your own staff and technicians
 path: /guides/content/custom-npcs
 ---
 
-# 👥 Custom NPCs and Employees
+# 👥 Custom NPCs & Employees
 
-Adding custom staff members allows you to automate specialized tasks, provide new services to the player, or simply add flavor to your office. gregCore provides a high-level API to define NPC types, their visual models, and their AI logic.
+gregCore allows you to expand the game's workforce. You can add new employee types with specialized skills, custom salaries, and unique AI behaviors. 
 
----
+## 🎭 Employee Definitions
 
-## 1. NPC vs. Employee
+Staff members are defined by the `EmployeeDefinition` class.
 
-In gregCore, we distinguish between two types of humanoids:
-- **Employees**: Can be hired via the recruitment menu, have salaries, and can be assigned to tasks (e.g., Technicians, Cleaners).
-- **NPCs**: Static or path-following characters that interact with the world (e.g., quest givers, one-time contractors, or decorative office workers).
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `StaffId` | \`string\` | Unique ID (e.g., \`greg.npc.security_guard\`). |
+| `JobRole` | \`string\` | The role shown in the HR menu (e.g., "Sr. Network Architect"). |
+| `BaseSalary` | \`float\` | Daily salary paid by the player. |
+| `Efficiency` | \`float\` | Speed multiplier for tasks (1.0 = Default). |
+| `SkillLevel` | \`int\` | 1 (Intern) to 5 (Master). Affects repair success rates. |
 
-## 2. Registering a Custom Employee Type
+## 🚀 Creating an Employee (Lua Example)
 
-To add a new job type to the recruitment office, use `GregAPI.Npc.RegisterEmployeeType()`.
+Lua is perfect for defining new staff. Create a `.lua` file in your `Mods/` folder:
 
-```csharp
-var jobDef = new gregCore.Models.EmployeeTypeDef {
-    JobId = "greg.hardware_specialist",
-    DisplayName = "Hardware Specialist",
-    BaseSalary = 4500.0,
-    Skills = new string[] { "Maintenance", "Networking" },
-    DefaultPrefab = "greg/assets/npcs/specialist_m.bundle"
-};
-
-GregAPI.Npc.RegisterEmployeeType(jobDef);
-```
-
-Once registered, the game will automatically include this job type in the hiring pool.
-
----
-
-## 3. Scripting NPC Behavior (Logic)
-
-NPC behavior is managed through **Action Stacks**. You can push commands to an NPC's AI to make them interact with the world.
-
-### Basic Commands (Lua Example)
 ```lua
-function on_init()
-    local myNpc = greg.npc.spawn("myMod.contractor", greg.world.get_player_pos())
-    
-    -- Command the NPC to move to the server room
-    greg.npc.walk_to(myNpc, { x = 10, y = 0, z = -5 })
-    
-    -- Then interact with a specific object
-    greg.npc.interact(myNpc, "server_rack_01")
-end
-```
+-- Define a Master Technician
+local masterTech = {
+    StaffId = "greg.npc.tech_god",
+    JobRole = "Systems Deity",
+    BaseSalary = 2500.0,
+    Efficiency = 2.5,
+    SkillLevel = 5
+}
 
-### Listening to AI Hooks
-gregCore provides hooks for when an NPC reaches a destination or fails a task.
+-- Register via gregCore
+greg.npc.register_employee(masterTech)
 
-#Tabset
-#Tab: C#
-```csharp
-GregAPI.Events.Subscribe("greg.npc.TaskCompleted", (payload) => {
-    string npcId = payload.GetString("NpcId");
-    string taskId = payload.GetString("TaskId");
-    
-    GregLogger.Info($"NPC {npcId} successfully finished {taskId}!");
-});
-```
-#Tab: Lua
-```lua
-greg.on("greg.npc.TaskCompleted", function(payload)
-    greg.log_info("NPC " .. payload.NpcId .. " is done with " .. payload.TaskId)
+-- Add a custom behavior hook
+greg.on("greg.NPC.StartedTask", function(payload)
+    if payload.StaffId == "greg.npc.tech_god" then
+        greg.ui.show_notification("The Deity is working on: " .. payload.TaskName)
+    end
 end)
 ```
-#EndTabset
 
----
+## 🧠 Behavior & State Hooks
 
-## 4. Custom Animations and State
+Custom NPCs aren't just static data; you can control their logic using the **NPC Hook Family**:
 
-If your NPC uses a custom `AnimatorController`, you can trigger parameters via gregCore to synchronize their visual state with their current logic.
+- **[`greg.NPC.ArrivedAtWork`](/api/hooks/npc/arrived-at-work)**: Fired when the staff member spawns at the spawn point.
+- **[`greg.NPC.StartedTask`](/api/hooks/npc/started-task)**: Fired when they begin a repair or cable job.
+- **[`greg.NPC.TaskFailed`](/api/hooks/npc/task-failed)**: Triggered if their skill level is too low for the hardware complexity.
+- **[`greg.NPC.QuitJob`](/api/hooks/npc/quit-job)**: Fired if happiness or salary conditions aren't met.
+
+## 💼 The HR System Integration
+
+Registered employees automatically appear in the game's **HR Terminal**. gregCore handles:
+1.  **Hiring**: Deducting signup bonuses.
+2.  **Payroll**: Automatic daily salary deduction.
+3.  **UI Stats**: Displaying their custom role and efficiency in the staff list.
+
+## 🛠️ Advanced: Custom Animations
+
+If you are a C# developer, you can bind custom animation controllers to your NPCs:
 
 ```csharp
-// Trigger a custom animation state in the Unity Animator
-GregAPI.Npc.SetAnimationTrigger(npcUid, "Repairing");
-
-// Set a float parameter (e.g., Mood)
-GregAPI.Npc.SetAnimationFloat(npcUid, "Happiness", 0.8f);
+var securityGuard = new EmployeeDefinition { ... };
+securityGuard.SetCustomAnimator("assets/bundles/security_anim.controller");
+GregAPI.Npc.RegisterEmployee(securityGuard);
 ```
 
 ---
 
-## 5. Persistence (Hiring State)
-
-Employees hired via your custom type are automatically saved into the game's native save system. However, if you add **Custom Stats** (e.g., "Experience Points"), you must save them manually using the Persistence Service.
-
-```csharp
-// Saving employee XP
-GregAPI.Persistence.SaveData($"employee_{uid}_xp", 1500);
-```
-
-## Common Mistakes ⚠️
-
-- **NavMesh Collisions**: If your NPC gets stuck running in place, ensure your office's NavMesh is baked correctly and that the NPC's collider isn't overlapping with static obstacles.
-- **Salaries**: Setting a `BaseSalary` to 0 may cause division errors in some accounting logic. Always provide a non-zero value.
-- **Animator Parameters**: Ensure the names used in `SetAnimationTrigger` exactly match the parameter strings in your Unity Animator asset.
-
----
-
-## 📖 Related Links
-*   [**All NPC Hooks**](/api/hooks/npc)
-*   [**Employee Management Service**](/api/services/npc)
-*   [**Building Custom Jobs**](/guides/content/custom-jobs)
+::: warning
+**Performance**: Avoid running heavy pathfinding calculations inside the `NPC.Update` hook. Use gregCore's deferred execution system for expensive AI logic.
+:::

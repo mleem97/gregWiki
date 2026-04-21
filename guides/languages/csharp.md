@@ -1,148 +1,91 @@
 ---
-title: Modding with C#
-description: High-performance modding using MelonLoader and gregCore SDK
+title: C# Language Guide
+description: Build high-performance native mods using .NET 6 and gregCore
 path: /guides/languages/csharp
 ---
 
-# 🚀 Modding with C#
+# 🔷 C# Language Guide
 
-C# is the primary language used to build `gregCore` itself and is the most powerful way to extend *Data Center*. It provides direct access to the Unity engine, the game's IL2CPP assemblies (via interop), and the full suite of `gregCore` services.
+C# is the native language of the gregCore framework and MelonLoader. It offers the highest performance, full access to the Unity engine, and the ability to write custom Harmony patches beyond the standard hooks.
 
----
+## 🛠️ Project Setup
 
-## 🛠️ Setup & Prerequisites
+1.  **Create a Class Library**: Open Visual Studio and create a new project using the **Class Library (.NET Core)** template.
+2.  **Target Framework**: Set the target framework to `.NET 6.0`.
+3.  **Add References**:
+    *   `MelonLoader.dll` (from game folder)
+    *   `gregCore.dll` (from `Mods/`)
+    *   `UnityEngine.CoreModule.dll` (from `Data Center_Data/Managed/`)
+    *   Il2Cpp Assemblies (from `MelonLoader/Il2CppAssemblies/`)
 
-To develop C# mods, you will need:
-1.  **IDE**: Visual Studio 2022 or JetBrains Rider is highly recommended.
-2.  **.NET 6.0 SDK**: The target runtime for modern MelonLoader versions.
-3.  **MelonLoader**: Installed in your *Data Center* game directory.
+## 🧱 Standard Mod Structure
 
-### Project Templates
-We recommend using the official [**gregCore Mod Template**](https://github.com/gregCore/mod-template-csharp) to get started with the correct references and build tasks.
-
----
-
-## 🏗️ Project Structure
-
-A typical C# mod project should look like this:
-
-```text
-MyMod/
-  Properties/
-    AssemblyInfo.cs (Contains MelonInfo)
-  src/
-    MyModMain.cs (The entry point)
-    Systems/
-      HardwareExtension.cs
-    UI/
-      CustomPanel.cs
-  MyMod.csproj
-```
-
-### Essential References
-Your `.csproj` must reference the following libraries from the game's folder:
-*   `MelonLoader.dll`
-*   `gregCore.dll`
-*   `Il2CppInterop.Runtime.dll`
-*   `Assembly-CSharp.dll` (The game's logic)
-
----
-
-## 🏗️ The Entry Point
-
-Every C# mod must inherit from `MelonMod` and provide metadata via Assembly attributes.
+Every C# mod must inherit from `MelonMod`. You can use `GregAPI` directly to access all framework features.
 
 ```csharp
 using MelonLoader;
 using gregCore.API;
+using gregCore.Sdk.Models;
 
-[assembly: MelonInfo(typeof(MyMod.MyModMain), "My Super Mod", "1.0.0", "YourName")]
-[assembly: MelonGame("Waseku", "Data Center")]
-
-namespace MyMod
+public class MyMod : MelonMod
 {
-    public class MyModMain : MelonMod
+    public override void OnInitializeMelon()
     {
-        public override void OnInitializeMelon()
-        {
-            LoggerInstance.Msg("Mod initialized!");
-            
-            // Register a keybind via gregCore
-            GregAPI.Input.RegisterKeybind("myMod.toggle", "Toggle Interface", UnityEngine.KeyCode.F9, () => {
-                LoggerInstance.Msg("F9 Pressed!");
-            });
-        }
+        MelonLogger.Msg("C# Mod Initialized!");
+        
+        // 1. Subscribe to a gregCore Hook
+        GregAPI.Hooks.On("greg.economy.PlayerCoinUpdated", OnMoneyChanged);
+        
+        // 2. Access a high-level Service
+        double currentMoney = GregAPI.GetPlayerMoney();
+        MelonLogger.Msg($"Player currently has: {currentMoney}");
+    }
+
+    private void OnMoneyChanged(GregPayload payload)
+    {
+        // Extract data from the payload
+        float newValue = payload.Get<float>("NewValue");
+        MelonLogger.Msg($"Money changed to: {newValue}");
     }
 }
 ```
 
----
+## 🪝 Using the SDK API
 
-## 🪝 Subscribing to Hooks
-
-In C#, you subscribe to hooks using the `GregAPI.Events` bus.
+While you can use the standard `GregAPI` static class, for more advanced scenarios involving dependency injection or complex event handling, you can access the `IGregAPI` interface via the service container:
 
 ```csharp
-// Subscribe to a hardware event
-GregAPI.Events.Subscribe("greg.hardware.ServerPowered", (payload) => {
-    string serverId = payload.GetString("InternalId");
-    bool isPowered = payload.GetBool("State");
-    
-    MelonLogger.Msg($"Server {serverId} power state changed to {isPowered}");
+var sdk = GregAPI.GetSdkApi();
+sdk.On("greg.hardware.ServerPowered", (p) => {
+    // ...
 });
 ```
 
----
+## 🎨 Building UI
 
-## 🛠️ Accessing Services
-
-The `GregAPI` static class provides centralized access to all framework features.
-
-### Economy Service
-```csharp
-double myMoney = GregAPI.Economy.GetBalance();
-GregAPI.Economy.AddBalance(500.0);
-```
-
-### UI & Settings
-C# mods can register complex settings that automatically appear in the native "Mods" tab created by gregCore.
+C# mods should use the `GregUIBuilder` to maintain a native look and feel.
 
 ```csharp
-GregAPI.Settings.RegisterToggle(
-    modId: "myMod",
-    settingId: "auto_repair",
-    displayName: "Auto-Repair Hardware",
-    defaultValue: true,
-    onChanged: (val) => { /* logic */ }
-);
+public override void OnUpdate()
+{
+    if (UnityEngine.InputSystem.Keyboard.current.f9Key.wasPressedThisFrame)
+    {
+        var panel = GregUIBuilder.Create("Settings")
+            .SetTitle("My C# Mod")
+            .AddToggle("Fast Servers", true, (v) => { /* logic */ })
+            .Build();
+    }
+}
 ```
 
----
+## 🚀 Performance Best Practices
 
-## 💾 Persistence
-
-`gregCore` handles JSON serialization for you. Simply use the `Persistence` service to save mod-specific data that persists across game restarts and savegames.
-
-```csharp
-// Save a complex object (automatically serialized to JSON)
-var stats = new ModStats { Level = 5, Experience = 1200 };
-GregAPI.Persistence.Save("player_stats", stats);
-
-// Load it back
-var savedStats = GregAPI.Persistence.Load<ModStats>("player_stats");
-```
+*   **Avoid Caching GameObjects**: GameObjects can be destroyed by the game engine. Always check for null.
+*   **Static vs. Instance**: Keep your event handlers static where possible to avoid GC pressure.
+*   **Safe Patching**: If you write custom Harmony patches, use `GregAPI.LogInfo` to track their success/failure.
 
 ---
 
-## 🐞 Debugging & Tools
-
-*   **Console**: Press `~` or check the external window to see `MelonLogger` output.
-*   **UnityExplorer**: We highly recommend using the [UnityExplorer](https://github.com/sinai-dev/UnityExplorer) mod to inspect the GameObjects and Components at runtime alongside gregCore.
-*   **Log Search**: Use the `[gregCore]` filter in your logs to see framework-specific diagnostics.
-
----
-
-## 📖 Related Links
-*   [**Hook Reference**](/api/hooks)
-*   [**UI Component Guide**](/ui/custom-panels)
-*   [**Advanced Patching with Harmony**](/advanced/harmony-patches)
+::: tip
+Check out the [Example Mods](/community/examples) on GitHub for full source code implementations.
+:::

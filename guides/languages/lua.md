@@ -1,118 +1,98 @@
 ---
-title: Modding with Lua
-description: Beginner-friendly scripting with the integrated Lua engine
+title: Lua Scripting Guide
+description: Rapid prototyping and easy modding using Lua and MoonSharp
 path: /guides/languages/lua
 ---
 
-# 🌙 Modding with Lua
+# 🌙 Lua Scripting Guide
 
-Lua is the official scripting language of gregCore. It offers the fastest iteration speed because it is integrated directly into the framework via the **MoonSharp** interpreter. You can write scripts and see them run in-game without compiling any `.dll` files.
+Lua is the most accessible way to mod *Data Center*. Powered by the **MoonSharp** interpreter, Lua scripts in gregCore don't require compilation and can be edited while the game is running (with a reload).
 
----
+## 🚀 Getting Started
 
-## 🛠️ Setup & Project Structure
+1.  **Create a script**: Create a new file named `MyMod.lua`.
+2.  **Deployment**: Place the file directly in the `Mods/` folder of your game.
+3.  **Run**: Launch the game. gregCore will automatically detect and execute any `.lua` files.
 
-gregCore automatically scans the `Data Center/Mods/Lua/` directory for subfolders containing a `main.lua` file.
+## 🧱 Basic Script Structure
 
-**Recommended Folder structure:**
-```text
-Data Center/
-  Mods/
-    Lua/
-      MyCoolMod/
-        main.lua
-        settings.lua
-        assets/
-          my_icon.png
-```
-
-## 🏗️ The Entry Point (`main.lua`)
-
-Every Lua mod must have a `main.lua`. gregCore calls the following lifecycle functions if they are defined in your script:
+Lua scripts have access to the global `greg` object, which mirrors the C# `GregAPI`.
 
 ```lua
--- main.lua
+-- Log a message to the console
+greg.log("Lua Mod Loaded!")
 
--- Called when gregCore first loads the script
-function on_init()
-    greg.log_info("My Mod: Initializing...")
-end
+-- 1. Listen for an event
+greg.on("greg.SYSTEM.GameLoaded", function(payload)
+    greg.ui.show_notification("Hello from Lua!")
+end)
 
--- Called when the game is fully loaded and ready for interaction
-function on_ready()
-    greg.show_notification("Welcome to the Data Center!")
-end
-
--- Called once per frame. Use sparingly for performance!
-function on_update()
-    -- logic...
-end
+-- 2. Call a service
+local money = greg.economy.get_balance()
+greg.log("Initial Balance: " .. money)
 ```
 
----
+## 🪝 Event Handling
 
-## 🪝 Subscribing to Hooks
-
-Interacting with the game world is done via the `greg.on()` function.
+When an event fires, your function receives a `payload` table.
 
 ```lua
--- Log every time a cable is connected
-greg.on("greg.hardware.CableConnected", function(payload)
-    greg.log_info("New cable link detected!")
-    greg.log_info("Source: " .. payload.SourceName)
-    greg.log_info("Target: " .. payload.TargetName)
+greg.on("greg.PLAYER.CoinChanged", function(payload)
+    local amount = payload.Amount
+    local total = payload.Total
+    greg.log("You just received " .. amount .. " coins!")
 end)
 ```
 
-> 💡 Find the exact names and payloads for all 1771 events in the [**Hooks Reference**](/api/hooks).
+## ⚙️ Configuration & Persistence
 
----
+Lua scripts can easily save and load data using the persistence bridge.
 
-## 🛠️ Calling Services
-
-Lua has full access to the gregCore service layer through the global `greg` table.
-
-### Example: Economy & Notification
 ```lua
-function give_bonus()
-    local current_money = greg.economy.get_balance()
-    greg.economy.add_money(1000)
-    greg.show_notification("You received a $1000 bonus!")
+-- Save data
+local my_data = {
+    first_run = false,
+    points = 100
+}
+greg.persist.save("my_lua_mod", "settings", my_data)
+
+-- Load data
+local state = greg.persist.load("my_lua_mod", "settings")
+if state then
+    greg.log("Loaded points: " .. state.points)
 end
 ```
 
-### Example: Dynamic UI Interaction
-```lua
-greg.settings.register_toggle("myMod", "feature_enabled", "Enable Super Mode", false, function(new_state)
-    greg.log_info("Super Mode is now: " .. tostring(new_state))
-end)
-```
+## 🎨 Building UI
 
----
-
-## 💾 Saving Data (Persistence)
-
-Lua variables are reset when the game restarts. To keep data across sessions, use the Persistence Service.
+You can create basic IMGUI windows directly from Lua:
 
 ```lua
--- Saving a simple value
-greg.persistence.save("my_key", 42)
+local window_active = true
 
--- Loading it back
-local val = greg.persistence.load("my_key")
+function on_gui()
+    if window_active then
+        greg.ui.begin_window("Lua Dashboard")
+        greg.ui.label("Control Panel")
+        if greg.ui.button("Add 1000$") then
+            greg.economy.add_money(1000)
+        end
+        greg.ui.end_window()
+    end
+end
+
+-- Register the GUI callback
+greg.register_gui(on_gui)
 ```
 
----
+## ⚠️ Important Differences from C#
 
-## 🐞 Debugging Tips
-
-1.  **Console Logs**: Use `greg.log_info(str)` to see text in the MelonLoader console window.
-2.  **Runtime Errors**: If your Lua script has a syntax or runtime error, gregCore will log a detailed stack trace to the console in red.
-3.  **Hot Reloading**: While not native, you can often re-save your `main.lua` and gregCore will attempt to refresh the script environment (if the developer has enabled hot-reload).
+*   **Case Sensitivity**: Lua is case-sensitive. While the C# API is PascalCase, the Lua bridge uses **snake_case** for methods (e.g., `get_balance()` instead of `GetBalance()`).
+*   **Zero-based Arrays**: Remember that Unity/C# arrays passed to Lua are often 0-indexed, unlike native Lua tables which are 1-indexed.
+*   **Performance**: Lua is interpreted. Do not run heavy loops or complex math in the `Update` hook.
 
 ---
 
-## 📖 Related Links
-*   [**Lua Payload Mapping**](/api/payloads/lua)
-*   [**MoonSharp Documentation**](http://www.moonsharp.org/)
-*   [**Example Mod: ResetSwitch (Lua Port)**](/community/examples/resetswitch-lua)
+::: tip
+**Hot Reload**: You can type `/reload lua` in the gregCore DevConsole to reload all scripts without restarting the game!
+:::

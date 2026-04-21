@@ -1,105 +1,79 @@
 ---
-title: Advanced Persistence and Save Protection
-description: Deep dive into how gregCore protects your data across game versions
+title: Data Persistence & Savegames
+description: Learn how to save your mod's data safely and reliably
 path: /advanced/persistence
 ---
 
-# 💾 Advanced Persistence and Save Protection
+# 💾 Data Persistence & Savegames
 
-Persistence is one of the most complex challenges in IL2CPP modding. Since you cannot easily add new serialized fields to the game's native classes, gregCore provides a robust, side-car persistence system that synchronizes perfectly with the game's own save lifecycle.
+One of the biggest challenges in modding *Data Center* is ensuring your mod's data (like custom server stats or customer happiness) persists across game restarts. gregCore solves this with the **Persistence Service**, which hooks into the game's native Save/Load lifecycle.
 
----
+## 🏗️ The Persistence Model
 
-## 1. How Persistence Works
+gregCore uses a **Key-Value Store** model backed by **LiteDB** for speed and reliability. Your data is stored in separate files inside `UserData/gregCore/Data/`, but its loading is triggered exactly when the game loads a standard savegame.
 
-gregCore uses a **JSON-based side-car** approach. 
-1.  Every object in the game has a `GameUID` (Unique Identifier).
-2.  gregCore listens for the game's save event (`greg.system.SaveTriggered`).
-3.  All mod data registered via `GregAPI.Persistence` is serialized into a separate `.json` file in the `MelonLoader/UserData/gregCore/` folder.
-4.  The file is indexed by the **Save Slot Name**, ensuring that switching save games correctly switches your mod data.
+## 🚀 How to Save Data (C#)
 
----
-
-## 2. Using the Persistence Service
-
-### Simple Key-Value Storage
-Good for global mod settings or player-wide progress.
-```csharp
-GregAPI.Persistence.SetGlobal("has_completed_tutorial", true);
-```
-
-### UID-Linked Data
-Essential for hardware-specific data (e.g., custom IP on a server).
-```csharp
-GregAPI.Persistence.ForObject(serverUid).Set("overclock_level", 5);
-```
-
----
-
-## 3. Custom Class Serialization
-
-gregCore uses **Newtonsoft.Json** under the hood. You can save entire class instances directly.
+### 1. Define your Data Structure
+Use simple POCOs (Plain Old CLR Objects). Use `[Serializable]` or JsonProperty attributes if needed.
 
 ```csharp
-public class ServerMetrics {
-    public float UptimeHours;
-    public List<string> ErrorLogs;
+public class MyModData {
+    public int TimesUsed { get; set; }
+    public List<string> DiscoveredSecrets { get; set; } = new();
 }
-
-var stats = new ServerMetrics { ... };
-GregAPI.Persistence.ForObject(serverUid).Set("metrics", stats);
 ```
 
-> ⚠️ **Caution**: Avoid saving Unity-specific types like `GameObject` or `Transform` directly. Instead, save their `Position` (Vector3) and `Rotation` (Quaternion) as they are easily serializable.
-
----
-
-## 4. Conflict Resolution and Data Integrity
-
-When multiple mods try to save to the same `GameUID`, gregCore uses a **Namespacing** system.
+### 2. Saving the Data
+Use `GregAPI.Persist.Save()`. This stores the object and schedules a disk write.
 
 ```csharp
-// Internally gregCore stores this as:
-// "Mod_1": { "key": "val" },
-// "Mod_2": { "key": "val" }
+var data = new MyModData { TimesUsed = 5 };
+GregAPI.Persist.Save("my.mod.id", "settings", data);
 ```
 
-### Desync Protection
-If a mod crashes during the save process, gregCore uses a **Rollback Buffer**. It writes to a `.tmp` file first and only replaces the master save file if the serialization succeeds. This prevents a single buggy mod from corrupting the entire player save.
+### 3. Loading the Data
+Load your data during `OnInitializeMelon` or react to the `GameLoaded` hook.
 
----
-
-## 5. Persistence Hooks
-
-You can react to the save lifecycle to prepare your data.
-
-#Tabset
-#Tab: C#
 ```csharp
-GregAPI.Events.Subscribe("greg.system.SaveTriggered", (payload) => {
-    // Collect data before serialization
-    PrepareDataForSaving();
-});
+var data = GregAPI.Persist.Load<MyModData>("my.mod.id", "settings");
+if (data == null) {
+    data = new MyModData(); // Fallback to defaults
+}
 ```
-#Tab: Lua
+
+## 📜 Supported Languages (Lua Example)
+
+In Lua, persistence is even easier because gregCore handles the table serialization for you.
+
 ```lua
-greg.on("greg.system.SaveTriggered", function(payload)
-    greg.persistence.save("session_end_time", os.date())
-end)
+-- Save a table
+local stats = { kills = 10, deaths = 2 }
+greg.persist.save("pvp_mod", "stats", stats)
+
+-- Load a table
+local myStats = greg.persist.load("pvp_mod", "stats")
+print("Total Kills: " .. (myStats.kills or 0))
 ```
-#EndTabset
+
+## 🔄 The Save/Load Lifecycle
+
+gregCore automatically triggers synchronization at these points:
+
+| Event | gregCore Action | Hook Triggered |
+| :--- | :--- | :--- |
+| **Vanilla Save** | gregCore flushes all cached mod data to LiteDB. | `greg.SYSTEM.GameSaved` |
+| **Vanilla Load** | gregCore invalidates caches and reloads from disk. | `greg.SYSTEM.GameLoaded` |
+| **AutoSave** | gregCore performs a background sync. | `greg.SYSTEM.GameAutoSaved` |
+
+## ⚠️ Important Best Practices
+
+1.  **Unique Keys**: Always prefix your keys with your Mod ID (e.g., `teamgreg.economy.state`) to avoid collisions with other mods.
+2.  **Avoid Heavy Objects**: Don't save Unity `GameObject` or `Transform` references directly. Save IDs or position vectors instead.
+3.  **Schema Versioning**: If you change your data structure in a mod update, add a `Version` field to your data object to handle migrations safely.
 
 ---
 
-## 🛡️ Best Practices
-
-1.  **Lazy Loading**: Don't load all data at once. Use `Persistence.Load()` only when the object is actually instantiated or interacted with.
-2.  **Versioning**: Include a `Version` field in your saved classes. This allows you to migrate old save data when your mod updates.
-3.  **Sanitize**: Always validate data loaded from persistence. A user might manually edit the JSON file, leading to nulls or out-of-range values.
-
----
-
-## 📖 Related Links
-*   [**Hook Engine Logic**](/advanced/hook-engine)
-*   [**Conflict Resolution Service**](/api/services/conflict)
-*   [**API Models Reference**](/api/payloads/models)
+::: tip
+**Debugging**: You can use the **LiteDB Explorer** tool to open the `.db` files in `UserData/gregCore/Data/` to manually inspect your mod's saved state.
+:::

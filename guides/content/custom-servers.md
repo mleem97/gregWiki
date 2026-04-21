@@ -1,112 +1,79 @@
 ---
-title: Building Custom Servers
-description: Learn how to inject custom hardware and servers into Data Center
+title: Custom Servers & Hardware
+description: Deep dive into defining and registering your own hardware
 path: /guides/content/custom-servers
 ---
 
-# Building Custom Servers
+# 🖥️ Custom Servers & Hardware
 
-*Data Center* allows players to buy, rack, and manage servers. Under the hood, servers are `UsableObject` components combined with specific configurations. This guide explains how to define a custom server, register it with `gregCore`, hook into its lifecycle, and manage its state persistence.
+The gregCore Hardware Registry allows you to add entirely new server types to *Data Center*. Your custom servers will support the full simulation lifecycle: they can be bought in the shop, mounted in racks, connected via cables, and will consume power.
 
----
+## 🧱 The Server Model
 
-## 1. The Anatomy of a Server
+A custom server is defined by a `ServerDefinition` object. This metadata tells gregCore how the game should treat your hardware.
 
-In the native game source, a "Server" is built from several pieces of data:
-1. **The 3D Asset**: A Unity `GameObject` containing `MeshRenderer` and `BoxCollider`. 
-2. **The Shop Config**: A `ShopItemConfig` defining the price, name, and size (e.g. 1U, 2U, 4U).
-3. **The Logical Script**: A `ServerInstance` script attached to the Prefab that holds RAM, CPU, and Power states.
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `Id` | `string` | A unique identifier (e.g., `acme.server.pro_x1`). |
+| `DisplayName` | `string` | The name shown in the shop and UI. |
+| `BasePrice` | `float` | The default cost before market adjustments. |
+| `PowerDraw` | `float` | Base watts consumed when powered on. |
+| `SlotCount` | `int` | How many internal component slots (SFP, HDD) are available. |
+| `USize` | `int` | Height in Rack Units (1U, 2U, etc.). |
 
-When you bring a custom server via your mod, you **cannot** just dump a `.obj` model in a folder. You must bridge the model with the game's logic.
+## 🚀 Implementation Workflow
 
-## 2. Using gregCore API to Register a Server
+### 1. Define the Metadata (C#)
 
-`gregCore` abstracts away the Unity IL2CPP AssetBundle loading. You just point it to your textures and define the logic.
-
-### Step 1: Define the Config
 ```csharp
-var myServerConfig = new gregCore.Models.CustomServerDef {
-    InternalId = "myMod.super_server_1",
-    DisplayName = "GregTech Quantum Blade",
-    Cost = 15500.0f,
-    RackUnits = 1,
-    PowerDrawWatts = 450,
-    HeatGeneration = 120,
-    PrefabPath = "myMod/assets/quantum_blade.bundle"
+var myServer = new ServerDefinition {
+    Id = "greg.server.titan_v1",
+    DisplayName = "Titan V1 Supercomputing Node",
+    BasePrice = 12500f,
+    PowerDraw = 450f,
+    SlotCount = 12,
+    USize = 2
 };
 ```
 
-### Step 2: Register it in OnInitializeMelon
-```csharp
-GregAPI.Hardware.RegisterCustomServer(myServerConfig);
-```
+### 2. Register with gregCore
 
-## 3. Hooking into the Server Lifecycle
-
-Adding the item to the shop is only half the battle. You need to know when the player places it, turns it on, or assigns an IP address. This is exactly what the `gregCore` Hooks are for.
-
-### 🔌 Server Placed (Racked)
-Triggered when the player successfully clicks onto an empty rack slot with your server in hand.
-
-#Tabset
-#Tab: C#
-```csharp
-GregAPI.Subscribe("greg.hardware.ServerMounted", (payload) => {
-    // Check if the mounted server is OUR server
-    if (payload.GetString("InternalId") == "myMod.super_server_1") {
-        GregLogger.Info($"Player racked our Quantum Blade at slot {payload.GetInt("SlotIndex")}!");
-    }
-});
-```
-#Tab: Lua
-```lua
-greg.subscribe("greg.hardware.ServerMounted", function(payload)
-    if payload.InternalId == "myMod.super_server_1" then
-        print("Quantum Blade racked at " .. payload.SlotIndex)
-    end
-end)
-```
-#EndTabset
-
-### ⚡ Server Powered Event
-Fires when the player presses the power button `InteractOnClick()`.
-
-#Tabset
-#Tab: C#
-```csharp
-GregAPI.Subscribe("greg.hardware.ServerPoweredOn", (payload) => {
-    if (payload.GetString("InternalId") == "myMod.super_server_1") {
-        // Apply custom logic: Quantum blades spin up extra fans!
-        GregAPI.Audio.Play3DSound(payload.GetVector3("Position"), "quantum_spinup.wav");
-    }
-});
-```
-#Tab: Lua
-```lua
-greg.subscribe("greg.hardware.ServerPoweredOn", function(payload)
-    if payload.InternalId == "myMod.super_server_1" then
-        greg.audio.play3d(payload.Position, "quantum_spinup.wav")
-    end
-end)
-```
-#EndTabset
-
-## 4. Persisting Custom State (Savegames)
-
-If your custom server has internal modded state (e.g. "OverclockLevel = 3"), that data requires saving. 
-Because IL2CPP native serialization ignores C# injected fields, you must use the `gregCore` Persistence API.
+Registration should happen during `OnInitializeMelon`. Once registered, gregCore automatically adds the item to the Shop and prepares the Save System.
 
 ```csharp
-// When power is modified
-int myOverclockLevel = 3;
-
-// Save the state explicitly tied to the Unique Game Instance ID (UID) of the spawned server
-GregAPI.Persistence.SaveCustomData(payload.GetString("GameUID"), "overclock", myOverclockLevel);
+GregAPI.Hardware.RegisterServer(myServer);
 ```
 
-On load, you retrieve that state via `greg.system.GameLoaded`.
+### 3. Visuals & Prefabs
 
-## Common Mistakes ⚠️
+gregCore supports **Chassis Mapping**. You can either:
+- **Reuse Vanilla Models**: Use an existing Chassis ID to give your server a vanilla look.
+- **Custom Assets**: Provide a path to an AssetBundle containing your `.prefab`.
 
-- **Collision Overlaps**: If your 1U `Prefab` bounds actually measure 1.2U in Unity, the game will refuse to let the player rack it, but it will not throw an error. Double-check your model bounds!
-- **Missing Ghost Objects**: `gregCore` generates placement-ghosts automatically based on your colliders. Do not manually attach `GhostObject` logic to your uploaded Prefabs.
+```csharp
+myServer.ChassisId = "server_case_3_blue"; // Uses the vanilla blue 2U case
+```
+
+## 🪝 Relevant Hooks
+
+When working with hardware, you'll often want to react to state changes:
+
+- **[`greg.hardware.ServerPowered`](/api/hooks/hardware/server-powered)**: Fired when a server starts or stops drawing power.
+- **[`greg.hardware.ServerInstalled`](/api/hooks/hardware/server-installed)**: Fired when a server is placed into a rack slot.
+- **[`greg.hardware.ServerBroken`](/api/hooks/hardware/server-broken)**: Fired when a component failure occurs.
+
+## 💾 Persistence
+
+You don't need to write any save/load logic for custom servers. gregCore's **Hardware Persistence Service** tracks every instance of your server in the game world, including its current position, internal components, and wear-and-tear state.
+
+## ❌ Common Mistakes
+
+1.  **Duplicate IDs**: If two mods use the same Server ID, gregCore will log a conflict and only the first one will be registered.
+2.  **Missing Dependencies**: If your server uses a custom AssetBundle, ensure the bundle is loaded *before* registration.
+3.  **Illegal U-Size**: *Data Center* racks only support 1U to 4U. Setting a higher value might cause clipping or placement errors.
+
+---
+
+::: tip
+**Pro-Tip**: Use the `greg.ECONOMY.PricingAdjusted` hook to dynamically change your server's price based on the player's reputation or active contracts!
+:::

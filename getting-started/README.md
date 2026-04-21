@@ -74,4 +74,8 @@ If you want to jump straight into adding content, check out our highly detailed 
 
 ## Next Steps
 
-Head over to the [Language Guides](/guides/languages) to set up your project structure.
+1.  **[Installation & Prerequisites](/getting-started/installation)**: Get the right tools installed in your game directory.
+2.  **[Framework Dependencies](/getting-started/dependencies)**: Detailed list of libraries (MoonSharp, Jint, etc.) used by gregCore.
+3.  **[Project Setup](/getting-started/setup)**: Configure your IDE for C#, Lua, or other supported languages.
+4.  **[Your First Mod](/getting-started/first-mod)**: Build a simple "Hello World" mod and see it running in-game.
+5.  **[Essential Concepts](/framework-concepts)**: Learn about the Five Pillars of gregCore (Hooks, Services, Registries, Payloads, Lifecycle).

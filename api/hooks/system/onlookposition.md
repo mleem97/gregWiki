@@ -1,0 +1,86 @@
+---
+title: OnLookPosition
+description: Documentation for greg.SYSTEM.OnLookPosition
+path: /api/hooks/system/onlookposition
+---
+
+# OnLookPosition
+
+> **Hook ID:** `greg.SYSTEM.OnLookPosition`
+> **Category:** System
+> **Namespace:** `Il2Cpp`
+
+Auto-generated from IL2CPP sources: Il2Cpp/IPlayerActions.OnLookPosition
+
+## Native Signature
+```csharp
+Il2Cpp.IPlayerActions::OnLookPosition(InputAction.CallbackContext)
+```
+
+## Payload Context
+When this hook fires, the event payload contains the following data:
+
+| Name | Type | Description |
+|---|---|---|
+| `method` | `string` | ... |
+
+
+## Using this Hook
+
+::: tip
+Subscribe to this hook to react to `OnLookPosition` events in real-time.
+:::
+
+#Tabset
+#Tab: C#
+```csharp
+using gregCore.API;
+
+public class MyMod : MelonMod
+{
+    public override void OnInitializeMelon()
+    {
+        GregAPI.Hooks.On("greg.SYSTEM.OnLookPosition", OnHookTriggered);
+    }
+
+    private void OnHookTriggered(gregCore.Sdk.Models.GregPayload payload)
+    {
+        GregAPI.LogInfo("Triggered greg.SYSTEM.OnLookPosition");
+    }
+}
+```
+#Tab: Lua
+```lua
+greg.on("greg.SYSTEM.OnLookPosition", function(payload)
+    greg.log("Hook greg.SYSTEM.OnLookPosition received")
+end)
+```
+#Tab: Python
+```python
+def on_hook(payload):
+    print("Hook greg.SYSTEM.OnLookPosition fired")
+
+greg.on("greg.SYSTEM.OnLookPosition", on_hook)
+```
+#Tab: JavaScript
+```javascript
+greg.on("greg.SYSTEM.OnLookPosition", (payload) => {
+    console.log("Hook greg.SYSTEM.OnLookPosition triggered");
+});
+```
+#Tab: Rust
+```rust
+api.subscribe_hook(c"greg.SYSTEM.OnLookPosition".as_ptr(), on_hook_callback);
+```
+#Tab: Go
+```go
+greg.Subscribe("greg.SYSTEM.OnLookPosition", func(p greg.Payload) {
+    fmt.Println("Hook greg.SYSTEM.OnLookPosition fired")
+})
+```
+#EndTabset
+
+## Safety & Compatibility
+- **Status:** Active
+- **Strategy:** `Postfix`
+- **Safe to block?**: Yes
