@@ -12,6 +12,12 @@ slug: /getting-started
 - `gregCore.dll`
 - Steam-Spiel **Data Center**
 
+## Aktueller Architekturhinweis
+
+- Die Legacy-Kompatibilität (RustBridge/LangCompat) ist in `gregCore` integriert.
+- Quellcode liegt in `gregCore/src/Compatibility/DataCenterModLoader`.
+- Es werden keine externen RustBridge-/LangCompat-Pluginbäume in `gregCore` mehr benötigt.
+
 ## Grundregel: Plugin vs Script
 
 - **Plugin**: MelonLoader-Assembly (`*.dll`) im Mods-Plugin-Kontext.
@@ -82,6 +88,5 @@ public static class Guard
 
 ## Nächste Schritte
 
-- [Scripting Language Support](./scripting-language-support.md)
-- [MoonSharp Lua Integration](./moonsharp-lua-integration.md)
 - [Framework Dependencies](./framework-dependencies.md)
+- [Architecture](./architecture.md)

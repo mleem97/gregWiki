@@ -27,6 +27,9 @@ How to mark hooks as legacy and phase them out without breaking old mods.
 ### 🌐 [Syncing the Wiki](/maintainer/sync-wiki)
 Automated scripts for updating the documentation based on the current hook catalog.
 
+### 🔄 [gregCore Doc Sync Status](/maintainer/gregcore-doc-sync-status)
+Verfolgt, welche `gregCore`-Quellen bereits code-konsistent in `gregWiki` synchronisiert wurden.
+
 ---
 
 ::: warning

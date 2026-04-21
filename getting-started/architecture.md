@@ -22,12 +22,19 @@ This is what you, the modder, interact with.
 - **`GregAPI`**: A static access point for all services (Economy, World, UI, etc.).
 - **Hook Catalog**: A versioned list of all 1771 available game events.
 
-### 4. The Bridge Layer (The FFI)
-The Bridge layer exposes the C# SDK to other programming languages.
+### 4. The Bridge & Compatibility Layer
+This layer exposes the C# SDK to other programming languages and includes the integrated legacy compatibility runtime.
 - **Lua (MoonSharp)**: High-speed scripting.
 - **Python (Python.Runtime)**: Flexible data-driven logic.
 - **Rust/Go (C-FFI)**: Native performance for compiled modules.
 - **JavaScript (Jint)**: Modern web-tech for game modding.
+- **DataCenterModLoader (integrated)**: Legacy RustBridge/LangCompat behavior maintained in-core at `src/Compatibility/DataCenterModLoader`.
+
+## 🧩 Migration Status (Current)
+
+- External trees `plugins/DataCenter-RustBridge` and `mods/greg.Plugin.LangCompatBridge` are retired from `gregCore`.
+- Compatibility lifecycle is initialized directly by `GregCoreMod`.
+- `gregCore` follows a built-in-first dependency model for core compatibility features.
 
 ## 🔄 The Data Flow
 1.  **Event Occurs**: A player clicks a button in the game.

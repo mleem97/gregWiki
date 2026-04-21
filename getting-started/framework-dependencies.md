@@ -12,9 +12,9 @@ slug: /framework-dependencies
 | Il2CppInterop | aktuell | Runtime | immer | GameDir |
 | 0Harmony | aktuell | Runtime | immer | GameDir |
 | MoonSharp | 2.0.0 | NuGet/embedded | nur bei `*.lua` | `gregCore.dll` |
-| Rust-Bridge DLL | aktuell | FFI/ABI | nur bei `*.rs`/`*.rmod` | `gregCore.dll` |
-| Python-Host | aktuell | Binding | nur bei `*.py` | `gregCore.dll` |
-| JS-Runtime | aktuell | Binding | nur bei `*.js`/`*.ts` | `gregCore.dll` |
+| DataCenterModLoader-Kompatibilität | integriert | Runtime-Kompatibilität | immer | `src/Compatibility/DataCenterModLoader` |
+| Python.Runtime | optional | Binding | nur bei `*.py` | Melon Optional Dependency |
+| JS.Runtime.Binding | optional | Binding | nur bei `*.js`/`*.ts` | Melon Optional Dependency |
 
 ## Immer vorhanden, aber on-demand aktiviert
 
@@ -27,10 +27,10 @@ slug: /framework-dependencies
 
 ```xml
 <ItemGroup>
-  <PackageReference Include="Jint" Version="4.1.0" />
+  <PackageReference Include="Jint" Version="4.8.0" />
   <PackageReference Include="Mono.Cecil" Version="0.11.6" />
   <PackageReference Include="MoonSharp" Version="2.0.0" />
-  <PackageReference Include="pythonnet" Version="3.0.3" />
+  <PackageReference Include="pythonnet" Version="3.0.5" />
 </ItemGroup>
 ```
 
@@ -62,3 +62,9 @@ Wenn eine Sprach-Bridge noch nicht vollständig ist:
 ## Konfliktmarkierung
 
 - ⚠️ WIKI↔CODE CONFLICT: Historische Pfade in älteren Dokumenten können `Plugins/<Lang>` nennen. Der aktuelle Standard ist `Mods/Scripts` für Script-Erkennung.
+
+## Built-in-Policy (aktuell)
+
+- `gregCore` ist der Kern und bringt die relevante Kompatibilität intern mit.
+- Die früheren externen Bäume `plugins/DataCenter-RustBridge` und `mods/greg.Plugin.LangCompatBridge` wurden aus `gregCore` entfernt.
+- Die Laufzeit-Initialisierung der Legacy-Kompatibilität läuft direkt über `GregCoreMod` → `DataCenterModLoader.Core`.

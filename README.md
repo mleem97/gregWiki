@@ -1,50 +1,38 @@
----
-title: gregCore Wiki
-description: The ultimate companion for modding Data Center
-path: /
----
+# gregMod.LangCompatBridge – Modul-Dokumentation
 
-# 🛸 Welcome to the gregCore Wiki
+## 1) Überblick
+$(@{Name=gregMod.LangCompatBridge; Dir=C:\Users\marvi\source\repos\gregFramework\Melons\gregMod.LangCompatBridge; Csproj=C:\Users\marvi\source\repos\gregFramework\Melons\gregMod.LangCompatBridge\gregMod.LangCompatBridge.csproj; HasDocs=False; HasReadme=True}.Name) ist ein eigenständiges Modul im gregFramework-Workspace.
+Diese Seite dient als technische Referenz für Build, Laufzeit und Integration.
 
-gregCore is a state-of-the-art, multi-language modding framework for *Data Center*. It abstracts away the fragility of IL2CPP patching and provides a stable, unified platform for creating complex, high-quality mods.
+## 2) Projekt-Metadaten
+- **Projektname:** $(@{Name=gregMod.LangCompatBridge; Dir=C:\Users\marvi\source\repos\gregFramework\Melons\gregMod.LangCompatBridge; Csproj=C:\Users\marvi\source\repos\gregFramework\Melons\gregMod.LangCompatBridge\gregMod.LangCompatBridge.csproj; HasDocs=False; HasReadme=True}.Name)
+- **Projektpfad:** $rel
+- **Projektdatei:** $(Split-Path @{Name=gregMod.LangCompatBridge; Dir=C:\Users\marvi\source\repos\gregFramework\Melons\gregMod.LangCompatBridge; Csproj=C:\Users\marvi\source\repos\gregFramework\Melons\gregMod.LangCompatBridge\gregMod.LangCompatBridge.csproj; HasDocs=False; HasReadme=True}.Csproj -Leaf)
+- **Target Framework:** $tfm
+- **README vorhanden:** Ja (`README.md` vorhanden)
 
-Designed for Wiki.js, this documentation covers everything from your first "Hello World" to architecting massive data center extensions.
+## 3) Build & Artefakte
+### Lokaler Build
+`powershell
+Set-Location "C:\Users\marvi\source\repos\gregFramework\Melons\gregMod.LangCompatBridge"
+dotnet build
+`
 
----
+### Erwartetes Artefakt
+- Standardmäßig unter in/Debug/net6.0/ (oder in/Release/net6.0/).
 
-## 🗺️ Documentation Map
+## 4) Integration in gregCore / MelonLoader
+- Das Modul wird als separater Mod/Plugin-Baustein behandelt.
+- APIs aus gregCore werden über Projekt-Referenzen oder Laufzeit-DLLs genutzt.
+- Deployment erfolgt je nach Mod-Typ in die passenden Game-Verzeichnisse (Mods, ggf. weitere mod-spezifische Pfade).
 
-### 🚀 [Getting Started](/getting-started)
-Perfect for first-time modders. Learn about framework installation, project setup, and the basic modding lifecycle.
+## 5) Wartung
+- Bei API-Änderungen in gregCore Kompatibilität testen.
+- README und diese Doku synchron halten.
+- Breaking Changes in Changelog/Release Notes dokumentieren.
 
-### 🧠 [Framework Concepts](/framework-concepts)
-Understand the "Magic" behind gregCore. Deep dives into the EventBus, Hooks, and the Service architecture.
-
-### 🪝 [API Reference](/api)
-Technical manual for all public systems:
-*   **[Hooks Catalog](/api/hooks)**: Complete documentation for all **1771 intercepts**.
-*   **[Services](/api/services)**: Economy, Hardware, UI, and more.
-
-### 🏗️ [Guides](/guides)
-Step-by-step instructions for specific modding goals:
-*   **[Language Hub](/guides/languages)**: Guides for C#, Lua, Rust, Go, Python, and JavaScript.
-*   **[Content Creation](/guides/content)**: Building custom Servers, Switches, NPCs, and Customers.
-
-### 🎨 [UI & Interface](/ui)
-Learn how to build native-feeling panels and settings menus using the gregCore UI Service.
-
-### 🛡️ [Advanced Systems](/advanced)
-Expert topics including Persistence, Conflict Resolution, and Memory Management.
-
----
-
-## 🛠️ Community & Support
-*   **[Roadmap](/roadmap)**: See what's coming next for gregCore.
-*   **[Contribution](/community/contribution)**: Help improve the framework or the wiki.
-*   **[Maintainer Docs](/maintainer)**: Procedures for core contributors.
-
----
-
-::: tip
-**Pro Search**: Use the Wiki.js search bar at the top of the page to quickly find any of the 1700+ hooks by class or method name!
-:::
+## 6) Offene Punkte (Pflege-Checkliste)
+- [ ] Haupt-Features kurz dokumentiert
+- [ ] Konfigurationsoptionen dokumentiert
+- [ ] Abhängigkeiten/Versionen geprüft
+- [ ] Installations- und Updatepfad getestet
