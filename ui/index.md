@@ -1,4 +1,4 @@
----
+﻿---
 title: UI & Interface
 description: Building native-feeling mod menus
 path: /ui
@@ -6,33 +6,29 @@ path: /ui
 
 # 🎨 UI & Interface
 
-Build beautiful, consistent user interfaces that feel like a native part of *Data Center*. gregCore uses the **Luminescent Architect** design system to ensure all mod UIs look professional.
+Build beautiful, consistent user interfaces that feel like a native part of *Data Center*. gregCore uses the **Vibrant Dark Mode** design system (Level 2 Roundedness) to ensure all mod UIs look professional.
 
-## GregUIBuilder
+## GregUIBuilder (UGUI)
 
-The `GregUIBuilder` is a fluent API for building IMGUI-based windows.
+The GregUIBuilder is a fluent API for building native UGUI windows. This is the recommended way for Unity 6 IL2CPP stability.
 
-```csharp
-var panel = GregUIBuilder.Create("MyModSettings")
-    .SetTitle("Mod Configuration")
-    .AddTab("General", tab => {
-        tab.AddToggle("Enable Logging", _config.LogEnabled, (val) => _config.LogEnabled = val);
-        tab.AddSlider("UI Scale", 0.5f, 2.0f, _config.Scale, (val) => _config.Scale = val);
-    })
-    .AddTab("Advanced", tab => {
-        tab.AddButton("Reset All", () => ResetSettings());
-    })
+`csharp
+var panel = GregUIBuilder.CreateTablet('MyModSettings')
+    .AddHeadline('Mod Configuration')
+    .AddLabel('Version 1.0.0')
+    .AddToggle('Enable Logging', true, (val) => { /* logic */ })
+    .AddPrimaryButton('Apply Changes', () => { /* logic */ })
     .Build();
-```
+`
 
 ## Features
-- **Theme Awareness**: Automatically adapts to the current game theme.
-- **Draggable Windows**: Native support for dragging and resizing.
-- **Auto-Layout**: No need to calculate pixel positions manually.
-- **Keybind Integration**: Easily bind panels to F-keys or custom shortcuts.
+- **Theme Awareness**: Automatically applies the Teal/Cyan design system.
+- **IL2CPP Safe**: Avoids 'Method unstripping failed' errors.
+- **Virtualized Lists**: Support for massive data sets via AddSearchableList.
+- **Draggable Windows**: Native support for dragging.
 
 ---
 
 ::: tip
-See the [Custom Panels Guide](/ui/custom-panels) for more advanced examples.
+See the [Design System Guide](/ui/design-system) for exact color tokens.
 :::
