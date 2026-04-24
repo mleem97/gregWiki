@@ -149,6 +149,9 @@ greg.Subscribe("{hook_path}", func(payload greg.EventPayload) {{
         f.write(content)
 
 def main():
+    # Ensure directory exists
+    os.makedirs(WIKI_HOOKS_DIR, exist_ok=True)
+
     if not os.path.exists(HOOKS_JSON_PATH):
         print(f"Error: {HOOKS_JSON_PATH} not found.")
         return
