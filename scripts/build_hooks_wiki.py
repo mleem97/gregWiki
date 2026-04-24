@@ -21,11 +21,25 @@ def build_signature(ret, name, params):
     param_str = ", ".join([f"{safe_type(p.get('Type'))} {p.get('Name')}" for p in params])
     return f"{safe_type(ret)} {name}({param_str})"
 
+def sanitize_name(name):
+    """Sanitizes a string to be safe for use as a directory or file name."""
+    if not name:
+        return "unknown"
+    # Replace path traversal patterns and any non-alphanumeric characters (except dots/dashes)
+    # Strip any leading dots or slashes to prevent traversal
+    name = name.replace('..', '').replace('/', '').replace('\\', '')
+    # Take basename as additional precaution
+    base = os.path.basename(name)
+    if not base or base in ('.', '..'):
+        return "unknown"
+    # Replace any remaining non-alphanumeric/underscore/dot/dash characters with underscores
+    return re.sub(r'[^a-zA-Z0-9_.-]', '_', base)
+
 def generate_page(hook):
-    group = hook.get("Group", "General").lower()
+    group = sanitize_name(hook.get("Group", "General")).lower()
     ns = hook.get("Namespace", "")
-    cls = hook.get("ClassName", "")
-    method = hook.get("MethodName", "")
+    cls = sanitize_name(hook.get("ClassName", ""))
+    method = sanitize_name(hook.get("MethodName", ""))
     ret = hook.get("ReturnType", "Void")
     params = hook.get("Parameters", [])
     
