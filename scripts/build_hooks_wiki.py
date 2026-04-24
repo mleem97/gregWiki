@@ -7,9 +7,6 @@ ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 HOOKS_JSON_PATH = os.path.join(ROOT_DIR, "gregCore", "game_hooks.json")
 WIKI_HOOKS_DIR = os.path.join(ROOT_DIR, "gregWiki", "api", "hooks")
 
-# Ensure directory exists
-os.makedirs(WIKI_HOOKS_DIR, exist_ok=True)
-
 def camel_to_kebab(name):
     s1 = re.sub('(.)([A-Z][a-z]+)', r'\1-\2', name)
     return re.sub('([a-z0-9])([A-Z])', r'\1-\2', s1).lower()
@@ -146,6 +143,9 @@ greg.Subscribe("{hook_path}", func(payload greg.EventPayload) {{
         f.write(content)
 
 def main():
+    # Ensure directory exists
+    os.makedirs(WIKI_HOOKS_DIR, exist_ok=True)
+
     if not os.path.exists(HOOKS_JSON_PATH):
         print(f"Error: {HOOKS_JSON_PATH} not found.")
         return
