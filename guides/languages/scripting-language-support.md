@@ -1,117 +1,113 @@
----
-title: Scripting Language Support
-description: Übersicht über alle von gregCore unterstützten Script-Sprachen inklusive Aktivierungslogik und Host-Mapping.
-slug: /scripting-language-support
----
+Title: Scripting Language Support
+Path: /guides/languages/scripting-language-support
+Type: Overview
+Audience: mod developer, framework developer, advanced contributor
+Summary: Overview of all scripting languages supported by gregCore, including activation logic and host mapping.
+Suggested Tags: scripting, lua, rust, python, javascript, csharp-script
+Related Pages: /guides/languages/moonsharp-lua-integration, /getting-started/architecture
+Split Recommendation: Keep as one page
 
-## Überblick
+# Scripting Language Support
 
-`gregCore` unterscheidet strikt:
+## Overview
 
-- **Plugins**: MelonLoader-Assemblies (`*.dll`)
-- **Scripts**: Sprachdateien in `Mods/Scripts` (`*.lua`, `*.py`, `*.rs`, `*.rmod`, `*.js`, `*.ts`, `*.cs`)
+`gregCore` maintains a strict distinction between:
 
-> ⚠️ WIKI↔CODE CONFLICT: Ältere Bridge-Implementierungen nutzen intern noch `Plugins/<Lang>`-Ordner. Die Aktivierungslogik scannt jetzt `Mods/Scripts` als Source of Truth.
+- **Plugins**: MelonLoader assemblies (`*.dll`).
+- **Scripts**: Source files located in `Mods/Scripts` (`*.lua`, `*.py`, `*.rs`, `*.rmod`, `*.js`, `*.ts`, `*.cs`).
 
-## Aktivierungsmodell (On-Demand)
+> ⚠️ **WIKI↔CODE CONFLICT**: Older bridge implementations internally used `Plugins/<Lang>` folders. The current activation logic scans `Mods/Scripts` as the **Single Source of Truth**.
 
-Beim Start (`OnInitializeMelon`) ruft `gregCore` auf:
+## Activation Model (On-Demand)
+
+During startup (`OnInitializeMelon`), `gregCore` executes:
 
 ```csharp
-// Signatur
+// Signature
 public static void ScanAndActivate(string modsScriptsDir)
 ```
 
-Die Registry aktiviert ausschließlich Hosts, für die Dateien erkannt wurden.
+The registry only activates hosts for which corresponding files were detected.
 
 ```csharp
-// Signatur
+// Signatures
 public static bool IsActive(Language lang)
-```
-
-```csharp
-// Signatur
 public static IGregLanguageHost GetHost(Language lang)
 ```
 
-## Sprach-Matrix
+## Language Matrix
 
-| Sprache | Muster in `Mods/Scripts` | Abhängigkeit in `gregCore` | Host | Status |
+| Language | Pattern in `Mods/Scripts` | Dependency in `gregCore` | Host | Status |
 |---|---|---|---|---|
-| Lua | `*.lua` | MoonSharp `2.0.0` | `GregLuaHost` | Aktivierbar |
-| Rust | `*.rs`, `*.rmod` | Rust-Bridge (FFI/ABI-Layer) | `GregRustHost` | Aktivierbar |
-| Python | `*.py` | Python-Host-Bindings (`pythonnet` / `Python.Runtime`) | `GregPythonHost` | Aktivierbar bei Runtime |
-| C# Script | `*.cs` | Roslyn (falls vorhanden) | `GregCSharpScriptHost` | [UNVERIFIED] Ausführungslayer |
-| JS / TS | `*.js`, `*.ts` | Jint JS-Runtime-Binding | `GregJsHost` | `*.js` aktiv, `*.ts` benötigt Transpile |
+| **Lua** | `*.lua` | MoonSharp `2.0.0` | `GregLuaHost` | Activatable |
+| **Rust** | `*.rs`, `*.rmod` | Rust-Bridge (FFI/ABI Layer) | `GregRustHost` | Activatable |
+| **Python** | `*.py` | Python-Host Bindings (`pythonnet`) | `GregPythonHost` | Activatable at Runtime |
+| **C# Script** | `*.cs` | Roslyn (if available) | `GregCSharpScriptHost` | [UNVERIFIED] Execution Layer |
+| **JS / TS** | `*.js`, `*.ts` | Jint JS-Runtime Binding | `GregJsHost` | `*.js` active, `*.ts` requires transpilation |
 
-## Einstieg je Sprache
+## Entry Points by Language
 
 ### Lua
-
-- Einsatzzweck: schnelle Gameplay-Automation, Hooks, Utilities.
-- Host: `GregLuaHost`.
+- **Use Case**: Rapid gameplay automation, hooks, and utilities.
+- **Host**: `GregLuaHost`.
 
 ```lua
--- Datei: Mods/Scripts/hello.lua
+-- File: Mods/Scripts/hello.lua
 greg.log_info("Hello from Lua")
 ```
 
 ### Rust
-
-- Einsatzzweck: performancekritische Module, FFI-Integration.
-- Host: `GregRustHost`.
+- **Use Case**: Performance-critical modules, FFI integration.
+- **Host**: `GregRustHost`.
 
 ```rust
-// Datei: Mods/Scripts/example.rs
-// Hinweis: derzeit FFI-Brücke nutzt native Exports; reine .rs-Datei ist Trigger für Host-Aktivierung.
+// File: Mods/Scripts/example.rs
+// Note: Currently the FFI bridge uses native exports; 
+// the .rs file serves as a trigger for host activation.
 fn main() {
-    // runtime-spezifisch
+    // runtime-specific logic
 }
 ```
 
 ### Python
-
-- Einsatzzweck: Prototyping, Automation, Daten-Workflows.
-- Host: `GregPythonHost`.
+- **Use Case**: Prototyping, automation, and data workflows.
+- **Host**: `GregPythonHost`.
 
 ```python
-# Datei: Mods/Scripts/hello.py
+# File: Mods/Scripts/hello.py
 greg.log_info("Hello from Python")
 ```
 
 ### C# Script
-
-- Einsatzzweck: Skriptbasierte C#-Erweiterungen ohne Plugin-Build.
-- Host: `GregCSharpScriptHost`.
+- **Use Case**: Script-based C# extensions without a plugin build step.
+- **Host**: `GregCSharpScriptHost`.
 
 ```csharp
-// Datei: Mods/Scripts/hello.cs
-// [UNVERIFIED] Vollständige Script-Ausführung hängt von Roslyn-Runtime ab.
+// File: Mods/Scripts/hello.cs
+// [UNVERIFIED] Full script execution depends on Roslyn runtime.
 ```
 
 ### JavaScript / TypeScript
-
-- Einsatzzweck: schnelle Script-Automation, modulare Tools.
-- Host: `GregJsHost`.
+- **Use Case**: Rapid script automation, modular tools.
+- **Host**: `GregJsHost`.
 
 ```javascript
-// Datei: Mods/Scripts/hello.js
+// File: Mods/Scripts/hello.js
 greg_log("Hello from JS");
 ```
 
 ```ts
-// Datei: Mods/Scripts/hello.ts
-// Derzeit nur Erkennung; Transpiler-Integration ist notwendig.
+// File: Mods/Scripts/hello.ts
+// Currently only detection is supported; transpiler integration is required.
 ```
 
-## Bekannte Einschränkungen
+## Known Limitations
 
-- `GregCSharpScriptHost`: Ausführungslayer ist in `MISSING.md` dokumentiert.
-- TypeScript: Erkennung vorhanden, keine integrierte Transpile-Pipeline.
-- Python: Wenn `Python.Runtime.dll` fehlt, bleibt Python-Host deaktiviert.
+- **`GregCSharpScriptHost`**: The execution layer is documented in `MISSING.md`.
+- **TypeScript**: Detection is available, but there is no integrated transpilation pipeline.
+- **Python**: If `Python.Runtime.dll` is missing, the Python host remains disabled.
 
-## Weiterführende Seiten
+## Related Pages
 
 - [MoonSharp Lua Integration](./moonsharp-lua-integration.md)
-- [Getting Started](./getting-started.md)
-- [Framework Dependencies](./framework-dependencies.md)
+- [Framework Architecture](/getting-started/architecture)

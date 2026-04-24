@@ -1,6 +1,23 @@
+Title: Framework Architecture
+Path: /getting-started/architecture
+Type: Concept
+Audience: mod developer, framework developer
+Summary: Overview of the gregFramework layers, Data Center integration, and multi-language support strategy.
+Suggested Tags: architecture, layers, ffi, sdk
+Related Pages: /getting-started/index, /getting-started/quickstart
+Split Recommendation: Keep as one page
+
 # Framework Architecture
 
 To use gregCore effectively, you must understand its layered design. This architecture ensures that mods remain stable, performant, and cross-compatible.
+
+## Visual Overview
+
+Mod author access flows through the following hierarchy:
+
+*   **C# Mods:** Direct access to `gregCore.PublicApi` or `gregCore.API.GregAPI`.
+*   **Rust Mods:** Access via the `RustFFIBridge` using a function pointer table.
+*   **Lua Mods:** Access via the `LuaFFIBridge` (MoonSharp) using the global `greg` table.
 
 ## 🏛️ The Four Layers of gregCore
 
@@ -20,15 +37,18 @@ This layer interacts directly with the *Data Center* game engine.
 This is what you, the modder, interact with.
 - **`GregMod` Base Class**: The entry point for all C# mods.
 - **`GregAPI`**: A static access point for all services (Economy, World, UI, etc.).
-- **Hook Catalog**: A versioned list of all 1771 available game events.
+- **Hook Catalog**: A versioned list of available game events.
 
 ### 4. The Bridge & Compatibility Layer
 This layer exposes the C# SDK to other programming languages and includes the integrated legacy compatibility runtime.
-- **Lua (MoonSharp)**: High-speed scripting.
-- **Python (Python.Runtime)**: Flexible data-driven logic.
-- **Rust/Go (C-FFI)**: Native performance for compiled modules.
-- **JavaScript (Jint)**: Modern web-tech for game modding.
-- **DataCenterModLoader (integrated)**: Legacy RustBridge/LangCompat behavior maintained in-core at `src/Compatibility/DataCenterModLoader`.
+
+| Language | Bridge | Strategy | Best for... |
+| --- | --- | --- | --- |
+| **C#** | Native | Direct DLL loading | Complex IL2CPP integration |
+| **Rust** | `RustFFI` | C-compatible FFI | High performance & safety |
+| **Lua** | `LuaFFI` | MoonSharp (Interpreter) | Rapid prototyping & UI |
+| **Python** | `Python.Runtime` | Embedded Interpreter | Data-driven logic |
+| **JS** | `Jint` | V8-like Interpreter | Web-tech based UI/Logic |
 
 ## 🧩 Migration Status (Current)
 
@@ -50,6 +70,3 @@ gregCore uses a **Semantic Versioning** system (MAJOR.MINOR.PATCH).
 - **Patch**: Bug fixes.
 
 We guarantee that mods built for a specific Major version will continue to work throughout all Minor updates of that version.
-
----
-[Next: Environment Setup](environment-setup.md)

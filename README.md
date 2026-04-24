@@ -1,38 +1,26 @@
-# gregMod.LangCompatBridge – Modul-Dokumentation
+# Welcome to the gregFramework Wiki
 
-## 1) Überblick
-$(@{Name=gregMod.LangCompatBridge; Dir=C:\Users\marvi\source\repos\gregFramework\Melons\gregMod.LangCompatBridge; Csproj=C:\Users\marvi\source\repos\gregFramework\Melons\gregMod.LangCompatBridge\gregMod.LangCompatBridge.csproj; HasDocs=False; HasReadme=True}.Name) ist ein eigenständiges Modul im gregFramework-Workspace.
-Diese Seite dient als technische Referenz für Build, Laufzeit und Integration.
+Welcome to the official technical documentation for the **gregFramework** ecosystem. This wiki serves as the central knowledge base for mod authors, framework contributors, and players interested in the technical internals of *Data Center*.
 
-## 2) Projekt-Metadaten
-- **Projektname:** $(@{Name=gregMod.LangCompatBridge; Dir=C:\Users\marvi\source\repos\gregFramework\Melons\gregMod.LangCompatBridge; Csproj=C:\Users\marvi\source\repos\gregFramework\Melons\gregMod.LangCompatBridge\gregMod.LangCompatBridge.csproj; HasDocs=False; HasReadme=True}.Name)
-- **Projektpfad:** $rel
-- **Projektdatei:** $(Split-Path @{Name=gregMod.LangCompatBridge; Dir=C:\Users\marvi\source\repos\gregFramework\Melons\gregMod.LangCompatBridge; Csproj=C:\Users\marvi\source\repos\gregFramework\Melons\gregMod.LangCompatBridge\gregMod.LangCompatBridge.csproj; HasDocs=False; HasReadme=True}.Csproj -Leaf)
-- **Target Framework:** $tfm
-- **README vorhanden:** Ja (`README.md` vorhanden)
+## 🚀 Navigation
 
-## 3) Build & Artefakte
-### Lokaler Build
-`powershell
-Set-Location "C:\Users\marvi\source\repos\gregFramework\Melons\gregMod.LangCompatBridge"
-dotnet build
-`
+### [Getting Started](/getting-started/index)
+New to gregCore? Start here to set up your environment and build your first mod in record time.
 
-### Erwartetes Artefakt
-- Standardmäßig unter in/Debug/net6.0/ (oder in/Release/net6.0/).
+### [Guides & Tutorials](/guides/index)
+In-depth guides on specialized topics like scripting languages, custom content creation (Servers, Switches, Customers), and advanced world manipulation.
 
-## 4) Integration in gregCore / MelonLoader
-- Das Modul wird als separater Mod/Plugin-Baustein behandelt.
-- APIs aus gregCore werden über Projekt-Referenzen oder Laufzeit-DLLs genutzt.
-- Deployment erfolgt je nach Mod-Typ in die passenden Game-Verzeichnisse (Mods, ggf. weitere mod-spezifische Pfade).
+### [API Reference](/api/index)
+FACT-oriented lookup for the **gregCore SDK**, available hooks, and the underlying **Data Center Game API**.
 
-## 5) Wartung
-- Bei API-Änderungen in gregCore Kompatibilität testen.
-- README und diese Doku synchron halten.
-- Breaking Changes in Changelog/Release Notes dokumentieren.
+### [Maintainer Section](/maintainer/index)
+Guidelines for contributors, architecture blueprints, security audits, and project status reports.
 
-## 6) Offene Punkte (Pflege-Checkliste)
-- [ ] Haupt-Features kurz dokumentiert
-- [ ] Konfigurationsoptionen dokumentiert
-- [ ] Abhängigkeiten/Versionen geprüft
-- [ ] Installations- und Updatepfad getestet
+### [Tools](/tools/index)
+Overview of our essential development tools, including **gregExtractor** and **gregModmanager**.
+
+## 🛡️ Our Mission
+The **gregFramework** aims to provide a stable, performant, and developer-friendly middleware for *Data Center*, enabling the community to create rich, high-quality content without the fragility of traditional raw patching.
+
+---
+*© 2026 teamGreg | [gregframework.eu](https://gregframework.eu)*

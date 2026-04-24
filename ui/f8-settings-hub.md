@@ -1,24 +1,32 @@
----
-title: "F8 Settings Hub"
-description: "How to use and extend the F8 Settings Hub"
----
+Title: F8 Settings Hub
+Path: /ui/f8-settings-hub
+Type: How-to
+Audience: mod developer
+Summary: How to use and extend the F8 Settings Hub, the central configuration menu for gregCore mods.
+Suggested Tags: ui, settings, f8, config, gui-builder
+Related Pages: /ui/gregui-builder, /advanced/vanilla-save-compatibility
+Split Recommendation: Keep as one page
 
 # F8 Settings Hub
 
-## Was ist das F8 Settings Hub?
-Der F8 Hub ist das zentrale Mod-Konfigurationsmenü für alle gregCore-Mods. Es basiert auf dem `GregUIBuilder` (OnGUI) und nutzt das Luminescent Architect Design System. Kein Mod sollte mehr ein eigenes, abgetrenntes Fenster für Einstellungen bauen.
+## What is the F8 Settings Hub?
 
-## Standard-Tabs
-- **[Framework]**: Zeigt Core-Infos und Debug-Toggles.
-- **[Grid]**: Einstellungen für das `greg.GridPlacement`.
-- **[SaveEngine]**: Einstellungen für `greg.SaveEngine`.
-- **[Languages]**: Status der registrierten Skriptsprachen.
-- **[Debug]**: Diagnose.
+The F8 Hub is the central mod configuration menu for all `gregCore` mods. It is built on the `GregUIBuilder` (OnGUI) and utilizes the **Luminescent Architect** design system. Mod authors are encouraged to use this shared hub rather than building separate, detached windows for settings.
 
-## Modder: Eigenen Tab registrieren
+## Standard Tabs
+
+- **[Framework]**: Displays core information and debug toggles.
+- **[Grid]**: Settings for `greg.GridPlacement`.
+- **[SaveEngine]**: Settings for `greg.SaveEngine`.
+- **[Languages]**: Status of registered scripting languages.
+- **[Debug]**: Diagnostics and logs.
+
+## Registering a Custom Tab
+
+Modders can easily register their own configuration tabs within the hub:
 
 ```csharp
-// Eigenen Tab im F8-Menü registrieren
+// Register a custom tab in the F8 menu
 GregSettingsHub.RegisterTab("myMod.settings", "My Mod", (builder) => {
     builder.AddLabel("My Mod v1.0.0")
            .AddToggle("Enable Feature X", config.FeatureX, v => config.FeatureX = v)
@@ -26,9 +34,10 @@ GregSettingsHub.RegisterTab("myMod.settings", "My Mod", (builder) => {
            .AddButton("Reset to Defaults", ResetConfig);
 });
 
-// Tab beim Mod-Shutdown entfernen
+// Remove the tab during mod shutdown
 GregSettingsHub.UnregisterTab("myMod.settings");
 ```
 
-## Vanilla-Save-Banner
-Wird ein Vanilla-Save geladen, erscheint im F8-Menü ein Warnbanner `Vanilla Save detected — Grid Placement disabled`. Dies signalisiert dem User, dass Game-Breaking-Features deaktiviert wurden, um den Vanilla-Save nicht zu korrumpieren.
+## Vanilla Save Banner
+
+When a vanilla save is loaded, the F8 menu displays a warning banner: `Vanilla Save detected — Grid Placement disabled`. This alerts the user that potentially game-breaking features have been disabled to prevent corruption of the vanilla save file.

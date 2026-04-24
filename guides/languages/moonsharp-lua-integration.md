@@ -1,35 +1,40 @@
----
-title: MoonSharp Lua Integration
-description: Technische Referenz zur Lua-Integration in gregCore über MoonSharp 2.0.0.
-slug: /moonsharp-lua-integration
----
+Title: MoonSharp Lua Integration
+Path: /guides/languages/moonsharp-lua-integration
+Type: Reference
+Audience: mod developer, framework developer
+Summary: Technical reference for the Lua integration in gregCore using MoonSharp 2.0.0.
+Suggested Tags: lua, moonsharp, scripting, integration, ffi
+Related Pages: /getting-started/architecture, /guides/languages/scripting-language-support
+Split Recommendation: Keep as one page
 
-## Was ist MoonSharp und warum 2.0.0?
+# MoonSharp Lua Integration
 
-MoonSharp ist eine reine .NET-Lua-Implementierung ohne native Lua-DLL. Für `gregCore` bedeutet das:
+## What is MoonSharp and why 2.0.0?
 
-- kompatibel mit IL2CPP/MelonLoader-Setup
-- leichtes Embedding in `gregCore.dll`
-- klare Sandbox-Steuerung
+MoonSharp is a pure .NET Lua implementation without a native Lua DLL. For `gregCore`, this means:
 
-`gregCore` verwendet MoonSharp **2.0.0** als feste Framework-Dependency.
+- Full compatibility with IL2CPP and the MelonLoader setup.
+- Lightweight embedding directly within `gregCore.dll`.
+- Granular sandbox control.
+
+`gregCore` uses **MoonSharp 2.0.0** as a fixed framework dependency.
 
 ## Lua Lifecycle in gregCore
 
-1. **Scan**: Registry sucht `*.lua` in `Mods/Scripts`.
-2. **Activate**: `GregLuaHost` wird nur bei Treffer aktiviert.
-3. **Execute**: `LuaFFIBridge` lädt Lua-Entrypoints.
-4. **Unload**: `Shutdown()` leert Host-Zustand.
+1. **Scan**: The registry searches for `*.lua` files in `Mods/Scripts`.
+2. **Activate**: The `GregLuaHost` is activated only when scripts are found.
+3. **Execute**: The `LuaFFIBridge` loads the Lua entry points.
+4. **Unload**: `Shutdown()` clears the host state.
 
 ```csharp
-// Signatur
+// Signature
 public sealed class GregLuaHost : IGregLanguageHost
 ```
 
-## Minimalbeispiel (funktionsfähig)
+## Minimal Working Example
 
 ```lua
--- Datei: Mods/Scripts/demo.lua
+-- File: Mods/Scripts/demo.lua
 
 greg.log_info("[demo.lua] init")
 
@@ -39,46 +44,46 @@ greg.on("greg.lifecycle.GameLoaded", function(payload)
 end)
 ```
 
-## Exponierte Lua-API (aktuell)
+## Exposed Lua API (Current)
 
-> Quelle: `LuaFFIBridge.RegisterApi`.
+> Source: `LuaFFIBridge.RegisterApi`.
 
-- Logging: `log_info`, `log_warning`, `log_error`
-- Economy: `get_player_money`, `set_player_money`, `get_player_xp`, `set_player_xp`, `get_player_reputation`, `set_player_reputation`
-- World: `get_server_count`, `get_rack_count`, `get_switch_count`, `get_broken_server_count`, `get_broken_switch_count`
-- Technicians: `get_free_technician_count`, `get_total_technician_count`, `dispatch_repair_server`, `dispatch_repair_switch`
-- Time: `get_time_of_day`, `get_day`, `get_seconds_in_full_day`, `set_seconds_in_full_day`
-- Game: `get_current_scene`, `is_game_paused`, `set_game_paused`, `get_time_scale`, `set_time_scale`, `trigger_save`, `get_difficulty`
-- Player/UI: `get_player_position`, `show_notification`
-- Events/Hooks: `subscribe_event`, `fire_event`, `on`, `fire`
-- Config: `config_set_bool`, `config_get_bool`, `config_set_int`, `config_get_int`, `config_set_string`, `config_get_string`
+- **Logging**: `log_info`, `log_warning`, `log_error`
+- **Economy**: `get_player_money`, `set_player_money`, `get_player_xp`, `set_player_xp`, `get_player_reputation`, `set_player_reputation`
+- **World**: `get_server_count`, `get_rack_count`, `get_switch_count`, `get_broken_server_count`, `get_broken_switch_count`
+- **Technicians**: `get_free_technician_count`, `get_total_technician_count`, `dispatch_repair_server`, `dispatch_repair_switch`
+- **Time**: `get_time_of_day`, `get_day`, `get_seconds_in_full_day`, `set_seconds_in_full_day`
+- **Game**: `get_current_scene`, `is_game_paused`, `set_game_paused`, `get_time_scale`, `set_time_scale`, `trigger_save`, `get_difficulty`
+- **Player/UI**: `get_player_position`, `show_notification`
+- **Events/Hooks**: `subscribe_event`, `fire_event`, `on`, `fire`
+- **Config**: `config_set_bool`, `config_get_bool`, `config_set_int`, `config_get_int`, `config_set_string`, `config_get_string`
 
-## Fehlerbehandlung
+## Error Handling
 
-Lua-Syntax- oder Laufzeitfehler werden abgefangen und im MelonLoader-Log gemeldet.
+Lua syntax or runtime errors are caught and reported in the MelonLoader log.
 
 ```csharp
-// Signatur
+// Signature
 private static void SafeCall(LuaPlugin p, Closure? func, params object[] args)
 ```
 
 ## Debugging
 
-- Primärer Kanal: `MelonLoader/Latest.log`
-- Prefixe:
-  - `[gregCore] ...` (Framework-Level)
-  - `[LuaMod:<id>] ...` (Plugin-/Script-Layer)
+- **Primary Channel**: `MelonLoader/Latest.log`
+- **Prefixes**:
+  - `[gregCore] ...` (Framework-level)
+  - `[LuaMod:<id>] ...` (Plugin/Script-layer)
 
-## Manifest- und Config-Anforderungen
+## Manifest and Configuration Requirements
 
-- Manifest: [UNVERIFIED] aktuelles Lua-Manifest-Schema im Repo nicht eindeutig versioniert.
-- `config.json`: [UNVERIFIED] modulabhängig; empfohlen sind einfache Key/Value-Paare.
+- **Manifest**: [UNVERIFIED] Current Lua manifest schema in the repository is not clearly versioned.
+- **`config.json`**: [UNVERIFIED] Module-dependent; simple Key/Value pairs are recommended.
 
 ## Deployment
 
-- Lege Lua-Dateien unter `Mods/Scripts` ab.
-- Stelle sicher, dass mindestens eine `*.lua` vorhanden ist, damit `GregLuaHost` startet.
+- Place Lua files under `Mods/Scripts`.
+- Ensure at least one `*.lua` file is present for `GregLuaHost` to start.
 
-## Fehlende Bausteine
+## Known Gaps
 
-Siehe `MISSING.md` für offene Integrationspunkte (z. B. standardisiertes Lua-Manifest-Schema).
+See `MISSING.md` for open integration points (e.g., standardized Lua manifest schema).

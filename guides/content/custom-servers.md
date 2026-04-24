@@ -1,12 +1,21 @@
----
-title: Custom Servers & Hardware
-description: Deep dive into defining and registering your own hardware
-path: /guides/content/custom-servers
----
+Title: Custom Servers & Hardware
+Path: /guides/content/custom-servers
+Type: How-to
+Audience: mod developer, framework developer
+Summary: Deep dive into defining and registering your own server hardware in gregCore, including JSON schema and C# registration.
+Suggested Tags: hardware, servers, registry, content-creation, json
+Related Pages: /guides/content/custom-switches, /api/index
+Split Recommendation: Keep as one page
 
 # 🖥️ Custom Servers & Hardware
 
-The gregCore Hardware Registry allows you to add entirely new server types to *Data Center*. Your custom servers will support the full simulation lifecycle: they can be bought in the shop, mounted in racks, connected via cables, and will consume power.
+The **gregCore Hardware Registry** allows you to add entirely new server types to *Data Center*. Your custom servers will support the full simulation lifecycle: they can be bought in the shop, mounted in racks, connected via cables, and will consume power.
+
+## Capability Status (v1.0.0-pre.4)
+
+- **Ready**: Official `GregServerRegistry` and `ServerDefinition` types are available in `gregSdk`.
+- **Validation**: Use `ServerValidator` for automatic schema enforcement.
+- **Injection**: Content is automatically registered into the framework's internal catalogs.
 
 ## 🧱 The Server Model
 
@@ -23,8 +32,26 @@ A custom server is defined by a `ServerDefinition` object. This metadata tells g
 
 ## 🚀 Implementation Workflow
 
-### 1. Define the Metadata (C#)
+### 1. Define the Metadata (JSON or C#)
 
+You can define your server via a JSON file for data-driven modding or directly in C#.
+
+#### JSON Definition (`Content/Servers/EnterpriseRackServer.json`):
+```json
+{
+  "id": "ccp.server.enterprise_rack_v1",
+  "name": "Enterprise Rack Server",
+  "serverTypeId": "ccp.servertype.enterprise",
+  "rackUnits": 4,
+  "powerUsageWatts": 540,
+  "maxIOPS": 12000,
+  "price": 42000,
+  "tags": ["EnterpriseGrade", "RackMount"],
+  "modelOverridePath": "Models/Servers/EnterpriseRackServer.prefab"
+}
+```
+
+#### C# Definition:
 ```csharp
 var myServer = new ServerDefinition {
     Id = "greg.server.titan_v1",
@@ -41,14 +68,22 @@ var myServer = new ServerDefinition {
 Registration should happen during `OnInitializeMelon`. Once registered, gregCore automatically adds the item to the Shop and prepares the Save System.
 
 ```csharp
+using gregSdk.Definitions;
+using gregSdk.Registries;
+
+// Register via the API
 GregAPI.Hardware.RegisterServer(myServer);
+
+// Or using the Registry directly
+var registry = new GregServerRegistry();
+registry.Register(myServer);
 ```
 
 ### 3. Visuals & Prefabs
 
 gregCore supports **Chassis Mapping**. You can either:
 - **Reuse Vanilla Models**: Use an existing Chassis ID to give your server a vanilla look.
-- **Custom Assets**: Provide a path to an AssetBundle containing your `.prefab`.
+- **Custom Assets**: Provide a path to an AssetBundle containing your `.prefab` via `modelOverridePath`.
 
 ```csharp
 myServer.ChassisId = "server_case_3_blue"; // Uses the vanilla blue 2U case

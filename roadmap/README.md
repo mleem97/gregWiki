@@ -1,35 +1,41 @@
-# gregCore Roadmap
+Title: Framework Roadmap
+Path: /roadmap/index
+Type: Overview
+Audience: mod developer, framework developer, maintainer
+Summary: Strategic roadmap towards 100% coverage of game systems in the gregCore SDK.
+Suggested Tags: roadmap, planning, coverage, phases, milestones
+Related Pages: /maintainer/project-context, /maintainer/migration-status
+Split Recommendation: Keep as one page
 
-The development of gregCore is divided into several phases to ensure stability and feature-completeness.
+# Roadmap to 100% Coverage
 
-## Phase 1: Foundation (Completed)
-- Centralized Mod-Hub (Settings, Keybinds, Registry).
-- Core Services (Economy, World, UI).
-- Basic Hook Bus (Synchronous).
-- Persistence and Save-Stable Data.
+This roadmap outlines the strategic plan for the **gregCore** SDK to achieve full coverage and abstraction of the *Data Center* game systems.
 
-## Phase 2: Production Readiness (Completed)
-- Refactoring into Layered Architecture (Core, SDK, Harmony, Plugin).
-- Full 1771 Hook Catalog Integration.
-- Safe Patching Pattern.
-- Compatibility Bridge for IL2CPP.
+## Development Phases
 
-## Phase 3: Multi-Language FFI (Completed)
-- High-performance Bridges for Lua, Python, Rust, Go, and JS.
-- Standardized Hook API across all languages.
-- JSON-based Data Passing for Compiled Languages.
+| Phase | Area | Status | Goal |
+| :--- | :--- | :--- | :--- |
+| **Phase 0** | Baseline | ✅ READY | Standalone Setup, Namespace Migration. |
+| **Phase 1** | Foundation | ✅ READY | Registration System, EventBus, Basic Hardware. |
+| **Phase 2** | Runtime | ✅ READY | SDK Services, Customer/Employee Registries. |
+| **Phase 3** | Visual Layer | ✅ READY | Model Overrides, JADE Style HUD. |
+| **Phase 4** | Quality | ✅ READY | Unit Tests, 30+ Unity Signals, Game Bridges. |
+| **Phase 5** | Economy & Data | 🚧 WIP | SaveSystem, Finance, Localisation. |
+| **Phase 6** | Deep Hardware | 📅 PLANNED | Port Details, Patch Panels, Audio, Tooltips. |
+| **Phase 7** | Simulation | 📅 PLANNED | HR System, Steam Integration, Objectives. |
+| **Phase 8** | Unity API | 🔄 ONGOING | Unity Scripting API Alignment, Standard Modules. |
+| **Phase 9** | Community Platform | 🚧 WIP | Compatibility, persistence, conflict-safe APIs. |
+| **Phase 10** | Infra & Perf | 🚧 WIP | Network scaling, route performance, accessibility. |
+| **Phase 11** | Audio & Immersion | 🚧 WIP | Sound environment services, spatial audio. |
+| **Phase 12** | LiveOps | 🚧 WIP | Staff systems, environment control, tracking. |
 
-## Phase 4: Developer Tooling (In Progress)
-- [ ] Source Generator for automatic Harmony patch creation.
-- [ ] VS Code Extension for gregCore development.
-- [ ] In-game Hook Tracing and Performance Profiling.
-- [ ] Automated Compatibility Testing Suite.
+## Current Coverage Level
 
-## Phase 5: Advanced Simulation (Planned)
-- Custom Network Protocol Layer (for custom servers).
-- Deep Behavior Tree API for NPCs.
-- Multiplayer Readiness and Synchronization Layer.
-- Dynamic Environment Control System.
+We have successfully abstracted approximately **65%** of the IL2CPP classes relevant to modding.
 
----
-[Back to Index](../README.md)
+> ### 🔄 Ongoing Updates
+> This roadmap is a **living document**. As *Data Center* expands, we continuously adjust our priorities to ensure the SDK remains up-to-date with new game features.
+
+## Community & Feedback
+
+If a specific system or feature you need is not yet covered, please reach out to the team via the [GitHub Repository](https://github.com/mleem97/gregCore) or our **Discord** server.

@@ -1,0 +1,148 @@
+<!-- Luminescent Architect | Wiki Home Layout -->
+<style>
+    :root {
+        --color-primary: #61f4d8;
+        --color-secondary: #1cede1;
+        --color-tertiary: #64d0ff;
+        --color-surface: #001110;
+        --color-surface-container: #001e1c;
+        --color-on-surface: #c0fcf6;
+        --color-on-surface-variant: #7cb6b0;
+    }
+
+    .wiki-home-body {
+        background-color: #001110;
+        color: #c0fcf6;
+        font-family: 'Inter', sans-serif;
+        line-height: 1.6;
+    }
+
+    .hero-section {
+        padding: 80px 0;
+        background: linear-gradient(180deg, #001715 0%, #001110 100%);
+        border-bottom: 1px solid rgba(97, 244, 216, 0.1);
+    }
+
+    .hero-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 3.5rem;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        margin-bottom: 1rem;
+    }
+
+    .text-primary { color: var(--color-primary); }
+
+    .nav-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        margin-top: 60px;
+    }
+
+    .nav-card {
+        background-color: var(--color-surface-container);
+        padding: 32px;
+        border-radius: 16px;
+        border: 1px solid rgba(97, 244, 216, 0.05);
+        transition: all 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--color-primary);
+        box-shadow: 0 8px 32px -8px rgba(0, 191, 165, 0.2);
+    }
+
+    .card-icon {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .card-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--color-primary);
+    }
+
+    .card-desc {
+        font-size: 0.875rem;
+        color: var(--color-on-surface-variant);
+    }
+
+    .mission-statement {
+        margin-top: 100px;
+        padding: 48px;
+        border-radius: 24px;
+        background-color: rgba(0, 30, 28, 0.5);
+        border: 1px solid rgba(97, 244, 216, 0.1);
+        text-align: center;
+    }
+</style>
+
+<div class="wiki-home-body">
+    <!-- Hero -->
+    <header class="hero-section">
+        <div style="max-w: 1200px; margin: 0 auto; padding: 0 40px;">
+            <h1 class="hero-title">Welcome to the <span class="text-primary">gregFramework</span> Wiki</h1>
+            <p style="font-size: 1.25rem; color: var(--color-on-surface-variant); max-w: 800px;">
+                The central knowledge base for modding <b>Data Center</b>. From low-level IL2CPP references to high-level C#, Rust, and Lua SDKs.
+            </p>
+
+            <div class="nav-grid">
+                <a href="/getting-started/index" class="nav-card">
+                    <div class="card-icon">🚀</div>
+                    <div class="card-title">Getting Started</div>
+                    <div class="card-desc">Set up your environment and build your first mod in minutes.</div>
+                </a>
+
+                <a href="/api/index" class="nav-card">
+                    <div class="card-icon">🧩</div>
+                    <div class="card-title">API Reference</div>
+                    <div class="card-desc">Hooks, services, and internal game class documentation.</div>
+                </a>
+
+                <a href="/guides/index" class="nav-card">
+                    <div class="card-icon">📖</div>
+                    <div class="card-title">Guides & Tutorials</div>
+                    <div class="card-desc">In-depth deep dives into hardware, economy, and networking.</div>
+                </a>
+
+                <a href="/tools/index" class="nav-card">
+                    <div class="card-icon">🛠️</div>
+                    <div class="card-title">Development Tools</div>
+                    <div class="card-desc">Master gregExtractor, Modmanager, and the Dev Console.</div>
+                </a>
+
+                <a href="/maintainer/index" class="nav-card">
+                    <div class="card-icon">🛡️</div>
+                    <div class="card-title">Maintainer Portal</div>
+                    <div class="card-desc">Architecture plans, security audits, and code standards.</div>
+                </a>
+
+                <a href="/community/index" class="nav-card">
+                    <div class="card-icon">🤝</div>
+                    <div class="card-title">Community</div>
+                    <div class="card-desc">Connect with other modders on Discord and GitHub.</div>
+                </a>
+            </div>
+
+            <div class="mission-statement">
+                <h2 style="font-family: 'Space Grotesk'; margin-bottom: 16px;">Our Mission</h2>
+                <p style="color: var(--color-on-surface-variant); max-w: 600px; margin: 0 auto;">
+                    We provide a stable, performant middleware for Data Center, empowering the community to create rich content through safe, versioned abstractions.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <footer style="padding: 60px 40px; text-align: center; color: var(--color-on-surface-variant); font-size: 0.75rem;">
+        &copy; 2026 teamGreg | <a href="https://gregframework.eu" style="color: var(--color-primary); text-decoration: none;">gregframework.eu</a>
+    </footer>
+</div>

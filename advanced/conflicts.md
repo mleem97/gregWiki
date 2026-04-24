@@ -62,6 +62,20 @@ gregCore includes a hidden diagnostic mode to help maintainers track down desync
 
 ---
 
+## ⚔️ Known Conflict Matrix
+
+The following table tracks known historical and structural conflicts identified during the transition to Unity 6 and gregCore v2.0.
+
+| Conflict | Root Cause | Framework Resolution | Status |
+| :--- | :--- | :--- | :--- |
+| **Rust Bridge vs Color Mods** | Multiple independent shop patches | Official `GregRustPluginBridge` + unified shop composition | ❌ MISSING |
+| **Shop Patch Collisions** | Direct patching of same UI methods | `GregShopExtensionService` (Work in Progress) | ❌ MISSING |
+| **Trolley Transform Loop** | High-frequency object checks in hot path | `GregTrolleyConfigService` + batch updates | ❌ MISSING |
+| **IL2CPP Postfix Instability** | Fragile postfix patterns in IL2CPP | Safe prefix-safe interception + documented templates | ⚠️ PARTIAL |
+| **Save/Reload Data Loss** | No shared persistence contract | `GregModPersistenceService` lifecycle contract | ❌ MISSING |
+
+---
+
 ## 🛡️ Best Practices
 
 1.  **Unique Namespacing**: Use unique IDs for everything (Configs, Settings, Keybinds).

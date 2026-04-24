@@ -1,55 +1,87 @@
----
-title: Quickstart - Build Your First Mod
-description: Set up your environment and build a simple mod in less than 5 minutes.
----
+Title: Quickstart - Build Your First Mod
+Path: /getting-started/quickstart
+Type: Tutorial
+Audience: new user, mod developer
+Summary: Set up your environment and build a simple mod in less than 5 minutes using C# or Lua.
+Suggested Tags: quickstart, tutorial, hello-world, lua, csharp
+Related Pages: /getting-started/index, /getting-started/architecture
+Split Recommendation: Keep as one page
 
-# ⚡ Quickstart
+# Quickstart - Build Your First Mod
 
-Welcome to the **gregFramework** ecosystem! This guide will help you set up your environment and build a simple "Hello World" mod in less than 5 minutes.
+Welcome to the **gregFramework** ecosystem! This guide will help you build your first mod for Data Center using the modernized **gregCore v2.0** API.
 
 ## 1. Prerequisites
 - **Visual Studio 2022** or **VS Code** with .NET 6 SDK.
-- **MelonLoader v0.6.0+** installed in your Data Center game folder.
-- **gregCore.dll** placed in the `Mods/` folder of your game.
+- **MelonLoader v0.7.2+** installed.
+- **gregCore.dll** and **MoonSharp.Interpreter.dll** in the `Mods/` folder.
 
-## 2. Basic Code Structure
-Open your new project. Your main class should look like this:
+## 2. Choose Your Path
+
+gregCore is now language-agnostic. Pick the workflow that fits your project:
+
+| Workflow | Folder | Build Required? | Best for... |
+| --- | --- | --- | --- |
+| **C# (Managed)** | `Mods/` | Yes (`.dll`) | Deep system changes |
+| **Rust (Native)** | `Plugins/Rust/` | Yes (`.dll`) | High performance |
+| **Lua (Scripting)** | `Plugins/Lua/` | No (`.lua`) | Prototyping & UI |
+
+---
+
+## 3. C# "Hello World" (v2.0)
+
+1. Create a **.NET 6 Class Library**.
+2. Reference `MelonLoader.dll` and `gregCore.dll`.
+3. Use the unified **`GregAPI`**:
 
 ```csharp
 using MelonLoader;
-using UnityEngine;
-using greg.Sdk;
+using gregCore.API;
 
-[assembly: MelonInfo(typeof(MyMod.Main), "MyMod", "1.0.0", "YourName")]
+[assembly: MelonInfo(typeof(MyMod.Main), "MyMod", "1.0.0", "teamGreg")]
 [assembly: MelonGame("Waseku", "Data Center")]
 
 namespace MyMod;
 
 public class Main : MelonMod
 {
-    public override void OnInitializeMelon()
-    {
-        MelonLogger.Msg("Hello gregFramework!");
-    }
+    private bool _initialized = false;
 
     public override void OnUpdate()
     {
-        // Simple Input check
-        if (UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.F5))
+        if (!_initialized && gregCore.PublicApi.greg.IsInitialized)
         {
-            MelonLogger.Msg("F5 pressed - Mod is working!");
+            GregAPI.LogInfo("Hello from C#!");
+            GregAPI.ShowNotification("C# Mod Connected");
+            _initialized = true;
         }
     }
 }
 ```
 
-## 3. Build & Run
-1. Press `F6` or run `dotnet build`.
-2. Copy the resulting `.dll` from `bin/Release/net6.0/` to your game's `Mods/` folder.
-3. Start the game!
+---
 
-## 4. Next Steps
-- Explore the [Hooks Catalog](/api/hooks) to interact with game logic.
-- Learn about [Visual Philosophy](/ui/visual-philosophy) to style your mod.
+## 4. Lua "Hello World" (v2.0)
 
-*Tip: Always use the Framework Guard Pattern for complex mods!*
+1. Create folder `Data Center/Plugins/Lua/MyFirstLuaMod/`.
+2. Create `main.lua`:
+
+```lua
+function on_init()
+    greg.log_info("Hello from Lua!")
+    greg.show_notification("Lua Mod Connected")
+end
+```
+
+3. (Optional) Create `mod.json` for metadata.
+
+---
+
+## 5. Deployment
+- **C#**: Copy your DLL to `Mods/`.
+- **Lua**: Save your file and start the game.
+
+## 6. Next Steps
+- **[API Reference](/api/index)** - Full method list.
+- **[Hooks Catalog](/api/hooks/index)** - Available events.
+- **[Discord](https://discord.gg/greg)** - Get help from the community.
