@@ -10,9 +10,12 @@ WIKI_HOOKS_DIR = os.path.join(ROOT_DIR, "gregWiki", "api", "hooks")
 # Ensure directory exists
 os.makedirs(WIKI_HOOKS_DIR, exist_ok=True)
 
+_RE_CAMEL_TO_KEBAB_1 = re.compile('(.)([A-Z][a-z]+)')
+_RE_CAMEL_TO_KEBAB_2 = re.compile('([a-z0-9])([A-Z])')
+
 def camel_to_kebab(name):
-    s1 = re.sub('(.)([A-Z][a-z]+)', r'\1-\2', name)
-    return re.sub('([a-z0-9])([A-Z])', r'\1-\2', s1).lower()
+    s1 = _RE_CAMEL_TO_KEBAB_1.sub(r'\1-\2', name)
+    return _RE_CAMEL_TO_KEBAB_2.sub(r'\1-\2', s1).lower()
 
 def safe_type(t):
     return t if t else "Unknown"
