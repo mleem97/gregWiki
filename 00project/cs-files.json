@@ -1,0 +1,3758 @@
+[
+  {
+    "FullName": "gregCore/gregMain.cs",
+    "Length": 41174
+  },
+  {
+    "FullName": "gregCore/gregMainCi.cs",
+    "Length": 98
+  },
+  {
+    "FullName": "gregCore/framework/harmony/GregCustomerHooks.cs",
+    "Length": 12568
+  },
+  {
+    "FullName": "gregCore/framework/harmony/GregEmployeeHooks.cs",
+    "Length": 15828
+  },
+  {
+    "FullName": "gregCore/framework/harmony/GregGameplayHooks.cs",
+    "Length": 9042
+  },
+  {
+    "FullName": "gregCore/framework/harmony/GregNetworkHooks.cs",
+    "Length": 66128
+  },
+  {
+    "FullName": "gregCore/framework/harmony/GregPlayerHooks.cs",
+    "Length": 11479
+  },
+  {
+    "FullName": "gregCore/framework/harmony/GregPowerHooks.cs",
+    "Length": 230
+  },
+  {
+    "FullName": "gregCore/framework/harmony/GregRackHooks.cs",
+    "Length": 7234
+  },
+  {
+    "FullName": "gregCore/framework/harmony/GregServerHooks.cs",
+    "Length": 15540
+  },
+  {
+    "FullName": "gregCore/framework/harmony/GregSystemHooks.cs",
+    "Length": 55781
+  },
+  {
+    "FullName": "gregCore/framework/harmony/GregUiHooks.cs",
+    "Length": 16283
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/AsyncExtensions.cs",
+    "Length": 16790
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/LinqHelpers.cs",
+    "Length": 1693
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/NameSpace_XmlHelp.cs",
+    "Length": 2698
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Script.cs",
+    "Length": 26985
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/ScriptGlobalOptions.cs",
+    "Length": 1728
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/ScriptOptions.cs",
+    "Length": 3780
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CodeAnalysis/AstNode.cs",
+    "Length": 80
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Compatibility/Attributes.cs",
+    "Length": 381
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Compatibility/Framework.cs",
+    "Length": 415
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Compatibility/Stopwatch.cs",
+    "Length": 630
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Compatibility/Frameworks/FrameworkCLR.cs",
+    "Length": 630
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Compatibility/Frameworks/Base/FrameworkBase.cs",
+    "Length": 2130
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Compatibility/Frameworks/Base/FrameworkClrBase.cs",
+    "Length": 2788
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Compatibility/Frameworks/Base/FrameworkReflectionBase.cs",
+    "Length": 1624
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/BasicModule.cs",
+    "Length": 10482
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/Bit32Module.cs",
+    "Length": 6655
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/CoroutineModule.cs",
+    "Length": 3645
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/DebugModule.cs",
+    "Length": 9358
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/DynamicModule.cs",
+    "Length": 1965
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/ErrorHandlingModule.cs",
+    "Length": 4010
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/IoModule.cs",
+    "Length": 10218
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/JsonModule.cs",
+    "Length": 1936
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/LoadModule.cs",
+    "Length": 8625
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/MathModule.cs",
+    "Length": 9869
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/MetaTableModule.cs",
+    "Length": 4667
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/OsSystemModule.cs",
+    "Length": 3758
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/OsTimeModule.cs",
+    "Length": 7158
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/StringModule.cs",
+    "Length": 9121
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/TableIteratorsModule.cs",
+    "Length": 4314
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/TableModule.cs",
+    "Length": 8149
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/IO/BinaryEncoding.cs",
+    "Length": 1060
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/IO/FileUserData.cs",
+    "Length": 707
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/IO/FileUserDataBase.cs",
+    "Length": 5004
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/IO/StandardIOFileUserDataBase.cs",
+    "Length": 802
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/IO/StreamFileUserDataBase.cs",
+    "Length": 2775
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/StringLib/KopiLua_StrLib.cs",
+    "Length": 27940
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/CoreLib/StringLib/StringRange.cs",
+    "Length": 1414
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataStructs/Extension_Methods.cs",
+    "Length": 1525
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataStructs/FastStack.cs",
+    "Length": 3057
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataStructs/FastStackDynamic.cs",
+    "Length": 1379
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataStructs/LinkedListIndex.cs",
+    "Length": 3242
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataStructs/MultiDictionary.cs",
+    "Length": 3014
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataStructs/ReferenceEqualityComparer.cs",
+    "Length": 484
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataStructs/Slice.cs",
+    "Length": 8135
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/CallbackArguments.cs",
+    "Length": 6681
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/CallbackFunction.cs",
+    "Length": 5033
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/Closure.cs",
+    "Length": 4825
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/Coroutine.cs",
+    "Length": 10470
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/CoroutineState.cs",
+    "Length": 654
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/DataType.cs",
+    "Length": 4343
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/DynValue.cs",
+    "Length": 28264
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/IScriptPrivateResource.cs",
+    "Length": 1992
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/RefIdObject.cs",
+    "Length": 1035
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/ScriptFunctionDelegate.cs",
+    "Length": 658
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/SymbolRef.cs",
+    "Length": 4040
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/SymbolRefType.cs",
+    "Length": 522
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/Table.cs",
+    "Length": 17828
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/TablePair.cs",
+    "Length": 1028
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/TailCallData.cs",
+    "Length": 1012
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/TypeValidationFlags.cs",
+    "Length": 1048
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/UserData.cs",
+    "Length": 14911
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/WellKnownSymbols.cs",
+    "Length": 420
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/DataTypes/YieldRequest.cs",
+    "Length": 456
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Debugging/DebuggerAction.cs",
+    "Length": 3471
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Debugging/DebuggerCaps.cs",
+    "Length": 645
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Debugging/DebugService.cs",
+    "Length": 1352
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Debugging/IDebugger.cs",
+    "Length": 3050
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Debugging/SourceCode.cs",
+    "Length": 2574
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Debugging/SourceRef.cs",
+    "Length": 5738
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Debugging/WatchItem.cs",
+    "Length": 1829
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Debugging/WatchType.cs",
+    "Length": 836
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Diagnostics/PerformanceCounter.cs",
+    "Length": 754
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Diagnostics/PerformanceCounterType.cs",
+    "Length": 431
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Diagnostics/PerformanceResult.cs",
+    "Length": 1973
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Diagnostics/PerformanceStatistics.cs",
+    "Length": 2905
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Diagnostics/PerformanceCounters/DummyPerformanceStopwatch.cs",
+    "Length": 696
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Diagnostics/PerformanceCounters/GlobalPerformanceStopwatch.cs",
+    "Length": 1501
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Diagnostics/PerformanceCounters/IPerformanceStopwatch.cs",
+    "Length": 199
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Diagnostics/PerformanceCounters/PerformanceStopwatch.cs",
+    "Length": 1188
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Errors/DynamicExpressionException.cs",
+    "Length": 868
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Errors/InternalErrorException.cs",
+    "Length": 453
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Errors/InterpreterException.cs",
+    "Length": 2762
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Errors/ScriptRuntimeException.cs",
+    "Length": 21150
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Errors/SyntaxErrorException.cs",
+    "Length": 1887
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/DynamicExpression.cs",
+    "Length": 2888
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/InstructionFieldUsage.cs",
+    "Length": 3049
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/ScriptExecutionContext.cs",
+    "Length": 8032
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/ScriptLoadingContext.cs",
+    "Length": 493
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/Scopes/BuildTimeScope.cs",
+    "Length": 2805
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/Scopes/BuildTimeScopeBlock.cs",
+    "Length": 3946
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/Scopes/BuildTimeScopeFrame.cs",
+    "Length": 2296
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/Scopes/ClosureContext.cs",
+    "Length": 604
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/Scopes/IClosureBuilder.cs",
+    "Length": 168
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/Scopes/LoopTracker.cs",
+    "Length": 326
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/Scopes/RuntimeScopeBlock.cs",
+    "Length": 375
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/Scopes/RuntimeScopeFrame.cs",
+    "Length": 489
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/VM/ByteCode.cs",
+    "Length": 10422
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/VM/CallStackItem.cs",
+    "Length": 583
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/VM/CallStackItemFlags.cs",
+    "Length": 250
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/VM/ExecutionState.cs",
+    "Length": 405
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/VM/Instruction.cs",
+    "Length": 6424
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/VM/OpCode.cs",
+    "Length": 4532
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/VM/OpCodeMetadataType.cs",
+    "Length": 230
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/VM/Processor/DebugContext.cs",
+    "Length": 629
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/VM/Processor/Processor_BinaryDump.cs",
+    "Length": 3576
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/VM/Processor/Processor_Coroutines.cs",
+    "Length": 2952
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/VM/Processor/Processor_Debugger.cs",
+    "Length": 13563
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/VM/Processor/Processor_Errors.cs",
+    "Length": 731
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/VM/Processor/Processor_IExecutionContext.cs",
+    "Length": 2035
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/VM/Processor/Processor_InstructionLoop.cs",
+    "Length": 38797
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/VM/Processor/Processor_Scope.cs",
+    "Length": 4622
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/VM/Processor/Processor_UtilityFunctions.cs",
+    "Length": 3043
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Execution/VM/Processor/Processor.cs",
+    "Length": 5109
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/CustomConvertersCollection.cs",
+    "Length": 6742
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/DescriptorHelpers.cs",
+    "Length": 8470
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/IGeneratorUserDataDescriptor.cs",
+    "Length": 2013
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/InteropAccessMode.cs",
+    "Length": 2016
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/InteropRegistrationPolicy.cs",
+    "Length": 1594
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/IUserDataDescriptor.cs",
+    "Length": 3129
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/IUserDataMemberDescriptor.cs",
+    "Length": 1334
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/IUserDataType.cs",
+    "Length": 2224
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/IWireableDescriptor.cs",
+    "Length": 549
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/PropertyTableAssigner.cs",
+    "Length": 10002
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/ReflectionSpecialNames.cs",
+    "Length": 4738
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/UserDataMemberType.cs",
+    "Length": 241
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/Attributes/MoonSharpHiddenAttribute.cs",
+    "Length": 481
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/Attributes/MoonSharpHideMemberAttribute.cs",
+    "Length": 781
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/Attributes/MoonSharpPropertyAttribute.cs",
+    "Length": 883
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/Attributes/MoonSharpUserDataAttribute.cs",
+    "Length": 727
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/Attributes/MoonSharpUserDataMetamethodAttribute.cs",
+    "Length": 775
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/Attributes/MoonSharpVisibleAttribute.cs",
+    "Length": 1000
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/BasicDescriptors/DispatchingUserDataDescriptor.cs",
+    "Length": 23100
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/BasicDescriptors/IMemberDescriptor.cs",
+    "Length": 5579
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/BasicDescriptors/IOptimizableDescriptor.cs",
+    "Length": 515
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/BasicDescriptors/IOverloadableMemberDescriptor.cs",
+    "Length": 1814
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/BasicDescriptors/MemberDescriptorAccess.cs",
+    "Length": 475
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/BasicDescriptors/ParameterDescriptor.cs",
+    "Length": 6778
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/Converters/ClrToScriptConversions.cs",
+    "Length": 4657
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/Converters/NumericConversions.cs",
+    "Length": 2362
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/Converters/ScriptToClrConversions.cs",
+    "Length": 10526
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/Converters/StringConversions.cs",
+    "Length": 1131
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/Converters/TableConversions.cs",
+    "Length": 7273
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/LuaStateInterop/CharPtr.cs",
+    "Length": 7982
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/LuaStateInterop/LuaBase_CLib.cs",
+    "Length": 4017
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/LuaStateInterop/LuaBase.cs",
+    "Length": 9187
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/LuaStateInterop/LuaLBuffer.cs",
+    "Length": 417
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/LuaStateInterop/LuaState.cs",
+    "Length": 1808
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/LuaStateInterop/Tools.cs",
+    "Length": 23625
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/PredefinedUserData/AnonWrapper.cs",
+    "Length": 1025
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/PredefinedUserData/EnumerableWrapper.cs",
+    "Length": 2446
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/ProxyObjects/DelegateProxyFactory.cs",
+    "Length": 1661
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/ProxyObjects/IProxyFactory.cs",
+    "Length": 1045
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/RegistrationPolicies/AutomaticRegistrationPolicy.cs",
+    "Length": 701
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/RegistrationPolicies/DefaultRegistrationPolicy.cs",
+    "Length": 1641
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/RegistrationPolicies/IRegistrationPolicy.cs",
+    "Length": 1122
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/RegistrationPolicies/PermanentRegistrationPolicy.cs",
+    "Length": 1515
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/AutoDescribingUserDataDescriptor.cs",
+    "Length": 4372
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/CompositeUserDataDescriptor.cs",
+    "Length": 4866
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/EventFacade.cs",
+    "Length": 1613
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/ProxyUserDataDescriptor.cs",
+    "Length": 4476
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/StandardEnumUserDataDescriptor.cs",
+    "Length": 11432
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/StandardGenericsUserDataDescriptor.cs",
+    "Length": 2230
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/StandardUserDataDescriptor.cs",
+    "Length": 7005
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/HardwiredDescriptors/DefaultValue.cs",
+    "Length": 205
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/HardwiredDescriptors/HardwiredMemberDescriptor.cs",
+    "Length": 1601
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/HardwiredDescriptors/HardwiredMethodMemberDescriptor.cs",
+    "Length": 1048
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/HardwiredDescriptors/HardwiredUserDataDescriptor.cs",
+    "Length": 357
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/MemberDescriptors/ArrayMemberDescriptor.cs",
+    "Length": 3349
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/MemberDescriptors/DynValueMemberDescriptor.cs",
+    "Length": 4983
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/MemberDescriptors/FunctionMemberDescriptorBase.cs",
+    "Length": 10715
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/MemberDescriptors/ObjectCallbackMemberDescriptor.cs",
+    "Length": 2962
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/ReflectionMemberDescriptors/EventMemberDescriptor.cs",
+    "Length": 13767
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/ReflectionMemberDescriptors/FieldMemberDescriptor.cs",
+    "Length": 7553
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/ReflectionMemberDescriptors/MethodMemberDescriptor.cs",
+    "Length": 10747
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/ReflectionMemberDescriptors/OverloadedMethodMemberDescriptor.cs",
+    "Length": 16029
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/ReflectionMemberDescriptors/PropertyMemberDescriptor.cs",
+    "Length": 11449
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/ReflectionMemberDescriptors/ValueTypeDefaultCtorMemberDescriptor.cs",
+    "Length": 5526
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/UserDataRegistries/ExtensionMethodsRegistry.cs",
+    "Length": 5454
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Interop/UserDataRegistries/TypeDescriptorRegistry.cs",
+    "Length": 12679
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/IO/BinDumpBinaryReader.cs",
+    "Length": 1276
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/IO/BinDumpBinaryWriter.cs",
+    "Length": 1638
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/IO/UndisposableStream.cs",
+    "Length": 3074
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Loaders/EmbeddedResourcesScriptLoader.cs",
+    "Length": 2272
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Loaders/FileSystemScriptLoader.cs",
+    "Length": 1245
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Loaders/InvalidScriptLoader.cs",
+    "Length": 1037
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Loaders/IScriptLoader.cs",
+    "Length": 1669
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Loaders/ScriptLoaderBase.cs",
+    "Length": 4470
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Loaders/UnityAssetsScriptLoader.cs",
+    "Length": 5766
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Modules/CoreModules.cs",
+    "Length": 3510
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Modules/ModuleRegister.cs",
+    "Length": 8550
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Modules/MoonSharpModuleAttribute.cs",
+    "Length": 1225
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Modules/MoonSharpModuleConstantAttribute.cs",
+    "Length": 607
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Modules/MoonSharpModuleMethodAttribute.cs",
+    "Length": 826
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Options/ColonOperatorBehaviour.cs",
+    "Length": 839
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Options/FuzzySymbolMatchingBehavior.cs",
+    "Length": 873
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Platforms/DotNetCorePlatformAccessor.cs",
+    "Length": 6673
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Platforms/IPlatformAccessor.cs",
+    "Length": 4750
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Platforms/LimitedPlatformAccessor.cs",
+    "Length": 8666
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Platforms/PlatformAccessorBase.cs",
+    "Length": 7667
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Platforms/PlatformAutoDetector.cs",
+    "Length": 3430
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Platforms/StandardFileType.cs",
+    "Length": 378
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Platforms/StandardPlatformAccessor.cs",
+    "Length": 8275
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/REPL/ReplHistoryNavigator.cs",
+    "Length": 1927
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/REPL/ReplInterpreter.cs",
+    "Length": 3385
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/REPL/ReplInterpreterScriptLoader.cs",
+    "Length": 2566
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Serialization/ObjectValueConverter.cs",
+    "Length": 1667
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Serialization/SerializationExtensions.cs",
+    "Length": 3139
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Serialization/Json/JsonEmptyArray.cs",
+    "Length": 701
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Serialization/Json/JsonNull.cs",
+    "Length": 669
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Serialization/Json/JsonTableConverter.cs",
+    "Length": 7350
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Expression_.cs",
+    "Length": 6310
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/IVariable.cs",
+    "Length": 159
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Loop.cs",
+    "Length": 727
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/NodeBase.cs",
+    "Length": 2341
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Statement.cs",
+    "Length": 2596
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Expressions/AdjustmentExpression.cs",
+    "Length": 564
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Expressions/BinaryOperatorExpression.cs",
+    "Length": 11444
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Expressions/DynamicExprExpression.cs",
+    "Length": 695
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Expressions/ExprListExpression.cs",
+    "Length": 826
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Expressions/FunctionCallExpression.cs",
+    "Length": 2879
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Expressions/FunctionDefinitionExpression.cs",
+    "Length": 6827
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Expressions/IndexExpression.cs",
+    "Length": 2107
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Expressions/LiteralExpression.cs",
+    "Length": 1428
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Expressions/SymbolRefExpression.cs",
+    "Length": 1628
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Expressions/TableConstructor.cs",
+    "Length": 3281
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Expressions/UnaryOperatorExpression.cs",
+    "Length": 1469
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Fast_Interface/Loader_Fast.cs",
+    "Length": 3261
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Lexer/Lexer.cs",
+    "Length": 15022
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Lexer/LexerUtils.cs",
+    "Length": 7614
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Lexer/Token.cs",
+    "Length": 4269
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Lexer/TokenType.cs",
+    "Length": 877
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Statements/AssignmentStatement.cs",
+    "Length": 2762
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Statements/BreakStatement.cs",
+    "Length": 931
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Statements/ChunkStatement.cs",
+    "Length": 1457
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Statements/CompositeStatement.cs",
+    "Length": 914
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Statements/EmptyStatement.cs",
+    "Length": 301
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Statements/ForEachLoopStatement.cs",
+    "Length": 3583
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Statements/ForLoopStatement.cs",
+    "Length": 2595
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Statements/FunctionCallStatement.cs",
+    "Length": 767
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Statements/FunctionDefinitionStatement.cs",
+    "Length": 3621
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Statements/GotoStatement.cs",
+    "Length": 1314
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Statements/IfStatement.cs",
+    "Length": 2961
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Statements/LabelStatement.cs",
+    "Length": 1614
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Statements/RepeatStatement.cs",
+    "Length": 1575
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Statements/ReturnStatement.cs",
+    "Length": 1292
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Statements/ScopeBlockStatement.cs",
+    "Length": 944
+  },
+  {
+    "FullName": "gregCore/lib/MoonSharp/Tree/Statements/WhileStatement.cs",
+    "Length": 1815
+  },
+  {
+    "FullName": "gregCore/src/AssemblyInfo.cs",
+    "Length": 94
+  },
+  {
+    "FullName": "gregCore/src/GlobalUsings.cs",
+    "Length": 242
+  },
+  {
+    "FullName": "gregCore/src/Diagnostic/FrameLimiterConfig.cs",
+    "Length": 807
+  },
+  {
+    "FullName": "gregCore/src/Diagnostic/GregDiagnosticTools.cs",
+    "Length": 2526
+  },
+  {
+    "FullName": "gregCore/src/Diagnostic/GregFrameLimiterService.cs",
+    "Length": 4189
+  },
+  {
+    "FullName": "gregCore/src/Diagnostic/GregPerfConfig.cs",
+    "Length": 1830
+  },
+  {
+    "FullName": "gregCore/src/Diagnostic/GregPerformanceHud.cs",
+    "Length": 1343
+  },
+  {
+    "FullName": "gregCore/src/Diagnostic/GregPerformanceOptimizer.cs",
+    "Length": 19994
+  },
+  {
+    "FullName": "gregCore/src/Diagnostic/GregRenderOptimizer.cs",
+    "Length": 2227
+  },
+  {
+    "FullName": "gregCore/src/Diagnostic/GregSessionLogger.cs",
+    "Length": 1634
+  },
+  {
+    "FullName": "gregCore/src/Diagnostic/GregTelemetryService.cs",
+    "Length": 4860
+  },
+  {
+    "FullName": "gregCore/src/Diagnostic/RenderOptimizerConfig.cs",
+    "Length": 771
+  },
+  {
+    "FullName": "gregCore/src/Diagnostic/TelemetryModels.cs",
+    "Length": 1365
+  },
+  {
+    "FullName": "gregCore/src/gregCore/Patches/FrameCapPatches.cs",
+    "Length": 1746
+  },
+  {
+    "FullName": "gregCore/src/gregCore/Services/GregFrameCapService.cs",
+    "Length": 2609
+  },
+  {
+    "FullName": "gregCore/src/gregCore/Services/GregMemoryService.cs",
+    "Length": 2263
+  },
+  {
+    "FullName": "gregCore/src/gregCore/Services/GregRenderingService.cs",
+    "Length": 4129
+  },
+  {
+    "FullName": "gregCore/src/gregCore/Services/GregThreadingService.cs",
+    "Length": 1607
+  },
+  {
+    "FullName": "gregCore/src/gregHarmony/GregEmployeeAIPatch.cs",
+    "Length": 382
+  },
+  {
+    "FullName": "gregCore/src/gregHarmony/GregEngineBridgesPatch.cs",
+    "Length": 832
+  },
+  {
+    "FullName": "gregCore/src/gregHarmony/GregGameVersionPatch.cs",
+    "Length": 592
+  },
+  {
+    "FullName": "gregCore/src/gregHarmony/GregHexViewerPatch.cs",
+    "Length": 3616
+  },
+  {
+    "FullName": "gregCore/src/gregHarmony/GregLifecyclePatch.cs",
+    "Length": 499
+  },
+  {
+    "FullName": "gregCore/src/gregHarmony/GregModelOverridePatch.cs",
+    "Length": 662
+  },
+  {
+    "FullName": "gregCore/src/gregHarmony/GregNetworkTopologyPatch.cs",
+    "Length": 338
+  },
+  {
+    "FullName": "gregCore/src/gregHarmony/GregShopPatch.cs",
+    "Length": 1838
+  },
+  {
+    "FullName": "gregCore/src/gregHarmony/GregVersionPatch.cs",
+    "Length": 691
+  },
+  {
+    "FullName": "gregCore/src/gregHarmony/InputHook.cs",
+    "Length": 1439
+  },
+  {
+    "FullName": "gregCore/src/gregHarmony/MainMenuPatch.cs",
+    "Length": 5853
+  },
+  {
+    "FullName": "gregCore/src/gregHarmony/PauseMenuPatch.cs",
+    "Length": 2895
+  },
+  {
+    "FullName": "gregCore/src/gregHarmony/PerformancePatches.cs",
+    "Length": 3516
+  },
+  {
+    "FullName": "gregCore/src/gregHarmony/UIRouterHooks.cs",
+    "Length": 1840
+  },
+  {
+    "FullName": "gregCore/src/gregHarmony/Patches/MainMenuPatch.cs",
+    "Length": 1965
+  },
+  {
+    "FullName": "gregCore/src/gregHarmony/Patches/SaveSystemPatch.cs",
+    "Length": 1603
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregAssemblyHookDumpService.cs",
+    "Length": 3324
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregCore.cs",
+    "Length": 21138
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregCustomEmployeeManager.cs",
+    "Length": 30093
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregEventDispatcher.cs",
+    "Length": 12075
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregFfiBridge.cs",
+    "Length": 17307
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregFrameworkLog.cs",
+    "Length": 1701
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregGameApi.cs",
+    "Length": 54797
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregGameFolderLayout.cs",
+    "Length": 1988
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregGameHooks.cs",
+    "Length": 19985
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregGameSignalSnapshotService.cs",
+    "Length": 2148
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregHarmonyPatches.cs",
+    "Length": 16960
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregHireRosterService.cs",
+    "Length": 3155
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregHooker.cs",
+    "Length": 10755
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregHookIntegration.cs",
+    "Length": 4643
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregIl2CppEventCatalogService.cs",
+    "Length": 8925
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregIl2CppGameplayIndexService.cs",
+    "Length": 3898
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregLangserverCompat.cs",
+    "Length": 16802
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregLocalisationBridge.cs",
+    "Length": 4107
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregModActivationService.cs",
+    "Length": 3045
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregModEventFramework.cs",
+    "Length": 2703
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregModigApi.cs",
+    "Length": 25948
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregModSaveCompatibilityService.cs",
+    "Length": 4437
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregMultiplayerBridge.cs",
+    "Length": 67724
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregPluginSyncService.cs",
+    "Length": 7813
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregReleaseVersion.cs",
+    "Length": 123
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregRuntimeHookService.cs",
+    "Length": 13415
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregTechnicianHiring.cs",
+    "Length": 12659
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/gregUiExtensionBridge.cs",
+    "Length": 11644
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/Events/ErrorEvents.cs",
+    "Length": 463
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/Events/ExportEvents.cs",
+    "Length": 858
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/Events/HookEvents.cs",
+    "Length": 1297
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/Events/Il2CppCatalogEvents.cs",
+    "Length": 874
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/Events/IModEvent.cs",
+    "Length": 139
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/Events/ModLifecycleEvents.cs",
+    "Length": 768
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/Events/ToggleEvents.cs",
+    "Length": 481
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/Hooks/HookBinder.cs",
+    "Length": 10784
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/Hooks/HookContext.cs",
+    "Length": 1894
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/Plugins/gregDependencyResolver.cs",
+    "Length": 3874
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/Plugins/gregModBase.cs",
+    "Length": 2744
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/Plugins/gregPluginBase.cs",
+    "Length": 1248
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/Plugins/gregRegistry.cs",
+    "Length": 3212
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/References/ReferenceScanner.cs",
+    "Length": 5321
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/UI/gregMainHudReplacement.cs",
+    "Length": 5468
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/UI/gregModConfigManager.cs",
+    "Length": 9390
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/UI/GregUiReplacementManager.cs",
+    "Length": 2792
+  },
+  {
+    "FullName": "gregCore/src/gregModLoader/UI/gregUiStyler.cs",
+    "Length": 2190
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/gregCompatBridge.cs",
+    "Length": 7779
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/GregContentRegistry.cs",
+    "Length": 1868
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/GregCustomerPolicyEngine.cs",
+    "Length": 1353
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/gregDomain.cs",
+    "Length": 295
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/GregEmployeeStateService.cs",
+    "Length": 273
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/gregEventDispatcher.cs",
+    "Length": 8225
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/gregHookName.cs",
+    "Length": 2283
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/GregIncidentOrchestrator.cs",
+    "Length": 269
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/GregModelOverrideService.cs",
+    "Length": 232
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/gregNativeEventHooks.cs",
+    "Length": 12778
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/GregNetworkCompatibilityService.cs",
+    "Length": 1666
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/gregPayload.cs",
+    "Length": 1771
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/GregSignalPayload.cs",
+    "Length": 900
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/IGregContentRegistry.cs",
+    "Length": 317
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/IGregModelOverrideService.cs",
+    "Length": 156
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/NullableAttributes.cs",
+    "Length": 1016
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Definitions/CableDefinition.cs",
+    "Length": 379
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Definitions/CustomerDefinition.cs",
+    "Length": 447
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Definitions/EmployeeDefinition.cs",
+    "Length": 429
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Definitions/FurnitureDefinition.cs",
+    "Length": 426
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Definitions/GregUiReplacementManifest.cs",
+    "Length": 1286
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Definitions/ItemDefinition.cs",
+    "Length": 275
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Definitions/ModelOverrideManifest.cs",
+    "Length": 407
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Definitions/PlacementRuleDefinition.cs",
+    "Length": 377
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Definitions/ServerDefinition.cs",
+    "Length": 532
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Definitions/ServerTypeDefinition.cs",
+    "Length": 290
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Definitions/SfpDefinition.cs",
+    "Length": 291
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Definitions/SwitchDefinition.cs",
+    "Length": 570
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Events/GregEvents.cs",
+    "Length": 1524
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Exporter/DataExporter.cs",
+    "Length": 4983
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Extensions/IGregHexviewerApi.cs",
+    "Length": 426
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Interfaces/IContentMigration.cs",
+    "Length": 171
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Interfaces/IContentValidator.cs",
+    "Length": 133
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Interfaces/IGregUiReplacementService.cs",
+    "Length": 912
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Internal/GregUiHijacker.cs",
+    "Length": 1669
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Registries/GregCableRegistry.cs",
+    "Length": 198
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Registries/GregCustomerRegistry.cs",
+    "Length": 207
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Registries/GregEmployeeRegistry.cs",
+    "Length": 207
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Registries/GregFurnitureRegistry.cs",
+    "Length": 210
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Registries/GregIl2CppRegistry.cs",
+    "Length": 1267
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Registries/GregItemRegistry.cs",
+    "Length": 195
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Registries/GregPlacementRegistry.cs",
+    "Length": 214
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Registries/GregServerRegistry.cs",
+    "Length": 201
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Registries/GregServerTypeRegistry.cs",
+    "Length": 213
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Registries/GregSfpRegistry.cs",
+    "Length": 192
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Registries/GregSwitchRegistry.cs",
+    "Length": 201
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregBalanceService.cs",
+    "Length": 1702
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregCohousingService.cs",
+    "Length": 3035
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregCompatBridgeService.cs",
+    "Length": 880
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregComponentMetadataService.cs",
+    "Length": 4827
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregConfigService.cs",
+    "Length": 2429
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregContentRegistry.cs",
+    "Length": 824
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregCustomerBaseService.cs",
+    "Length": 1616
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregCustomerService.cs",
+    "Length": 6960
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregDDoSService.cs",
+    "Length": 4227
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregDiagnostics.cs",
+    "Length": 466
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregEmployeeAIBridge.cs",
+    "Length": 268
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregEventBus.cs",
+    "Length": 2764
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregGameManagerService.cs",
+    "Length": 1402
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregHarmonyService.cs",
+    "Length": 5448
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregHudService.cs",
+    "Length": 4602
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregInputGuardService.cs",
+    "Length": 1433
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregInputManagerService.cs",
+    "Length": 3669
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregInventoryService.cs",
+    "Length": 274
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregIPAllocationService.cs",
+    "Length": 731
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregIpService.cs",
+    "Length": 5954
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregLocalisationService.cs",
+    "Length": 3359
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregMetadataService.cs",
+    "Length": 819
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregModelOverrideService.cs",
+    "Length": 1815
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregModRegistry.cs",
+    "Length": 1927
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregNetworkMaintenanceService.cs",
+    "Length": 3311
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregNetworkSanityService.cs",
+    "Length": 2218
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregNotificationService.cs",
+    "Length": 5167
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregOrbRenderService.cs",
+    "Length": 1659
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregPacketService.cs",
+    "Length": 397
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregPathRedirectorService.cs",
+    "Length": 3529
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregPerformanceProfilerService.cs",
+    "Length": 1064
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregPersistenceService.cs",
+    "Length": 3710
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregPlayerManagerService.cs",
+    "Length": 1009
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregPowerService.cs",
+    "Length": 774
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregPricingService.cs",
+    "Length": 283
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregRackInteractionService.cs",
+    "Length": 1274
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregRackService.cs",
+    "Length": 1337
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregResetSwitchService.cs",
+    "Length": 11381
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregRopeService.cs",
+    "Length": 421
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregRouteEvaluationService.cs",
+    "Length": 1771
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregSaveService.cs",
+    "Length": 4241
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregServerDiscoveryService.cs",
+    "Length": 6454
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregServerInteractionService.cs",
+    "Length": 1662
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregShopService.cs",
+    "Length": 1078
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregSwitchConfigService.cs",
+    "Length": 1007
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregSwitchDiscoveryService.cs",
+    "Length": 1615
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregTargetingService.cs",
+    "Length": 3317
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregTaskQueueService.cs",
+    "Length": 2133
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregTechnicianService.cs",
+    "Length": 1305
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregTimeService.cs",
+    "Length": 1076
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregTopologyService.cs",
+    "Length": 392
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregUiReplacementService.cs",
+    "Length": 4146
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregUiService.cs",
+    "Length": 7752
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregUxmlService.cs",
+    "Length": 2775
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregVlanService.cs",
+    "Length": 7832
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/GregWaypointService.cs",
+    "Length": 520
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/MCP/GregMCPServer.cs",
+    "Length": 4672
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/Models/GregModelLoaderService.cs",
+    "Length": 3264
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/Models/GregModelRegistryService.cs",
+    "Length": 3509
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/Models/GregModelSwapperService.cs",
+    "Length": 5311
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/Multiplayer/GregMultiplayerService.cs",
+    "Length": 6959
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Services/Multiplayer/GregStateSyncService.cs",
+    "Length": 2082
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Validators/ServerValidator.cs",
+    "Length": 647
+  },
+  {
+    "FullName": "gregCore/src/gregSdk/Validators/SwitchValidator.cs",
+    "Length": 602
+  },
+  {
+    "FullName": "gregCore/src/Scripting/GregHookBus.cs",
+    "Length": 2312
+  },
+  {
+    "FullName": "gregCore/src/Scripting/gregLanguageBridgeHost.cs",
+    "Length": 7870
+  },
+  {
+    "FullName": "gregCore/src/Scripting/gregRuntimeUnit.cs",
+    "Length": 258
+  },
+  {
+    "FullName": "gregCore/src/Scripting/IGregLanguageBridge.cs",
+    "Length": 636
+  },
+  {
+    "FullName": "gregCore/src/Scripting/Go/GoLanguageBridge.cs",
+    "Length": 1834
+  },
+  {
+    "FullName": "gregCore/src/Scripting/JS/TypeScriptJavaScriptLanguageBridge.cs",
+    "Length": 10782
+  },
+  {
+    "FullName": "gregCore/src/Scripting/Lua/IGregLuaModule.cs",
+    "Length": 547
+  },
+  {
+    "FullName": "gregCore/src/Scripting/Lua/LuaLanguageBridge.cs",
+    "Length": 9997
+  },
+  {
+    "FullName": "gregCore/src/Scripting/Lua/LuaModules/gregHooksLuaModule.cs",
+    "Length": 10286
+  },
+  {
+    "FullName": "gregCore/src/Scripting/Lua/LuaModules/gregInputLuaModule.cs",
+    "Length": 5186
+  },
+  {
+    "FullName": "gregCore/src/Scripting/Lua/LuaModules/gregIoLuaModule.cs",
+    "Length": 3865
+  },
+  {
+    "FullName": "gregCore/src/Scripting/Lua/LuaModules/gregLuaObjectHandleRegistry.cs",
+    "Length": 1946
+  },
+  {
+    "FullName": "gregCore/src/Scripting/Lua/LuaModules/gregSdkLuaModule.cs",
+    "Length": 3772
+  },
+  {
+    "FullName": "gregCore/src/Scripting/Lua/LuaModules/gregUnityLuaModule.cs",
+    "Length": 34091
+  },
+  {
+    "FullName": "gregCore/src/Scripting/Rust/RustLanguageBridgeAdapter.cs",
+    "Length": 3563
+  },
+  {
+    "FullName": "gregCore/src/UI/FixedTableUI.cs",
+    "Length": 920
+  },
+  {
+    "FullName": "gregCore/src/UI/GameMethodInvoker.cs",
+    "Length": 9339
+  },
+  {
+    "FullName": "gregCore/src/UI/GregComponents.cs",
+    "Length": 1303
+  },
+  {
+    "FullName": "gregCore/src/UI/GregUiBuilder.cs",
+    "Length": 5140
+  },
+  {
+    "FullName": "gregCore/src/UI/GregUiFocusManager.cs",
+    "Length": 1357
+  },
+  {
+    "FullName": "gregCore/src/UI/GregUIManager.cs",
+    "Length": 2262
+  },
+  {
+    "FullName": "gregCore/src/UI/GregUITheme.cs",
+    "Length": 3659
+  },
+  {
+    "FullName": "gregCore/src/UI/IGregUIElement.cs",
+    "Length": 345
+  },
+  {
+    "FullName": "gregCore/src/UI/Il2CppSafe.cs",
+    "Length": 1335
+  },
+  {
+    "FullName": "gregCore/src/UI/UIRouter.cs",
+    "Length": 8369
+  },
+  {
+    "FullName": "gregCore/src/UI/Components/GregBadge.cs",
+    "Length": 1133
+  },
+  {
+    "FullName": "gregCore/src/UI/Components/GregButton.cs",
+    "Length": 1746
+  },
+  {
+    "FullName": "gregCore/src/UI/Components/GregLabel.cs",
+    "Length": 769
+  },
+  {
+    "FullName": "gregCore/src/UI/Components/GregMainMenuReplacement.cs",
+    "Length": 17837
+  },
+  {
+    "FullName": "gregCore/src/UI/Components/GregPanel.cs",
+    "Length": 5650
+  },
+  {
+    "FullName": "gregCore/src/UI/Components/GregPauseMenuReplacement.cs",
+    "Length": 2945
+  },
+  {
+    "FullName": "gregCore/src/UI/Components/GregSeparator.cs",
+    "Length": 510
+  },
+  {
+    "FullName": "gregCore/src/UI/Components/GregShopReplacement.cs",
+    "Length": 2088
+  },
+  {
+    "FullName": "gregCore/src/UI/Components/GregSlider.cs",
+    "Length": 3357
+  },
+  {
+    "FullName": "gregCore/src/UI/Components/GregToggle.cs",
+    "Length": 1799
+  },
+  {
+    "FullName": "gregCore/src/UI/Components/GregUIBuilder.cs",
+    "Length": 2364
+  },
+  {
+    "FullName": "gregCore/src/UI/Components/IGregUIComponent.cs",
+    "Length": 229
+  },
+  {
+    "FullName": "gregCore/src/UI/Patches/MainMenuPatch.cs",
+    "Length": 673
+  },
+  {
+    "FullName": "gregCore/src/UI/Patches/PauseMenuPatch.cs",
+    "Length": 1209
+  },
+  {
+    "FullName": "gregCore/src/UI/Patches/StaticUIElementsPatch.cs",
+    "Length": 781
+  },
+  {
+    "FullName": "gregCore/tests/ContentTests.cs",
+    "Length": 2243
+  },
+  {
+    "FullName": "gregCore/tests/ProjectSanityTests.cs",
+    "Length": 790
+  },
+  {
+    "FullName": "gregMod.GregifyEmployees/GregifyMod.cs",
+    "Length": 5987
+  },
+  {
+    "FullName": "gregMod.GregifyEmployees/Core/GregAI.cs",
+    "Length": 6492
+  },
+  {
+    "FullName": "gregMod.GregifyEmployees/Core/GregSkillRegistry.cs",
+    "Length": 5282
+  },
+  {
+    "FullName": "gregMod.GregifyEmployees/Core/GregTaskDispatcher.cs",
+    "Length": 5821
+  },
+  {
+    "FullName": "gregMod.GregifyEmployees/Harmony/EmployeePatches.cs",
+    "Length": 4837
+  },
+  {
+    "FullName": "gregMod.GregifyEmployees/UI/GregCommandPanel.cs",
+    "Length": 5276
+  },
+  {
+    "FullName": "gregMod.HexViewer/HexViewerMod.cs",
+    "Length": 1245
+  },
+  {
+    "FullName": "gregMod.HexViewer/HexViewerUI.cs",
+    "Length": 5932
+  },
+  {
+    "FullName": "gregModmanager/App.xaml.cs",
+    "Length": 2973
+  },
+  {
+    "FullName": "gregModmanager/AppShell.xaml.cs",
+    "Length": 3199
+  },
+  {
+    "FullName": "gregModmanager/DebugNdjsonSessionLog.cs",
+    "Length": 1201
+  },
+  {
+    "FullName": "gregModmanager/DebugSessionLog.cs",
+    "Length": 1650
+  },
+  {
+    "FullName": "gregModmanager/MauiProgram.cs",
+    "Length": 6966
+  },
+  {
+    "FullName": "gregModmanager/Program.cs",
+    "Length": 446
+  },
+  {
+    "FullName": "gregModmanager/GregModmanager.Tests/ProjectSanityTests.cs",
+    "Length": 795
+  },
+  {
+    "FullName": "gregModmanager/Localization/S.cs",
+    "Length": 2185
+  },
+  {
+    "FullName": "gregModmanager/Localization/TranslateExtension.cs",
+    "Length": 414
+  },
+  {
+    "FullName": "gregModmanager/Models/ContentStats.cs",
+    "Length": 502
+  },
+  {
+    "FullName": "gregModmanager/Models/DependencyCheckResult.cs",
+    "Length": 503
+  },
+  {
+    "FullName": "gregModmanager/Models/ImportOutcome.cs",
+    "Length": 323
+  },
+  {
+    "FullName": "gregModmanager/Models/ModOptionsConfigFile.cs",
+    "Length": 990
+  },
+  {
+    "FullName": "gregModmanager/Models/NativeModConfig.cs",
+    "Length": 2581
+  },
+  {
+    "FullName": "gregModmanager/Models/PluginPackageInfo.cs",
+    "Length": 411
+  },
+  {
+    "FullName": "gregModmanager/Models/ProjectTileVm.cs",
+    "Length": 2492
+  },
+  {
+    "FullName": "gregModmanager/Models/PublishedWorkshopItemVm.cs",
+    "Length": 336
+  },
+  {
+    "FullName": "gregModmanager/Models/UploadCheckResult.cs",
+    "Length": 305
+  },
+  {
+    "FullName": "gregModmanager/Models/WorkshopBrowseResultVm.cs",
+    "Length": 277
+  },
+  {
+    "FullName": "gregModmanager/Models/WorkshopItemDetailVm.cs",
+    "Length": 2538
+  },
+  {
+    "FullName": "gregModmanager/Models/WorkshopMetadata.cs",
+    "Length": 1662
+  },
+  {
+    "FullName": "gregModmanager/Models/WorkshopProject.cs",
+    "Length": 331
+  },
+  {
+    "FullName": "gregModmanager/Models/WorkshopSortMode.cs",
+    "Length": 158
+  },
+  {
+    "FullName": "gregModmanager/Models/WorkshopTemplateKind.cs",
+    "Length": 1034
+  },
+  {
+    "FullName": "gregModmanager/Platforms/Windows/App.xaml.cs",
+    "Length": 1202
+  },
+  {
+    "FullName": "gregModmanager/Services/AppFileLog.cs",
+    "Length": 2960
+  },
+  {
+    "FullName": "gregModmanager/Services/AppLogService.cs",
+    "Length": 704
+  },
+  {
+    "FullName": "gregModmanager/Services/BetaPluginSource.cs",
+    "Length": 1166
+  },
+  {
+    "FullName": "gregModmanager/Services/BetterAuthService.cs",
+    "Length": 1847
+  },
+  {
+    "FullName": "gregModmanager/Services/GitHubModSource.cs",
+    "Length": 1387
+  },
+  {
+    "FullName": "gregModmanager/Services/GitVerificationService.cs",
+    "Length": 1069
+  },
+  {
+    "FullName": "gregModmanager/Services/GregPluginChannelRegistry.cs",
+    "Length": 711
+  },
+  {
+    "FullName": "gregModmanager/Services/HeadlessRunner.cs",
+    "Length": 3725
+  },
+  {
+    "FullName": "gregModmanager/Services/IGregPluginChannelSource.cs",
+    "Length": 444
+  },
+  {
+    "FullName": "gregModmanager/Services/ModDependencyService.cs",
+    "Length": 7182
+  },
+  {
+    "FullName": "gregModmanager/Services/ModsFolderSyncService.cs",
+    "Length": 3638
+  },
+  {
+    "FullName": "gregModmanager/Services/NativeModConfigStore.cs",
+    "Length": 2123
+  },
+  {
+    "FullName": "gregModmanager/Services/RalphSyncService.cs",
+    "Length": 636
+  },
+  {
+    "FullName": "gregModmanager/Services/ReproBundleService.cs",
+    "Length": 5589
+  },
+  {
+    "FullName": "gregModmanager/Services/StablePluginSource.cs",
+    "Length": 1531
+  },
+  {
+    "FullName": "gregModmanager/Services/SteamBbCodePreview.cs",
+    "Length": 10241
+  },
+  {
+    "FullName": "gregModmanager/Services/SteamWorkshopService.cs",
+    "Length": 24364
+  },
+  {
+    "FullName": "gregModmanager/Services/SubscriptionPoller.cs",
+    "Length": 2433
+  },
+  {
+    "FullName": "gregModmanager/Services/UploadDependencyChecker.cs",
+    "Length": 11407
+  },
+  {
+    "FullName": "gregModmanager/Services/VdfGeneratorService.cs",
+    "Length": 933
+  },
+  {
+    "FullName": "gregModmanager/Services/WorkshopDependencyInference.cs",
+    "Length": 2003
+  },
+  {
+    "FullName": "gregModmanager/Services/WorkshopDownloadService.cs",
+    "Length": 2748
+  },
+  {
+    "FullName": "gregModmanager/Services/WorkshopSyncOrchestrator.cs",
+    "Length": 3852
+  },
+  {
+    "FullName": "gregModmanager/Services/WorkspaceService.cs",
+    "Length": 30314
+  },
+  {
+    "FullName": "gregModmanager/Steam/SteamApiNativeLoader.cs",
+    "Length": 4129
+  },
+  {
+    "FullName": "gregModmanager/Steam/SteamConstants.cs",
+    "Length": 287
+  },
+  {
+    "FullName": "gregModmanager/Steam/SteamUgcPreviews.cs",
+    "Length": 6852
+  },
+  {
+    "FullName": "gregModmanager/UI/Pages/EditorPage.xaml.cs",
+    "Length": 29982
+  },
+  {
+    "FullName": "gregModmanager/UI/Pages/ItemDetailPage.xaml.cs",
+    "Length": 7959
+  },
+  {
+    "FullName": "gregModmanager/UI/Pages/ModManagerPage.xaml.cs",
+    "Length": 12467
+  },
+  {
+    "FullName": "gregModmanager/UI/Pages/MyUploadsPage.xaml.cs",
+    "Length": 5721
+  },
+  {
+    "FullName": "gregModmanager/UI/Pages/NativeConfigEditorPage.xaml.cs",
+    "Length": 18819
+  },
+  {
+    "FullName": "gregModmanager/UI/Pages/NewProjectPage.xaml.cs",
+    "Length": 1426
+  },
+  {
+    "FullName": "gregModmanager/UI/Pages/ProjectsPage.xaml.cs",
+    "Length": 4219
+  },
+  {
+    "FullName": "gregModmanager/UI/Pages/SettingsPage.xaml.cs",
+    "Length": 8433
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/AssemblyInfo.cs",
+    "Length": 71
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/__JobReflectionRegistrationOutput__122167367158764.cs",
+    "Length": 2761
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/__UnmanagedPostProcessorOutput__122167367158764888.cs",
+    "Length": 1783
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/_PrivateImplementationDetails_.cs",
+    "Length": 13338
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ActionKeyHint.cs",
+    "Length": 28601
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/AICharacterControl.cs",
+    "Length": 44666
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/AICharacterExpressions.cs",
+    "Length": 32146
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/AssetManagement.cs",
+    "Length": 37735
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/AssetManagementDeviceLine.cs",
+    "Length": 16345
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/AssetManagementDeviceLineData.cs",
+    "Length": 11469
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/AudioManager.cs",
+    "Length": 78346
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/AutoDisable.cs",
+    "Length": 16697
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/AutoScrollRect.cs",
+    "Length": 9729
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/BalanceSheet.cs",
+    "Length": 64298
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/BalanceSheetRow.cs",
+    "Length": 17308
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/BalanceSheetSaveData.cs",
+    "Length": 5493
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/CableEndpointSaveData.cs",
+    "Length": 5683
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/CableIDComponent.cs",
+    "Length": 1541
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/CableLink.cs",
+    "Length": 28682
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/CableLinkLabelData.cs",
+    "Length": 3381
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/CablePositions.cs",
+    "Length": 52118
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/CableSaveData.cs",
+    "Length": 7685
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/CableSpinner.cs",
+    "Length": 14516
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ChatController.cs",
+    "Length": 7223
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/CheckIfTouchingWall.cs",
+    "Length": 20613
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ColorSerializationSurrogate.cs",
+    "Length": 5652
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/CommandCenter.cs",
+    "Length": 28907
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/CommandCenterOperator.cs",
+    "Length": 4354
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ComputerShop.cs",
+    "Length": 93322
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/CustomerBase.cs",
+    "Length": 97225
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/CustomerBaseDoor.cs",
+    "Length": 12782
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/CustomerBaseSaveData.cs",
+    "Length": 11315
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/CustomerCard.cs",
+    "Length": 13149
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/CustomerColor.cs",
+    "Length": 2924
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/CustomerItem.cs",
+    "Length": 7691
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/CustomerRecordSaveData.cs",
+    "Length": 4860
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/DeviceTimerManager.cs",
+    "Length": 21196
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/DllEntry.cs",
+    "Length": 3317
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/DropdownSample.cs",
+    "Length": 5519
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/Dumpster.cs",
+    "Length": 9214
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/EnvMapAnimator.cs",
+    "Length": 17429
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/FCP_Persistence.cs",
+    "Length": 15869
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/FCP_SpriteMeshEditor.cs",
+    "Length": 8801
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/FlexibleColorPicker.cs",
+    "Length": 141115
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/FootSteps.cs",
+    "Length": 34728
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/GamepadIcons.cs",
+    "Length": 19577
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/GateLever.cs",
+    "Length": 31924
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/GetCurrentVersion.cs",
+    "Length": 2576
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/GetValueFromPlayerPrefs.cs",
+    "Length": 3576
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/GODMOD.cs",
+    "Length": 31414
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/HRSystem.cs",
+    "Length": 13447
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/IModPlugin.cs",
+    "Length": 2509
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/InputController.cs",
+    "Length": 153204
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/InputManager.cs",
+    "Length": 42938
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/Interact.cs",
+    "Length": 22245
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/InteractObjectData.cs",
+    "Length": 7913
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/Item.cs",
+    "Length": 8533
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ITimedDevice.cs",
+    "Length": 1583
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/KeyHint.cs",
+    "Length": 5161
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/LACPGroupSaveData.cs",
+    "Length": 5141
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/LanguageObject.cs",
+    "Length": 4455
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/LeanTweenUIElement.cs",
+    "Length": 59270
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/LoadingScreen.cs",
+    "Length": 90712
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/Localisation.cs",
+    "Length": 21150
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/LocalisedText.cs",
+    "Length": 5806
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/MainGameManager.cs",
+    "Length": 137933
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/MainMenu.cs",
+    "Length": 13747
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/MainMenuCamera.cs",
+    "Length": 8156
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ModItemSaveData.cs",
+    "Length": 7067
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ModLoader.cs",
+    "Length": 47388
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ModPackConfig.cs",
+    "Length": 5492
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ModShopItem.cs",
+    "Length": 8033
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/MonthlySnapshotSaveData.cs",
+    "Length": 5061
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/MusicPlayer.cs",
+    "Length": 10817
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/NetworkMap.cs",
+    "Length": 101099
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/NetworkSaveData.cs",
+    "Length": 9664
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/NetworkSwitch.cs",
+    "Length": 46984
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/NetworkSwitchConfiguration.cs",
+    "Length": 54512
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ObjectiveObject.cs",
+    "Length": 7745
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/Objectives.cs",
+    "Length": 53313
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ObjectiveTimed.cs",
+    "Length": 10297
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ObjectPrivateAbstractSealedInVo0.cs",
+    "Length": 1862
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ObjImporter.cs",
+    "Length": 5659
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/OpenURL.cs",
+    "Length": 3266
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PacketComponent.cs",
+    "Length": 3280
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PacketSettings.cs",
+    "Length": 1269
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PacketSpawnerAuthoring.cs",
+    "Length": 7072
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PacketSpawnerComponent.cs",
+    "Length": 10966
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PacketSpawnerSystem.cs",
+    "Length": 177941
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PatchPanel.cs",
+    "Length": 16420
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PatchPanelSaveData.cs",
+    "Length": 5517
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PauseMenu_TabButton.cs",
+    "Length": 11649
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PauseMenu_TabGroup.cs",
+    "Length": 9653
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PauseMenu.cs",
+    "Length": 75065
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PauseMenuVideoTutorial.cs",
+    "Length": 2662
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/Player.cs",
+    "Length": 25672
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PlayerData.cs",
+    "Length": 5807
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PlayerHit.cs",
+    "Length": 3433
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PlayerManager.cs",
+    "Length": 48576
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PortVlanFilterData.cs",
+    "Length": 3586
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PositionIndicator.cs",
+    "Length": 5670
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PulsatingImageColor.cs",
+    "Length": 11636
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PulsatingText.cs",
+    "Length": 9180
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/PushTrolleyHandle.cs",
+    "Length": 7706
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/QuaternionSerializationSurrogate.cs",
+    "Length": 5737
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/Rack.cs",
+    "Length": 37995
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/RackAudioCuller.cs",
+    "Length": 30098
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/RackDoor.cs",
+    "Length": 21803
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/RackMount.cs",
+    "Length": 44349
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/RackPosition.cs",
+    "Length": 38057
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ReBindUI.cs",
+    "Length": 22337
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/RebindUIv2.cs",
+    "Length": 58433
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/RectExtensions.cs",
+    "Length": 3273
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/RepairJobSaveData.cs",
+    "Length": 2756
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ReusableFunctions.cs",
+    "Length": 57588
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/SaveData.cs",
+    "Length": 25751
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/SaveSystem.cs",
+    "Length": 66934
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/Server.cs",
+    "Length": 45695
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ServerSaveData.cs",
+    "Length": 11575
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/SetIP.cs",
+    "Length": 29591
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/SettingsControls.cs",
+    "Length": 8827
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/SettingsGameplay.cs",
+    "Length": 20972
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/SettingsGraphics.cs",
+    "Length": 88075
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/SettingsSingleton.cs",
+    "Length": 24055
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/SettingsVolume.cs",
+    "Length": 12311
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/SFPBox.cs",
+    "Length": 27876
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/SFPModule.cs",
+    "Length": 27759
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/SFPSaveData.cs",
+    "Length": 5107
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ShopCartItem.cs",
+    "Length": 26197
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ShopItem.cs",
+    "Length": 17564
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ShopItemConfig.cs",
+    "Length": 11156
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ShopItemSO.cs",
+    "Length": 7247
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/StaminaOverlayOnEnable.cs",
+    "Length": 2658
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/StaticItemConfig.cs",
+    "Length": 9704
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/StaticUIElements.cs",
+    "Length": 104332
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/SteamLeaderboards.cs",
+    "Length": 19228
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/SteamManager.cs",
+    "Length": 12449
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/SteamStatsOnMainMenuTop.cs",
+    "Length": 24327
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/SwitchSaveData.cs",
+    "Length": 10555
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/Technician.cs",
+    "Length": 119219
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/TechnicianManager.cs",
+    "Length": 47389
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/TechnicianSaveData.cs",
+    "Length": 3763
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/TerrainDetector.cs",
+    "Length": 9979
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/TimeController.cs",
+    "Length": 18868
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/Tooltip.cs",
+    "Length": 11162
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ToolTipInteract.cs",
+    "Length": 6556
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/ToolTipOnUIText.cs",
+    "Length": 10203
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/TrolleyLoadingBay.cs",
+    "Length": 28608
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/TrolleyTrigger.cs",
+    "Length": 18786
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/Tutorials.cs",
+    "Length": 21860
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/UI_Section.cs",
+    "Length": 4952
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/UI_SelectedBorder.cs",
+    "Length": 5901
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/UIExtension.cs",
+    "Length": 6282
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/UnitySourceGeneratedAssemblyMonoScriptTypes_v1.cs",
+    "Length": 9113
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/UsableObject.cs",
+    "Length": 87580
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/UserReport.cs",
+    "Length": 55136
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/Vector3SerializationSurrogate.cs",
+    "Length": 5686
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/Wall.cs",
+    "Length": 9384
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/WaypointInitializationSystem.cs",
+    "Length": 152848
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/WaypointsBlob.cs",
+    "Length": 2058
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/WorldCanvasCuller.cs",
+    "Length": 5027
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2Cpp/WorldObjectButton.cs",
+    "Length": 7663
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppGogoGaga/OptimizedRopesAndCables/Rope.cs",
+    "Length": 50394
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppGogoGaga/OptimizedRopesAndCables/RopeMesh.cs",
+    "Length": 23405
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppGogoGaga/OptimizedRopesAndCables/RopeWindEffect.cs",
+    "Length": 12553
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppPolyAndCode/UI/HorizontalRecyclingSystem.cs",
+    "Length": 49078
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppPolyAndCode/UI/ICell.cs",
+    "Length": 720
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppPolyAndCode/UI/IRecyclableScrollRectDataSource.cs",
+    "Length": 2971
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppPolyAndCode/UI/RecyclableScrollRect.cs",
+    "Length": 17836
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppPolyAndCode/UI/RecyclingSystem.cs",
+    "Length": 10846
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppPolyAndCode/UI/VerticalRecyclingSystem.cs",
+    "Length": 49824
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppPolyStang/CarController.cs",
+    "Length": 73565
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/TMP_DigitValidator.cs",
+    "Length": 3193
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/TMP_PhoneNumberValidator.cs",
+    "Length": 3433
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/TMP_TextEventHandler.cs",
+    "Length": 41236
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/Benchmark01_UGUI.cs",
+    "Length": 22734
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/Benchmark01.cs",
+    "Length": 22321
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/Benchmark02.cs",
+    "Length": 5627
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/Benchmark03.cs",
+    "Length": 5881
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/Benchmark04.cs",
+    "Length": 6079
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/CameraController.cs",
+    "Length": 23630
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/ObjectSpin.cs",
+    "Length": 11171
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/ShaderPropAnimator.cs",
+    "Length": 19226
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/SimpleScript.cs",
+    "Length": 5586
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/SkewTextExample.cs",
+    "Length": 22382
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/TeleType.cs",
+    "Length": 17838
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/TextConsoleSimulator.cs",
+    "Length": 39742
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/TextMeshProFloatingText.cs",
+    "Length": 53891
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/TextMeshSpawner.cs",
+    "Length": 6681
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/TMP_ExampleScript_01.cs",
+    "Length": 7345
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/TMP_FrameRateCounter.cs",
+    "Length": 13843
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/TMP_TextEventCheck.cs",
+    "Length": 11337
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/TMP_TextInfoDebugTool.cs",
+    "Length": 1843
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/TMP_TextSelector_A.cs",
+    "Length": 10403
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/TMP_TextSelector_B.cs",
+    "Length": 22914
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/TMP_UiFrameRateCounter.cs",
+    "Length": 13085
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/TMPro_InstructionOverlay.cs",
+    "Length": 9532
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/VertexColorCycler.cs",
+    "Length": 18670
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/VertexJitter.cs",
+    "Length": 27774
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/VertexShakeA.cs",
+    "Length": 25093
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/VertexShakeB.cs",
+    "Length": 24220
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/VertexZoom.cs",
+    "Length": 31254
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppTMPro/Examples/WarpTextExample.cs",
+    "Length": 22282
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/AccentEntry.cs",
+    "Length": 3668
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/HexRange.cs",
+    "Length": 2615
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/I_OSK_Cursor.cs",
+    "Length": 2478
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/I_OSK_Key.cs",
+    "Length": 14310
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_AccentAssetObj.cs",
+    "Length": 2821
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_AccentConsole.cs",
+    "Length": 38016
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_Background.cs",
+    "Length": 7458
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_Cursor.cs",
+    "Length": 29216
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_GamepadHelper.cs",
+    "Length": 25468
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_GlyphHandler.cs",
+    "Length": 44198
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_KEY_TYPES.cs",
+    "Length": 588
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_Key.cs",
+    "Length": 66241
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_Keyboard.cs",
+    "Length": 116848
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_KeyCode.cs",
+    "Length": 63095
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_Keymap.cs",
+    "Length": 25671
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_KeySounds.cs",
+    "Length": 7055
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_KeyTypeMeta.cs",
+    "Length": 5982
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_LanguagePackage.cs",
+    "Length": 11043
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_LongPressPacket.cs",
+    "Length": 5896
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_MiniKeyboard.cs",
+    "Length": 33025
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_Receiver.cs",
+    "Length": 39602
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_Settings.cs",
+    "Length": 11356
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_SpecialKeys.cs",
+    "Length": 6974
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_UI_Cursor.cs",
+    "Length": 29566
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_UI_CustomReceiver.cs",
+    "Length": 13065
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_UI_InputReceiver.cs",
+    "Length": 23754
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_UI_Key.cs",
+    "Length": 71227
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperOSK/OSK_UI_Keyboard.cs",
+    "Length": 61877
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperTools/AXIS_INPUT.cs",
+    "Length": 623
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Il2CppviperTools/viperInput.cs",
+    "Length": 25387
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/Unity/Entities/CodeGeneratedRegistry/AssemblyTypeRegistry.cs",
+    "Length": 11772
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/UnityEngine/UI/ButtonExtended.cs",
+    "Length": 38359
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/UnityStandardAssets/Characters/FirstPerson/FirstPersonController.cs",
+    "Length": 72729
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/UnityStandardAssets/Characters/FirstPerson/MouseLook.cs",
+    "Length": 28304
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/UnityStandardAssets/Characters/FirstPerson/RayLookAt.cs",
+    "Length": 31655
+  },
+  {
+    "FullName": "gregReferences/Assembly-CSharp/UnityStandardAssets/Characters/ThirdPerson/ThirdPersonCharacter.cs",
+    "Length": 27570
+  },
+  {
+    "FullName": "gregReferences/gregTheBuilder/AssemblyInfo.cs",
+    "Length": 529
+  },
+  {
+    "FullName": "gregReferences/gregTheBuilder/NPCBuilder.cs",
+    "Length": 8954
+  },
+  {
+    "FullName": "gregReferences/gregTheBuilder/RackBuilderCore.cs",
+    "Length": 116314
+  },
+  {
+    "FullName": "local/gregCore-nuget-smoketest/SmokeConsumer/Class1.cs",
+    "Length": 58
+  },
+  {
+    "FullName": "Melons/greg.CableAudit/src/CableAuditConfig.cs",
+    "Length": 1832
+  },
+  {
+    "FullName": "Melons/greg.CableAudit/src/CableAuditMod.cs",
+    "Length": 1210
+  },
+  {
+    "FullName": "Melons/greg.CableAudit/src/CableAuditSystem.cs",
+    "Length": 4347
+  },
+  {
+    "FullName": "Melons/greg.WallLease/src/WallLeaseConfig.cs",
+    "Length": 2819
+  },
+  {
+    "FullName": "Melons/greg.WallLease/src/WallLeaseMod.cs",
+    "Length": 1168
+  },
+  {
+    "FullName": "Melons/greg.WallLease/src/WallLeaseSystem.cs",
+    "Length": 3530
+  },
+  {
+    "FullName": "Melons/greg.WallLease/src/WallLeaseUI.cs",
+    "Length": 1584
+  },
+  {
+    "FullName": "Melons/gregCableRemover/Mod.cs",
+    "Length": 7145
+  },
+  {
+    "FullName": "Melons/gregCableRemover/Config/InputBindSettings.cs",
+    "Length": 10133
+  },
+  {
+    "FullName": "Melons/gregCableRemover/Networking/CableDisconnectService.cs",
+    "Length": 6610
+  },
+  {
+    "FullName": "Melons/gregCableRemover/Networking/InteractHoldDuration.cs",
+    "Length": 1514
+  },
+  {
+    "FullName": "Melons/gregCableRemover/Networking/LookTargetResolver.cs",
+    "Length": 1102
+  },
+  {
+    "FullName": "Melons/gregCableRemover/Patches/LegacyInputSilencerPatches.cs",
+    "Length": 1061
+  },
+  {
+    "FullName": "Melons/gregCableRemover/Properties/AssemblyInfo.cs",
+    "Length": 621
+  },
+  {
+    "FullName": "Melons/gregCableRemover/UI/MassRemoveChargeRing.cs",
+    "Length": 1402
+  },
+  {
+    "FullName": "Melons/gregExplorer/Il2CppAssemblyFixer/Program.cs",
+    "Length": 12883
+  },
+  {
+    "FullName": "Melons/gregExplorer/UnityExplorerUnity6Shim/ShimMod.cs",
+    "Length": 22494
+  },
+  {
+    "FullName": "Melons/gregExt.AssetExporter/Greg.Plugin.AssetExporter.Tests/ProjectSanityTests.cs",
+    "Length": 817
+  },
+  {
+    "FullName": "Melons/gregExt.Multiplayer/Main.cs",
+    "Length": 2829
+  },
+  {
+    "FullName": "Melons/gregExt.Multiplayer/Greg.Plugin.Multiplayer.Tests/ProjectSanityTests.cs",
+    "Length": 813
+  },
+  {
+    "FullName": "Melons/gregExt.PlayerModels/API.cs",
+    "Length": 3398
+  },
+  {
+    "FullName": "Melons/gregExt.PlayerModels/GregModelRegistry.cs",
+    "Length": 5024
+  },
+  {
+    "FullName": "Melons/gregExt.PlayerModels/Main.cs",
+    "Length": 2498
+  },
+  {
+    "FullName": "Melons/gregExt.PlayerModels/ModelLoader.cs",
+    "Length": 3622
+  },
+  {
+    "FullName": "Melons/gregExt.PlayerModels/NPCModelReplacer.cs",
+    "Length": 3326
+  },
+  {
+    "FullName": "Melons/gregExt.PlayerModels/PlayerModelSwapper.cs",
+    "Length": 4012
+  },
+  {
+    "FullName": "Melons/gregExt.PlayerModels/Editor/ModelBundleExporter.cs",
+    "Length": 1805
+  },
+  {
+    "FullName": "Melons/gregExt.PlayerModels/Greg.Plugin.PlayerModels.Tests/ProjectSanityTests.cs",
+    "Length": 815
+  },
+  {
+    "FullName": "Melons/gregExt.Sysadmin/Main.cs",
+    "Length": 3863
+  },
+  {
+    "FullName": "Melons/gregExt.Sysadmin/Greg.Plugin.Sysadmin.Tests/ProjectSanityTests.cs",
+    "Length": 807
+  },
+  {
+    "FullName": "Melons/gregExt.WebUIBridge/Main.cs",
+    "Length": 3844
+  },
+  {
+    "FullName": "Melons/gregExt.WebUIBridge/Greg.Plugin.WebUIBridge.Tests/ProjectSanityTests.cs",
+    "Length": 813
+  },
+  {
+    "FullName": "Melons/gregMod.ConsoleInputGuard/ConsoleInputGuardMod.cs",
+    "Length": 3280
+  },
+  {
+    "FullName": "Melons/gregMod.EconomyEngine/EconomyEngineMod.cs",
+    "Length": 1061
+  },
+  {
+    "FullName": "Melons/gregMod.EconomyEngine/Core/MarketplaceManager.cs",
+    "Length": 2171
+  },
+  {
+    "FullName": "Melons/gregMod.EconomyEngine/UI/MarketplaceUI.cs",
+    "Length": 2258
+  },
+  {
+    "FullName": "Melons/gregMod.FunStuff/FunStuffMod.cs",
+    "Length": 816
+  },
+  {
+    "FullName": "Melons/gregMod.FunStuff/Core/DancingGregManager.cs",
+    "Length": 2229
+  },
+  {
+    "FullName": "Melons/gregMod.GregifyEmployees/GregifyMod.cs",
+    "Length": 5885
+  },
+  {
+    "FullName": "Melons/gregMod.GregifyEmployees/Core/GregAI.cs",
+    "Length": 6490
+  },
+  {
+    "FullName": "Melons/gregMod.GregifyEmployees/Core/GregSkillRegistry.cs",
+    "Length": 5280
+  },
+  {
+    "FullName": "Melons/gregMod.GregifyEmployees/Core/GregTaskDispatcher.cs",
+    "Length": 5819
+  },
+  {
+    "FullName": "Melons/gregMod.GregifyEmployees/Harmony/EmployeePatches.cs",
+    "Length": 4835
+  },
+  {
+    "FullName": "Melons/gregMod.GregifyEmployees/UI/GregCommandPanel.cs",
+    "Length": 5274
+  },
+  {
+    "FullName": "Melons/gregMod.HexViewer/HexViewerMod.cs",
+    "Length": 1143
+  },
+  {
+    "FullName": "Melons/gregMod.HexViewer/HexViewerUI.cs",
+    "Length": 5854
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/FlowAnalyzer.cs",
+    "Length": 431
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/IPAMMod.cs",
+    "Length": 1935
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/SubnetManager.cs",
+    "Length": 463
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Config/DeviceConfigModels.cs",
+    "Length": 1399
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Config/DeviceConfigPersistence.cs",
+    "Length": 5927
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Config/DeviceConfigRegistry.cs",
+    "Length": 3585
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Config/DeviceStableId.cs",
+    "Length": 1716
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Core/ConflictDetector.cs",
+    "Length": 2708
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Core/DhcpEngine.cs",
+    "Length": 2432
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Core/Il2CppGlobalUsings.cs",
+    "Length": 105
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Core/IpamEngine.cs",
+    "Length": 2170
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Core/Main.cs",
+    "Length": 5892
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Core/MelonModInfo.cs",
+    "Length": 328
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Core/NullableAttributes.cs",
+    "Length": 675
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Diagnostics/IpamDebugLog.cs",
+    "Length": 2791
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Diagnostics/ModDebugLog.cs",
+    "Length": 18405
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Diagnostics/ModLogging.cs",
+    "Length": 505
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Diagnostics/SetIpKeypadDiagnostics.cs",
+    "Length": 5216
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Input/GameInputSuppression.cs",
+    "Length": 4306
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Input/LegacyInputAxes.cs",
+    "Length": 717
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Input/UiRaycastBlocker.cs",
+    "Length": 2392
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Ipam/DeviceInventoryReflection.cs",
+    "Length": 47678
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Ipam/GameTechnicianDispatch.cs",
+    "Length": 6611
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Ipam/IpamMenuOcclusion.cs",
+    "Length": 4563
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.cs",
+    "Length": 18401
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+    "Length": 16587
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.InventoryTable.cs",
+    "Length": 21734
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.IopsModal.cs",
+    "Length": 10637
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.Lifecycle.cs",
+    "Length": 8946
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.WindowUi.cs",
+    "Length": 65178
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Ipam/LicenseManager.cs",
+    "Length": 1788
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Models/IpModels.cs",
+    "Length": 1311
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Networking/CustomerPrivateSubnetRegistry.cs",
+    "Length": 821
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Networking/DHCPManager.cs",
+    "Length": 25883
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Networking/GameSubnetHelper.cs",
+    "Length": 63490
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Networking/Ipv4Rfc1918.cs",
+    "Length": 1316
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Networking/NetworkDeviceClassifier.cs",
+    "Length": 244
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Networking/ReachabilityService.cs",
+    "Length": 635
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Networking/RouteMath.cs",
+    "Length": 3155
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Networking/ServerCustomerBinding.cs",
+    "Length": 316
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Patches/InputSystemUiCancelPatches.cs",
+    "Length": 1433
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Patches/LegacyInputBlockPatches.cs",
+    "Length": 5144
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/Patches/SetIpKeypadDhcpButton.cs",
+    "Length": 36257
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/UI/IPAMUI.cs",
+    "Length": 3422
+  },
+  {
+    "FullName": "Melons/gregMod.LangCompatBridge/LangCompatBridgeMod.cs",
+    "Length": 1300
+  },
+  {
+    "FullName": "Melons/gregMod.Multiplayer/MultiplayerMod.cs",
+    "Length": 1945
+  },
+  {
+    "FullName": "Melons/gregMod.Multiplayer/UI/LobbyUI.cs",
+    "Length": 4901
+  },
+  {
+    "FullName": "Melons/gregMod.NuGetTest/Program.cs",
+    "Length": 139
+  },
+  {
+    "FullName": "Melons/gregMod.PathRedirector/PathRedirectorMod.cs",
+    "Length": 8365
+  },
+  {
+    "FullName": "Melons/gregMod.PathRedirector/SteamFlatUgc.cs",
+    "Length": 6209
+  },
+  {
+    "FullName": "Melons/gregMod.PlayerModels/PlayerModelsMod.cs",
+    "Length": 1424
+  },
+  {
+    "FullName": "Melons/gregMod.PlayerModels/UI/ModelSelectorUI.cs",
+    "Length": 3500
+  },
+  {
+    "FullName": "Melons/gregMod.QolSuite/QolSuiteMod.cs",
+    "Length": 1121
+  },
+  {
+    "FullName": "Melons/gregMod.QolSuite/Core/QolManager.cs",
+    "Length": 1246
+  },
+  {
+    "FullName": "Melons/gregMod.RackPlanner/RackDesignManager.cs",
+    "Length": 4407
+  },
+  {
+    "FullName": "Melons/gregMod.RackPlanner/RackPlannerMod.cs",
+    "Length": 2318
+  },
+  {
+    "FullName": "Melons/gregMod.RackPlanner/Core/IOPSCalculator.cs",
+    "Length": 4725
+  },
+  {
+    "FullName": "Melons/gregMod.RackPlanner/Core/RackCloner.cs",
+    "Length": 2784
+  },
+  {
+    "FullName": "Melons/gregMod.RackPlanner/Deployment/AutoBuilderAI.cs",
+    "Length": 2883
+  },
+  {
+    "FullName": "Melons/gregMod.RackPlanner/Models/RackModels.cs",
+    "Length": 1425
+  },
+  {
+    "FullName": "Melons/gregMod.RackPlanner/UI/CableEditorUI.cs",
+    "Length": 1273
+  },
+  {
+    "FullName": "Melons/gregMod.RackPlanner/UI/EquipmentConfigUI.cs",
+    "Length": 1396
+  },
+  {
+    "FullName": "Melons/gregMod.RackPlanner/UI/IOPSCalculatorUI.cs",
+    "Length": 2867
+  },
+  {
+    "FullName": "Melons/gregMod.RackPlanner/UI/RackPlannerUI.cs",
+    "Length": 4043
+  },
+  {
+    "FullName": "Melons/gregMod.ResearchRack/ResearchRackMod.cs",
+    "Length": 1198
+  },
+  {
+    "FullName": "Melons/gregMod.ResearchRack/Core/ResearchManager.cs",
+    "Length": 2981
+  },
+  {
+    "FullName": "Melons/gregMod.ResearchRack/UI/ResearchDashboard.cs",
+    "Length": 3627
+  },
+  {
+    "FullName": "Melons/gregMod.ResetSwitch/ResetSwitchMod.cs",
+    "Length": 1423
+  },
+  {
+    "FullName": "Melons/gregMod.ResetSwitch/Config/ModConfig.cs",
+    "Length": 1190
+  },
+  {
+    "FullName": "Melons/gregMod.ResetSwitch/Core/AssetManager.cs",
+    "Length": 2001
+  },
+  {
+    "FullName": "Melons/gregMod.ResetSwitch/Core/BackupManager.cs",
+    "Length": 2856
+  },
+  {
+    "FullName": "Melons/gregMod.ResetSwitch/Core/DeepFlowDiagnostics.cs",
+    "Length": 1839
+  },
+  {
+    "FullName": "Melons/gregMod.ResetSwitch/Core/FlowAnalyzer.cs",
+    "Length": 431
+  },
+  {
+    "FullName": "Melons/gregMod.ResetSwitch/Core/FlowSimulator.cs",
+    "Length": 1102
+  },
+  {
+    "FullName": "Melons/gregMod.ResetSwitch/Core/MountedStateRepairer.cs",
+    "Length": 6919
+  },
+  {
+    "FullName": "Melons/gregMod.ResetSwitch/Core/NetworkRebuildHelper.cs",
+    "Length": 262
+  },
+  {
+    "FullName": "Melons/gregMod.ResetSwitch/Core/SaveAnalysisService.cs",
+    "Length": 20955
+  },
+  {
+    "FullName": "Melons/gregMod.ResetSwitch/Core/SwitchResetter.cs",
+    "Length": 11970
+  },
+  {
+    "FullName": "Melons/gregMod.ResetSwitch/Core/SwitchScanner.cs",
+    "Length": 7606
+  },
+  {
+    "FullName": "Melons/gregMod.ResetSwitch/Integration/GregCoreIntegration.cs",
+    "Length": 4375
+  },
+  {
+    "FullName": "Melons/gregMod.ResetSwitch/UI/FixedTableUI.cs",
+    "Length": 52021
+  },
+  {
+    "FullName": "Melons/gregMod.ResetSwitch/UI/ResetPanelUI.cs",
+    "Length": 821
+  },
+  {
+    "FullName": "Melons/gregMod.StorageServer/StorageServerMod.cs",
+    "Length": 1249
+  },
+  {
+    "FullName": "Melons/gregMod.Sysadmin/SysadminMod.cs",
+    "Length": 1836
+  },
+  {
+    "FullName": "Melons/gregMod.Sysadmin/Core/AutoDispatch.cs",
+    "Length": 2074
+  },
+  {
+    "FullName": "Melons/gregMod.Sysadmin/Core/EOLIssue.cs",
+    "Length": 1038
+  },
+  {
+    "FullName": "Melons/gregMod.Sysadmin/Core/EOLMonitor.cs",
+    "Length": 5395
+  },
+  {
+    "FullName": "Melons/gregMod.Sysadmin/Core/SysadminConfig.cs",
+    "Length": 1588
+  },
+  {
+    "FullName": "Melons/gregMod.Sysadmin/Harmony/EOLPatches.cs",
+    "Length": 1865
+  },
+  {
+    "FullName": "Melons/gregMod.Sysadmin/UI/EOLDashboardUI.cs",
+    "Length": 3793
+  },
+  {
+    "FullName": "src/Core/gregCore/src/UI/Components/GregMainMenuReplacement.cs",
+    "Length": 13456
+  }
+]

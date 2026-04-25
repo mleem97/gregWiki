@@ -1,0 +1,132 @@
+{
+  "generatedAt": "2026-04-17T22:57:28.1039127Z",
+  "features": [
+    {
+      "id": "gregMod.SaveSystemData",
+      "status": "IMPLEMENTED",
+      "plannedServices": [
+        "GregSaveService"
+      ],
+      "implementedServices": [
+        "GregSaveService"
+      ],
+      "plannedHooks": [],
+      "implementedHooks": [],
+      "plannedPatches": [],
+      "implementedPatches": [],
+      "blockers": [],
+      "notes": ""
+    },
+    {
+      "id": "gregMod.BalanceAndEconomy",
+      "status": "IMPLEMENTED",
+      "plannedServices": [
+        "GregBalanceService"
+      ],
+      "implementedServices": [
+        "GregBalanceService"
+      ],
+      "plannedHooks": [],
+      "implementedHooks": [],
+      "plannedPatches": [],
+      "implementedPatches": [],
+      "blockers": [],
+      "notes": ""
+    },
+    {
+      "id": "gregMod.LocalisationBridge",
+      "status": "IMPLEMENTED",
+      "plannedServices": [
+        "GregLocalisationService"
+      ],
+      "implementedServices": [
+        "GregLocalisationService"
+      ],
+      "plannedHooks": [],
+      "implementedHooks": [],
+      "plannedPatches": [],
+      "implementedPatches": [],
+      "blockers": [],
+      "notes": ""
+    },
+    {
+      "id": "gregMod.NetworkTopology",
+      "status": "PARTIAL",
+      "plannedServices": [
+        "GregTopologyService"
+      ],
+      "implementedServices": [
+        "GregTopologyService"
+      ],
+      "plannedHooks": [],
+      "implementedHooks": [],
+      "plannedPatches": [],
+      "implementedPatches": [],
+      "blockers": [],
+      "notes": ""
+    },
+    {
+      "id": "gregMod.PowerSimulation",
+      "status": "IMPLEMENTED",
+      "plannedServices": [
+        "GregPowerService"
+      ],
+      "implementedServices": [
+        "GregPowerService"
+      ],
+      "plannedHooks": [],
+      "implementedHooks": [],
+      "plannedPatches": [],
+      "implementedPatches": [],
+      "blockers": [],
+      "notes": ""
+    },
+    {
+      "id": "gregMod.UIFramework",
+      "status": "PARTIAL",
+      "plannedServices": [
+        "GregUiService",
+        "GregUIManager"
+      ],
+      "implementedServices": [
+        "GregUiService"
+      ],
+      "plannedHooks": [],
+      "implementedHooks": [],
+      "plannedPatches": [],
+      "implementedPatches": [],
+      "blockers": [],
+      "notes": ""
+    },
+    {
+      "id": "gregMod.Multiplayer",
+      "status": "IMPLEMENTED",
+      "plannedServices": [
+        "GregMultiplayerService"
+      ],
+      "implementedServices": [
+        "GregMultiplayerService"
+      ],
+      "plannedHooks": [],
+      "implementedHooks": [],
+      "plannedPatches": [],
+      "implementedPatches": [],
+      "blockers": [],
+      "notes": ""
+    },
+    {
+      "id": "gregMod.MCP",
+      "status": "MISSING",
+      "plannedServices": [
+        "GregMCPServer"
+      ],
+      "implementedServices": [],
+      "plannedHooks": [],
+      "implementedHooks": [],
+      "plannedPatches": [],
+      "implementedPatches": [],
+      "blockers": [],
+      "notes": ""
+    }
+  ]
+}

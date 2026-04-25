@@ -1,0 +1,839 @@
+{
+  "generatedAt": "2026-04-17T22:57:28.1039127Z",
+  "complianceScore": "99/100",
+  "violations": [
+    {
+      "file": "gregCore/lib/MoonSharp/CoreLib/BasicModule.cs",
+      "line": 163,
+      "violation": "string == comparison warning",
+      "severity": "LOW",
+      "fixSuggestion": "StringComparison explizit setzen"
+    },
+    {
+      "file": "gregCore/lib/MoonSharp/DataTypes/DynValue.cs",
+      "line": 642,
+      "violation": "string == comparison warning",
+      "severity": "LOW",
+      "fixSuggestion": "StringComparison explizit setzen"
+    },
+    {
+      "file": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/EventFacade.cs",
+      "line": 32,
+      "violation": "string == comparison warning",
+      "severity": "LOW",
+      "fixSuggestion": "StringComparison explizit setzen"
+    },
+    {
+      "file": "gregCore/lib/MoonSharp/Interop/StandardDescriptors/EventFacade.cs",
+      "line": 34,
+      "violation": "string == comparison warning",
+      "severity": "LOW",
+      "fixSuggestion": "StringComparison explizit setzen"
+    },
+    {
+      "file": "gregCore/src/Diagnostic/GregDiagnosticTools.cs",
+      "line": 16,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregHarmony/GregShopPatch.cs",
+      "line": 19,
+      "violation": "foreach Transform in hot path",
+      "severity": "HIGH",
+      "fixSuggestion": "for-loop oder cache iterator"
+    },
+    {
+      "file": "gregCore/src/gregHarmony/PauseMenuPatch.cs",
+      "line": 26,
+      "violation": "foreach Transform in hot path",
+      "severity": "HIGH",
+      "fixSuggestion": "for-loop oder cache iterator"
+    },
+    {
+      "file": "gregCore/src/gregModLoader/gregCustomEmployeeManager.cs",
+      "line": 532,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregModLoader/gregCustomEmployeeManager.cs",
+      "line": 728,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregModLoader/gregGameApi.cs",
+      "line": 508,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregModLoader/gregGameHooks.cs",
+      "line": 119,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregModLoader/gregModigApi.cs",
+      "line": 617,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregModLoader/gregMultiplayerBridge.cs",
+      "line": 1084,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "gregCore/src/gregModLoader/gregMultiplayerBridge.cs",
+      "line": 1097,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "gregCore/src/gregModLoader/gregMultiplayerBridge.cs",
+      "line": 1100,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "gregCore/src/gregModLoader/gregMultiplayerBridge.cs",
+      "line": 1109,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "gregCore/src/gregModLoader/gregMultiplayerBridge.cs",
+      "line": 1117,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "gregCore/src/gregModLoader/gregMultiplayerBridge.cs",
+      "line": 1125,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "gregCore/src/gregModLoader/gregMultiplayerBridge.cs",
+      "line": 1149,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "gregCore/src/gregModLoader/gregMultiplayerBridge.cs",
+      "line": 1160,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "gregCore/src/gregModLoader/gregMultiplayerBridge.cs",
+      "line": 1184,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "gregCore/src/gregModLoader/UI/gregUiStyler.cs",
+      "line": 22,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregModLoader/UI/gregUiStyler.cs",
+      "line": 45,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregSdk/Exporter/DataExporter.cs",
+      "line": 70,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregSdk/Exporter/DataExporter.cs",
+      "line": 88,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregSdk/Services/GregCustomerService.cs",
+      "line": 21,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregSdk/Services/GregCustomerService.cs",
+      "line": 38,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregSdk/Services/GregNetworkMaintenanceService.cs",
+      "line": 27,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregSdk/Services/GregResetSwitchService.cs",
+      "line": 34,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregSdk/Services/GregResetSwitchService.cs",
+      "line": 213,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregSdk/Services/GregResetSwitchService.cs",
+      "line": 235,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregSdk/Services/GregResetSwitchService.cs",
+      "line": 263,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregSdk/Services/GregResetSwitchService.cs",
+      "line": 276,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregSdk/Services/GregResetSwitchService.cs",
+      "line": 289,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregSdk/Services/GregResetSwitchService.cs",
+      "line": 314,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregSdk/Services/GregResetSwitchService.cs",
+      "line": 329,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregSdk/Services/GregServerDiscoveryService.cs",
+      "line": 57,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregSdk/Services/GregServerDiscoveryService.cs",
+      "line": 107,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregSdk/Services/GregSwitchDiscoveryService.cs",
+      "line": 28,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregSdk/Services/GregUiReplacementService.cs",
+      "line": 43,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/gregSdk/Services/Models/GregModelSwapperService.cs",
+      "line": 89,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregCore/src/Scripting/Lua/LuaModules/gregSdkLuaModule.cs",
+      "line": 85,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregMod.HexViewer/HexViewerUI.cs",
+      "line": 101,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregModmanager/Services/WorkspaceService.cs",
+      "line": 368,
+      "violation": "Input.GetKey/Old Input System",
+      "severity": "HIGH",
+      "fixSuggestion": "Unity InputSystem API verwenden"
+    },
+    {
+      "file": "gregModmanager/Services/WorkspaceService.cs",
+      "line": 418,
+      "violation": "Input.GetKey/Old Input System",
+      "severity": "HIGH",
+      "fixSuggestion": "Unity InputSystem API verwenden"
+    },
+    {
+      "file": "gregReferences/gregTheBuilder/RackBuilderCore.cs",
+      "line": 77,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregReferences/gregTheBuilder/RackBuilderCore.cs",
+      "line": 204,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregReferences/gregTheBuilder/RackBuilderCore.cs",
+      "line": 216,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregReferences/gregTheBuilder/RackBuilderCore.cs",
+      "line": 228,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregReferences/gregTheBuilder/RackBuilderCore.cs",
+      "line": 609,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregReferences/gregTheBuilder/RackBuilderCore.cs",
+      "line": 702,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregReferences/gregTheBuilder/RackBuilderCore.cs",
+      "line": 1033,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregReferences/gregTheBuilder/RackBuilderCore.cs",
+      "line": 1072,
+      "violation": "foreach Transform in hot path",
+      "severity": "HIGH",
+      "fixSuggestion": "for-loop oder cache iterator"
+    },
+    {
+      "file": "gregReferences/gregTheBuilder/RackBuilderCore.cs",
+      "line": 1192,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregReferences/gregTheBuilder/RackBuilderCore.cs",
+      "line": 1301,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregReferences/gregTheBuilder/RackBuilderCore.cs",
+      "line": 1415,
+      "violation": "foreach Transform in hot path",
+      "severity": "HIGH",
+      "fixSuggestion": "for-loop oder cache iterator"
+    },
+    {
+      "file": "gregReferences/gregTheBuilder/RackBuilderCore.cs",
+      "line": 1833,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregReferences/gregTheBuilder/RackBuilderCore.cs",
+      "line": 1845,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregReferences/gregTheBuilder/RackBuilderCore.cs",
+      "line": 1871,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "gregReferences/gregTheBuilder/RackBuilderCore.cs",
+      "line": 1885,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/greg.CableAudit/src/CableAuditSystem.cs",
+      "line": 64,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregCableRemover/Patches/LegacyInputSilencerPatches.cs",
+      "line": 10,
+      "violation": "Input.GetKey/Old Input System",
+      "severity": "HIGH",
+      "fixSuggestion": "Unity InputSystem API verwenden"
+    },
+    {
+      "file": "Melons/gregCableRemover/Patches/LegacyInputSilencerPatches.cs",
+      "line": 20,
+      "violation": "Input.GetKey/Old Input System",
+      "severity": "HIGH",
+      "fixSuggestion": "Unity InputSystem API verwenden"
+    },
+    {
+      "file": "Melons/gregCableRemover/Patches/LegacyInputSilencerPatches.cs",
+      "line": 30,
+      "violation": "Input.GetKey/Old Input System",
+      "severity": "HIGH",
+      "fixSuggestion": "Unity InputSystem API verwenden"
+    },
+    {
+      "file": "Melons/gregExt.PlayerModels/NPCModelReplacer.cs",
+      "line": 78,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregExt.PlayerModels/PlayerModelSwapper.cs",
+      "line": 68,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.HexViewer/HexViewerUI.cs",
+      "line": 98,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Input/LegacyInputAxes.cs",
+      "line": 5,
+      "violation": "Input.GetKey/Old Input System",
+      "severity": "HIGH",
+      "fixSuggestion": "Unity InputSystem API verwenden"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/DeviceInventoryReflection.cs",
+      "line": 515,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/GameTechnicianDispatch.cs",
+      "line": 59,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/GameTechnicianDispatch.cs",
+      "line": 108,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/GameTechnicianDispatch.cs",
+      "line": 158,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.cs",
+      "line": 125,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 194,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 201,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 209,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 216,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 222,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 231,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 240,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 247,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 255,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 261,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 268,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 276,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 288,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 296,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 309,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 315,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 322,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 329,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 336,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 343,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 357,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 370,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.ImGui.cs",
+      "line": 380,
+      "violation": "new GUIStyle() potentiell uncached",
+      "severity": "LOW",
+      "fixSuggestion": "GUIStyle cachen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.Lifecycle.cs",
+      "line": 51,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.Lifecycle.cs",
+      "line": 52,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Ipam/IPAMOverlay.WindowUi.cs",
+      "line": 1432,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Networking/DHCPManager.cs",
+      "line": 63,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Networking/DHCPManager.cs",
+      "line": 121,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Networking/DHCPManager.cs",
+      "line": 136,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Networking/DHCPManager.cs",
+      "line": 208,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Networking/DHCPManager.cs",
+      "line": 586,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Networking/GameSubnetHelper.cs",
+      "line": 52,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Networking/GameSubnetHelper.cs",
+      "line": 291,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Networking/GameSubnetHelper.cs",
+      "line": 1586,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Networking/GameSubnetHelper.cs",
+      "line": 2037,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Networking/GameSubnetHelper.cs",
+      "line": 2039,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Networking/GameSubnetHelper.cs",
+      "line": 2041,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Networking/GameSubnetHelper.cs",
+      "line": 2043,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Patches/SetIpKeypadDhcpButton.cs",
+      "line": 61,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Patches/SetIpKeypadDhcpButton.cs",
+      "line": 80,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.QolSuite/Core/QolManager.cs",
+      "line": 28,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.ResetSwitch/Core/MountedStateRepairer.cs",
+      "line": 30,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.ResetSwitch/Core/MountedStateRepairer.cs",
+      "line": 69,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.ResetSwitch/Core/SaveAnalysisService.cs",
+      "line": 100,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.Sysadmin/Core/EOLMonitor.cs",
+      "line": 84,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    },
+    {
+      "file": "Melons/gregMod.Sysadmin/Core/EOLMonitor.cs",
+      "line": 130,
+      "violation": "FindObjectsOfType potential performance hit",
+      "severity": "MEDIUM",
+      "fixSuggestion": "results cachen, nicht in Update nutzen"
+    }
+  ]
+}

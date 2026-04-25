@@ -1,0 +1,67 @@
+{
+  "generatedAt": "2026-04-17T22:57:28.1039127Z",
+  "hooks": [
+    {
+      "name": "greg.CONTENT.Loaded",
+      "firedIn": [],
+      "subscribedIn": [
+        "Melons/greg.WallLease/src/WallLeaseUI.cs:17"
+      ],
+      "payload": "",
+      "documented": false
+    },
+    {
+      "name": "greg.INPUT.KeyToggleCableAudit",
+      "firedIn": [],
+      "subscribedIn": [
+        "Melons/greg.CableAudit/src/CableAuditMod.cs:29"
+      ],
+      "payload": "",
+      "documented": false
+    },
+    {
+      "name": "greg.NETWORK.BrokenSwitchAdded",
+      "firedIn": [],
+      "subscribedIn": [
+        "Melons/gregMod.QolSuite/Core/QolManager.cs:17"
+      ],
+      "payload": "",
+      "documented": true
+    },
+    {
+      "name": "greg.SYSTEM.ButtonBuyWall",
+      "firedIn": [],
+      "subscribedIn": [
+        "Melons/greg.WallLease/src/WallLeaseMod.cs:27"
+      ],
+      "payload": "",
+      "documented": true
+    }
+  ],
+  "undocumentedHooks": [
+    "greg.CONTENT.Loaded",
+    "greg.INPUT.KeyToggleCableAudit"
+  ],
+  "unusedHooks": [
+    {
+      "name": "greg.CONTENT.Loaded",
+      "firedCount": 0,
+      "subscribedCount": 1
+    },
+    {
+      "name": "greg.INPUT.KeyToggleCableAudit",
+      "firedCount": 0,
+      "subscribedCount": 1
+    },
+    {
+      "name": "greg.NETWORK.BrokenSwitchAdded",
+      "firedCount": 0,
+      "subscribedCount": 1
+    },
+    {
+      "name": "greg.SYSTEM.ButtonBuyWall",
+      "firedCount": 0,
+      "subscribedCount": 1
+    }
+  ]
+}

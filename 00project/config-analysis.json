@@ -1,0 +1,862 @@
+{
+  "generatedAt": "2026-04-17T22:57:28.1039127Z",
+  "configJson": [],
+  "nugetConfig": [
+    {
+      "file": "Melons/gregMod.NuGetTest/nuget.config",
+      "packageSources": [
+        {
+          "key": "local",
+          "value": "C:\\Users\\marvi\\source\\repos\\gregFramework\\nupkgs"
+        },
+        {
+          "key": "nuget.org",
+          "value": "https://api.nuget.org/v3/index.json"
+        }
+      ]
+    },
+    {
+      "file": "nuget.config",
+      "packageSources": [
+        {
+          "key": "local-gregCore",
+          "value": "./nupkgs"
+        },
+        {
+          "key": "github-mleem97",
+          "value": "https://nuget.pkg.github.com/mleem97/index.json"
+        },
+        {
+          "key": "nuget.org",
+          "value": "https://api.nuget.org/v3/index.json"
+        }
+      ]
+    }
+  ],
+  "directoryBuildProps": [
+    {
+      "file": "Directory.Build.props",
+      "properties": [
+        {
+          "name": "GregCoreVersion",
+          "value": "0.1.0"
+        },
+        {
+          "name": "MELON_PATH",
+          "value": "\n      C:\\Program Files (x86)\\Steam\\steamapps\\common\\Data Center\\MelonLoader\n    "
+        },
+        {
+          "name": "PackageOutputPath",
+          "value": "$(MSBuildThisFileDirectory)nupkgs"
+        },
+        {
+          "name": "Deterministic",
+          "value": "true"
+        },
+        {
+          "name": "Nullable",
+          "value": "enable"
+        },
+        {
+          "name": "TreatWarningsAsErrors",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "file": "Melons/gregMod.IPAM/Directory.Build.props",
+      "properties": [
+        {
+          "name": "DataCenterGameDir",
+          "value": "D:\\Steam\\steamapps\\common\\Data Center"
+        },
+        {
+          "name": "MelonLoaderNetDir",
+          "value": "$(DataCenterGameDir)\\MelonLoader\\net6"
+        },
+        {
+          "name": "MelonIl2CppAssembliesDir",
+          "value": "$(DataCenterGameDir)\\MelonLoader\\Il2CppAssemblies"
+        },
+        {
+          "name": "MelonIl2CppInteropDir",
+          "value": "$(DataCenterGameDir)\\MelonLoader\\Dependencies\\SupportModules\\Il2Cpp"
+        },
+        {
+          "name": "BepInExInteropDir",
+          "value": "$(DataCenterGameDir)\\BepInEx\\interop"
+        },
+        {
+          "name": "GameInteropDir",
+          "value": "$(MelonIl2CppAssembliesDir)"
+        },
+        {
+          "name": "GameInteropDir",
+          "value": "$(BepInExInteropDir)"
+        }
+      ]
+    },
+    {
+      "file": "shared/Directory.Build.props",
+      "properties": [
+        {
+          "name": "AppendTargetFrameworkToOutputPath",
+          "value": "false"
+        },
+        {
+          "name": "CopyLocalLockFileAssemblies",
+          "value": "true"
+        },
+        {
+          "name": "LangVersion",
+          "value": "latest"
+        },
+        {
+          "name": "ImplicitUsings",
+          "value": "disable"
+        }
+      ]
+    }
+  ],
+  "csproj": [
+    {
+      "file": "gregCore/gregCore.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [
+        {
+          "include": "Jint",
+          "version": "4.1.0"
+        }
+      ],
+      "references": [
+        {
+          "include": "MelonLoader",
+          "hintPath": "$(MELON_PATH)\\MelonLoader.dll"
+        },
+        {
+          "include": "0Harmony",
+          "hintPath": "$(MELON_PATH)\\0Harmony.dll"
+        },
+        {
+          "include": "Il2CppInterop.Runtime",
+          "hintPath": "$(MELON_PATH)\\Il2CppAssemblies\\Il2CppInterop.Runtime.dll"
+        },
+        {
+          "include": "Assembly-CSharp",
+          "hintPath": "$(MELON_PATH)\\Il2CppAssemblies\\Assembly-CSharp.dll"
+        },
+        {
+          "include": "UnityEngine.CoreModule",
+          "hintPath": "$(MELON_PATH)\\Il2CppAssemblies\\UnityEngine.CoreModule.dll"
+        }
+      ]
+    },
+    {
+      "file": "gregCore/tests/gregCore.Tests.csproj",
+      "targetFramework": "net8.0",
+      "packageReferences": [
+        {
+          "include": "coverlet.collector",
+          "version": "6.0.4"
+        },
+        {
+          "include": "Microsoft.NET.Test.Sdk",
+          "version": "17.14.1"
+        },
+        {
+          "include": "xunit",
+          "version": "2.9.3"
+        },
+        {
+          "include": "xunit.runner.visualstudio",
+          "version": "3.1.4"
+        }
+      ],
+      "references": []
+    },
+    {
+      "file": "gregMod.GregifyEmployees/gregMod.GregifyEmployees.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "gregMod.HexViewer/gregMod.HexViewer.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "gregModmanager/GregModmanager.csproj",
+      "targetFramework": null,
+      "packageReferences": [
+        {
+          "include": "Microsoft.Maui.Controls",
+          "version": "9.0.90"
+        },
+        {
+          "include": "Facepunch.Steamworks",
+          "version": "2.3.3"
+        }
+      ],
+      "references": []
+    },
+    {
+      "file": "gregModmanager/GregModmanager.Tests/GregModmanager.Tests.csproj",
+      "targetFramework": "net8.0",
+      "packageReferences": [
+        {
+          "include": "coverlet.collector",
+          "version": "6.0.4"
+        },
+        {
+          "include": "Microsoft.NET.Test.Sdk",
+          "version": "17.14.1"
+        },
+        {
+          "include": "xunit",
+          "version": "2.9.3"
+        },
+        {
+          "include": "xunit.runner.visualstudio",
+          "version": "3.1.4"
+        }
+      ],
+      "references": []
+    },
+    {
+      "file": "gregReferences/Assembly-CSharp/Assembly-CSharp.csproj",
+      "targetFramework": null,
+      "packageReferences": [],
+      "references": [
+        {
+          "include": "Il2CppCoffee.UIEffect",
+          "hintPath": "lib\\Il2CppCoffee.UIEffect.dll"
+        },
+        {
+          "include": "Il2CppEPO",
+          "hintPath": "lib\\Il2CppEPO.dll"
+        },
+        {
+          "include": "Il2CppSystem.Core",
+          "hintPath": "lib\\Il2CppSystem.Core.dll"
+        },
+        {
+          "include": "Il2CppUMA_Core",
+          "hintPath": "lib\\Il2CppUMA_Core.dll"
+        },
+        {
+          "include": "Il2Cppcom.rlabrecque.steamworks.net",
+          "hintPath": "lib\\Il2Cppcom.rlabrecque.steamworks.net.dll"
+        },
+        {
+          "include": "Il2Cppmscorlib",
+          "hintPath": "lib\\Il2Cppmscorlib.dll"
+        },
+        {
+          "include": "System.Runtime",
+          "hintPath": null
+        },
+        {
+          "include": "Unity.Animation.Rigging",
+          "hintPath": "lib\\Unity.Animation.Rigging.dll"
+        },
+        {
+          "include": "Unity.Burst",
+          "hintPath": "lib\\Unity.Burst.dll"
+        },
+        {
+          "include": "Unity.Cinemachine",
+          "hintPath": "lib\\Unity.Cinemachine.dll"
+        },
+        {
+          "include": "Unity.Entities",
+          "hintPath": "lib\\Unity.Entities.dll"
+        },
+        {
+          "include": "Unity.Entities.Hybrid",
+          "hintPath": "lib\\Unity.Entities.Hybrid.dll"
+        },
+        {
+          "include": "Unity.InputSystem",
+          "hintPath": "lib\\Unity.InputSystem.dll"
+        },
+        {
+          "include": "Unity.Mathematics",
+          "hintPath": "lib\\Unity.Mathematics.dll"
+        },
+        {
+          "include": "Unity.RenderPipelines.Core.Runtime",
+          "hintPath": "lib\\Unity.RenderPipelines.Core.Runtime.dll"
+        },
+        {
+          "include": "Unity.RenderPipelines.HighDefinition.Runtime",
+          "hintPath": "lib\\Unity.RenderPipelines.HighDefinition.Runtime.dll"
+        },
+        {
+          "include": "Unity.TextMeshPro",
+          "hintPath": "lib\\Unity.TextMeshPro.dll"
+        },
+        {
+          "include": "Unity.Transforms",
+          "hintPath": "lib\\Unity.Transforms.dll"
+        },
+        {
+          "include": "UnityEngine.AIModule",
+          "hintPath": "lib\\UnityEngine.AIModule.dll"
+        },
+        {
+          "include": "UnityEngine.AnimationModule",
+          "hintPath": "lib\\UnityEngine.AnimationModule.dll"
+        },
+        {
+          "include": "UnityEngine.AudioModule",
+          "hintPath": "lib\\UnityEngine.AudioModule.dll"
+        },
+        {
+          "include": "UnityEngine.CoreModule",
+          "hintPath": "lib\\UnityEngine.CoreModule.dll"
+        },
+        {
+          "include": "UnityEngine.ParticleSystemModule",
+          "hintPath": "lib\\UnityEngine.ParticleSystemModule.dll"
+        },
+        {
+          "include": "UnityEngine.PhysicsModule",
+          "hintPath": "lib\\UnityEngine.PhysicsModule.dll"
+        },
+        {
+          "include": "UnityEngine.TerrainModule",
+          "hintPath": "lib\\UnityEngine.TerrainModule.dll"
+        },
+        {
+          "include": "UnityEngine.TextRenderingModule",
+          "hintPath": "lib\\UnityEngine.TextRenderingModule.dll"
+        },
+        {
+          "include": "UnityEngine.UI",
+          "hintPath": "lib\\UnityEngine.UI.dll"
+        },
+        {
+          "include": "UnityEngine.UIModule",
+          "hintPath": "lib\\UnityEngine.UIModule.dll"
+        },
+        {
+          "include": "UnityEngine.VehiclesModule",
+          "hintPath": "lib\\UnityEngine.VehiclesModule.dll"
+        },
+        {
+          "include": "UnityEngine.VideoModule",
+          "hintPath": "lib\\UnityEngine.VideoModule.dll"
+        }
+      ]
+    },
+    {
+      "file": "gregReferences/gregTheBuilder/gregTheBuilder.csproj",
+      "targetFramework": null,
+      "packageReferences": [],
+      "references": [
+        {
+          "include": "Assembly-CSharp",
+          "hintPath": null
+        },
+        {
+          "include": "Il2Cppmscorlib",
+          "hintPath": null
+        },
+        {
+          "include": "System.Collections",
+          "hintPath": null
+        },
+        {
+          "include": "System.Linq",
+          "hintPath": null
+        },
+        {
+          "include": "System.Runtime",
+          "hintPath": null
+        },
+        {
+          "include": "Unity.Entities",
+          "hintPath": null
+        },
+        {
+          "include": "Unity.TextMeshPro",
+          "hintPath": null
+        },
+        {
+          "include": "UnityEngine.CoreModule",
+          "hintPath": null
+        },
+        {
+          "include": "UnityEngine.PhysicsModule",
+          "hintPath": null
+        },
+        {
+          "include": "UnityEngine.UI",
+          "hintPath": null
+        }
+      ]
+    },
+    {
+      "file": "local/gregCore-nuget-smoketest/SmokeConsumer/SmokeConsumer.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [
+        {
+          "include": "gregCore",
+          "version": "0.1.0"
+        }
+      ],
+      "references": []
+    },
+    {
+      "file": "Melons/greg.CableAudit/gregMod.CableAudit.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": [
+        {
+          "include": "gregCore",
+          "hintPath": "../../../gregCore/bin/Release/net6.0/gregCore.dll"
+        }
+      ]
+    },
+    {
+      "file": "Melons/greg.WallLease/gregMod.WallLease.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": [
+        {
+          "include": "gregCore",
+          "hintPath": "..\\..\\..\\gregCore\\bin\\Release\\net6.0\\gregCore.dll"
+        }
+      ]
+    },
+    {
+      "file": "Melons/gregCableRemover/MassCableRemover.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": [
+        {
+          "include": "MelonLoader",
+          "hintPath": "$(MelonLoaderNet6Dir)\\MelonLoader.dll"
+        },
+        {
+          "include": "0Harmony",
+          "hintPath": "$(MelonLoaderNet6Dir)\\0Harmony.dll"
+        },
+        {
+          "include": "Il2CppInterop.Runtime",
+          "hintPath": "$(MelonLoaderNet6Dir)\\Il2CppInterop.Runtime.dll"
+        },
+        {
+          "include": "Assembly-CSharp",
+          "hintPath": "$(Il2CppInteropAssembliesDir)\\Assembly-CSharp.dll"
+        },
+        {
+          "include": "Il2Cppmscorlib",
+          "hintPath": "$(Il2CppInteropAssembliesDir)\\Il2Cppmscorlib.dll"
+        },
+        {
+          "include": "Il2CppSystem",
+          "hintPath": "$(Il2CppInteropAssembliesDir)\\Il2CppSystem.dll"
+        },
+        {
+          "include": "Il2CppSystem.Core",
+          "hintPath": "$(Il2CppInteropAssembliesDir)\\Il2CppSystem.Core.dll"
+        },
+        {
+          "include": "Il2Cpp__Generated",
+          "hintPath": "$(Il2CppInteropAssembliesDir)\\Il2Cpp__Generated.dll"
+        },
+        {
+          "include": "UnityEngine.CoreModule",
+          "hintPath": "$(Il2CppInteropAssembliesDir)\\UnityEngine.CoreModule.dll"
+        },
+        {
+          "include": "UnityEngine.PhysicsModule",
+          "hintPath": "$(Il2CppInteropAssembliesDir)\\UnityEngine.PhysicsModule.dll"
+        },
+        {
+          "include": "UnityEngine.IMGUIModule",
+          "hintPath": "$(Il2CppInteropAssembliesDir)\\UnityEngine.IMGUIModule.dll"
+        },
+        {
+          "include": "Unity.InputSystem",
+          "hintPath": "$(Il2CppInteropAssembliesDir)\\Unity.InputSystem.dll"
+        },
+        {
+          "include": "UnityEngine.InputLegacyModule",
+          "hintPath": "$(Il2CppInteropAssembliesDir)\\UnityEngine.InputLegacyModule.dll"
+        },
+        {
+          "include": "UnityEngine.TextRenderingModule",
+          "hintPath": "$(Il2CppInteropAssembliesDir)\\UnityEngine.TextRenderingModule.dll"
+        },
+        {
+          "include": "UnityEngine.UI",
+          "hintPath": "$(Il2CppInteropAssembliesDir)\\UnityEngine.UI.dll"
+        },
+        {
+          "include": "gregCore",
+          "hintPath": "$(GregCoreDir)gregCore.dll"
+        }
+      ]
+    },
+    {
+      "file": "Melons/gregExplorer/Il2CppAssemblyFixer/Il2CppAssemblyFixer.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [
+        {
+          "include": "dnlib",
+          "version": "4.5.0"
+        },
+        {
+          "include": "Mono.Cecil",
+          "version": "0.11.5"
+        }
+      ],
+      "references": []
+    },
+    {
+      "file": "Melons/gregExplorer/UnityExplorerUnity6Shim/UnityExplorerUnity6Shim.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregExt.AssetExporter/Greg.Plugin.AssetExporter.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregExt.AssetExporter/Greg.Plugin.AssetExporter.Tests/Greg.Plugin.AssetExporter.Tests.csproj",
+      "targetFramework": "net8.0",
+      "packageReferences": [
+        {
+          "include": "coverlet.collector",
+          "version": "6.0.4"
+        },
+        {
+          "include": "Microsoft.NET.Test.Sdk",
+          "version": "17.14.1"
+        },
+        {
+          "include": "xunit",
+          "version": "2.9.3"
+        },
+        {
+          "include": "xunit.runner.visualstudio",
+          "version": "3.1.4"
+        }
+      ],
+      "references": []
+    },
+    {
+      "file": "Melons/gregExt.Multiplayer/Greg.Plugin.Multiplayer.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregExt.Multiplayer/Greg.Plugin.Multiplayer.Tests/Greg.Plugin.Multiplayer.Tests.csproj",
+      "targetFramework": "net8.0",
+      "packageReferences": [
+        {
+          "include": "coverlet.collector",
+          "version": "6.0.4"
+        },
+        {
+          "include": "Microsoft.NET.Test.Sdk",
+          "version": "17.14.1"
+        },
+        {
+          "include": "xunit",
+          "version": "2.9.3"
+        },
+        {
+          "include": "xunit.runner.visualstudio",
+          "version": "3.1.4"
+        }
+      ],
+      "references": []
+    },
+    {
+      "file": "Melons/gregExt.PlayerModels/Greg.Plugin.PlayerModels.Tests/Greg.Plugin.PlayerModels.Tests.csproj",
+      "targetFramework": "net8.0",
+      "packageReferences": [
+        {
+          "include": "coverlet.collector",
+          "version": "6.0.4"
+        },
+        {
+          "include": "Microsoft.NET.Test.Sdk",
+          "version": "17.14.1"
+        },
+        {
+          "include": "xunit",
+          "version": "2.9.3"
+        },
+        {
+          "include": "xunit.runner.visualstudio",
+          "version": "3.1.4"
+        }
+      ],
+      "references": []
+    },
+    {
+      "file": "Melons/gregExt.PlayerModels/gregExt.PlayerModels.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregExt.Sysadmin/Greg.Plugin.Sysadmin.Tests/Greg.Plugin.Sysadmin.Tests.csproj",
+      "targetFramework": "net8.0",
+      "packageReferences": [
+        {
+          "include": "coverlet.collector",
+          "version": "6.0.4"
+        },
+        {
+          "include": "Microsoft.NET.Test.Sdk",
+          "version": "17.14.1"
+        },
+        {
+          "include": "xunit",
+          "version": "2.9.3"
+        },
+        {
+          "include": "xunit.runner.visualstudio",
+          "version": "3.1.4"
+        }
+      ],
+      "references": []
+    },
+    {
+      "file": "Melons/gregExt.Sysadmin/gregExt.Sysadmin.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregExt.WebUIBridge/Greg.Plugin.WebUIBridge.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregExt.WebUIBridge/Greg.Plugin.WebUIBridge.Tests/Greg.Plugin.WebUIBridge.Tests.csproj",
+      "targetFramework": "net8.0",
+      "packageReferences": [
+        {
+          "include": "coverlet.collector",
+          "version": "6.0.4"
+        },
+        {
+          "include": "Microsoft.NET.Test.Sdk",
+          "version": "17.14.1"
+        },
+        {
+          "include": "xunit",
+          "version": "2.9.3"
+        },
+        {
+          "include": "xunit.runner.visualstudio",
+          "version": "3.1.4"
+        }
+      ],
+      "references": []
+    },
+    {
+      "file": "Melons/gregMod.ConsoleInputGuard/gregMod.ConsoleInputGuard.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregMod.EconomyEngine/gregMod.EconomyEngine.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregMod.FunStuff/gregMod.FunStuff.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregMod.GregifyEmployees/gregMod.GregifyEmployees.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregMod.HexViewer/gregMod.HexViewer.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregMod.IPAM/DHCPSwitches.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": [
+        {
+          "include": "0Harmony",
+          "hintPath": "$(MelonLoaderNetDir)\\0Harmony.dll"
+        },
+        {
+          "include": "Assembly-CSharp",
+          "hintPath": "$(GameInteropDir)\\Assembly-CSharp.dll"
+        },
+        {
+          "include": "Il2CppInterop.Runtime",
+          "hintPath": "$(MelonLoaderNetDir)\\Il2CppInterop.Runtime.dll"
+        },
+        {
+          "include": "MelonLoader",
+          "hintPath": "$(MelonLoaderNetDir)\\MelonLoader.dll"
+        },
+        {
+          "include": "Unity.InputSystem",
+          "hintPath": "$(GameInteropDir)\\Unity.InputSystem.dll"
+        },
+        {
+          "include": "UnityEngine.AssetBundleModule",
+          "hintPath": "$(GameInteropDir)\\UnityEngine.AssetBundleModule.dll"
+        },
+        {
+          "include": "UnityEngine.CoreModule",
+          "hintPath": "$(GameInteropDir)\\UnityEngine.CoreModule.dll"
+        },
+        {
+          "include": "UnityEngine.ImageConversionModule",
+          "hintPath": "$(GameInteropDir)\\UnityEngine.ImageConversionModule.dll"
+        },
+        {
+          "include": "UnityEngine.PhysicsModule",
+          "hintPath": "$(GameInteropDir)\\UnityEngine.PhysicsModule.dll"
+        },
+        {
+          "include": "UnityEngine.IMGUIModule",
+          "hintPath": "$(GameInteropDir)\\UnityEngine.IMGUIModule.dll"
+        },
+        {
+          "include": "UnityEngine.TextRenderingModule",
+          "hintPath": "$(GameInteropDir)\\UnityEngine.TextRenderingModule.dll"
+        },
+        {
+          "include": "UnityEngine.UIModule",
+          "hintPath": "$(GameInteropDir)\\UnityEngine.UIModule.dll"
+        },
+        {
+          "include": "UnityEngine.UI",
+          "hintPath": "$(GameInteropDir)\\UnityEngine.UI.dll"
+        },
+        {
+          "include": "Il2Cppmscorlib",
+          "hintPath": "$(GameInteropDir)\\Il2Cppmscorlib.dll"
+        },
+        {
+          "include": null,
+          "hintPath": "$(MelonIl2CppInteropDir)\\Il2CppInterop.Runtime.dll"
+        }
+      ]
+    },
+    {
+      "file": "Melons/gregMod.IPAM/gregMod.IPAM.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregMod.LangCompatBridge/gregMod.LangCompatBridge.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregMod.Multiplayer/gregMod.Multiplayer.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregMod.NuGetTest/gregMod.NuGetTest.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [
+        {
+          "include": "gregCore",
+          "version": "0.1.0"
+        }
+      ],
+      "references": []
+    },
+    {
+      "file": "Melons/gregMod.PathRedirector/gregMod.PathRedirector.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregMod.PlayerModels/gregMod.PlayerModels.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregMod.QolSuite/gregMod.QolSuite.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregMod.RackPlanner/gregMod.RackPlanner.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregMod.ResearchRack/gregMod.ResearchRack.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregMod.ResetSwitch/gregMod.ResetSwitch.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregMod.StorageServer/gregMod.StorageServer.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": [
+        {
+          "include": "Assembly-CSharp",
+          "hintPath": "$(Unity6RefDir)\\Assembly-CSharp.dll"
+        }
+      ]
+    },
+    {
+      "file": "Melons/gregMod.Sysadmin/gregMod.Sysadmin.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": []
+    },
+    {
+      "file": "Melons/gregTheBuilder/gregTheBuilder.csproj",
+      "targetFramework": "net6.0",
+      "packageReferences": [],
+      "references": [
+        {
+          "include": "gregCore",
+          "hintPath": "../../../gregCore.dll"
+        }
+      ]
+    }
+  ]
+}

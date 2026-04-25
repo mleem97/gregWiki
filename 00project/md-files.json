@@ -1,0 +1,3662 @@
+[
+  {
+    "FullName": "AGENTS.md",
+    "Length": 2569
+  },
+  {
+    "FullName": "aichat.md",
+    "Length": 1119997
+  },
+  {
+    "FullName": "CHANGELOG.md",
+    "Length": 364
+  },
+  {
+    "FullName": "CONTRIBUTING.md",
+    "Length": 2218
+  },
+  {
+    "FullName": "COOKIE_POLICY.md",
+    "Length": 6057
+  },
+  {
+    "FullName": "GEMINI.md",
+    "Length": 3463
+  },
+  {
+    "FullName": "GH-APP-SECURITY.md",
+    "Length": 2339
+  },
+  {
+    "FullName": "INSTRUCTIONS.md",
+    "Length": 3772
+  },
+  {
+    "FullName": "LEGAL_NOTICE.md",
+    "Length": 7658
+  },
+  {
+    "FullName": "MIGRATION_STATUS.md",
+    "Length": 2988
+  },
+  {
+    "FullName": "MODDING_RESOURCES.md",
+    "Length": 2417
+  },
+  {
+    "FullName": "PRIVACY_POLICY.md",
+    "Length": 12213
+  },
+  {
+    "FullName": "README.md",
+    "Length": 548
+  },
+  {
+    "FullName": "TERMS_OF_SERVICE.md",
+    "Length": 22751
+  },
+  {
+    "FullName": "greg-rust-sdk/README.md",
+    "Length": 63
+  },
+  {
+    "FullName": "gregCore/CHANGELOG.md",
+    "Length": 5622
+  },
+  {
+    "FullName": "gregCore/README.md",
+    "Length": 2034
+  },
+  {
+    "FullName": "gregCore/RELEASENOTE_DISCORD.md",
+    "Length": 1911
+  },
+  {
+    "FullName": "gregCore/RELEASENOTE.md",
+    "Length": 1831
+  },
+  {
+    "FullName": "gregCore/TODO.md",
+    "Length": 3845
+  },
+  {
+    "FullName": "gregCore/.github/copilot-instructions.md",
+    "Length": 1113
+  },
+  {
+    "FullName": "gregCore/.github/PULL_REQUEST_TEMPLATE.md",
+    "Length": 577
+  },
+  {
+    "FullName": "gregCore/.github/instructions/gregframework_system_architecture.instructions.md",
+    "Length": 9324
+  },
+  {
+    "FullName": "gregCore/.github/ISSUE_TEMPLATE/bug_report.md",
+    "Length": 601
+  },
+  {
+    "FullName": "gregCore/docs/EXTENDING_gregCore.md",
+    "Length": 8274
+  },
+  {
+    "FullName": "gregCore/docs/MODDING_MelonLoader_gregCore.md",
+    "Length": 7775
+  },
+  {
+    "FullName": "gregCore/docs/MODULARIZATION_ANALYSIS.md",
+    "Length": 2860
+  },
+  {
+    "FullName": "gregCore/docs/SPONSORS.md",
+    "Length": 1584
+  },
+  {
+    "FullName": "gregCore/docs/STRUCTURE.md",
+    "Length": 884
+  },
+  {
+    "FullName": "gregCore/docs/.gemini/ralph-loop.local.md",
+    "Length": 3183
+  },
+  {
+    "FullName": "gregCore/docs/01_getting-started/architecture.md",
+    "Length": 5071
+  },
+  {
+    "FullName": "gregCore/docs/01_getting-started/intro.md",
+    "Length": 1269
+  },
+  {
+    "FullName": "gregCore/docs/01_getting-started/quickstart.md",
+    "Length": 4746
+  },
+  {
+    "FullName": "gregCore/docs/02_development/framework-readiness.md",
+    "Length": 12737
+  },
+  {
+    "FullName": "gregCore/docs/02_development/api-reference/hooks-catalog.md",
+    "Length": 9246
+  },
+  {
+    "FullName": "gregCore/docs/02_development/api-reference/naming-conventions.md",
+    "Length": 3950
+  },
+  {
+    "FullName": "gregCore/docs/02_development/concepts/hooks-and-events.md",
+    "Length": 5442
+  },
+  {
+    "FullName": "gregCore/docs/02_development/concepts/modding-basics.md",
+    "Length": 3001
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/customer/greg-customer-appperformanceadded.md",
+    "Length": 4130
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/customer/greg-customer-apptext.md",
+    "Length": 3927
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/customer/greg-customer-componentinitialized.md",
+    "Length": 4244
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/customer/greg-customer-customerservercountandspeedchanged.md",
+    "Length": 4389
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/customer/greg-customer-dataloaded.md",
+    "Length": 3987
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/customer/greg-customer-getappidforip.md",
+    "Length": 4032
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/customer/greg-customer-getservertypeforip.md",
+    "Length": 4117
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/customer/greg-customer-getsubnetsperapp.md",
+    "Length": 4077
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/customer/greg-customer-gettotalappspeed.md",
+    "Length": 4077
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/customer/greg-customer-isippresent.md",
+    "Length": 3998
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/customer/greg-customer-resetallappspeeds.md",
+    "Length": 4094
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/customer/greg-customer-speedoncustomerbaseappchanged.md",
+    "Length": 4304
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/customer/greg-customer-upappset.md",
+    "Length": 3971
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/customer/greg-customer-upbaseset.md",
+    "Length": 3992
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/employee/greg-employee-assignjob.md",
+    "Length": 3977
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/employee/greg-employee-buttonfireemployee.md",
+    "Length": 4098
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/employee/greg-employee-buttonhireemployee.md",
+    "Length": 4098
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/employee/greg-employee-componentinitialized.md",
+    "Length": 4404
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/employee/greg-employee-devicerepaired.md",
+    "Length": 4027
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/employee/greg-employee-dispatched.md",
+    "Length": 4071
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/employee/greg-employee-fired.md",
+    "Length": 3952
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/employee/greg-employee-getcorrectdeviceprefab.md",
+    "Length": 4171
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/employee/greg-employee-hired.md",
+    "Length": 3960
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/employee/greg-employee-isdevicealreadyassigned.md",
+    "Length": 4301
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/employee/greg-employee-jobqueued.md",
+    "Length": 4047
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/employee/greg-employee-jobqueueloaded.md",
+    "Length": 4110
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/employee/greg-employee-nextjobrequested.md",
+    "Length": 4107
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/employee/greg-employee-ondestroy.md",
+    "Length": 3950
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/employee/greg-employee-onloadingstarted.md",
+    "Length": 4069
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/employee/greg-employee-positionhandtargetsondevice.md",
+    "Length": 4266
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/employee/greg-employee-rotatetowardsgoal.md",
+    "Length": 4093
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/gameplay/greg-gameplay-clearobjectives.md",
+    "Length": 4052
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/gameplay/greg-gameplay-componentinitialized.md",
+    "Length": 4230
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/gameplay/greg-gameplay-createappobjective.md",
+    "Length": 4121
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/gameplay/greg-gameplay-createnewobjective.md",
+    "Length": 4136
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/gameplay/greg-gameplay-destroyobjective.md",
+    "Length": 4072
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/gameplay/greg-gameplay-gettimedobjective.md",
+    "Length": 4089
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/gameplay/greg-gameplay-instantiateobjectivesign.md",
+    "Length": 4217
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/gameplay/greg-gameplay-istutorialinprogress.md",
+    "Length": 4137
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/gameplay/greg-gameplay-objectivesignremoved.md",
+    "Length": 4136
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/gameplay/greg-gameplay-objectivetimedtext.md",
+    "Length": 4103
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/gameplay/greg-gameplay-ondestroy.md",
+    "Length": 3950
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/gameplay/greg-gameplay-onload.md",
+    "Length": 3899
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/gameplay/greg-gameplay-startobjective.md",
+    "Length": 4053
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-assignnewposition.md",
+    "Length": 4142
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-brokenserveradded.md",
+    "Length": 4068
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-brokenserverremoved.md",
+    "Length": 4106
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-buttonshownetworkswitchconfig.md",
+    "Length": 4286
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-cableconnectionremoved.md",
+    "Length": 4154
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-cablefromlacpgroupsremoved.md",
+    "Length": 4222
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-cableloaded.md",
+    "Length": 3989
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-canacceptsfp.md",
+    "Length": 3972
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-clearerrorsign.md",
+    "Length": 4031
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-clearmap.md",
+    "Length": 3917
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-clearwarningsign.md",
+    "Length": 4069
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-componentinitialized.md",
+    "Length": 5155
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-connect.md",
+    "Length": 3914
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-createlacpgroup.md",
+    "Length": 4061
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-createnewreversecable.md",
+    "Length": 4154
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-createropeattachpoint.md",
+    "Length": 4134
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-createtubemesh.md",
+    "Length": 4048
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-customerservercountandspeedchanged.md",
+    "Length": 4370
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-deviceadded.md",
+    "Length": 3993
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-devicecustomeridchanged.md",
+    "Length": 4179
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-deviceremoved.md",
+    "Length": 4004
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-devicerepaired.md",
+    "Length": 4023
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-disconnect.md",
+    "Length": 3965
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-disconnectcables.md",
+    "Length": 4065
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-disconnectcableswhenswitchisoff.md",
+    "Length": 4320
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-findallroutes.md",
+    "Length": 4016
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-findphysicalpath.md",
+    "Length": 4067
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-fromportremoved.md",
+    "Length": 4028
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-generatebentsegment.md",
+    "Length": 4153
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-generatecornerbend.md",
+    "Length": 4139
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-generatedevicename.md",
+    "Length": 4116
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-generatefinalpath.md",
+    "Length": 4089
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getallbrokenservers.md",
+    "Length": 4104
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getallbrokenswitches.md",
+    "Length": 4121
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getalldevices.md",
+    "Length": 4002
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getalllacpgroups.md",
+    "Length": 4053
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getallnetworkswitches.md",
+    "Length": 4138
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getallservers.md",
+    "Length": 4002
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getcablematerial.md",
+    "Length": 4072
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getcablepositions.md",
+    "Length": 4089
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getconnecteddevices.md",
+    "Length": 4116
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getcustomerbase.md",
+    "Length": 4039
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getdevice.md",
+    "Length": 3940
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getfreespaceinthebox.md",
+    "Length": 4105
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getlacpgroupbetween.md",
+    "Length": 4118
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getlacpgroupforcable.md",
+    "Length": 4124
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getrawcablepositions.md",
+    "Length": 4140
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getrawlinktransforms.md",
+    "Length": 4140
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getropeattachpoint.md",
+    "Length": 4083
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getserver.md",
+    "Length": 3940
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getswitchbyid.md",
+    "Length": 4008
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-getswitchid.md",
+    "Length": 3980
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-handlenewcablewhileoff.md",
+    "Length": 4170
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-insertdirectlyintoport.md",
+    "Length": 4160
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-insertedinsfpport.md",
+    "Length": 4081
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-insertsfpbackintobox.md",
+    "Length": 4105
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-interactonclick.md",
+    "Length": 4575
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-isallowedtodosecondaction.md",
+    "Length": 4202
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-isanycableconnected.md",
+    "Length": 4308
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-iscablecomplete.md",
+    "Length": 4055
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-isipaddressduplicate.md",
+    "Length": 4135
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-isolateddevicesremoved.md",
+    "Length": 4151
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-ispatchpanelport.md",
+    "Length": 4059
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-itisbroken.md",
+    "Length": 3963
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-lacpgroupremoved.md",
+    "Length": 4052
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-lacpgroupsset.md",
+    "Length": 4039
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-lastpositionremoved.md",
+    "Length": 4119
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-method-internal-static-void-intptr-intptr-pdm-0.md",
+    "Length": 4630
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-method-internal-static-void-intptr-intptr-pdm-1.md",
+    "Length": 4630
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-ondestroy.md",
+    "Length": 4108
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-onhoverover.md",
+    "Length": 3964
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-powerbutton.md",
+    "Length": 3984
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-powerlightmaterialset.md",
+    "Length": 4158
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-printnetworkmap.md",
+    "Length": 4036
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-reconnectcables.md",
+    "Length": 4048
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-redrawcable.md",
+    "Length": 3987
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-registercableconnection.md",
+    "Length": 4279
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-registercustomerbase.md",
+    "Length": 4133
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-registerserver.md",
+    "Length": 4025
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-registerswitch.md",
+    "Length": 4032
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-resolvethroughpatchpanel.md",
+    "Length": 4203
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-returnsfpdirectly.md",
+    "Length": 4063
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-screenuichanged.md",
+    "Length": 4044
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-secondactiononclick.md",
+    "Length": 4100
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-sfpfromboxremoved.md",
+    "Length": 4053
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-sfpsfromsaveloaded.md",
+    "Length": 4063
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-switchconnectionadded.md",
+    "Length": 4144
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-switchinsertedinrack.md",
+    "Length": 4147
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-takesfpfrombox.md",
+    "Length": 4003
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-turnoffcommonfunctions.md",
+    "Length": 4167
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-turnoncommonfunction.md",
+    "Length": 4133
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/network/greg-network-validaterackposition.md",
+    "Length": 4133
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/player/greg-player-checkfallsthroughmap.md",
+    "Length": 4089
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/player/greg-player-componentinitialized.md",
+    "Length": 4558
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/player/greg-player-confinedcursorforui.md",
+    "Length": 4100
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/player/greg-player-defaultactioneffect.md",
+    "Length": 4114
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/player/greg-player-droppedallitems.md",
+    "Length": 4038
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/player/greg-player-gainiopseffect.md",
+    "Length": 4015
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/player/greg-player-loaded.md",
+    "Length": 3879
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/player/greg-player-lockedcursorforplayermovement.md",
+    "Length": 4270
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/player/greg-player-playerstopmovement.md",
+    "Length": 4083
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/player/greg-player-warped.md",
+    "Length": 3920
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/rack/greg-rack-audiovolumechanged.md",
+    "Length": 3999
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/rack/greg-rack-buttondisablepositionsinrack.md",
+    "Length": 4173
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/rack/greg-rack-componentinitialized.md",
+    "Length": 4112
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/rack/greg-rack-disablepositionsbuttonmaterialset.md",
+    "Length": 4266
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/rack/greg-rack-ispositionavailable.md",
+    "Length": 4028
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/rack/greg-rack-markpositionasunused.md",
+    "Length": 4045
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/rack/greg-rack-markpositionasused.md",
+    "Length": 4011
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/rack/greg-rack-ondestroy.md",
+    "Length": 3850
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/rack/greg-rack-onload.md",
+    "Length": 3799
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/server/greg-server-buttonclickchangecustomer.md",
+    "Length": 4166
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/server/greg-server-buttonclickchangeip.md",
+    "Length": 4060
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/server/greg-server-clearerrorsign.md",
+    "Length": 3975
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/server/greg-server-clearwarningsign.md",
+    "Length": 4013
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/server/greg-server-componentinitialized.md",
+    "Length": 4158
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/server/greg-server-getcustomerid.md",
+    "Length": 3958
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/server/greg-server-getnextcustomerid.md",
+    "Length": 4035
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/server/greg-server-interactonclick.md",
+    "Length": 3992
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/server/greg-server-ipset.md",
+    "Length": 3828
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/server/greg-server-isanycableconnected.md",
+    "Length": 4060
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/server/greg-server-ondestroy.md",
+    "Length": 3890
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/server/greg-server-onloadingcomplete.md",
+    "Length": 4026
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/server/greg-server-onloadingstarted.md",
+    "Length": 4009
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/server/greg-server-powerlightmaterialset.md",
+    "Length": 4102
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/server/greg-server-serverscreenuichanged.md",
+    "Length": 4090
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/server/greg-server-turnoffcommonfunctions.md",
+    "Length": 4111
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/server/greg-server-turnoncommonfunction.md",
+    "Length": 4077
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/server/greg-server-validaterackposition.md",
+    "Length": 4077
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-anotheritempurchased.md",
+    "Length": 4127
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-applycolortospawneditem.md",
+    "Length": 4190
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-autosaveenabledset.md",
+    "Length": 4083
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-autosaveintervalset.md",
+    "Length": 4101
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-buttonassetmanagementscreen.md",
+    "Length": 4220
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-buttonbalancesheetscreen.md",
+    "Length": 4169
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-buttoncancel.md",
+    "Length": 3965
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-buttoncancelbuywall.md",
+    "Length": 4096
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-buttoncancelcolorpicker.md",
+    "Length": 4152
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-buttoncancelcustomerchoice.md",
+    "Length": 4215
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-buttonchosencolor.md",
+    "Length": 4050
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-buttonhirescreen.md",
+    "Length": 4033
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-buttonnetworkmap.md",
+    "Length": 4033
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-buttonreturnmainscreen.md",
+    "Length": 4135
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-buttonshopscreen.md",
+    "Length": 4033
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-carttotalchanged.md",
+    "Length": 4029
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-cartuiitemremoved.md",
+    "Length": 4058
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-cleanupshop.md",
+    "Length": 3948
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-cleartrackingwithoutdestroying.md",
+    "Length": 4271
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-closeanycanvas.md",
+    "Length": 4015
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-closenetworkconfigcanvas.md",
+    "Length": 4181
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-closeshop.md",
+    "Length": 3914
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-componentdisabled.md",
+    "Length": 4026
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-componentinitialized.md",
+    "Length": 4860
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-currenttimeinhours.md",
+    "Length": 4075
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-destroyallspawneditems.md",
+    "Length": 4135
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-freeupspawnpoint.md",
+    "Length": 4036
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-getapplogo.md",
+    "Length": 3951
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-getcablespinnerprefab.md",
+    "Length": 4133
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-getcustomeritembyid.md",
+    "Length": 4099
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-getcustomerlogo.md",
+    "Length": 4031
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-getcustomertotalrequirement.md",
+    "Length": 4244
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-getfreesubnet.md",
+    "Length": 3999
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-getnextavailablespawnpoint.md",
+    "Length": 4203
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-getpairedlink.md",
+    "Length": 3983
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-getpatchpanelprefab.md",
+    "Length": 4099
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-getprefabforitem.md",
+    "Length": 4064
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-getserverprefab.md",
+    "Length": 4031
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-getsfpboxprefab.md",
+    "Length": 4031
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-getsfpprefab.md",
+    "Length": 3980
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-getswitchprefab.md",
+    "Length": 4031
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-handleobjectives.md",
+    "Length": 4059
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-hoursfromdate.md",
+    "Length": 4000
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-insertedinrack.md",
+    "Length": 4009
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-interactonclick.md",
+    "Length": 4008
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-isanycableconnected.md",
+    "Length": 4076
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-iscustomersuitableforbase.md",
+    "Length": 4215
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-issubnetvalid.md",
+    "Length": 4000
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-newcartitemspawned.md",
+    "Length": 4120
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-newitempurchased.md",
+    "Length": 4053
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-onapplicationquit.md",
+    "Length": 4062
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-ondestroy.md",
+    "Length": 4259
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-onhoverover.md",
+    "Length": 3948
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-onload.md",
+    "Length": 4034
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-openanycanvas.md",
+    "Length": 3994
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-opencolorpicker.md",
+    "Length": 4016
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-physicalitemspawned.md",
+    "Length": 4119
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-resettrolleyposition.md",
+    "Length": 4113
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-restartautosave.md",
+    "Length": 4028
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-returnservernamefromtype.md",
+    "Length": 4184
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-returnsubnet.md",
+    "Length": 3983
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-returnswitchnamefromtype.md",
+    "Length": 4184
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-selectnextavailable.md",
+    "Length": 4087
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-showbuywallcanvas.md",
+    "Length": 4066
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-showcustomercardscanvas.md",
+    "Length": 4180
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-shownetworkconfigcanvas.md",
+    "Length": 4177
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-shuffleavailablecustomers.md",
+    "Length": 4198
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-shuffleavailablesubnets.md",
+    "Length": 4164
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-timeisbetween.md",
+    "Length": 4002
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-trolleypositionloaded.md",
+    "Length": 4141
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-unlockfromsave.md",
+    "Length": 4023
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-usedsubnetremoved.md",
+    "Length": 4064
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/system/greg-system-validaterackposition.md",
+    "Length": 4093
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-clearrows.md",
+    "Length": 3850
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-componentinitialized.md",
+    "Length": 4136
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-continue.md",
+    "Length": 3817
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-countfailingapps.md",
+    "Length": 3981
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-fillinbalancesheet.md",
+    "Length": 4003
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-fromsaveloaded.md",
+    "Length": 3927
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-gameloaded.md",
+    "Length": 3843
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-getlatestsnapshot.md",
+    "Length": 3986
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-getorcreaterecord.md",
+    "Length": 3998
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-getsavedata.md",
+    "Length": 3884
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-headerrowadded.md",
+    "Length": 3927
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-hidemiddlemenu.md",
+    "Length": 3919
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-instantiaterow.md",
+    "Length": 3935
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-newgame.md",
+    "Length": 3800
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-ondestroy.md",
+    "Length": 3850
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-quitgame.md",
+    "Length": 3817
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-registersalary.md",
+    "Length": 3938
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-restorerecord.md",
+    "Length": 3940
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-rowadded.md",
+    "Length": 3860
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-salaryrowadded.md",
+    "Length": 3932
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-sectiontitleadded.md",
+    "Length": 3984
+  },
+  {
+    "FullName": "gregCore/docs/02_development/hooks-library/ui/greg-ui-totalrowadded.md",
+    "Length": 3929
+  },
+  {
+    "FullName": "gregCore/docs/02_development/tutorials/hexviewer-csharp.md",
+    "Length": 9864
+  },
+  {
+    "FullName": "gregCore/docs/02_development/tutorials/hexviewer-lua.md",
+    "Length": 5198
+  },
+  {
+    "FullName": "gregCore/docs/02_development/tutorials/hexviewer-rust.md",
+    "Length": 6021
+  },
+  {
+    "FullName": "gregCore/docs/02_development/tutorials/hexviewer-ts.md",
+    "Length": 6022
+  },
+  {
+    "FullName": "gregCore/docs/03_design-system/visual-philosophy.md",
+    "Length": 6361
+  },
+  {
+    "FullName": "gregCore/docs/04_community/contributing.md",
+    "Length": 1002
+  },
+  {
+    "FullName": "gregCore/docs/04_community/framework-addons.md",
+    "Length": 2624
+  },
+  {
+    "FullName": "gregCore/docs/04_community/mod-index.md",
+    "Length": 432
+  },
+  {
+    "FullName": "gregCore/docs/05_legal/sponsors.md",
+    "Length": 1618
+  },
+  {
+    "FullName": "gregCore/docs/_internal/README.md",
+    "Length": 547
+  },
+  {
+    "FullName": "gregCore/lib/references/README.md",
+    "Length": 759
+  },
+  {
+    "FullName": "gregCore/src/gregHarmony/README.md",
+    "Length": 222
+  },
+  {
+    "FullName": "gregCore/src/UI/UIPathConfig.md",
+    "Length": 2379
+  },
+  {
+    "FullName": "gregMod.GregifyEmployees/README.md",
+    "Length": 1718
+  },
+  {
+    "FullName": "gregMod.GregifyEmployees/.github/PULL_REQUEST_TEMPLATE.md",
+    "Length": 577
+  },
+  {
+    "FullName": "gregMod.GregifyEmployees/.github/ISSUE_TEMPLATE/bug_report.md",
+    "Length": 601
+  },
+  {
+    "FullName": "gregMod.HexViewer/README.md",
+    "Length": 1628
+  },
+  {
+    "FullName": "gregMod.HexViewer/.github/PULL_REQUEST_TEMPLATE.md",
+    "Length": 577
+  },
+  {
+    "FullName": "gregMod.HexViewer/.github/ISSUE_TEMPLATE/bug_report.md",
+    "Length": 601
+  },
+  {
+    "FullName": "gregMod.HookShowcase/README.md",
+    "Length": 70
+  },
+  {
+    "FullName": "gregMod.HookShowcase/.github/PULL_REQUEST_TEMPLATE.md",
+    "Length": 577
+  },
+  {
+    "FullName": "gregMod.HookShowcase/.github/ISSUE_TEMPLATE/bug_report.md",
+    "Length": 601
+  },
+  {
+    "FullName": "gregModmanager/EXTERNAL_DEPENDENCIES.md",
+    "Length": 5766
+  },
+  {
+    "FullName": "gregModmanager/MIGRATION_PUBLIC_REPO.md",
+    "Length": 1915
+  },
+  {
+    "FullName": "gregModmanager/README.md",
+    "Length": 2314
+  },
+  {
+    "FullName": "gregModmanager/README.public-repo.md",
+    "Length": 4677
+  },
+  {
+    "FullName": "gregModmanager/RELEASENOTE.md",
+    "Length": 1468
+  },
+  {
+    "FullName": "gregModmanager/SPONSORS.md",
+    "Length": 1584
+  },
+  {
+    "FullName": "gregModmanager/.github/copilot-instructions.md",
+    "Length": 1113
+  },
+  {
+    "FullName": "gregModmanager/.github/PULL_REQUEST_TEMPLATE.md",
+    "Length": 577
+  },
+  {
+    "FullName": "gregModmanager/.github/ISSUE_TEMPLATE/bug_report.md",
+    "Length": 601
+  },
+  {
+    "FullName": "gregModmanager/installer/CODE_SIGNING.md",
+    "Length": 6347
+  },
+  {
+    "FullName": "gregModmanager/Resources/Fonts/Vendored/README.md",
+    "Length": 405
+  },
+  {
+    "FullName": "gregMods/README.md",
+    "Length": 903
+  },
+  {
+    "FullName": "gregMods/RELEASENOTE.md",
+    "Length": 860
+  },
+  {
+    "FullName": "gregMods/SPONSORS.md",
+    "Length": 1582
+  },
+  {
+    "FullName": "gregMods/.github/copilot-instructions.md",
+    "Length": 1111
+  },
+  {
+    "FullName": "gregMods/.github/instructions/gregframework_system_architecture.instructions.md",
+    "Length": 9322
+  },
+  {
+    "FullName": "gregResetSwitch/README.md",
+    "Length": 65
+  },
+  {
+    "FullName": "gregShitcloud/README.md",
+    "Length": 15
+  },
+  {
+    "FullName": "gregUnity/README.md",
+    "Length": 59
+  },
+  {
+    "FullName": "Melons/greg.CableAudit/CHANGELOG.md",
+    "Length": 252
+  },
+  {
+    "FullName": "Melons/greg.CableAudit/README.md",
+    "Length": 237
+  },
+  {
+    "FullName": "Melons/greg.WallLease/CHANGELOG.md",
+    "Length": 252
+  },
+  {
+    "FullName": "Melons/greg.WallLease/README.md",
+    "Length": 230
+  },
+  {
+    "FullName": "Melons/gregCableRemover/README.md",
+    "Length": 1062
+  },
+  {
+    "FullName": "Melons/gregExplorer/README.md",
+    "Length": 1188
+  },
+  {
+    "FullName": "Melons/gregExt.AssetExporter/README.md",
+    "Length": 663
+  },
+  {
+    "FullName": "Melons/gregExt.AssetExporter/.github/PULL_REQUEST_TEMPLATE.md",
+    "Length": 577
+  },
+  {
+    "FullName": "Melons/gregExt.AssetExporter/.github/ISSUE_TEMPLATE/bug_report.md",
+    "Length": 601
+  },
+  {
+    "FullName": "Melons/gregExt.Multiplayer/README.md",
+    "Length": 557
+  },
+  {
+    "FullName": "Melons/gregExt.Multiplayer/.github/PULL_REQUEST_TEMPLATE.md",
+    "Length": 577
+  },
+  {
+    "FullName": "Melons/gregExt.Multiplayer/.github/ISSUE_TEMPLATE/bug_report.md",
+    "Length": 601
+  },
+  {
+    "FullName": "Melons/gregExt.PlayerModels/README.md",
+    "Length": 1559
+  },
+  {
+    "FullName": "Melons/gregExt.PlayerModels/.github/PULL_REQUEST_TEMPLATE.md",
+    "Length": 577
+  },
+  {
+    "FullName": "Melons/gregExt.PlayerModels/.github/ISSUE_TEMPLATE/bug_report.md",
+    "Length": 601
+  },
+  {
+    "FullName": "Melons/gregExt.Sysadmin/README.md",
+    "Length": 659
+  },
+  {
+    "FullName": "Melons/gregExt.Sysadmin/.github/PULL_REQUEST_TEMPLATE.md",
+    "Length": 577
+  },
+  {
+    "FullName": "Melons/gregExt.Sysadmin/.github/ISSUE_TEMPLATE/bug_report.md",
+    "Length": 601
+  },
+  {
+    "FullName": "Melons/gregExt.WebUIBridge/README.md",
+    "Length": 665
+  },
+  {
+    "FullName": "Melons/gregExt.WebUIBridge/.github/PULL_REQUEST_TEMPLATE.md",
+    "Length": 577
+  },
+  {
+    "FullName": "Melons/gregExt.WebUIBridge/.github/ISSUE_TEMPLATE/bug_report.md",
+    "Length": 601
+  },
+  {
+    "FullName": "Melons/gregExtensions/README.md",
+    "Length": 1551
+  },
+  {
+    "FullName": "Melons/gregExtensions/RELEASENOTE.md",
+    "Length": 1512
+  },
+  {
+    "FullName": "Melons/gregExtensions/SPONSORS.md",
+    "Length": 1582
+  },
+  {
+    "FullName": "Melons/gregExtensions/.github/copilot-instructions.md",
+    "Length": 1111
+  },
+  {
+    "FullName": "Melons/gregExtensions/.github/instructions/gregframework_system_architecture.instructions.md",
+    "Length": 9322
+  },
+  {
+    "FullName": "Melons/gregFramework/README.md",
+    "Length": 2718
+  },
+  {
+    "FullName": "Melons/gregMod.ConsoleInputGuard/README.md",
+    "Length": 1624
+  },
+  {
+    "FullName": "Melons/gregMod.ConsoleInputGuard/.github/PULL_REQUEST_TEMPLATE.md",
+    "Length": 577
+  },
+  {
+    "FullName": "Melons/gregMod.ConsoleInputGuard/.github/ISSUE_TEMPLATE/bug_report.md",
+    "Length": 601
+  },
+  {
+    "FullName": "Melons/gregMod.GregifyEmployees/README.md",
+    "Length": 1668
+  },
+  {
+    "FullName": "Melons/gregMod.HexViewer/README.md",
+    "Length": 1578
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/CODE_OF_CONDUCT.md",
+    "Length": 5261
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/CONTRIBUTING.md",
+    "Length": 2881
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/README.md",
+    "Length": 1600
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/ROADMAP.md",
+    "Length": 8215
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/SECURITY.md",
+    "Length": 897
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/.github/copilot-instructions.md",
+    "Length": 862
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/.github/pull_request_template.md",
+    "Length": 469
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/.github/ISSUE_TEMPLATE/bug_report.md",
+    "Length": 390
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/.github/ISSUE_TEMPLATE/feature_request.md",
+    "Length": 354
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/docs/NETWORKING_HOOKS.md",
+    "Length": 2645
+  },
+  {
+    "FullName": "Melons/gregMod.IPAM/docs/SOURCE_LAYOUT.md",
+    "Length": 3733
+  },
+  {
+    "FullName": "Melons/gregMod.LangCompatBridge/README.md",
+    "Length": 1604
+  },
+  {
+    "FullName": "Melons/gregMod.LangCompatBridge/.github/PULL_REQUEST_TEMPLATE.md",
+    "Length": 577
+  },
+  {
+    "FullName": "Melons/gregMod.LangCompatBridge/.github/ISSUE_TEMPLATE/bug_report.md",
+    "Length": 601
+  },
+  {
+    "FullName": "Melons/gregMod.Multiplayer/README.md",
+    "Length": 1646
+  },
+  {
+    "FullName": "Melons/gregMod.Multiplayer/.github/PULL_REQUEST_TEMPLATE.md",
+    "Length": 577
+  },
+  {
+    "FullName": "Melons/gregMod.Multiplayer/.github/ISSUE_TEMPLATE/bug_report.md",
+    "Length": 601
+  },
+  {
+    "FullName": "Melons/gregMod.PathRedirector/README.md",
+    "Length": 1739
+  },
+  {
+    "FullName": "Melons/gregMod.PlayerModels/README.md",
+    "Length": 1575
+  },
+  {
+    "FullName": "Melons/gregMod.PlayerModels/.github/PULL_REQUEST_TEMPLATE.md",
+    "Length": 577
+  },
+  {
+    "FullName": "Melons/gregMod.PlayerModels/.github/ISSUE_TEMPLATE/bug_report.md",
+    "Length": 601
+  },
+  {
+    "FullName": "Melons/gregMod.RackPlanner/README.md",
+    "Length": 1738
+  },
+  {
+    "FullName": "Melons/gregMod.RackPlanner/.github/PULL_REQUEST_TEMPLATE.md",
+    "Length": 577
+  },
+  {
+    "FullName": "Melons/gregMod.RackPlanner/.github/ISSUE_TEMPLATE/bug_report.md",
+    "Length": 601
+  },
+  {
+    "FullName": "Melons/gregMod.ResetSwitch/README.md",
+    "Length": 1672
+  },
+  {
+    "FullName": "Melons/gregMod.ResetSwitch/.github/PULL_REQUEST_TEMPLATE.md",
+    "Length": 577
+  },
+  {
+    "FullName": "Melons/gregMod.ResetSwitch/.github/ISSUE_TEMPLATE/bug_report.md",
+    "Length": 601
+  },
+  {
+    "FullName": "Melons/gregMod.StorageServer/HOW_TO_CUSTOM_SERVER.md",
+    "Length": 1768
+  },
+  {
+    "FullName": "Melons/gregMod.StorageServer/README.md",
+    "Length": 71
+  },
+  {
+    "FullName": "Melons/gregMod.StorageServer/.github/PULL_REQUEST_TEMPLATE.md",
+    "Length": 577
+  },
+  {
+    "FullName": "Melons/gregMod.StorageServer/.github/ISSUE_TEMPLATE/bug_report.md",
+    "Length": 601
+  },
+  {
+    "FullName": "Melons/gregMod.Sysadmin/README.md",
+    "Length": 1621
+  },
+  {
+    "FullName": "reports/security/gregscan_report.md",
+    "Length": 594
+  },
+  {
+    "FullName": "WebApps/todo.md",
+    "Length": 0
+  },
+  {
+    "FullName": "WebApps/bot/gregBot/Bot-Setup.md",
+    "Length": 15775
+  },
+  {
+    "FullName": "WebApps/bot/gregBot/README.md",
+    "Length": 2170
+  },
+  {
+    "FullName": "WebApps/bot/gregBot/coolify/ENVIRONMENT.md",
+    "Length": 17460
+  },
+  {
+    "FullName": "WebApps/bot/gregBot/coolify/README.md",
+    "Length": 7538
+  },
+  {
+    "FullName": "WebApps/bot/gregBot/docs/design-system-luminescent-architect.md",
+    "Length": 5905
+  },
+  {
+    "FullName": "WebApps/bot/gregBot/docs/GitHub-Apps-und-Token.md",
+    "Length": 3736
+  },
+  {
+    "FullName": "WebApps/bot/gregBot/store/AGENTS.md",
+    "Length": 327
+  },
+  {
+    "FullName": "WebApps/bot/gregBot/store/CLAUDE.md",
+    "Length": 11
+  },
+  {
+    "FullName": "WebApps/bot/gregBot/store/ENV_EXAMPLE.md",
+    "Length": 1932
+  },
+  {
+    "FullName": "WebApps/bot/gregBot/store/README.md",
+    "Length": 1767
+  },
+  {
+    "FullName": "WebApps/bot/gregBot/store/greg-discord-bot/DEPLOY.md",
+    "Length": 2558
+  },
+  {
+    "FullName": "WebApps/bot/gregBot/store/greg-discord-bot/README.md",
+    "Length": 1261
+  },
+  {
+    "FullName": "WebApps/bot/gregBot/store/greg-discord-bot/traefik-config.md",
+    "Length": 702
+  },
+  {
+    "FullName": "WebApps/platform/AGENTS.md",
+    "Length": 327
+  },
+  {
+    "FullName": "WebApps/platform/CLAUDE.md",
+    "Length": 11
+  },
+  {
+    "FullName": "WebApps/platform/README.md",
+    "Length": 1486
+  },
+  {
+    "FullName": "WebApps/platform/gregBot/Bot-Setup.md",
+    "Length": 15775
+  },
+  {
+    "FullName": "WebApps/platform/gregBot/README.md",
+    "Length": 2170
+  },
+  {
+    "FullName": "WebApps/platform/gregBot/coolify/ENVIRONMENT.md",
+    "Length": 17460
+  },
+  {
+    "FullName": "WebApps/platform/gregBot/coolify/README.md",
+    "Length": 7538
+  },
+  {
+    "FullName": "WebApps/platform/gregBot/docs/design-system-luminescent-architect.md",
+    "Length": 5905
+  },
+  {
+    "FullName": "WebApps/platform/gregBot/docs/GitHub-Apps-und-Token.md",
+    "Length": 3736
+  },
+  {
+    "FullName": "WebApps/platform/gregBot/store/AGENTS.md",
+    "Length": 327
+  },
+  {
+    "FullName": "WebApps/platform/gregBot/store/CLAUDE.md",
+    "Length": 11
+  },
+  {
+    "FullName": "WebApps/platform/gregBot/store/ENV_EXAMPLE.md",
+    "Length": 1932
+  },
+  {
+    "FullName": "WebApps/platform/gregBot/store/README.md",
+    "Length": 1767
+  },
+  {
+    "FullName": "WebApps/platform/gregBot/store/greg-discord-bot/DEPLOY.md",
+    "Length": 2558
+  },
+  {
+    "FullName": "WebApps/platform/gregBot/store/greg-discord-bot/README.md",
+    "Length": 1261
+  },
+  {
+    "FullName": "WebApps/platform/gregBot/store/greg-discord-bot/traefik-config.md",
+    "Length": 702
+  },
+  {
+    "FullName": "WebApps/platform/gregStore/README.md",
+    "Length": 2245
+  },
+  {
+    "FullName": "WebApps/platform/gregStore/bot/DEPLOY.md",
+    "Length": 2558
+  },
+  {
+    "FullName": "WebApps/platform/gregStore/bot/README.md",
+    "Length": 1261
+  },
+  {
+    "FullName": "WebApps/platform/gregStore/bot/traefik-config.md",
+    "Length": 702
+  },
+  {
+    "FullName": "WebApps/platform/gregStore/infra/DOCKER_SETUP.md",
+    "Length": 2482
+  },
+  {
+    "FullName": "WebApps/platform/gregStore/web/AGENTS.md",
+    "Length": 327
+  },
+  {
+    "FullName": "WebApps/platform/gregStore/web/CLAUDE.md",
+    "Length": 11
+  },
+  {
+    "FullName": "WebApps/platform/gregStore/web/ENV_EXAMPLE.md",
+    "Length": 1932
+  },
+  {
+    "FullName": "WebApps/platform/gregStore/web/README.md",
+    "Length": 1767
+  },
+  {
+    "FullName": "WebApps/platform/gregStore/web/greg-discord-bot/DEPLOY.md",
+    "Length": 2558
+  },
+  {
+    "FullName": "WebApps/platform/gregStore/web/greg-discord-bot/README.md",
+    "Length": 1261
+  },
+  {
+    "FullName": "WebApps/platform/gregStore/web/greg-discord-bot/traefik-config.md",
+    "Length": 702
+  },
+  {
+    "FullName": "WebApps/store/AGENTS.md",
+    "Length": 327
+  },
+  {
+    "FullName": "WebApps/store/CLAUDE.md",
+    "Length": 11
+  },
+  {
+    "FullName": "WebApps/store/README.md",
+    "Length": 1486
+  },
+  {
+    "FullName": "WebApps/store/gregStore/README.md",
+    "Length": 2245
+  },
+  {
+    "FullName": "WebApps/store/gregStore/bot/DEPLOY.md",
+    "Length": 2558
+  },
+  {
+    "FullName": "WebApps/store/gregStore/bot/README.md",
+    "Length": 1261
+  },
+  {
+    "FullName": "WebApps/store/gregStore/bot/traefik-config.md",
+    "Length": 702
+  },
+  {
+    "FullName": "WebApps/store/gregStore/infra/DOCKER_SETUP.md",
+    "Length": 2482
+  },
+  {
+    "FullName": "WebApps/store/gregStore/web/AGENTS.md",
+    "Length": 327
+  },
+  {
+    "FullName": "WebApps/store/gregStore/web/CLAUDE.md",
+    "Length": 11
+  },
+  {
+    "FullName": "WebApps/store/gregStore/web/ENV_EXAMPLE.md",
+    "Length": 1932
+  },
+  {
+    "FullName": "WebApps/store/gregStore/web/README.md",
+    "Length": 1767
+  },
+  {
+    "FullName": "WebApps/store/gregStore/web/greg-discord-bot/DEPLOY.md",
+    "Length": 2558
+  },
+  {
+    "FullName": "WebApps/store/gregStore/web/greg-discord-bot/README.md",
+    "Length": 1261
+  },
+  {
+    "FullName": "WebApps/store/gregStore/web/greg-discord-bot/traefik-config.md",
+    "Length": 702
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/INSTRUCTIONS.md",
+    "Length": 541
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/README.md",
+    "Length": 43
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/404.md",
+    "Length": 249
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/EXTENDING_gregCore.md",
+    "Length": 9860
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/MODDING_MelonLoader_gregCore.md",
+    "Length": 8663
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/01_getting-started/architecture.md",
+    "Length": 517
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/01_getting-started/index.md",
+    "Length": 1676
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/01_getting-started/quickstart.md",
+    "Length": 2142
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/ui.md",
+    "Length": 2149
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/api-reference/game-system-bridges.md",
+    "Length": 3201
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/api-reference/hooks-catalog.md",
+    "Length": 13380
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/api-reference/naming-conventions.md",
+    "Length": 4169
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/api-reference/services-overview.md",
+    "Length": 3076
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/concepts/hooks-and-events.md",
+    "Length": 402
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/concepts/modding-basics.md",
+    "Length": 2863
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/index.md",
+    "Length": 909
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/content/greg-content-loaded.md",
+    "Length": 446
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/content/greg-content-overrideapplied.md",
+    "Length": 512
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/content/greg-content-registered.md",
+    "Length": 474
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/customer/greg-customer-appperformanceadded.md",
+    "Length": 4093
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/customer/greg-customer-apptext.md",
+    "Length": 3890
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/customer/greg-customer-componentinitialized.md",
+    "Length": 4207
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/customer/greg-customer-customerservercountandspeedchanged.md",
+    "Length": 4352
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/customer/greg-customer-dataloaded.md",
+    "Length": 3950
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/customer/greg-customer-getappidforip.md",
+    "Length": 3995
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/customer/greg-customer-getservertypeforip.md",
+    "Length": 4080
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/customer/greg-customer-getsubnetsperapp.md",
+    "Length": 4040
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/customer/greg-customer-gettotalappspeed.md",
+    "Length": 4040
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/customer/greg-customer-isippresent.md",
+    "Length": 3961
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/customer/greg-customer-moneyupdated.md",
+    "Length": 827
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/customer/greg-customer-requirementevaluated.md",
+    "Length": 875
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/customer/greg-customer-resetallappspeeds.md",
+    "Length": 4057
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/customer/greg-customer-speedoncustomerbaseappchanged.md",
+    "Length": 4267
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/customer/greg-customer-upappset.md",
+    "Length": 3934
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/customer/greg-customer-upbaseset.md",
+    "Length": 3955
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-animationstatechanged.md",
+    "Length": 881
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-assignjob.md",
+    "Length": 3940
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-buttonfireemployee.md",
+    "Length": 4061
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-buttonhireemployee.md",
+    "Length": 4061
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-componentinitialized.md",
+    "Length": 4367
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-devicerepaired.md",
+    "Length": 3990
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-dispatched.md",
+    "Length": 4034
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-dispatchprocessed.md",
+    "Length": 857
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-dispatchqueued.md",
+    "Length": 839
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-fired.md",
+    "Length": 3915
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-getcorrectdeviceprefab.md",
+    "Length": 4134
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-hired.md",
+    "Length": 3923
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-idlestateentered.md",
+    "Length": 851
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-idlestateexited.md",
+    "Length": 845
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-isdevicealreadyassigned.md",
+    "Length": 4264
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-jobqueued.md",
+    "Length": 4010
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-jobqueueloaded.md",
+    "Length": 4073
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-nextjobrequested.md",
+    "Length": 4070
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-ondestroy.md",
+    "Length": 3913
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-onloadingstarted.md",
+    "Length": 4032
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-positionhandtargetsondevice.md",
+    "Length": 4229
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/employee/greg-employee-rotatetowardsgoal.md",
+    "Length": 4056
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/gameplay/greg-gameplay-clearobjectives.md",
+    "Length": 4015
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/gameplay/greg-gameplay-componentinitialized.md",
+    "Length": 4193
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/gameplay/greg-gameplay-createappobjective.md",
+    "Length": 4084
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/gameplay/greg-gameplay-createnewobjective.md",
+    "Length": 4099
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/gameplay/greg-gameplay-destroyobjective.md",
+    "Length": 4035
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/gameplay/greg-gameplay-gettimedobjective.md",
+    "Length": 4052
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/gameplay/greg-gameplay-incidenttriggered.md",
+    "Length": 857
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/gameplay/greg-gameplay-instantiateobjectivesign.md",
+    "Length": 4180
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/gameplay/greg-gameplay-istutorialinprogress.md",
+    "Length": 4100
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/gameplay/greg-gameplay-objectivesignremoved.md",
+    "Length": 4099
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/gameplay/greg-gameplay-objectivetimedtext.md",
+    "Length": 4066
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/gameplay/greg-gameplay-ondestroy.md",
+    "Length": 3913
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/gameplay/greg-gameplay-onload.md",
+    "Length": 3862
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/gameplay/greg-gameplay-startobjective.md",
+    "Length": 4016
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/input/greg-input-actiontriggered.md",
+    "Length": 506
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/input/greg-input-bindingapplied.md",
+    "Length": 499
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/input/greg-input-bindingstarted.md",
+    "Length": 505
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-assignnewposition.md",
+    "Length": 4106
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-brokenserveradded.md",
+    "Length": 4032
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-brokenserverremoved.md",
+    "Length": 4070
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-brokenswitchadded.md",
+    "Length": 852
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-buttonshownetworkswitchconfig.md",
+    "Length": 4250
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-cableconnectionremoved.md",
+    "Length": 4118
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-cablefromlacpgroupsremoved.md",
+    "Length": 4186
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-cablelifecyclechanged.md",
+    "Length": 876
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-cableloaded.md",
+    "Length": 3953
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-canacceptsfp.md",
+    "Length": 3936
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-clearallcables.md",
+    "Length": 834
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-clearerrorsign.md",
+    "Length": 3995
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-clearmap.md",
+    "Length": 3881
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-clearwarningsign.md",
+    "Length": 4033
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-componentinitialized.md",
+    "Length": 5119
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-connect.md",
+    "Length": 3878
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-connectionspeedset.md",
+    "Length": 858
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-createlacpgroup.md",
+    "Length": 4025
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-createnewcable.md",
+    "Length": 834
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-createnewreversecable.md",
+    "Length": 4118
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-createropeattachpoint.md",
+    "Length": 4098
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-createtubemesh.md",
+    "Length": 4012
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-customerservercountandspeedchanged.md",
+    "Length": 4334
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-deviceadded.md",
+    "Length": 3957
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-devicecustomeridchanged.md",
+    "Length": 4143
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-deviceremoved.md",
+    "Length": 3968
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-devicerepaired.md",
+    "Length": 3987
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-disconnect.md",
+    "Length": 3929
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-disconnectcables.md",
+    "Length": 4029
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-disconnectcableswhenswitchisoff.md",
+    "Length": 4284
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-dispatchprocessed.md",
+    "Length": 852
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-dispatchqueued.md",
+    "Length": 834
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-findallroutes.md",
+    "Length": 3980
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-findphysicalpath.md",
+    "Length": 4031
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-fromportremoved.md",
+    "Length": 3992
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-generatebentsegment.md",
+    "Length": 4117
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-generatecornerbend.md",
+    "Length": 4103
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-generatedevicename.md",
+    "Length": 4080
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-generatefinalpath.md",
+    "Length": 4053
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getallbrokenservers.md",
+    "Length": 4068
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getallbrokenswitches.md",
+    "Length": 4085
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getalldevices.md",
+    "Length": 3966
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getalllacpgroups.md",
+    "Length": 4017
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getallnetworkswitches.md",
+    "Length": 4102
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getallservers.md",
+    "Length": 3966
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getcablematerial.md",
+    "Length": 4036
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getcablepositions.md",
+    "Length": 4053
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getconnecteddevices.md",
+    "Length": 4080
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getcustomerbase.md",
+    "Length": 4003
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getdevice.md",
+    "Length": 3904
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getfreespaceinthebox.md",
+    "Length": 4069
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getlacpgroupbetween.md",
+    "Length": 4082
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getlacpgroupforcable.md",
+    "Length": 4088
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getrawcablepositions.md",
+    "Length": 4104
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getrawlinktransforms.md",
+    "Length": 4104
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getropeattachpoint.md",
+    "Length": 4047
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getserver.md",
+    "Length": 3904
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getswitchbyid.md",
+    "Length": 3972
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-getswitchid.md",
+    "Length": 3944
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-handlenewcablewhileoff.md",
+    "Length": 4134
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-insertdirectlyintoport.md",
+    "Length": 4124
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-insertedinsfpport.md",
+    "Length": 4045
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-insertsfp.md",
+    "Length": 804
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-insertsfpbackintobox.md",
+    "Length": 4069
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-interactonclick.md",
+    "Length": 4539
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-isallowedtodosecondaction.md",
+    "Length": 4166
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-isanycableconnected.md",
+    "Length": 4272
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-iscablecomplete.md",
+    "Length": 4019
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-isipaddressduplicate.md",
+    "Length": 4099
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-isolateddevicesremoved.md",
+    "Length": 4115
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-ispatchpanelport.md",
+    "Length": 4023
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-itisbroken.md",
+    "Length": 3927
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-lacpgroupremoved.md",
+    "Length": 4016
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-lacpgroupsset.md",
+    "Length": 4003
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-lastpositionremoved.md",
+    "Length": 4083
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-method-internal-static-void-intptr-intptr-pdm-0.md",
+    "Length": 4594
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-method-internal-static-void-intptr-intptr-pdm-1.md",
+    "Length": 4594
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-ondestroy.md",
+    "Length": 4072
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-onhoverover.md",
+    "Length": 3928
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-ovebrokenswitchremoved.md",
+    "Length": 879
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-ovepositionremoved.md",
+    "Length": 855
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-ovesfpremoved.md",
+    "Length": 825
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-powerbutton.md",
+    "Length": 3948
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-powerlightmaterialset.md",
+    "Length": 4122
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-printnetworkmap.md",
+    "Length": 4000
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-reconnectcables.md",
+    "Length": 4012
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-redrawcable.md",
+    "Length": 3951
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-registercableconnection.md",
+    "Length": 4243
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-registercustomerbase.md",
+    "Length": 4097
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-registerserver.md",
+    "Length": 3989
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-registerswitch.md",
+    "Length": 3996
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-resolvethroughpatchpanel.md",
+    "Length": 4167
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-returnsfpdirectly.md",
+    "Length": 4027
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-screenuichanged.md",
+    "Length": 4008
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-secondactiononclick.md",
+    "Length": 4064
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-sfpfromboxremoved.md",
+    "Length": 4017
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-sfpsfromsaveloaded.md",
+    "Length": 4027
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-switchconfigclosed.md",
+    "Length": 858
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-switchconfigopened.md",
+    "Length": 858
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-switchconnectionadded.md",
+    "Length": 4108
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-switchinsertedinrack.md",
+    "Length": 4111
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-takesfpfrombox.md",
+    "Length": 3967
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-topologyvalidated.md",
+    "Length": 852
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-turnoffcommonfunctions.md",
+    "Length": 4131
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-turnoncommonfunction.md",
+    "Length": 4097
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/network/greg-network-validaterackposition.md",
+    "Length": 4097
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/player/greg-player-checkfallsthroughmap.md",
+    "Length": 4054
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/player/greg-player-coinchanged.md",
+    "Length": 811
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/player/greg-player-componentinitialized.md",
+    "Length": 4523
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/player/greg-player-confinedcursorforui.md",
+    "Length": 4065
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/player/greg-player-defaultactioneffect.md",
+    "Length": 4079
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/player/greg-player-droppedallitems.md",
+    "Length": 4003
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/player/greg-player-gainiopseffect.md",
+    "Length": 3980
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/player/greg-player-loaded.md",
+    "Length": 3844
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/player/greg-player-lockedcursorforplayermovement.md",
+    "Length": 4235
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/player/greg-player-playerstopmovement.md",
+    "Length": 4048
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/player/greg-player-reputationchanged.md",
+    "Length": 847
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/player/greg-player-warped.md",
+    "Length": 3885
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/player/greg-player-xpchanged.md",
+    "Length": 799
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/rack/greg-rack-audiovolumechanged.md",
+    "Length": 3966
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/rack/greg-rack-buttondisablepositionsinrack.md",
+    "Length": 4140
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/rack/greg-rack-buttonunmountrack.md",
+    "Length": 837
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/rack/greg-rack-componentinitialized.md",
+    "Length": 4079
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/rack/greg-rack-disablepositionsbuttonmaterialset.md",
+    "Length": 4233
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/rack/greg-rack-doorstatechanged.md",
+    "Length": 831
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/rack/greg-rack-ispositionavailable.md",
+    "Length": 3995
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/rack/greg-rack-markpositionasunused.md",
+    "Length": 4012
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/rack/greg-rack-markpositionasused.md",
+    "Length": 3978
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/rack/greg-rack-ondestroy.md",
+    "Length": 3817
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/rack/greg-rack-onload.md",
+    "Length": 3766
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-appidchanged.md",
+    "Length": 817
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-buttonclickchangecustomer.md",
+    "Length": 4131
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-buttonclickchangeip.md",
+    "Length": 4025
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-clearerrorsign.md",
+    "Length": 3940
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-clearwarningsign.md",
+    "Length": 3978
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-componentinitialized.md",
+    "Length": 4123
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-customerchanged.md",
+    "Length": 835
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-devicerepaired.md",
+    "Length": 829
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-getcustomerid.md",
+    "Length": 3923
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-getnextcustomerid.md",
+    "Length": 4000
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-interactonclick.md",
+    "Length": 3957
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-ipset.md",
+    "Length": 3793
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-isanycableconnected.md",
+    "Length": 4025
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-itisbroken.md",
+    "Length": 805
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-loadingcompleted.md",
+    "Length": 841
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-loadingstarted.md",
+    "Length": 829
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-ondestroy.md",
+    "Length": 3855
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-onloadingcomplete.md",
+    "Length": 3991
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-onloadingstarted.md",
+    "Length": 3974
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-powerbutton.md",
+    "Length": 811
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-powerlightmaterialset.md",
+    "Length": 4067
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-registerlink.md",
+    "Length": 817
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-serverinsertedinrack.md",
+    "Length": 859
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-serverscreenuichanged.md",
+    "Length": 4055
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-turnoffcommonfunctions.md",
+    "Length": 4076
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-turnoncommonfunction.md",
+    "Length": 4042
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-unregisterlink.md",
+    "Length": 829
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/server/greg-server-validaterackposition.md",
+    "Length": 4042
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-anotheritempurchased.md",
+    "Length": 4092
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-applicationquit.md",
+    "Length": 835
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-applycolortospawneditem.md",
+    "Length": 4155
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-autosaveenabledset.md",
+    "Length": 4048
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-autosaveintervalset.md",
+    "Length": 4066
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-buttonassetmanagementscreen.md",
+    "Length": 4185
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-buttonbalancesheetscreen.md",
+    "Length": 4134
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-buttonbuyshopitem.md",
+    "Length": 847
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-buttonbuywall.md",
+    "Length": 823
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-buttoncancel.md",
+    "Length": 3930
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-buttoncancelbuywall.md",
+    "Length": 4061
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-buttoncancelcolorpicker.md",
+    "Length": 4117
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-buttoncancelcustomerchoice.md",
+    "Length": 4180
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-buttoncheckout.md",
+    "Length": 829
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-buttonchosencolor.md",
+    "Length": 4015
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-buttonclear.md",
+    "Length": 811
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-buttonconfirmfireemployee.md",
+    "Length": 895
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-buttonconfirmhire.md",
+    "Length": 847
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-buttoncustomerchosen.md",
+    "Length": 865
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-buttonhirescreen.md",
+    "Length": 3998
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-buttonnetworkmap.md",
+    "Length": 3998
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-buttonreturnmainscreen.md",
+    "Length": 4100
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-buttonshopscreen.md",
+    "Length": 3998
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-carttotalchanged.md",
+    "Length": 3994
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-cartuiitemremoved.md",
+    "Length": 4023
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-cleanupshop.md",
+    "Length": 3913
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-cleartrackingwithoutdestroying.md",
+    "Length": 4236
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-closeanycanvas.md",
+    "Length": 3980
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-closenetworkconfigcanvas.md",
+    "Length": 4146
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-closeshop.md",
+    "Length": 3879
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-componentdisabled.md",
+    "Length": 3991
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-componentinitialized.md",
+    "Length": 4825
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-currenttimeinhours.md",
+    "Length": 4040
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-dayended.md",
+    "Length": 793
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-destroyallspawneditems.md",
+    "Length": 4100
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-freeupspawnpoint.md",
+    "Length": 4001
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-getapplogo.md",
+    "Length": 3916
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-getcablespinnerprefab.md",
+    "Length": 4098
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-getcustomeritembyid.md",
+    "Length": 4064
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-getcustomerlogo.md",
+    "Length": 3996
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-getcustomertotalrequirement.md",
+    "Length": 4209
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-getfreesubnet.md",
+    "Length": 3964
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-getnextavailablespawnpoint.md",
+    "Length": 4168
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-getpairedlink.md",
+    "Length": 3948
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-getpatchpanelprefab.md",
+    "Length": 4064
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-getprefabforitem.md",
+    "Length": 4029
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-getserverprefab.md",
+    "Length": 3996
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-getsfpboxprefab.md",
+    "Length": 3996
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-getsfpprefab.md",
+    "Length": 3945
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-getswitchprefab.md",
+    "Length": 3996
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-handleobjectives.md",
+    "Length": 4024
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-hoursfromdate.md",
+    "Length": 3965
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-incidentresolved.md",
+    "Length": 841
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-incidenttriggered.md",
+    "Length": 847
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-insertedinrack.md",
+    "Length": 3974
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-interactonclick.md",
+    "Length": 3973
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-isanycableconnected.md",
+    "Length": 4041
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-iscustomersuitableforbase.md",
+    "Length": 4180
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-issubnetvalid.md",
+    "Length": 3965
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-loadcompleted.md",
+    "Length": 823
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-loadstarted.md",
+    "Length": 811
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-newcartitemspawned.md",
+    "Length": 4085
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-newitempurchased.md",
+    "Length": 4018
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-onapplicationquit.md",
+    "Length": 4027
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-ondestroy.md",
+    "Length": 4224
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-onhoverover.md",
+    "Length": 3913
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-onload.md",
+    "Length": 3999
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-openanycanvas.md",
+    "Length": 3959
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-opencolorpicker.md",
+    "Length": 3981
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-ovespawneditemremoved.md",
+    "Length": 868
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-physicalitemspawned.md",
+    "Length": 4084
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-resettrolleyposition.md",
+    "Length": 4078
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-restartautosave.md",
+    "Length": 3993
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-returnservernamefromtype.md",
+    "Length": 4149
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-returnsubnet.md",
+    "Length": 3948
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-returnswitchnamefromtype.md",
+    "Length": 4149
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-runtimeobjectdestroyed.md",
+    "Length": 877
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-runtimeobjectdisabled.md",
+    "Length": 871
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-runtimeobjectenabled.md",
+    "Length": 865
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-runtimeobjectloaded.md",
+    "Length": 859
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-savestarted.md",
+    "Length": 811
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-selectnextavailable.md",
+    "Length": 4052
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-shopcartitemadded.md",
+    "Length": 847
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-shopcartitemremoved.md",
+    "Length": 859
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-showbuywallcanvas.md",
+    "Length": 4031
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-showcustomercardscanvas.md",
+    "Length": 4145
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-shownetworkconfigcanvas.md",
+    "Length": 4142
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-shuffleavailablecustomers.md",
+    "Length": 4163
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-shuffleavailablesubnets.md",
+    "Length": 4129
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-snapshotsaved.md",
+    "Length": 823
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-timeisbetween.md",
+    "Length": 3967
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-trolleypositionloaded.md",
+    "Length": 4106
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-unlockfromsave.md",
+    "Length": 3988
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-unmappednativeevent.md",
+    "Length": 852
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-usedsubnetremoved.md",
+    "Length": 4029
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/system/greg-system-validaterackposition.md",
+    "Length": 4058
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-cancel.md",
+    "Length": 761
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-clearrows.md",
+    "Length": 3819
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-componentinitialized.md",
+    "Length": 4105
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-continue.md",
+    "Length": 3786
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-countfailingapps.md",
+    "Length": 3950
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-fillinbalancesheet.md",
+    "Length": 3972
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-fromsaveloaded.md",
+    "Length": 3896
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-gameloaded.md",
+    "Length": 3812
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-getlatestsnapshot.md",
+    "Length": 3955
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-getorcreaterecord.md",
+    "Length": 3967
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-getsavedata.md",
+    "Length": 3853
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-headerrowadded.md",
+    "Length": 3896
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-hidemiddlemenu.md",
+    "Length": 3888
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-instantiaterow.md",
+    "Length": 3904
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-newgame.md",
+    "Length": 3769
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-ondestroy.md",
+    "Length": 3819
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-pauseclosed.md",
+    "Length": 396
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-pauseopened.md",
+    "Length": 377
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-pointerclick.md",
+    "Length": 551
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-pointerenter.md",
+    "Length": 449
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-pointerexit.md",
+    "Length": 595
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-quitgame.md",
+    "Length": 3786
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-registersalary.md",
+    "Length": 3907
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-restorerecord.md",
+    "Length": 3909
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-rowadded.md",
+    "Length": 3829
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-salaryrowadded.md",
+    "Length": 3901
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-sectiontitleadded.md",
+    "Length": 3953
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-submit.md",
+    "Length": 761
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-tabselected.md",
+    "Length": 791
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/ui/greg-ui-totalrowadded.md",
+    "Length": 3898
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/world/greg-world-collisionentered.md",
+    "Length": 836
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/world/greg-world-interactionhovered.md",
+    "Length": 848
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/hooks-library/world/greg-world-triggerentered.md",
+    "Length": 824
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/modding-guides/csharp-modding.md",
+    "Length": 2449
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/modding-guides/lua-modding.md",
+    "Length": 1928
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/modding-guides/prepare-content-gregmodstore.md",
+    "Length": 3685
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/modding-guides/prepare-content-workshop.md",
+    "Length": 3438
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/modding-guides/rust-modding.md",
+    "Length": 2052
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/modding-guides/typescript-modding.md",
+    "Length": 1561
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/roadmap/phase-10-infra-performance.md",
+    "Length": 1624
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/roadmap/phase-11-audio-and-immersive.md",
+    "Length": 1342
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/roadmap/phase-12-liveops-and-systems.md",
+    "Length": 1648
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/roadmap/phase-5-economy.md",
+    "Length": 919
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/roadmap/phase-6-hardware.md",
+    "Length": 803
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/roadmap/phase-8-unity-api.md",
+    "Length": 1830
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/roadmap/phase-9-community-platform.md",
+    "Length": 783
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/roadmap/roadmap.md",
+    "Length": 3666
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/tutorials/hexviewer-csharp.md",
+    "Length": 3282
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/tutorials/hexviewer-lua.md",
+    "Length": 4611
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/tutorials/hexviewer-rust.md",
+    "Length": 5015
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/tutorials/hexviewer-ts.md",
+    "Length": 3938
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/ui/custom-ugui-csharp.md",
+    "Length": 2272
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/ui/replacing-vanilla-ui.md",
+    "Length": 1940
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/02_development/ui/ui-logic.md",
+    "Length": 1593
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/03_design-system/visual-philosophy.md",
+    "Length": 6280
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/accessibility-guide.md",
+    "Length": 886
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/advanced-gameplay-modes.md",
+    "Length": 856
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/asset-management-guide.md",
+    "Length": 906
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/asset-tracking-guide.md",
+    "Length": 928
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/changelog-notes.md",
+    "Length": 673
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/community-feature-requests.md",
+    "Length": 2177
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/community-mods-compatibility.md",
+    "Length": 2204
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/community-readiness-index.md",
+    "Length": 2127
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/conflict-resolution.md",
+    "Length": 259
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/contributing.md",
+    "Length": 943
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/custom-content-guide.md",
+    "Length": 1143
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/environment-control-guide.md",
+    "Length": 1040
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/eol-system-guide.md",
+    "Length": 973
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/floor-layout-guide.md",
+    "Length": 809
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/framework-addons.md",
+    "Length": 2583
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/migration-guide.md",
+    "Length": 1183
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/mod-conflict-resolution.md",
+    "Length": 1266
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/mod-index.md",
+    "Length": 420
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/mod-security-policy.md",
+    "Length": 1390
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/multiplayer-architecture.md",
+    "Length": 3192
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/multiplayer-dev-guide.md",
+    "Length": 1633
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/multiplayer-readiness.md",
+    "Length": 1024
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/multiplayer-troubleshooting.md",
+    "Length": 1651
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/network-advanced-guide.md",
+    "Length": 1250
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/network-infrastructure-guide.md",
+    "Length": 985
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/performance-guide.md",
+    "Length": 931
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/performance-optimization-guide.md",
+    "Length": 978
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/planned-features.md",
+    "Length": 1202
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/power-management-guide.md",
+    "Length": 762
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/precheck-readiness-matrix.md",
+    "Length": 26947
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/relay-protocol.md",
+    "Length": 1393
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/server-builder-guide.md",
+    "Length": 971
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/sound-environment-guide.md",
+    "Length": 1168
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/staff-management-guide.md",
+    "Length": 1165
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/technician-management-guide.md",
+    "Length": 882
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/troubleshooting.md",
+    "Length": 2501
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/04_community/warehouse-logistics-guide.md",
+    "Length": 770
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/05_legal/impressum.md",
+    "Length": 2135
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/05_legal/privacy.md",
+    "Length": 3763
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/05_legal/sponsors.md",
+    "Length": 1612
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/05_legal/terms.md",
+    "Length": 4153
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/06_tools/core-runtime-tooling.md",
+    "Length": 1409
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/06_tools/overview.md",
+    "Length": 1201
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/06_tools/publishing-platform-tooling.md",
+    "Length": 1287
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/06_tools/reverse-debug-tooling.md",
+    "Length": 1056
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/06_tools/workshop-uploader.md",
+    "Length": 1145
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/content-creation/combined-tutorial.md",
+    "Length": 4365
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/content-creation/custom-customers.md",
+    "Length": 2975
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/content-creation/custom-employees.md",
+    "Length": 2795
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/content-creation/custom-furniture.md",
+    "Length": 2009
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/content-creation/custom-network-items.md",
+    "Length": 2556
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/content-creation/custom-servers.md",
+    "Length": 2056
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/content-creation/custom-switches.md",
+    "Length": 4985
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/content-creation/deployment.md",
+    "Length": 2123
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/content-creation/development-status-and-remaining-backlog.md",
+    "Length": 5598
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/content-creation/implementation-backlog.md",
+    "Length": 16165
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/content-creation/integration.md",
+    "Length": 2610
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/content-creation/introduction.md",
+    "Length": 3002
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/content-creation/model-overrides.md",
+    "Length": 2943
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/content-creation/project-structure.md",
+    "Length": 4257
+  },
+  {
+    "FullName": "WebApps/wiki/gregWiki/src/content/docs/_internal/README.md",
+    "Length": 206
+  },
+  {
+    "FullName": "WebApps/wiki/gregwiki-context-mcp/INSTRUCTIONS.md",
+    "Length": 508
+  },
+  {
+    "FullName": "WebApps/wiki/gregwiki-context-mcp/README.md",
+    "Length": 1071
+  }
+]

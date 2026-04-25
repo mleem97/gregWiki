@@ -1,0 +1,969 @@
+{
+  "generatedAt": "2026-04-17T22:57:28.1039127Z",
+  "services": [
+    {
+      "name": "DebugService",
+      "file": "gregCore/lib/MoonSharp/Debugging/DebugService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregFrameLimiterService",
+      "file": "gregCore/src/Diagnostic/GregFrameLimiterService.cs",
+      "hasInstance": true,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregTelemetryService",
+      "file": "gregCore/src/Diagnostic/GregTelemetryService.cs",
+      "hasInstance": true,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "JsonStringEnumConverter"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregFrameCapService",
+      "file": "gregCore/src/gregCore/Services/GregFrameCapService.cs",
+      "hasInstance": true,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregMemoryService",
+      "file": "gregCore/src/gregCore/Services/GregMemoryService.cs",
+      "hasInstance": true,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregRenderingService",
+      "file": "gregCore/src/gregCore/Services/GregRenderingService.cs",
+      "hasInstance": true,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregThreadingService",
+      "file": "gregCore/src/gregCore/Services/GregThreadingService.cs",
+      "hasInstance": true,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "AssemblyHookDumpService",
+      "file": "gregCore/src/gregModLoader/gregAssemblyHookDumpService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "ArgumentException",
+        "AssemblyHookDumpResult"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GameSignalSnapshotService",
+      "file": "gregCore/src/gregModLoader/gregGameSignalSnapshotService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "HireRosterService",
+      "file": "gregCore/src/gregModLoader/gregHireRosterService.cs",
+      "hasInstance": false,
+      "initializedIn": "gregCore/src/gregModLoader/gregCore.cs",
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "Il2CppEventCatalogService",
+      "file": "gregCore/src/gregModLoader/gregIl2CppEventCatalogService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "Il2CppGameplayIndexService",
+      "file": "gregCore/src/gregModLoader/gregIl2CppGameplayIndexService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "gregModActivationService",
+      "file": "gregCore/src/gregModLoader/gregModActivationService.cs",
+      "hasInstance": false,
+      "initializedIn": "gregCore/src/gregModLoader/gregCore.cs",
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "ModSaveCompatibilityService",
+      "file": "gregCore/src/gregModLoader/gregModSaveCompatibilityService.cs",
+      "hasInstance": false,
+      "initializedIn": "gregCore/src/gregModLoader/gregCore.cs",
+      "deinitializedIn": null,
+      "dependsOn": [
+        "FileInfo"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "PluginSyncService",
+      "file": "gregCore/src/gregModLoader/gregPluginSyncService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "IOException",
+        "PluginSyncConfig"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "RuntimeHookService",
+      "file": "gregCore/src/gregModLoader/gregRuntimeHookService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "Regex",
+        "HookScanCompletedEvent",
+        "HookScanResult",
+        "HookInstallResult",
+        "HookInstallCompletedEvent",
+        "HookContext",
+        "HookTriggeredEvent"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregEmployeeStateService",
+      "file": "gregCore/src/gregSdk/GregEmployeeStateService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregModelOverrideService",
+      "file": "gregCore/src/gregSdk/GregModelOverrideService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregNetworkCompatibilityService",
+      "file": "gregCore/src/gregSdk/GregNetworkCompatibilityService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregBalanceService",
+      "file": "gregCore/src/gregSdk/Services/GregBalanceService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregCohousingService",
+      "file": "gregCore/src/gregSdk/Services/GregCohousingService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregCompatBridgeService",
+      "file": "gregCore/src/gregSdk/Services/GregCompatBridgeService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregComponentMetadataService",
+      "file": "gregCore/src/gregSdk/Services/GregComponentMetadataService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "GregMetadataEntry",
+        "Color"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregConfigService",
+      "file": "gregCore/src/gregSdk/Services/GregConfigService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregCustomerBaseService",
+      "file": "gregCore/src/gregSdk/Services/GregCustomerBaseService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregCustomerService",
+      "file": "gregCore/src/gregSdk/Services/GregCustomerService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregDDoSService",
+      "file": "gregCore/src/gregSdk/Services/GregDDoSService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregGameManagerService",
+      "file": "gregCore/src/gregSdk/Services/GregGameManagerService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregHarmonyService",
+      "file": "gregCore/src/gregSdk/Services/GregHarmonyService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "ArgumentException"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregHudService",
+      "file": "gregCore/src/gregSdk/Services/GregHudService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "GameObject",
+        "Vector2",
+        "Color"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregInputGuardService",
+      "file": "gregCore/src/gregSdk/Services/GregInputGuardService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregInputManagerService",
+      "file": "gregCore/src/gregSdk/Services/GregInputManagerService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregInventoryService",
+      "file": "gregCore/src/gregSdk/Services/GregInventoryService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregIPAllocationService",
+      "file": "gregCore/src/gregSdk/Services/GregIPAllocationService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregIpService",
+      "file": "gregCore/src/gregSdk/Services/GregIpService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregLocalisationService",
+      "file": "gregCore/src/gregSdk/Services/GregLocalisationService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregMetadataService",
+      "file": "gregCore/src/gregSdk/Services/GregMetadataService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregModelOverrideService",
+      "file": "gregCore/src/gregSdk/Services/GregModelOverrideService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregNetworkMaintenanceService",
+      "file": "gregCore/src/gregSdk/Services/GregNetworkMaintenanceService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregNetworkSanityService",
+      "file": "gregCore/src/gregSdk/Services/GregNetworkSanityService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregNotificationService",
+      "file": "gregCore/src/gregSdk/Services/GregNotificationService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "Color",
+        "GameObject",
+        "Vector2",
+        "WaitForSeconds"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregOrbRenderService",
+      "file": "gregCore/src/gregSdk/Services/GregOrbRenderService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregPacketService",
+      "file": "gregCore/src/gregSdk/Services/GregPacketService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregPathRedirectorService",
+      "file": "gregCore/src/gregSdk/Services/GregPathRedirectorService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregPerformanceProfilerService",
+      "file": "gregCore/src/gregSdk/Services/GregPerformanceProfilerService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregPersistenceService",
+      "file": "gregCore/src/gregSdk/Services/GregPersistenceService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregPlayerManagerService",
+      "file": "gregCore/src/gregSdk/Services/GregPlayerManagerService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregPowerService",
+      "file": "gregCore/src/gregSdk/Services/GregPowerService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregPricingService",
+      "file": "gregCore/src/gregSdk/Services/GregPricingService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregRackInteractionService",
+      "file": "gregCore/src/gregSdk/Services/GregRackInteractionService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregRackService",
+      "file": "gregCore/src/gregSdk/Services/GregRackService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregResetSwitchService",
+      "file": "gregCore/src/gregSdk/Services/GregResetSwitchService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregRopeService",
+      "file": "gregCore/src/gregSdk/Services/GregRopeService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregRouteEvaluationService",
+      "file": "gregCore/src/gregSdk/Services/GregRouteEvaluationService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregSaveService",
+      "file": "gregCore/src/gregSdk/Services/GregSaveService.cs",
+      "hasInstance": false,
+      "initializedIn": "gregCore/src/gregModLoader/gregCore.cs",
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregServerDiscoveryService",
+      "file": "gregCore/src/gregSdk/Services/GregServerDiscoveryService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "Regex"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregServerInteractionService",
+      "file": "gregCore/src/gregSdk/Services/GregServerInteractionService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregShopService",
+      "file": "gregCore/src/gregSdk/Services/GregShopService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregSwitchConfigService",
+      "file": "gregCore/src/gregSdk/Services/GregSwitchConfigService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregSwitchDiscoveryService",
+      "file": "gregCore/src/gregSdk/Services/GregSwitchDiscoveryService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregTargetingService",
+      "file": "gregCore/src/gregSdk/Services/GregTargetingService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregTaskQueueService",
+      "file": "gregCore/src/gregSdk/Services/GregTaskQueueService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregTechnicianService",
+      "file": "gregCore/src/gregSdk/Services/GregTechnicianService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregTimeService",
+      "file": "gregCore/src/gregSdk/Services/GregTimeService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregTopologyService",
+      "file": "gregCore/src/gregSdk/Services/GregTopologyService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "PARTIAL"
+    },
+    {
+      "name": "GregUiReplacementService",
+      "file": "gregCore/src/gregSdk/Services/GregUiReplacementService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregUiService",
+      "file": "gregCore/src/gregSdk/Services/GregUiService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "Color",
+        "GameObject",
+        "Vector2",
+        "RectOffset"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregUxmlService",
+      "file": "gregCore/src/gregSdk/Services/GregUxmlService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "GameObject"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregVlanService",
+      "file": "gregCore/src/gregSdk/Services/GregVlanService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregWaypointService",
+      "file": "gregCore/src/gregSdk/Services/GregWaypointService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregModelLoaderService",
+      "file": "gregCore/src/gregSdk/Services/Models/GregModelLoaderService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "LoadedPlayerModel"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregModelRegistryService",
+      "file": "gregCore/src/gregSdk/Services/Models/GregModelRegistryService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "ModelMetadata"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregModelSwapperService",
+      "file": "gregCore/src/gregSdk/Services/Models/GregModelSwapperService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregMultiplayerService",
+      "file": "gregCore/src/gregSdk/Services/Multiplayer/GregMultiplayerService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "CancellationTokenSource",
+        "ClientWebSocket",
+        "Uri",
+        "Random"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GregStateSyncService",
+      "file": "gregCore/src/gregSdk/Services/Multiplayer/GregStateSyncService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "AppLogService",
+      "file": "gregModmanager/Services/AppLogService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "BetterAuthService",
+      "file": "gregModmanager/Services/BetterAuthService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "HttpRequestMessage"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "GitVerificationService",
+      "file": "gregModmanager/Services/GitVerificationService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "HttpRequestMessage"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "ModDependencyService",
+      "file": "gregModmanager/Services/ModDependencyService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "ModsFolderSyncService",
+      "file": "gregModmanager/Services/ModsFolderSyncService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "SyncProgressArgs"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "RalphSyncService",
+      "file": "gregModmanager/Services/RalphSyncService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "ReproBundleService",
+      "file": "gregModmanager/Services/ReproBundleService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "StringBuilder"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "SteamWorkshopService",
+      "file": "gregModmanager/Services/SteamWorkshopService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "Item",
+        "HttpClient",
+        "Uri"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "VdfGeneratorService",
+      "file": "gregModmanager/Services/VdfGeneratorService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "WorkshopDownloadService",
+      "file": "gregModmanager/Services/WorkshopDownloadService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "WorkspaceService",
+      "file": "gregModmanager/Services/WorkspaceService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "WorkshopMetadata",
+        "ArgumentException",
+        "InvalidOperationException",
+        "ArgumentOutOfRangeException",
+        "DirectoryNotFoundException",
+        "FileInfo",
+        "ContentFolderSize"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "CableDisconnectService",
+      "file": "Melons/gregCableRemover/Networking/CableDisconnectService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "PARTIAL"
+    },
+    {
+      "name": "ReachabilityService",
+      "file": "Melons/gregMod.IPAM/Networking/ReachabilityService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    },
+    {
+      "name": "SaveAnalysisService",
+      "file": "Melons/gregMod.ResetSwitch/Core/SaveAnalysisService.cs",
+      "hasInstance": false,
+      "initializedIn": null,
+      "deinitializedIn": null,
+      "dependsOn": [
+        "StringBuilder",
+        "SaveAnalysisReport",
+        "DirectoryInfo"
+      ],
+      "exposedHooks": [],
+      "status": "IMPLEMENTED"
+    }
+  ]
+}
