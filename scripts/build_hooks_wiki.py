@@ -10,12 +10,9 @@ WIKI_HOOKS_DIR = os.path.join(ROOT_DIR, "gregWiki", "api", "hooks")
 # Ensure directory exists
 os.makedirs(WIKI_HOOKS_DIR, exist_ok=True)
 
-_RE_CAMEL_TO_KEBAB_1 = re.compile('(.)([A-Z][a-z]+)')
-_RE_CAMEL_TO_KEBAB_2 = re.compile('([a-z0-9])([A-Z])')
-
 def camel_to_kebab(name):
-    s1 = _RE_CAMEL_TO_KEBAB_1.sub(r'\1-\2', name)
-    return _RE_CAMEL_TO_KEBAB_2.sub(r'\1-\2', s1).lower()
+    s1 = re.sub('(.)([A-Z][a-z]+)', r'\1-\2', name)
+    return re.sub('([a-z0-9])([A-Z])', r'\1-\2', s1).lower()
 
 def safe_type(t):
     return t if t else "Unknown"
@@ -24,25 +21,11 @@ def build_signature(ret, name, params):
     param_str = ", ".join([f"{safe_type(p.get('Type'))} {p.get('Name')}" for p in params])
     return f"{safe_type(ret)} {name}({param_str})"
 
-def sanitize_name(name):
-    """Sanitizes a string to be safe for use as a directory or file name."""
-    if not name:
-        return "unknown"
-    # Replace path traversal patterns and any non-alphanumeric characters (except dots/dashes)
-    # Strip any leading dots or slashes to prevent traversal
-    name = name.replace('..', '').replace('/', '').replace('\\', '')
-    # Take basename as additional precaution
-    base = os.path.basename(name)
-    if not base or base in ('.', '..'):
-        return "unknown"
-    # Replace any remaining non-alphanumeric/underscore/dot/dash characters with underscores
-    return re.sub(r'[^a-zA-Z0-9_.-]', '_', base)
-
 def generate_page(hook):
-    group = sanitize_name(hook.get("Group", "General")).lower()
+    group = hook.get("Group", "General").lower()
     ns = hook.get("Namespace", "")
-    cls = sanitize_name(hook.get("ClassName", ""))
-    method = sanitize_name(hook.get("MethodName", ""))
+    cls = hook.get("ClassName", "")
+    method = hook.get("MethodName", "")
     ret = hook.get("ReturnType", "Void")
     params = hook.get("Parameters", [])
     
@@ -163,9 +146,6 @@ greg.Subscribe("{hook_path}", func(payload greg.EventPayload) {{
         f.write(content)
 
 def main():
-    # Ensure directory exists
-    os.makedirs(WIKI_HOOKS_DIR, exist_ok=True)
-
     if not os.path.exists(HOOKS_JSON_PATH):
         print(f"Error: {HOOKS_JSON_PATH} not found.")
         return

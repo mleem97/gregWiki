@@ -1,59 +1,91 @@
-Title: gregMod.IPAM - Network Management
-Path: /guides/official-mods/ipam/index
-Type: Overview
-Audience: mod developer, new user
-Summary: Overview of gregMod.IPAM, a gamified network management and IP address automation layer for Data Center.
-Suggested Tags: mods, ipam, networking, dhcp, vlan, teamgreg
-Related Pages: /guides/official-mods/index, /api/hooks/catalog, /guides/official-mods/ipam/roadmap
-Split Recommendation: Create overview + children
-
 # gregMod.IPAM - Network Management
 
-`gregMod.IPAM` is a comprehensive, gamified networking system and IP Address Management (IPAM) layer for **Data Center**. It enhances the technical depth of network administration while maintaining a fun and practical gameplay experience.
+> IP Address Management and subnet automation for your data center network.
+> Migrated from [DataCenter_DHCPSwitches](https://github.com/mleem97/DataCenter_DHCPSwitches).
+
+**Author:** teamGreg (MLeeM97 & Mochimus) | **License:** MIT | **Framework:** [gregCore](https://git.datacentermods.com/teamGreg/gregCore)
 
 ---
 
-## Features
+## Overview
 
-- **Subnet Automation**: Efficiently manage IP blocks (/24, /22, /16) without manual calculations.
-- **VLAN Management**: Integrated VLAN editor and assignment rules for segmented networks.
-- **DeepFlow Status**: Real-time network health and traffic visualization.
-- **Customer Mapping**: Directly bind customer workloads to specific subnets.
-- **DHCP Scopes**: Advanced scope management with precedence and exclusion rules.
-- **Multi-Tenant Concepts**: Shared server models for hosting multiple customer workloads.
+`gregMod.IPAM` is a gamified networking system and IPAM layer for **Data Center**. It expands network management depth while keeping the experience practical and fun.
+
+## Features
+- Auto-subnetting (/24, /22, /16 blocks)
+- VLAN editor and assignment
+- DeepFlow network status integration
+- Customer-to-subnet mapping
+- DHCP scope management
+- Shared server / multi-tenant gameplay concepts
 
 ---
 
 ## Installation
 
-1. Ensure **MelonLoader** (v0.6+) is installed.
-2. Download and place `gregCore.dll` and `gregMod.IPAM.dll` into your `Data Center/Mods/` folder.
-3. Start the game and press **F6** to open the IPAM dashboard.
+1. Install **MelonLoader** (v0.6+)
+2. Place `gregCore.dll` + `gregMod.IPAM.dll` into `Game/Mods/`
+3. Start the game and press **F6**
 
-## Technical Documentation
+## Dependencies
 
-- **[Development Roadmap](./roadmap)**: Strategic plan for feature implementation.
-- **[Networking Hooks](./networking-hooks)**: Technical details on game interception points.
-- **[Source Code Layout](./source-layout)**: Guide for contributors exploring the C# codebase.
+- `gregCore.dll`
+
+---
+
+## Tech Stack
+
+- **Game:** Data Center
+- **Runtime:** MelonLoader (`0.7.2+` target)
+- **Language:** C# / .NET 6
+- **Interop:** Il2CppInterop
+- **Patching:** Harmony
+
+---
+
+## Repository Structure
+
+- **`Core/`** — MelonLoader entry (`Main.cs`, `MelonModInfo.cs`, …)
+- **`Networking/`** — DHCP, subnets, device helpers
+- **`Ipam/`** — IPAM overlay (`IPAMOverlay.cs`), `LicenseManager`
+- **`ROADMAP.md`** — phased implementation roadmap
+- **`docs/SOURCE_LAYOUT.md`** — folder-by-folder map of all C# sources
 
 ---
 
 ## Building from Source
 
-To build the mod manually:
-
-```powershell
+```bash
 cd gregFramework/src/gregMod.IPAM
 dotnet build -c Release
 ```
-The output DLL will be located in `bin/Release/net6.0/gregMod.IPAM.dll`.
 
-## Credits & Community
+Or build everything at once:
 
-**Authors**: teamGreg (MLeeM97 & Mochimus)  
-**Code & Testing**: Joniii11, mochimus, Baker, Sharpy1o1, MachineFreak.
-
-Special thanks to **TeamWaseku** and the **Discord Community** for their feedback and support.
+```bash
+cd gregFramework/deploy
+./build-all.ps1
+```
 
 ---
-*gregFramework — Powered by the Community!*
+
+## Contributors & Thanks
+
+### Discord Community
+**Thanks to:**
+- **Noootry**
+- **TheSlickers**
+- **Jarvis**
+- **Kirei**
+- **TeamWaseku** (ModernSamurai, GamerFrankstar, Ultra, Zyn)
+
+### Code & Testing
+- **Joniii11** ([GitHub](https://github.com/Joniii11)) & **mochimus**
+- **Baker**, **Sharpy1o1**, **MachineFreak**
+
+### Sponsors
+- **@tobiasreichel** - Haupt-Sponsor
+- **SQ8** - Infrastructure Hosting
+
+---
+*Migrated from Melons/GregTools/gregMod.IPAM/README.md*

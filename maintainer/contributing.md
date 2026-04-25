@@ -53,6 +53,23 @@ Copy-Item deploy\gregMod.YourMod.dll ..\..\Game\Mods\ -Force
 # - Ensure no crashes or performance regressions (60 FPS maintained)
 ```
 
+## 🚀 Branching Strategy
+
+- **`main`**: Stable release branch.
+- **`develop`**: Integration branch for next release.
+- **`feature/*`**: New features.
+- **`fix/*`**: Bug fixes.
+- **`refactor/*`**: Non-functional improvements.
+
+## 💻 Code Standards
+
+- **Target**: .NET 6.0 (`net6.0`).
+- **Language**: C# latest features.
+- **Nullability**: Enable nullable reference types.
+- **Usings**: Use implicit usings sparingly; prefer explicit declarations for clarity.
+- **Style**: Adhere to `.editorconfig` rules. Use `dotnet format` if necessary.
+- **Naming**: Follow existing naming conventions in the codebase (PascalCase for classes/methods, camelCase for local variables).
+
 ## 🚀 Pull Request Requirements
 
 ### Mandatory PR Checklist
@@ -83,7 +100,7 @@ Ensure your PR is labeled correctly:
 
 ## 📚 Wiki Documentation Workflow
 
-For contributors working specifically on the documentation (this wiki), the following workflow applies. The wiki uses **Astro/Starlight**.
+For contributors working specifically on the documentation (this wiki), the following workflow applies.
 
 ### Local Setup
 ```bash
@@ -98,14 +115,11 @@ pnpm build
 pnpm preview
 ```
 
-### Technical Considerations
-- **Visibility**: Documentation source files in the public repository are visible to all. Use `.gitignore` to exclude generated artifacts (`dist/`, `.astro/`, `node_modules/`).
-- **Structure**: Markdown and MDX files are organized by path within the `src/content/docs/` directory.
-
----
-
 ## ⚡ Performance & Quality Gates
 
 - **IL2CPP Size Check**: Mods should not exceed **250KB** unless they contain significant embedded assets.
 - **Security Check**: Run `.\deploy\security-scan.ps1` to verify artifact integrity.
-- **Code Style**: Adhere to `.editorconfig` rules. Use `dotnet format` if necessary.
+- **Documentation**: Update `README.md` if interfaces change. Add XML docs for public APIs.
+
+---
+*Updated with content from GameFramework/CONTRIBUTING.md*
