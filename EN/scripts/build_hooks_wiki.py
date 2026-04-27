@@ -7,8 +7,11 @@ ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 HOOKS_JSON_PATH = os.path.join(ROOT_DIR, "gregCore", "game_hooks.json")
 WIKI_HOOKS_DIR = os.path.join(ROOT_DIR, "gregWiki", "api", "hooks")
 
-# Ensure directory exists
-os.makedirs(WIKI_HOOKS_DIR, exist_ok=True)
+
+def sanitize_name(name):
+    # Strip path traversal characters and apply whitelist regex
+    s = str(name).replace('..', '').replace('/', '').replace('\\', '')
+    return re.sub(r'[^a-zA-Z0-9_.-]', '', s)
 
 def camel_to_kebab(name):
     s1 = re.sub('(.)([A-Z][a-z]+)', r'\1-\2', name)
@@ -21,21 +24,7 @@ def build_signature(ret, name, params):
     param_str = ", ".join([f"{safe_type(p.get('Type'))} {p.get('Name')}" for p in params])
     return f"{safe_type(ret)} {name}({param_str})"
 
-def generate_page(hook):
-    group = hook.get("Group", "General").lower()
-    ns = hook.get("Namespace", "")
-    cls = hook.get("ClassName", "")
-    method = hook.get("MethodName", "")
-    ret = hook.get("ReturnType", "Void")
-    params = hook.get("Parameters", [])
-    
-    # E.g. greg.hardware.ServerPowered
-    hook_path = f"greg.{group}.{cls}.{method}".lower()
-    
-    # Path inside wiki
-    group_dir = os.path.join(WIKI_HOOKS_DIR, group)
-    os.makedirs(group_dir, exist_ok=True)
-    
+def get_file_path(group_dir, cls, method, params):
     file_name = f"{camel_to_kebab(cls)}-{camel_to_kebab(method)}.md"
     file_path = os.path.join(group_dir, file_name)
     
@@ -45,17 +34,19 @@ def generate_page(hook):
         if not param_suffix: param_suffix = "alt"
         file_name = f"{camel_to_kebab(cls)}-{camel_to_kebab(method)}-{param_suffix}.md"
         file_path = os.path.join(group_dir, file_name)
+    return file_name, file_path
 
-    # Payload table
+def format_payload_table(params):
     param_table = "| Name | Type | Description |\n|---|---|---|\n"
     for p in params:
         param_table += f"| `{p.get('Name')}` | `{safe_type(p.get('Type'))}` | ... |\n"
         
     if not params:
         param_table = "*No parameters in payload.*\n"
-        
-    # Content
-    content = f"""---
+    return param_table
+
+def generate_markdown(cls, method, group, file_name, hook_path, ns, ret, params, param_table):
+    return f"""---
 title: {cls}.{method}
 description: Hook event for {cls}.{method}
 path: /api/hooks/{group}/{file_name.replace('.md','')}
@@ -141,11 +132,31 @@ greg.Subscribe("{hook_path}", func(payload greg.EventPayload) {{
 - **Return Type Expected:** `{ret}`
 - **Safe to block?**: {'Yes' if ret != 'Void' else 'Depends on implementation'}
 """
+
+def generate_page(hook):
+    group = sanitize_name(hook.get("Group", "General")).lower()
+    ns = hook.get("Namespace", "")
+    cls = sanitize_name(hook.get("ClassName", ""))
+    method = sanitize_name(hook.get("MethodName", ""))
+    ret = hook.get("ReturnType", "Void")
+    params = hook.get("Parameters", [])
+
+    # E.g. greg.hardware.ServerPowered
+    hook_path = f"greg.{group}.{cls}.{method}".lower()
+
+    # Path inside wiki
+    group_dir = os.path.join(WIKI_HOOKS_DIR, group)
+    os.makedirs(group_dir, exist_ok=True)
+
+    file_name, file_path = get_file_path(group_dir, cls, method, params)
+    param_table = format_payload_table(params)
+    content = generate_markdown(cls, method, group, file_name, hook_path, ns, ret, params, param_table)
     
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(content)
 
 def main():
+    os.makedirs(WIKI_HOOKS_DIR, exist_ok=True)
     if not os.path.exists(HOOKS_JSON_PATH):
         print(f"Error: {HOOKS_JSON_PATH} not found.")
         return
