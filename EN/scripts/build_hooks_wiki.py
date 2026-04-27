@@ -7,9 +7,6 @@ ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 HOOKS_JSON_PATH = os.path.join(ROOT_DIR, "gregCore", "game_hooks.json")
 WIKI_HOOKS_DIR = os.path.join(ROOT_DIR, "gregWiki", "api", "hooks")
 
-# Ensure directory exists
-os.makedirs(WIKI_HOOKS_DIR, exist_ok=True)
-
 def camel_to_kebab(name):
     s1 = re.sub('(.)([A-Z][a-z]+)', r'\1-\2', name)
     return re.sub('([a-z0-9])([A-Z])', r'\1-\2', s1).lower()
@@ -21,7 +18,10 @@ def build_signature(ret, name, params):
     param_str = ", ".join([f"{safe_type(p.get('Type'))} {p.get('Name')}" for p in params])
     return f"{safe_type(ret)} {name}({param_str})"
 
-def generate_page(hook):
+def generate_page(hook, created_dirs=None):
+    if created_dirs is None:
+        created_dirs = set()
+
     group = hook.get("Group", "General").lower()
     ns = hook.get("Namespace", "")
     cls = hook.get("ClassName", "")
@@ -34,7 +34,9 @@ def generate_page(hook):
     
     # Path inside wiki
     group_dir = os.path.join(WIKI_HOOKS_DIR, group)
-    os.makedirs(group_dir, exist_ok=True)
+    if group_dir not in created_dirs:
+        os.makedirs(group_dir, exist_ok=True)
+        created_dirs.add(group_dir)
     
     file_name = f"{camel_to_kebab(cls)}-{camel_to_kebab(method)}.md"
     file_path = os.path.join(group_dir, file_name)
@@ -156,10 +158,12 @@ def main():
     hooks = data if isinstance(data, list) else data.get("Hooks", [])
     print(f"Generating Wiki.js pages for {len(hooks)} hooks...")
     
+    created_dirs = set()
     for hook in hooks:
-        generate_page(hook)
+        generate_page(hook, created_dirs)
         
     print("Done! Check gregWiki/api/hooks/")
 
 if __name__ == "__main__":
+    os.makedirs(WIKI_HOOKS_DIR, exist_ok=True)
     main()
