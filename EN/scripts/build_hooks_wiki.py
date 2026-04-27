@@ -7,8 +7,10 @@ ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 HOOKS_JSON_PATH = os.path.join(ROOT_DIR, "gregCore", "game_hooks.json")
 WIKI_HOOKS_DIR = os.path.join(ROOT_DIR, "gregWiki", "api", "hooks")
 
-# Ensure directory exists
-os.makedirs(WIKI_HOOKS_DIR, exist_ok=True)
+
+def sanitize_name(name):
+    name = name.replace('..', '').replace('/', '').replace('\\', '')
+    return re.sub(r'[^a-zA-Z0-9_.-]', '', name)
 
 def camel_to_kebab(name):
     s1 = re.sub('(.)([A-Z][a-z]+)', r'\1-\2', name)
@@ -22,10 +24,10 @@ def build_signature(ret, name, params):
     return f"{safe_type(ret)} {name}({param_str})"
 
 def generate_page(hook):
-    group = hook.get("Group", "General").lower()
+    group = sanitize_name(hook.get("Group", "General")).lower()
     ns = hook.get("Namespace", "")
-    cls = hook.get("ClassName", "")
-    method = hook.get("MethodName", "")
+    cls = sanitize_name(hook.get("ClassName", ""))
+    method = sanitize_name(hook.get("MethodName", ""))
     ret = hook.get("ReturnType", "Void")
     params = hook.get("Parameters", [])
     
@@ -146,6 +148,9 @@ greg.Subscribe("{hook_path}", func(payload greg.EventPayload) {{
         f.write(content)
 
 def main():
+    # Ensure directory exists
+    os.makedirs(WIKI_HOOKS_DIR, exist_ok=True)
+
     if not os.path.exists(HOOKS_JSON_PATH):
         print(f"Error: {HOOKS_JSON_PATH} not found.")
         return
